@@ -1,0 +1,80 @@
+@layer utilities {
+  .animate-slidetop {
+    animation: slidetop 300ms ease;
+  }
+
+  .animate-slidedown {
+    animation: slidedown 300ms ease;
+  }
+
+  .animate-slideright {
+    animation: slideright 300ms ease;
+  }
+
+  .animate-slideleft {
+    animation: slideleft 300ms ease;
+  }
+
+  .animate-cart {
+    animation: bounce 1s 1.5;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 300ms ease-out;
+  }
+
+  @keyframes scale-in {
+    from {
+      transform: scale(0%);
+    }
+  }
+
+  @keyframes slideright {
+    from {
+      transform: translateY(calc(-100vh));
+    }
+  }
+
+  @keyframes slideright {
+    from {
+      transform: translateX(calc(100vh));
+    }
+  }
+
+  @keyframes slideleft {
+    from {
+      transform: translateX(calc(-100vh));
+    }
+  }
+
+  @keyframes slideleft {
+    from {
+      transform: translateX(calc(-100vh));
+    }
+  }
+
+  @keyframes slidetop {
+    from {
+      transform: translateY(calc(100vh));
+    }
+  }
+
+  @keyframes slidedown {
+    from {
+      transform: translateY(calc(-100vh));
+    }
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+      transform: translateY(-25%);
+    }
+
+    50% {
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      transform: translateY(0);
+    }
+  }
+}

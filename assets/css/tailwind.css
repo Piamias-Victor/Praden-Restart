@@ -1,0 +1,22 @@
+@import url('./padding.css');
+@import url('./icons.css');
+@import url('./flex.css');
+@import url('./animations.css');
+@import url('./text.css');
+@import url('./layout.css');
+@import url('./button.css');
+@import url('./background.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply h-full;
+  }
+
+  body {
+    @apply text-sm md:text-base h-full;
+  }
+}

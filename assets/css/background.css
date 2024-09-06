@@ -1,0 +1,7 @@
+@layer utilities {
+
+    .bg-contrast {
+        @apply bg-black/5;
+        @apply dark:bg-white/5;
+    }
+}

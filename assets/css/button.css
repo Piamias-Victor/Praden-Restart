@@ -1,0 +1,5 @@
+@layer utilities {
+.button-solid {
+    @apply bg-main text-white;
+}
+}
