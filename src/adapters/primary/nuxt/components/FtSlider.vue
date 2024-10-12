@@ -2,7 +2,8 @@
 div.p-2
     section
         div
-            img.block.rounded-xl(
+            img.block.rounded-xl.w-full(
+                    class='max-h-[350px]'
                     src="/assets/AVENE.png"
                     alt="pub"
                     )

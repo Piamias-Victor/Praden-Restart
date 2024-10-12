@@ -4,4 +4,8 @@
         @apply bg-black/5;
         @apply dark:bg-white/5;
     }
+
+    .bg-contrast2 {
+        @apply bg-black bg-opacity-35;
+    }
 }

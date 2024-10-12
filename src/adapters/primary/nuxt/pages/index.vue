@@ -13,15 +13,22 @@ ft-navigation
 </template>
 
 <script lang="ts" setup>
+import { listDeliveryMethods } from '@core/usecases/delivery-methods-listing/listDeliveryMethods'
+import deliveryGateway from '../../../../../gateways/deliveryGateway'
+
 definePageMeta({ layout: 'main' })
 
+onMounted(() => {
+  listDeliveryMethods(deliveryGateway)
+})
+
 const productTest1 = {
-  href: '/products/505cc92e-4712-4b97-b86b-2f8bf4e860d3',
-  uuid: '505cc92e-4712-4b97-b86b-2f8bf4e860d3',
-  price: 6.15,
-  name: 'Avène Eau Thermale grand format spray 300ml',
+  href: '/products/83f04e67-7d59-4bdb-97df-cc67804ae621',
+  uuid: '83f04e67-7d59-4bdb-97df-cc67804ae621',
+  price: 12.3,
+  name: 'Avene Fluide Demaquillant 3 En 1 Peaux Sensibles 200ml',
   laboratory: 'AVENE',
-  availableStock: 200,
+  availableStock: 14,
   images: [
     'https://www.pharmacieagnespraden.com/41314-large_default/avne-eau-thermale-spray-300ml.jpg'
   ]
@@ -51,5 +58,14 @@ const productTest3 = {
   ]
 }
 
-const productsArray = [productTest1, productTest2, productTest3]
+const productsArray = [
+  productTest1,
+  productTest2,
+  productTest3,
+  productTest1,
+  productTest2,
+  productTest3,
+  productTest1,
+  productTest2
+]
 </script>

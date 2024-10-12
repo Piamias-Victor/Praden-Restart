@@ -6,7 +6,9 @@ export const getProduct = async (
   productUuid: UUID,
   productGateway: ProductGateway
 ) => {
+  console.log('product test1')
   const product = await productGateway.getByUuid(productUuid)
+  console.log('product test', product)
   const productStore = useProductStore()
   productStore.setCurrent(product)
 }

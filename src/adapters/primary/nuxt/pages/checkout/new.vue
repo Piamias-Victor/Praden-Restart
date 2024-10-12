@@ -34,13 +34,13 @@ ft-address-form(
     @zip-changed="zipChanged"
 )
 div.mt-4
-div.flex.items-center.gap-2.text-left
-    div(v-if='account').flex.items-center.justify-center.bg-main.border.border-2.border-main.h-6.w-6.rounded-md.text-white(@click='switchAccount')
+div.flex.items-center.gap-2.text-left.px-3
+    div(v-if='account').flex.items-center.justify-center.bg-main.border.border-2.border-main.h-5.w-5.rounded-md.text-white(@click='switchAccount')
         icon.icon-xs(name="iconamoon:check-bold")
-    div(v-if='!account').bg-white.border.border-2.border-main.h-6.w-6.rounded-md(@click='switchAccount')
+    div(v-if='!account').bg-white.border.border-2.border-main.h-5.w-5.rounded-md(@click='switchAccount')
     span(@click='switchNewsletter') Créer un compte pour enregistrer toutes mes informations
 div.mt-4
-div.flex.items-center.gap-2.text-left
+div.flex.items-center.gap-2.text-left.px-3
     div(v-if='newsletter').flex.items-center.justify-center.bg-main.border.border-2.border-main.h-6.w-6.rounded-md.text-white(@click='switchNewsletter')
         icon.icon-xs(name="iconamoon:check-bold")
     div(v-if='!newsletter').bg-white.border.border-2.border-main.h-6.w-6.rounded-md(@click='switchNewsletter')

@@ -1,6 +1,7 @@
 import { getProductPriceWithPromotion, Product } from '@core/entities/product'
 import { HashTable, UUID } from '@core/types/type'
 import { useCartStore } from '@store/cartStore'
+import { useDeliveryStore } from '@store/deliveryStore'
 import { useProductStore } from '@store/productStore'
 import { priceFormatter } from '@utils/formater'
 
@@ -10,6 +11,8 @@ export interface CartItemVM {
   brand: string
   totalPrice: string
   totalPriceWithPromotion?: string
+  totalPriceWithDelivery: string
+  freeDelivery: string
   quantity: number
   img: string
 }
@@ -18,6 +21,8 @@ export interface CartVM {
   items: HashTable<CartItemVM>
   totalPrice: string
   totalPriceWithPromotion?: string
+  totalPriceWithDelivery: string
+  freeDelivery: string
 }
 
 export interface CartItem {
@@ -28,6 +33,8 @@ export interface CartItem {
   quantity: number
   totalPrice: number
   totalPriceWithPromotion?: number
+  totalPriceWithDelivery: number
+  freeDelivery: number
   img: string
   medecine?: boolean
 }
@@ -36,11 +43,14 @@ export interface ProductsInCart {
   items: HashTable<CartItem>
   total: number
   totalWithPromotion: number
+  totalWithDelivery: number
+  freeDelivery: number
 }
 
 export const getProductsInCart = (): ProductsInCart => {
   const cartStore = useCartStore()
   const productStore = useProductStore()
+  const deliveryStore = useDeliveryStore()
   const cartItems = cartStore.items
   const products = productStore.items
   const productsInCart = cartItems.map((uuid: UUID) =>
@@ -51,7 +61,6 @@ export const getProductsInCart = (): ProductsInCart => {
       let quantity = 1
       let total = acc.total
       let totalWithPromotion = acc.totalWithPromotion
-
       total += p.price
       const priceWithPromotion = getProductPriceWithPromotion(p)
       totalWithPromotion += priceWithPromotion || p.price
@@ -64,20 +73,35 @@ export const getProductsInCart = (): ProductsInCart => {
           [p.uuid]: {
             uuid: p.uuid,
             name: p.name,
-            brand: p.brand.toUpperCase(),
+            brand: p.laboratory,
             unitPrice: p.price,
             totalPrice: p.price * quantity,
             totalPriceWithPromotion: priceWithPromotion! * quantity,
             quantity,
-            img: p.img
+            img: p.images
           }
         },
         total,
-        totalWithPromotion
+        totalWithPromotion,
+        totalWithDelivery: getTotalWithDelivery(total),
+        freeDelivery: getFreeDelivery(total)
       }
     },
-    { items: {}, total: 0, totalWithPromotion: 0 } as ProductsInCart
+    { items: {}, total: 0, totalWithPromotion: 0, totalWithDelivery: 0, freeDelivery:6900 } as ProductsInCart
   )
+}
+
+export const getTotalWithDelivery = (total: number): number => {
+  const deliveryStore = useDeliveryStore()
+  if (total > 6900 && deliveryStore.selected!.uuid === 'relais-uuid')
+    return total
+  return total + deliveryStore.selected!.price
+}
+
+export const getFreeDelivery = (total: number): number => {
+  const res = 6900 - total
+  if (res > 0) return res
+  return 0
 }
 
 export const createCartItemsVMFromCartItems = (
@@ -92,6 +116,8 @@ export const createCartItemsVMFromCartItems = (
       name: item.name,
       brand: item.brand,
       totalPrice: formatter.format(item.totalPrice / 100),
+      totalPriceWithDelivery: formatter.format(getTotalWithDelivery(item.totalPrice) / 100),
+      freeDelivery: formatter.format(getFreeDelivery(item.totalPrice) / 100),
       quantity: item.quantity,
       img: item.img
     }
@@ -106,10 +132,12 @@ export const createCartItemsVMFromCartItems = (
 
 export const getCartVM = (): CartVM => {
   const formatter = priceFormatter('fr-FR', 'EUR')
-  const { items, total, totalWithPromotion } = getProductsInCart()
+  const { items, total, totalWithPromotion, totalWithDelivery } = getProductsInCart()
   const res: CartVM = {
     items: createCartItemsVMFromCartItems(items),
-    totalPrice: formatter.format(total / 100)
+    totalPrice: formatter.format(total / 100),
+    totalPriceWithDelivery: formatter.format(getTotalWithDelivery(total) / 100),
+    freeDelivery: formatter.format(getFreeDelivery(total) / 100)
   }
   if (total != totalWithPromotion) {
     res.totalPriceWithPromotion = formatter.format(totalWithPromotion / 100)

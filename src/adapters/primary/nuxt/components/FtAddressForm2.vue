@@ -1,5 +1,5 @@
 <template lang="pug">
-.mt-4.grid.grid-cols-1.gap-y-2
+.mt-4.grid.grid-cols-1.gap-y-6(class='sm:grid-cols-2 sm:gap-x-4')
     ft-input(
     for="first-name"
     require

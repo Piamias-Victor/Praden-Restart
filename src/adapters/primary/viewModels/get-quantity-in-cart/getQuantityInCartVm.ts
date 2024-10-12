@@ -1,4 +1,5 @@
 import { Product } from '@core/entities/product'
+import { ProductGateway } from '@core/gateways/productGateway'
 import { HashTable, UUID } from '@core/types/type'
 import { useCartStore } from '@store/cartStore'
 import { useProductStore } from '@store/productStore'
@@ -9,7 +10,9 @@ export interface CartQuantityVM {
   medecine: boolean
 }
 
-export const getCartQuantityVM = (): CartQuantityVM => {
+export const getCartQuantityVM = async (
+  productGateway: ProductGateway
+): Promise<CartQuantityVM> => {
   const cartStore = useCartStore()
   const productStore = useProductStore()
   const cartItems = cartStore.items
