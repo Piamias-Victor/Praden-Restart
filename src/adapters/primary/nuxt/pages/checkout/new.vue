@@ -35,9 +35,9 @@ ft-address-form(
 )
 div.mt-4
 div.flex.items-center.gap-2.text-left.px-3
-    div(v-if='account').flex.items-center.justify-center.bg-main.border.border-2.border-main.h-5.w-5.rounded-md.text-white(@click='switchAccount')
+    div(v-if='user').flex.items-center.justify-center.bg-main.border.border-2.border-main.h-5.w-5.rounded-md.text-white(@click='switchUser')
         icon.icon-xs(name="iconamoon:check-bold")
-    div(v-if='!account').bg-white.border.border-2.border-main.h-5.w-5.rounded-md(@click='switchAccount')
+    div(v-if='!user').bg-white.border.border-2.border-main.h-5.w-5.rounded-md(@click='switchUser')
     span(@click='switchNewsletter') Créer un compte pour enregistrer toutes mes informations
 div.mt-4
 div.flex.items-center.gap-2.text-left.px-3
@@ -53,15 +53,15 @@ div.mt-4
 definePageMeta({ layout: 'main' })
 
 const newsletter = ref(false)
-const account = ref(false)
+const user = ref(false)
 const router = useRouter()
 
 const validateCart = () => {
   router.push('/checkout/success')
 }
 
-const switchAccount = () => {
-  account.value = !account.value
+const switchUser = () => {
+  user.value = !user.value
 }
 
 const switchNewsletter = () => {

@@ -17,9 +17,7 @@ export interface ChildCategoriesVM {
 export const getChildCategoriesVM = (uuid: UUID): ChildCategoriesVM => {
   const categoryStore = useCategoryStore()
   const categories = categoryStore.items
-  const childCategories = categories.filter(
-    (c) => c.parentUuid === uuid
-  )
+  const childCategories = categories.filter((c) => c.parentUuid === uuid)
   return {
     items: childCategories.map((category: Category) => {
       return {
@@ -54,5 +52,7 @@ export const getIconInMemory = (uuid: UUID): string => {
     return '/_nuxt/assets/sante.svg'
   if (uuid === 'aadb1ea0-3961-46c8-8005-172779c74756')
     return '/_nuxt/assets/care.svg'
-  return '/_nuxt/assets/promo.svg'
+  if (uuid === '03c3ddc9-7616-48df-9bf7-3290da61b23b')
+    return '/_nuxt/assets/promo.svg'
+  return '/_nuxt/assets/category.svg'
 }

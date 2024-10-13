@@ -59,8 +59,8 @@ import {
 import { searchGateway } from '../../../../../gateways/searchGateway'
 import { searchProduct } from '@core/usecases/search-product/searchProduct'
 import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM'
-import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
-import { getSearchCategoriesVM } from '@adapters/primary/viewModels/get-category/getSearchCategoryVM';
+import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM'
+import { getSearchCategoriesVM } from '@adapters/primary/viewModels/get-category/getSearchCategoryVM'
 
 const emit = defineEmits<{
   (e: 'close'): void
@@ -81,8 +81,8 @@ const categoriesVM = computed(() => {
 })
 
 const searchChanged = (e: any) => {
-    query.value = e.target.value
-    searchProduct(e.target.value, searchGateway())
+  query.value = e.target.value
+  searchProduct(e.target.value, searchGateway())
 }
 
 const searchVM = computed(() => {

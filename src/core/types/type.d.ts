@@ -8,6 +8,13 @@ export interface HashTable<T> {
     [key: string]: T
 }
 
+export interface User {
+  id: string
+  pwd: string
+  name: string
+  phoneNumber: string
+  photo: string
+}
 export interface laboratoryFacet {
   name: string
   quantity: number

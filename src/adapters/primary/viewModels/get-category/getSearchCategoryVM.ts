@@ -17,8 +17,10 @@ export interface SearchCategoriesVM {
 export const getSearchCategoriesVM = (query: string): SearchCategoriesVM => {
   const categoryStore = useCategoryStore()
   const categories = categoryStore.items
-  const searchCategories = categories.filter(
-    (c) => removeAccents(c.name).toLowerCase().includes(removeAccents(query).toLowerCase())
+  const searchCategories = categories.filter((c) =>
+    removeAccents(c.name)
+      .toLowerCase()
+      .includes(removeAccents(query).toLowerCase())
   )
   return {
     items: searchCategories.map((category: Category) => {
@@ -58,5 +60,7 @@ export const getIconInMemory = (uuid: UUID): string => {
     return '/_nuxt/assets/sante.svg'
   if (uuid === 'aadb1ea0-3961-46c8-8005-172779c74756')
     return '/_nuxt/assets/care.svg'
-  return '/_nuxt/assets/promo.svg'
+  if (uuid === '03c3ddc9-7616-48df-9bf7-3290da61b23b')
+    return '/_nuxt/assets/promo.svg'
+  return '/_nuxt/assets/category.svg'
 }

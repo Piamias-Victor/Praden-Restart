@@ -45,9 +45,9 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
                 
 div.mt-2.border-t.py-6.px-4(class="sm:px-6")
     //- div.flex.items-center.gap-2.text-left.px-3
-    //-     div(v-if='account').flex-shrink-0.flex.items-center.justify-center.bg-main.border.border-2.border-main.h-5.w-5.rounded-md.text-white(@click='switchAccount')
+    //-     div(v-if='user').flex-shrink-0.flex.items-center.justify-center.bg-main.border.border-2.border-main.h-5.w-5.rounded-md.text-white(@click='switchUser')
     //-         icon.icon-xs(name="iconamoon:check-bold")
-    //-     div(v-if='!account').flex-shrink-0.bg-white.border.border-2.border-main.h-5.w-5.rounded-md(@click='switchAccount')
+    //-     div(v-if='!user').flex-shrink-0.bg-white.border.border-2.border-main.h-5.w-5.rounded-md(@click='switchUser')
     //-     span.text-sm(@click='switchNewsletter') Créer un compte pour enregistrer toutes mes informations
     //- div.mt-4
     div.flex.items-center.gap-2.text-left.px-3
@@ -56,9 +56,9 @@ div.mt-2.border-t.py-6.px-4(class="sm:px-6")
         div(v-if='!newsletter').flex-shrink-0.bg-white.border.border-2.border-main.h-5.w-5.rounded-md(@click='switchNewsletter')
         span.text-sm(@click='switchNewsletter') S'inscrire à la newsletter et recevoir toutes les offres
     div.mt-4
-        ft-button.bg-contrast.w-full.text-xl(@click="validateAccount") Se connecter
+        ft-button.bg-contrast.w-full.text-xl(@click="validateUser") Se connecter
     div.mt-4
-        ft-button.button-solid.w-full.text-xl(@click="validateAccount") Créer un compte
+        ft-button.button-solid.w-full.text-xl(@click="validateUser") Créer un compte
 </template>
 
 <script lang="ts" setup>
@@ -76,7 +76,7 @@ import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFrom
 const router = useRouter()
 
 const newsletter = ref(false)
-const account = ref(false)
+const user = ref(false)
 
 const emit = defineEmits<{
   (e: 'close'): void
@@ -91,15 +91,15 @@ function closeModal() {
   emit('close')
 }
 
-const switchAccount = () => {
-  account.value = !account.value
+const switchUser = () => {
+  user.value = !user.value
 }
 
 const switchNewsletter = () => {
   newsletter.value = !newsletter.value
 }
 
-const validateAccount = () => {
+const validateUser = () => {
   emit('move-stepper')
 }
 </script>

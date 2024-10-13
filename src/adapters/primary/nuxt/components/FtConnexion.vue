@@ -41,7 +41,7 @@ TransitionRoot(appear='' :show='true' as='template')
                             span.font-semibold.text-lg Ou connectez-vous avec...
                             div.mt-8
                             div.flex.flex-col.items-center.gap-4
-                                ft-button.bg-contrast.w-full.text-xl(@click='connect')
+                                ft-button.bg-contrast.w-full.text-xl(@click='connectWithGoogle')
                                     img.block.h-6.w-auto(
                                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png"
                                         alt="logo"
@@ -56,12 +56,14 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
+import { createGoogleUser } from '@core/usecases/user/createGoogleUser';
 import {
   TransitionRoot,
   TransitionChild,
   Dialog,
   DialogPanel
 } from '@headlessui/vue'
+import { signInWithGoogle } from '@utils/google'
 
 const emit = defineEmits<{
   (e: 'close'): void
@@ -77,5 +79,17 @@ function closeModal() {
 
 function connect() {
   close()
+}
+
+const connectWithGoogle = async () => {
+  try {
+    const user = await signInWithGoogle()
+    createGoogleUser(user)
+    console.log('Utilisateur connecté avec Google: ', user)
+    // Ici, tu peux ajouter la logique pour gérer l'utilisateur connecté
+    close() // Fermer le modal après la connexion
+  } catch (error) {
+    console.error('Erreur lors de la connexion avec Google: ', error)
+  }
 }
 </script>

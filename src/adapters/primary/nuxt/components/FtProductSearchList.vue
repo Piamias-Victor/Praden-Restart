@@ -7,6 +7,6 @@ section.px-2.flex.justify-center
 
 <script lang="ts" setup>
 defineProps({
-    products: { type: Array, required: true }
+  products: { type: Array, required: true }
 })
 </script>

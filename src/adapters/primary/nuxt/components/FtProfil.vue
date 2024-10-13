@@ -16,7 +16,12 @@ TransitionRoot(appear='' :show='true' as='template')
                                     ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
                                         icon.icon-sm(name="heroicons-outline:x")
                             div.mt-4
-                            div.flex.flex-col.items-center
+                            div(v-if="user.photo").flex.flex-col.items-center.justify-center
+                              img.rounded-full.border.border-main.border-2(class='w-[110px] h-[110px]' :src='user.photo', alt='Profile Picture')
+                              div.mt-4.text-lg Bonjour,
+                              div.font-semibold.text-xl {{user.name}}
+                            div.mt-4
+                            div(v-if="!user.photo").flex.flex-col.items-center
                                 div.mt-4
                                 img.block.h-48.w-auto(
                                     src="https://www.pharma365.fr/wp-content/uploads/2023/11/logo_Pharmabest.png"
@@ -37,6 +42,7 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 import {
   TransitionRoot,
   TransitionChild,
@@ -75,4 +81,8 @@ const openSubscribe = () => {
 const closeSubscribe = () => {
   subscribeOpened.value = false
 }
+
+const user = computed(() => {
+  return getUserVM()
+})
 </script>
