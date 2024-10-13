@@ -1,4 +1,4 @@
-import { InMemoryDeliveryGateway } from '@adapters/secondary/delivery-gateway/InMemoryDeliveryGateway'
+import { InMemoryDeliveryGateway } from '../src/adapters/secondary/delivery-gateway/inMemoryDeliveryGateway'
 import { DeliveryMethod, DeliveryType } from '@core/entities/deliveryMethod'
 
 const deliveryGateway = new InMemoryDeliveryGateway()
