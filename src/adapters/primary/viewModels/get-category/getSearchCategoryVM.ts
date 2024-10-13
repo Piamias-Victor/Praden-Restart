@@ -62,5 +62,5 @@ export const getIconInMemory = (uuid: UUID): string => {
     return '/_nuxt/assets/care.svg'
   if (uuid === '03c3ddc9-7616-48df-9bf7-3290da61b23b')
     return '/_nuxt/assets/promo.svg'
-  return '/_nuxt/assets/category.svg'
+  return '/category.svg'
 }
