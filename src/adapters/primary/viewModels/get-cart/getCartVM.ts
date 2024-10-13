@@ -87,7 +87,13 @@ export const getProductsInCart = (): ProductsInCart => {
         freeDelivery: getFreeDelivery(total)
       }
     },
-    { items: {}, total: 0, totalWithPromotion: 0, totalWithDelivery: 0, freeDelivery:6900 } as ProductsInCart
+    {
+      items: {},
+      total: 0,
+      totalWithPromotion: 0,
+      totalWithDelivery: 0,
+      freeDelivery: 6900
+    } as ProductsInCart
   )
 }
 
@@ -116,7 +122,9 @@ export const createCartItemsVMFromCartItems = (
       name: item.name,
       brand: item.brand,
       totalPrice: formatter.format(item.totalPrice / 100),
-      totalPriceWithDelivery: formatter.format(getTotalWithDelivery(item.totalPrice) / 100),
+      totalPriceWithDelivery: formatter.format(
+        getTotalWithDelivery(item.totalPrice) / 100
+      ),
       freeDelivery: formatter.format(getFreeDelivery(item.totalPrice) / 100),
       quantity: item.quantity,
       img: item.img
@@ -132,7 +140,8 @@ export const createCartItemsVMFromCartItems = (
 
 export const getCartVM = (): CartVM => {
   const formatter = priceFormatter('fr-FR', 'EUR')
-  const { items, total, totalWithPromotion, totalWithDelivery } = getProductsInCart()
+  const { items, total, totalWithPromotion, totalWithDelivery } =
+    getProductsInCart()
   const res: CartVM = {
     items: createCartItemsVMFromCartItems(items),
     totalPrice: formatter.format(total / 100),

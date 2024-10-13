@@ -1,0 +1,45 @@
+<template lang="pug">
+ft-header
+ft-child-categories(:categoriesVM="categoriesVM")
+pre {{categoryVM}}
+//- pre {{facetsVM}}
+</template>
+
+<script lang="ts" setup>
+import {
+  getCategory,
+  getCategoryVM
+} from '@adapters/primary/viewModels/get-category/getCategoryVM'
+import { categoryGateway } from '../../../../../../gateways/categoryGateway'
+import { searchGateway } from '../../../../../../gateways/searchGateway'
+import { SortType } from '@utils/sort'
+import { onMounted, ref, computed } from 'vue'
+import { getFacetsVM } from '@adapters/primary/viewModels/get-facets/getFacetsVM'
+import { listCategories } from '@core/usecases/list-categories/listCategories'
+import { getChildCategoriesVM } from '@adapters/primary/viewModels/get-category/getChildCategoryVM'
+
+definePageMeta({ layout: 'main' })
+
+const route = useRoute()
+const categoryUuid = route.params.uuid
+
+onMounted(() => {
+  listCategories(categoryGateway())
+  getCategory(categoryUuid, categoryGateway(), searchGateway())
+})
+
+const sortBy = (st: SortType) => {
+  if (sortType.value === st) sortType.value = SortType.None
+  else sortType.value = st
+}
+
+const sortType = ref(SortType.None)
+
+const categoriesVM = computed(() => {
+  return getChildCategoriesVM(categoryUuid)
+})
+
+const facetsVM = computed(() => {
+  return getFacetsVM()
+})
+</script>

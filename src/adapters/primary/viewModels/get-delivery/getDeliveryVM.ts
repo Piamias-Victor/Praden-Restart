@@ -29,10 +29,7 @@ export const getDeliveryMethods = (
   return {
     uuid: method.uuid,
     name: method.name,
-    price:
-      method.price === 0
-        ? 'Gratuit'
-        : formatter.format(method.price / 100)
+    price: method.price === 0 ? 'Gratuit' : formatter.format(method.price / 100)
   }
 }
 
@@ -44,14 +41,14 @@ export const getDeliveryVM = (): CheckoutDeliveryVM => {
   deliveryMethods.sort(sortByPrice(SortType.Asc))
   return {
     methods: deliveryMethods.map((method: DeliveryMethod) => {
-      console.log('total: ', cart.total === cart.totalWithDelivery)
       return {
         uuid: method.uuid,
         name: method.name,
         description: method.description,
         type: method.type,
         price:
-          method.price === 0 || cart.total > 6900 && method.uuid === 'relais-uuid'
+          method.price === 0 ||
+          (cart.total > 6900 && method.uuid === 'relais-uuid')
             ? 'Gratuit'
             : formatter.format(method.price / 100)
       }

@@ -12,5 +12,4 @@ export const addToCart = async (
   cartStore.add(productUuid)
   const product = await productGateway.getByUuid(productUuid)
   productStore.add(product)
-  // console.log(productStore.items)
 }

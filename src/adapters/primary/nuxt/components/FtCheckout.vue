@@ -100,7 +100,6 @@ const switchNewsletter = () => {
 }
 
 const validateAccount = () => {
-  console.log('lalala')
   emit('move-stepper')
 }
 </script>

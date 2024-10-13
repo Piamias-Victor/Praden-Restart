@@ -67,7 +67,6 @@ function closeModal() {
 }
 
 const validateCart = () => {
-  console.log('ici')
   emit('move-stepper')
 }
 

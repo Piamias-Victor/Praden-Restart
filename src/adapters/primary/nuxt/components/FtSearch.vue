@@ -13,7 +13,7 @@ TransitionRoot(appear='' :show='true' as='template')
                             div.flex.items-center.gap-4
                                 div.bg-white.rounded-full.px-2.grow.flex.items-center.gap-4.bg-contrast
                                     icon.icon-md(name="lucide:search")
-                                    input#search.block.border-0.placeholder-text-light.text.bg-transparent(
+                                    input#search.block.border-0.placeholder-text-light.text.bg-transparent.outline-none.appearance-none(
                                         name='search'
                                         class='focus:text-default focus:outline-none sm:text-sm focus:ring-0 w-[62vw]'
                                         placeholder='Recherche'
@@ -23,6 +23,7 @@ TransitionRoot(appear='' :show='true' as='template')
                                 ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
                                     icon.icon-md(name="heroicons-outline:x")
                             div.mt-8
+                            pre {{searchVM}}
                             nuxt-link(
                                 @click="clicked").flex.flex-col.items-center.justify-center.gap-4.w-full
                                 button.flex.flex-col.items-center.bg-main.text-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]')
@@ -48,6 +49,9 @@ import {
   Dialog,
   DialogPanel
 } from '@headlessui/vue'
+import { searchGateway } from '../../../../../gateways/searchGateway'
+import { searchProduct } from '@core/usecases/search-product/searchProduct'
+import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM'
 
 const emit = defineEmits<{
   (e: 'close'): void
@@ -60,4 +64,12 @@ const close = () => {
 function closeModal() {
   emit('close')
 }
+
+const searchChanged = (e: any) => {
+  searchProduct(e.target.value, searchGateway())
+}
+
+const searchVM = computed(() => {
+  return getSearchResultVM()
+})
 </script>

@@ -11,5 +11,9 @@ export const listDeliveryMethods = async (deliveryGateway: DeliveryGateway) => {
 
 export const selectDeliveryMethods = (method: DeliveryMethod) => {
   const deliveryStore = useDeliveryStore()
-  deliveryStore.setSelected(deliveryStore.items.find((deliveryMethod: DeliveryMethod) => method.uuid === deliveryMethod.uuid))
+  deliveryStore.setSelected(
+    deliveryStore.items.find(
+      (deliveryMethod: DeliveryMethod) => method.uuid === deliveryMethod.uuid
+    )
+  )
 }

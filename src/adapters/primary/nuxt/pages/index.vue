@@ -1,6 +1,6 @@
 <template lang="pug">
 ft-header
-ft-categories
+ft-categories(:categoriesVM="categoriesVM")
 ft-slider
 ft-product-list(:products="productsArray") Populaire
 ft-product-list(:products="productsArray") Promotion
@@ -15,11 +15,19 @@ ft-navigation
 <script lang="ts" setup>
 import { listDeliveryMethods } from '@core/usecases/delivery-methods-listing/listDeliveryMethods'
 import deliveryGateway from '../../../../../gateways/deliveryGateway'
+import { categoryGateway } from '../../../../../gateways/categoryGateway'
+import { listCategories } from '@core/usecases/list-categories/listCategories'
+import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM'
 
 definePageMeta({ layout: 'main' })
 
 onMounted(() => {
   listDeliveryMethods(deliveryGateway)
+  listCategories(categoryGateway())
+})
+
+const categoriesVM = computed(() => {
+  return getRootCategoriesVM()
 })
 
 const productTest1 = {

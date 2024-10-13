@@ -20,6 +20,4 @@ ol.flex.items-center.justify-between.w-full.text-sm.font-medium.text-center.gap-
 const props = defineProps<{
   step: number
 }>()
-
-console.log('step :', props.step)
 </script>

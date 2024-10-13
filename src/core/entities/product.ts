@@ -20,6 +20,15 @@ export interface Product {
   promotion?: Promotion
 }
 
+export interface ProductSearch {
+  uuid: UUID
+  name: string
+  laboratory: string
+  priceWithTax: number
+  images: string
+  promotion?: Promotion
+}
+
 export interface ProductDetail extends Product {
   description: string
   rating?: number
