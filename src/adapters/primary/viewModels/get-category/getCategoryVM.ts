@@ -16,9 +16,9 @@ export interface PromotionVM {
 export interface ProductItemVM {
   uuid: UUID
   name: string
-  brand: string
+  laboratory: string
   price: string
-  img: string
+  images: string
   href: string
   promotion?: PromotionVM
 }
@@ -131,7 +131,7 @@ export const getCategoryVM = (
       const promotion = getPromotionVM(p)
       const res = {
         ...p,
-        brand: trimString(p.brand, 15),
+        laboratory: trimString(p.laboratory, 15),
         name: trimString(p.name, 25),
         price: formatter.format(p.price / 100),
         href: `/products/${p.uuid}`

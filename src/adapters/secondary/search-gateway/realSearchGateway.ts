@@ -29,7 +29,7 @@ export class RealSearchGateway extends RealGateway implements SearchGateway {
     filters: Partial<Filters>
   ): Promise<Array<Product>> {
     const body = {
-      laboratories: filters.brands,
+      laboratories: filters.laboratorys,
       subCategories: filters.categories
     }
     const res = await axios.post(

@@ -55,7 +55,7 @@ describe('Get checkout VM', () => {
               abc123: {
                 uuid: 'abc123',
                 name: 'Calmosine 100 ml',
-                brand: 'NUTRISANTE',
+                laboratory: 'NUTRISANTE',
                 totalPrice: '8,10\u00A0€',
                 quantity: 1,
                 img: 'https://i.ibb.co/TPq5YFS/calmosine.png'
@@ -63,7 +63,7 @@ describe('Get checkout VM', () => {
               def456: {
                 uuid: 'def456',
                 name: 'Gilbert Physiodose sérum physiologique 40 doses 5ml',
-                brand: 'GILBERT',
+                laboratory: 'GILBERT',
                 totalPrice: '1,99\u00A0€',
                 quantity: 1,
                 img: 'https://i.ibb.co/MRN8Q52/physiologique.jpg'
@@ -83,7 +83,7 @@ describe('Get checkout VM', () => {
               [dolodent.uuid]: {
                 uuid: dolodent.uuid,
                 name: dolodent.name,
-                brand: 'GILBERT',
+                laboratory: 'GILBERT',
                 totalPrice: '4,99\u00A0€',
                 totalPriceWithPromotion: '4,49\u00A0€',
                 quantity: 1,
@@ -92,7 +92,7 @@ describe('Get checkout VM', () => {
               [humexRhume.uuid]: {
                 uuid: humexRhume.uuid,
                 name: humexRhume.name,
-                brand: 'URGO SOINS ET SANTÉ',
+                laboratory: 'URGO SOINS ET SANTÉ',
                 totalPrice: '5,90\u00A0€',
                 totalPriceWithPromotion: '4,90\u00A0€',
                 quantity: 1,
@@ -389,7 +389,7 @@ describe('Get checkout VM', () => {
             abc123: {
               uuid: 'abc123',
               name: 'Calmosine 100 ml',
-              brand: 'NUTRISANTE',
+              laboratory: 'NUTRISANTE',
               totalPrice: '8,10\u00A0€',
               quantity: 1,
               img: 'https://i.ibb.co/TPq5YFS/calmosine.png'

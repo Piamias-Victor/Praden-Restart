@@ -6,7 +6,7 @@ TransitionRoot(appear='' :show='true' as='template')
         div.fixed.inset-0.overflow-y-auto
             div.flex.items-center.justify-center.text-center.fixed.inset-y-0.right-0.flex.w-screen(class="md:")
                 TransitionChild(as='template' class="w-full")
-                    DialogPanel.flex.h-full.flex-col.overflow-y-scroll.bg-white.shadow-xl.animate-slideright
+                    DialogPanel.flex.h-full.flex-col.overflow-y-scroll.bg-background.shadow-xl.animate-slideright
                         div.w-full.bg-main.text-center.p-2.text-white.font-semibold.flex.items-center.justify-center.gap-2
                             span Livraison offerte pour 69 € d'achat
                         div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
@@ -22,8 +22,15 @@ TransitionRoot(appear='' :show='true' as='template')
                                     )
                                 ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
                                     icon.icon-md(name="heroicons-outline:x")
-                            div.mt-8
-                            pre {{searchVM}}
+                            div.mt-4
+                            div(class='px-[5vw]')
+                                ft-categories(:categoriesVM="categoriesVM")
+                            ft-product-search-list(:products="searchVM.items")
+                            ft-product-search-list(:products="searchVM.items")
+                            ft-product-search-list(:products="searchVM.items")
+                            ft-product-search-list(:products="searchVM.items")
+                            ft-product-search-list(:products="searchVM.items")
+                            ft-product-search-list(:products="searchVM.items")
                             nuxt-link(
                                 @click="clicked").flex.flex-col.items-center.justify-center.gap-4.w-full
                                 button.flex.flex-col.items-center.bg-main.text-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]')
@@ -52,6 +59,8 @@ import {
 import { searchGateway } from '../../../../../gateways/searchGateway'
 import { searchProduct } from '@core/usecases/search-product/searchProduct'
 import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM'
+import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
+import { getSearchCategoriesVM } from '@adapters/primary/viewModels/get-category/getSearchCategoryVM';
 
 const emit = defineEmits<{
   (e: 'close'): void
@@ -65,8 +74,15 @@ function closeModal() {
   emit('close')
 }
 
+const query = ref('')
+
+const categoriesVM = computed(() => {
+  return getSearchCategoriesVM(query.value)
+})
+
 const searchChanged = (e: any) => {
-  searchProduct(e.target.value, searchGateway())
+    query.value = e.target.value
+    searchProduct(e.target.value, searchGateway())
 }
 
 const searchVM = computed(() => {

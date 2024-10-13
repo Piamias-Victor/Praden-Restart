@@ -18,8 +18,8 @@ export const getSearchResultVM = (): GetSearchResultVM => {
       const res: GetSearchResultItemVM = {
         uuid: p.uuid,
         name: p.name,
-        brand: p.laboratory,
-        img: p.images,
+        laboratory: p.laboratory,
+        images: p.images,
         price: formatter.format(p.priceWithTax / 100),
         href: `/products/${p.uuid}`
       }

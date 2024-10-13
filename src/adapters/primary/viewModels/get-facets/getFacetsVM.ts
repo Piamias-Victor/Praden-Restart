@@ -6,7 +6,7 @@ import {
   FacetVM,
   FacetItemVMType
 } from '../get-category/getCategoryVM'
-import { BrandFacet } from '@core/types/type'
+import { laboratoryFacet } from '@core/types/type'
 
 const createCategoryOptionVM = (c: Category): FacetOptionVM => {
   const searchStore = useSearchStore()
@@ -17,24 +17,24 @@ const createCategoryOptionVM = (c: Category): FacetOptionVM => {
   }
 }
 
-const createBrandOptionVM = (b: BrandFacet): FacetOptionVM => {
+const createlaboratoryOptionVM = (b: laboratoryFacet): FacetOptionVM => {
   const searchStore = useSearchStore()
   return {
     label: `${b.name.toUpperCase()} (${b.quantity})`,
     value: b.name,
-    checked: !searchStore.filters?.brands?.find((bf) => bf === b.name)
+    checked: !searchStore.filters?.laboratorys?.find((bf) => bf === b.name)
   }
 }
 
 const createOptionVM = (key: string, item: any) => {
-  if (key === 'brands') {
-    return createBrandOptionVM(item)
+  if (key === 'laboratorys') {
+    return createlaboratoryOptionVM(item)
   }
   return createCategoryOptionVM(item)
 }
 
 const getFacetName = (key: string) => {
-  if (key === 'brands') return 'Marques'
+  if (key === 'laboratorys') return 'Marques'
   return 'Categories'
 }
 

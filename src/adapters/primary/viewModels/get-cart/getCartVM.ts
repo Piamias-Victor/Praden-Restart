@@ -8,7 +8,7 @@ import { priceFormatter } from '@utils/formater'
 export interface CartItemVM {
   uuid: UUID
   name: string
-  brand: string
+  laboratory: string
   totalPrice: string
   totalPriceWithPromotion?: string
   totalPriceWithDelivery: string
@@ -28,7 +28,7 @@ export interface CartVM {
 export interface CartItem {
   uuid: UUID
   name: string
-  brand: string
+  laboratory: string
   unitPrice: number
   quantity: number
   totalPrice: number
@@ -73,7 +73,7 @@ export const getProductsInCart = (): ProductsInCart => {
           [p.uuid]: {
             uuid: p.uuid,
             name: p.name,
-            brand: p.laboratory,
+            laboratory: p.laboratory,
             unitPrice: p.price,
             totalPrice: p.price * quantity,
             totalPriceWithPromotion: priceWithPromotion! * quantity,
@@ -120,7 +120,7 @@ export const createCartItemsVMFromCartItems = (
     itemsVM[key] = {
       uuid: item.uuid,
       name: item.name,
-      brand: item.brand,
+      laboratory: item.laboratory,
       totalPrice: formatter.format(item.totalPrice / 100),
       totalPriceWithDelivery: formatter.format(
         getTotalWithDelivery(item.totalPrice) / 100

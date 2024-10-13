@@ -11,7 +11,7 @@ div.bg-white.rounded-xl.pt-2.bg-red-40(class='w-[50vw] sm:w-[15vw]')
     div.w-full.flex.flex-col.px-4
         span.w-full.text-xs.font-semibold.mb-1.line-clamp-2(class='min-h-[5vh] sm:min-h-[3vh]') {{product.name}}
         div.flex.items-center.justify-between.gap-2
-            span.font-bold.text-main {{product.price}} €
+            span.font-bold.text-main {{product.price}}
     ft-add-to-cart-button(:product-uuid="product.uuid")
 </template>
 
@@ -19,4 +19,6 @@ div.bg-white.rounded-xl.pt-2.bg-red-40(class='w-[50vw] sm:w-[15vw]')
 defineProps({
   product: { type: Object, required: true }
 })
+
+console.log('ici')
 </script>

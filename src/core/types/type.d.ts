@@ -8,13 +8,13 @@ export interface HashTable<T> {
     [key: string]: T
 }
 
-export interface BrandFacet {
+export interface laboratoryFacet {
   name: string
   quantity: number
 }
 
 export interface Facets {
-    brands: Array<BrandFacet>
+    laboratorys: Array<laboratoryFacet>
     priceRange: {
       min: number
       max: number
@@ -23,7 +23,7 @@ export interface Facets {
   }
 
   export interface Filters {
-    brands: Array<string>
+    laboratorys: Array<string>
     categories: Array<UUID>
   }
 
