@@ -39,6 +39,10 @@ const categoriesVM = computed(() => {
   return getChildCategoriesVM(categoryUuid)
 })
 
+const categoryVM = computed(() => {
+  return getCategoryVM(sortType.value)
+})
+
 const facetsVM = computed(() => {
   return getFacetsVM()
 })

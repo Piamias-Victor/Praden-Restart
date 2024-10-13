@@ -18,20 +18,17 @@ TransitionRoot(appear='' :show='true' as='template')
                                         class='focus:text-default focus:outline-none sm:text-sm focus:ring-0 w-[62vw]'
                                         placeholder='Recherche'
                                         type='search'
+                                        autocomplete='off'
                                         @input="searchChanged"
                                     )
                                 ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
                                     icon.icon-md(name="heroicons-outline:x")
                             div.mt-4
-                            div(class='px-[5vw]')
+                            div(v-if='query !== ""')
                                 ft-categories(:categoriesVM="categoriesVM")
                             ft-product-search-list(:products="searchVM.items")
-                            ft-product-search-list(:products="searchVM.items")
-                            ft-product-search-list(:products="searchVM.items")
-                            ft-product-search-list(:products="searchVM.items")
-                            ft-product-search-list(:products="searchVM.items")
-                            ft-product-search-list(:products="searchVM.items")
                             nuxt-link(
+                                v-if='query === ""'
                                 @click="clicked").flex.flex-col.items-center.justify-center.gap-4.w-full
                                 button.flex.flex-col.items-center.bg-main.text-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]')
                                     span.font-semibold.w-full.text-left.px-4 DES PROMOTIONS ALLANT JUSQU'À -30%
@@ -75,14 +72,20 @@ function closeModal() {
 }
 
 const query = ref('')
+let debounceTimeout: ReturnType<typeof setTimeout> | null = null
 
 const categoriesVM = computed(() => {
   return getSearchCategoriesVM(query.value)
 })
 
 const searchChanged = (e: any) => {
+  if (debounceTimeout) {
+    clearTimeout(debounceTimeout)
+  }
   query.value = e.target.value
-  searchProduct(e.target.value, searchGateway())
+  debounceTimeout = setTimeout(() => {
+    searchProduct(query.value, searchGateway())
+  }, 500)
 }
 
 const searchVM = computed(() => {

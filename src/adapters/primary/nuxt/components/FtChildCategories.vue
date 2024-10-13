@@ -4,7 +4,6 @@ div.py-4.px-2.flex.items-center.gap-2.overflow-hidden.overflow-x-auto.no-scrollb
       icon.icon-md(name="icon-park-outline:return")
       span Retour
     ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='category in props.categoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid)")
-        img.icon-md(:src="category.icon")
         span.whitespace-nowrap {{ category.name }}
     //- ft-button.bg-white.rounded-xl.px-6
     //-     img.icon-md(src="/assets/dermoBlack.svg")

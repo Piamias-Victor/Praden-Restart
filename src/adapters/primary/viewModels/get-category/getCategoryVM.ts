@@ -158,6 +158,7 @@ export const getCategory = async (
     categoryStore.add(category)
   }
   const productsWithFacets = await searchGateway.getCategory(uuid)
+  console.log('icicici')
   const searchStore = useSearchStore()
   if (productsWithFacets) {
     searchStore.setCurrentCategory(uuid)

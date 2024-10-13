@@ -1,6 +1,5 @@
 import { Product } from '@core/entities/product'
-import { Filters, ProductsWithFacets } from '@core/types/type'
-import { UUID } from 'crypto'
+import { Filters, ProductsWithFacets, UUID } from '@core/types/type'
 
 export interface SearchGateway {
   getCategory(categoryUuid: UUID): Promise<ProductsWithFacets>

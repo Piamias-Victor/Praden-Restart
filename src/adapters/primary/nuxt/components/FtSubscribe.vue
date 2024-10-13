@@ -17,18 +17,12 @@ TransitionRoot(appear='' :show='true' as='template')
                             span.font-semibold.text-lg S'inscrire avec...
                             div.mt-4
                             div.flex.flex-col.items-center.gap-4
-                                ft-button.bg-contrast.w-full.text-xl(@click='connect')
+                                ft-button.bg-contrast.w-full.text-xl(@click='connectWithGoogle')
                                     img.block.h-6.w-auto(
                                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png"
                                         alt="logo"
                                     )
                                     span Google
-                                ft-button.bg-contrast.w-full.text-xl(@click='connect')
-                                    img.block.h-6.w-auto(
-                                        src="https://logodownload.org/wp-content/uploads/2013/12/apple-logo-16.png"
-                                        alt="logo"
-                                        )
-                                    span Apple
                             div.mt-4
                             span.font-semibold.text-lg Ou avec une adresse mail...
                             div.mt-6
@@ -77,12 +71,15 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
+import { createGoogleUser } from '@core/usecases/user/createGoogleUser';
 import {
   TransitionRoot,
   TransitionChild,
   Dialog,
   DialogPanel
 } from '@headlessui/vue'
+import { signInWithGoogle } from '@utils/google';
+import { ref } from 'vue';
 
 const emit = defineEmits<{
   (e: 'close'): void
@@ -100,6 +97,16 @@ const newsletter = ref(false)
 
 const connect = () => {
   close()
+}
+
+const connectWithGoogle = async () => {
+  try {
+    const user = await signInWithGoogle()
+    createGoogleUser(user)
+    close()
+  } catch (error) {
+    console.error('Erreur lors de la connexion avec Google: ', error)
+  }
 }
 
 const switchNewsletter = () => {

@@ -10,6 +10,7 @@
     ) 
         span.font-semibold.text-sm Prénom
     ft-input(
+    :value="props.firstName" 
     for="last-name"
     require
     type='text'
@@ -19,6 +20,7 @@
     ) 
         span.font-semibold.text-sm Nom
     ft-input(
+        :value="props.lastName"
         for="country"
         require
         type='text'
@@ -63,6 +65,11 @@
 </template>
 
 <script lang="ts" setup>
+const props = defineProps<{
+  firstName: string
+  lastName: string
+}>()
+
 const emit = defineEmits<{
   (e: 'firstname-changed', value: string): void
   (e: 'lastname-changed', value: string): void

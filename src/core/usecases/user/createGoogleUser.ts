@@ -6,6 +6,7 @@ export const createGoogleUser = (user: any) => {
   const newUser: User = {
     id: 'google',
     pwd: 'google',
+    mail: user.email,
     name: user.displayName,
     phoneNumber: user.phoneNumber,
     photo: user.photoURL

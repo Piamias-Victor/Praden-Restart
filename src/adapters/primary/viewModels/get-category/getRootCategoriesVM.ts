@@ -24,13 +24,18 @@ export const getRootCategoriesVM = (): RootCategoriesVM => {
     items: mainCategories.map((category: Category) => {
       return {
         uuid: category.uuid,
-        name: category.name,
+        name: formatCategoryName(category.name),
         href: `/categories/${category.uuid}`,
         img: getImageInMemory(category.uuid),
         icon: getIconInMemory(category.uuid)
       }
     })
   }
+}
+
+export const formatCategoryName = (name: string) => {
+  if (!name) return ''
+  return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()
 }
 
 export const getImageInMemory = (uuid: UUID): string => {

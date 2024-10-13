@@ -47,12 +47,6 @@ TransitionRoot(appear='' :show='true' as='template')
                                         alt="logo"
                                     )
                                     span Google
-                                ft-button.bg-contrast.w-full.text-xl(@click='connect')
-                                    img.block.h-6.w-auto(
-                                        src="https://logodownload.org/wp-content/uploads/2013/12/apple-logo-16.png"
-                                        alt="logo"
-                                        )
-                                    span Apple
 </template>
 
 <script lang="ts" setup>
@@ -85,9 +79,7 @@ const connectWithGoogle = async () => {
   try {
     const user = await signInWithGoogle()
     createGoogleUser(user)
-    console.log('Utilisateur connecté avec Google: ', user)
-    // Ici, tu peux ajouter la logique pour gérer l'utilisateur connecté
-    close() // Fermer le modal après la connexion
+    close()
   } catch (error) {
     console.error('Erreur lors de la connexion avec Google: ', error)
   }

@@ -9,7 +9,8 @@ export interface HashTable<T> {
 }
 
 export interface User {
-  id: string
+  id: string,
+  mail: string,
   pwd: string
   name: string
   phoneNumber: string

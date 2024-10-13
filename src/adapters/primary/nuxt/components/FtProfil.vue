@@ -16,11 +16,28 @@ TransitionRoot(appear='' :show='true' as='template')
                                     ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
                                         icon.icon-sm(name="heroicons-outline:x")
                             div.mt-4
-                            div(v-if="user.photo").flex.flex-col.items-center.justify-center
-                              img.rounded-full.border.border-main.border-2(class='w-[110px] h-[110px]' :src='user.photo', alt='Profile Picture')
-                              div.mt-4.text-lg Bonjour,
-                              div.font-semibold.text-xl {{user.name}}
-                            div.mt-4
+                            div(v-if="user.photo")
+                              div.flex.flex-col.items-center.justify-center
+                                img.rounded-full.border.border-main.border-2(class='w-[110px] h-[110px]' :src='user.photo', alt='Profile Picture')
+                                div.mt-4.text-lg Bonjour,
+                                div.font-semibold.text-xl {{user.name}}
+                              div.mt-4
+                              div.flex.flex-col.gap-4
+                                ft-button.button-solid.w-full
+                                  icon.icon-md(name="akar-icons:shopping-bag")
+                                  span Mes commandes
+                                ft-button.button-solid.w-full
+                                  icon.icon-md(name="iconoir:page")
+                                  span Déposer une ordo
+                                ft-button.button-solid.w-full
+                                  icon.icon-md(name="bx:message")
+                                  span Nous contacter
+                                ft-button.button-solid.w-full
+                                  icon.icon-md(name="ion:logo-google")
+                                  span Laisser un avis
+                                ft-button.button-solid.w-full(@click='logout')
+                                  icon.icon-md(name="tabler:logout")
+                                  span Déconnexion
                             div(v-if="!user.photo").flex.flex-col.items-center
                                 div.mt-4
                                 img.block.h-48.w-auto(
@@ -43,6 +60,7 @@ TransitionRoot(appear='' :show='true' as='template')
 
 <script lang="ts" setup>
 import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import { logoutUser } from '@core/usecases/user/logout';
 import {
   TransitionRoot,
   TransitionChild,
@@ -80,6 +98,10 @@ const openSubscribe = () => {
 
 const closeSubscribe = () => {
   subscribeOpened.value = false
+}
+
+const logout = () => {
+  logoutUser()
 }
 
 const user = computed(() => {
