@@ -1,7 +1,7 @@
 <template lang="pug">
 div.ft-disclosure
   Disclosure.py-6(v-slot='{ open }' :default-open="defaultOpen" as='div')
-      h3.-my-3.flow-root.mx-2
+      h3.-my-3.flow-root
           DisclosureButton.flex.w-full.items-center.justify-between.py-3.text-sm.text-contrast(class='hover:text-default')
               span.font-medium.text-main
                   slot(name="title")

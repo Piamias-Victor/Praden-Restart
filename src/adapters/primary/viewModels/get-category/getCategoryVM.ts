@@ -6,6 +6,7 @@ import { SortType, sortByPrice, sortByName } from '@utils/sort'
 import { useCategoryStore } from '@store/categoryStore'
 import { CategoryGateway } from '@core/gateways/categoryGateway'
 import { SearchGateway } from '@core/gateways/searchGateway'
+import { getChildCategoriesVM } from './getChildCategoryVM'
 
 export interface PromotionVM {
   type: ReductionType
@@ -97,7 +98,7 @@ export const getPromotionVM = (
 
 export const getCategoryVM = (
   sortType: SortType = SortType.None
-): GetCategoryVM => {
+) => {
   const categoryStore = useCategoryStore()
   const categories = categoryStore.items
   const searchStore = useSearchStore()
@@ -107,40 +108,23 @@ export const getCategoryVM = (
   const formatter = priceFormatter('fr-FR', 'EUR')
   const sortOptions: Array<SortOption> = [
     {
-      name: 'Prix : Du plus bas au plus haut',
+      name: 'https://i.postimg.cc/Bn0MBC8H/1.png',
       sortType: SortType.Asc,
       current: sortType === SortType.Asc
     },
     {
-      name: 'Prix : Du plus haut au plus bas',
+      name: 'https://i.postimg.cc/ZqfHZtwx/2.png',
       sortType: SortType.Desc,
       current: sortType === SortType.Desc
     }
   ]
-  const products = JSON.parse(JSON.stringify(searchStore.products))
+  const products = searchStore.products
   products.sort(sortByPrice(sortType))
+
   return {
     name: category?.name || '',
-    childCategories: subCategories.sort(sortByName).map((c) => {
-      return {
-        name: c.name,
-        href: `/categories/${c.uuid}`
-      }
-    }),
-    products: products.map((p) => {
-      const promotion = getPromotionVM(p)
-      const res = {
-        ...p,
-        laboratory: trimString(p.laboratory, 15),
-        name: trimString(p.name, 25),
-        price: formatter.format(p.price / 100),
-        href: `/products/${p.uuid}`
-      }
-      if (promotion) {
-        res.promotion = promotion
-      }
-      return res
-    }),
+    childCategories: getChildCategoriesVM(category?.uuid),
+    products: products,
     sortOptions: categoryUuid ? sortOptions : []
   }
 }
@@ -158,12 +142,11 @@ export const getCategory = async (
     categoryStore.add(category)
   }
   const productsWithFacets = await searchGateway.getCategory(uuid)
-  console.log('icicici')
   const searchStore = useSearchStore()
   if (productsWithFacets) {
     searchStore.setCurrentCategory(uuid)
-    searchStore.setProducts(productsWithFacets.products)
-    searchStore.setFacets(productsWithFacets.facets)
+    searchStore.setProducts(productsWithFacets.items)
+    // searchStore.setFacets(productsWithFacets.facets)
   } else {
     searchStore.reset()
   }

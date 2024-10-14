@@ -1,6 +1,7 @@
 import { ProductDetail } from '@core/entities/product'
 import { UUID } from '@core/types/type'
 import { useProductStore } from '@store/productStore'
+import { useSearchStore } from '@store/searchStore'
 import { priceFormatter } from '@utils/formater'
 
 export interface Image {
@@ -58,6 +59,21 @@ export const getProductVM = (): ProductDetailVM => {
     description: product?.description || '',
     rating: product?.rating,
     details
+  }
+  return res
+}
+
+export const getSearchProductVM = () => {
+  const searchStore = useSearchStore()
+  const product = searchStore.products
+  const formatter = priceFormatter('fr-FR', 'EUR')
+  const details = getDetails(product)
+  const res = {
+    uuid: product?.uuid || '',
+    name: product?.name || '',
+    laboratory: product?.laboratory || '',
+    price: product ? formatter.format(product.priceWithTaxe / 100) : '',
+    images: product ? [{ src: product.images, alt: product?.name }] : []
   }
   return res
 }

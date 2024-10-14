@@ -17,10 +17,8 @@ export class RealSearchGateway extends RealGateway implements SearchGateway {
   }
 
   async getCategory(categoryUuid: UUID): Promise<ProductsWithFacets> {
-    console.log(`${this.baseUrl}/search/products-for-category/${categoryUuid}/`)
-    const res = await axios.post(
-      `${this.baseUrl}/search/products-for-category/${categoryUuid}/`,
-      JSON.stringify({})
+    const res = await axios.get(
+      `${this.baseUrl}/search/products-for-category/${categoryUuid}/?size=200`
     )
     return Promise.resolve(res.data)
   }
@@ -33,9 +31,8 @@ export class RealSearchGateway extends RealGateway implements SearchGateway {
       laboratories: filters.laboratorys,
       subCategories: filters.categories
     }
-    const res = await axios.post(
-      `${this.baseUrl}/products-for-category/${categoryUuid}/`,
-      JSON.stringify(body)
+    const res = await axios.get(
+      `${this.baseUrl}/products-for-category/${categoryUuid}/`
     )
     return Promise.resolve(res.data.products)
   }

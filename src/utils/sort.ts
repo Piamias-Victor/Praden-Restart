@@ -12,6 +12,6 @@ export const sortByPrice =
   (sortType: SortType) =>
   (a: any, b: any): number => {
     if (sortType === SortType.None) return 1
-    if (sortType === SortType.Asc) return a.price < b.price ? -1 : 1
-    return a.price > b.price ? -1 : 1
+    if (sortType === SortType.Asc) return a.priceWithTax < b.priceWithTax ? -1 : 1
+    return a.priceWithTax > b.priceWithTax ? -1 : 1
   }

@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import { Product, ProductSearch } from '@core/entities/product'
 import { Facets, Filters, UUID } from '@core/types/type'
 
-const defaultProducts: Array<ProductSearch> = []
+const defaultProducts: any = []
 const defaultFacets: Partial<Facets> = {}
 const defaultFilters: Partial<Filters> = {}
 

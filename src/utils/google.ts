@@ -26,12 +26,9 @@ const signInWithGoogle = async () => {
   try {
     const result = await signInWithPopup(auth, provider)
     const user = result.user
-    // Tu peux utiliser user pour gérer la connexion utilisateur
-    console.log('User info: ', user)
-    return user // Retourner l'utilisateur si tu veux l'utiliser dans l'application
+    return user
   } catch (error) {
-    console.error('Erreur de connexion: ', error)
-    throw error // Propager l'erreur si nécessaire
+    throw error
   }
 }
 
