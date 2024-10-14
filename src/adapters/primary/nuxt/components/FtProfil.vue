@@ -26,18 +26,29 @@ TransitionRoot(appear='' :show='true' as='template')
                                 ft-button.button-solid.w-full
                                   icon.icon-md(name="akar-icons:shopping-bag")
                                   span Mes commandes
-                                ft-button.button-solid.w-full
+                                ft-button.button-solid.w-full(@click="openAddress")
+                                  icon.icon-md(name="material-symbols:supervised-user-circle-outline")
+                                  span Mon profil
+                                ft-button.button-solid.w-full(@click="openOrdo")
                                   icon.icon-md(name="iconoir:page")
                                   span Déposer une ordo
-                                ft-button.button-solid.w-full
+                                ft-button.button-solid.w-full(@click="openContact")
                                   icon.icon-md(name="bx:message")
                                   span Nous contacter
-                                ft-button.button-solid.w-full
-                                  icon.icon-md(name="ion:logo-google")
-                                  span Laisser un avis
+                                nuxt-link.w-full(
+                                  href="http://search.google.com/local/writereview?placeid=ChIJuZQjzvRCtBIRfsJukIkyXLY"
+                                  target="_blank"
+                                  @click="clicked"
+                                )
+                                  ft-button.button-solid.w-full
+                                    icon.icon-md(name="ion:logo-google")
+                                    span Laisser un avis
                                 ft-button.button-solid.w-full(@click='logout')
                                   icon.icon-md(name="tabler:logout")
                                   span Déconnexion
+                              ft-contact(v-if="contactOpened" @close="closeContact")
+                              ft-ordo(v-if="ordoOpened" @close="closeOrdo")
+                              ft-address(v-if="addressOpened" @close="closeAddress")
                             div(v-if="!user.photo").flex.flex-col.items-center
                                 div.mt-4
                                 img.block.h-48.w-auto(
@@ -72,6 +83,14 @@ const connexionOpened = ref(false)
 
 const subscribeOpened = ref(false)
 
+const contactOpened = ref(false)
+
+const ordoOpened = ref(false)
+
+const addressOpened = ref(false)
+
+const fileInput = ref(null)
+
 const emit = defineEmits<{
   (e: 'close'): void
 }>()
@@ -98,6 +117,30 @@ const openSubscribe = () => {
 
 const closeSubscribe = () => {
   subscribeOpened.value = false
+}
+
+const openContact = () => {
+  contactOpened.value = true
+}
+
+const closeContact = () => {
+  contactOpened.value = false
+}
+
+const openOrdo = () => {
+  ordoOpened.value = true
+}
+
+const closeOrdo = () => {
+  ordoOpened.value = false
+}
+
+const openAddress = () => {
+  addressOpened.value = true
+}
+
+const closeAddress = () => {
+  addressOpened.value = false
 }
 
 const logout = () => {

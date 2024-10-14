@@ -93,11 +93,6 @@ const user = computed(() => {
   return getUserVM()
 })
 
-const email = ref('')
-const firstName = ref('')
-const lastName = ref('')
-const phone = ref('')
-
 const emit = defineEmits<{
   (e: 'close'): void
   (e: 'move-stepper'): void
@@ -127,21 +122,4 @@ const connectWithGoogle = async () => {
     console.error('Erreur lors de la connexion avec Google: ', error)
   }
 }
-
-watchEffect(() => {
-  if (user.value) {
-    email.value = user.value.mail || ''; // Assurez-vous que le champ existe
-
-    const fullName = user.value.name || ''; // Récupérer le nom complet
-    const trimmedStr = fullName.trim(); // Supprimer les espaces inutiles
-
-    // Trouver l'index de l'espace
-    const spaceIndex = trimmedStr.indexOf(' ');
-
-    // Assignation des valeurs pour le prénom et le nom
-    firstName.value = spaceIndex === -1 ? trimmedStr : trimmedStr.substring(0, spaceIndex);
-    lastName.value = spaceIndex === -1 ? '' : trimmedStr.substring(spaceIndex + 1);
-
-    phone.value = user.value.phoneNumber || ''; // Assurez-vous que le champ existe
-  }
-});</script>
+</script>
