@@ -10,7 +10,7 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
     div.mt-8
     ft-stepper(:step=2)
     div.mt-4
-    div(v-if="!user.photo").flex.flex-col.items-center.gap-4
+    div(v-if="!user.firstName").flex.flex-col.items-center.gap-4
       ft-button.bg-contrast.w-full.text-xl(@click='connectWithGoogle')
           img.block.h-6.w-auto(
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png"
@@ -27,7 +27,7 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
         name='email-address'
         autocomplete='email'
         @input="emailChanged"
-        :value="email"
+        :value="user.mail"
         ) 
             span.font-semibold.text-sm E-mail
         div.h-2
@@ -38,14 +38,12 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
         name='phone'
         autocomplete='tel'
         @input="phoneChanged"
-        :value="phone"
         ) 
             span.font-semibold.text-sm Téléphone
     div.h-4
     h2.font-medium.text-gray-900 2 - Informations de livraison
     ft-address-form(
-        :firstName="firstName"
-        :lastName="lastName"
+        :user='newUser'
         @firstname-changed="firstnameChanged"
         @lastname-changed="lastnameChanged"
         @country-changed="countryChanged"
@@ -61,11 +59,11 @@ div.mt-2.border-t.py-6.px-4(class="sm:px-6")
             icon.icon-xs(name="iconamoon:check-bold")
         div(v-if='!newsletter').flex-shrink-0.bg-white.border.border-2.border-main.h-5.w-5.rounded-md(@click='switchNewsletter')
         span.text-sm(@click='switchNewsletter') S'inscrire à la newsletter et recevoir toutes les offres
-    div(v-if="!user.photo").mt-4
+    div(v-if="!user.firstName").mt-4
         ft-button.bg-contrast.w-full.text-xl(@click="validateUser") Se connecter
-    div(v-if="!user.photo").mt-4
+    div(v-if="!user.firstName").mt-4
         ft-button.button-solid.w-full.text-xl(@click="validateUser") Créer un compte
-    div(v-if="user.photo").mt-4
+    div(v-if="user.firstName").mt-4
         ft-button.button-solid.w-full.text-xl(@click="validateUser") Choisir ma livraison
 </template>
 
@@ -84,6 +82,7 @@ import { createGoogleUser } from '@core/usecases/user/createGoogleUser'
 import { signInWithGoogle } from '@utils/google'
 import { ref } from 'vue'
 import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
+import { updateUser } from '@core/usecases/user/updateUser'
 
 const router = useRouter()
 
@@ -92,6 +91,23 @@ const newsletter = ref(false)
 const user = computed(() => {
   return getUserVM()
 })
+
+const newUser = ref(
+  {
+    firstName: '',
+    lastName: '',
+    phone: '',
+    mail: user.mail,
+    country: '',
+    postal: '',
+    address: '',
+    appartement: '',
+    city: '',
+  }
+)
+
+const email = ref('')
+const phone = ref('')
 
 const emit = defineEmits<{
   (e: 'close'): void
@@ -110,7 +126,69 @@ const switchNewsletter = () => {
   newsletter.value = !newsletter.value
 }
 
+const firstnameChanged = (value: string) => {
+  newUser.value.firstName = value
+}
+
+const phoneChanged = (e: any) => {
+  newUser.value.phone = e.target.value
+}
+
+const lastnameChanged = (value: string) => {
+  newUser.value.lastName = value
+}
+
+const countryChanged = (value: string) => {
+  newUser.value.country = value
+}
+
+const addressChanged = (value: string) => {
+  newUser.value.address = value
+}
+
+const appartementChanged = (value: string) => {
+  newUser.value.appartement = value
+}
+
+const cityChanged = (value: string) => {
+  newUser.value.city = value
+}
+
+const zipChanged = (value: string) => {
+  newUser.value.postal = value
+}
+
+watchEffect(() => {
+  if (user.value) {
+    newUser.value.firstName = user.value.firstName || ''
+    newUser.value.lastName = user.value.lastName || ''
+    newUser.value.phone = user.value.phoneNumber || ''
+    newUser.value.mail = user.value.mail || ''
+    newUser.value.country = user.value.country || ''
+    newUser.value.postal = user.value.postal || ''
+    newUser.value.address = user.value.address || ''
+    newUser.value.city = user.value.city || ''
+    newUser.value.appartement = user.value.appartement || ''
+  }
+})
+
 const validateUser = () => {
+  const photo = user.value.photo !== '' ? user.value.photo : 'https://media1.vetsecurite.com/img/cms/BLOG/Workwear/Pr%C3%A9parateur%20pharmacie/Logo-Pharmacie.png'
+
+  updateUser(
+    {
+      firstName: newUser.value.firstName,
+      lastName: newUser.value.lastName,
+      phone: newUser.value.phone,
+      mail: user.value.mail,
+      country: newUser.value.country,
+      postal: newUser.value.postal,
+      address: newUser.value.address,
+      appartement: newUser.value.appartement,
+      city: newUser.value.city,
+      photo
+    }
+  )
   emit('move-stepper')
 }
 

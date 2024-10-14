@@ -1,7 +1,7 @@
 <template lang="pug">
 .mt-4.grid.grid-cols-1.gap-y-2
     ft-input(
-    :value="firstName"
+    :value="props.user.firstName"
     for="first-name"
     require
     type='text'
@@ -11,7 +11,7 @@
     ) 
         span.font-semibold.text-sm Prénom
     ft-input(
-    :value="lastName"
+    :value="props.user.lastName"
     for="last-name"
     require
     type='text'
@@ -21,7 +21,7 @@
     ) 
         span.font-semibold.text-sm Nom
     ft-input(
-        :value="country" 
+        :value="props.user.country" 
         for="country"
         require
         type='text'
@@ -30,7 +30,7 @@
     ) 
         span.font-semibold.text-sm Pays
     ft-input(
-        :value="address"
+        :value="props.user.address"
         for="address"
         require
         type='text'
@@ -40,7 +40,7 @@
     ) 
         span.font-semibold.text-sm Adresse
     ft-input(
-        :value="appartement"
+        :value="props.user.appartement"
         for="apartment"
         type='text'
         name='apartment'
@@ -48,7 +48,7 @@
     ) 
         span.font-semibold.text-sm  Appartement
     ft-input(
-        :value="postal"
+        :value="props.user.postal"
         for="postal-code"
         require
         type='text'
@@ -58,7 +58,7 @@
     ) 
         span.font-semibold.text-sm Code postal
     ft-input(
-        :value="city"
+        :value="props.user.city"
         for="city"
         require
         type='text'
@@ -70,6 +70,9 @@
 </template>
 
 <script lang="ts" setup>
+const props = defineProps<{
+  user: User
+}>()
 import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 
 const emit = defineEmits<{
@@ -112,24 +115,5 @@ const zipChanged = (e: any) => {
 
 const user = computed(() => {
   return getUserVM()
-})
-
-const firstName = ref('')
-const lastName = ref('')
-const country = ref('')
-const postal = ref('')
-const address = ref('')
-const city = ref('')
-
-watchEffect(() => {
-  if (user.value) {
-    const fullName = user.value.name || ''
-    const trimmedStr = fullName.trim()
-
-    const spaceIndex = trimmedStr.indexOf(' ')
-
-    firstName.value = spaceIndex === -1 ? trimmedStr : trimmedStr.substring(0, spaceIndex)
-    lastName.value = spaceIndex === -1 ? '' : trimmedStr.substring(spaceIndex + 1)
-  }
 })
 </script>

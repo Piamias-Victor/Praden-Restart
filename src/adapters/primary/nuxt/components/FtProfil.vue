@@ -16,11 +16,11 @@ TransitionRoot(appear='' :show='true' as='template')
                                     ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
                                         icon.icon-sm(name="heroicons-outline:x")
                             div.mt-4
-                            div(v-if="user.photo")
+                            div(v-if="user.firstName")
                               div.flex.flex-col.items-center.justify-center
                                 img.rounded-full.border.border-main.border-2(class='w-[110px] h-[110px]' :src='user.photo', alt='Profile Picture')
                                 div.mt-4.text-lg Bonjour,
-                                div.font-semibold.text-xl {{user.name}}
+                                div.font-semibold.text-xl {{user.firstName}}
                               div.mt-4
                               div.flex.flex-col.gap-4
                                 ft-button.button-solid.w-full
@@ -49,7 +49,7 @@ TransitionRoot(appear='' :show='true' as='template')
                               ft-contact(v-if="contactOpened" @close="closeContact")
                               ft-ordo(v-if="ordoOpened" @close="closeOrdo")
                               ft-address(v-if="addressOpened" @close="closeAddress")
-                            div(v-if="!user.photo").flex.flex-col.items-center
+                            div(v-if="!user.firstName").flex.flex-col.items-center
                                 div.mt-4
                                 img.block.h-48.w-auto(
                                     src="https://www.pharma365.fr/wp-content/uploads/2023/11/logo_Pharmabest.png"

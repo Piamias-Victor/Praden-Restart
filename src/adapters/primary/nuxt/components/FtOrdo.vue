@@ -6,7 +6,7 @@ TransitionRoot(appear='' :show='true' as='template')
         div.fixed.inset-0.overflow-y-auto
             div.flex.min-h-full.items-center.justify-center.text-center.fixed.inset-y-0.left-0.flex.max-w-full.w-screen.max-w-md(class="md:pr-10")
                 TransitionChild(as='template' class="w-full")
-                    DialogPanel.flex.h-full.flex-col.bg-background.shadow-xl.animate-slideleft
+                    DialogPanel.flex.h-full.flex-col.bg-background.shadow-xl.animate-slidetop
                         div.w-full.bg-main.text-center.p-2.text-white.font-semibold.flex.items-center.justify-center.gap-2(class="md:hidden")
                             span Livraison offerte pour 69 € d'achat
                         div.flex-1.overflow-y-auto.py-6.px-4.flex-grow(class="sm:px-6")

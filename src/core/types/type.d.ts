@@ -12,9 +12,15 @@ export interface User {
   id: string,
   mail: string,
   pwd: string
-  name: string
+  firstName: string
+  lastName: string
   phoneNumber: string
   photo: string
+  country: string
+  address: string
+  appartement: string
+  postal: string
+  city: string
 }
 export interface laboratoryFacet {
   name: string

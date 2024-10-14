@@ -21,6 +21,9 @@ export const useUserStore = defineStore('userStore', {
     disconnect() {
       this.isConnected = false
       this.user = {}
+    },
+    update(user: User) {
+      this.user = user
     }
   }
 })

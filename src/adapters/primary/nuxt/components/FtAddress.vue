@@ -23,12 +23,10 @@ TransitionRoot(appear='' :show='true' as='template')
                                 type='email'
                                 name='email-address'
                                 autocomplete='email'
-                                @input="emailChanged"
                                 ) 
                                     span.font-semibold.text-sm E-mail
                                 div.h-6
                                 ft-input(
-                                :value="phone"
                                 for="phone"
                                 require
                                 type='text'
@@ -41,6 +39,7 @@ TransitionRoot(appear='' :show='true' as='template')
                             ft-divider.mt-3.pt-6
                             h2.font-medium.text-gray-900 2 - Informations de livraison
                             ft-address-form(
+                                :user="newUser"
                                 @firstname-changed="firstnameChanged"
                                 @lastname-changed="lastnameChanged"
                                 @country-changed="countryChanged"
@@ -56,13 +55,14 @@ TransitionRoot(appear='' :show='true' as='template')
                                 div(v-if='!newsletter').bg-white.border.border-2.border-main.h-6.w-6.rounded-md(@click='switchNewsletter')
                                 span(@click='switchNewsletter') S'inscrire à la newsletter et recevoir toutes les offres
                             div.mt-4
-                            ft-button.button-solid.w-full(@click='connect')
+                            ft-button.button-solid.w-full(@click='validateUser')
                                 span.text-lg Enregistrer
 </template>
 
 <script lang="ts" setup>
 import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 import { createGoogleUser } from '@core/usecases/user/createGoogleUser';
+import { updateUser } from '@core/usecases/user/updateUser';
 import {
   TransitionRoot,
   TransitionChild,
@@ -84,21 +84,102 @@ function closeModal() {
   emit('close')
 }
 
-const newsletter = ref(false)
+const user = computed(() => {
+  return getUserVM()
+})
 
+const newsletter = ref(false)
 const phone = ref('')
+const firstName = ref('')
+const lastName = ref('')
+const country = ref('')
+const postal = ref('')
+const address = ref('')
+const city = ref('')
+const newUser = ref(
+  {
+    firstName: '',
+    lastName: '',
+    phone: '',
+    mail: user.mail,
+    country: '',
+    postal: '',
+    address: '',
+    appartement: '',
+    city: '',
+  }
+)
 
 const connect = () => {
   close()
 }
 
-const user = computed(() => {
-  return getUserVM()
-})
+const switchNewsletter = () => {
+  newsletter.value = !newsletter.value
+}
+
+const firstnameChanged = (value: string) => {
+  newUser.value.firstName = value
+}
+
+const phoneChanged = (e: any) => {
+  newUser.value.phone = e.target.value
+}
+
+const lastnameChanged = (value: string) => {
+  newUser.value.lastName = value
+}
+
+const countryChanged = (value: string) => {
+  newUser.value.country = value
+}
+
+const addressChanged = (value: string) => {
+  newUser.value.address = value
+}
+
+const appartementChanged = (value: string) => {
+  newUser.value.appartement = value
+}
+
+const cityChanged = (value: string) => {
+  newUser.value.city = value
+}
+
+const zipChanged = (value: string) => {
+  newUser.value.postal = value
+}
 
 watchEffect(() => {
   if (user.value) {
-    phone.value = user.value.phoneNumber || ''
+    newUser.value.firstName = user.value.firstName || ''
+    newUser.value.lastName = user.value.lastName || ''
+    newUser.value.phone = user.value.phoneNumber || ''
+    newUser.value.mail = user.value.mail || ''
+    newUser.value.country = user.value.country || ''
+    newUser.value.postal = user.value.postal || ''
+    newUser.value.address = user.value.address || ''
+    newUser.value.city = user.value.city || ''
   }
 })
+
+const validateUser = () => {
+  const photo = user.value.photo !== '' ? user.value.photo : 'https://media1.vetsecurite.com/img/cms/BLOG/Workwear/Pr%C3%A9parateur%20pharmacie/Logo-Pharmacie.png'
+
+  updateUser(
+    {
+      firstName: newUser.value.firstName,
+      lastName: newUser.value.lastName,
+      phone: newUser.value.phone,
+      mail: user.value.mail,
+      country: newUser.value.country,
+      postal: newUser.value.postal,
+      address: newUser.value.address,
+      appartement: newUser.value.appartement,
+      city: newUser.value.city,
+      photo
+    }
+  )
+  close()
+}
 </script>
