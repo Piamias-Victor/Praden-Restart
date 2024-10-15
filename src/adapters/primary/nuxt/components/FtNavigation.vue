@@ -1,5 +1,4 @@
 <template lang="pug">
-pre {{likeQuantity}}
 div.fixed.w-full.flex.justify-center.z-10.bottom-5.left-0
     div.bg-white.rounded-full.p-2.flex.items-center.justify-center.shadow-xl(class='w-[90vw] sm:w-[40vw]')
         ft-button.w-full.text-contrast.flex.items-center.justify-center(@click="openLike")
