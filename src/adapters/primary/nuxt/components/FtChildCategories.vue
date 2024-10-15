@@ -1,28 +1,10 @@
 <template lang="pug">
-div.py-4.px-2.flex.items-center.gap-2.overflow-hidden.overflow-x-auto.no-scrollbar
+div.py-4.px-2.flex.items-center.gap-2.overflow-x-scroll.custom-scrollbar
     ft-button.bg-white.rounded-xl.px-6(@click="goBack")
       icon.icon-md(name="icon-park-outline:return")
       span Retour
     ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='category in props.categoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid)")
         span.whitespace-nowrap {{ category.name }}
-    //- ft-button.bg-white.rounded-xl.px-6
-    //-     img.icon-md(src="/assets/dermoBlack.svg")
-    //-     span Dermo
-    //- ft-button.bg-white.rounded-xl.px-6
-    //-     img.icon-md(src="/assets/dermoBlack.svg")
-    //-     span Bebe
-    //- ft-button.bg-white.rounded-xl.px-6
-    //-     img.icon-md(src="/assets/dermoBlack.svg")
-    //-     span Sante
-    //- ft-button.bg-white.rounded-xl.px-6
-    //-     img.icon-md(src="/assets/dermoBlack.svg")
-    //-     span Complement
-    //- ft-button.bg-white.rounded-xl.px-6
-    //-     img.icon-md(src="/assets/dermoBlack.svg")
-    //-     span Nature
-    //- ft-button.bg-white.rounded-xl.px-6
-    //-     img.icon-lg(src="/assets/dermoBlack.svg")
-    //-     span Veto
 </template>
 
 <script lang="ts" setup>
@@ -42,3 +24,31 @@ const goBack = () => {
   router.back()
 }
 </script>
+
+<style scoped>
+.custom-scrollbar {
+  overflow-y: hidden; /* Cache la scrollbar verticale */
+  overflow-x: scroll; /* Assure que la scrollbar horizontale est toujours visible */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px; /* Hauteur de la scrollbar horizontale */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #E5017D; /* Couleur de la barre de défilement */
+  border-radius: 10px; /* Rendre la barre de défilement arrondie */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #e0e0e0; /* Couleur de l'arrière-plan de la barre */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #ff008c; /* Changement de couleur lors du survol */
+}
+
+.custom-scrollbar {
+  scrollbar-gutter: stable both-edges; /* Afficher la scrollbar en permanence et garder l'espace réservé */
+}
+</style>

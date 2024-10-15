@@ -19,7 +19,7 @@ div.mx-auto.max-w-2xl(class='lg:max-w-none')
       div.mt-4
         div.space-y-6.text-base.text-contrast(style="white-space: pre-line")
           div.text-sm(v-html="productVM.description" class='lg:text-lg')
-      div.mt-2(aria-labelledby='details-heading')
+      div.mt-2.flex.flex-col.gap-4(aria-labelledby='details-heading')
         ft-disclosure(v-for='detail in productVM.details' :key='detail.name')
           template(#title) {{ detail.name }}
           div.text-base.text-contrast(v-if="detail.name !== 'Notice'" style="white-space: pre-line")

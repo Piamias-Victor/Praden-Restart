@@ -1,6 +1,6 @@
 <template lang="pug">
 div.ft-disclosure
-  Disclosure.py-6(v-slot='{ open }' :default-open="defaultOpen" as='div')
+  Disclosure.py-6.bg-white.rounded-xl.p-4(v-slot='{ open }' :default-open="defaultOpen" as='div')
       h3.-my-3.flow-root
           DisclosureButton.flex.w-full.items-center.justify-between.py-3.text-sm.text-contrast(class='hover:text-default')
               span.font-medium.text-main
