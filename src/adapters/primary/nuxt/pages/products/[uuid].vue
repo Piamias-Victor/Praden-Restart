@@ -18,7 +18,7 @@ div.mx-auto.max-w-2xl(class='lg:max-w-none')
         span.text-xl.font-bold.tracking-tight.text-main(class='lg:text-4xl') {{ productVM.price }}
       div.mt-4
         div.space-y-6.text-base.text-contrast(style="white-space: pre-line")
-          div.text-sm(v-html="productVM.description" class='lg:text-lg')
+          div.text-sm(v-html="productVM.description")
       div.mt-2.flex.flex-col.gap-4(aria-labelledby='details-heading')
         ft-disclosure(v-for='detail in productVM.details' :key='detail.name')
           template(#title) {{ detail.name }}
@@ -31,8 +31,10 @@ ft-product-list.mt-4(:products="productsArray") Ces produits peuvent vous plaire
 <script lang="ts" setup>
 import { getProduct } from '@core/usecases/get-product/getProduct'
 import { useProductGateway } from '../../../../../../gateways/productGateway'
+import { categoryGateway } from '../../../../../../gateways/categoryGateway'
 import { getProductVM } from '@adapters/primary/viewModels/get-product/getProductVM'
 import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
+import { listCategories } from '@core/usecases/list-categories/listCategories';
 
 definePageMeta({ layout: 'main' })
 
@@ -43,6 +45,7 @@ const route = useRoute()
 onMounted(() => {
   productId.value = route.params.uuid as string
   getProduct(productId.value, useProductGateway())
+  listCategories(categoryGateway())
 })
 
 const productVM = computed(() => {
