@@ -29,7 +29,9 @@ export const useSearchStore = defineStore('SearchStore', {
       this.products = products
     },
     setFacets(facets: Partial<Facets>) {
+      console.log('ca marche :', facets)
       this.facets = facets
+      console.log('dsis oui  :', this.facets)
     },
     setFilters(filters: Partial<Filters>) {
       this.filters = Object.assign(this.filters, filters)

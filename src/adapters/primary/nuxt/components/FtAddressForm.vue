@@ -73,7 +73,7 @@
 const props = defineProps<{
   user: User
 }>()
-import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
 
 const emit = defineEmits<{
   (e: 'firstname-changed', value: string): void

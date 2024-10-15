@@ -47,19 +47,20 @@ export interface GetFacetsVM {
   items: Array<FacetVM>
 }
 
-export const getFacetsVM = (): GetFacetsVM => {
+export const getFacetsVM = () => {
   const searchStore = useSearchStore()
-  return {
-    items: Object.keys(searchStore.facets).map((key) => {
-      // @ts-ignore
-      const items = searchStore.facets[key]
-      items.sort(sortByName)
-      return {
-        name: getFacetName(key),
-        type: FacetItemVMType.Choice,
-        value: getFacetValue(key),
-        options: items.map((i: any) => createOptionVM(key, i))
-      }
-    })
-  }
+  return searchStore.facets
+  // return {
+  //   items: Object.keys(searchStore.facets).map((key) => {
+  //     // @ts-ignore
+  //     const items = searchStore.facets[key]
+  //     // items.sort(sortByName)
+  //     return {
+  //       name: getFacetName(key),
+  //       type: FacetItemVMType.Choice,
+  //       value: getFacetValue(key),
+  //       options: items.map((i: any) => createOptionVM(key, i))
+  //     }
+  //   })
+  // }
 }

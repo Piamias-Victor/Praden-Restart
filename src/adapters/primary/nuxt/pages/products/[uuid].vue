@@ -2,39 +2,44 @@
 ft-header
 ft-categories(:categoriesVM="categoriesVM")
 div.mt-2
-div.mx-auto.max-w-2xl(class='lg:max-w-none')
-  div(class='grid grid-cols-1 sm:grid-cols-2 sm:items-start sm:gap-x-8')
-    div.flex.flex-col.justify-start
-      ft-image-gallery(
-        :key="productVM.uuid"
-        :images="productVM.images"
-      )
-      ft-add-to-cart-button(:product-uuid="productId")
-    div.px-4.flex.flex-col.justify-between
-      div.mt-2
-        h1.text-lg.font-semibold.tracking-tight(class='lg:text-3xl')
-          | {{ productVM.name }}
-      div.mt-2.flex.justify-between.items-center
-        span.text-xl.font-bold.tracking-tight.text-main(class='lg:text-4xl') {{ productVM.price }}
-      div.mt-4
-        div.space-y-6.text-base.text-contrast(style="white-space: pre-line")
-          div.text-sm(v-html="productVM.description")
-      div.mt-2.flex.flex-col.gap-4(aria-labelledby='details-heading')
-        ft-disclosure(v-for='detail in productVM.details' :key='detail.name')
-          template(#title) {{ detail.name }}
-          div.text-base.text-contrast(v-if="detail.name !== 'Notice'" style="white-space: pre-line")
-            div.text-xs(v-html="detail.value")
-          iframe.w-full.h-screen(v-else :src="detail.value")
-ft-product-list.mt-4(:products="productsArray") Ces produits peuvent vous plaire
+  div.mx-auto.max-w-2xl(class='lg:max-w-none')
+    div(class='grid grid-cols-1 sm:grid-cols-2 sm:items-start sm:gap-x-8')
+      div.flex.flex-col.justify-start
+        ft-image-gallery(
+          :key="productVM.uuid"
+          :images="productVM.images"
+        )
+        ft-add-to-cart-button(:product-uuid="productId")
+      div.px-4.flex.flex-col.justify-between
+        div.mt-2
+          h1.text-lg.font-semibold.tracking-tight(class='lg:text-3xl')
+            | {{ productVM.name }}
+        div.mt-2.flex.justify-between.items-end
+          span.text-xl.font-bold.tracking-tight.text-main(class='lg:text-4xl') {{ productVM.price }}
+          span.text-sm.font-bold.tracking-tight.text-contrast(class='lg:text-xl') {{ productVM.laboratory }}
+        div.mt-4
+          div.space-y-6.text-base.text-contrast(style="white-space: pre-line")
+            div.text-sm(v-html="productVM.description")
+        div.mt-2.flex.flex-col.gap-4(aria-labelledby='details-heading')
+          ft-disclosure(v-for='detail in productVM.details' :key='detail.name')
+            template(#title) {{ detail.name }}
+            div.text-base.text-contrast(v-if="detail.name !== 'Notice'" style="white-space: pre-line")
+              div.text-xs(v-html="detail.value")
+            iframe.w-full.h-screen(v-else :src="detail.value")
+    ft-product-list.mt-4(:products="searchVM") Ces produits peuvent vous plaire
 </template>
 
 <script lang="ts" setup>
+import { onMounted, ref, computed, watchEffect } from 'vue'
 import { getProduct } from '@core/usecases/get-product/getProduct'
 import { useProductGateway } from '../../../../../../gateways/productGateway'
 import { categoryGateway } from '../../../../../../gateways/categoryGateway'
 import { getProductVM } from '@adapters/primary/viewModels/get-product/getProductVM'
-import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
-import { listCategories } from '@core/usecases/list-categories/listCategories';
+import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM'
+import { listCategories } from '@core/usecases/list-categories/listCategories'
+import { getSearchResultVMFirstSix } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM'
+import { searchGateway } from '../../../../../../gateways/searchGateway'
+import { searchProduct } from '@core/usecases/search-product/searchProduct'
 
 definePageMeta({ layout: 'main' })
 
@@ -56,11 +61,38 @@ const categoriesVM = computed(() => {
   return getRootCategoriesVM()
 })
 
+const searchVM = computed(() => {
+  let res = getSearchResultVMFirstSix(route.params.uuid as string)
+  if (res.items && res.items.length > 0) {
+    return res.items
+  }
+  return productsArray
+})
+
+// Utilisation de watchEffect pour détecter les changements de laboratory
+watchEffect(async () => {
+  const laboratory = productVM.value?.laboratory
+  if (laboratory) {
+    console.log('Laboratoire détecté :', laboratory)
+    try {
+      const laboratoryName = laboratory.split(' ')[0].toLowerCase()
+
+      const result = await searchProduct(laboratoryName, searchGateway())
+      console.log('Résultats de la recherche :', result)
+      // Mettre à jour ici searchVM ou un autre état si nécessaire
+    } catch (error) {
+      console.error('Erreur lors de la recherche de produits :', error)
+    }
+  } else {
+    console.log('Aucun laboratoire disponible')
+  }
+})
+
 const productTest1 = {
   href: '/products/83f04e67-7d59-4bdb-97df-cc67804ae621',
   uuid: '83f04e67-7d59-4bdb-97df-cc67804ae621',
   price: 12.3,
-  name: 'Avene Fluide Demaquillant 3 En 1 Peaux Sensibles 200ml',
+  name: 'Boiron Mag',
   laboratory: 'AVENE',
   availableStock: 14,
   images: [
@@ -102,4 +134,5 @@ const productsArray = [
   productTest1,
   productTest2
 ]
+
 </script>

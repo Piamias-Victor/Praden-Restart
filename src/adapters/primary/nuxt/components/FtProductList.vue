@@ -26,7 +26,7 @@ defineProps({
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #E5017D; /* Couleur de la barre de défilement */
+  background-color: #e5017d; /* Couleur de la barre de défilement */
   border-radius: 10px; /* Rendre la barre de défilement arrondie */
 }
 
@@ -42,4 +42,3 @@ defineProps({
   scrollbar-gutter: stable both-edges; /* Afficher la scrollbar en permanence et garder l'espace réservé */
 }
 </style>
-

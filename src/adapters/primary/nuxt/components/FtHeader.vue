@@ -3,6 +3,7 @@ nav.flex.items-center.justify-center.p-2
     div.flex.gap-2
         ft-button.bg-white.rounded-full(@click="openProfil")
             icon.icon-md.text-main(name="material-symbols:supervised-user-circle-outline")
+            span.text-main.font-semibold.hidden(class='sm:block') Mon Profil
     div.flex.items-center.justify-center.gap-1.grow.px-2
         nuxt-link(
             href="/"
@@ -14,6 +15,7 @@ nav.flex.items-center.justify-center.p-2
                   )
     div.flex.items-center.justify-end.gap-2
         ft-button.bg-white.rounded-full(@click="startSearch")
+            span.text-main.font-semibold.hidden(class='sm:block') Recherche
             icon.icon-md.text-main(name="lucide:search")
 
 ft-profil(v-if="profilOpened" @close="closeProfil")

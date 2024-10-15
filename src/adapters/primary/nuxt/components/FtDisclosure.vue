@@ -9,7 +9,7 @@ div.ft-disclosure
                   icon(v-if='!open' aria-hidden='true' name="heroicons:plus").h-5.w-5
                   icon(v-else aria-hidden='true' name="heroicons:minus").h-5.w-5
           DisclosurePanel.mx-2
-              div
+              div.py-2
                   slot.flex.items-center
 </template>
 

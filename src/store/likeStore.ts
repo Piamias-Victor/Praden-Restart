@@ -23,8 +23,7 @@ export const useLikeStore = defineStore('likeStore', {
     },
 
     removeAllItemByUuid(productUuid: UUID) {
-      if (this.items.indexOf(productUuid) === -1)
-        throw 'error'
+      if (this.items.indexOf(productUuid) === -1) throw 'error'
       this.items = this.items.filter((uuid: UUID) => uuid !== productUuid)
     }
   }

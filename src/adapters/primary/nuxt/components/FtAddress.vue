@@ -60,17 +60,17 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
-import { createGoogleUser } from '@core/usecases/user/createGoogleUser';
-import { updateUser } from '@core/usecases/user/updateUser';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
+import { createGoogleUser } from '@core/usecases/user/createGoogleUser'
+import { updateUser } from '@core/usecases/user/updateUser'
 import {
   TransitionRoot,
   TransitionChild,
   Dialog,
   DialogPanel
 } from '@headlessui/vue'
-import { signInWithGoogle } from '@utils/google';
-import { ref } from 'vue';
+import { signInWithGoogle } from '@utils/google'
+import { ref } from 'vue'
 
 const emit = defineEmits<{
   (e: 'close'): void
@@ -96,19 +96,17 @@ const country = ref('')
 const postal = ref('')
 const address = ref('')
 const city = ref('')
-const newUser = ref(
-  {
-    firstName: '',
-    lastName: '',
-    phone: '',
-    mail: user.mail,
-    country: '',
-    postal: '',
-    address: '',
-    appartement: '',
-    city: '',
-  }
-)
+const newUser = ref({
+  firstName: '',
+  lastName: '',
+  phone: '',
+  mail: user.mail,
+  country: '',
+  postal: '',
+  address: '',
+  appartement: '',
+  city: ''
+})
 
 const connect = () => {
   close()
@@ -164,22 +162,23 @@ watchEffect(() => {
 })
 
 const validateUser = () => {
-  const photo = user.value.photo !== '' ? user.value.photo : 'https://media1.vetsecurite.com/img/cms/BLOG/Workwear/Pr%C3%A9parateur%20pharmacie/Logo-Pharmacie.png'
+  const photo =
+    user.value.photo !== ''
+      ? user.value.photo
+      : 'https://media1.vetsecurite.com/img/cms/BLOG/Workwear/Pr%C3%A9parateur%20pharmacie/Logo-Pharmacie.png'
 
-  updateUser(
-    {
-      firstName: newUser.value.firstName,
-      lastName: newUser.value.lastName,
-      phone: newUser.value.phone,
-      mail: user.value.mail,
-      country: newUser.value.country,
-      postal: newUser.value.postal,
-      address: newUser.value.address,
-      appartement: newUser.value.appartement,
-      city: newUser.value.city,
-      photo
-    }
-  )
+  updateUser({
+    firstName: newUser.value.firstName,
+    lastName: newUser.value.lastName,
+    phone: newUser.value.phone,
+    mail: user.value.mail,
+    country: newUser.value.country,
+    postal: newUser.value.postal,
+    address: newUser.value.address,
+    appartement: newUser.value.appartement,
+    city: newUser.value.city,
+    photo
+  })
   close()
 }
 </script>

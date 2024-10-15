@@ -1,12 +1,13 @@
 <template lang="pug">
+pre {{facetsVM.laboratory.values}}
 ft-header
 ft-child-categories(:categoriesVM="categoriesVM")
+ft-child-categories(v-if="facetsVM.laboratory" :categoriesVM="facetsVM.laboratory.values")
 div.flex.px-2.flex.items-center.justify-end.gap-4.mt-4
   div(v-for='option in categoryVM.sortOptions' :key='option.name').cursor-pointer
     ft-button.bg-white.rounded-full(@click="sortBy(option.sortType)")
       img.icon-md.text-main(:src="option.name")
 ft-product-cat-list(:products="categoryVM.products")
-//- pre {{facetsVM}}
 </template>
 
 <script lang="ts" setup>

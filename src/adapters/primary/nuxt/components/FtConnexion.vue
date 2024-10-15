@@ -50,7 +50,7 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import { createGoogleUser } from '@core/usecases/user/createGoogleUser';
+import { createGoogleUser } from '@core/usecases/user/createGoogleUser'
 import {
   TransitionRoot,
   TransitionChild,

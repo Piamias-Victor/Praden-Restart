@@ -2,9 +2,9 @@
 ft-header
 ft-categories(:categoriesVM="categoriesVM")
 ft-slider
-ft-product-list(:products="productsArray") Populaire
+ft-product-list(:products="productsArray") La sélection du pharmacien
 ft-product-list(:products="productsArray") Promotion
-
+ft-test
 section.px-2
     div.flex.items-center.justify-between
         span.text-lg.font-semibold Avis
@@ -31,14 +31,14 @@ const categoriesVM = computed(() => {
 })
 
 const productTest1 = {
-  href: '/products/83f04e67-7d59-4bdb-97df-cc67804ae621',
-  uuid: '83f04e67-7d59-4bdb-97df-cc67804ae621',
-  price: 12.3,
-  name: 'Avene Fluide Demaquillant 3 En 1 Peaux Sensibles 200ml',
-  laboratory: 'AVENE',
+  href: '/products/5ee46259-1d14-4ae5-8abe-651529ed2be5',
+  uuid: '5ee46259-1d14-4ae5-8abe-651529ed2be5',
+  price: '8,99',
+  name: "Boiron Mag'300+ fatigue générale 160 comprimés",
+  laboratory: 'BOIRON',
   availableStock: 14,
   images: [
-    'https://www.pharmacieagnespraden.com/41314-large_default/avne-eau-thermale-spray-300ml.jpg'
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/7d932a616cebce2f2a277d0779f4a9aa174f2d2da9610439f5e70d160b1ef358'
   ]
 }
 

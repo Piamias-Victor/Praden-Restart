@@ -1,18 +1,18 @@
 <template lang="pug">
-div.bg-white.rounded-xl.pt-2.bg-red-40(class='w-[50vw] sm:w-[15vw]')
+div.bg-white.rounded-xl.pt-2.bg-red-40(class='w-[50vw] sm:w-[15vw] min-h-[320px] flex flex-col justify-between')
     div.flex.flex-col.items-center.justify-center.gap-4.relative
         nuxt-link.h-full.flex.items-center(
         :href="`/products/${product.uuid}`"
         @click="clicked")
-            img(
-                class='max-h-[200px]'
+            img.p-4(
+                class='min-h-[200px] h-[200px] w-full object-cover'
                 :src="product.images[0]"
                 :alt="product.name")
-
+                
         ft-button.bg-transparent.absolute.top-2.right-2.text-main.p-2.rounded-full(
             v-if="likeQuantity && likeQuantity.items && likeQuantity.items[product.uuid]"
-            @click="removeFromFavorite(product.uuid)"
-            aria-label="Add to favorites"
+            @click="removeItemFromFavorite(product.uuid)"
+            aria-label="Remove from favorites"
         )
             icon.icon-lg(name="heroicons:heart-solid")
 
@@ -23,34 +23,38 @@ div.bg-white.rounded-xl.pt-2.bg-red-40(class='w-[50vw] sm:w-[15vw]')
         )
             icon.icon-lg(name="heroicons:heart")
         
-    div.w-full.flex.flex-col.px-4.text-left
-        span.w-full.text-xs.font-semibold.mb-1.line-clamp-2(class='min-h-[5vh] sm:min-h-[3vh]') {{product.name}}
+    div.w-full.flex.flex-col.px-4.text-left.flex-grow
+        span.w-full.text-xs.font-semibold.mb-1.line-clamp-2(class='min-h-[5vh] sm:min-h-[3vh]') {{ product.name }}
         div.flex.items-center.justify-between.gap-2
             span.font-bold.text-main {{formatter.format(product.priceWithTax / 100)}}
-    ft-add-to-cart-button(:product-uuid="product.uuid")
+    
+    ft-add-to-cart-button(:product-uuid="product.uuid" class='mt-auto')
 </template>
 
 <script lang="ts" setup>
-import { addToFavorite, removeFromFavorite } from '@core/usecases/add-to-favorite/addToFavorite';
+import {
+  addToFavorite,
+  removeFromFavorite
+} from '@core/usecases/add-to-favorite/addToFavorite'
 import { useProductGateway } from '../../../../../gateways/productGateway'
-import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm';
-import { priceFormatter } from '@utils/formater';
+import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm'
+import { priceFormatter } from '@utils/formater'
 
 defineProps({
-    product: { type: Object, required: true }
+  product: { type: Object, required: true }
 })
 
 const addItemToFavorite = (uuid: string) => {
-    addToFavorite(uuid, useProductGateway())
+  addToFavorite(uuid, useProductGateway())
 }
 
 const removeItemFromFavorite = (uuid: string) => {
-    removeFromFavorite(uuid)
+  removeFromFavorite(uuid)
 }
 
 export interface LikeQuantityVM {
-    items: HashTable<number>
-    totalQuantity: number
+  items: HashTable<number>
+  totalQuantity: number
 }
 
 const likeQuantity = ref<LikeQuantityVM | null>(null)
@@ -58,6 +62,6 @@ const likeQuantity = ref<LikeQuantityVM | null>(null)
 const formatter = priceFormatter('fr-FR', 'EUR')
 
 watchEffect(async () => {
-    likeQuantity.value = await getLikeQuantityVM(useProductGateway())
+  likeQuantity.value = await getLikeQuantityVM(useProductGateway())
 })
 </script>

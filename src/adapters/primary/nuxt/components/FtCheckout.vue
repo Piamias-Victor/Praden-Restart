@@ -92,19 +92,17 @@ const user = computed(() => {
   return getUserVM()
 })
 
-const newUser = ref(
-  {
-    firstName: '',
-    lastName: '',
-    phone: '',
-    mail: user.mail,
-    country: '',
-    postal: '',
-    address: '',
-    appartement: '',
-    city: '',
-  }
-)
+const newUser = ref({
+  firstName: '',
+  lastName: '',
+  phone: '',
+  mail: user.mail,
+  country: '',
+  postal: '',
+  address: '',
+  appartement: '',
+  city: ''
+})
 
 const email = ref('')
 const phone = ref('')
@@ -173,22 +171,23 @@ watchEffect(() => {
 })
 
 const validateUser = () => {
-  const photo = user.value.photo !== '' ? user.value.photo : 'https://media1.vetsecurite.com/img/cms/BLOG/Workwear/Pr%C3%A9parateur%20pharmacie/Logo-Pharmacie.png'
+  const photo =
+    user.value.photo !== ''
+      ? user.value.photo
+      : 'https://media1.vetsecurite.com/img/cms/BLOG/Workwear/Pr%C3%A9parateur%20pharmacie/Logo-Pharmacie.png'
 
-  updateUser(
-    {
-      firstName: newUser.value.firstName,
-      lastName: newUser.value.lastName,
-      phone: newUser.value.phone,
-      mail: user.value.mail,
-      country: newUser.value.country,
-      postal: newUser.value.postal,
-      address: newUser.value.address,
-      appartement: newUser.value.appartement,
-      city: newUser.value.city,
-      photo
-    }
-  )
+  updateUser({
+    firstName: newUser.value.firstName,
+    lastName: newUser.value.lastName,
+    phone: newUser.value.phone,
+    mail: user.value.mail,
+    country: newUser.value.country,
+    postal: newUser.value.postal,
+    address: newUser.value.address,
+    appartement: newUser.value.appartement,
+    city: newUser.value.city,
+    photo
+  })
   emit('move-stepper')
 }
 

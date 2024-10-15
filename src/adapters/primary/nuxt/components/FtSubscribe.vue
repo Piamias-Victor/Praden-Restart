@@ -71,15 +71,15 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import { createGoogleUser } from '@core/usecases/user/createGoogleUser';
+import { createGoogleUser } from '@core/usecases/user/createGoogleUser'
 import {
   TransitionRoot,
   TransitionChild,
   Dialog,
   DialogPanel
 } from '@headlessui/vue'
-import { signInWithGoogle } from '@utils/google';
-import { ref } from 'vue';
+import { signInWithGoogle } from '@utils/google'
+import { ref } from 'vue'
 
 const emit = defineEmits<{
   (e: 'close'): void

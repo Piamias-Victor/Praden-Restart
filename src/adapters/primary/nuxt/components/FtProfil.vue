@@ -70,8 +70,8 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
-import { logoutUser } from '@core/usecases/user/logout';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
+import { logoutUser } from '@core/usecases/user/logout'
 import {
   TransitionRoot,
   TransitionChild,

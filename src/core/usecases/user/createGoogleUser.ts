@@ -27,7 +27,8 @@ export const parseName = (fullName: string) => {
 
   const spaceIndex = trimmedStr.indexOf(' ')
 
-  const firstName = spaceIndex === -1 ? trimmedStr : trimmedStr.substring(0, spaceIndex)
+  const firstName =
+    spaceIndex === -1 ? trimmedStr : trimmedStr.substring(0, spaceIndex)
   const lastName = spaceIndex === -1 ? '' : trimmedStr.substring(spaceIndex + 1)
-  return {firstName, lastName}
+  return { firstName, lastName }
 }

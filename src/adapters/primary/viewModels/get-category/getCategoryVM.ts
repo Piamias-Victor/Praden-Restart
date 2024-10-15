@@ -96,9 +96,7 @@ export const getPromotionVM = (
   return res
 }
 
-export const getCategoryVM = (
-  sortType: SortType = SortType.None
-) => {
+export const getCategoryVM = (sortType: SortType = SortType.None) => {
   const categoryStore = useCategoryStore()
   const categories = categoryStore.items
   const searchStore = useSearchStore()
@@ -143,10 +141,11 @@ export const getCategory = async (
   }
   const productsWithFacets = await searchGateway.getCategory(uuid)
   const searchStore = useSearchStore()
+  console.log('facet', productsWithFacets)
   if (productsWithFacets) {
     searchStore.setCurrentCategory(uuid)
     searchStore.setProducts(productsWithFacets.items)
-    // searchStore.setFacets(productsWithFacets.facets)
+    searchStore.setFacets(productsWithFacets.facets)
   } else {
     searchStore.reset()
   }
