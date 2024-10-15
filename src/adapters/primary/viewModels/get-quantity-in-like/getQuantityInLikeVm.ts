@@ -16,12 +16,11 @@ export const getLikeQuantityVM = async (
   const likeStore = useLikeStore()
   const productStore = useProductStore()
   const likeItems = likeStore.items
-  console.log('likeItems', likeItems)
   const products = productStore.items
   const productsInCart = likeItems.map((uuid: UUID) =>
     products.find((product: Product) => uuid === product.uuid)
   )
-  console.log('like', productsInCart)
+  console.log('test', productsInCart)
   return productsInCart.reduce(
     (acc: any, p: Product) => {
       let quantity = 1

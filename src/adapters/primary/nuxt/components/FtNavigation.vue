@@ -2,7 +2,7 @@
 pre {{likeQuantity}}
 div.fixed.w-full.flex.justify-center.z-10.bottom-5.left-0
     div.bg-white.rounded-full.p-2.flex.items-center.justify-center.shadow-xl(class='w-[90vw] sm:w-[40vw]')
-        ft-button.w-full.text-contrast.flex.items-center.justify-center(@click="openCart")
+        ft-button.w-full.text-contrast.flex.items-center.justify-center(@click="openLike")
             icon.icon-lg(name="ph:heart-bold")
             span(v-if="likeQuantity && likeQuantity.totalQuantity") {{ likeQuantity.totalQuantity }}
         ft-button.w-full.text-primary11.flex.items-center.justify-center
@@ -11,6 +11,7 @@ div.fixed.w-full.flex.justify-center.z-10.bottom-5.left-0
             icon.icon-lg(name="akar-icons:shopping-bag")
             span(v-if="cartQuantity && cartQuantity.totalQuantity") {{ cartQuantity.totalQuantity }}
 ft-panel(v-if="cartOpened" @close="closeCart")
+ft-like(v-if="likeOpened" @close="closeLike")
 </template>
 
 <script lang="ts" setup>
@@ -31,6 +32,8 @@ export interface LikeQuantityVM {
 
 const cartOpened = ref(false)
 
+const likeOpened = ref(false)
+
 const cartQuantity = ref<CartQuantityVM | null>(null)
 
 const likeQuantity = ref<LikeQuantityVM | null>(null)
@@ -41,6 +44,14 @@ const openCart = () => {
 
 const closeCart = () => {
   cartOpened.value = false
+}
+
+const openLike = () => {
+  likeOpened.value = true
+}
+
+const closeLike = () => {
+  likeOpened.value = false
 }
 
 // Watch for cart quantity changes
