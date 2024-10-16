@@ -72,7 +72,7 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
 import { createGoogleUser } from '@core/usecases/user/createGoogleUser'
 import {
   TransitionRoot,

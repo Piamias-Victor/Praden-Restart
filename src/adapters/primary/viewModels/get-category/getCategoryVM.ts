@@ -156,37 +156,34 @@ export const trimString = (name: string, n: number) => {
 }
 
 export const getParentCategory = (uuid: string, categories: any[]) => {
-  const category = categories.find((c: any) => c.uuid === uuid);
-  return category ? category : null;
-};
+  const category = categories.find((c: any) => c.uuid === uuid)
+  return category ? category : null
+}
 
 export const getRootCategoryUuid = (uuid: string): string | null => {
-  const categoryStore = useCategoryStore();
-  const categories = Array.from(categoryStore.itemsSet); // Conversion du Set en tableau
-  let currentUuid = uuid;
-  let iterations = 0; // Compteur d'itérations
-  const maxIterations = 10; // Limite d'itérations pour éviter les boucles infinies
+  const categoryStore = useCategoryStore()
+  const categories = Array.from(categoryStore.itemsSet) // Conversion du Set en tableau
+  let currentUuid = uuid
+  let iterations = 0 // Compteur d'itérations
+  const maxIterations = 10 // Limite d'itérations pour éviter les boucles infinies
 
   while (currentUuid) {
-    iterations++;
+    iterations++
     if (iterations > maxIterations) {
-      return null; // Arrête la recherche après trop d'itérations
+      return null // Arrête la recherche après trop d'itérations
     }
 
-    const currentCategory = getParentCategory(currentUuid, categories);
+    const currentCategory = getParentCategory(currentUuid, categories)
     if (!currentCategory) {
-      break; // Si aucune catégorie n'est trouvée, arrêtez la recherche
+      break // Si aucune catégorie n'est trouvée, arrêtez la recherche
     }
-
-    // console.log(`Vérification de la catégorie: ${currentCategory.name}, UUID: ${currentCategory.uuid}`); // Log pour débogage
 
     if (!currentCategory.parentUuid) {
-      return currentCategory.uuid; // Retourne l'UUID de la catégorie racine
+      return currentCategory.uuid // Retourne l'UUID de la catégorie racine
     }
-    
-    currentUuid = currentCategory.parentUuid; // Remonte à la catégorie parente
+
+    currentUuid = currentCategory.parentUuid // Remonte à la catégorie parente
   }
 
-  return null; // Si aucune catégorie racine n'est trouvée
-};
-
+  return null // Si aucune catégorie racine n'est trouvée
+}

@@ -31,7 +31,9 @@ export const getSearchResultVM = (): GetSearchResultVM => {
   }
 }
 
-export const getSearchResultVMFirstSix = (excludeUuid: string): GetSearchResultVM => {
+export const getSearchResultVMFirstSix = (
+  excludeUuid: string
+): GetSearchResultVM => {
   const searchStore = useSearchStore()
   const products = searchStore.result
   const formatter = priceFormatter('fr-FR', 'EUR')
@@ -40,11 +42,12 @@ export const getSearchResultVMFirstSix = (excludeUuid: string): GetSearchResultV
   if (products.length === 0) return { items: [] }
 
   // Filtrer les produits pour exclure celui avec l'uuid spécifié
-  const filteredProducts = products.filter(p => p.uuid !== excludeUuid)
+  const filteredProducts = products.filter((p) => p.uuid !== excludeUuid)
 
   // Retourner les 6 premiers produits après filtrage
   return {
-    items: filteredProducts.slice(0, 6).map((p) => {  // Utilisation de slice(0, 6) pour prendre les 6 premiers produits
+    items: filteredProducts.slice(0, 6).map((p) => {
+      // Utilisation de slice(0, 6) pour prendre les 6 premiers produits
       const promotion = getPromotionVM(p)
       const res: GetSearchResultItemVM = {
         uuid: p.uuid,

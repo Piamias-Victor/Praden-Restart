@@ -8,6 +8,10 @@ export interface HashTable<T> {
     [key: string]: T
 }
 
+export type Timestamp = number
+
+export type EmailMessage = SendOrderConfirmationDTO
+
 export interface User {
   id: string,
   mail: string,

@@ -26,7 +26,6 @@ export const getSearchCategoriesVM = (query: string): SearchCategoriesVM => {
   )
   return {
     items: searchCategories.map((category: Category) => {
-      // console.log('test:', category.name, getRootCategoryUuid(category.uuid))
       return {
         uuid: category.uuid,
         name: formatCategoryName(category.name),

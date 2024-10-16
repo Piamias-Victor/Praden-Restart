@@ -77,8 +77,7 @@ watchEffect(async () => {
 
       const result = await searchProduct(laboratoryName, searchGateway())
       // Mettre à jour ici searchVM ou un autre état si nécessaire
-    } catch (error) {
-    }
+    } catch (error) {}
   } else {
   }
 })
@@ -129,5 +128,4 @@ const productsArray = [
   productTest1,
   productTest2
 ]
-
 </script>

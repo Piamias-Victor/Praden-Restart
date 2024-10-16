@@ -30,11 +30,9 @@ const Name = computed(() => {
   return route.fullPath.split('?')[1] || '' // Récupère la chaîne après le "?"
 })
 
-console.log('nom', Name)
-
 const sortType = ref(SortType.None)
 const displayProduct = ref<any | null>(null)
-const laboratoryFilter = ref<string | null>(null)  // Variable pour le laboratoire filtré
+const laboratoryFilter = ref<string | null>(null) // Variable pour le laboratoire filtré
 
 const sortBy = (st: number) => {
   if (sortType && typeof sortType.value !== 'undefined') {
@@ -47,15 +45,17 @@ const sortBy = (st: number) => {
 }
 
 const searchLaboratory = (labo: string | null) => {
-  laboratoryFilter.value = labo;  // Mettez à jour le filtre de laboratoire
+  laboratoryFilter.value = labo // Mettez à jour le filtre de laboratoire
 }
 
 const filteredProducts = computed(() => {
   // Filtrer les produits en fonction du laboratoire
   if (!laboratoryFilter.value) {
-    return categoryVM.value.products;  // Retourner tous les produits si aucun filtre
+    return categoryVM.value.products // Retourner tous les produits si aucun filtre
   }
-  return categoryVM.value.products.filter(product => product.laboratory === laboratoryFilter.value);
+  return categoryVM.value.products.filter(
+    (product) => product.laboratory === laboratoryFilter.value
+  )
 })
 
 onMounted(() => {

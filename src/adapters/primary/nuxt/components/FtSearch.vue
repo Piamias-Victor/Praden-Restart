@@ -9,24 +9,37 @@ TransitionRoot(appear='' :show='true' as='template')
                     DialogPanel.flex.h-full.flex-col.overflow-y-scroll.bg-background.shadow-xl.animate-slideright
                         div.w-full.bg-main.text-center.p-2.text-white.font-semibold.flex.items-center.justify-center.gap-2
                             span Livraison offerte pour 69 € d'achat
-                        div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
-                            div
-                              div.flex.items-center.gap-4
-                                  div.bg-white.rounded-full.px-2.grow.flex.items-center.gap-4.bg-contrast
-                                      icon.icon-md(name="lucide:search")
-                                      input#search.block.border-0.placeholder-text-light.text.bg-transparent.outline-none.appearance-none(
-                                          name='search'
-                                          class='focus:text-default focus:outline-none sm:text-sm focus:ring-0 w-[62vw]'
-                                          placeholder='Recherche'
-                                          type='search'
-                                          autocomplete='off'
-                                          @input="searchChanged"
-                                      )
-                                  ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
-                                      icon.icon-md(name="heroicons-outline:x")
-                            div.mt-4
-                            div(v-if='query !== ""')
-                                ft-categories(:categoriesVM="categoriesVM")
+                        div.py-4.px-4.flex.items-center.gap-4
+                            div.bg-white.rounded-full.px-2.grow.flex.items-center.gap-4.bg-contrast
+                                icon.icon-md(name="lucide:search")
+                                input#search.block.border-0.placeholder-text-light.text.bg-transparent.outline-none.appearance-none(
+                                    name='search'
+                                    class='focus:text-default focus:outline-none sm:text-sm focus:ring-0 w-[62vw]'
+                                    placeholder='Recherche'
+                                    type='search'
+                                    autocomplete='off'
+                                    @input="searchChanged"
+                                )
+                            ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
+                                icon.icon-md(name="heroicons-outline:x")
+                        div.px-4(v-if='query !== ""')
+                            ft-categories-search(:categoriesVM="categoriesVM" @close='close')
+                        div.flex-1.overflow-y-auto.px-4(class="sm:px-6")
+                            //- div.flex.items-center.gap-4
+                            //-     div.bg-white.rounded-full.px-2.grow.flex.items-center.gap-4.bg-contrast
+                            //-         icon.icon-md(name="lucide:search")
+                            //-         input#search.block.border-0.placeholder-text-light.text.bg-transparent.outline-none.appearance-none(
+                            //-             name='search'
+                            //-             class='focus:text-default focus:outline-none sm:text-sm focus:ring-0 w-[62vw]'
+                            //-             placeholder='Recherche'
+                            //-             type='search'
+                            //-             autocomplete='off'
+                            //-             @input="searchChanged"
+                            //-         )
+                            //-     ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
+                            //-         icon.icon-md(name="heroicons-outline:x")
+                            //- div(v-if='query !== ""')
+                            //-     ft-categories(:categoriesVM="categoriesVM")
                             ft-product-search-list(:products="searchVM.items")
                             nuxt-link(
                                 v-if='query === ""'
@@ -65,6 +78,7 @@ const emit = defineEmits<{
 }>()
 
 const close = () => {
+  console.log('ici ici')
   emit('close')
 }
 

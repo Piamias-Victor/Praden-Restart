@@ -63,6 +63,8 @@ import deliveryGateway, {
 } from '../../../../../gateways/deliveryGateway'
 import { getCheckoutVM } from '@adapters/primary/viewModels/get-checkout/getCheckoutVM'
 import { getDeliveryVM } from '@adapters/primary/viewModels/get-delivery/getDeliveryVM'
+import { createOrder } from '@core/usecases/orders/order-creation/createOrder'
+import { useEmailGateway } from '../../../../../gateways/emailGateway'
 
 const router = useRouter()
 
@@ -98,7 +100,9 @@ function closeModal() {
 }
 
 const validateOrder = () => {
-  router.push('/checkout/success')
+  console.log('on demare')
+  createOrder(useEmailGateway())
+  //- router.push('/checkout/success')
 }
 
 watchEffect(async () => {
