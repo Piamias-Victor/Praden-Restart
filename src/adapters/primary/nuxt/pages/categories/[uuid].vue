@@ -1,13 +1,16 @@
 <template lang="pug">
-pre {{facetsVM.laboratory.values}}
 ft-header
 ft-child-categories(:categoriesVM="categoriesVM")
-ft-child-categories(v-if="facetsVM.laboratory" :categoriesVM="facetsVM.laboratory.values")
 div.flex.px-2.flex.items-center.justify-end.gap-4.mt-4
-  div(v-for='option in categoryVM.sortOptions' :key='option.name').cursor-pointer
-    ft-button.bg-white.rounded-full(@click="sortBy(option.sortType)")
+  ft-button.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
+    span.text-main.font-semibold.hidden(class='sm:block') Filtres
+    icon.icon-lg(name="mdi:filter-outline")
+  //- div(v-for='option in categoryVM.sortOptions' :key='option.name').cursor-pointer
+  //-   ft-button.bg-white.rounded-full(@click="sortBy(option.sortType)")
       img.icon-md.text-main(:src="option.name")
 ft-product-cat-list(:products="categoryVM.products")
+ft-panel2(v-if="filterOpened" @close="closeCart" :facetsVM="facetsVM")
+pre {{facetsVM}}
 </template>
 
 <script lang="ts" setup>
@@ -51,4 +54,14 @@ const categoryVM = computed(() => {
 const facetsVM = computed(() => {
   return getFacetsVM()
 })
+
+const filterOpened = ref(false)
+
+const openFilter = () => {
+  filterOpened.value = true
+}
+
+const closeCart = () => {
+  filterOpened.value = false
+}
 </script>

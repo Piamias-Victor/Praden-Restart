@@ -1,11 +1,7 @@
 <template lang="pug">
-//- pre {{props.categoriesVM}}
-//- div.py-4.px-2.flex.items-center.gap-2.overflow-x-scroll.custom-scrollbar
-//-     ft-button.bg-white.rounded-xl.px-6(@click="goBack")
-//-       icon.icon-md(name="icon-park-outline:return")
-//-       span Retour
-//-     ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='category in props.categoriesVM' :key="category.key"")
-//-         span.whitespace-nowrap {{ category.key }}
+div.py-4.px-2.flex.items-center.gap-2.overflow-x-scroll.custom-scrollbar
+    ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='category in props.categoriesVM' :key="category.key")
+        span.whitespace-nowrap {{ category.key }}
 </template>
 
 <script lang="ts" setup>

@@ -3,6 +3,7 @@ ft-header
 ft-categories(:categoriesVM="categoriesVM")
 ft-slider
 ft-product-list(:products="productsArray") La sélection du pharmacien
+div.h-4
 ft-product-list(:products="productsArray") Promotion
 ft-test
 section.px-2
@@ -33,7 +34,7 @@ const categoriesVM = computed(() => {
 const productTest1 = {
   href: '/products/5ee46259-1d14-4ae5-8abe-651529ed2be5',
   uuid: '5ee46259-1d14-4ae5-8abe-651529ed2be5',
-  price: '8,99',
+  price: '8,99 €',
   name: "Boiron Mag'300+ fatigue générale 160 comprimés",
   laboratory: 'BOIRON',
   availableStock: 14,
