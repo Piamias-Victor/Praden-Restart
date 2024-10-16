@@ -41,7 +41,7 @@ export class RealEmailGateway implements EmailGateway {
     )
     const body = {
       to: confirmationDTO.contact.email,
-      templateId: this.confirmationTemplateID,
+      templateId: 6388430, // Remplacez par l'ID de votre template
       data: {
         shipp: shippingAddress,
         bill: billingAddress,
@@ -49,12 +49,47 @@ export class RealEmailGateway implements EmailGateway {
         total
       }
     }
+
     const headers = {
       'Content-Type': 'application/json'
     }
-    console.log('voila le body', body)
-    await axios.post(this.baseUrl, body, { headers })
+
+    await axios.post('/api/sendEmail', body, { headers })
   }
+
+  // async sendOrderConfirmation(
+  //   confirmationDTO: SendOrderConfirmationDTO
+  // ): Promise<void> {
+  //   console.log('dans le sendOrderConfirmation')
+  //   const shippingAddress = this.getShippingAddress(
+  //     confirmationDTO.shippingAddress,
+  //     confirmationDTO.contact
+  //   )
+  //   const billingAddress = this.getBillingAddress(
+  //     confirmationDTO.billingAddress,
+  //     confirmationDTO.contact
+  //   )
+  //   const lines = this.getLines(confirmationDTO.orderLines)
+  //   const total = this.getTotals(
+  //     confirmationDTO.orderLines,
+  //     confirmationDTO.deliveryMethod
+  //   )
+  //   const body = {
+  //     to: confirmationDTO.contact.email,
+  //     templateId: this.confirmationTemplateID,
+  //     data: {
+  //       shipp: shippingAddress,
+  //       bill: billingAddress,
+  //       lines,
+  //       total
+  //     }
+  //   }
+  //   const headers = {
+  //     'Content-Type': 'application/json'
+  //   }
+  //   console.log('voila le body', body)
+  //   await axios.post(this.baseUrl, body, { headers })
+  // }
 
   private getShippingAddress(address: Address, contact: Contact) {
     return {
