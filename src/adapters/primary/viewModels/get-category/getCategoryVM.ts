@@ -165,7 +165,7 @@ export const getRootCategoryUuid = (uuid: string): string | null => {
   const categories = Array.from(categoryStore.itemsSet); // Conversion du Set en tableau
   let currentUuid = uuid;
   let iterations = 0; // Compteur d'itérations
-  const maxIterations = 100; // Limite d'itérations pour éviter les boucles infinies
+  const maxIterations = 10; // Limite d'itérations pour éviter les boucles infinies
 
   while (currentUuid) {
     iterations++;

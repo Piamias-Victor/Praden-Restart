@@ -2,6 +2,7 @@ import { UUID } from '@core/types/types'
 import { useCategoryStore } from '@store/categoryStore'
 import { Category } from '@core/entities/category'
 import { formatCategoryName } from './getRootCategoriesVM'
+import { getRootCategoryUuid } from './getCategoryVM'
 
 export interface ChildCategoryItemVM {
   uuid: UUID
@@ -26,7 +27,7 @@ export const getChildCategoriesVM = (uuid: UUID): ChildCategoriesVM => {
         name: formatCategoryName(category.name),
         href: `/categories/${category.uuid}`,
         img: getImageInMemory(category.uuid),
-        icon: getIconInMemory(category.uuid)
+        icon: getIconInMemory(getRootCategoryUuid(category.uuid))
       }
     })
   }
