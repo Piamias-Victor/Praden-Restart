@@ -7,8 +7,7 @@ TransitionRoot(appear='' :show='true' as='template')
             div.flex.min-h-full.items-center.justify-center.text-center.fixed.inset-y-0.right-0.flex.max-w-full.w-screen.max-w-md(class="md:pl-10")
                 TransitionChild(as='template' class="w-full")
                     DialogPanel.flex.h-full.flex-col.overflow-y-scroll.bg-background.shadow-xl.animate-slideright
-                      ft-filter(:facetsVM="facetsVM" @close="closeCart")
-                    
+                      ft-filter(:facetsVM="facetsVM" @close="closeCart" @sortBy="sortBy" :sortType="sortType")  
 </template>
 
 <script lang="ts" setup>
@@ -24,6 +23,7 @@ import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM'
 import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart'
 const props = defineProps<{
   facetsVM: any
+  sortType: any
 }>()
 
 const router = useRouter()
@@ -46,11 +46,16 @@ const cart = computed(() => {
 
 const emit = defineEmits<{
   (e: 'close'): void
+  (e: 'sortBy', st: number): void
   (e: 'move-stepper'): void
 }>()
 
 const close = () => {
   emit('close')
+}
+
+const sortBy = (st: number) => {
+  emit('sortBy', st)
 }
 
 function closeModal() {

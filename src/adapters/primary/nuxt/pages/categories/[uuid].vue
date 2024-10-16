@@ -5,12 +5,11 @@ div.flex.px-2.flex.items-center.justify-end.gap-4.mt-4
   ft-button.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
     span.text-main.font-semibold.hidden(class='sm:block') Filtres
     icon.icon-lg(name="mdi:filter-outline")
-  //- div(v-for='option in categoryVM.sortOptions' :key='option.name').cursor-pointer
-  //-   ft-button.bg-white.rounded-full(@click="sortBy(option.sortType)")
+  div(v-for='option in categoryVM.sortOptions' :key='option.name').cursor-pointer
+    ft-button.bg-white.rounded-full(@click="sortBy(option.sortType)")
       img.icon-md.text-main(:src="option.name")
 ft-product-cat-list(:products="categoryVM.products")
-ft-panel2(v-if="filterOpened" @close="closeCart" :facetsVM="facetsVM")
-pre {{facetsVM}}
+ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" :facetsVM="facetsVM" :sortType="sortType")  <!-- Passer sortType ici -->
 </template>
 
 <script lang="ts" setup>
@@ -31,17 +30,26 @@ definePageMeta({ layout: 'main' })
 const route = useRoute()
 const categoryUuid = route.params.uuid
 
+const sortType = ref(SortType.None)
+
+const sortBy = (st: number) => {
+  console.log('ca redescend bien', st)
+  // Vérifiez que props.sortType est bien défini et est réactif
+  if (sortType && typeof sortType.value !== 'undefined') {
+    if (sortType.value === st) {
+      sortType.value = SortType.None
+    } else {
+      sortType.value = st
+    }
+  } else {
+    console.error('props.sortType is not defined or is not reactive.')
+  }
+}
+
 onMounted(() => {
   listCategories(categoryGateway())
   getCategory(categoryUuid, categoryGateway(), searchGateway())
 })
-
-const sortBy = (st: SortType) => {
-  if (sortType.value === st) sortType.value = SortType.None
-  else sortType.value = st
-}
-
-const sortType = ref(SortType.None)
 
 const categoriesVM = computed(() => {
   return getChildCategoriesVM(categoryUuid)
