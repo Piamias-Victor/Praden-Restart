@@ -1,15 +1,12 @@
 <template lang="pug">
-ft-header
-ft-child-categories(:categoriesVM="categoriesVM")
-div.flex.px-2.flex.items-center.justify-end.gap-4.mt-4
-  ft-button.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
-    span.text-main.font-semibold.hidden(class='sm:block') Filtres
-    icon.icon-lg(name="mdi:filter-outline")
-  div(v-for='option in categoryVM.sortOptions' :key='option.name').cursor-pointer
-    ft-button.bg-white.rounded-full(@click="sortBy(option.sortType)")
-      img.icon-md.text-main(:src="option.name")
-ft-product-cat-list(:products="categoryVM.products")
-ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" :facetsVM="facetsVM" :sortType="sortType")  <!-- Passer sortType ici -->
+  ft-header
+  ft-child-categories(:categoriesVM="categoriesVM")
+  div.flex.px-2.flex.items-center.justify-end.gap-4.mt-4
+    ft-button.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
+      span.text-main.font-semibold.hidden(class='sm:block') Filtres
+      icon.icon-lg(name="mdi:filter-outline")
+  ft-product-cat-list(:products="filteredProducts")  <!-- Utilisez les produits filtrés ici -->
+  ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" :facetsVM="facetsVM" :sortType="sortType")
 </template>
 
 <script lang="ts" setup>
@@ -20,7 +17,7 @@ import {
 import { categoryGateway } from '../../../../../../gateways/categoryGateway'
 import { searchGateway } from '../../../../../../gateways/searchGateway'
 import { SortType } from '@utils/sort'
-import { onMounted, ref, computed } from 'vue'
+import { onMounted, ref, computed, watchEffect } from 'vue'
 import { getFacetsVM } from '@adapters/primary/viewModels/get-facets/getFacetsVM'
 import { listCategories } from '@core/usecases/list-categories/listCategories'
 import { getChildCategoriesVM } from '@adapters/primary/viewModels/get-category/getChildCategoryVM'
@@ -31,20 +28,30 @@ const route = useRoute()
 const categoryUuid = route.params.uuid
 
 const sortType = ref(SortType.None)
+const displayProduct = ref<any | null>(null)
+const laboratoryFilter = ref<string | null>(null)  // Variable pour le laboratoire filtré
 
 const sortBy = (st: number) => {
-  console.log('ca redescend bien', st)
-  // Vérifiez que props.sortType est bien défini et est réactif
   if (sortType && typeof sortType.value !== 'undefined') {
     if (sortType.value === st) {
       sortType.value = SortType.None
     } else {
       sortType.value = st
     }
-  } else {
-    console.error('props.sortType is not defined or is not reactive.')
   }
 }
+
+const searchLaboratory = (labo: string | null) => {
+  laboratoryFilter.value = labo;  // Mettez à jour le filtre de laboratoire
+}
+
+const filteredProducts = computed(() => {
+  // Filtrer les produits en fonction du laboratoire
+  if (!laboratoryFilter.value) {
+    return categoryVM.value.products;  // Retourner tous les produits si aucun filtre
+  }
+  return categoryVM.value.products.filter(product => product.laboratory === laboratoryFilter.value);
+})
 
 onMounted(() => {
   listCategories(categoryGateway())

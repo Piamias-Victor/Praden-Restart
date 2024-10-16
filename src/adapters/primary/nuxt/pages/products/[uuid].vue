@@ -73,18 +73,14 @@ const searchVM = computed(() => {
 watchEffect(async () => {
   const laboratory = productVM.value?.laboratory
   if (laboratory) {
-    console.log('Laboratoire détecté :', laboratory)
     try {
       const laboratoryName = laboratory.split(' ')[0].toLowerCase()
 
       const result = await searchProduct(laboratoryName, searchGateway())
-      console.log('Résultats de la recherche :', result)
       // Mettre à jour ici searchVM ou un autre état si nécessaire
     } catch (error) {
-      console.error('Erreur lors de la recherche de produits :', error)
     }
   } else {
-    console.log('Aucun laboratoire disponible')
   }
 })
 

@@ -12,20 +12,23 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
     div.h-4
     h2.font-medium.text-gray-900 1 - Filtre de prix
     div.h-4
-    ft-button.button-solid.w-full(@click='sortBy(1)')
+    ft-button.button-solid.w-full(@click='sortBy(2)')
       icon.icon-md(name="mdi:tag-arrow-up-outline")
       span Plus chère au moins chère
     div.h-4
-    ft-button.button-solid.w-full(@click='sortBy(2)')
+    ft-button.button-solid.w-full(@click='sortBy(1)')
       icon.icon-md(name="mdi:tag-arrow-down-outline")
       span Moins chère au plus chère
     div.h-4
     h2.font-medium.text-gray-900 2 - Filtre laboratoire
     div(v-if="props.facetsVM && props.facetsVM.laboratory")
         div.grid.grid-cols-2.gap-4.mt-4.justify-items-center
-            ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='laboratory in props.facetsVM.laboratory.values' :key="laboratory.key" class="w-full text-center")
+            ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='laboratory in props.facetsVM.laboratory.values' :key="laboratory.key" @click='searchLaboratory(laboratory.key)' class="w-full text-center")
                 span.whitespace-nowrap {{ laboratory.key }}
-
+    div.h-4
+    ft-button.button-solid.w-full(@click='searchLaboratory(null)')
+      icon.icon-md(name="tabler:category")
+      span Afficher tout les labos
     div.mt-8
 </template>
 
@@ -59,14 +62,20 @@ const cart = computed(() => {
 const emit = defineEmits<{
   (e: 'close'): void
   (e: 'sortBy', st: number): void
+  (e: 'searchLaboratory', labo: string | null): void
 }>()
 
 const close = () => {
   emit('close')
 }
 
+const searchLaboratory = (labo: string | null) => {
+  emit('searchLaboratory', labo)
+}
+
 const sortBy = (st: number) => {
   emit('sortBy', st)
+  close()
 }
 
 function closeModal() {

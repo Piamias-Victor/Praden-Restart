@@ -78,7 +78,6 @@ showPopup.value = false
 }
 
 const subscribe = () => {
-console.log('Email soumis: ', email.value)
 closePopup()
 // Logique pour soumettre l'email ici
 }
