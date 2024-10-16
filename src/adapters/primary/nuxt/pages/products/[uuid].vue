@@ -1,5 +1,4 @@
 <template lang="pug">
-ft-header
 ft-categories(:categoriesVM="categoriesVM")
 div.mt-2
   div.mx-auto.max-w-2xl(class='lg:max-w-none')

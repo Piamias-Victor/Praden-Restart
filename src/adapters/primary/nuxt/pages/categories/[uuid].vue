@@ -1,5 +1,4 @@
 <template lang="pug">
-  ft-header
   ft-child-categories(:categoriesVM="categoriesVM")
   div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
     span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') {{Name}}

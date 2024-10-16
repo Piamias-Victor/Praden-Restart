@@ -1,5 +1,5 @@
 <template lang="pug">
-nav.flex.items-center.justify-center.p-2
+nav.flex.items-center.justify-center.p-2.px-4
     div.flex.gap-2
         ft-button.bg-white.rounded-full(@click="openProfil")
             icon.icon-md.text-main(name="material-symbols:supervised-user-circle-outline")

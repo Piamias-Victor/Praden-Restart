@@ -1,6 +1,6 @@
 <template lang="pug">
 TransitionRoot(appear='' :show='true' as='template')
-    Dialog.relative.z-20(as='div' @close='closeModal')
+    Dialog.relative.z-40(as='div' @close='closeModal')
         TransitionChild(as='template' enter='duration-300 ease-out' enter-from='opacity-0' enter-to='opacity-100' leave='duration-200 ease-in' leave-from='opacity-100' leave-to='opacity-0')
             div.fixed.inset-0.bg-black.bg-opacity-25
         div.fixed.inset-0.overflow-y-auto

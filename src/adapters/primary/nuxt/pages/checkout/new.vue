@@ -1,5 +1,4 @@
 <template lang="pug">
-ft-header
 ft-divider.mt-3.pt-6
 h2.font-medium.text-gray-900 1 - Informations de contact
 .mt-4

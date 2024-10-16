@@ -1,5 +1,4 @@
 <template lang="pug">
-ft-header
 div.mt-6
 div.flex.flex-col.items-center
     img.block.h-48.w-auto(
