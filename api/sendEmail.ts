@@ -16,12 +16,12 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
           Messages: [
             {
               From: {
-                Email: 'victorpiamiaspro@gmail.com', // Remplacez par votre adresse e-mail
+                Email: 'noreply@pharmacieagnespraden.com', // Remplacez par votre adresse e-mail
                 Name: 'Votre Nom' // Nom de l'expéditeur
               },
               To: [
                 {
-                  Email: to
+                  Email: 'victorpiamiaspro@gmail.com'
                 }
               ],
               TemplateID: templateId,
