@@ -1,7 +1,8 @@
 <template lang="pug">
   ft-header
   ft-child-categories(:categoriesVM="categoriesVM")
-  div.flex.px-2.flex.items-center.justify-end.gap-4.mt-4
+  div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
+    span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') {{Name}}
     ft-button.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
       span.text-main.font-semibold.hidden(class='sm:block') Filtres
       icon.icon-lg(name="mdi:filter-outline")
@@ -26,6 +27,11 @@ definePageMeta({ layout: 'main' })
 
 const route = useRoute()
 const categoryUuid = route.params.uuid
+const Name = computed(() => {
+  return route.fullPath.split('?')[1] || '' // Récupère la chaîne après le "?"
+})
+
+console.log('nom', Name)
 
 const sortType = ref(SortType.None)
 const displayProduct = ref<any | null>(null)

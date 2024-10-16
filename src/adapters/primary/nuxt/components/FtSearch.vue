@@ -26,7 +26,7 @@ TransitionRoot(appear='' :show='true' as='template')
                             div.mt-4
                             div(v-if='query !== ""')
                                 ft-categories(:categoriesVM="categoriesVM")
-                            ft-product-search-cat(:products="searchVM.items")
+                            ft-product-search-list(:products="searchVM.items")
                             nuxt-link(
                                 v-if='query === ""'
                                 @click="clicked").flex.flex-col.items-center.justify-center.gap-4.w-full

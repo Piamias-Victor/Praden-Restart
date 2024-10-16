@@ -3,7 +3,7 @@ div.py-4.px-2.flex.items-center.gap-2.overflow-x-scroll.custom-scrollbar
     ft-button.bg-white.rounded-xl.px-6(@click="goBack")
       icon.icon-md(name="icon-park-outline:return")
       span Retour
-    ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='category in props.categoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid)")
+    ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='category in props.categoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid, category.name)")
       img.icon-md(:src="category.icon")
       span.whitespace-nowrap {{ category.name }}
 </template>
@@ -17,8 +17,8 @@ definePageMeta({ layout: 'main' })
 
 const router = useRouter()
 
-const goToCat = (path: string) => {
-  router.push('/categories/' + path)
+const goToCat = (path: string, name: string) => {
+  router.push('/categories/' + path + '?' + name)
 }
 
 const goBack = () => {

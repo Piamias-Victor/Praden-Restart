@@ -14,13 +14,16 @@ export interface ChildCategoryItemVM {
 
 export interface ChildCategoriesVM {
   items: Array<ChildCategoryItemVM>
+  name: string
 }
 
 export const getChildCategoriesVM = (uuid: UUID): ChildCategoriesVM => {
   const categoryStore = useCategoryStore()
   const categories = categoryStore.items
   const childCategories = categories.filter((c) => c.parentUuid === uuid)
+  const currentCategory = categories.filter((c) => c.uuid === uuid)
   return {
+    name: '',
     items: childCategories.map((category: Category) => {
       return {
         uuid: category.uuid,

@@ -71,6 +71,7 @@ const close = () => {
 
 const searchLaboratory = (labo: string | null) => {
   emit('searchLaboratory', labo)
+  close()
 }
 
 const sortBy = (st: number) => {

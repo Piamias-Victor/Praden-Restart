@@ -2,7 +2,7 @@
 div.bg-white.rounded-xl.pt-2.w-full(class='w-[50vw] sm:w-[15vw] min-h-[320px] flex flex-col justify-between')
     div.flex.flex-col.items-center.justify-center.gap-4.relative
         nuxt-link.h-full.flex.items-center(
-        :href="`/products/${product.uuid}`"
+        :href="product.href"
         @click="clicked")
             img.p-4(
                 class='min-h-[200px] h-[200px] w-full object-cover'
@@ -26,7 +26,7 @@ div.bg-white.rounded-xl.pt-2.w-full(class='w-[50vw] sm:w-[15vw] min-h-[320px] fl
     div.w-full.flex.flex-col.px-4.text-left.flex-grow
         span.w-full.text-xs.font-semibold.mb-1.line-clamp-2(class='min-h-[5vh] sm:min-h-[3vh]') {{ product.name }}
         div.flex.items-center.justify-between.gap-2
-            span.font-bold.text-main {{formatter.format(product.priceWithTax / 100)}}
+            span.font-bold.text-main {{ product.price }}
     
     ft-add-to-cart-button(:product-uuid="product.uuid" class='mt-auto')
 </template>
@@ -38,7 +38,6 @@ import {
 } from '@core/usecases/add-to-favorite/addToFavorite'
 import { useProductGateway } from '../../../../../gateways/productGateway'
 import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm'
-import { priceFormatter } from '@utils/formater'
 
 defineProps({
   product: { type: Object, required: true }
@@ -58,8 +57,6 @@ export interface LikeQuantityVM {
 }
 
 const likeQuantity = ref<LikeQuantityVM | null>(null)
-
-const formatter = priceFormatter('fr-FR', 'EUR')
 
 watchEffect(async () => {
   likeQuantity.value = await getLikeQuantityVM(useProductGateway())
