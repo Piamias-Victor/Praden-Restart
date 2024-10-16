@@ -51,6 +51,7 @@ TransitionRoot(appear='' :show='true' as='template')
                             ft-divider.mt-3.pt-6
                             h2.font-medium.text-gray-900 2 - Informations de livraison
                             ft-address-form(
+                                :user='user'
                                 @firstname-changed="firstnameChanged"
                                 @lastname-changed="lastnameChanged"
                                 @country-changed="countryChanged"
@@ -71,6 +72,7 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 import { createGoogleUser } from '@core/usecases/user/createGoogleUser'
 import {
   TransitionRoot,
@@ -92,6 +94,10 @@ const close = () => {
 function closeModal() {
   emit('close')
 }
+
+const user = computed(() => {
+  return getUserVM()
+})
 
 const newsletter = ref(false)
 
