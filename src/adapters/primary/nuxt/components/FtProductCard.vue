@@ -21,7 +21,7 @@ div.bg-white.rounded-xl.pt-2(class='w-[50vw] sm:w-[15vw] min-h-[320px] flex flex
             @click="addItemToFavorite(product.uuid)"
             aria-label="Add to favorites"
         )
-            icon.icon-lg(name="heroicons:heart")
+            icon.icon-lg(name="ph:heart-bold")
         
     div.w-full.flex.flex-col.px-4.text-left.flex-grow
         span.w-full.text-xs.font-semibold.mb-1.line-clamp-2(class='min-h-[5vh] sm:min-h-[3vh]') {{ product.name }}
