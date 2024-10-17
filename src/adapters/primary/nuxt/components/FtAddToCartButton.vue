@@ -11,7 +11,7 @@ div.bg-main.rounded-b-xl.mt-1(class='p-0.5')
   ft-button.w-full.text-white.flex.items-center.justify-center.font-semibold(v-if="cartQuantity && cartQuantity.items && !cartQuantity.items[productUuid]" @click='addItemToCart(productUuid)')
       span Ajouter au panier
       //- icon.icon-sm(name="ph:plus-bold")
-      icon.icon-lg.text-white(name="ph:plus-fill")
+      icon.icon-lg.text-contrast(name="ph:plus-fill")
 </template>
 
 <script lang="ts" setup>
