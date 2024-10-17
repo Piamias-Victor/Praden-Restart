@@ -25,6 +25,7 @@ div.mt-2
             div.text-base.text-contrast(v-if="detail.name !== 'Notice'" style="white-space: pre-line")
               div.text-xs(v-html="detail.value")
             iframe.w-full.h-screen(v-else :src="detail.value")
+    ft-navigation
     ft-product-list.mt-4(:products="searchVM") Ces produits peuvent vous plaire
 </template>
 

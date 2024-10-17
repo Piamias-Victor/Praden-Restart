@@ -1,4 +1,5 @@
 <template lang="pug">
+ft-notif
 div.flex.flex-col.h-screen
     ft-sticky
         div.w-full.bg-main.text-center.p-2.text-white.font-semibold.flex.items-center.justify-center.gap-2
@@ -9,6 +10,7 @@ div.flex.flex-col.h-screen
     div.flex.flex-col.flex-grow.bg-background.p-3
         div(class='h-[13vh]')
         slot
+    div(class='min-h-[13vh]').bg-background
 </template>
 
 <script lang="ts" setup>

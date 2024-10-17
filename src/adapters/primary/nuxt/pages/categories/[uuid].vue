@@ -5,6 +5,7 @@
     ft-button.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
       span.text-main.font-semibold.hidden(class='sm:block') Filtres
       icon.icon-lg(name="mdi:filter-outline")
+  ft-navigation
   ft-product-cat-list(:products="filteredProducts")  <!-- Utilisez les produits filtrés ici -->
   ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" :facetsVM="facetsVM" :sortType="sortType")
 </template>

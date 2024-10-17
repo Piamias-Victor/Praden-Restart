@@ -8,9 +8,9 @@ tab-group.flex.flex-col(as='div').bg-white.rounded-xl.p-2
     //-         v-slot='{ selected }'
     //-         class="hover:bg-gray-50 focus:outline-none focus:ring ring-colored ring-opacity-50 ring-offset-4"
     //-         )
-    tab-panels.aspect-w-1.aspect-h-1
-        tab-panel.flex.justify-center(v-for='(image, index) in images' :key='index')
-            img.object-cover.object-center(class='sm:h-[60vh]' :src='image.src' :alt='image.alt')
+    tab-panels(class='max-h-[45vh]')
+        tab-panel.flex.justify-center(class='h-[45vh]' v-for='(image, index) in images' :key='index')
+            img.object-cover.object-center(class='' :src='image.src' :alt='image.alt')
     section.mb-2
         div.flex.justify-center.p-1.gap-1
             div.h-1.w-5.bg-black.rounded-full

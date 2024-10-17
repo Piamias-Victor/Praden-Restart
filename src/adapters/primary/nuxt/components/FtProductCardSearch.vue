@@ -1,9 +1,8 @@
 <template lang="pug">
 div.bg-white.rounded-xl.pt-2.w-full(class='w-[50vw] sm:w-[15vw] min-h-[320px] flex flex-col justify-between')
     div.flex.flex-col.items-center.justify-center.gap-4.relative
-        nuxt-link.h-full.flex.items-center(
-        :href="product.href"
-        @click="clicked")
+        button.h-full.flex.items-center(
+            @click="goToProduct(product.href)")
             img.p-4(
                 class='min-h-[200px] h-[200px] w-full object-cover'
                 :src="product.images[0]"
@@ -22,12 +21,12 @@ div.bg-white.rounded-xl.pt-2.w-full(class='w-[50vw] sm:w-[15vw] min-h-[320px] fl
             aria-label="Add to favorites"
         )
             icon.icon-lg(name="heroicons:heart")
-        
+
     div.w-full.flex.flex-col.px-4.text-left.flex-grow
         span.w-full.text-xs.font-semibold.mb-1.line-clamp-2(class='min-h-[5vh] sm:min-h-[3vh]') {{ product.name }}
         div.flex.items-center.justify-between.gap-2
             span.font-bold.text-main {{ product.price }}
-    
+
     ft-add-to-cart-button(:product-uuid="product.uuid" class='mt-auto')
 </template>
 
@@ -43,6 +42,15 @@ defineProps({
   product: { type: Object, required: true }
 })
 
+const emit = defineEmits<{
+  (e: 'close'): void
+}>()
+
+const close = () => {
+  console.log('ldjnfnjksdnf')
+  emit('close')
+}
+
 const addItemToFavorite = (uuid: string) => {
   addToFavorite(uuid, useProductGateway())
 }
@@ -55,8 +63,16 @@ export interface LikeQuantityVM {
   items: HashTable<number>
   totalQuantity: number
 }
+const router = useRouter()
 
 const likeQuantity = ref<LikeQuantityVM | null>(null)
+
+const goToProduct = (path: string) => {
+  router.push(path)
+  setTimeout(() => {
+    close()
+  }, 1000)
+}
 
 watchEffect(async () => {
   likeQuantity.value = await getLikeQuantityVM(useProductGateway())

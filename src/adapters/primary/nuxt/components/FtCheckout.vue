@@ -18,6 +18,9 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
           )
           span Préremplissez avec Google
     div.mt-4
+    div(v-if="!user.firstName").mt-4
+        ft-button.button-solid.w-full.text-xl Se connecter
+    div.mt-4
     h2.font-medium.text-gray-900 1 - Informations de contact
     .mt-2
         ft-input(
@@ -26,7 +29,7 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
         type='email'
         name='email-address'
         autocomplete='email'
-        @input="emailChanged"
+        @input="mailChanged"
         :value="user.mail"
         ) 
             span.font-semibold.text-sm E-mail
@@ -59,14 +62,10 @@ div.mt-2.border-t.py-6.px-4(class="sm:px-6")
             icon.icon-xs(name="iconamoon:check-bold")
         div(v-if='!newsletter').flex-shrink-0.bg-white.border.border-2.border-main.h-5.w-5.rounded-md(@click='switchNewsletter')
         span.text-sm(@click='switchNewsletter') S'inscrire à la newsletter et recevoir toutes les offres
-    div(v-if="!user.firstName").mt-4
-        ft-button.bg-contrast.w-full.text-xl(@click="validateUser") Se connecter
-    div(v-if="!user.firstName").mt-4
-        ft-button.button-solid.w-full.text-xl(@click="validateUser") Créer un compte
-    div(v-if="user.firstName").mt-4
-        ft-button.button-solid.w-full.text-xl(@click="validateUser") Choisir ma livraison
+    div().mt-4
+        ft-button.button-solid.w-full.text-xl(@click="validateUser" :disabled="!isFormValid") Choisir ma livraison
 </template>
-
+  
 <script lang="ts" setup>
 import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
 import {
@@ -80,7 +79,7 @@ import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM'
 import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart'
 import { createGoogleUser } from '@core/usecases/user/createGoogleUser'
 import { signInWithGoogle } from '@utils/google'
-import { ref } from 'vue'
+import { ref, computed, watchEffect } from 'vue'
 import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
 import { updateUser } from '@core/usecases/user/updateUser'
 
@@ -96,7 +95,7 @@ const newUser = ref({
   firstName: '',
   lastName: '',
   phone: '',
-  mail: user.mail,
+  mail: '',
   country: '',
   postal: '',
   address: '',
@@ -116,16 +115,17 @@ const close = () => {
   emit('close')
 }
 
-function closeModal() {
-  emit('close')
-}
-
 const switchNewsletter = () => {
   newsletter.value = !newsletter.value
 }
 
+// Fonctions pour mettre à jour newUser
 const firstnameChanged = (value: string) => {
   newUser.value.firstName = value
+}
+
+const mailChanged = (e: any) => {
+  newUser.value.mail = e.target.value
 }
 
 const phoneChanged = (e: any) => {
@@ -156,6 +156,16 @@ const zipChanged = (value: string) => {
   newUser.value.postal = value
 }
 
+const isFormValid = computed(() => {
+  return newUser.value.firstName && 
+         newUser.value.lastName && 
+         newUser.value.phone && 
+         newUser.value.mail && 
+         newUser.value.country && 
+         newUser.value.postal && 
+         newUser.value.city
+})
+
 watchEffect(() => {
   if (user.value) {
     newUser.value.firstName = user.value.firstName || ''
@@ -180,7 +190,7 @@ const validateUser = () => {
     firstName: newUser.value.firstName,
     lastName: newUser.value.lastName,
     phone: newUser.value.phone,
-    mail: user.value.mail,
+    mail: newUser.value.mail,
     country: newUser.value.country,
     postal: newUser.value.postal,
     address: newUser.value.address,

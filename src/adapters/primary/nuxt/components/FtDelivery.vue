@@ -14,32 +14,32 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
             ul.-my-6.divide-y.divide-gray12.text-left
                 div(v-for='item in cart.items' :key="item.uuid")
                     ft-product-cart(:item="item")
-div.flex.items-center.gap-1.text-sm.mt-2.w-full.justify-center
+div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(class='lg:text-sm')
   span Plus que 
   span.text-main.font-bold {{ cart.freeDelivery }}
   span pour profiter des frais de ports gratuit
-div.mt-2.border-t.py-6.px-4
-  h2.font-medium.text-gray-900.text-xl.mb-2 Mode de livraison
-  div.flex.flex-col.items-center.gap-2.w-full.mb-4
+div.mt-2.border-t.py-2.px-2(class='lg:py-6 lg:px-4')
+  h2.font-medium.text-gray-900.mb-2.text-sm(class='lg:text-xl') Mode de livraison
+  div.flex.flex-col.items-center.gap-2.w-full.mb-2(class='lg:mb-4')
     div(v-for='deliveryMethod in deliveryMethods.methods' :key="deliveryMethod.uuid" @click="deliveryMethodSelected(deliveryMethod)").w-full
       div(v-if='deliveryMethod.uuid === selectedDeliveryMethod')
-        div.flex.flex-col.items-start.border-main.relative.flex.cursor-pointer.rounded-lg.border.bg-white.p-4.shadow-sm.ring-2.ring-main
+        div.flex.flex-col.items-start.border-main.relative.flex.cursor-pointer.rounded-lg.border.bg-white.shadow-sm.ring-2.ring-main.p-3(class='lg:p-4')
           div.flex.items-center.justify-between.w-full
-            span.text-sm {{ deliveryMethod.name }}
-            span.text-sm {{ deliveryMethod.price }}
+            span.text-xs(class='lg:text-sm') {{ deliveryMethod.name }}
+            span.text-xs(class='lg:text-sm') {{ deliveryMethod.price }}
           span.text-xs.text-contrast {{ deliveryMethod.description }}
       div(v-if='deliveryMethod.uuid !== selectedDeliveryMethod')
-        div.flex.flex-col.items-start.border-main.relative.flex.cursor-pointer.rounded-lg.border.bg-white.p-4.shadow-sm
+        div.flex.flex-col.items-start.border-main.relative.flex.cursor-pointer.rounded-lg.border.bg-white.shadow-sm.p-3(class='lg:p-4')
           div.flex.items-center.justify-between.w-full
-            span.text-sm {{ deliveryMethod.name }}
-            span.text-sm {{ deliveryMethod.price }}
+            span.text-xs(class='lg:text-sm') {{ deliveryMethod.name }}
+            span.text-xs(class='lg:text-sm') {{ deliveryMethod.price }}
           span.text-xs.text-contrast {{ deliveryMethod.description }}
   div.flex.justify-between.items-center.text-lg
       p.font-semibold.text-main.text Total
       div.flex.flex-col.pl-2
-          span.text-sm(:class="cart.totalPriceWithPromotion ? 'line-through' : 'font-semibold'") {{ cart.totalPriceWithDelivery }}
+          span.text-xs(class='lg:text-sm' :class="cart.totalPriceWithPromotion ? 'line-through' : 'font-semibold'") {{ cart.totalPriceWithDelivery }}
           span.font-semibold.text-main(v-if="cart.totalPriceWithPromotion") {{ cart.totalPriceWithPromotion }}
-  div.mt-4
+  div.mt-2(class='lg:mt-4')
       ft-button.button-solid.w-full.text-xl(@click="validateOrder") Paiement
 </template>
 
@@ -102,7 +102,7 @@ function closeModal() {
 const validateOrder = () => {
   console.log('on demare')
   createOrder(useEmailGateway())
-  //- router.push('/checkout/success')
+  router.push('/checkout/success')
 }
 
 watchEffect(async () => {

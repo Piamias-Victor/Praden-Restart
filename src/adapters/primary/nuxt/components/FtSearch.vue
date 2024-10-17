@@ -22,6 +22,7 @@ TransitionRoot(appear='' :show='true' as='template')
                                 )
                             ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
                                 icon.icon-md(name="heroicons-outline:x")
+                        ft-navigation
                         div.px-4(v-if='query !== ""')
                             ft-categories-search(:categoriesVM="categoriesVM" @close='close')
                         div.flex-1.overflow-y-auto.px-4(class="sm:px-6")
@@ -40,7 +41,7 @@ TransitionRoot(appear='' :show='true' as='template')
                             //-         icon.icon-md(name="heroicons-outline:x")
                             //- div(v-if='query !== ""')
                             //-     ft-categories(:categoriesVM="categoriesVM")
-                            ft-product-search-list(:products="searchVM.items")
+                            ft-product-search-list(:products="searchVM.items" @close='close')
                             nuxt-link(
                                 v-if='query === ""'
                                 @click="clicked").flex.flex-col.items-center.justify-center.gap-4.w-full

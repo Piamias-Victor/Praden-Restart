@@ -22,7 +22,7 @@ div.mt-2.border-t.py-6.px-4(class="sm:px-6")
             span.font-semibold.text-main(v-if="cart.totalPriceWithPromotion") {{ cart.totalPriceWithPromotion }}
     p.text-xs(class="mt-0.5").text-left Les frais de port ne sont pas compris
     div.mt-4
-        ft-button.button-solid.w-full.text-xl(@click="validateCart") Paiement
+        ft-button.button-solid.w-full.text-xl(@click="validateCart" :disabled="cartQuantity && cartQuantity.totalQuantity === 0") Paiement <!-- Vérification ajoutée ici -->
     div.mt-2.flex.justify-center.text-xs
         ft-button.w-full.font-semibold.flex.items-center.gap-1.bg-background(class="hover:text-main" @click="close")
             span Reprendre mes achats
@@ -58,16 +58,17 @@ const close = () => {
   emit('close')
 }
 
-function closeModal() {
-  emit('close')
-}
-
 const validateCart = () => {
   emit('move-stepper')
 }
 
 watchEffect(async () => {
-  cartQuantity.value = await getCartQuantityVM(useProductGateway())
+  try {
+    cartQuantity.value = await getCartQuantityVM(useProductGateway())
+  } catch (error) {
+    console.error('Erreur lors de la récupération de la quantité du panier', error)
+    cartQuantity.value = { totalQuantity: 0 } // Assurer une valeur par défaut si l'appel échoue
+  }
 })
 
 const removeAllItemFromCart = () => {
