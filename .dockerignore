@@ -1,0 +1,10 @@
+.idea
+.nuxt
+node_modules
+.output
+coverage
+yarn-error.log
+*.iml
+.DS_Store
+.env
+dist
