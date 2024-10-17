@@ -1,4 +1,5 @@
 <template lang="pug">
+ft-notif
 ft-categories(:categoriesVM="categoriesVM")
 ft-slider
 ft-product-list(:products="productsArray") La sélection du pharmacien

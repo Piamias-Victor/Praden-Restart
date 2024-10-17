@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { DeliveryMethod } from '@core/entities/deliveryMethod'
 import {
   Address,
@@ -25,8 +24,7 @@ export class RealEmailGateway implements EmailGateway {
   async sendOrderConfirmation(
     confirmationDTO: SendOrderConfirmationDTO
   ): Promise<void> {
-    console.log('Dans sendOrderConfirmation')
-
+    console.log('dans le sendOrderConfirmation')
     const shippingAddress = this.getShippingAddress(
       confirmationDTO.shippingAddress,
       confirmationDTO.contact
@@ -43,27 +41,43 @@ export class RealEmailGateway implements EmailGateway {
 
     const body = {
       to: confirmationDTO.contact.email,
+      subject: 'Order Confirmation',
       templateId: this.confirmationTemplateID,
       data: {
-        link: `https://www.pharmacieagnespraden.com/order/${confirmationDTO.orderUuid}/`,
         shipp: shippingAddress,
         bill: billingAddress,
-        missing: {
-          lines
-        },
+        lines,
         total
       }
     }
 
-    console.log('Sending email with body:', body)
+    const headers = {
+      'Content-Type': 'application/json'
+    }
 
-    await fetch(`${this.baseUrl}/sendEmail/`, {
-      method: 'POST',
-      body: JSON.stringify(body),
-      headers: {
-        'Content-Type': 'application/json'
+    console.log('voilà le body', body)
+
+    try {
+      const response = await fetch(
+        'https://worker-message.gmevelec.workers.dev/sendEmail/',
+        {
+          method: 'POST',
+          body: JSON.stringify(body),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      )
+
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status}`)
       }
-    })
+
+      const result = await response.json()
+      console.log('Email sent successfully:', result)
+    } catch (error) {
+      console.error('Error sending email:', error)
+    }
   }
 
   private getShippingAddress(address: Address, contact: Contact) {

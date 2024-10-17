@@ -2,3 +2,11 @@
     @apply text-black text-opacity-50;
     @apply dark:text-white dark:text-opacity-50;
 }
+
+.text-error {
+    @apply text-tomato8
+  }
+
+  .text-success {
+    @apply text-grass8
+  }

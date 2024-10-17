@@ -38,6 +38,8 @@ import {
 } from '@core/usecases/add-to-favorite/addToFavorite'
 import { useProductGateway } from '../../../../../gateways/productGateway'
 import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm'
+import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification';
+import { sendNotifLike } from '@core/usecases/add-notif/cartNotif';
 
 defineProps({
   product: { type: Object, required: true }
@@ -45,10 +47,16 @@ defineProps({
 
 const addItemToFavorite = (uuid: string) => {
   addToFavorite(uuid, useProductGateway())
+  sendUserNotif()
 }
 
 const removeItemFromFavorite = (uuid: string) => {
   removeFromFavorite(uuid)
+}
+
+const sendUserNotif = () => {
+  setTimeout(sendNotifLike)
+  setTimeout(removeFirstNotification, 1500)
 }
 
 export interface LikeQuantityVM {

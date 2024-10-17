@@ -16,6 +16,8 @@ import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-
 import { addToCart } from '@core/usecases/add-to-cart/addToCart'
 import { useProductGateway } from '../../../../../gateways/productGateway'
 import { removeFromCart } from '@core/usecases/remove-from-cart/removeFromCart'
+import { sendNotifCart } from '@core/usecases/add-notif/cartNotif';
+import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification';
 
 defineProps({
   productUuid: { type: String, required: true }
@@ -29,6 +31,12 @@ const removeItemFromCart = (uuid: string) => {
 
 const addItemToCart = (uuid: string) => {
   addToCart(uuid, useProductGateway())
+  sendUserNotif()
+}
+
+const sendUserNotif = () => {
+  setTimeout(sendNotifCart)
+  setTimeout(removeFirstNotification, 1500)
 }
 
 watchEffect(async () => {
