@@ -1,4 +1,4 @@
-import { useNotificationsStore, ErrorNotification } from '@store/notificationsStore'
+import { useNotificationsStore } from '@store/notificationsStore'
 
 export enum NotificationType {
   Success,
@@ -28,7 +28,7 @@ const getNotificationInfos = (notification: Notification) => {
     type: NotificationType.Success
   }
 
-  return notification instanceof ErrorNotification ? error : success
+  return success
 }
 
 export const getNotificationsVM = (): NotificationsVM => {
