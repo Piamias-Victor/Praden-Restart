@@ -1,5 +1,5 @@
 <template lang="pug">
-div(class='lg:p-2')
+div(class='')
     <swiper-container class='lg:p-2' slides-per-view="1" speed="500" loop="true"  css-mode="true" autoplay-delay="3000" autoplay-disable-on-interaction="true">
         <swiper-slide>
             div

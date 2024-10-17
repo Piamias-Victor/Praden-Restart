@@ -1,16 +1,16 @@
+import axios from 'axios'
 import { DeliveryMethod } from '@core/entities/deliveryMethod'
 import {
   Address,
   Contact,
-  getOrderLineUnitAmount,
-  OrderLine
+  OrderLine,
+  getOrderLineUnitAmount
 } from '@core/entities/order'
 import {
   EmailGateway,
   SendOrderConfirmationDTO
 } from '@core/usecases/orders/order-creation/emailGateway'
 import { priceFormatter } from '@utils/formater'
-import axios from 'axios'
 
 export class RealEmailGateway implements EmailGateway {
   private readonly baseUrl: string
@@ -25,7 +25,8 @@ export class RealEmailGateway implements EmailGateway {
   async sendOrderConfirmation(
     confirmationDTO: SendOrderConfirmationDTO
   ): Promise<void> {
-    console.log('dans le sendOrderConfirmation')
+    console.log('Dans sendOrderConfirmation')
+
     const shippingAddress = this.getShippingAddress(
       confirmationDTO.shippingAddress,
       confirmationDTO.contact
@@ -39,57 +40,31 @@ export class RealEmailGateway implements EmailGateway {
       confirmationDTO.orderLines,
       confirmationDTO.deliveryMethod
     )
+
     const body = {
       to: confirmationDTO.contact.email,
-      templateId: 6388430, // Remplacez par l'ID de votre template
+      templateId: this.confirmationTemplateID,
       data: {
+        link: `https://www.pharmacieagnespraden.com/order/${confirmationDTO.orderUuid}/`,
         shipp: shippingAddress,
         bill: billingAddress,
-        lines,
+        missing: {
+          lines
+        },
         total
       }
     }
 
-    const headers = {
-      'Content-Type': 'application/json'
-    }
+    console.log('Sending email with body:', body)
 
-    await axios.post('/api/sendEmail', body, { headers })
+    await fetch(`${this.baseUrl}/sendEmail/`, {
+      method: 'POST',
+      body: JSON.stringify(body),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
   }
-
-  // async sendOrderConfirmation(
-  //   confirmationDTO: SendOrderConfirmationDTO
-  // ): Promise<void> {
-  //   console.log('dans le sendOrderConfirmation')
-  //   const shippingAddress = this.getShippingAddress(
-  //     confirmationDTO.shippingAddress,
-  //     confirmationDTO.contact
-  //   )
-  //   const billingAddress = this.getBillingAddress(
-  //     confirmationDTO.billingAddress,
-  //     confirmationDTO.contact
-  //   )
-  //   const lines = this.getLines(confirmationDTO.orderLines)
-  //   const total = this.getTotals(
-  //     confirmationDTO.orderLines,
-  //     confirmationDTO.deliveryMethod
-  //   )
-  //   const body = {
-  //     to: confirmationDTO.contact.email,
-  //     templateId: this.confirmationTemplateID,
-  //     data: {
-  //       shipp: shippingAddress,
-  //       bill: billingAddress,
-  //       lines,
-  //       total
-  //     }
-  //   }
-  //   const headers = {
-  //     'Content-Type': 'application/json'
-  //   }
-  //   console.log('voila le body', body)
-  //   await axios.post(this.baseUrl, body, { headers })
-  // }
 
   private getShippingAddress(address: Address, contact: Contact) {
     return {
@@ -100,6 +75,7 @@ export class RealEmailGateway implements EmailGateway {
       link: 'https://www.pharmacieagnespraden.com/'
     }
   }
+
   private getBillingAddress(address: Address, contact: Contact) {
     return {
       first_name: address.firstname,
@@ -108,6 +84,7 @@ export class RealEmailGateway implements EmailGateway {
       phone: contact.phone
     }
   }
+
   private getLines(orderLines: Array<OrderLine>) {
     return orderLines.map((line) => {
       const amount = getOrderLineUnitAmount(line)
@@ -120,6 +97,7 @@ export class RealEmailGateway implements EmailGateway {
       }
     })
   }
+
   private getTotals(
     orderLines: Array<OrderLine>,
     deliveryMethod: DeliveryMethod
