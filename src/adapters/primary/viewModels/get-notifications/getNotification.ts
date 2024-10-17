@@ -1,5 +1,4 @@
-import { ErrorNotification } from '@core/errors/errorNotification'
-import { useNotificationsStore } from '@store/notificationsStore'
+import { useNotificationsStore, ErrorNotification } from '@store/notificationsStore'
 
 export enum NotificationType {
   Success,
