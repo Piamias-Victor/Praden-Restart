@@ -12,7 +12,7 @@ ol.flex.items-center.justify-between.w-full.text-sm.font-medium.text-center.gap-
     div.bg-contrast2.w-full(class='h-[1px]')
     li.flex.items-center.gap-1(:class="{ 'text-main': props.step === 3, 'text-contrast': props.step != 3 }")
         div.flex.flex-col.items-center.gap-2
-            icon.icon-md(name="heroicons:truck")
+            icon.icon-md(name="cil:truck")
         span Livraison
 </template>
 

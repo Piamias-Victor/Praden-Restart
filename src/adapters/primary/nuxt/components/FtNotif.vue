@@ -13,7 +13,7 @@ div.px-2.fixed.z-50.top-16.right-2.flex.flex-col.gap-2(class="w-[96vw] lg:w-[35v
                         p.text-sm.font-semibold(:class="colorMap[notification.type]") {{ notification.name }}
                         p.mt-1.text-sm.text-contrast {{ notification.msg }}
                     button.flex-shrink-0(@click="dismissNotification(index)")
-                        icon.icon-sm(name="heroicons-outline:x")
+                        icon.icon-sm(name="ph:x-bold")
 </template>
 
 <script lang="ts" setup>

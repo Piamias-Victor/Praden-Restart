@@ -14,7 +14,7 @@ div.bg-white.rounded-xl.pt-2(class='w-[50vw] sm:w-[15vw] min-h-[320px] flex flex
             @click="removeItemFromFavorite(product.uuid)"
             aria-label="Remove from favorites"
         )
-            icon.icon-lg(name="heroicons:heart-solid")
+            icon.icon-lg(name="ph:heart-fill")
 
         ft-button.bg-transparent.absolute.top-2.right-2.text-main.p-2.rounded-full(
             v-if="likeQuantity && likeQuantity.items && !likeQuantity.items[product.uuid]"

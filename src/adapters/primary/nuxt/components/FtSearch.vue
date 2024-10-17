@@ -21,7 +21,7 @@ TransitionRoot(appear='' :show='true' as='template')
                                     @input="searchChanged"
                                 )
                             ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
-                                icon.icon-md(name="heroicons-outline:x")
+                                icon.icon-md(name="ph:x-bold")
                         ft-navigation
                         div.px-4(v-if='query !== ""')
                             ft-categories-search(:categoriesVM="categoriesVM" @close='close')
@@ -38,7 +38,7 @@ TransitionRoot(appear='' :show='true' as='template')
                             //-             @input="searchChanged"
                             //-         )
                             //-     ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
-                            //-         icon.icon-md(name="heroicons-outline:x")
+                            //-         icon.icon-md(name="ph:x-bold")
                             //- div(v-if='query !== ""')
                             //-     ft-categories(:categoriesVM="categoriesVM")
                             ft-product-search-list(:products="searchVM.items" @close='close')

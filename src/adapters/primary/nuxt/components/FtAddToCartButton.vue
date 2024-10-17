@@ -2,13 +2,13 @@
 div.bg-main.rounded-b-xl.mt-1(class='p-0.5')
   div.flex.flex-center.gap-4.text-white(v-if="cartQuantity && cartQuantity.items && cartQuantity.items[productUuid]")
     ft-button.flex-shrink-0(@click='removeItemFromCart(productUuid)')
-        icon.icon-sm(name="heroicons-outline:minus")
+        icon.icon-sm(name="ph:minus-bold")
     p.text-lg.font-semibold {{ cartQuantity.items[productUuid] }}
     ft-button.flex-shrink-0(@click='addItemToCart(productUuid)')
-      icon.icon-sm(name="heroicons-outline:plus")
+      icon.icon-sm(name="ph:plus-bold")
   ft-button.w-full.text-white.flex.items-center.justify-center.font-semibold(v-if="cartQuantity && cartQuantity.items && !cartQuantity.items[productUuid]" @click='addItemToCart(productUuid)')
       span Ajouter au panier
-      icon.icon-sm(name="heroicons-outline:plus")
+      icon.icon-sm(name="ph:plus-bold")
 </template>
 
 <script lang="ts" setup>

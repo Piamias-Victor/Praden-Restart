@@ -12,7 +12,7 @@ TransitionRoot(appear='' :show='true' as='template')
                                 h2.text-lg.font-semibold Inscription
                                 div.ml-3.flex.h-7.items-center
                                     ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
-                                        icon.icon-sm(name="heroicons-outline:x")
+                                        icon.icon-sm(name="ph:x-bold")
                             div.mt-4
                             span.font-semibold.text-lg S'inscrire avec...
                             div.mt-4

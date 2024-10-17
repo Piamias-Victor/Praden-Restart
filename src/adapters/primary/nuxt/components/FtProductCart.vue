@@ -13,10 +13,10 @@ li.flex.py-6
     div.flex.flex-1.items-center.justify-between
         div.flex.items-center.gap-4
             ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click='removeItemFromCart(item.uuid)')
-                icon.icon-xs(name="heroicons-outline:minus")
+                icon.icon-xs(name="ph:minus-bold")
             p.text-xl.font-semibold {{ item.quantity }}
             ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click='addItemToCart(item.uuid)')
-                icon.icon-xs(name="heroicons-outline:plus")
+                icon.icon-xs(name="ph:plus-bold")
     </template>
 
 <script lang="ts" setup>

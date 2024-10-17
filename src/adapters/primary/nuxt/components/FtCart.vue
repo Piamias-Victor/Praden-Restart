@@ -6,7 +6,7 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
         h2.text-lg.font-semibold Mon panier
         div.ml-3.flex.h-7.items-center
             ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
-                icon.icon-sm(name="heroicons-outline:x")
+                icon.icon-sm(name="ph:x-bold")
     div.mt-8
     ft-stepper(:step=1)
     div.mt-8
@@ -26,7 +26,6 @@ div.mt-2.border-t.py-6.px-4(class="sm:px-6")
     div.mt-2.flex.justify-center.text-xs
         ft-button.w-full.font-semibold.flex.items-center.gap-1.bg-background(class="hover:text-main" @click="close")
             span Reprendre mes achats
-            icon.icon-xs(name="heroicons-outline:arrow-right")
 </template>
 
 <script lang="ts" setup>

@@ -6,7 +6,7 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
         h2.text-lg.font-semibold Mon Compte
         div.ml-3.flex.h-7.items-center
             ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
-                icon.icon-sm(name="heroicons-outline:x")
+                icon.icon-sm(name="ph:x-bold")
     div.mt-8
     ft-stepper(:step=2)
     div.mt-4

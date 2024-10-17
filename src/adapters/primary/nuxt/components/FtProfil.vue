@@ -14,7 +14,7 @@ TransitionRoot(appear='' :show='true' as='template')
                                 h2.text-lg.font-semibold Mon profil
                                 div.ml-3.flex.h-7.items-center
                                     ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
-                                        icon.icon-sm(name="heroicons-outline:x")
+                                        icon.icon-sm(name="ph:x-bold")
                             div.mt-4
                             div(v-if="user.firstName")
                               div.flex.flex-col.items-center.justify-center

@@ -14,14 +14,14 @@ div.bg-white.rounded-xl.pt-2.w-full(class='w-[50vw] sm:w-[15vw] min-h-[320px] fl
             @click="removeItemFromFavorite(product.uuid)"
             aria-label="Remove from favorites"
         )
-            icon.icon-lg(name="heroicons:heart-solid")
+            icon.icon-lg(name="ph:heart-fill")
 
         ft-button.bg-transparent.absolute.top-2.right-2.text-main.p-2.rounded-full(
             v-if="likeQuantity && likeQuantity.items && !likeQuantity.items[product.uuid]"
             @click="addItemToFavorite(product.uuid)"
             aria-label="Add to favorites"
         )
-            icon.icon-lg(name="heroicons:heart")
+            icon.icon-lg(name="ph:heart-bold")
         
     div.w-full.flex.flex-col.px-4.text-left.flex-grow
         span.w-full.text-xs.font-semibold.mb-1.line-clamp-2(class='min-h-[5vh] sm:min-h-[3vh]') {{ product.name }}

@@ -6,8 +6,8 @@ div.ft-disclosure
               span.font-medium.text-main
                   slot(name="title")
               span.flex.items-center
-                  icon(v-if='!open' aria-hidden='true' name="heroicons:plus").h-5.w-5
-                  icon(v-else aria-hidden='true' name="heroicons:minus").h-5.w-5
+                  icon(v-if='!open' aria-hidden='true' name="ph:plus-bold").h-5.w-5
+                  icon(v-else aria-hidden='true' name="ph:minus-bold").h-5.w-5
           DisclosurePanel.mx-2
               div.py-2
                   slot.flex.items-center
