@@ -59,7 +59,8 @@ export class RealEmailGateway implements EmailGateway {
 
     try {
       const response = await fetch(
-        'https://worker-message.gmevelec.workers.dev/sendEmail/',
+        // 'https://worker-message.gmevelec.workers.dev/sendEmail/',
+        "https://contact.gmevelec.workers.dev/send-email/",
         {
           method: 'POST',
           body: JSON.stringify(body),

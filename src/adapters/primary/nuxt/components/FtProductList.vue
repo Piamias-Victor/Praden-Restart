@@ -1,9 +1,9 @@
 <template lang="pug">
 section.px-2
-    div.flex.items-center.justify-between
-        span.text-lg.font-semibold(class='lg:text-2xl')
+    div.flex.items-center.justify-center.py-2
+        span.text-2xl.font-bold.text-center(class='lg:text-3xl')
             slot
-        span.text-xs.text-contrast Voir tout
+        //- span.text-xs.text-contrast Voir tout
     section.py-4.flex.gap-4.overflow-hidden.overflow-x-auto.custom-scrollbar(class='max-w-[200vw]')
         div(v-for='product in products' :key="product.uuid")
             ft-product-card(:product="product")
