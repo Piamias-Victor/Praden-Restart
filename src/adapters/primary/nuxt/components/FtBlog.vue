@@ -30,10 +30,10 @@ const goToCat = (path: string, name: string) => {
 <style scoped>
 /* Ajout d'un style pour l'image pour qu'elle remplisse son conteneur tout en gardant son rapport d'aspect */
 img {
-  object-fit: cover;  /* Assure que l'image remplit le conteneur */
+  object-fit: cover; /* Assure que l'image remplit le conteneur */
   object-position: top; /* Affiche la partie supérieure de l'image */
-  height: 100%;       /* Prend toute la hauteur du conteneur */
-  width: 100%;        /* Prend toute la largeur du conteneur */
+  height: 100%; /* Prend toute la hauteur du conteneur */
+  width: 100%; /* Prend toute la largeur du conteneur */
 }
 
 .custom-scrollbar {

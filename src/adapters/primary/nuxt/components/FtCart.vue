@@ -65,7 +65,10 @@ watchEffect(async () => {
   try {
     cartQuantity.value = await getCartQuantityVM(useProductGateway())
   } catch (error) {
-    console.error('Erreur lors de la récupération de la quantité du panier', error)
+    console.error(
+      'Erreur lors de la récupération de la quantité du panier',
+      error
+    )
     cartQuantity.value = { totalQuantity: 0 } // Assurer une valeur par défaut si l'appel échoue
   }
 })

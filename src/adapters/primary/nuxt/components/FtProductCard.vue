@@ -38,8 +38,8 @@ import {
 } from '@core/usecases/add-to-favorite/addToFavorite'
 import { useProductGateway } from '../../../../../gateways/productGateway'
 import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm'
-import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification';
-import { sendNotifLike } from '@core/usecases/add-notif/cartNotif';
+import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification'
+import { sendNotifLike } from '@core/usecases/add-notif/cartNotif'
 
 defineProps({
   product: { type: Object, required: true }

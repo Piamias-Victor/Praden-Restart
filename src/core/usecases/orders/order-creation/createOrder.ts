@@ -1,64 +1,109 @@
+import { Address, Contact, Order, OrderLine } from '@core/entities/order'
 import { pickup } from '../../../../../gateways/deliveryGateway'
-import { EmailGateway, SendOrderConfirmationDTO } from './emailGateway'
+import { EmailGateway } from './emailGateway'
+import { DeliveryMethod } from '@core/entities/deliveryMethod'
+import { useDeliveryStore } from '@store/deliveryStore'
+import { UUID } from 'crypto'
+import { ProductGateway } from '@core/gateways/productGateway'
+import { OrderGateway } from '@core/gateways/orderGateway'
+import { WindowGateway } from '@core/gateways/windowGateway'
+import { useOrderStore } from '@store/orderStore'
+import { useCartStore } from '@store/cartStore'
+import { getProductsInCart } from '@adapters/primary/viewModels/get-cart/getCartVM'
 
-export const createOrder = async (emailGateway: EmailGateway) => {
-  console.log('On rentre dans createOrder')
-  // const { items } = getProductsInCart()
-  // const lines: Array<CreateOrderLineDTO> = await Promise.all(
-  //   Object.keys(items).map(async (key) => {
-  //     const item = items[key]
-  //     const product = await productGateway.getByUuid(item.uuid)
-  //     const res: CreateOrderLineDTO = {
-  //       productUuid: product.uuid,
-  //       name: item.name,
-  //       unitAmount: item.unitPrice,
-  //       quantity: item.quantity,
-  //       description: product.description,
-  //       img: product.img
-  //     }
-  //     if (product.promotion) {
-  //       res.promotion = product.promotion
-  //     }
-  //     return res
-  //   })
-  // )
-  // const deliveryStore = useDeliveryStore()
-  // const deliveryMethod = deliveryStore.getByUuid(deliveryMethodUuid)
-  // const orderDTO: CreateOrderDTO = {
-  //   contact: {
-  //     email,
-  //     phone
-  //   },
-  //   lines,
-  //   delivery: {
-  //     method: deliveryMethod
-  //   },
-  //   deliveryAddress: {
-  //     firstname: deliveryAddress.firstname,
-  //     lastname: deliveryAddress.lastname,
-  //     address: deliveryAddress.address,
-  //     appartement: deliveryAddress.appartement,
-  //     zip: deliveryAddress.zip,
-  //     city: deliveryAddress.city
-  //   }
-  // }
-  // const order = await orderGateway.create(orderDTO)
-  // const orderStore = useOrderStore()
-  // orderStore.add(order)
-  // clearCart()
-  const sendOrderConfirmationDTO: SendOrderConfirmationDTO = {
-    orderUuid: 1,
+export type CreateOrderLineDTO = Omit<OrderLine, 'deliveryStatus' | 'updatedAt'>
+
+export type CreateOrderDTO = Pick<
+  Order,
+  'delivery' | 'contact' | 'deliveryAddress'
+> & {
+  lines: Array<CreateOrderLineDTO>
+}
+export interface FullAddress {
+  firstname: string
+  lastname: string
+  country: string
+  address: string
+  appartement?: string
+  city: string
+  zip: string
+}
+
+export const createOrder = async (
+  email: string,
+  phone: string,
+  deliveryMethodUuid: UUID,
+  deliveryAddress: FullAddress,
+  orderGateway: OrderGateway,
+  productGateway: ProductGateway,
+  windowGateway: WindowGateway,
+  emailGateway: EmailGateway
+) => {
+  console.log('deliveryAddress', deliveryAddress)
+  console.log('email', email)
+  console.log('phone', phone)
+  const { items } = getProductsInCart()
+  const lines: Array<CreateOrderLineDTO> = await Promise.all(
+    Object.keys(items).map(async (key) => {
+      const item = items[key]
+      const product = await productGateway.getByUuid(item.uuid)
+      const res: CreateOrderLineDTO = {
+        productUuid: product.uuid,
+        name: item.name,
+        unitAmount: item.unitPrice,
+        quantity: item.quantity,
+        description: product.description,
+        img: product.images
+      }
+      if (product.promotion) {
+        res.promotion = product.promotion
+      }
+      return res
+    })
+  )
+  console.log('lines create', lines)
+  const deliveryStore = useDeliveryStore()
+  const deliveryMethod = deliveryStore.getByUuid(deliveryMethodUuid)
+  console.log('deliveryMethod', deliveryMethod)
+  const orderDTO: CreateOrderDTO = {
     contact: {
-      email: 'victorpiamiaspro@gmail.com',
-      phone: '0624174724'
+      email,
+      phone
     },
-    shippingAddress: addressTest,
-    billingAddress: addressTest,
-    orderLines: [testOrderLine],
-    deliveryMethod: pickup
+    lines,
+    delivery: {
+      method: deliveryMethod
+    },
+    deliveryAddress: {
+      firstname: deliveryAddress.firstname,
+      lastname: deliveryAddress.lastname,
+      address: deliveryAddress.address,
+      appartement: deliveryAddress.appartement,
+      zip: deliveryAddress.zip,
+      city: deliveryAddress.city
+    }
   }
-  console.log('Objet cree : ', sendOrderConfirmationDTO)
+  console.log('orderDTO', orderDTO)
+  const order = await orderGateway.create(orderDTO)
+  const orderStore = useOrderStore()
+  orderStore.add(order)
+  clearCart()
+  const sendOrderConfirmationDTO: SendOrderConfirmationDTO = {
+    orderUuid: order.uuid,
+    contact: order.contact,
+    shippingAddress: order.deliveryAddress,
+    billingAddress: order.deliveryAddress,
+    orderLines: order.lines,
+    deliveryMethod: order.delivery.method
+  }
+  console.log('je suis la ??')
+  console.log('sendOrderConfirmationDTO', sendOrderConfirmationDTO)
   await emailGateway.sendOrderConfirmation(sendOrderConfirmationDTO)
+}
+
+const clearCart = () => {
+  const cartStore = useCartStore()
+  cartStore.removeAll()
 }
 
 export const addressTest = {

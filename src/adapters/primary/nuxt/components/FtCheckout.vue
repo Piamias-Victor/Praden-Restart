@@ -65,7 +65,7 @@ div.mt-2.border-t.py-6.px-4(class="sm:px-6")
     div().mt-4
         ft-button.button-solid.w-full.text-xl(@click="validateUser" :disabled="!isFormValid") Choisir ma livraison
 </template>
-  
+
 <script lang="ts" setup>
 import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
 import {
@@ -157,13 +157,15 @@ const zipChanged = (value: string) => {
 }
 
 const isFormValid = computed(() => {
-  return newUser.value.firstName && 
-         newUser.value.lastName && 
-         newUser.value.phone && 
-         newUser.value.mail && 
-         newUser.value.country && 
-         newUser.value.postal && 
-         newUser.value.city
+  return (
+    newUser.value.firstName &&
+    newUser.value.lastName &&
+    newUser.value.phone &&
+    newUser.value.mail &&
+    newUser.value.country &&
+    newUser.value.postal &&
+    newUser.value.city
+  )
 })
 
 watchEffect(() => {

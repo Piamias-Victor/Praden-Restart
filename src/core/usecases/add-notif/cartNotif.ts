@@ -33,15 +33,15 @@ export const sendNotifCart = async () => {
 }
 
 export const sendNotifLike = async () => {
-const notificationsStore = useNotificationsStore()
+  const notificationsStore = useNotificationsStore()
 
-console.log('test la')
+  console.log('test la')
 
-try {
+  try {
     notificationsStore.add(
-    new SuccessNotification('Produit ajouté au favoris avec succès')
+      new SuccessNotification('Produit ajouté au favoris avec succès')
     )
-} catch (e: any) {
+  } catch (e: any) {
     console.error('soucis')
-}
+  }
 }

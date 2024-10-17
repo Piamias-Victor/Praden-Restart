@@ -11,6 +11,31 @@ import {
 } from '@core/usecases/orders/order-creation/emailGateway'
 import { priceFormatter } from '@utils/formater'
 
+function generateLinesHtml(lines: any) {
+  return `
+    <table>
+      <tbody>
+        ${lines
+          .map(
+            (line) => `
+          <tr>
+            <td>
+              <img src="${line.img}" width="200" height="200" />
+            </td>
+            <td style="padding-left: 13px;">
+              <div style="font-family: arial, helvetica, sans-serif"> Nom: ${line.name} </div>
+              <div style="font-family: arial, helvetica, sans-serif"> Prix unitaire: ${line.unitPrice} </div>
+              <div style="font-family: arial, helvetica, sans-serif"> Quantité: ${line.quantity} </div>
+              <div style="font-family: arial, helvetica, sans-serif; font-weight: 700;"> Total: ${line.total} </div>
+            </td>
+          </tr>
+        `
+          )
+          .join('')}
+      </tbody>
+    </table>
+  `
+}
 export class RealEmailGateway implements EmailGateway {
   private readonly baseUrl: string
   private readonly confirmationTemplateID: string
@@ -39,6 +64,8 @@ export class RealEmailGateway implements EmailGateway {
       confirmationDTO.deliveryMethod
     )
 
+    const linesHtml = generateLinesHtml(lines)
+
     const body = {
       to: confirmationDTO.contact.email,
       subject: 'Order Confirmation',
@@ -46,7 +73,7 @@ export class RealEmailGateway implements EmailGateway {
       data: {
         shipp: shippingAddress,
         bill: billingAddress,
-        lines,
+        linesHtml,
         total
       }
     }
@@ -60,7 +87,7 @@ export class RealEmailGateway implements EmailGateway {
     try {
       const response = await fetch(
         // 'https://worker-message.gmevelec.workers.dev/sendEmail/',
-        "https://contact.gmevelec.workers.dev/send-email/",
+        'https://contact.gmevelec.workers.dev/send-email/',
         {
           method: 'POST',
           body: JSON.stringify(body),

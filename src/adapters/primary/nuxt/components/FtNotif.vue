@@ -29,12 +29,12 @@ const colorMap = {
 }
 
 const notifications = computed(() => {
-  const data = getNotificationsVM();
-  console.log('Notifications:', data); // Vérifie la structure des données ici
-  return data.notifications || []; // Assure-toi que tu renvoies un tableau
-});
+  const data = getNotificationsVM()
+  console.log('Notifications:', data) // Vérifie la structure des données ici
+  return data.notifications || [] // Assure-toi que tu renvoies un tableau
+})
 
 const dismissNotification = (index: number) => {
-  removeNotification(index);
+  removeNotification(index)
 }
 </script>

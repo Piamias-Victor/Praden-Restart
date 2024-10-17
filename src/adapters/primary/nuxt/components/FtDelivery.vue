@@ -65,6 +65,9 @@ import { getCheckoutVM } from '@adapters/primary/viewModels/get-checkout/getChec
 import { getDeliveryVM } from '@adapters/primary/viewModels/get-delivery/getDeliveryVM'
 import { createOrder } from '@core/usecases/orders/order-creation/createOrder'
 import { useEmailGateway } from '../../../../../gateways/emailGateway'
+import { useOrderGateway } from '../../../../../gateways/orderGateway'
+import windowGateway from '../../../../../gateways/windowGateway'
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
 
 const router = useRouter()
 
@@ -99,9 +102,30 @@ function closeModal() {
   emit('close')
 }
 
+const user = computed(() => {
+  return getUserVM()
+})
+
 const validateOrder = () => {
   console.log('on demare')
-  createOrder(useEmailGateway())
+  console.log(user.value)
+  createOrder(
+    user.value.mail,
+    user.value.phone,
+    selectedDeliveryMethod.value,
+    {
+      firstname: user.value.firstName,
+      lastname: user.value.lastName,
+      country: user.value.country,
+      address: user.value.address,
+      city: user.value.city,
+      zip: user.value.zip
+    },
+    useOrderGateway(),
+    useProductGateway(),
+    windowGateway,
+    useEmailGateway()
+  )
   router.push('/checkout/success')
 }
 
