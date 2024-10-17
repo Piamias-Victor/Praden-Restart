@@ -41,7 +41,7 @@ export class RealEmailGateway implements EmailGateway {
 
     const body = {
       to: confirmationDTO.contact.email,
-      // subject: 'Order Confirmation',
+      subject: 'Order Confirmation',
       templateId: this.confirmationTemplateID,
       data: {
         shipp: shippingAddress,
