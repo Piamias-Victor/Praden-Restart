@@ -1,5 +1,5 @@
 <template lang="pug">
-section.p-2.flex.flex-col.items-center.w-full.gap-4
+section.p-2.flex.flex-col.items-center.w-full.gap-4.px-6
   div.bg-white.rounded-xl.p-4.w-full.flex.items-center.gap-4
     img.flex.items-center.justify-center.rounded-full.bg-contrast.border.border-main.border-2(class="w-[50px]" src="https://i.postimg.cc/8ccmrhg2/woman-1.png")
     div.flex.flex-col.gap-2

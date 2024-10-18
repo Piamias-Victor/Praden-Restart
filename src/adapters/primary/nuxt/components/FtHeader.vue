@@ -1,5 +1,5 @@
 <template lang="pug">
-nav.flex.items-center.justify-center.p-2.px-4
+nav.flex.items-center.justify-center.p-2.px-9
     div.flex.gap-2
         ft-button.bg-white.rounded-full(@click="openProfil")
             icon.icon-md.text-main(name="material-symbols:supervised-user-circle-outline")
@@ -23,8 +23,14 @@ ft-search(v-if="searchOpened" @close="closeSearch")
 </template>
 
 <script lang="ts" setup>
+import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
+
 const profilOpened = ref(false)
 const searchOpened = ref(false)
+
+const categoriesVM = computed(() => {
+  return getRootCategoriesVM()
+})
 
 const openProfil = () => {
   profilOpened.value = true

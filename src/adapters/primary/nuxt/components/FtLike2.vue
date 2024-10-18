@@ -14,10 +14,7 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
                     ft-product-cart(:item="item")
 div.mt-2.border-t.py-6.px-4(class="sm:px-6")
     div.mt-4
-        ft-button.button-solid.w-full.text-xl(@click="validateCart") Paiement
-    div.mt-2.flex.justify-center.text-xs
-        ft-button.w-full.font-semibold.flex.items-center.gap-1.bg-background(class="hover:text-main" @click="close")
-            span Reprendre mes achats
+        ft-button.button-solid.w-full.text-xl(@click="close") Reprendre mes achats
 </template>
 
 <script lang="ts" setup>

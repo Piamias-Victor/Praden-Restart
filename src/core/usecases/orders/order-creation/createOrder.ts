@@ -61,6 +61,17 @@ export const createOrder = async (
       return res
     })
   )
+  const orderLines = await Promise.all(
+    Object.keys(items).map(async (key) => {
+      const item = items[key]
+      const product = await productGateway.getByUuid(item.uuid)
+      const res = {
+        productUuid: product.uuid,
+        quantity: item.quantity
+      }
+      return res
+    })
+  )
   console.log('lines create', lines)
   const deliveryStore = useDeliveryStore()
   const deliveryMethod = deliveryStore.getByUuid(deliveryMethodUuid)
@@ -83,6 +94,47 @@ export const createOrder = async (
       city: deliveryAddress.city
     }
   }
+
+  const orderNew = {
+    lines: orderLines,
+    deliveryMethodUuid: '570bdcfa-b704-4ed2-9fc0-175d687c1d8d',
+    deliveryAddress: {
+      firstname: deliveryAddress.firstname,
+      lastname: deliveryAddress.lastname,
+      address: deliveryAddress.address,
+      city: deliveryAddress.city,
+      zip: deliveryAddress.zip
+    },
+    contact: {
+      email: email,
+      phone: phone
+    }
+  }
+
+  try {
+    const response = await fetch(
+      'https://ecommerce-backend.admin-a5f.workers.dev/orders',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(orderNew)
+      }
+    )
+
+    if (!response.ok) {
+      const errorMessage = await response.text()
+      throw new Error(`Error: ${response.status} - ${errorMessage}`)
+    }
+
+    const result = await response.json()
+    console.log('result:', result)
+    console.log('Order sent successfully:', result)
+  } catch (error) {
+    console.error('Error sending order:', error)
+  }
+
   console.log('orderDTO', orderDTO)
   const order = await orderGateway.create(orderDTO)
   const orderStore = useOrderStore()

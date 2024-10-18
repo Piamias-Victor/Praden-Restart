@@ -119,7 +119,7 @@ const validateOrder = () => {
       country: user.value.country,
       address: user.value.address,
       city: user.value.city,
-      zip: user.value.zip
+      zip: user.value.postal
     },
     useOrderGateway(),
     useProductGateway(),

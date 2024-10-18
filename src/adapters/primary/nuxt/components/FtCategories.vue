@@ -1,5 +1,5 @@
 <template lang="pug">
-div.py-4.px-2.flex.items-center.gap-2.overflow-hidden.overflow-x-auto.no-scrollbar
+div.py-4.px-6.flex.items-center.gap-2.overflow-hidden.overflow-x-auto.no-scrollbar
     ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='category in props.categoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid, category.name)")
         img.icon-md(:src="category.icon")
         span.whitespace-nowrap {{ category.name }}

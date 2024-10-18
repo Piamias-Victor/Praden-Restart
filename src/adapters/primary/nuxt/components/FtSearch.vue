@@ -73,6 +73,9 @@ import { searchProduct } from '@core/usecases/search-product/searchProduct'
 import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM'
 import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM'
 import { getSearchCategoriesVM } from '@adapters/primary/viewModels/get-category/getSearchCategoryVM'
+const props = defineProps<{
+  categoriesVM: any
+}>()
 
 const emit = defineEmits<{
   (e: 'close'): void

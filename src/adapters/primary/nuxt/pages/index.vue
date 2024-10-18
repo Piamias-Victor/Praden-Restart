@@ -22,6 +22,65 @@ section.px-2
   div.flex.items-center.justify-center.py-2
     span.text-2xl.font-bold.text-center(class='lg:text-3xl') Avis
 ft-review
+//- section.px-2.bg-red-400(class='h-[600px]')
+//-   div.flex.items-center.justify-center.py-2
+//-     span.text-2xl.font-bold.text-center(class='lg:text-3xl') Suivez nos actus
+//-   div.h-2
+//-     div.px-4.grid.grid-cols-1.gap-8(class='lg:grid-cols-2 gap-8')
+//-       iframe.block.rounded-xl.w-full(
+//-           src="https://www.instagram.com/p/DBBZfFFIB1g/embed" 
+//-           width="400" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+//-         )
+//-       iframe.block.rounded-xl.w-full(
+//-         src='https://www.tiktok.com/embed/v2/7227902361333697819'
+//-         width="400" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+//-       )
+section.px-2
+  div.flex.items-center.justify-center.py-2
+    span.text-2xl.font-bold.text-center(class='lg:text-3xl') La Pharmacie
+  div.h-2
+  div.px-4
+    iframe.block.rounded-xl.w-full(
+      width="560"
+      height="560"
+      src="https://www.youtube.com/embed/zLmfyGVF2h0"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    )
+  div.h-4
+  div.px-4.flex.items-center.justify-between.gap-8
+    iframe.block.rounded-xl.w-full(
+      width="300"
+      height="450"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2863.3004215310857!2d4.090225176285041!3d44.13905002087236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b442f4ce2394b9%3A0xb65c3289906ec27e!2sPharmacie%20Agn%C3%A8s%20Praden%20Al%C3%A8s!5e0!3m2!1sfr!2sfr!4v1729244211496!5m2!1sfr!2sfr"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    )
+section.px-2
+  div.flex.items-center.justify-center.py-2
+    span.text-2xl.font-bold.text-center(class='lg:text-3xl') Suivez nos actus
+  div.h-2
+  div.px-4.grid.grid-cols-1.gap-8(class='lg:grid-cols-2 gap-8')
+    div.flex.flex-col.gap-2
+      iframe.block.rounded-xl.w-full(
+          src="https://www.instagram.com/p/DBBZfFFIB1g/embed" 
+          width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        )
+      a(href='https://www.instagram.com/pharmacieagnespraden/?hl=en' target='_blank' rel='noopener noreferrer') 
+        ft-button.button-solid.w-full
+            span Suivez nous sur instagram
+            icon.icon-md(name="akar-icons:send")
+    div.flex.flex-col.gap-2
+      iframe.block.rounded-xl.w-full(
+        src='https://www.tiktok.com/embed/v2/7227902361333697819'
+        width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      )
+      a(href='https://www.tiktok.com/@pharmacieagnespraden' target='_blank' rel='noopener noreferrer')
+        ft-button.button-solid.w-full
+            span Suivez nous sur TikTok
+            icon.icon-md(name="akar-icons:send")
 ft-navigation
 </template>
 
@@ -56,26 +115,74 @@ const productTest1 = {
 }
 
 const productTest2 = {
-  href: '/products/5fff6558-c618-42d9-984b-9a8493e0fa46',
-  uuid: '5fff6558-c618-42d9-984b-9a8493e0fa46',
-  price: 1.99,
-  name: 'Physiodose sérum physiologique 40 doses 5ml',
-  laboratory: 'GILBERT',
+  href: '/products/f7943c54-2950-42f6-9473-12ff3243a738',
+  uuid: 'f7943c54-2950-42f6-9473-12ff3243a738',
+  price: "18,90 €",
+  name: 'Physiolac Bio 2ème âge 6 - 12 mois formule épaissie 800g',
+  laboratory: 'PHYSIOLAC',
   availableStock: 200,
   images: [
-    'https://www.pharmacieagnespraden.com/69044-large_default/gilbert-physiodose-srum-physiologique-40-doses-5-ml.jpg'
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/2c2f294f14dca52000ce84c42648c7ed4ba6c1ff9995c0183832b8699ea52d00'
   ]
 }
 
 const productTest3 = {
-  href: '/products/5fff6558-c618-42d9-984b-9a8493e0fa46',
-  uuid: '5fff6558-c618-42d9-984b-9a8493e0fa46',
-  price: 4.99,
-  name: 'Cinq sur Cinq crème apaisante 3 en 1 40g',
-  laboratory: 'BAUSCH & LOMB',
+  href: '/products/f8da260b-9b29-4f0f-b53d-a12da70cb167',
+  uuid: 'f8da260b-9b29-4f0f-b53d-a12da70cb167',
+  price: "10,89 €",
+  name: 'Avene cicalfate spray assech reparateur 100ml',
+  laboratory: 'AVÈNE',
   availableStock: 200,
   images: [
-    'https://www.pharmacieagnespraden.com/51065-large_default/n-cinq-sur-cinq-cr-apais-40g-1.jpg'
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/eb0a7fec1df8dda5af654166fcfde629298e2fcd8cc3eaa25786561a69fa46bb'
+  ]
+}
+
+const productTest4 = {
+  href: '/products/0b323a60-5048-445b-93b0-54c72035535e',
+  uuid: '0b323a60-5048-445b-93b0-54c72035535e',
+  price: "19,90 €",
+  name: 'Nhco Immudia 3+ Boîte De 30 Comprimés',
+  laboratory: 'NHCO NUTRITION',
+  availableStock: 200,
+  images: [
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/83134c8dd38bf975a703d6a51b6a564e2444d7f985e3a73e76a6d175565879a2'
+  ]
+}
+
+const productTest5 = {
+  href: '/products/0346247a-cc46-4c55-bff4-8520bc52d0de',
+  uuid: '0346247a-cc46-4c55-bff4-8520bc52d0de',
+  price: "11,90 €",
+  name: "Mustela huile de massage à l'huile d'avocat 100ml",
+  laboratory: 'MUSTELA',
+  availableStock: 200,
+  images: [
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/fdb9a80f6ed0431f5c17405f6ee9ccc883a721a3c57eb74176abd7eb17b133e6'
+  ]
+}
+
+const productTest6 = {
+  href: '/products/ab1c8581-5773-405d-abf4-721d85302a07',
+  uuid: 'ab1c8581-5773-405d-abf4-721d85302a07',
+  price: "11,90 €",
+  name: 'Bioderma photoderm gel-crème après-soleil fraîcheur 500ml',
+  laboratory: 'BIODERMA',
+  availableStock: 200,
+  images: [
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/3f0364eea441918b854c07829e9ebffca084f1718ab71fffec897259ceaa1a3c'
+  ]
+}
+
+const productTest7 = {
+  href: '/products/0e3bfbab-6eb5-48f9-b9f8-a7fb99a39691',
+  uuid: '0e3bfbab-6eb5-48f9-b9f8-a7fb99a39691',
+  price: "3,30 €",
+  name: 'Elgydium brosse à dents anti-plaque souple',
+  laboratory: 'PIERRE FABRE ORAL CARE',
+  availableStock: 200,
+  images: [
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/3e144179afdb8b7bd18b03624177c1d682e95f98615811d0264e8d28758ad0e3'
   ]
 }
 
@@ -83,11 +190,10 @@ const productsArray = [
   productTest1,
   productTest2,
   productTest3,
-  productTest1,
-  productTest2,
-  productTest3,
-  productTest1,
-  productTest2
+  productTest4,
+  productTest5,
+  productTest6,
+  productTest7
 ]
 
 const blogVm = {

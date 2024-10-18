@@ -18,6 +18,7 @@ ft-like(v-if="likeOpened" @close="closeLike")
 import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
 import { useProductGateway } from '../../../../../gateways/productGateway'
 import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm'
+import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM'
 
 export interface CartQuantityVM {
   items: HashTable<number>
@@ -29,11 +30,9 @@ export interface LikeQuantityVM {
   items: HashTable<number>
   totalQuantity: number
 }
-
 const color = ref('text-contrast')
 
 const color2 = ref('text-contrast')
-
 
 const cartOpened = ref(false)
 
@@ -65,21 +64,35 @@ watchEffect(async () => {
 })
 
 watchEffect(async () => {
-  if (cartQuantity.value && cartQuantity.value.totalQuantity && cartQuantity.value.totalQuantity === 0)
+  if (
+    cartQuantity.value &&
+    cartQuantity.value.totalQuantity &&
+    cartQuantity.value.totalQuantity === 0
+  )
     color.value = 'text-contrast'
-  else if (cartQuantity.value && cartQuantity.value.totalQuantity && cartQuantity.value.totalQuantity !== 0)
+  else if (
+    cartQuantity.value &&
+    cartQuantity.value.totalQuantity &&
+    cartQuantity.value.totalQuantity !== 0
+  )
     color.value = 'text-main'
-  else
-    color.value = 'text-contrast'
+  else color.value = 'text-contrast'
 })
 
 watchEffect(async () => {
-  if (likeQuantity.value && likeQuantity.value.totalQuantity && likeQuantity.value.totalQuantity === 0)
+  if (
+    likeQuantity.value &&
+    likeQuantity.value.totalQuantity &&
+    likeQuantity.value.totalQuantity === 0
+  )
     color2.value = 'text-contrast'
-  else if (likeQuantity.value && likeQuantity.value.totalQuantity && likeQuantity.value.totalQuantity !== 0)
+  else if (
+    likeQuantity.value &&
+    likeQuantity.value.totalQuantity &&
+    likeQuantity.value.totalQuantity !== 0
+  )
     color2.value = 'text-main'
-  else
-    color2.value = 'text-contrast'
+  else color2.value = 'text-contrast'
 })
 
 // Watch for like quantity changes

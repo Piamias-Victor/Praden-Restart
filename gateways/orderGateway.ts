@@ -1,4 +1,8 @@
-import { InMemoryOrderGateway, FakeUUIDGenerator, RealDateProvider } from '@adapters/secondary/order-gateway/inMemoryOrderGateway'
+import {
+  InMemoryOrderGateway,
+  FakeUUIDGenerator,
+  RealDateProvider
+} from '@adapters/secondary/order-gateway/inMemoryOrderGateway'
 import { StripePaymentGateway } from '@adapters/secondary/payment-gateway/stripePaymentGateway'
 
 export const useOrderGateway = () => {
