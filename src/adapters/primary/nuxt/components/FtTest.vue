@@ -69,7 +69,7 @@ onMounted(() => {
       showPopup.value = true
       // Marquer que le popup a été affiché dans sessionStorage
       sessionStorage.setItem('popupDisplayed', 'true')
-    }, 5000)
+    }, 2000)
   }
 })
 
