@@ -24,6 +24,8 @@ export const getCartQuantityVM = async (
     (acc: CartVM, p: Product) => {
       let quantity = 1
       let totalQuantity = acc.totalQuantity
+      let medecine = acc.medecine
+      if (p.isMedicine === true) medecine++
       totalQuantity++
       if (acc.items[p.uuid]) {
         quantity = acc.items[p.uuid] + 1
@@ -33,7 +35,8 @@ export const getCartQuantityVM = async (
           ...acc.items,
           [p.uuid]: quantity
         },
-        totalQuantity
+        totalQuantity,
+        medecine
       }
     },
     { items: {}, totalQuantity: 0, medecine: false } as CartQuantityVM

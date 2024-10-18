@@ -1,21 +1,41 @@
 <template lang="pug">
 ft-categories(:categoriesVM="categoriesVM")
 div.mt-2
-  div.mx-auto.max-w-2xl(class='lg:max-w-none')
+  div.mx-auto.max-w-2xl(class='lg:max-w-none relative')
     div(class='grid grid-cols-1 sm:grid-cols-2 sm:items-start sm:gap-x-8')
       div.flex.flex-col.justify-start
-        ft-image-gallery(
-          :key="productVM.uuid"
-          :images="productVM.images"
-        )
+        div.relative <!-- Ajoutez un conteneur relatif pour le positionnement absolu -->
+          ft-image-gallery(
+            :key="productVM.uuid"
+            :images="productVM.images"
+          )
+          ft-button.bg-transparent.absolute.top-2.right-2.text-main.p-2.rounded-full(
+            v-if="likeQuantity && likeQuantity.items && likeQuantity.items[productVM.uuid]"
+            @click="removeItemFromFavorite(productVM.uuid)"
+            aria-label="Remove from favorites"
+          )
+            icon.icon-lg(name="ph:heart-fill")
+
+          ft-button.bg-transparent.absolute.top-2.right-2.text-main.p-2.rounded-full(
+            v-if="likeQuantity && likeQuantity.items && !likeQuantity.items[productVM.uuid]"
+            @click="addItemToFavorite(productVM.uuid)"
+            aria-label="Add to favorites"
+          )
+            icon.icon-lg(name="ph:heart-bold")
+
         ft-add-to-cart-button(:product-uuid="productId")
+        div.absolute.top-0.left-0.bg-main.text-white.text-xl.font-bold.p-2.rounded-tr-lg.rounded-bl-lg.z-10(v-if="isPromo")
+          span {{isPromo.promo}}
+
       div.px-4.flex.flex-col.justify-between
         div.mt-2
           h1.text-lg.font-semibold.tracking-tight(class='lg:text-3xl')
             | {{ productVM.name }}
-        div.mt-2.flex.justify-between.items-end
-          span.text-xl.font-bold.tracking-tight.text-main(class='lg:text-4xl') {{ productVM.price }}
-          span.text-sm.font-bold.tracking-tight.text-contrast(class='lg:text-xl') {{ productVM.laboratory }}
+        div.mt-2.flex.justify-between.items-end(class='lg:pr-12')
+          span.font-bold.text-main.text-xl(v-if="isPromo && isPromo.pricePromo" class='lg:text-4xl') 18,90 €
+          span.text-xl.font-bold.tracking-tight(:class="isPromo && isPromo.pricePromo ? 'line-through lg:text-4xl' : 'font-bold text-main lg:text-4xl'") {{ productVM.price }}
+        div.h-2
+        span.text-sm.font-bold.tracking-tight.text-contrast(class='lg:text-xl') {{ productVM.laboratory }}
         div.mt-4
           div.space-y-6.text-base.text-contrast(style="white-space: pre-line")
             div.text-sm(v-html="productVM.description")
@@ -40,48 +60,13 @@ import { listCategories } from '@core/usecases/list-categories/listCategories'
 import { getSearchResultVMFirstSix } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM'
 import { searchGateway } from '../../../../../../gateways/searchGateway'
 import { searchProduct } from '@core/usecases/search-product/searchProduct'
+import { addToFavorite, removeFromFavorite } from '@core/usecases/add-to-favorite/addToFavorite'
+import { sendNotifLike } from '@core/usecases/add-notif/cartNotif'
+import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification'
+import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm'
 
 definePageMeta({ layout: 'main' })
 
-const productId = ref<string | null>(null)
-
-const route = useRoute()
-
-onMounted(() => {
-  productId.value = route.params.uuid as string
-  getProduct(productId.value, useProductGateway())
-  listCategories(categoryGateway())
-})
-
-const productVM = computed(() => {
-  return getProductVM()
-})
-
-const categoriesVM = computed(() => {
-  return getRootCategoriesVM()
-})
-
-const searchVM = computed(() => {
-  let res = getSearchResultVMFirstSix(route.params.uuid as string)
-  if (res.items && res.items.length > 0) {
-    return res.items
-  }
-  return productsArray
-})
-
-// Utilisation de watchEffect pour détecter les changements de laboratory
-watchEffect(async () => {
-  const laboratory = productVM.value?.laboratory
-  if (laboratory) {
-    try {
-      const laboratoryName = laboratory.split(' ')[0].toLowerCase()
-
-      const result = await searchProduct(laboratoryName, searchGateway())
-      // Mettre à jour ici searchVM ou un autre état si nécessaire
-    } catch (error) {}
-  } else {
-  }
-})
 
 const productTest1 = {
   href: '/products/83f04e67-7d59-4bdb-97df-cc67804ae621',
@@ -129,4 +114,186 @@ const productsArray = [
   productTest1,
   productTest2
 ]
+
+const promoTest1 = {
+  href: '/products/ba553d06-6ce4-49a5-a561-d903ed8a6b1e',
+  uuid: 'ba553d06-6ce4-49a5-a561-d903ed8a6b1e',
+  price: '10,80 €',
+  promo: '2 euros offert',
+  pricePromo: '8,80 €',
+  name: "La Roche Posay Cicaplast B5 Spray 100ml",
+  laboratory: 'LA ROCHE POSAY',
+  availableStock: 14,
+  images: [
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/030326ec23cf2772478917236e0df8dd019651127310493127e00de6b92f4f30'
+  ]
+}
+
+const promoTest2 = {
+  href: '/products/6e6ca9f0-fc53-4d2d-ac6d-fc257e180190',
+  uuid: '6e6ca9f0-fc53-4d2d-ac6d-fc257e180190',
+  price: '6,49 €',
+  promo: '2 achetés = 1 offert',
+  name: "Arkogélules Olivier Bio 45 Gélules",
+  laboratory: 'ARKOPHARMA',
+  availableStock: 14,
+  images: [
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/5d948d47b842ca6cdab9f6812ec994f312c4827a26170ce81e00e7c0be3de1ba'
+  ]
+}
+
+const promoTest3 = {
+  href: '/products/68152e41-11d4-4e1f-b2aa-48290be298d6',
+  uuid: '68152e41-11d4-4e1f-b2aa-48290be298d6',
+  price: '11,19 €',
+  promo: '10 % offerts',
+  pricePromo: '10 €',
+  name: "Ristabil complément anti fatigue 10x10ml",
+  laboratory: 'LEURQUIN-MEDIOLANUM',
+  availableStock: 14,
+  images: [
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/dedf7cfb5fc1c17acce8737d2d15e887c307fa3b758ca46343acf937aad33900'
+  ]
+}
+
+const promoTest4 = {
+  href: '/products/b9377ef8-73ae-4d52-8be2-02e85b8f6a85',
+  uuid: 'b9377ef8-73ae-4d52-8be2-02e85b8f6a85',
+  price: '20,90 €',
+  promo: '2 euros offerts',
+  pricePromo: '18,90 €',
+  name: "Avene Hydrance riche crème hydratante 2x40ml",
+  laboratory: 'AVÈNE',
+  availableStock: 14,
+  images: [
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/f15e98798bc3ed93d3b965af9452cf3ecd545bfd824a6afbcb5664e5a524e00d'
+  ]
+}
+
+const promoTest5 = {
+  href: '/products/532d8de1-9c3b-4e4b-b815-66d65868e43a',
+  uuid: '532d8de1-9c3b-4e4b-b815-66d65868e43a',
+  price: '20,90 €',
+  promo: '2 euros offerts',
+  pricePromo: '18,90 €',
+  name: "Avene Hydrance légère émulsion hydratante 2x40ml",
+  laboratory: 'AVÈNE',
+  availableStock: 14,
+  images: [
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/53fecf14dfc68709d317a14b9fde9c05518a981732163730f6dab4ec8c05cd5a'
+  ]
+}
+
+const promoTest6 = {
+  href: '/products/570f55ce-76fb-461d-9935-097c574f8f84',
+  uuid: '570f55ce-76fb-461d-9935-097c574f8f84',
+  price: '11,30 €',
+  promo: '20 % offerts',
+  pricePromo: '9,10 €',
+  name: "ZzzQuil Sommeil Gommes 30 gommes",
+  laboratory: 'PROCTER & GAMBLE',
+  availableStock: 14,
+  images: [
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/4e54d3891394fd2ea4d3ac669c66d939622a72c8ce05daa5404fa2ab69f552f0'
+  ]
+}
+
+const promoArray = [
+  promoTest4,
+  promoTest5,
+  promoTest6,
+  promoTest2,
+  promoTest3,
+  promoTest1
+]
+
+const productId = ref<string | null>(null)
+
+function isUuidNotInArray(uuid) {
+  const promo = promoArray.find(promo => promo.uuid === uuid);
+  return promo || null
+}
+
+const isPromo = ref(false)
+
+const route = useRoute()
+
+onMounted(() => {
+  productId.value = route.params.uuid as string
+  getProduct(productId.value, useProductGateway())
+  listCategories(categoryGateway())
+})
+
+const productVM = computed(() => {
+  return getProductVM()
+})
+
+const categoriesVM = computed(() => {
+  return getRootCategoriesVM()
+})
+
+const sendUserNotif = () => {
+  setTimeout(sendNotifLike)
+  setTimeout(removeFirstNotification, 1500)
+}
+
+const addItemToFavorite = (uuid: string) => {
+  addToFavorite(uuid, useProductGateway())
+  sendUserNotif()
+}
+
+const removeItemFromFavorite = (uuid: string) => {
+  removeFromFavorite(uuid)
+}
+
+export interface LikeQuantityVM {
+  items: HashTable<number>
+  totalQuantity: number
+}
+
+const likeQuantity = ref<LikeQuantityVM | null>(null)
+
+watchEffect(async () => {
+  likeQuantity.value = await getLikeQuantityVM(useProductGateway())
+})
+
+const searchVM = computed(() => {
+  let res = getSearchResultVMFirstSix(route.params.uuid as string)
+  if (res.items && res.items.length > 0) {
+    return res.items
+  }
+  return productsArray
+})
+
+// Utilisation de watchEffect pour détecter les changements de laboratory
+watchEffect(async () => {
+  const laboratory = productVM.value?.laboratory
+  if (laboratory) {
+    try {
+      const laboratoryName = laboratory.split(' ')[0].toLowerCase()
+
+      const result = await searchProduct(laboratoryName, searchGateway())
+      // Mettre à jour ici searchVM ou un autre état si nécessaire
+    } catch (error) {}
+  } else {
+  }
+})
+
+watchEffect(async () => {
+  const laboratory = productVM.value?.laboratory
+  if (laboratory) {
+    try {
+      const laboratoryName = laboratory.split(' ')[0].toLowerCase()
+
+      const result = await searchProduct(laboratoryName, searchGateway())
+      // Mettre à jour ici searchVM ou un autre état si nécessaire
+    } catch (error) {}
+  } else {
+  }
+})
+
+watchEffect(async () => {
+  if(productId && productId.value)
+    isPromo.value = isUuidNotInArray(productId.value)
+})
 </script>

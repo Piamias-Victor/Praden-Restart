@@ -18,6 +18,7 @@ export interface Product {
   price: number
   images: string
   promotion?: Promotion
+  isMedicine: boolean
 }
 
 export interface ProductSearch {

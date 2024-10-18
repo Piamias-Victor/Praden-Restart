@@ -15,6 +15,7 @@ export interface CartItemVM {
   freeDelivery: string
   quantity: number
   img: string
+  medecine?: boolean
 }
 
 export interface CartVM {
@@ -56,8 +57,10 @@ export const getProductsInCart = (): ProductsInCart => {
   const productsInCart = cartItems.map((uuid: UUID) =>
     products.find((product: Product) => uuid === product.uuid)
   )
+  console.log('productsInCart', productsInCart)
   return productsInCart.reduce(
     (acc: ProductsInCart, p: Product) => {
+      console.log('p', p)
       let quantity = 1
       let total = acc.total
       let totalWithPromotion = acc.totalWithPromotion
@@ -78,7 +81,8 @@ export const getProductsInCart = (): ProductsInCart => {
             totalPrice: p.price * quantity,
             totalPriceWithPromotion: priceWithPromotion! * quantity,
             quantity,
-            img: p.images
+            img: p.images,
+            medecine: p.isMedicine
           }
         },
         total,
@@ -113,6 +117,7 @@ export const getFreeDelivery = (total: number): number => {
 export const createCartItemsVMFromCartItems = (
   items: HashTable<CartItem>
 ): HashTable<CartItemVM> => {
+  console.log('items', items)
   const formatter = priceFormatter('fr-FR', 'EUR')
   const itemsVM: HashTable<CartItemVM> = {}
   Object.keys(items).forEach((key) => {
@@ -127,7 +132,8 @@ export const createCartItemsVMFromCartItems = (
       ),
       freeDelivery: formatter.format(getFreeDelivery(item.totalPrice) / 100),
       quantity: item.quantity,
-      img: item.img
+      img: item.img,
+      medecine: item.medecine
     }
     if (item.totalPriceWithPromotion) {
       itemsVM[key].totalPriceWithPromotion = formatter.format(

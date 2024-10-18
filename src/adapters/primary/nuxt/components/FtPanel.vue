@@ -7,9 +7,10 @@ TransitionRoot(appear='' :show='true' as='template')
             div.flex.min-h-full.items-center.justify-center.text-center.fixed.inset-y-0.right-0.flex.max-w-full.w-screen.max-w-md(class="md:pl-10")
                 TransitionChild(as='template' class="w-full")
                     DialogPanel.flex.h-full.flex-col.overflow-y-scroll.bg-background.shadow-xl.animate-slideright
-                      ft-cart(v-if="stepper === 0" @move-stepper="moveStepper" @close="closeCart")
+                      ft-cart(v-if="medecineOpened === false && stepper === 0" @move-stepper="moveStepper" @close="closeCart")
                       ft-checkout(v-if="stepper === 1" @move-stepper="moveStepper" @close="closeCart")
                       ft-delivery(v-if="stepper === 2" @move-stepper="moveStepper" @close="closeCart")
+                      //- ft-medecine(v-if="medecineOpened" @close="closeMedecine")
                     
 </template>
 
@@ -33,6 +34,16 @@ const stepper = ref(0)
 
 const moveStepper = () => {
   stepper.value += 1
+}
+
+const medecineOpened = ref(false)
+
+const openMedecine = () => {
+  medecineOpened.value = true
+}
+
+const closeMedecine = () => {
+  medecineOpened.value = false
 }
 
 const closeCart = () => {
@@ -59,4 +70,15 @@ function closeModal() {
 watchEffect(async () => {
   cartQuantity.value = await getCartQuantityVM(useProductGateway())
 })
+
+// watchEffect(async () => {
+//   console.log('je suis dans le watch')
+//   console.log(cartQuantity && cartQuantity.value && cartQuantity.value.medecine && cartQuantity.value.medecine > 0)
+//   if (cartQuantity && cartQuantity.value && cartQuantity.value.medecine && cartQuantity.value.medecine > 0) {
+//     medecineOpened.value = true
+//   }
+//   else
+//     medecineOpened.value = false
+//   console.log('medecineOpened.value', medecineOpened.value)
+// })
 </script>

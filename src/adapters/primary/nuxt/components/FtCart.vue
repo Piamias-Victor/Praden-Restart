@@ -1,4 +1,5 @@
 <template lang="pug">
+pre {{medecineValid}}
 div.w-full.bg-main.text-center.p-2.text-white.font-semibold.flex.items-center.justify-center.gap-2(class="md:hidden")
     span Livraison offerte pour 69 € d'achat
 div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
@@ -26,6 +27,7 @@ div.mt-2.border-t.py-6.px-4(class="sm:px-6")
     div.mt-2.flex.justify-center.text-xs
         ft-button.w-full.font-semibold.flex.items-center.gap-1.bg-background(class="hover:text-main" @click="close")
             span Reprendre mes achats
+ft-medecine(v-if="medecineOpened" @close="closeMedecine" @valid-medecine="medecineValid" @move-stepper="moveStepper")
 </template>
 
 <script lang="ts" setup>
@@ -51,13 +53,35 @@ const cart = computed(() => {
 const emit = defineEmits<{
   (e: 'close'): void
   (e: 'move-stepper'): void
+  (e: 'valid-medecine'): void
 }>()
 
 const close = () => {
   emit('close')
 }
 
+const moveStepper = () => {
+  emit('move-stepper')
+}
+
+const medecineOpened = ref(false)
+
+const medecineValid = ref(false)
+
+const validMedecine = () => {
+  medecineValid.value = true
+}
+
+const openMedecine = () => {
+  medecineOpened.value = true
+}
+
+const closeMedecine = () => {
+  medecineOpened.value = false
+}
+
 const validateCart = () => {
+  if (cartQuantity.value.medecine > 0 && medecineValid.value === false) return openMedecine()
   emit('move-stepper')
 }
 

@@ -5,8 +5,9 @@ div.fixed.w-full.flex.justify-center.z-10.bottom-5.left-0
         ft-button.w-full.text-contrast.flex.items-center.justify-center(@click="openLike" :class='color2')
             icon.icon-lg(name="ph:heart-bold")
             span(v-if="likeQuantity && likeQuantity.totalQuantity") {{ likeQuantity.totalQuantity }}
-        ft-button.w-full.text-primary11.flex.items-center.justify-center
-            icon.icon-lg(name="iconamoon:home-bold")
+        nuxt-link(href='/')
+          ft-button.w-full.text-primary11.flex.items-center.justify-center
+              icon.icon-lg(name="iconamoon:home-bold")
         ft-button.w-full.text-contrast.flex.items-center.justify-center(@click="openCart" :class='color')
             icon.icon-lg(name="akar-icons:shopping-bag")
             span(v-if="cartQuantity && cartQuantity.totalQuantity") {{ cartQuantity.totalQuantity }}
