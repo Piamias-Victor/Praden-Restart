@@ -10,7 +10,8 @@ div.flex.flex-col.h-screen.bg-background
     div.flex.flex-col.flex-grow.bg-background.p-3
         div(class='h-[13vh]')
         slot
-    div(class='min-h-[13vh]').bg-background
+    ft-footer
+    div(class='min-h-[13vh]').bg-main
 </template>
 
 <script lang="ts" setup>

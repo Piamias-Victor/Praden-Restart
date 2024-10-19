@@ -15,6 +15,9 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
             ul.-my-6.divide-y.divide-gray12.text-left
                 div(v-for='item in cart.items' :key="item.uuid")
                     ft-product-cart(:item="item")
+div.px-3
+  span.font-semibold Laissez une note à notre équipe
+  textarea.block.w-full.rounded-md.border-light.shadow-sm
 div.mt-2.border-t.py-6.px-4(class="sm:px-6")
     div.flex.justify-between.items-center.text-lg
         p.font-semibold.text-main.text Total panier
@@ -81,7 +84,8 @@ const closeMedecine = () => {
 }
 
 const validateCart = () => {
-  if (cartQuantity.value.medecine > 0 && medecineValid.value === false) return openMedecine()
+  if (cartQuantity.value.medecine > 0 && medecineValid.value === false)
+    return openMedecine()
   emit('move-stepper')
 }
 

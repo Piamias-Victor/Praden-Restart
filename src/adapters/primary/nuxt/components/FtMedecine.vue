@@ -134,18 +134,18 @@ watchEffect(async () => {
   }
 })
 
-const doliprane =  {
-  "uuid": "81b02fbc-9cbd-49c9-8a7b-ecd8451b289e",
-  "name": "Doliprane 1000 mg comprimé",
-  "laboratory": "Sanofi",
-  "totalPrice": "2,18 €",
-  "totalPriceWithDelivery": "18,18 €",
-  "freeDelivery": "66,82 €",
-  "quantity": 1,
-  "img": [
-    "https://praden.s3.eu-west-3.amazonaws.com/public/products/5197c037c0c960190f3a4e3c064777f7c88630d3d229c1e97c07ce9c85043c4c"
+const doliprane = {
+  uuid: '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e',
+  name: 'Doliprane 1000 mg comprimé',
+  laboratory: 'Sanofi',
+  totalPrice: '2,18 €',
+  totalPriceWithDelivery: '18,18 €',
+  freeDelivery: '66,82 €',
+  quantity: 1,
+  img: [
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/5197c037c0c960190f3a4e3c064777f7c88630d3d229c1e97c07ce9c85043c4c'
   ],
-  "medecine": true
+  medecine: true
 }
 
 const removeAllItemFromCart = () => {

@@ -23,7 +23,7 @@ ft-search(v-if="searchOpened" @close="closeSearch")
 </template>
 
 <script lang="ts" setup>
-import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
+import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM'
 
 const profilOpened = ref(false)
 const searchOpened = ref(false)

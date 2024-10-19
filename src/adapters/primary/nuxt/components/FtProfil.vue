@@ -43,6 +43,9 @@ TransitionRoot(appear='' :show='true' as='template')
                                   ft-button.button-solid.w-full
                                     icon.icon-md(name="ion:logo-google")
                                     span Laisser un avis
+                                ft-button.button-solid.w-full
+                                  icon.icon-md(name="material-symbols:loyalty-outline")
+                                  span Ma fidélité
                                 ft-button.button-solid.w-full(@click='logout')
                                   icon.icon-md(name="tabler:logout")
                                   span Déconnexion

@@ -1,4 +1,5 @@
 <template lang="pug">
+ft-navigation
 div.mt-6
 div.flex.flex-col.items-center
     img.block.h-48.w-auto(
@@ -6,7 +7,7 @@ div.flex.flex-col.items-center
         src="https://ep-website-media.s3.ap-southeast-1.amazonaws.com/my/wp-content/uploads/2024/04/truck-full-of-parcels.webp"
         alt="logo"
         )
-    span.font-semibold.text-xl Votre commande est en cours de préparation!
+    span.font-semibold.text-xl.text-center Votre commande est en cours de préparation!
     div.mt-2
     span.px-4.font-semibold.text-contrast.text-center Toute l'équipe de la pharmacie vous remercie et met tout en oeuvre pour vous offrir un service de qualité.
     div.mt-6

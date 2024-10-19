@@ -5,7 +5,7 @@ div.py-4.flex.items-center.gap-2.overflow-x-scroll.custom-scrollbar
       div.relative.w-full(class='h-[200px] overflow-hidden')
         img.rounded-t-xl.absolute.inset-0.object-cover.object-top(:src="blog.icon" :alt="blog.name")
       div.w-full.flex.flex-col.justify-center.px-4.py-2
-        div.font-semibold.text-main.w-full(class='lg:text-xl') {{ blog.name }}
+        div.font-semibold.text-main.w-full.text-xs(class='lg:text-xl') {{ blog.name }}
         span.text-xs.text-contrast(class='lg:text-sm') {{ blog.date }}
       div.p-2
         ft-button.button-solid.w-full

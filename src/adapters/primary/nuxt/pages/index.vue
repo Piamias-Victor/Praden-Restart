@@ -1,4 +1,5 @@
 <template lang="pug">
+div.h-2
 ft-categories(:categoriesVM="categoriesVM")
 ft-slider
 ft-product-list(:products="productsArray") La sélection du pharmacien
@@ -12,7 +13,7 @@ section.px-2
     div.h-2
     div.px-4
         img.block.rounded-xl.w-full(
-                class='max-h-[350px]'
+                class='min-h-[115px]'
                 src="https://i.postimg.cc/9FTJPY72/Capture-d-e-cran-2024-10-17-a-12-36-59.png"
                 alt="pub"
                 )
@@ -81,6 +82,11 @@ section.px-2
         ft-button.button-solid.w-full
             span Suivez nous sur TikTok
             icon.icon-md(name="akar-icons:send")
+section.px-2
+  div.flex.items-center.justify-center.py-2
+    span.text-2xl.font-bold.text-center(class='lg:text-3xl') Suivez nos actus
+  div.h-2
+div.h-8
 ft-navigation
 </template>
 
@@ -117,7 +123,7 @@ const productTest1 = {
 const productTest2 = {
   href: '/products/f7943c54-2950-42f6-9473-12ff3243a738',
   uuid: 'f7943c54-2950-42f6-9473-12ff3243a738',
-  price: "18,90 €",
+  price: '18,90 €',
   name: 'Physiolac Bio 2ème âge 6 - 12 mois formule épaissie 800g',
   laboratory: 'PHYSIOLAC',
   availableStock: 200,
@@ -129,7 +135,7 @@ const productTest2 = {
 const productTest3 = {
   href: '/products/f8da260b-9b29-4f0f-b53d-a12da70cb167',
   uuid: 'f8da260b-9b29-4f0f-b53d-a12da70cb167',
-  price: "10,89 €",
+  price: '10,89 €',
   name: 'Avene cicalfate spray assech reparateur 100ml',
   laboratory: 'AVÈNE',
   availableStock: 200,
@@ -141,7 +147,7 @@ const productTest3 = {
 const productTest4 = {
   href: '/products/0b323a60-5048-445b-93b0-54c72035535e',
   uuid: '0b323a60-5048-445b-93b0-54c72035535e',
-  price: "19,90 €",
+  price: '19,90 €',
   name: 'Nhco Immudia 3+ Boîte De 30 Comprimés',
   laboratory: 'NHCO NUTRITION',
   availableStock: 200,
@@ -153,7 +159,7 @@ const productTest4 = {
 const productTest5 = {
   href: '/products/0346247a-cc46-4c55-bff4-8520bc52d0de',
   uuid: '0346247a-cc46-4c55-bff4-8520bc52d0de',
-  price: "11,90 €",
+  price: '11,90 €',
   name: "Mustela huile de massage à l'huile d'avocat 100ml",
   laboratory: 'MUSTELA',
   availableStock: 200,
@@ -165,7 +171,7 @@ const productTest5 = {
 const productTest6 = {
   href: '/products/ab1c8581-5773-405d-abf4-721d85302a07',
   uuid: 'ab1c8581-5773-405d-abf4-721d85302a07',
-  price: "11,90 €",
+  price: '11,90 €',
   name: 'Bioderma photoderm gel-crème après-soleil fraîcheur 500ml',
   laboratory: 'BIODERMA',
   availableStock: 200,
@@ -177,7 +183,7 @@ const productTest6 = {
 const productTest7 = {
   href: '/products/0e3bfbab-6eb5-48f9-b9f8-a7fb99a39691',
   uuid: '0e3bfbab-6eb5-48f9-b9f8-a7fb99a39691',
-  price: "3,30 €",
+  price: '3,30 €',
   name: 'Elgydium brosse à dents anti-plaque souple',
   laboratory: 'PIERRE FABRE ORAL CARE',
   availableStock: 200,
@@ -202,7 +208,7 @@ const promoTest1 = {
   price: '10,80 €',
   promo: '2 euros offert',
   pricePromo: '8,80 €',
-  name: "La Roche Posay Cicaplast B5 Spray 100ml",
+  name: 'La Roche Posay Cicaplast B5 Spray 100ml',
   laboratory: 'LA ROCHE POSAY',
   availableStock: 14,
   images: [
@@ -215,7 +221,7 @@ const promoTest2 = {
   uuid: '6e6ca9f0-fc53-4d2d-ac6d-fc257e180190',
   price: '6,49 €',
   promo: '2 achetés = 1 offert',
-  name: "Arkogélules Olivier Bio 45 Gélules",
+  name: 'Arkogélules Olivier Bio 45 Gélules',
   laboratory: 'ARKOPHARMA',
   availableStock: 14,
   images: [
@@ -229,7 +235,7 @@ const promoTest3 = {
   price: '11,19 €',
   promo: '10 % offerts',
   pricePromo: '10 €',
-  name: "Ristabil complément anti fatigue 10x10ml",
+  name: 'Ristabil complément anti fatigue 10x10ml',
   laboratory: 'LEURQUIN-MEDIOLANUM',
   availableStock: 14,
   images: [
@@ -243,7 +249,7 @@ const promoTest4 = {
   price: '20,90 €',
   promo: '2 euros offerts',
   pricePromo: '18,90 €',
-  name: "Avene Hydrance riche crème hydratante 2x40ml",
+  name: 'Avene Hydrance riche crème hydratante 2x40ml',
   laboratory: 'AVÈNE',
   availableStock: 14,
   images: [
@@ -257,7 +263,7 @@ const promoTest5 = {
   price: '20,90 €',
   promo: '2 euros offerts',
   pricePromo: '18,90 €',
-  name: "Avene Hydrance légère émulsion hydratante 2x40ml",
+  name: 'Avene Hydrance légère émulsion hydratante 2x40ml',
   laboratory: 'AVÈNE',
   availableStock: 14,
   images: [
@@ -271,7 +277,7 @@ const promoTest6 = {
   price: '11,30 €',
   promo: '20 % offerts',
   pricePromo: '9,10 €',
-  name: "ZzzQuil Sommeil Gommes 30 gommes",
+  name: 'ZzzQuil Sommeil Gommes 30 gommes',
   laboratory: 'PROCTER & GAMBLE',
   availableStock: 14,
   images: [

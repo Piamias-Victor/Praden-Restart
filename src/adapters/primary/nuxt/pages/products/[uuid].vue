@@ -60,13 +60,15 @@ import { listCategories } from '@core/usecases/list-categories/listCategories'
 import { getSearchResultVMFirstSix } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM'
 import { searchGateway } from '../../../../../../gateways/searchGateway'
 import { searchProduct } from '@core/usecases/search-product/searchProduct'
-import { addToFavorite, removeFromFavorite } from '@core/usecases/add-to-favorite/addToFavorite'
+import {
+  addToFavorite,
+  removeFromFavorite
+} from '@core/usecases/add-to-favorite/addToFavorite'
 import { sendNotifLike } from '@core/usecases/add-notif/cartNotif'
 import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification'
 import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm'
 
 definePageMeta({ layout: 'main' })
-
 
 const productTest1 = {
   href: '/products/83f04e67-7d59-4bdb-97df-cc67804ae621',
@@ -121,7 +123,7 @@ const promoTest1 = {
   price: '10,80 €',
   promo: '2 euros offert',
   pricePromo: '8,80 €',
-  name: "La Roche Posay Cicaplast B5 Spray 100ml",
+  name: 'La Roche Posay Cicaplast B5 Spray 100ml',
   laboratory: 'LA ROCHE POSAY',
   availableStock: 14,
   images: [
@@ -134,7 +136,7 @@ const promoTest2 = {
   uuid: '6e6ca9f0-fc53-4d2d-ac6d-fc257e180190',
   price: '6,49 €',
   promo: '2 achetés = 1 offert',
-  name: "Arkogélules Olivier Bio 45 Gélules",
+  name: 'Arkogélules Olivier Bio 45 Gélules',
   laboratory: 'ARKOPHARMA',
   availableStock: 14,
   images: [
@@ -148,7 +150,7 @@ const promoTest3 = {
   price: '11,19 €',
   promo: '10 % offerts',
   pricePromo: '10 €',
-  name: "Ristabil complément anti fatigue 10x10ml",
+  name: 'Ristabil complément anti fatigue 10x10ml',
   laboratory: 'LEURQUIN-MEDIOLANUM',
   availableStock: 14,
   images: [
@@ -162,7 +164,7 @@ const promoTest4 = {
   price: '20,90 €',
   promo: '2 euros offerts',
   pricePromo: '18,90 €',
-  name: "Avene Hydrance riche crème hydratante 2x40ml",
+  name: 'Avene Hydrance riche crème hydratante 2x40ml',
   laboratory: 'AVÈNE',
   availableStock: 14,
   images: [
@@ -176,7 +178,7 @@ const promoTest5 = {
   price: '20,90 €',
   promo: '2 euros offerts',
   pricePromo: '18,90 €',
-  name: "Avene Hydrance légère émulsion hydratante 2x40ml",
+  name: 'Avene Hydrance légère émulsion hydratante 2x40ml',
   laboratory: 'AVÈNE',
   availableStock: 14,
   images: [
@@ -190,7 +192,7 @@ const promoTest6 = {
   price: '11,30 €',
   promo: '20 % offerts',
   pricePromo: '9,10 €',
-  name: "ZzzQuil Sommeil Gommes 30 gommes",
+  name: 'ZzzQuil Sommeil Gommes 30 gommes',
   laboratory: 'PROCTER & GAMBLE',
   availableStock: 14,
   images: [
@@ -210,7 +212,7 @@ const promoArray = [
 const productId = ref<string | null>(null)
 
 function isUuidNotInArray(uuid) {
-  const promo = promoArray.find(promo => promo.uuid === uuid);
+  const promo = promoArray.find((promo) => promo.uuid === uuid)
   return promo || null
 }
 
@@ -293,7 +295,7 @@ watchEffect(async () => {
 })
 
 watchEffect(async () => {
-  if(productId && productId.value)
+  if (productId && productId.value)
     isPromo.value = isUuidNotInArray(productId.value)
 })
 </script>

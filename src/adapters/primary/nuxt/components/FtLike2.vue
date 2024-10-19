@@ -11,7 +11,7 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
         div.flow-root
             ul.-my-6.divide-y.divide-gray12.text-left
                 div(v-for='item in cart.items' :key="item.uuid")
-                    ft-product-cart(:item="item")
+                    ft-product-like(:item="item")
 div.mt-2.border-t.py-6.px-4(class="sm:px-6")
     div.mt-4
         ft-button.button-solid.w-full.text-xl(@click="close") Reprendre mes achats
