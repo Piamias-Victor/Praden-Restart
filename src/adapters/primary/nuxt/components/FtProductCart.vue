@@ -17,7 +17,7 @@ li.flex.py-6
       p.text-xl.font-semibold {{ item.quantity }}
       
       // Condition pour cacher le bouton si l'UUID est spécifique et la quantité >= 6
-      ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(v-if='!isAddButtonHidden(item.uuid)' @click='addItemToCart(item.uuid)')
+      ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(v-if='!isAddButtonHidden(item)' @click='addItemToCart(item.uuid)')
         icon.icon-xs(name="ph:plus-bold")
 </template>
 
@@ -31,11 +31,9 @@ defineProps({
   item: { type: Object, required: true }
 })
 
-const limit = ref(false)
-
 // Vérification de la condition pour cacher le bouton d'ajout
-const isAddButtonHidden = (uuid: string) => {
-  return uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' && item.quantity >= 6
+const isAddButtonHidden = (item: any) => {
+  return item.uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' && item.quantity >= 6
 }
 
 const addItemToCart = (uuid: string) => {
@@ -43,13 +41,6 @@ const addItemToCart = (uuid: string) => {
 }
 
 const removeItemFromCart = (uuid: string) => {
-  if (uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' && item.quantity <= 6) {
-    limit.value = false
-  }
   removeFromCart(uuid)
-}
-
-const removeAllItemByUuidFromCart = (uuid: string) => {
-  removeAllItemFromCartByUuid(uuid)
 }
 </script>

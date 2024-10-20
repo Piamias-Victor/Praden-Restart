@@ -14,10 +14,17 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
             ul.-my-6.divide-y.divide-gray12.text-left
                 div(v-for='item in cart.items' :key="item.uuid")
                     ft-product-cart(:item="item")
-div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(class='lg:text-sm')
+//- div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(class='lg:text-sm')
+//-   span Plus que 
+//-   span.text-main.font-bold {{ cart.freeDelivery }}
+//-   span pour profiter des frais de ports gratuit
+div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(v-if='!hasMedicineReference' class='lg:text-sm')
   span Plus que 
   span.text-main.font-bold {{ cart.freeDelivery }}
   span pour profiter des frais de ports gratuit
+div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(v-if='hasMedicineReference' class='lg:text-sm')
+  span Votre panier contient des médicaments, vous ne pouvez donc pas bénéficier des frais de port gratuit
+
 div.mt-2.border-t.py-2.px-2(class='lg:py-6 lg:px-4')
   h2.font-medium.text-gray-900.mb-2.text-sm(class='lg:text-xl') Mode de livraison
   div.flex.flex-col.items-center.gap-2.w-full.mb-2(class='lg:mb-4')
@@ -84,6 +91,12 @@ const deliveryMethodSelected = (method: any) => {
   deliveryMethods.value.selectedDeliveryMethod = method
   selectedDeliveryMethod.value = method.uuid
 }
+
+const hasMedicineReference = computed(() => {
+  return Object.values(cart.value.items).some(
+    (item: any) => item.uuid === "81b02fbc-9cbd-49c9-8a7b-ecd8451b289e"
+  )
+})
 
 const cart = computed(() => {
   return getCartVM()
