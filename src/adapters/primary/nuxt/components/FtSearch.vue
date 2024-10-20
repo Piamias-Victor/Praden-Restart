@@ -42,23 +42,22 @@ TransitionRoot(appear='' :show='true' as='template')
                             //- div(v-if='query !== ""')
                             //-     ft-categories(:categoriesVM="categoriesVM")
                             ft-product-search-list(:products="searchVM.items" @close='close')
-                            nuxt-link(
+                            div(
                                 v-if='query === ""'
                                 @click="clicked").flex.flex-col.items-center.justify-center.gap-4.w-full
-                                button.flex.flex-col.items-center.bg-main.text-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]')
-                                    span.font-semibold.w-full.text-left.px-4 DES PROMOTIONS ALLANT JUSQU'À -30%
-                                button.flex.flex-col.items-center.justify-center.bg-cover.bg-center.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/kMtWv1gV/new.png')")
+                                nuxt-link.flex.flex-col.items-center.bg-main.text-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]' href='https://2f440074.praden-restart.pages.dev/categories/03c3ddc9-7616-48df-9bf7-3290da61b23b?Promotions')
+                                    span.font-semibold.w-full.text-left.px-4 DES PROMOTIONS ALLANT JUSQU'À -20%
+                                nuxt-link.border-2.border-main.flex.flex-col.items-center.justify-center.bg-cover.bg-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(href='https://2f440074.praden-restart.pages.dev/categories/7480b66f-d589-42de-a122-3cff0590dd40?Dermocosm%C3%A9tique' class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/kMtWv1gV/new.png')")
                                     span.font-semibold.w-full.text-left.px-4 DERMOCOSMETIQUE
-                                button.flex.flex-col.items-center.justify-center.bg-cover.bg-center.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/vDFr59VS/1.png')")
+                                nuxt-link.border-2.border-main.flex.flex-col.items-center.justify-center.bg-cover.bg-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(href='https://2f440074.praden-restart.pages.dev/categories/19730921-246e-4eec-9a3b-17b49e416c82?B%C3%A9b%C3%A9' class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/vDFr59VS/1.png')")
                                     span.font-semibold.w-full.text-left.px-4 MAMAN & BEBE
-                                button.flex.flex-col.items-center.justify-center.bg-cover.bg-center.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/1zkwkwWR/56.png')")
+                                nuxt-link.border-2.border-main.flex.flex-col.items-center.justify-center.bg-cover.bg-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(href='https://2f440074.praden-restart.pages.dev/categories/aadb1ea0-3961-46c8-8005-172779c74756?Bien%20%C3%AAtre' class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/1zkwkwWR/56.png')")
+                                    span.font-semibold.w-full.text-left.px-4 BIEN ETRE
+                                nuxt-link.border-2.border-main.flex.flex-col.items-center.justify-center.bg-cover.bg-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(href='https://2f440074.praden-restart.pages.dev/categories/9869193d-f291-4a74-9d29-b09429b7f81d?Nature' class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/5yBnS04L/009.png')")
                                     span.font-semibold.w-full.text-left.px-4 NATURE & SANTE
-                                button.flex.flex-col.items-center.justify-center.bg-cover.bg-center.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/5yBnS04L/009.png')")
-                                    span.font-semibold.w-full.text-left.px-4 COMPLEMENT
-                                button.flex.flex-col.items-center.justify-center.bg-cover.bg-center.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/Bvb7f4pf/10.png')")
+                                nuxt-link.border-2.border-main.flex.flex-col.items-center.justify-center.bg-cover.bg-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(href='https://2f440074.praden-restart.pages.dev/categories/0f4946ae-2e5f-46e8-86a7-fb6d3ae8d75f?V%C3%A9t%C3%A9rinaire' class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/Bvb7f4pf/10.png')")
                                     span.font-semibold.w-full.text-left.px-4 VETERINAIRE
-                                button.flex.flex-col.items-center.justify-center.bg-cover.bg-center.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/G3T0sJkn/09.png')")
-                                    span.font-semibold.w-full.text-left.px-4 COFFRET CADEAU
+                                div(class='min-h-[13vh]').bg-main
 </template>
 
 <script lang="ts" setup>
@@ -76,6 +75,7 @@ import { getSearchCategoriesVM } from '@adapters/primary/viewModels/get-category
 const props = defineProps<{
   categoriesVM: any
 }>()
+
 
 const emit = defineEmits<{
   (e: 'close'): void

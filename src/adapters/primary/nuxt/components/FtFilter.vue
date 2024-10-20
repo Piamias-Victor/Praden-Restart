@@ -24,7 +24,7 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
     div(v-if="props.facetsVM && props.facetsVM.laboratory")
         div.grid.grid-cols-2.gap-4.mt-4.justify-items-center
             ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='laboratory in props.facetsVM.laboratory.values' :key="laboratory.key" @click='searchLaboratory(laboratory.key)' class="w-full text-center")
-                span.whitespace-nowrap {{ laboratory.key }}
+                span.text-sm.line-clamp-1 {{ laboratory.key }}
     div.h-4
     ft-button.button-solid.w-full(@click='searchLaboratory(null)')
       icon.icon-md(name="tabler:category")
