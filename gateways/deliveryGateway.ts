@@ -4,7 +4,7 @@ import { DeliveryMethod, DeliveryType } from '@core/entities/deliveryMethod'
 const deliveryGateway = new InMemoryDeliveryGateway()
 
 export const pickup: DeliveryMethod = {
-  uuid: 'clickAndCollect',
+  uuid: '570bdcfa-b704-4ed2-9fc0-175d687c1d8d',
   name: 'Retrait en pharmacie',
   description: '198 avenue des Frères Lumières 30100 Alès',
   type: DeliveryType.ClickAndCollect,
@@ -12,7 +12,7 @@ export const pickup: DeliveryMethod = {
 }
 
 export const relais: DeliveryMethod = {
-  uuid: 'relais-uuid',
+  uuid: '505209a2-7acb-4891-b933-e084d786d7ea ',
   name: 'Point Relais',
   description: '2-5 jours ouvrés',
   type: DeliveryType.Delivery,
@@ -20,7 +20,7 @@ export const relais: DeliveryMethod = {
 }
 
 export const express: DeliveryMethod = {
-  uuid: 'express-uuid',
+  uuid: 'b5f26b31-ad03-4aaf-af89-395471795066',
   name: 'Express',
   description: '2-5 jours ouvrés',
   type: DeliveryType.Delivery,

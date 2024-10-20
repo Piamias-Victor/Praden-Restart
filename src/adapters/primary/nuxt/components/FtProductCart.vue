@@ -1,5 +1,4 @@
 <template lang="pug">
-pre {{item}}
 li.flex.py-6
   div.h-24.w-24.flex-shrink-0.overflow-hidden.rounded-md.border
     img.h-full.w-full.object-cover.object-center(
