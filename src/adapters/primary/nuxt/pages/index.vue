@@ -82,7 +82,7 @@ section.px-2
         ft-button.button-solid.w-full
             span Suivez nous sur TikTok
             icon.icon-md(name="akar-icons:send")
-div.h-8
+div.h-10
 ft-navigation
 </template>
 
