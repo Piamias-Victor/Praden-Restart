@@ -97,7 +97,7 @@ export const createOrder = async (
 
   const orderNew = {
     lines: orderLines,
-    deliveryMethodUuid: '570bdcfa-b704-4ed2-9fc0-175d687c1d8d',
+    deliveryMethodUuid: deliveryMethod.uuid,
     deliveryAddress: {
       firstname: deliveryAddress.firstname,
       lastname: deliveryAddress.lastname,

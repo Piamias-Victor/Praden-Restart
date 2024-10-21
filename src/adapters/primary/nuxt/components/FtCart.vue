@@ -1,5 +1,4 @@
 <template lang="pug">
-pre {{medecineValid}}
 div.w-full.bg-main.text-center.p-2.text-white.font-semibold.flex.items-center.justify-center.gap-2(class="md:hidden")
     span Livraison offerte pour 69 € d'achat
 div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")

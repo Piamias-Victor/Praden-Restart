@@ -82,11 +82,7 @@ section.px-2
         ft-button.button-solid.w-full
             span Suivez nous sur TikTok
             icon.icon-md(name="akar-icons:send")
-section.px-2
-  div.flex.items-center.justify-center.py-2
-    span.text-2xl.font-bold.text-center(class='lg:text-3xl') Suivez nos actus
-  div.h-2
-div.h-8
+div.h-10
 ft-navigation
 </template>
 
