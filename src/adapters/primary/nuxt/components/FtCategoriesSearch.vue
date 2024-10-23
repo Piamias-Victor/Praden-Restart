@@ -1,6 +1,6 @@
 <template lang="pug">
 div.py-4.px-2.flex.items-center.gap-2.overflow-x-scroll.custom-scrollbar
-    ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='category in props.categoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid, category.name)")
+    ft-button.text-xl.bg-white.rounded-xl.px-6.text-primary11(v-for='category in props.categoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid, category.name)")
         img.icon-md(:src="category.icon")
         span.whitespace-nowrap {{ category.name }}
     //- ft-button.bg-white.rounded-xl.px-6

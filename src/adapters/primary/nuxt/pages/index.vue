@@ -1,6 +1,7 @@
 <template lang="pug">
 div.h-2
 ft-categories(:categoriesVM="categoriesVM")
+div.h-4
 ft-slider
 ft-product-list(:products="productsArray") La sélection du pharmacien
 div.h-4
@@ -11,7 +12,7 @@ section.px-2
     div.flex.items-center.justify-center.py-2
       span.text-2xl.font-bold.text-center(class='lg:text-3xl') Découvrez nos articles
     div.h-2
-    div.px-4
+    div.px-4.hidden(class='sm:block')
         img.block.rounded-xl.w-full(
                 class='min-h-[115px]'
                 src="https://i.postimg.cc/9FTJPY72/Capture-d-e-cran-2024-10-17-a-12-36-59.png"
@@ -19,10 +20,10 @@ section.px-2
                 )
     ft-blog(:blogVm='blogVm')
 div.mt-4
-section.px-2
+section.px-2.hidden(class='sm:block')
   div.flex.items-center.justify-center.py-2
     span.text-2xl.font-bold.text-center(class='lg:text-3xl') Avis
-ft-review
+  ft-review
 //- section.px-2.bg-red-400(class='h-[600px]')
 //-   div.flex.items-center.justify-center.py-2
 //-     span.text-2xl.font-bold.text-center(class='lg:text-3xl') Suivez nos actus
@@ -36,7 +37,7 @@ ft-review
 //-         src='https://www.tiktok.com/embed/v2/7227902361333697819'
 //-         width="400" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
 //-       )
-section.px-2
+section.px-2.hidden(class='sm:block')
   div.flex.items-center.justify-center.py-2
     span.text-2xl.font-bold.text-center(class='lg:text-3xl') La Pharmacie
   div.h-2
