@@ -1,7 +1,10 @@
 <template lang="pug">
 div.h-2
+//- ft-marquee
+div.h-2
 ft-categories(:categoriesVM="categoriesVM")
 div.h-4
+//- ft-marquee
 ft-slider
 ft-product-list(:products="productsArray") La sélection du pharmacien
 div.h-4
@@ -203,7 +206,7 @@ const promoTest1 = {
   href: '/products/ba553d06-6ce4-49a5-a561-d903ed8a6b1e',
   uuid: 'ba553d06-6ce4-49a5-a561-d903ed8a6b1e',
   price: '10,80 €',
-  promo: '2 euros offert',
+  promo: '- 2 €',
   pricePromo: '8,80 €',
   name: 'La Roche Posay Cicaplast B5 Spray 100ml',
   laboratory: 'LA ROCHE POSAY',
@@ -230,7 +233,7 @@ const promoTest3 = {
   href: '/products/68152e41-11d4-4e1f-b2aa-48290be298d6',
   uuid: '68152e41-11d4-4e1f-b2aa-48290be298d6',
   price: '11,19 €',
-  promo: '10 % offerts',
+  promo: '- 10 % ',
   pricePromo: '10 €',
   name: 'Ristabil complément anti fatigue 10x10ml',
   laboratory: 'LEURQUIN-MEDIOLANUM',
@@ -244,7 +247,7 @@ const promoTest4 = {
   href: '/products/b9377ef8-73ae-4d52-8be2-02e85b8f6a85',
   uuid: 'b9377ef8-73ae-4d52-8be2-02e85b8f6a85',
   price: '20,90 €',
-  promo: '2 euros offerts',
+  promo: '- 2 € ',
   pricePromo: '18,90 €',
   name: 'Avene Hydrance riche crème hydratante 2x40ml',
   laboratory: 'AVÈNE',
@@ -258,7 +261,7 @@ const promoTest5 = {
   href: '/products/532d8de1-9c3b-4e4b-b815-66d65868e43a',
   uuid: '532d8de1-9c3b-4e4b-b815-66d65868e43a',
   price: '20,90 €',
-  promo: '2 euros offerts',
+  promo: '- 2 € ',
   pricePromo: '18,90 €',
   name: 'Avene Hydrance légère émulsion hydratante 2x40ml',
   laboratory: 'AVÈNE',
@@ -272,7 +275,7 @@ const promoTest6 = {
   href: '/products/570f55ce-76fb-461d-9935-097c574f8f84',
   uuid: '570f55ce-76fb-461d-9935-097c574f8f84',
   price: '11,30 €',
-  promo: '20 % offerts',
+  promo: '- 20 % ',
   pricePromo: '9,10 €',
   name: 'ZzzQuil Sommeil Gommes 30 gommes',
   laboratory: 'PROCTER & GAMBLE',

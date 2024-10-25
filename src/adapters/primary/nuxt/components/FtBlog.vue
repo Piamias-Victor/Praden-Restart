@@ -1,7 +1,7 @@
 <template lang="pug">
-div.py-4.flex.items-center.gap-2.overflow-x-scroll.custom-scrollbar
+div.py-4.flex.items-center.gap-4.overflow-x-scroll.custom-scrollbar
   nuxt-link(v-for='blog in props.blogVm.items' :key="blog.uuid" :href='blog.url' target='_blank')
-    div.bg-white.rounded-xl(class='w-[50vw] sm:w-[25vw] h-[350px] flex flex-col justify-between')
+    div.bg-white.rounded-xl(class='w-[50vw] sm:w-[25vw] h-[350px] flex flex-col justify-between transform transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-xl')
       div.relative.w-full(class='h-[200px] overflow-hidden')
         img.rounded-t-xl.absolute.inset-0.object-cover.object-top(:src="blog.icon" :alt="blog.name")
       div.w-full.flex.flex-col.justify-center.px-4.py-2

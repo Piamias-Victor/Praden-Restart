@@ -14,13 +14,13 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
     div.h-4
     ft-button.button-solid.w-full(@click='sortBy(2)')
       icon.icon-md(name="mdi:tag-arrow-up-outline")
-      span Plus chère au moins chère
+      span Plus chèr au moins chère
     div.h-4
     ft-button.button-solid.w-full(@click='sortBy(1)')
       icon.icon-md(name="mdi:tag-arrow-down-outline")
-      span Moins chère au plus chère
+      span Moins chèr au plus chère
     div.h-4
-    h2.font-medium.text-gray-900 2 - Filtre laboratoire
+    h2.font-medium.text-gray-900 2 - Filtre marque
     div(v-if="props.facetsVM && props.facetsVM.laboratory")
         div.grid.grid-cols-2.gap-4.mt-4.justify-items-center
             ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='laboratory in props.facetsVM.laboratory.values' :key="laboratory.key" @click='searchLaboratory(laboratory.key)' class="w-full text-center")
@@ -28,7 +28,7 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
     div.h-4
     ft-button.button-solid.w-full(@click='searchLaboratory(null)')
       icon.icon-md(name="tabler:category")
-      span Afficher tout les labos
+      span Afficher toutes les marques
     div.mt-8
 </template>
 
