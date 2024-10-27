@@ -1,5 +1,5 @@
 <template lang="pug">
-div.bg-white.rounded-xl.pt-2.w-full(class='w-[50vw] sm:w-[15vw] min-h-[320px] flex flex-col justify-between')
+div.bg-white.rounded-xl.pt-2(class='w-[50vw] sm:w-[15vw] min-h-[320px] flex flex-col justify-between transform transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-xl')
     div.flex.flex-col.items-center.justify-center.gap-4.relative
         nuxt-link.h-full.flex.items-center(
         :href="`/products/${product.uuid}`"

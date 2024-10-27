@@ -17,6 +17,13 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
 div.px-3
   span.font-semibold Laissez une note à notre équipe
   textarea.block.w-full.rounded-md.border-light.shadow-sm
+div.mt-1
+div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(v-if='!hasMedicineReference' class='lg:text-sm')
+  span Plus que 
+  span.text-main.font-bold {{ cart.freeDelivery }}
+  span pour profiter des frais de ports gratuit
+div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(v-if='hasMedicineReference' class='lg:text-sm')
+  span Votre panier contient des médicaments, vous ne pouvez donc pas bénéficier des frais de port gratuit
 div.mt-2.border-t.py-6.px-4(class="sm:px-6")
     div.flex.justify-between.items-center.text-lg
         p.font-semibold.text-main.text Total panier
@@ -98,6 +105,12 @@ watchEffect(async () => {
     )
     cartQuantity.value = { totalQuantity: 0 } // Assurer une valeur par défaut si l'appel échoue
   }
+})
+
+const hasMedicineReference = computed(() => {
+  return Object.values(cart.value.items).some(
+    (item: any) => item.uuid === "81b02fbc-9cbd-49c9-8a7b-ecd8451b289e"
+  )
 })
 
 const removeAllItemFromCart = () => {

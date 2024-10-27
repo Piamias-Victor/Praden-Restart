@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.22",
+    "@mjakupi/vue-marquee": "^1.0.7",
     "@nuxt/icon": "^1.5.0",
     "@nuxt/kit": "^3.13.0",
     "@nuxtjs/tailwindcss": "^6.12.1",
@@ -36,8 +37,10 @@
     "swiper": "^11.1.14",
     "tailwindcss": "^3.4.3",
     "vue-3-slider-component": "^1.0.1",
+    "vue-marquee-text-component": "^2.0.1",
     "vue-slider-component": "^3.2.24",
     "vue3-google-login": "^2.0.33",
+    "vue3-marquee": "^4.2.2",
     "vue3-slider": "^1.10.1"
   },
   "devDependencies": {

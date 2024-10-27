@@ -1,7 +1,8 @@
 <template lang="pug">
-div.bg-white.rounded-xl.pt-2(class='w-[50vw] sm:w-[15vw] min-h-[320px] flex flex-col justify-between relative')
-  div.absolute.top-0.left-0.bg-main.text-white.text-xs.font-bold.p-2.rounded-tr-lg.rounded-bl-lg.z-10
-      span {{ product.promo }}
+div.bg-white.rounded-xl.pt-2(class='w-[50vw] sm:w-[15vw] min-h-[320px] flex flex-col justify-between transform transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-xl'
+      @mouseenter="isHovered = true" @mouseleave="isHovered = false")
+  div.absolute.top-0.left-0.bg-main.text-white.text-xs.font-bold.p-2.rounded-tl-lg.rounded-full.z-10
+      span.text-xl {{ isHovered ? 'Survolé!' : product.promo }}
   div.flex.flex-col.items-center.justify-center.gap-4.relative
       nuxt-link.h-full.flex.items-center(
       :href="product.href"
@@ -42,6 +43,7 @@ import { useProductGateway } from '../../../../../gateways/productGateway'
 import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm'
 import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification'
 import { sendNotifLike } from '@core/usecases/add-notif/cartNotif'
+import { ref, watchEffect } from 'vue'
 
 defineProps({
   product: { type: Object, required: true }
@@ -67,6 +69,7 @@ export interface LikeQuantityVM {
 }
 
 const likeQuantity = ref<LikeQuantityVM | null>(null)
+const isHovered = ref(false) // Création d'un état de survol
 
 watchEffect(async () => {
   likeQuantity.value = await getLikeQuantityVM(useProductGateway())
