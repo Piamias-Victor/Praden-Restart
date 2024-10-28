@@ -1,51 +1,29 @@
 <template lang="pug">
-div.py-4.px-2.flex.items-center.gap-2.overflow-x-scroll.custom-scrollbar
-    ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='category in props.categoriesVM' :key="category.key")
-        span.whitespace-nowrap {{ category.key }}
+    Vue3Marquee(direction='reverse' pauseOnHover='true')
+        nuxt-link.cursor-pointer
+            img(src='https://logo-marque.com/wp-content/uploads/2020/12/Avene-Logo.png' class='w-[200px]') 
+        div(class='w-[100px]')
+        nuxt-link.cursor-pointer
+            img(src='https://www.resonance-coaching.com/wp-content/uploads/2018/02/logo-uriage-blanc-300x228.png' class='w-[200px]')
+        div(class='w-[100px]')
+        nuxt-link.cursor-pointer
+            img(src='https://pharmaciedelacapte.fr/wp-content/uploads/2020/04/A-Derma-logo-carr%C3%A9-copie.png' class='w-[200px]')
+        div(class='w-[100px]')
+        nuxt-link.cursor-pointer
+            img(src='https://www.pharmaleo.fr/media/category/img/zoom/larosee-removebg-preview.png' class='w-[200px]')
+        div(class='w-[100px]')
+        nuxt-link.cursor-pointer
+            img(src='https://www.feazer.com/wp-content/uploads/2021/05/LOGO-SVR.png' class='w-[200px]')
+        div(class='w-[100px]')
+        nuxt-link.cursor-pointer
+            img(src='https://logo-marque.com/wp-content/uploads/2020/12/Mustela-Logo.png' class='w-[200px]')
+        div(class='w-[100px]')
+        nuxt-link.cursor-pointer
+            img(src='https://www.koalibio.fr/data/marques/1672916134.png' class='w-[200px]')
+        div(class='w-[100px]')
 </template>
 
 <script lang="ts" setup>
-const props = defineProps<{
-  categoriesVM: any
-}>()
+import { Vue3Marquee } from 'vue3-marquee'
 
-definePageMeta({ layout: 'main' })
-
-const router = useRouter()
-
-const goToCat = (path: string) => {
-  router.push('/categories/' + path)
-}
-
-const goBack = () => {
-  router.back()
-}
 </script>
-
-<style scoped>
-.custom-scrollbar {
-  overflow-y: hidden; /* Cache la scrollbar verticale */
-  overflow-x: scroll; /* Assure que la scrollbar horizontale est toujours visible */
-}
-
-.custom-scrollbar::-webkit-scrollbar {
-  height: 6px; /* Hauteur de la scrollbar horizontale */
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #e5017d; /* Couleur de la barre de défilement */
-  border-radius: 10px; /* Rendre la barre de défilement arrondie */
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background-color: #e0e0e0; /* Couleur de l'arrière-plan de la barre */
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: #ff008c; /* Changement de couleur lors du survol */
-}
-
-.custom-scrollbar {
-  scrollbar-gutter: stable both-edges; /* Afficher la scrollbar en permanence et garder l'espace réservé */
-}
-</style>
