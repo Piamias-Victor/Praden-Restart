@@ -25,6 +25,11 @@ TransitionRoot(appear='' :show='true' as='template')
                         ft-navigation
                         div.px-4(v-if='query !== ""')
                             ft-categories-search(:categoriesVM="categoriesVM" @close='close')
+                        div.flex.px-8.flex.items-center.justify-between.gap-4.my-4(v-if='query !== ""')
+                          span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') Recherche
+                          ft-button-animate.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
+                            span.text-main.font-semibold.hidden(class='sm:block') Filtres
+                            icon.icon-lg(name="mdi:filter-outline")
                         div.flex-1.overflow-y-auto.px-4(class="sm:px-6")
                             //- div.flex.items-center.gap-4
                             //-     div.bg-white.rounded-full.px-2.grow.flex.items-center.gap-4.bg-contrast
@@ -88,6 +93,12 @@ const close = () => {
 
 function closeModal() {
   emit('close')
+}
+
+const filterOpened = ref(false)
+
+const openFilter = () => {
+  filterOpened.value = true
 }
 
 const query = ref('')

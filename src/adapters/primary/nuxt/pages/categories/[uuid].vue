@@ -1,12 +1,12 @@
 <template lang="pug">
   ft-child-categories(:categoriesVM="categoriesVM")
   div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
-    span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') {{Name}}
-    ft-button.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
+    span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') {{categoryVM.name}}
+    ft-button-animate.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
       span.text-main.font-semibold.hidden(class='sm:block') Filtres
       icon.icon-lg(name="mdi:filter-outline")
   ft-navigation
-  ft-product-cat-list(:products="filteredProducts")  <!-- Utilisez les produits filtrés ici -->
+  ft-product-cat-list(:products="filteredProducts")
   ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" :facetsVM="facetsVM" :sortType="sortType")
 </template>
 

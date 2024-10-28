@@ -118,7 +118,6 @@ export const getCategoryVM = (sortType: SortType = SortType.None) => {
   ]
   const products = searchStore.products
   products.sort(sortByPrice(sortType))
-
   return {
     name: category?.name || '',
     childCategories: getChildCategoriesVM(category?.uuid),
