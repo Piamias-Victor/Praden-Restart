@@ -33,7 +33,9 @@ defineProps({
 
 // Vérification de la condition pour cacher le bouton d'ajout
 const isAddButtonHidden = (item: any) => {
-  return item.uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' && item.quantity >= 6
+  return (
+    item.uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' && item.quantity >= 6
+  )
 }
 
 const addItemToCart = (uuid: string) => {

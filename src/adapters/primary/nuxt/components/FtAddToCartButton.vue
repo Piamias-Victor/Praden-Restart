@@ -30,14 +30,26 @@ const cartQuantity = ref<CartQuantityVM | null>(null)
 const limit = ref(false)
 
 const removeItemFromCart = (uuid: string) => {
-  if (uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' && cartQuantity && cartQuantity.value && cartQuantity.value.items && cartQuantity.value.items[uuid] <= 6) {
+  if (
+    uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' &&
+    cartQuantity &&
+    cartQuantity.value &&
+    cartQuantity.value.items &&
+    cartQuantity.value.items[uuid] <= 6
+  ) {
     limit.value = false
   }
   removeFromCart(uuid)
 }
 
 const addItemToCart = (uuid: string) => {
-  if (uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' && cartQuantity && cartQuantity.value && cartQuantity.value.items && cartQuantity.value.items[uuid] >= 5) {
+  if (
+    uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' &&
+    cartQuantity &&
+    cartQuantity.value &&
+    cartQuantity.value.items &&
+    cartQuantity.value.items[uuid] >= 5
+  ) {
     limit.value = true
   } else {
     limit.value = false
@@ -47,7 +59,12 @@ const addItemToCart = (uuid: string) => {
 }
 
 const isAddButtonHidden = (uuid: string) => {
-  return uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' && cartQuantity.value && cartQuantity.value.items && cartQuantity.value.items[uuid] >= 6
+  return (
+    uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' &&
+    cartQuantity.value &&
+    cartQuantity.value.items &&
+    cartQuantity.value.items[uuid] >= 6
+  )
 }
 
 const sendUserNotif = () => {

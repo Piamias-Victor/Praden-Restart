@@ -37,7 +37,6 @@ const goToCat = (path: string, name: string) => {
 }
 </script>
 
-
 <style scoped>
 .custom-scrollbar {
   overflow-y: hidden; /* Cache la scrollbar verticale */

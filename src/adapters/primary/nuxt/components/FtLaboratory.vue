@@ -1,6 +1,6 @@
 <template lang="pug">
     Vue3Marquee(direction='reverse' pauseOnHover='true')
-        nuxt-link.cursor-pointer
+        nuxt-link.cursor-pointer(@click="goToLabo('avene')")
             img(src='https://logo-marque.com/wp-content/uploads/2020/12/Avene-Logo.png' class='w-[200px]') 
         div(class='w-[100px]')
         nuxt-link.cursor-pointer
@@ -24,6 +24,19 @@
 </template>
 
 <script lang="ts" setup>
+import { searchProduct } from '@core/usecases/search-product/searchProduct';
+import { searchGateway } from '../../../../../gateways/searchGateway';
 import { Vue3Marquee } from 'vue3-marquee'
+const router = useRouter()
 
+const goToLabo = (async (laboratory: string) => {
+  if (laboratory) {
+    try {
+      const result = await searchProduct(laboratory, searchGateway())
+      // Mettre à jour ici searchVM ou un autre état si nécessaire
+    } catch (error) {}
+  } else {
+  }
+  router.push('/laboratory')
+})
 </script>

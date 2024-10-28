@@ -32,6 +32,4 @@ div.w-full.px-2.flex.items-center.justify-center.gap-8
             icon.icon-md(name="akar-icons:send")
 </template>
 
-<script lang="ts" setup>
-
-</script>
+<script lang="ts" setup></script>

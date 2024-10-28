@@ -94,7 +94,7 @@ const deliveryMethodSelected = (method: any) => {
 
 const hasMedicineReference = computed(() => {
   return Object.values(cart.value.items).some(
-    (item: any) => item.uuid === "81b02fbc-9cbd-49c9-8a7b-ecd8451b289e"
+    (item: any) => item.uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e'
   )
 })
 

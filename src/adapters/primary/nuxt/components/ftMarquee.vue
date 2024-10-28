@@ -7,6 +7,4 @@
 
 <script lang="ts" setup>
 import { Vue3Marquee } from 'vue3-marquee'
-
-
 </script>

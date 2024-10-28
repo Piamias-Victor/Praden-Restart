@@ -72,10 +72,9 @@ ft-navigation
 
 <style scoped>
 .mentions-legales p {
-line-height: 1.6;
+  line-height: 1.6;
 }
 </style>
-  
 
 <script lang="ts" setup>
 definePageMeta({ layout: 'main' })

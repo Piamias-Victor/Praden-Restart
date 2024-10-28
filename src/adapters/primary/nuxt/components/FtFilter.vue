@@ -29,6 +29,16 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
     ft-button.button-solid.w-full(@click='searchLaboratory(null)')
       icon.icon-md(name="tabler:category")
       span Afficher toutes les marques
+    div.h-4
+    h2.font-medium.text-gray-900 3 - Filtre categories
+    div(v-if="props.facetsVM && props.facetsVM.categories")
+        div.grid.grid-cols-2.gap-4.mt-4.justify-items-center
+            ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='category in props.facetsVM.categories.values' :key="category.key" @click='searchCategory(category.key)' class="w-full text-center")
+                span.text-sm.line-clamp-1 {{ category.key }}
+    div.h-4
+    ft-button.button-solid.w-full(@click='searchLaboratory(null)')
+      icon.icon-md(name="tabler:category")
+      span Afficher toutes les categories
     div.mt-8
 </template>
 
@@ -63,6 +73,7 @@ const emit = defineEmits<{
   (e: 'close'): void
   (e: 'sortBy', st: number): void
   (e: 'searchLaboratory', labo: string | null): void
+  (e: 'searchCategory', cat: string | null): void
 }>()
 
 const close = () => {
@@ -71,6 +82,12 @@ const close = () => {
 
 const searchLaboratory = (labo: string | null) => {
   emit('searchLaboratory', labo)
+  close()
+}
+
+const searchCategory = (cat: string | null) => {
+  console.log('cat', cat)
+  emit('searchCategory', cat)
   close()
 }
 

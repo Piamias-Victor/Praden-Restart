@@ -1,5 +1,5 @@
 <template lang="pug">
-div.bg-white.rounded-xl.pt-2(class='w-[50vw] sm:w-[15vw] min-h-[320px] flex flex-col justify-between transform transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-xl')
+div.bg-white.rounded-xl.pt-2(@click='close' class='w-[50vw] sm:w-[15vw] min-h-[320px] flex flex-col justify-between transform transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-xl')
     div.flex.flex-col.items-center.justify-center.gap-4.relative
         button.h-full.flex.items-center(
             @click="goToProduct(product.href)")
@@ -47,7 +47,6 @@ const emit = defineEmits<{
 }>()
 
 const close = () => {
-  console.log('ldjnfnjksdnf')
   emit('close')
 }
 
@@ -69,6 +68,7 @@ const likeQuantity = ref<LikeQuantityVM | null>(null)
 
 const goToProduct = (path: string) => {
   router.push(path)
+  close()
   setTimeout(() => {
     close()
   }, 1000)

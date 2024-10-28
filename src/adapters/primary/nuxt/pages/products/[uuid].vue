@@ -285,8 +285,8 @@ watchEffect(async () => {
   const laboratory = productVM.value?.laboratory
   if (laboratory) {
     try {
-      const laboratoryName = laboratory.split(' ')[0].toLowerCase()
-
+      const laboratoryName = laboratory.toLowerCase()
+      console.log('laboratoryName', laboratoryName)
       const result = await searchProduct(laboratoryName, searchGateway())
       // Mettre à jour ici searchVM ou un autre état si nécessaire
     } catch (error) {}
