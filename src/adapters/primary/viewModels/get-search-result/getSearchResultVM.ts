@@ -1,6 +1,7 @@
 import { useSearchStore } from '@store/searchStore'
 import { priceFormatter } from '@utils/formater'
 import { ProductItemVM, getPromotionVM } from '../get-category/getCategoryVM'
+import { sortByPrice, SortType } from '@utils/sort'
 
 type GetSearchResultItemVM = ProductItemVM
 
@@ -8,12 +9,13 @@ export interface GetSearchResultVM {
   items: Array<GetSearchResultItemVM>
   facets: any
 }
-export const getSearchResultVM = (): GetSearchResultVM => {
+export const getSearchResultVM = (sortType: SortType = SortType.None): GetSearchResultVM => {
   const searchStore = useSearchStore()
   const products = searchStore.result
   const facets = searchStore.facets
   const formatter = priceFormatter('fr-FR', 'EUR')
   if (products.length === 0) return { items: [] }
+  products.sort(sortByPrice(sortType))
   return (
     {
       items: products.map((p) => {

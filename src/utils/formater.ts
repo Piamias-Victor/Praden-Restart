@@ -10,6 +10,18 @@ export const priceFormatter = (
   })
 }
 
+export const parsePrice = (priceString : string) => {
+  // Enlever les espaces et le symbole de l'euro
+  const cleanedString = priceString.replace(/[^0-9,]/g, '').replace(',', '.');
+  
+  // Convertir la chaîne en nombre flottant
+  const priceNumber = parseFloat(cleanedString);
+  
+  // Convertir le prix en centimes (multiplication par 100 et arrondi)
+  return Math.round(priceNumber * 100);
+}
+
+
 export const percentFormatter = (n: number) => {
   return new Intl.NumberFormat('default', {
     style: 'percent',

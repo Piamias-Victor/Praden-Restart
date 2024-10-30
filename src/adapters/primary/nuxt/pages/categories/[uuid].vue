@@ -2,12 +2,17 @@
   ft-child-categories(:categoriesVM="categoriesVM")
   div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
     span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') {{categoryVM.name}}
-    ft-button-animate.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
-      span.text-main.font-semibold.hidden(class='sm:block') Filtres
-      icon.icon-lg(name="mdi:filter-outline")
+    div.flex.items-center.gap-4
+      ft-button-animate.w-full.bg-white(@click='sortBy(2)')
+          icon.icon-md.text-main(name="mdi:tag-arrow-up-outline")
+      ft-button-animate.w-full.bg-white(@click='sortBy(1)')
+          icon.icon-md.text-main(name="mdi:tag-arrow-down-outline")
+      ft-button-animate.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
+        span.text-main.font-semibold.hidden(class='sm:block') Filtres
+        icon.icon-lg(name="mdi:filter-outline")
   ft-navigation
   ft-product-cat-list(:products="filteredProducts")
-  ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" :facetsVM="facetsVM" :sortType="sortType")
+  ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory"  @searchPrice="searchPrice" :facetsVM="facetsVM" :sortType="sortType")
 </template>
 
 <script lang="ts" setup>
@@ -22,11 +27,13 @@ import { onMounted, ref, computed, watchEffect } from 'vue'
 import { getFacetsVM } from '@adapters/primary/viewModels/get-facets/getFacetsVM'
 import { listCategories } from '@core/usecases/list-categories/listCategories'
 import { getChildCategoriesVM } from '@adapters/primary/viewModels/get-category/getChildCategoryVM'
+import { parsePrice } from '@utils/formater'
 
 definePageMeta({ layout: 'main' })
 
 const route = useRoute()
 const categoryUuid = route.params.uuid
+const priceFilter = ref<string | null>(null)
 const Name = computed(() => {
   return route.fullPath.split('?')[1] || '' // Récupère la chaîne après le "?"
 })
@@ -34,6 +41,11 @@ const Name = computed(() => {
 const sortType = ref(SortType.None)
 const displayProduct = ref<any | null>(null)
 const laboratoryFilter = ref<string | null>(null) // Variable pour le laboratoire filtré
+
+const searchPrice = (price: any) => {
+  console.log('test de search price')
+  priceFilter.value = price // Mettez à jour le filtre de laboratoire
+}
 
 const sortBy = (st: number) => {
   if (sortType && typeof sortType.value !== 'undefined') {
@@ -50,13 +62,29 @@ const searchLaboratory = (labo: string | null) => {
 }
 
 const filteredProducts = computed(() => {
+  let res = categoryVM.value.products
+  console.log('test', res)
   // Filtrer les produits en fonction du laboratoire
   if (!laboratoryFilter.value) {
-    return categoryVM.value.products // Retourner tous les produits si aucun filtre
   }
-  return categoryVM.value.products.filter(
-    (product) => product.laboratory === laboratoryFilter.value
-  )
+  else {
+      res = categoryVM.value.products.filter(
+      (product) => product.laboratory === laboratoryFilter.value
+    )
+  }
+  // if (!categoryFilter.value) {
+  //   return res // Retourner tous les produits si aucun filtre
+  // }
+  if (!priceFilter.value) {}
+  else {
+    res = res.filter(
+      (product) => product.priceWithTax >= priceFilter.value[0] && product.priceWithTax <= priceFilter.value[1]
+    );
+  }
+  // res = searchVM.value.items.filter(
+  //   (product) => product.laboratory === laboratoryFilter.value
+  // )
+  return res
 })
 
 onMounted(() => {

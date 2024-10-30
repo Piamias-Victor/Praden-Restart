@@ -12,6 +12,25 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
     div.h-4
     h2.font-medium.text-gray-900 1 - Filtre de prix
     div.h-4
+    div.px-4
+      //- VueSlider(v-model="rangeValues" :min="minMaxValues[0]" :max="minMaxValues[1]" :clickable="true" :dragOnClick="true" :dotSize="17" :height="7" tooltip="always" :tooltip-formatter="(value) => `${value / 100} €`" :tooltipStyle="{backgroundColor:'#e5017d'}" :lazy="true" :processStyle="{backgroundColor:'#e5017d'}" :dotStyle="{backgroundColor:'#e5017d'}" @change="searchPrice(rangeValues)")
+      VueSlider(
+        v-model="rangeValues" 
+        :min="minMaxValues[0]" 
+        :max="minMaxValues[1]" 
+        :clickable="true" 
+        :dragOnClick="true" 
+        :dotSize="17" 
+        :height="7" 
+        tooltip="always" 
+        :tooltip-formatter="(value) => `${value / 100} €`" 
+        :tooltipStyle="{backgroundColor:'#e5017d'}" 
+        :lazy="true" 
+        :processStyle="{backgroundColor:'#e5017d'}" 
+        :dotStyle="{backgroundColor:'#e5017d'}"
+        :interval="1"
+        @change="(value) => searchPrice(value)")
+    div.h-4
     ft-button.button-solid.w-full(@click='sortBy(2)')
       icon.icon-md(name="mdi:tag-arrow-up-outline")
       span Plus chèr au moins chère
@@ -43,6 +62,7 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
 </template>
 
 <script lang="ts" setup>
+import VueSlider from "vue-3-slider-component";
 import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
 import {
   TransitionRoot,
@@ -65,6 +85,40 @@ const router = useRouter()
 
 const cartQuantity = ref<CartQuantityVM | null>(null)
 
+const rangeValues = ref(
+  props.facetsVM && 
+  props.facetsVM.price && 
+  props.facetsVM.price.values &&
+  props.facetsVM.price.values[0] && 
+  props.facetsVM.price.values[1]
+    ? [props.facetsVM.price.values[0].count, props.facetsVM.price.values[1].count]
+    : [0, 100]
+);
+
+const minMaxValues = ref(
+  props.facetsVM && 
+  props.facetsVM.price && 
+  props.facetsVM.price.values &&
+  props.facetsVM.price.values[0] && 
+  props.facetsVM.price.values[1]
+    ? [props.facetsVM.price.values[0].count, props.facetsVM.price.values[1].count]
+    : [0, 100]
+);
+
+// Initialisation dynamique des valeurs de rangeValues lorsque facetsVM est prêt
+watchEffect(() => {
+  if (
+    props.facetsVM?.price?.values?.[0]?.count !== undefined &&
+    props.facetsVM?.price?.values?.[1]?.count !== undefined
+  ) {
+    rangeValues.value = [
+      props.facetsVM.price.values[0].count,
+      props.facetsVM.price.values[1].count
+    ];
+  }
+});
+
+
 const cart = computed(() => {
   return getCartVM()
 })
@@ -74,6 +128,7 @@ const emit = defineEmits<{
   (e: 'sortBy', st: number): void
   (e: 'searchLaboratory', labo: string | null): void
   (e: 'searchCategory', cat: string | null): void
+  (e: 'searchPrice', price: any): void
 }>()
 
 const close = () => {
@@ -86,9 +141,12 @@ const searchLaboratory = (labo: string | null) => {
 }
 
 const searchCategory = (cat: string | null) => {
-  console.log('cat', cat)
   emit('searchCategory', cat)
   close()
+}
+
+const searchPrice = (price: any) => {
+  emit('searchPrice', price)
 }
 
 const sortBy = (st: number) => {

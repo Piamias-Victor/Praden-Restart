@@ -27,9 +27,14 @@ TransitionRoot(appear='' :show='true' as='template')
                             ft-categories-search(:categoriesVM="categoriesVM" @close='close')
                         div.flex.px-8.flex.items-center.justify-between.gap-4.my-4(v-if='query !== ""')
                           span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') Recherche
-                          ft-button-animate.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
-                            span.text-main.font-semibold.hidden(class='sm:block') Filtres
-                            icon.icon-lg(name="mdi:filter-outline")
+                          div.flex.items-center.gap-4
+                            ft-button-animate.w-full.bg-white(@click='sortBy(2)')
+                                icon.icon-md.text-main(name="mdi:tag-arrow-up-outline")
+                            ft-button-animate.w-full.bg-white(@click='sortBy(1)')
+                                icon.icon-md.text-main(name="mdi:tag-arrow-down-outline")
+                            ft-button-animate.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
+                              span.text-main.font-semibold.hidden(class='sm:block') Filtres
+                              icon.icon-lg(name="mdi:filter-outline")
                         div.flex-1.overflow-y-auto
                             //- div.flex.items-center.gap-4
                             //-     div.bg-white.rounded-full.px-2.grow.flex.items-center.gap-4.bg-contrast
@@ -47,7 +52,7 @@ TransitionRoot(appear='' :show='true' as='template')
                             //- div(v-if='query !== ""')
                             //-     ft-categories(:categoriesVM="categoriesVM")
                             ft-product-search-list(:products="filteredProducts" @close='close').px-4
-                            ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" @searchCategory="searchCategory" :facetsVM="searchVM.facets" :sortType="sortType")
+                            ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" @searchCategory="searchCategory" @searchPrice="searchPrice" :facetsVM="searchVM.facets" :sortType="sortType")
                             div.px-4(
                                 v-if='query === ""'
                                 @click="clicked").flex.flex-col.items-center.justify-center.gap-4.w-full
@@ -81,6 +86,7 @@ import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-resul
 import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM'
 import { getSearchCategoriesVM } from '@adapters/primary/viewModels/get-category/getSearchCategoryVM'
 import { SortType } from '@utils/sort'
+import { parsePrice } from '@utils/formater'
 const props = defineProps<{
   categoriesVM: any
 }>()
@@ -90,7 +96,6 @@ const emit = defineEmits<{
 }>()
 
 const close = () => {
-  console.log('ici ici')
   emit('close')
 }
 
@@ -110,22 +115,30 @@ const laboratoryFilter = ref<string | null>(null) // Variable pour le laboratoir
 
 const categoryFilter = ref<string | null>(null)
 
+const priceFilter = ref<string | null>(null)
+
 const displayProduct = ref<any | null>(null)
 
 const filteredProducts = computed(() => {
-  let res
+  let res = searchVM.value.items
+  console.log('test', res)
   // Filtrer les produits en fonction du laboratoire
   if (!laboratoryFilter.value) {
-    res = searchVM.value.items // Retourner tous les produits si aucun filtre
   }
   else {
       res = searchVM.value.items.filter(
       (product) => product.laboratory === laboratoryFilter.value
     )
   }
-  console.log('filter', categoryFilter.value)
-  if (!categoryFilter.value) {
-    return res // Retourner tous les produits si aucun filtre
+  // if (!categoryFilter.value) {
+  //   return res // Retourner tous les produits si aucun filtre
+  // }
+  if (!priceFilter.value) {}
+  else {
+    console.log('test2')
+    res = res.filter(
+      (product) => parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1]
+    );
   }
   // res = searchVM.value.items.filter(
   //   (product) => product.laboratory === laboratoryFilter.value
@@ -148,8 +161,11 @@ const searchLaboratory = (labo: string | null) => {
 }
 
 const searchCategory = (cat: string | null) => {
-  console.log('cat3', cat)
   categoryFilter.value = cat // Mettez à jour le filtre de laboratoire
+}
+
+const searchPrice = (price: any) => {
+  priceFilter.value = price // Mettez à jour le filtre de laboratoire
 }
 
 const query = ref('')
@@ -170,7 +186,7 @@ const searchChanged = (e: any) => {
 }
 
 const searchVM = computed(() => {
-  return getSearchResultVM()
+  return getSearchResultVM(sortType.value)
 })
 
 const closeCart = () => {
