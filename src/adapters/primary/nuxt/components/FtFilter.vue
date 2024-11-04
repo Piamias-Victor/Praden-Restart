@@ -13,7 +13,6 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
     h2.font-medium.text-gray-900 1 - Filtre de prix
     div.h-4
     div.px-4
-      //- VueSlider(v-model="rangeValues" :min="minMaxValues[0]" :max="minMaxValues[1]" :clickable="true" :dragOnClick="true" :dotSize="17" :height="7" tooltip="always" :tooltip-formatter="(value) => `${value / 100} €`" :tooltipStyle="{backgroundColor:'#e5017d'}" :lazy="true" :processStyle="{backgroundColor:'#e5017d'}" :dotStyle="{backgroundColor:'#e5017d'}" @change="searchPrice(rangeValues)")
       VueSlider(
         v-model="rangeValues" 
         :min="minMaxValues[0]" 
@@ -30,14 +29,13 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
         :dotStyle="{backgroundColor:'#e5017d'}"
         :interval="1"
         @change="(value) => searchPrice(value)")
-    div.h-4
-    ft-button.button-solid.w-full(@click='sortBy(2)')
-      icon.icon-md(name="mdi:tag-arrow-up-outline")
-      span Plus chèr au moins chère
-    div.h-4
-    ft-button.button-solid.w-full(@click='sortBy(1)')
-      icon.icon-md(name="mdi:tag-arrow-down-outline")
-      span Moins chèr au plus chère
+    //- ft-button.button-solid.w-full(@click='sortBy(2)')
+    //-   icon.icon-md(name="mdi:tag-arrow-up-outline")
+    //-   span Plus chèr au moins chère
+    //- div.h-4
+    //- ft-button.button-solid.w-full(@click='sortBy(1)')
+    //-   icon.icon-md(name="mdi:tag-arrow-down-outline")
+    //-   span Moins chèr au plus chère
     div.h-4
     h2.font-medium.text-gray-900 2 - Filtre marque
     div(v-if="props.facetsVM && props.facetsVM.laboratory")

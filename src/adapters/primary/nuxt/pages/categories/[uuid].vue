@@ -1,5 +1,6 @@
 <template lang="pug">
   ft-child-categories(:categoriesVM="categoriesVM")
+  //- pre {{categoryVM.products}}
   div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
     span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') {{categoryVM.name}}
     div.flex.items-center.gap-4
@@ -63,7 +64,6 @@ const searchLaboratory = (labo: string | null) => {
 
 const filteredProducts = computed(() => {
   let res = categoryVM.value.products
-  console.log('test', res)
   // Filtrer les produits en fonction du laboratoire
   if (!laboratoryFilter.value) {
   }
@@ -77,8 +77,10 @@ const filteredProducts = computed(() => {
   // }
   if (!priceFilter.value) {}
   else {
+    console.log('priceFilter.value', priceFilter.value)
+    console.log('product', res)
     res = res.filter(
-      (product) => product.priceWithTax >= priceFilter.value[0] && product.priceWithTax <= priceFilter.value[1]
+      (product) => parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1]
     );
   }
   // res = searchVM.value.items.filter(
@@ -86,6 +88,18 @@ const filteredProducts = computed(() => {
   // )
   return res
 })
+
+const parsePrice = (priceString) => {
+  // Enlever les espaces et le symbole de l'euro
+  const cleanedString = priceString.replace(/[^0-9,]/g, '').replace(',', '.');
+  
+  // Convertir la chaîne en nombre flottant
+  const priceNumber = parseFloat(cleanedString);
+  
+  // Convertir le prix en centimes (multiplication par 100 et arrondi)
+  return Math.round(priceNumber * 100);
+}
+
 
 onMounted(() => {
   listCategories(categoryGateway())

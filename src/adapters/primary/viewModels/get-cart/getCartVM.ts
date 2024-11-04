@@ -117,9 +117,9 @@ export const getFreeDelivery = (total: number): number => {
 export const createCartItemsVMFromCartItems = (
   items: HashTable<CartItem>
 ): HashTable<CartItemVM> => {
-  console.log('items', items)
   const formatter = priceFormatter('fr-FR', 'EUR')
   const itemsVM: HashTable<CartItemVM> = {}
+  console.log('items: ', items)
   Object.keys(items).forEach((key) => {
     const item = items[key]
     itemsVM[key] = {

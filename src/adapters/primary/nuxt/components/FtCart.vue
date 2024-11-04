@@ -9,6 +9,7 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
                 icon.icon-sm(name="ph:x-bold")
     div.mt-8
     ft-stepper(:step=1)
+    pre {{cart.items}}
     div.mt-8
         div.flow-root
             ul.-my-6.divide-y.divide-gray12.text-left

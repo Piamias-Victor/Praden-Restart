@@ -1,7 +1,8 @@
 <template lang="pug">
-  //- ft-child-categories(:categoriesVM="categoriesVM")
+  //- pre {{facetsVM.categories}}
+  ft-laboratory-categories(:categoriesVM="facetsVM.categories")
   div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
-    span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') Test
+    span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') Avene
     ft-button-animate.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
       span.text-main.font-semibold.hidden(class='sm:block') Filtres
       icon.icon-lg(name="mdi:filter-outline")

@@ -6,7 +6,7 @@ div.h-4
 ft-slider
 ft-product-list(:products="productsArray") La sélection du pharmacien
 div.h-4
-ft-product-list-promo(:products="promoArray") Promotion
+//- ft-product-list-promo(:products="promoArray") Promotion
 ft-test
 div.h-4
 section.px-2
@@ -14,7 +14,7 @@ section.px-2
       span.text-2xl.font-bold.text-center(class='lg:text-3xl') La sélection de marque
     ft-laboratory
     div.h-2
-    //- ft-laboratory-cat
+    ft-laboratory-cat
 div.h-4
 section.px-2
     div.flex.items-center.justify-center.py-2

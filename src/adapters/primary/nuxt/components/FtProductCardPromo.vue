@@ -2,7 +2,7 @@
 div.bg-white.rounded-xl.pt-2(class='w-[50vw] sm:w-[15vw] min-h-[320px] flex flex-col justify-between transform transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-xl'
       @mouseenter="isHovered = true" @mouseleave="isHovered = false")
   div.absolute.top-0.left-0.bg-main.text-white.text-xs.font-bold.p-2.rounded-tl-lg.rounded-full.z-10
-      span.text-xl {{ isHovered ? 'Survolé!' : product.promo }}
+      span.text-xl {{ isHovered ? 'Survolé!' : "- " + product.promotion.amount }}
   div.flex.flex-col.items-center.justify-center.gap-4.relative
       nuxt-link.h-full.flex.items-center(
       :href="product.href"
@@ -29,8 +29,8 @@ div.bg-white.rounded-xl.pt-2(class='w-[50vw] sm:w-[15vw] min-h-[320px] flex flex
   div.w-full.flex.flex-col.px-4.text-left.flex-grow
       span.w-full.text-xs.font-semibold.mb-1.line-clamp-2(class='min-h-[5vh] sm:min-h-[3vh]') {{ product.name }}
       div.flex.items-center.justify-between.gap-2
-        span(:class="product.pricePromo ? 'line-through' : 'font-bold text-main'") {{ product.price }}
-        span.font-bold.text-main(v-if="product.pricePromo") {{ product.pricePromo }}
+        span(:class="product.promotion.price ? 'line-through' : 'font-bold text-main'") {{ product.price }}
+        span.font-bold.text-main(v-if="product.promotion.price") {{ product.promotion.price }}
   ft-add-to-cart-button(:product-uuid="product.uuid" class='mt-auto')
 </template>
 
