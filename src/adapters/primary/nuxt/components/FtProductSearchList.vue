@@ -18,7 +18,6 @@ const emit = defineEmits<{
 }>()
 
 const close = () => {
-  console.log('testd e deal')
   emit('close')
 }
 

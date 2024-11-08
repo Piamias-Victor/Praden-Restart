@@ -72,11 +72,8 @@ const searchCategory = (cat: string | null) => {
 }
 
 const searchPrice = (price: any) => {
-  console.log('2')
-  console.log(price)
   emit('searchPrice', price)
 }
-
 
 function closeModal() {
   emit('close')

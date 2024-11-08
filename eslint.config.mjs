@@ -35,7 +35,6 @@ export default [
       prettier: pluginPrettier
     },
     rules: {
-      'no-console': 'warn',
       // 'no-unused-vars': ['warn', { args: 'none' }],
       // '@typescript-eslint/no-unused-vars': ['warn', { args: 'none' }],
       'prettier/prettier': ['error'] // Intégrer Prettier avec ESLint

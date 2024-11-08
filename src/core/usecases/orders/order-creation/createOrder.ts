@@ -39,9 +39,6 @@ export const createOrder = async (
   windowGateway: WindowGateway,
   emailGateway: EmailGateway
 ) => {
-  console.log('deliveryAddress', deliveryAddress)
-  console.log('email', email)
-  console.log('phone', phone)
   const { items } = getProductsInCart()
   const lines: Array<CreateOrderLineDTO> = await Promise.all(
     Object.keys(items).map(async (key) => {
@@ -72,10 +69,8 @@ export const createOrder = async (
       return res
     })
   )
-  console.log('lines create', lines)
   const deliveryStore = useDeliveryStore()
   const deliveryMethod = deliveryStore.getByUuid(deliveryMethodUuid)
-  console.log('deliveryMethod', deliveryMethod)
   const orderDTO: CreateOrderDTO = {
     contact: {
       email,
@@ -129,13 +124,10 @@ export const createOrder = async (
     }
 
     const result = await response.json()
-    console.log('result:', result)
-    console.log('Order sent successfully:', result)
   } catch (error) {
     console.error('Error sending order:', error)
   }
 
-  console.log('orderDTO', orderDTO)
   const order = await orderGateway.create(orderDTO)
   const orderStore = useOrderStore()
   orderStore.add(order)
@@ -148,8 +140,6 @@ export const createOrder = async (
     orderLines: order.lines,
     deliveryMethod: order.delivery.method
   }
-  console.log('je suis la ??')
-  console.log('sendOrderConfirmationDTO', sendOrderConfirmationDTO)
   await emailGateway.sendOrderConfirmation(sendOrderConfirmationDTO)
 }
 

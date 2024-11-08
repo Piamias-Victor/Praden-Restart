@@ -49,7 +49,6 @@ export class RealEmailGateway implements EmailGateway {
   async sendOrderConfirmation(
     confirmationDTO: SendOrderConfirmationDTO
   ): Promise<void> {
-    console.log('dans le sendOrderConfirmation')
     const shippingAddress = this.getShippingAddress(
       confirmationDTO.shippingAddress,
       confirmationDTO.contact
@@ -82,8 +81,6 @@ export class RealEmailGateway implements EmailGateway {
       'Content-Type': 'application/json'
     }
 
-    console.log('voilà le body', body)
-
     try {
       const response = await fetch(
         // 'https://worker-message.gmevelec.workers.dev/sendEmail/',
@@ -102,7 +99,6 @@ export class RealEmailGateway implements EmailGateway {
       }
 
       const result = await response.json()
-      console.log('Email sent successfully:', result)
     } catch (error) {
       console.error('Error sending email:', error)
     }

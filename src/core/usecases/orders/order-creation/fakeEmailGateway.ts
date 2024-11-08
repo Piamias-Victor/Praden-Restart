@@ -9,7 +9,6 @@ export class FakeEmailGateway implements EmailGateway {
   }
 
   sendOrderConfirmation(sendOrderConfirmationDTO: SendOrderConfirmationDTO) {
-    console.log('dans sendOrderConfirmation')
     this.emails.push(sendOrderConfirmationDTO)
   }
 }

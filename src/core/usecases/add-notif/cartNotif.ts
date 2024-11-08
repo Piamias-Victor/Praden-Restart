@@ -21,8 +21,6 @@ export class SuccessNotification extends Notification {
 export const sendNotifCart = async () => {
   const notificationsStore = useNotificationsStore()
 
-  console.log('test la')
-
   try {
     notificationsStore.add(
       new SuccessNotification('Produit ajouté au panier avec succès')
@@ -34,8 +32,6 @@ export const sendNotifCart = async () => {
 
 export const sendNotifLike = async () => {
   const notificationsStore = useNotificationsStore()
-
-  console.log('test la')
 
   try {
     notificationsStore.add(

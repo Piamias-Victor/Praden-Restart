@@ -7,7 +7,7 @@ export const useProductStore = defineStore('ProductStore', {
     return {
       items: [] as Array<Product>,
       bestSales: [] as Array<UUID>,
-      promotions: [] as Array<UUID>,
+      promotions: [] as Array<Product>,
       current: undefined as ProductDetail | undefined
     }
   },
@@ -29,7 +29,7 @@ export const useProductStore = defineStore('ProductStore', {
     listBestSales(bestSales: Array<UUID>) {
       this.bestSales = bestSales
     },
-    listPromotions(promotions: Array<UUID>) {
+    listPromotions(promotions: Array<Product>) {
       this.promotions = promotions
     },
     setCurrent(product: ProductDetail) {

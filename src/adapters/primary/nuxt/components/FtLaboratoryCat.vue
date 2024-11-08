@@ -1,5 +1,5 @@
 <template lang="pug">
-div.py-4.flex.items-center.gap-4.overflow-x-scroll.custom-scrollbar
+div.py-4.flex.items-center.gap-4.overflow-x-scroll.custom-scrollbar.hidden(class='sm:flex')
     div.bg-white.rounded-xl(class='w-[250px] h-[250px] flex flex-col justify-between transform transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-xl')
         div.relative.w-full(class='h-full overflow-hidden')
             img.rounded-t-xl.absolute.inset-0.object-cover.object-top(src="https://www.je-suis-papa.com/wp-content/uploads/2024/01/Sommeil-bebe-et-enfant-guide-achat-.webp")

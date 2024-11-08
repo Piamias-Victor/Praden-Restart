@@ -121,24 +121,23 @@ const displayProduct = ref<any | null>(null)
 
 const filteredProducts = computed(() => {
   let res = searchVM.value.items
-  console.log('test', res)
   // Filtrer les produits en fonction du laboratoire
   if (!laboratoryFilter.value) {
-  }
-  else {
-      res = searchVM.value.items.filter(
+  } else {
+    res = searchVM.value.items.filter(
       (product) => product.laboratory === laboratoryFilter.value
     )
   }
   // if (!categoryFilter.value) {
   //   return res // Retourner tous les produits si aucun filtre
   // }
-  if (!priceFilter.value) {}
-  else {
-    console.log('test2')
+  if (!priceFilter.value) {
+  } else {
     res = res.filter(
-      (product) => parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1]
-    );
+      (product) =>
+        parsePrice(product.price) >= priceFilter.value[0] &&
+        parsePrice(product.price) <= priceFilter.value[1]
+    )
   }
   // res = searchVM.value.items.filter(
   //   (product) => product.laboratory === laboratoryFilter.value

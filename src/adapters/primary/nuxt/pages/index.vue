@@ -6,7 +6,7 @@ div.h-4
 ft-slider
 ft-product-list(:products="productsArray") La sélection du pharmacien
 div.h-4
-//- ft-product-list-promo(:products="promoArray") Promotion
+ft-product-list-promo(:products="productInPromotion.products") Promotion
 ft-test
 div.h-4
 section.px-2
@@ -99,18 +99,26 @@ ft-navigation
 import { listDeliveryMethods } from '@core/usecases/delivery-methods-listing/listDeliveryMethods'
 import deliveryGateway from '../../../../../gateways/deliveryGateway'
 import { categoryGateway } from '../../../../../gateways/categoryGateway'
+import { useProductGateway } from '../../../../../gateways/productGateway'
 import { listCategories } from '@core/usecases/list-categories/listCategories'
 import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM'
+import { listPromotions } from '@core/usecases/list-promotions/listPromotions'
+import { getProductInPromotionVM } from '@adapters/primary/viewModels/get-product/getProductVM'
 
 definePageMeta({ layout: 'main' })
 
 onMounted(() => {
   listDeliveryMethods(deliveryGateway)
   listCategories(categoryGateway())
+  listPromotions(useProductGateway())
 })
 
 const categoriesVM = computed(() => {
   return getRootCategoriesVM()
+})
+
+const productInPromotion = computed(() => {
+  return getProductInPromotionVM()
 })
 
 const productTest1 = {

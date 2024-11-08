@@ -88,7 +88,9 @@ export const getPromotionVM = (
         type: promotion.type,
         amount: percentFormatter(promotion.amount),
         price: formatter.format(
-          (product.priceWithTax - (product.priceWithTax * promotion.amount) / 100) / 100
+          (product.priceWithTax -
+            (product.priceWithTax * promotion.amount) / 100) /
+            100
         )
       }
     }
@@ -122,7 +124,7 @@ export const getCategoryVM = (sortType: SortType = SortType.None) => {
     name: category?.name || '',
     childCategories: getChildCategoriesVM(category?.uuid),
     // products: products,
-    products : products.map((p) => {
+    products: products.map((p) => {
       const promotion = getPromotionVM(p)
       const res = {
         uuid: p.uuid,
@@ -154,7 +156,6 @@ export const getCategory = async (
     categoryStore.add(category)
   }
   const productsWithFacets = await searchGateway.getCategory(uuid)
-  console.log('productsWithFacets', productsWithFacets)
   const searchStore = useSearchStore()
   if (productsWithFacets) {
     searchStore.setCurrentCategory(uuid)

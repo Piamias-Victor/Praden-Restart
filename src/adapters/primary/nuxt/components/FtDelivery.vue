@@ -120,8 +120,6 @@ const user = computed(() => {
 })
 
 const validateOrder = () => {
-  console.log('on demare')
-  console.log(user.value)
   createOrder(
     user.value.mail,
     user.value.phone,

@@ -3,9 +3,14 @@
   ft-laboratory-categories(:categoriesVM="facetsVM.categories")
   div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
     span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') Avene
-    ft-button-animate.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
-      span.text-main.font-semibold.hidden(class='sm:block') Filtres
-      icon.icon-lg(name="mdi:filter-outline")
+    div.flex.items-center.gap-4
+      ft-button-animate.w-full.bg-white(@click='sortBy(2)')
+          icon.icon-md.text-main(name="mdi:tag-arrow-up-outline")
+      ft-button-animate.w-full.bg-white(@click='sortBy(1)')
+          icon.icon-md.text-main(name="mdi:tag-arrow-down-outline")
+      ft-button-animate.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
+        span.text-main.font-semibold.hidden(class='sm:block') Filtres
+        icon.icon-lg(name="mdi:filter-outline")
   ft-navigation
   ft-product-search-list(:products="filteredProducts" @close='close').px-4
   ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" :facetsVM="facetsVM" :sortType="sortType")
@@ -53,9 +58,8 @@ const filteredProducts = computed(() => {
   // Filtrer les produits en fonction du laboratoire
   if (!laboratoryFilter.value) {
     res = searchVM.value.items // Retourner tous les produits si aucun filtre
-  }
-  else {
-      res = searchVM.value.items.filter(
+  } else {
+    res = searchVM.value.items.filter(
       (product) => product.laboratory === laboratoryFilter.value
     )
   }
@@ -68,8 +72,7 @@ const filteredProducts = computed(() => {
   return res
 })
 
-onMounted(() => {
-})
+onMounted(() => {})
 
 const searchVM = computed(() => {
   return getSearchResultVM()

@@ -67,6 +67,7 @@ import {
 import { sendNotifLike } from '@core/usecases/add-notif/cartNotif'
 import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification'
 import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm'
+import { getCategoryVM } from '@adapters/primary/viewModels/get-category/getCategoryVM'
 
 definePageMeta({ layout: 'main' })
 
@@ -259,6 +260,10 @@ watchEffect(async () => {
   likeQuantity.value = await getLikeQuantityVM(useProductGateway())
 })
 
+const categoryVM = computed(() => {
+  return getCategoryVM()
+})
+
 const searchVM = computed(() => {
   let res = getSearchResultVMFirstSix(route.params.uuid as string)
   if (res.items && res.items.length > 0) {
@@ -286,7 +291,6 @@ watchEffect(async () => {
   if (laboratory) {
     try {
       const laboratoryName = laboratory.toLowerCase()
-      console.log('laboratoryName', laboratoryName)
       const result = await searchProduct(laboratoryName, searchGateway())
       // Mettre à jour ici searchVM ou un autre état si nécessaire
     } catch (error) {}

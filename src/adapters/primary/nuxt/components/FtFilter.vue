@@ -60,7 +60,7 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
 </template>
 
 <script lang="ts" setup>
-import VueSlider from "vue-3-slider-component";
+import VueSlider from 'vue-3-slider-component'
 import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
 import {
   TransitionRoot,
@@ -84,24 +84,30 @@ const router = useRouter()
 const cartQuantity = ref<CartQuantityVM | null>(null)
 
 const rangeValues = ref(
-  props.facetsVM && 
-  props.facetsVM.price && 
-  props.facetsVM.price.values &&
-  props.facetsVM.price.values[0] && 
-  props.facetsVM.price.values[1]
-    ? [props.facetsVM.price.values[0].count, props.facetsVM.price.values[1].count]
+  props.facetsVM &&
+    props.facetsVM.price &&
+    props.facetsVM.price.values &&
+    props.facetsVM.price.values[0] &&
+    props.facetsVM.price.values[1]
+    ? [
+        props.facetsVM.price.values[0].count,
+        props.facetsVM.price.values[1].count
+      ]
     : [0, 100]
-);
+)
 
 const minMaxValues = ref(
-  props.facetsVM && 
-  props.facetsVM.price && 
-  props.facetsVM.price.values &&
-  props.facetsVM.price.values[0] && 
-  props.facetsVM.price.values[1]
-    ? [props.facetsVM.price.values[0].count, props.facetsVM.price.values[1].count]
+  props.facetsVM &&
+    props.facetsVM.price &&
+    props.facetsVM.price.values &&
+    props.facetsVM.price.values[0] &&
+    props.facetsVM.price.values[1]
+    ? [
+        props.facetsVM.price.values[0].count,
+        props.facetsVM.price.values[1].count
+      ]
     : [0, 100]
-);
+)
 
 // Initialisation dynamique des valeurs de rangeValues lorsque facetsVM est prêt
 watchEffect(() => {
@@ -112,10 +118,9 @@ watchEffect(() => {
     rangeValues.value = [
       props.facetsVM.price.values[0].count,
       props.facetsVM.price.values[1].count
-    ];
+    ]
   }
-});
-
+})
 
 const cart = computed(() => {
   return getCartVM()

@@ -3,6 +3,9 @@ import { UUID } from '@core/types/type'
 import { useProductStore } from '@store/productStore'
 import { useSearchStore } from '@store/searchStore'
 import { priceFormatter } from '@utils/formater'
+import { getPromotionVM } from '../get-category/getCategoryVM'
+import { ProductGateway } from '@core/gateways/productGateway'
+import { getProduct } from '@core/usecases/get-product/getProduct'
 
 export interface Image {
   src: string
@@ -61,6 +64,29 @@ export const getProductVM = (): ProductDetailVM => {
     details
   }
   return res
+}
+
+export const getProductInPromotionVM = () => {
+  const productStore = useProductStore()
+  const productInPromotion = productStore.promotions
+  const formatter = priceFormatter('fr-FR', 'EUR')
+  return {
+    products: productInPromotion.slice(0, 20).map((p) => {
+      const promotion = getPromotionVM(p)
+      const res = {
+        uuid: p.uuid,
+        name: p.name,
+        laboratory: p.laboratory,
+        images: p.images,
+        price: formatter.format(p.priceWithTax / 100),
+        href: `/products/${p.uuid}`
+      }
+      if (promotion) {
+        res.promotion = promotion
+      }
+      return res
+    })
+  }
 }
 
 export const getSearchProductVM = () => {

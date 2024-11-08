@@ -1,6 +1,5 @@
 <template lang="pug">
   ft-child-categories(:categoriesVM="categoriesVM")
-  //- pre {{categoryVM.products}}
   div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
     span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') {{categoryVM.name}}
     div.flex.items-center.gap-4
@@ -12,7 +11,13 @@
         span.text-main.font-semibold.hidden(class='sm:block') Filtres
         icon.icon-lg(name="mdi:filter-outline")
   ft-navigation
+  span.text-sm.text-contrast Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and...
+  span.text-sm.text-main.cursor-pointer.underline Voir Plus
   ft-product-cat-list(:products="filteredProducts")
+  div.px-2.mt-2.w-full.flex.items-center.flex-col.justify-center.gap-2
+    span.text-center.text-main.text-xl.font-semibold Description
+    span.text-sm.text-contrast Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and...
+    span.text-sm.text-main.cursor-pointer.underline Voir Plus
   ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory"  @searchPrice="searchPrice" :facetsVM="facetsVM" :sortType="sortType")
 </template>
 
@@ -44,7 +49,6 @@ const displayProduct = ref<any | null>(null)
 const laboratoryFilter = ref<string | null>(null) // Variable pour le laboratoire filtré
 
 const searchPrice = (price: any) => {
-  console.log('test de search price')
   priceFilter.value = price // Mettez à jour le filtre de laboratoire
 }
 
@@ -66,22 +70,21 @@ const filteredProducts = computed(() => {
   let res = categoryVM.value.products
   // Filtrer les produits en fonction du laboratoire
   if (!laboratoryFilter.value) {
-  }
-  else {
-      res = categoryVM.value.products.filter(
+  } else {
+    res = categoryVM.value.products.filter(
       (product) => product.laboratory === laboratoryFilter.value
     )
   }
   // if (!categoryFilter.value) {
   //   return res // Retourner tous les produits si aucun filtre
   // }
-  if (!priceFilter.value) {}
-  else {
-    console.log('priceFilter.value', priceFilter.value)
-    console.log('product', res)
+  if (!priceFilter.value) {
+  } else {
     res = res.filter(
-      (product) => parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1]
-    );
+      (product) =>
+        parsePrice(product.price) >= priceFilter.value[0] &&
+        parsePrice(product.price) <= priceFilter.value[1]
+    )
   }
   // res = searchVM.value.items.filter(
   //   (product) => product.laboratory === laboratoryFilter.value
@@ -91,15 +94,14 @@ const filteredProducts = computed(() => {
 
 const parsePrice = (priceString) => {
   // Enlever les espaces et le symbole de l'euro
-  const cleanedString = priceString.replace(/[^0-9,]/g, '').replace(',', '.');
-  
-  // Convertir la chaîne en nombre flottant
-  const priceNumber = parseFloat(cleanedString);
-  
-  // Convertir le prix en centimes (multiplication par 100 et arrondi)
-  return Math.round(priceNumber * 100);
-}
+  const cleanedString = priceString.replace(/[^0-9,]/g, '').replace(',', '.')
 
+  // Convertir la chaîne en nombre flottant
+  const priceNumber = parseFloat(cleanedString)
+
+  // Convertir le prix en centimes (multiplication par 100 et arrondi)
+  return Math.round(priceNumber * 100)
+}
 
 onMounted(() => {
   listCategories(categoryGateway())

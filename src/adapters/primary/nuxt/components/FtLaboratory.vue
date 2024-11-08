@@ -24,12 +24,12 @@
 </template>
 
 <script lang="ts" setup>
-import { searchProduct } from '@core/usecases/search-product/searchProduct';
-import { searchGateway } from '../../../../../gateways/searchGateway';
+import { searchProduct } from '@core/usecases/search-product/searchProduct'
+import { searchGateway } from '../../../../../gateways/searchGateway'
 import { Vue3Marquee } from 'vue3-marquee'
 const router = useRouter()
 
-const goToLabo = (async (laboratory: string) => {
+const goToLabo = async (laboratory: string) => {
   if (laboratory) {
     try {
       const result = await searchProduct(laboratory, searchGateway())
@@ -38,5 +38,5 @@ const goToLabo = (async (laboratory: string) => {
   } else {
   }
   router.push('/laboratory')
-})
+}
 </script>
