@@ -11,13 +11,14 @@
         span.text-main.font-semibold.hidden(class='sm:block') Filtres
         icon.icon-lg(name="mdi:filter-outline")
   ft-navigation
-  span.text-sm.text-contrast Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and...
-  span.text-sm.text-main.cursor-pointer.underline Voir Plus
+  div.h-2
+  div.px-2.flex.flex-col.gap-2
+    span.text-sm.text-contrast Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and when an u...
+    span.text-sm.text-main.cursor-pointer.underline.text-center(@click="scrollToDescription") Voir Plus
   ft-product-cat-list(:products="filteredProducts")
-  div.px-2.mt-2.w-full.flex.items-center.flex-col.justify-center.gap-2
+  div.px-2.mt-2.w-full.flex.items-center.flex-col.justify-center.gap-2(ref='description')
     span.text-center.text-main.text-xl.font-semibold Description
-    span.text-sm.text-contrast Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and...
-    span.text-sm.text-main.cursor-pointer.underline Voir Plus
+    span.text-sm.text-contrast {{text}}
   ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory"  @searchPrice="searchPrice" :facetsVM="facetsVM" :sortType="sortType")
 </template>
 
@@ -36,6 +37,16 @@ import { getChildCategoriesVM } from '@adapters/primary/viewModels/get-category/
 import { parsePrice } from '@utils/formater'
 
 definePageMeta({ layout: 'main' })
+
+const description = ref(null);
+
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar velit sit amet imperdiet viverra. Nullam ullamcorper, urna et egestas ultricies, est dolor porta felis, non placerat metus nulla eu libero. Donec felis velit, tincidunt vitae euismod sed, consequat in arcu. Aenean tincidunt auctor sem, ut porta nisl facilisis in. Nunc ut commodo dolor. Vivamus a laoreet nunc, vitae gravida enim. Praesent hendrerit lobortis porttitor. Fusce augue metus, efficitur in gravida in, tempor gravida augue. Nam vel odio in augue gravida cursus vel sit amet orci. Etiam a tellus accumsan, finibus tellus et, efficitur eros. Donec blandit at leo ut auctor. Vivamus odio quam, vestibulum sit amet sem a, finibus imperdiet arcu. Nulla pharetra nulla porttitor metus maximus, in vulputate risus lacinia. Vestibulum eu massa condimentum, consectetur ex at, pretium odio. Quisque at dui bibendum, consequat magna in, tempus massa. Donec gravida arcu quis lacinia tristique. Morbi sit amet porta velit. Praesent quis nisl vulputate diam auctor rutrum. Mauris est eros, hendrerit sit amet mi non, consectetur tristique ante. Sed facilisis mauris elit, eu iaculis justo semper vel. Praesent eu aliquet massa, vitae mattis nisi. Donec rhoncus metus sagittis metus venenatis, at egestas nulla dignissim. Duis convallis sem vel purus ornare, id sodales enim viverra. Nam ornare tortor id luctus interdum. Proin pharetra dictum turpis sed cursus. Morbi pretium dolor ex, eget aliquet sapien vulputate at. Aenean vitae rhoncus dui. Pellentesque tincidunt arcu nec orci feugiat laoreet. Proin gravida eros mi. Mauris a est nisl. Morbi maximus ligula et libero pellentesque elementum. In vitae iaculis risus, in gravida dolor. Proin efficitur scelerisque suscipit. Aliquam pharetra magna eu metus dignissim, at dapibus sem efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non nisl eu ante convallis sollicitudin sit amet at magna. Nulla hendrerit enim vel quam finibus, ac rhoncus turpis rutrum. Sed finibus commodo tellus rhoncus accumsan.'
+
+function scrollToDescription() {
+  if (description.value) {
+    description.value.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
 const route = useRoute()
 const categoryUuid = route.params.uuid
