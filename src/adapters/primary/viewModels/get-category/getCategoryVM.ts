@@ -81,14 +81,16 @@ export const getPromotionVM = (
       res = {
         type: promotion.type,
         amount: formatter.format(promotion.amount / 100),
-        price: formatter.format((product.price - promotion.amount) / 100)
+        price: formatter.format((product.priceWithTax - promotion.amount) / 100)
       }
     } else {
       res = {
         type: promotion.type,
         amount: percentFormatter(promotion.amount),
         price: formatter.format(
-          (product.price - (product.price * promotion.amount) / 100) / 100
+          (product.priceWithTax -
+            (product.priceWithTax * promotion.amount) / 100) /
+            100
         )
       }
     }
@@ -118,11 +120,25 @@ export const getCategoryVM = (sortType: SortType = SortType.None) => {
   ]
   const products = searchStore.products
   products.sort(sortByPrice(sortType))
-
   return {
     name: category?.name || '',
     childCategories: getChildCategoriesVM(category?.uuid),
-    products: products,
+    // products: products,
+    products: products.map((p) => {
+      const promotion = getPromotionVM(p)
+      const res = {
+        uuid: p.uuid,
+        name: p.name,
+        laboratory: p.laboratory,
+        images: p.images,
+        price: formatter.format(p.priceWithTax / 100),
+        href: `/products/${p.uuid}`
+      }
+      if (promotion) {
+        res.promotion = promotion
+      }
+      return res
+    }),
     sortOptions: categoryUuid ? sortOptions : []
   }
 }

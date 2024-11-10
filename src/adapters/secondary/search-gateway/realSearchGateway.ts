@@ -43,4 +43,11 @@ export class RealSearchGateway extends RealGateway implements SearchGateway {
     })
     return Promise.resolve(res.data.items)
   }
+
+  async searchFacet(query: string): Promise<Array<Product>> {
+    const res = await axios.get(`${this.baseUrl}/search/products`, {
+      params: { query }
+    })
+    return Promise.resolve(res.data.facets)
+  }
 }

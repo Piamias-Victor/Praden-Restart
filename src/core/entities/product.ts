@@ -41,7 +41,7 @@ export interface ProductDetail extends Product {
 export const getProductPriceWithPromotion = (
   product: Product
 ): number | undefined => {
-  const promotion = product.promotion
+  const promotion = product.promotions[0]
   if (!promotion) return undefined
   if (promotion.type === ReductionType.Fixed) {
     return product.price - promotion.amount

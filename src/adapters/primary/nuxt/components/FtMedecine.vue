@@ -110,15 +110,12 @@ const close = () => {
 }
 
 const validMedecine = () => {
-  console.log('validMedecine')
   emit('move-stepper')
   emit('valid-medecine')
 }
 
 const validateCart = () => {
-  console.log('entree')
   if (notice) validMedecine()
-  console.log('close')
   emit('close')
 }
 

@@ -5,4 +5,5 @@ export interface SearchGateway {
   getCategory(categoryUuid: UUID): Promise<ProductsWithFacets>
   search(categoryUuid: UUID, filters: Partial<Filters>): Promise<Array<Product>>
   searchProduct(query: string): Promise<Array<Product>>
+  searchFacet(query: string): any
 }

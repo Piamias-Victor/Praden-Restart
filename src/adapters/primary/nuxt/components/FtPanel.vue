@@ -70,15 +70,4 @@ function closeModal() {
 watchEffect(async () => {
   cartQuantity.value = await getCartQuantityVM(useProductGateway())
 })
-
-// watchEffect(async () => {
-//   console.log('je suis dans le watch')
-//   console.log(cartQuantity && cartQuantity.value && cartQuantity.value.medecine && cartQuantity.value.medecine > 0)
-//   if (cartQuantity && cartQuantity.value && cartQuantity.value.medecine && cartQuantity.value.medecine > 0) {
-//     medecineOpened.value = true
-//   }
-//   else
-//     medecineOpened.value = false
-//   console.log('medecineOpened.value', medecineOpened.value)
-// })
 </script>

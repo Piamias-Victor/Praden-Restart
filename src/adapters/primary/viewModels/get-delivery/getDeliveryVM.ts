@@ -48,7 +48,7 @@ export const getDeliveryVM = (): CheckoutDeliveryVM => {
         type: method.type,
         price:
           method.price === 0 ||
-          (cart.total > 6900 && method.uuid === 'relais-uuid')
+          (cart.totalWithPromotion > 6900 && method.uuid === '505209a2-7acb-4891-b933-e084d786d7ea ')
             ? 'Gratuit'
             : formatter.format(method.price / 100)
       }

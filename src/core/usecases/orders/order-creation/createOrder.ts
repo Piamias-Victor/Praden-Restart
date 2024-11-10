@@ -39,14 +39,13 @@ export const createOrder = async (
   windowGateway: WindowGateway,
   emailGateway: EmailGateway
 ) => {
-  console.log('deliveryAddress', deliveryAddress)
-  console.log('email', email)
-  console.log('phone', phone)
   const { items } = getProductsInCart()
+  console.log('items', items)
   const lines: Array<CreateOrderLineDTO> = await Promise.all(
     Object.keys(items).map(async (key) => {
       const item = items[key]
       const product = await productGateway.getByUuid(item.uuid)
+      console.log('product', product)
       const res: CreateOrderLineDTO = {
         productUuid: product.uuid,
         name: item.name,
@@ -55,12 +54,13 @@ export const createOrder = async (
         description: product.description,
         img: product.images
       }
-      if (product.promotion) {
-        res.promotion = product.promotion
+      if (product.promotions) {
+        res.promotion = product.promotions[0]
       }
       return res
     })
   )
+  console.log('lines', lines)
   const orderLines = await Promise.all(
     Object.keys(items).map(async (key) => {
       const item = items[key]
@@ -72,10 +72,8 @@ export const createOrder = async (
       return res
     })
   )
-  console.log('lines create', lines)
   const deliveryStore = useDeliveryStore()
   const deliveryMethod = deliveryStore.getByUuid(deliveryMethodUuid)
-  console.log('deliveryMethod', deliveryMethod)
   const orderDTO: CreateOrderDTO = {
     contact: {
       email,
@@ -129,14 +127,12 @@ export const createOrder = async (
     }
 
     const result = await response.json()
-    console.log('result:', result)
-    console.log('Order sent successfully:', result)
   } catch (error) {
     console.error('Error sending order:', error)
   }
 
-  console.log('orderDTO', orderDTO)
   const order = await orderGateway.create(orderDTO)
+  console.log('order', order)
   const orderStore = useOrderStore()
   orderStore.add(order)
   clearCart()
@@ -148,8 +144,6 @@ export const createOrder = async (
     orderLines: order.lines,
     deliveryMethod: order.delivery.method
   }
-  console.log('je suis la ??')
-  console.log('sendOrderConfirmationDTO', sendOrderConfirmationDTO)
   await emailGateway.sendOrderConfirmation(sendOrderConfirmationDTO)
 }
 

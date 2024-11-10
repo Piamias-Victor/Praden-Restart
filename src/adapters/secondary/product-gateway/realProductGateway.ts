@@ -35,7 +35,9 @@ export class RealProductGateway implements ProductGateway {
   }
 
   async listPromotions(): Promise<Array<UUID>> {
-    const res = await axios.get(`${this.baseUrl}/best-sales/`)
+    const res = await axios.get(
+      `${this.baseUrl}/search/products?isInPromotion=true`
+    )
     return Promise.resolve(JSON.parse(JSON.stringify(res.data.items)))
   }
 }

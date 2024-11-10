@@ -7,7 +7,7 @@ TransitionRoot(appear='' :show='true' as='template')
             div.flex.min-h-full.items-center.justify-center.text-center.fixed.inset-y-0.right-0.flex.max-w-full.w-screen.max-w-md(class="md:pl-10")
                 TransitionChild(as='template' class="w-full")
                     DialogPanel.flex.h-full.flex-col.overflow-y-scroll.bg-background.shadow-xl.animate-slideright
-                      ft-filter(:facetsVM="facetsVM" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" :sortType="sortType")  
+                      ft-filter(:facetsVM="facetsVM" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" @searchCategory="searchCategory" @searchPrice="searchPrice" :sortType="sortType")  
 </template>
 
 <script lang="ts" setup>
@@ -48,6 +48,8 @@ const emit = defineEmits<{
   (e: 'close'): void
   (e: 'sortBy', st: number): void
   (e: 'searchLaboratory', labo: string | null): void
+  (e: 'searchCategory', cat: string | null): void
+  (e: 'searchPrice', price: any): void
   (e: 'move-stepper'): void
 }>()
 
@@ -61,6 +63,16 @@ const sortBy = (st: number) => {
 
 const searchLaboratory = (labo: string | null) => {
   emit('searchLaboratory', labo)
+  close()
+}
+
+const searchCategory = (cat: string | null) => {
+  emit('searchCategory', cat)
+  close()
+}
+
+const searchPrice = (price: any) => {
+  emit('searchPrice', price)
 }
 
 function closeModal() {

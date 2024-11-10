@@ -57,10 +57,8 @@ export const getProductsInCart = (): ProductsInCart => {
   const productsInCart = cartItems.map((uuid: UUID) =>
     products.find((product: Product) => uuid === product.uuid)
   )
-  console.log('productsInCart', productsInCart)
   return productsInCart.reduce(
     (acc: ProductsInCart, p: Product) => {
-      console.log('p', p)
       let quantity = 1
       let total = acc.total
       let totalWithPromotion = acc.totalWithPromotion
@@ -82,7 +80,8 @@ export const getProductsInCart = (): ProductsInCart => {
             totalPriceWithPromotion: priceWithPromotion! * quantity,
             quantity,
             img: p.images,
-            medecine: p.isMedicine
+            medecine: p.isMedicine,
+            promotion: p.promotions[0]
           }
         },
         total,
@@ -117,7 +116,6 @@ export const getFreeDelivery = (total: number): number => {
 export const createCartItemsVMFromCartItems = (
   items: HashTable<CartItem>
 ): HashTable<CartItemVM> => {
-  console.log('items', items)
   const formatter = priceFormatter('fr-FR', 'EUR')
   const itemsVM: HashTable<CartItemVM> = {}
   Object.keys(items).forEach((key) => {

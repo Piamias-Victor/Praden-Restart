@@ -1,7 +1,8 @@
 <template lang="pug">
-  ft-child-categories(:categoriesVM="categoriesVM")
+  //- pre {{facetsVM.categories}}
+  ft-laboratory-categories(:categoriesVM="facetsVM.categories")
   div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
-    span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') {{categoryVM.name}}
+    span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') Avene
     div.flex.items-center.gap-4
       ft-button-animate.w-full.bg-white(@click='sortBy(2)')
           icon.icon-md.text-main(name="mdi:tag-arrow-up-outline")
@@ -11,14 +12,8 @@
         span.text-main.font-semibold.hidden(class='sm:block') Filtres
         icon.icon-lg(name="mdi:filter-outline")
   ft-navigation
-  span.text-sm.text-contrast Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and...
-  span.text-sm.text-main.cursor-pointer.underline Voir Plus
-  ft-product-cat-list(:products="filteredProducts")
-  div.px-2.mt-2.w-full.flex.items-center.flex-col.justify-center.gap-2
-    span.text-center.text-main.text-xl.font-semibold Description
-    span.text-sm.text-contrast Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and...
-    span.text-sm.text-main.cursor-pointer.underline Voir Plus
-  ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory"  @searchPrice="searchPrice" :facetsVM="facetsVM" :sortType="sortType")
+  ft-product-search-list(:products="filteredProducts" @close='close').px-4
+  ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" :facetsVM="facetsVM" :sortType="sortType")
 </template>
 
 <script lang="ts" setup>
@@ -33,24 +28,16 @@ import { onMounted, ref, computed, watchEffect } from 'vue'
 import { getFacetsVM } from '@adapters/primary/viewModels/get-facets/getFacetsVM'
 import { listCategories } from '@core/usecases/list-categories/listCategories'
 import { getChildCategoriesVM } from '@adapters/primary/viewModels/get-category/getChildCategoryVM'
-import { parsePrice } from '@utils/formater'
+import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM'
 
 definePageMeta({ layout: 'main' })
 
 const route = useRoute()
 const categoryUuid = route.params.uuid
-const priceFilter = ref<string | null>(null)
-const Name = computed(() => {
-  return route.fullPath.split('?')[1] || '' // Récupère la chaîne après le "?"
-})
 
 const sortType = ref(SortType.None)
 const displayProduct = ref<any | null>(null)
 const laboratoryFilter = ref<string | null>(null) // Variable pour le laboratoire filtré
-
-const searchPrice = (price: any) => {
-  priceFilter.value = price // Mettez à jour le filtre de laboratoire
-}
 
 const sortBy = (st: number) => {
   if (sortType && typeof sortType.value !== 'undefined') {
@@ -67,53 +54,28 @@ const searchLaboratory = (labo: string | null) => {
 }
 
 const filteredProducts = computed(() => {
-  let res = categoryVM.value.products
+  let res
   // Filtrer les produits en fonction du laboratoire
   if (!laboratoryFilter.value) {
+    res = searchVM.value.items // Retourner tous les produits si aucun filtre
   } else {
-    res = categoryVM.value.products.filter(
+    res = searchVM.value.items.filter(
       (product) => product.laboratory === laboratoryFilter.value
     )
   }
   // if (!categoryFilter.value) {
   //   return res // Retourner tous les produits si aucun filtre
   // }
-  if (!priceFilter.value) {
-  } else {
-    res = res.filter(
-      (product) =>
-        parsePrice(product.price) >= priceFilter.value[0] &&
-        parsePrice(product.price) <= priceFilter.value[1]
-    )
-  }
   // res = searchVM.value.items.filter(
   //   (product) => product.laboratory === laboratoryFilter.value
   // )
   return res
 })
 
-const parsePrice = (priceString) => {
-  // Enlever les espaces et le symbole de l'euro
-  const cleanedString = priceString.replace(/[^0-9,]/g, '').replace(',', '.')
+onMounted(() => {})
 
-  // Convertir la chaîne en nombre flottant
-  const priceNumber = parseFloat(cleanedString)
-
-  // Convertir le prix en centimes (multiplication par 100 et arrondi)
-  return Math.round(priceNumber * 100)
-}
-
-onMounted(() => {
-  listCategories(categoryGateway())
-  getCategory(categoryUuid, categoryGateway(), searchGateway())
-})
-
-const categoriesVM = computed(() => {
-  return getChildCategoriesVM(categoryUuid)
-})
-
-const categoryVM = computed(() => {
-  return getCategoryVM(sortType.value)
+const searchVM = computed(() => {
+  return getSearchResultVM()
 })
 
 const facetsVM = computed(() => {
