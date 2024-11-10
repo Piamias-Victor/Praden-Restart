@@ -80,7 +80,8 @@ export const getProductsInCart = (): ProductsInCart => {
             totalPriceWithPromotion: priceWithPromotion! * quantity,
             quantity,
             img: p.images,
-            medecine: p.isMedicine
+            medecine: p.isMedicine,
+            promotion: p.promotions[0]
           }
         },
         total,

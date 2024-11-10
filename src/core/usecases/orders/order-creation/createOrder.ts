@@ -40,10 +40,12 @@ export const createOrder = async (
   emailGateway: EmailGateway
 ) => {
   const { items } = getProductsInCart()
+  console.log('items', items)
   const lines: Array<CreateOrderLineDTO> = await Promise.all(
     Object.keys(items).map(async (key) => {
       const item = items[key]
       const product = await productGateway.getByUuid(item.uuid)
+      console.log('product', product)
       const res: CreateOrderLineDTO = {
         productUuid: product.uuid,
         name: item.name,
@@ -52,12 +54,13 @@ export const createOrder = async (
         description: product.description,
         img: product.images
       }
-      if (product.promotion) {
-        res.promotion = product.promotion
+      if (product.promotions) {
+        res.promotion = product.promotions[0]
       }
       return res
     })
   )
+  console.log('lines', lines)
   const orderLines = await Promise.all(
     Object.keys(items).map(async (key) => {
       const item = items[key]
@@ -129,6 +132,7 @@ export const createOrder = async (
   }
 
   const order = await orderGateway.create(orderDTO)
+  console.log('order', order)
   const orderStore = useOrderStore()
   orderStore.add(order)
   clearCart()

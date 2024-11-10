@@ -1,6 +1,6 @@
 <template lang="pug">
 ft-categories(:categoriesVM="categoriesVM")
-div.mt-2
+div.mt-4
   div.mx-auto.max-w-2xl(class='lg:max-w-none relative')
     div(class='grid grid-cols-1 sm:grid-cols-2 sm:items-start sm:gap-x-8')
       div.flex.flex-col.justify-start
@@ -24,16 +24,16 @@ div.mt-2
             icon.icon-lg(name="ph:heart-bold")
 
         ft-add-to-cart-button(:product-uuid="productId")
-        div.absolute.top-0.left-0.bg-main.text-white.text-xl.font-bold.p-2.rounded-tr-lg.rounded-bl-lg.z-10(v-if="isPromo")
-          span {{isPromo.promo}}
+        div.absolute.top-0.left-0.bg-main.text-white.text-xl.font-bold.p-2.rounded-tr-lg.rounded-bl-lg.z-10(v-if="productVM.promotion")
+          span {{'- ' + productVM.promotion.amount}}
 
       div.px-4.flex.flex-col.justify-between
         div.mt-2
           h1.text-lg.font-semibold.tracking-tight(class='lg:text-3xl')
             | {{ productVM.name }}
         div.mt-2.flex.justify-between.items-end(class='lg:pr-12')
-          span.font-bold.text-main.text-xl(v-if="isPromo && isPromo.pricePromo" class='lg:text-4xl') 18,90 €
-          span.text-xl.font-bold.tracking-tight(:class="isPromo && isPromo.pricePromo ? 'line-through lg:text-4xl' : 'font-bold text-main lg:text-4xl'") {{ productVM.price }}
+          span.font-bold.text-main.text-xl(v-if="productVM.promotion && productVM.promotion.price" class='lg:text-4xl') {{ productVM.promotion.price }}
+          span.text-xl.font-bold.tracking-tight(:class="productVM.promotion && productVM.promotion.price ? 'line-through lg:text-4xl' : 'font-bold text-main lg:text-4xl'") {{ productVM.price }}
         div.h-2
         span.text-sm.font-bold.tracking-tight.text-contrast(class='lg:text-xl') {{ productVM.laboratory }}
         div.mt-4

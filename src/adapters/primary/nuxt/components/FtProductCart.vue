@@ -6,9 +6,9 @@ li.flex.py-6
       :alt="item.name"
     )
   div.ml-4.flex.flex-1.flex-col.items-start
-    div.flex.justify-between.items-center
+    div.flex.justify-between.items-center.w-full
       span.text-sm(:class="item.totalPriceWithPromotion ? 'line-through' : 'font-semibold'") {{ item.totalPrice }}
-      span.font-semibold.text-colored(v-if="item.totalPriceWithPromotion") {{ item.totalPriceWithPromotion }}
+      span.font-semibold.text-main(v-if="item.totalPriceWithPromotion") {{ item.totalPriceWithPromotion }}
     p.mr-1.text-sm.line-clamp-3 {{ item.name }}
   div.flex.flex-1.items-center.justify-between
     div.flex.items-center.gap-4
