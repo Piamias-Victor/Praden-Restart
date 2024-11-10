@@ -11,13 +11,14 @@
         span.text-main.font-semibold.hidden(class='sm:block') Filtres
         icon.icon-lg(name="mdi:filter-outline")
   ft-navigation
-  span.text-sm.text-contrast Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and...
-  span.text-sm.text-main.cursor-pointer.underline Voir Plus
+  div.h-2
+  div.px-2.flex.flex-col.gap-2
+    span.text-sm.text-contrast Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and when an u...
+    span.text-sm.text-main.cursor-pointer.underline.text-center(@click="scrollToDescription") Voir Plus
   ft-product-cat-list(:products="filteredProducts")
-  div.px-2.mt-2.w-full.flex.items-center.flex-col.justify-center.gap-2
+  div.px-2.mt-2.w-full.flex.items-center.flex-col.justify-center.gap-2(ref='description')
     span.text-center.text-main.text-xl.font-semibold Description
     span.text-sm.text-contrast Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and...
-    span.text-sm.text-main.cursor-pointer.underline Voir Plus
   ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory"  @searchPrice="searchPrice" :facetsVM="facetsVM" :sortType="sortType")
 </template>
 
@@ -36,6 +37,14 @@ import { getChildCategoriesVM } from '@adapters/primary/viewModels/get-category/
 import { parsePrice } from '@utils/formater'
 
 definePageMeta({ layout: 'main' })
+
+const description = ref(null);
+
+function scrollToDescription() {
+  if (description.value) {
+    description.value.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
 const route = useRoute()
 const categoryUuid = route.params.uuid
