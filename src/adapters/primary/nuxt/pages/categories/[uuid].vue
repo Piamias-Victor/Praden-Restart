@@ -3,10 +3,23 @@
   div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
     span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') {{categoryVM.name}}
     div.flex.items-center.gap-4
-      ft-button-animate.w-full.bg-white(@click='sortBy(2)')
-          icon.icon-md.text-main(name="mdi:tag-arrow-up-outline")
-      ft-button-animate.w-full.bg-white(@click='sortBy(1)')
-          icon.icon-md.text-main(name="mdi:tag-arrow-down-outline")
+      div.relative
+          ft-button-animate.text-main.flex.items-center.justify-center.bg-white.px-6(@click="toggleDropdown")
+              span.text-main.font-semibold(class='sm:block') Trier par
+              icon.icon-lg(name="mdi:chevron-down")
+          div.p-2(v-if="dropdownOpen" class="absolute bg-white rounded-xl shadow-md mt-2 w-full left-0 z-10")
+              div.cursor-pointer.p-2.flex.items-center.rounded-xl(class='hover:bg-contrast hover:text-main' @click="sortBy(0)")
+                  icon.icon-sm.text-main(name="bi:alphabet")
+                  span.ml-2.text-sm Nom
+              div.cursor-pointer.p-2.flex.items-center.rounded-xl(class='hover:bg-contrast hover:text-main' @click="sortBy(2)")
+                  icon.icon-sm.text-main(name="mdi:tag-arrow-up-outline")
+                  span.ml-2.text-sm Croissant
+              div.cursor-pointer.p-2.flex.items-center.rounded-xl(class='hover:bg-contrast hover:text-main' @click="sortBy(1)")
+                  icon.icon-sm.text-main(name="mdi:tag-arrow-down-outline")
+                  span.ml-2.text-sm Décroissant
+              div.cursor-pointer.p-2.flex.items-center.rounded-xl(class='hover:bg-contrast hover:text-main' @click="sortBy(3)")
+                  icon.icon-sm.text-main(name="teenyicons:discount-outline")
+                  span.ml-2.text-sm Promotion
       ft-button-animate.text-main.flex.items-center.justify-center.bg-white(@click="openFilter")
         span.text-main.font-semibold.hidden(class='sm:block') Filtres
         icon.icon-lg(name="mdi:filter-outline")
@@ -48,6 +61,12 @@ function scrollToDescription() {
   }
 }
 
+const dropdownOpen = ref(false)
+
+const toggleDropdown = () => {
+  dropdownOpen.value = !dropdownOpen.value
+}
+
 const route = useRoute()
 const categoryUuid = route.params.uuid
 const priceFilter = ref<string | null>(null)
@@ -71,6 +90,7 @@ const sortBy = (st: number) => {
       sortType.value = st
     }
   }
+  dropdownOpen.value = false
 }
 
 const searchLaboratory = (labo: string | null) => {

@@ -1,7 +1,10 @@
+import { getPromotionVM } from "@adapters/primary/viewModels/get-category/getCategoryVM";
+
 export enum SortType {
   None,
   Asc,
-  Desc
+  Desc,
+  PromotionsFirst
 }
 
 export const sortByName = (a: any, b: any) => {
@@ -11,8 +14,24 @@ export const sortByName = (a: any, b: any) => {
 export const sortByPrice =
   (sortType: SortType) =>
   (a: any, b: any): number => {
-    if (sortType === SortType.None) return 1
-    if (sortType === SortType.Asc)
-      return a.priceWithTax < b.priceWithTax ? -1 : 1
-    return a.priceWithTax > b.priceWithTax ? -1 : 1
-  }
+    // Si le tri est sur les promotions, place les produits avec promotion en premier
+    if (sortType === SortType.PromotionsFirst) {
+      const hasPromoA = getPromotionVM(a) ? 1 : 0;
+      const hasPromoB = getPromotionVM(b) ? 1 : 0;
+
+      // Les produits avec promotions viennent avant ceux sans
+      if (hasPromoA !== hasPromoB) return hasPromoB - hasPromoA;
+    }
+
+    // Tri par prix croissant
+    if (sortType === SortType.Asc) {
+      return a.priceWithTax - b.priceWithTax;
+    }
+
+    // Tri par prix décroissant
+    if (sortType === SortType.Desc) {
+      return b.priceWithTax - a.priceWithTax;
+    }
+    console.log('ici', a)
+    return a.name < b.name ? -1 : 1
+  };
