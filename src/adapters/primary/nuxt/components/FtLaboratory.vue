@@ -3,22 +3,22 @@
         nuxt-link.cursor-pointer(@click="goToLabo('avene')")
             img(src='https://logo-marque.com/wp-content/uploads/2020/12/Avene-Logo.png' class='w-[200px]') 
         div(class='w-[100px]')
-        nuxt-link.cursor-pointer
+        nuxt-link.cursor-pointer(@click="goToLabo('uriage')")
             img(src='https://www.resonance-coaching.com/wp-content/uploads/2018/02/logo-uriage-blanc-300x228.png' class='w-[200px]')
         div(class='w-[100px]')
-        nuxt-link.cursor-pointer
+        nuxt-link.cursor-pointer(@click="goToLabo('aderma')")
             img(src='https://pharmaciedelacapte.fr/wp-content/uploads/2020/04/A-Derma-logo-carr%C3%A9-copie.png' class='w-[200px]')
         div(class='w-[100px]')
-        nuxt-link.cursor-pointer
+        nuxt-link.cursor-pointer(@click="goToLabo('la rosee')")
             img(src='https://www.pharmaleo.fr/media/category/img/zoom/larosee-removebg-preview.png' class='w-[200px]')
         div(class='w-[100px]')
-        nuxt-link.cursor-pointer
+        nuxt-link.cursor-pointer(@click="goToLabo('svr')")
             img(src='https://www.feazer.com/wp-content/uploads/2021/05/LOGO-SVR.png' class='w-[200px]')
         div(class='w-[100px]')
-        nuxt-link.cursor-pointer
+        nuxt-link.cursor-pointer(@click="goToLabo('mustela')")
             img(src='https://logo-marque.com/wp-content/uploads/2020/12/Mustela-Logo.png' class='w-[200px]')
         div(class='w-[100px]')
-        nuxt-link.cursor-pointer
+        nuxt-link.cursor-pointer(@click="goToLabo('babybio')")
             img(src='https://www.koalibio.fr/data/marques/1672916134.png' class='w-[200px]')
         div(class='w-[100px]')
 </template>
@@ -37,6 +37,6 @@ const goToLabo = async (laboratory: string) => {
     } catch (error) {}
   } else {
   }
-  router.push('/laboratory')
+  router.push('/laboratory/' + laboratory)
 }
 </script>

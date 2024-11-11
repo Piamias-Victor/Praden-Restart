@@ -14,7 +14,10 @@ section.px-2
       span.text-2xl.font-bold.text-center(class='lg:text-3xl') La sélection de marque
     ft-laboratory
     div.h-2
-    ft-laboratory-cat
+    div.flex.items-center.justify-center
+      ft-button.button-solid.text-xl.px-8(@click='goToLabo')
+        span Voir toutes les marques
+        icon.icon-md(name='bx:category')
 div.h-4
 section.px-2
     div.flex.items-center.justify-center.py-2
@@ -107,6 +110,8 @@ import { getProductInPromotionVM } from '@adapters/primary/viewModels/get-produc
 
 definePageMeta({ layout: 'main' })
 
+const router = useRouter()
+
 onMounted(() => {
   listDeliveryMethods(deliveryGateway)
   listCategories(categoryGateway())
@@ -120,6 +125,10 @@ const categoriesVM = computed(() => {
 const productInPromotion = computed(() => {
   return getProductInPromotionVM()
 })
+
+const goToLabo = async (laboratory: string) => {
+  router.push('/laboratory')
+}
 
 const productTest1 = {
   href: '/products/5ee46259-1d14-4ae5-8abe-651529ed2be5',
