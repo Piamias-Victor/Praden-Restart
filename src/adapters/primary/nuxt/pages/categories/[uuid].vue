@@ -1,11 +1,12 @@
 <template lang="pug">
   ft-child-categories(:categoriesVM="categoriesVM")
-  div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
+  div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4(ref='top')
     span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') {{categoryVM.name}}
     div.flex.items-center.gap-4
       div.relative
           ft-button-animate.text-main.flex.items-center.justify-center.bg-white.px-6(@click="toggleDropdown")
-              span.text-main.font-semibold(class='sm:block') Trier
+              span.text-main.font-semibold(class='sm:hidden') Trier
+              span.text-main.font-semibold.hidden(class='sm:block') Trier par
               icon.icon-lg(name="mdi:chevron-down")
           div.p-2(v-if="dropdownOpen" class="absolute bg-white rounded-xl shadow-md mt-2 w-full left-0 z-10")
               div.cursor-pointer.p-2.flex.items-center.rounded-xl(class='hover:bg-contrast hover:text-main' @click="sortBy(0)")
@@ -26,12 +27,20 @@
   ft-navigation
   div.h-2
   div.px-2.flex.flex-col.gap-2
-    span.text-sm.text-contrast Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and when an u...
+    span.text-sm.text-contrast.hidden(class="sm:block") Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and when an u...
+    span.text-sm.text-contrast(class="sm:hidden") Lorem Ipsum is simply dummy text of the printing...
     span.text-sm.text-main.cursor-pointer.underline.text-center(@click="scrollToDescription") Voir Plus
   ft-product-cat-list(:products="filteredProducts")
+  div.h-4
   div.px-2.mt-2.w-full.flex.items-center.flex-col.justify-center.gap-2(ref='description')
     span.text-center.text-main.text-xl.font-semibold Description
     span.text-sm.text-contrast {{text}}
+  div.h-4
+  div.flex.items-center.justify-center
+    ft-button.button-solid.text-xl.px-8(@click="scrollToTop")
+      span Retourner en haut de page
+      icon.icon-md(name='line-md:arrow-up')
+  div.h-4
   ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory"  @searchPrice="searchPrice" :facetsVM="facetsVM" :sortType="sortType")
 </template>
 
@@ -52,12 +61,19 @@ import { parsePrice } from '@utils/formater'
 definePageMeta({ layout: 'main' })
 
 const description = ref(null);
+const top = ref(null);
 
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar velit sit amet imperdiet viverra. Nullam ullamcorper, urna et egestas ultricies, est dolor porta felis, non placerat metus nulla eu libero. Donec felis velit, tincidunt vitae euismod sed, consequat in arcu. Aenean tincidunt auctor sem, ut porta nisl facilisis in. Nunc ut commodo dolor. Vivamus a laoreet nunc, vitae gravida enim. Praesent hendrerit lobortis porttitor. Fusce augue metus, efficitur in gravida in, tempor gravida augue. Nam vel odio in augue gravida cursus vel sit amet orci. Etiam a tellus accumsan, finibus tellus et, efficitur eros. Donec blandit at leo ut auctor. Vivamus odio quam, vestibulum sit amet sem a, finibus imperdiet arcu. Nulla pharetra nulla porttitor metus maximus, in vulputate risus lacinia. Vestibulum eu massa condimentum, consectetur ex at, pretium odio. Quisque at dui bibendum, consequat magna in, tempus massa. Donec gravida arcu quis lacinia tristique. Morbi sit amet porta velit. Praesent quis nisl vulputate diam auctor rutrum. Mauris est eros, hendrerit sit amet mi non, consectetur tristique ante. Sed facilisis mauris elit, eu iaculis justo semper vel. Praesent eu aliquet massa, vitae mattis nisi. Donec rhoncus metus sagittis metus venenatis, at egestas nulla dignissim. Duis convallis sem vel purus ornare, id sodales enim viverra. Nam ornare tortor id luctus interdum. Proin pharetra dictum turpis sed cursus. Morbi pretium dolor ex, eget aliquet sapien vulputate at. Aenean vitae rhoncus dui. Pellentesque tincidunt arcu nec orci feugiat laoreet. Proin gravida eros mi. Mauris a est nisl. Morbi maximus ligula et libero pellentesque elementum. In vitae iaculis risus, in gravida dolor. Proin efficitur scelerisque suscipit. Aliquam pharetra magna eu metus dignissim, at dapibus sem efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non nisl eu ante convallis sollicitudin sit amet at magna. Nulla hendrerit enim vel quam finibus, ac rhoncus turpis rutrum. Sed finibus commodo tellus rhoncus accumsan.'
 
 function scrollToDescription() {
   if (description.value) {
     description.value.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+function scrollToTop() {
+  if (top.value) {
+    top.value.scrollIntoView({ behavior: 'smooth' });
   }
 }
 

@@ -25,12 +25,13 @@ TransitionRoot(appear='' :show='true' as='template')
                         ft-navigation
                         div.px-4(v-if='query !== ""')
                             ft-categories-search(:categoriesVM="categoriesVM" @close='close')
-                        div.flex.px-8.flex.items-center.justify-between.gap-4.my-4(v-if='query !== ""')
+                        div.flex.px-8.flex.items-center.justify-between.gap-4.my-4(v-if='query !== ""' ref='top')
                           span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') Recherche
                           div.flex.items-center.gap-4
                             div.relative
                               ft-button-animate.text-main.flex.items-center.justify-center.bg-white.px-6(@click="toggleDropdown")
-                                  span.text-main.font-semibold(class='sm:block') Trier
+                                  span.text-main.font-semibold(class='sm:hidden') Trier
+                                  span.text-main.font-semibold.hidden(class='sm:block') Trier par
                                   icon.icon-lg(name="mdi:chevron-down")
                               div.p-2(v-if="dropdownOpen" class="absolute bg-white rounded-xl shadow-md mt-2 w-full left-0 z-10")
                                 div.cursor-pointer.p-2.flex.items-center.rounded-xl(class='hover:bg-contrast hover:text-main' @click="sortBy(0)")
@@ -114,6 +115,14 @@ const close = () => {
 
 function closeModal() {
   emit('close')
+}
+
+const top = ref(null);
+
+function scrollToTop() {
+  if (top.value) {
+    top.value.scrollIntoView({ behavior: 'smooth' });
+  }
 }
 
 const filterOpened = ref(false)
