@@ -6,7 +6,8 @@ div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
     div.flex.items-center.gap-4
         div.relative
             ft-button-animate.text-main.flex.items-center.justify-center.bg-white.px-6(@click="toggleDropdown")
-                span.text-main.font-semibold(class='sm:block') Trier
+                span.text-main.font-semibold(class='sm:hidden') Trier
+                span.text-main.font-semibold.hidden(class='sm:block') Trier par
                 icon.icon-lg(name="mdi:chevron-down")
             div.p-2(v-if="dropdownOpen" class="absolute bg-white rounded-xl shadow-md mt-2 w-full left-0 z-10")
                 div.cursor-pointer.p-2.flex.items-center.rounded-xl(class='hover:bg-contrast hover:text-main' @click="sortBy(0)")
