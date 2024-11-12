@@ -117,11 +117,11 @@ function closeModal() {
   emit('close')
 }
 
-const top = ref(null);
+const top = ref(null)
 
 function scrollToTop() {
   if (top.value) {
-    top.value.scrollIntoView({ behavior: 'smooth' });
+    top.value.scrollIntoView({ behavior: 'smooth' })
   }
 }
 

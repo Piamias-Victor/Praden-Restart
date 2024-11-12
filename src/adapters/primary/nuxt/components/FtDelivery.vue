@@ -14,10 +14,6 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
             ul.-my-6.divide-y.divide-gray12.text-left
                 div(v-for='item in cart.items' :key="item.uuid")
                     ft-product-cart(:item="item")
-//- div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(class='lg:text-sm')
-//-   span Plus que 
-//-   span.text-main.font-bold {{ cart.freeDelivery }}
-//-   span pour profiter des frais de ports gratuit
 div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(v-if='!hasMedicineReference' class='lg:text-sm')
   span Plus que 
   span.text-main.font-bold {{ cart.freeDelivery }}
@@ -48,6 +44,7 @@ div.mt-2.border-t.py-2.px-2(class='lg:py-6 lg:px-4')
           span.font-semibold.text-main(v-if="cart.totalPriceWithPromotion") {{ cart.totalPriceWithPromotion }}
   div.mt-2(class='lg:mt-4')
       ft-button.button-solid.w-full.text-xl(@click="validateOrder") Paiement
+ft-popup(:show="showPopup" @close="closePopup")
 </template>
 
 <script lang="ts" setup>
@@ -78,6 +75,16 @@ import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
 
 const router = useRouter()
 
+const showPopup = ref(false)
+
+const openPopup = () => {
+  showPopup.value = true
+}
+
+const closePopup = () => {
+  showPopup.value = false
+}
+
 const cartQuantity = ref<CartQuantityVM | null>(null)
 
 const deliveryMethods = computed(() => {
@@ -90,11 +97,12 @@ const deliveryMethodSelected = (method: any) => {
   selectDeliveryMethods(method)
   deliveryMethods.value.selectedDeliveryMethod = method
   selectedDeliveryMethod.value = method.uuid
+  if (method.name === 'Point Relais') openPopup()
 }
 
 const hasMedicineReference = computed(() => {
   return Object.values(cart.value.items).some(
-    (item: any) => item.uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e'
+    (item: any) => item.uuid === '505209a2-7acb-4891-b933-e084d786d7ea '
   )
 })
 
@@ -124,14 +132,7 @@ const validateOrder = () => {
     user.value.mail,
     user.value.phone,
     selectedDeliveryMethod.value,
-    {
-      firstname: user.value.firstName,
-      lastname: user.value.lastName,
-      country: user.value.country,
-      address: user.value.address,
-      city: user.value.city,
-      zip: user.value.postal
-    },
+    user.value.deliveryAddress,
     useOrderGateway(),
     useProductGateway(),
     windowGateway,

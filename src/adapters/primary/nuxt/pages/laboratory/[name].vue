@@ -33,8 +33,8 @@ ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaborat
 
 <script lang="ts" setup>
 import {
-    getCategory,
-    getCategoryVM
+  getCategory,
+  getCategoryVM
 } from '@adapters/primary/viewModels/get-category/getCategoryVM'
 import { categoryGateway } from '../../../../../../gateways/categoryGateway'
 import { searchGateway } from '../../../../../../gateways/searchGateway'
@@ -57,67 +57,67 @@ const laboratoryFilter = ref<string | null>(null) // Variable pour le laboratoir
 const dropdownOpen = ref(false)
 
 const toggleDropdown = () => {
-    dropdownOpen.value = !dropdownOpen.value
+  dropdownOpen.value = !dropdownOpen.value
 }
 
 const sortBy = (st: number) => {
-    if (sortType && typeof sortType.value !== 'undefined') {
-        if (sortType.value === st) {
-            sortType.value = SortType.None
-        } else {
-            sortType.value = st
-        }
+  if (sortType && typeof sortType.value !== 'undefined') {
+    if (sortType.value === st) {
+      sortType.value = SortType.None
+    } else {
+      sortType.value = st
     }
-    dropdownOpen.value = false // Fermer le dropdown après avoir sélectionné une option
+  }
+  dropdownOpen.value = false // Fermer le dropdown après avoir sélectionné une option
 }
 
 const searchLaboratory = (labo: string | null) => {
-    laboratoryFilter.value = labo // Mettez à jour le filtre de laboratoire
+  laboratoryFilter.value = labo // Mettez à jour le filtre de laboratoire
 }
 
 const filteredProducts = computed(() => {
-    let res
-    // Vérifie si `searchVM.value.items` est défini
-    if (searchVM.value && searchVM.value.items) {
-        if (!laboratoryFilter.value) {
-            res = searchVM.value.items // Retourne tous les produits si aucun filtre
-        } else {
-            res = searchVM.value.items.filter(
-                (product) => product.laboratory === laboratoryFilter.value
-            )
-        }
+  let res
+  // Vérifie si `searchVM.value.items` est défini
+  if (searchVM.value && searchVM.value.items) {
+    if (!laboratoryFilter.value) {
+      res = searchVM.value.items // Retourne tous les produits si aucun filtre
     } else {
-        console.warn("searchVM.value.items est undefined")
-        res = [] // Retourne un tableau vide si `items` n'est pas défini
+      res = searchVM.value.items.filter(
+        (product) => product.laboratory === laboratoryFilter.value
+      )
     }
-    return res
+  } else {
+    console.warn('searchVM.value.items est undefined')
+    res = [] // Retourne un tableau vide si `items` n'est pas défini
+  }
+  return res
 })
 
 onMounted(() => {})
 
 const searchVM = computed(() => {
-    const result = getSearchResultVM(sortType.value)
-    if (!result) {
-        console.warn("getSearchResultVM() a retourné undefined")
-    }
-    return result || { items: [] } // Retourne un objet par défaut si `result` est `undefined`
+  const result = getSearchResultVM(sortType.value)
+  if (!result) {
+    console.warn('getSearchResultVM() a retourné undefined')
+  }
+  return result || { items: [] } // Retourne un objet par défaut si `result` est `undefined`
 })
 
 const facetsVM = computed(() => {
-    const result = getFacetsVM()
-    if (!result) {
-        console.warn("getFacetsVM() a retourné undefined")
-    }
-    return result || { categories: [] } // Retourne un objet par défaut si `result` est `undefined`
+  const result = getFacetsVM()
+  if (!result) {
+    console.warn('getFacetsVM() a retourné undefined')
+  }
+  return result || { categories: [] } // Retourne un objet par défaut si `result` est `undefined`
 })
 
 const filterOpened = ref(false)
 
 const openFilter = () => {
-    filterOpened.value = true
+  filterOpened.value = true
 }
 
 const closeCart = () => {
-    filterOpened.value = false
+  filterOpened.value = false
 }
 </script>

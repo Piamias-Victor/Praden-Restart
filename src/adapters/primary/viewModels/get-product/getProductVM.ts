@@ -66,9 +66,7 @@ export const getPromotionInProductVM = (
         type: promotion.type,
         amount: percentFormatter(promotion.amount),
         price: formatter.format(
-          (product.price -
-            (product.price * promotion.amount) / 100) /
-            100
+          (product.price - (product.price * promotion.amount) / 100) / 100
         )
       }
     }

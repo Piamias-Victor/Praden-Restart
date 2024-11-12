@@ -10,6 +10,7 @@ import { WindowGateway } from '@core/gateways/windowGateway'
 import { useOrderStore } from '@store/orderStore'
 import { useCartStore } from '@store/cartStore'
 import { getProductsInCart } from '@adapters/primary/viewModels/get-cart/getCartVM'
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
 
 export type CreateOrderLineDTO = Omit<OrderLine, 'deliveryStatus' | 'updatedAt'>
 
@@ -40,12 +41,10 @@ export const createOrder = async (
   emailGateway: EmailGateway
 ) => {
   const { items } = getProductsInCart()
-  console.log('items', items)
   const lines: Array<CreateOrderLineDTO> = await Promise.all(
     Object.keys(items).map(async (key) => {
       const item = items[key]
       const product = await productGateway.getByUuid(item.uuid)
-      console.log('product', product)
       const res: CreateOrderLineDTO = {
         productUuid: product.uuid,
         name: item.name,
@@ -60,7 +59,6 @@ export const createOrder = async (
       return res
     })
   )
-  console.log('lines', lines)
   const orderLines = await Promise.all(
     Object.keys(items).map(async (key) => {
       const item = items[key]
@@ -131,16 +129,21 @@ export const createOrder = async (
     console.error('Error sending order:', error)
   }
 
+  const user = computed(() => {
+    return getUserVM()
+  })
+
   const order = await orderGateway.create(orderDTO)
-  console.log('order', order)
   const orderStore = useOrderStore()
   orderStore.add(order)
   clearCart()
+  console.log('1 :', order.deliveryAddress)
+  console.log('2 :', user.value.billingAddress)
   const sendOrderConfirmationDTO: SendOrderConfirmationDTO = {
     orderUuid: order.uuid,
     contact: order.contact,
     shippingAddress: order.deliveryAddress,
-    billingAddress: order.deliveryAddress,
+    billingAddress: user.value.billingAddress,
     orderLines: order.lines,
     deliveryMethod: order.delivery.method
   }
