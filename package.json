@@ -34,6 +34,7 @@
     "pinia": "^2.1.7",
     "pug": "^3.0.3",
     "pug-plain-loader": "^1.1.0",
+    "soap": "^1.1.6",
     "swiper": "^11.1.14",
     "tailwindcss": "^3.4.3",
     "vue-3-slider-component": "^1.0.1",

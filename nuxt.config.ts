@@ -21,7 +21,14 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Praden MarketPlace'
+      title: 'Praden MarketPlace',
+      script: [
+        { src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js' },
+        { src: 'https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js' },
+        {
+          src: 'https://ws.colissimo.fr/widget-colissimo/js/jquery.plugin.colissimo.min.js'
+        }
+      ]
     }
   },
 

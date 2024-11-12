@@ -1,3 +1,5 @@
+import { FullAddress } from '@core/usecases/orders/order-creation/createOrder';
+
 declare global {
     const definePageMeta: typeof import('nuxt').definePageMeta;
 }
@@ -25,6 +27,8 @@ export interface User {
   appartement: string
   postal: string
   city: string
+  billingAddress?: FullAddress
+  deliveryAddress?: FullAddress
 }
 export interface laboratoryFacet {
   name: string

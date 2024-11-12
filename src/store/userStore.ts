@@ -24,6 +24,22 @@ export const useUserStore = defineStore('userStore', {
     },
     update(user: User) {
       this.user = user
+      this.user.deliveryAddress = {
+        firstname: user.firstName,
+        lastname: user.lastName,
+        country: user.country,
+        address: user.address,
+        city: user.city,
+        zip: user.postal
+      }
+      this.user.billingAddress = {
+        firstname: user.firstName,
+        lastname: user.lastName,
+        country: user.country,
+        address: user.address,
+        city: user.city,
+        zip: user.postal
+      }
     }
   }
 })
