@@ -153,7 +153,7 @@ export const getCartVM = (): CartVM => {
     freeDelivery: formatter.format(getFreeDelivery(total) / 100)
   }
   if (total != totalWithPromotion) {
-    res.totalPriceWithPromotion = formatter.format(totalWithPromotion / 100)
+    res.totalPriceWithPromotion = formatter.format(getTotalWithDelivery(totalWithPromotion) / 100)
   }
   return res
 }

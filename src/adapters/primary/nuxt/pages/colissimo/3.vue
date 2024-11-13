@@ -34,7 +34,8 @@ const loadColissimoWidget = async () => {
 
   // Ajouter le script Colissimo
   const script = document.createElement('script')
-  script.src = 'https://ws.colissimo.fr/widget-colissimo/js/jquery.plugin.colissimo.min.js'
+  script.src =
+    'https://ws.colissimo.fr/widget-colissimo/js/jquery.plugin.colissimo.min.js'
   script.type = 'text/javascript'
   document.body.appendChild(script)
 

@@ -19,7 +19,7 @@ import { onMounted } from 'vue'
 
 // Fonction pour récupérer le token Colissimo
 import { getColissimoTokenVM } from '@adapters/primary/viewModels/get-delivery/getColissimoTokenVM'
-import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
 
 const props = defineProps<{ show: boolean }>()
 const emit = defineEmits<{
@@ -48,7 +48,9 @@ const updateWidgetText = () => {
     for (const mutation of mutationsList) {
       // Vérifie si le noeud a bien été ajouté
       if (mutation.type === 'childList') {
-        const widgetTextElement = document.querySelector('.widget_colissimo_text_bouton')
+        const widgetTextElement = document.querySelector(
+          '.widget_colissimo_text_bouton'
+        )
         if (widgetTextElement) {
           widgetTextElement.innerHTML = 'Ton nouveau texte ici' // Change le texte
           observer.disconnect() // Arrêter l'observation une fois le texte changé
@@ -58,7 +60,9 @@ const updateWidgetText = () => {
   })
 
   // Observer les changements dans l'élément parent du texte
-  const targetNode = document.querySelector('.widget_colissimo_bouton_validation')
+  const targetNode = document.querySelector(
+    '.widget_colissimo_bouton_validation'
+  )
   if (targetNode) {
     observer.observe(targetNode, { childList: true, subtree: true })
   }
@@ -118,9 +122,9 @@ const loadColissimoWidget = async () => {
         }
         // Fermer le widget Colissimo
         jQuery('#monIdDeWidgetColissimo').frameColissimoClose()
-        
+
         // Fermer le popup également
-        closePopup()  // Ferme le popup après la sélection du point relais
+        closePopup() // Ferme le popup après la sélection du point relais
       }
 
       $('#monIdDeWidgetColissimo').frameColissimoOpen({
@@ -162,7 +166,7 @@ watch(
 /* Style pour le loader */
 .loader {
   border: 4px solid #f3f3f3;
-  border-top: 4px solid #E5017D;
+  border-top: 4px solid #e5017d;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -171,7 +175,11 @@ watch(
 
 /* Animation pour le loader */
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 </style>
