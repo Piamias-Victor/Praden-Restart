@@ -1,6 +1,6 @@
 <template lang="pug">
 div(class='').px-4
-    <swiper-container class='lg:p-2' :navigation="true" slides-per-view="1" speed="500" loop="true"  css-mode="true" autoplay-delay="3000" autoplay-disable-on-interaction="true">
+    <swiper-container class='lg:p-2' slides-per-view="1" speed="500" loop="true"  css-mode="true" autoplay-delay="3000" autoplay-disable-on-interaction="true">
         <swiper-slide>
             div
                 img.block.rounded-xl.w-full(
@@ -62,8 +62,19 @@ register()
   height: auto;
 }
 
-.swiper-button-next, .swiper-button-prev {
-  color: #E5017D;  /* Changer la couleur des flèches */
+::v-deep.vue-slider-dot-tooltip-inner {
+  border-color: #E5017D !important;
+}
+
+/* Si le précédent ne fonctionne pas, essayer un sélecteur plus précis */
+::v-deep.vue-slider-dot-tooltip.vue-slider-dot-tooltip-inner {
+  border-color: #E5017D !important;
+}
+
+/* Tenter de modifier aussi les autres propriétés qui affectent l'apparence */
+::v-deep.vue-slider-dot-tooltip-inner {
+  background-color: #E5017D !important;
+  color: #fff !important;
 }
 
 @media (max-width: 640px) {
