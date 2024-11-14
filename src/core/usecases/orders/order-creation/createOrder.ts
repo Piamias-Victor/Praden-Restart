@@ -109,7 +109,7 @@ export const createOrder = async (
 
   try {
     const response = await fetch(
-      'https://ecommerce-backend.admin-a5f.workers.dev/orders',
+      'https://ecommerce-backend-production.admin-a5f.workers.dev/orders',
       {
         method: 'POST',
         headers: {
