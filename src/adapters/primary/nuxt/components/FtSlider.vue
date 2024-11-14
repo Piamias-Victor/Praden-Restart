@@ -62,17 +62,17 @@ register()
   height: auto;
 }
 
-::v-deep.vue-slider-dot-tooltip-inner {
+::deep.vue-slider-dot-tooltip-inner {
   border-color: #E5017D !important;
 }
 
 /* Si le précédent ne fonctionne pas, essayer un sélecteur plus précis */
-::v-deep.vue-slider-dot-tooltip.vue-slider-dot-tooltip-inner {
+::deep.vue-slider-dot-tooltip.vue-slider-dot-tooltip-inner {
   border-color: #E5017D !important;
 }
 
 /* Tenter de modifier aussi les autres propriétés qui affectent l'apparence */
-::v-deep.vue-slider-dot-tooltip-inner {
+::deep.vue-slider-dot-tooltip-inner {
   background-color: #E5017D !important;
   color: #fff !important;
 }
