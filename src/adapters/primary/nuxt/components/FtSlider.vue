@@ -49,3 +49,41 @@ import { register } from 'swiper/element/bundle'
 // register Swiper custom elements
 register()
 </script>
+
+<style scoped>
+.swiper-container {
+  max-width: 100%;
+  margin: auto;
+}
+
+.swiper-slide img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+::deep.vue-slider-dot-tooltip-inner {
+  border-color: #E5017D !important;
+}
+
+/* Si le précédent ne fonctionne pas, essayer un sélecteur plus précis */
+::deep.vue-slider-dot-tooltip.vue-slider-dot-tooltip-inner {
+  border-color: #E5017D !important;
+}
+
+/* Tenter de modifier aussi les autres propriétés qui affectent l'apparence */
+::deep.vue-slider-dot-tooltip-inner {
+  background-color: #E5017D !important;
+  color: #fff !important;
+}
+
+@media (max-width: 640px) {
+  .swiper-container {
+    padding: 0 10px;
+  }
+  .swiper-slide img {
+    height: auto;
+    object-fit: cover;
+  }
+}
+</style>
