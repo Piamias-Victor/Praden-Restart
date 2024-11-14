@@ -102,7 +102,7 @@ export const getProductsInCart = (): ProductsInCart => {
 
 export const getTotalWithDelivery = (total: number): number => {
   const deliveryStore = useDeliveryStore()
-  if (total > 6900 && deliveryStore.selected!.uuid === 'relais-uuid')
+  if (total > 6900 && deliveryStore.selected!.name === 'Point Relais')
     return total
   return total + deliveryStore.selected!.price
 }
