@@ -1,6 +1,6 @@
 <template lang="pug">
 div(class='').px-4
-    <swiper-container class='lg:p-2' slides-per-view="1" speed="500" loop="true"  css-mode="true" autoplay-delay="3000" autoplay-disable-on-interaction="true">
+    <swiper-container class='lg:p-2' :navigation="true" slides-per-view="1" speed="500" loop="true"  css-mode="true" autoplay-delay="3000" autoplay-disable-on-interaction="true">
         <swiper-slide>
             div
                 img.block.rounded-xl.w-full(
@@ -49,3 +49,30 @@ import { register } from 'swiper/element/bundle'
 // register Swiper custom elements
 register()
 </script>
+
+<style scoped>
+.swiper-container {
+  max-width: 100%;
+  margin: auto;
+}
+
+.swiper-slide img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #E5017D;  /* Changer la couleur des flèches */
+}
+
+@media (max-width: 640px) {
+  .swiper-container {
+    padding: 0 10px;
+  }
+  .swiper-slide img {
+    height: auto;
+    object-fit: cover;
+  }
+}
+</style>
