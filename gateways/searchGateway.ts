@@ -2,6 +2,6 @@ import { RealSearchGateway } from '@adapters/secondary/search-gateway/realSearch
 
 export const searchGateway = () => {
   return new RealSearchGateway(
-    'https://ecommerce-backend.admin-a5f.workers.dev'
+    'https://ecommerce-backend-production.admin-a5f.workers.dev'
   )
 }

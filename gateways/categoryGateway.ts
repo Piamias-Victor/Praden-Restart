@@ -2,6 +2,6 @@ import { RealCategoryGateway } from '../src/adapters/secondary/category-gateway/
 
 export const categoryGateway = () => {
   return new RealCategoryGateway(
-    'https://ecommerce-backend.admin-a5f.workers.dev'
+    'https://ecommerce-backend-production.admin-a5f.workers.dev'
   )
 }

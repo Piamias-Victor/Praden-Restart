@@ -2,6 +2,6 @@ import { RealProductGateway } from '@adapters/secondary/product-gateway/realProd
 
 export const useProductGateway = () => {
   return new RealProductGateway(
-    'https://ecommerce-backend.admin-a5f.workers.dev'
+    'https://ecommerce-backend-production.admin-a5f.workers.dev'
   )
 }
