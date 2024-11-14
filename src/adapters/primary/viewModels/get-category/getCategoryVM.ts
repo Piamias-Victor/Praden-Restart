@@ -123,7 +123,6 @@ export const getCategoryVM = (sortType: SortType = SortType.None) => {
   return {
     name: category?.name || '',
     childCategories: getChildCategoriesVM(category?.uuid),
-    // products: products,
     products: products.map((p) => {
       const promotion = getPromotionVM(p)
       const res = {
