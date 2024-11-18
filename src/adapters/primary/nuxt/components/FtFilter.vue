@@ -187,9 +187,9 @@ const sortBy = (st: number) => {
 }
 
 .vue-slider-dot-tooltip-inner {
-  border-color: #E5017D !important; /* Ajout du border-color personnalisé */
-  background-color: #E5017D !important;
-  color: #E5017D !important;
+  border-color: #e5017d !important; /* Ajout du border-color personnalisé */
+  background-color: #e5017d !important;
+  color: #e5017d !important;
 }
 
 /* Afficher l'infobulle seulement quand hoveredLaboratory est défini */

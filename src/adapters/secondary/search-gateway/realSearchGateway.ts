@@ -37,17 +37,54 @@ export class RealSearchGateway extends RealGateway implements SearchGateway {
     return Promise.resolve(res.data.products)
   }
 
-  async searchProduct(query: string): Promise<Array<Product>> {
-    const res = await axios.get(`${this.baseUrl}/search/products`, {
-      params: { query }
-    })
-    return Promise.resolve(res.data.items)
+  async searchProduct(
+    query: string,
+    options?: {
+      laboratoryUuids?: Array<string>
+      size?: number
+      isInPromotion?: string
+    }
+  ): Promise<Array<Product>> {
+    try {
+      const payload = {
+        query: query || undefined,
+        laboratoryUuids: options?.laboratoryUuids || undefined,
+        size: options?.size || undefined,
+        isInPromotion: options?.isInPromotion || undefined
+      }
+
+      const res = await axios.post(`${this.baseUrl}/search/products`, payload)
+
+      console.log('res :', res)
+      return Promise.resolve(res.data.items)
+    } catch (error) {
+      console.error('Erreur lors de la récupération des produits :', error)
+      return Promise.reject(error)
+    }
   }
 
-  async searchFacet(query: string): Promise<Array<Product>> {
-    const res = await axios.get(`${this.baseUrl}/search/products`, {
-      params: { query }
-    })
-    return Promise.resolve(res.data.facets)
+  async searchFacet(
+    query: string,
+    options?: {
+      laboratoryUuids?: Array<string>
+      size?: number
+      isInPromotion?: string
+    }
+  ): Promise<Array<any>> {
+    try {
+      const payload = {
+        query: query || undefined, // Inclure seulement si `query` est défini
+        laboratoryUuids: options?.laboratoryUuids || undefined,
+        size: options?.size || undefined,
+        isInPromotion: options?.isInPromotion || undefined
+      }
+
+      const res = await axios.post(`${this.baseUrl}/search/products`, payload)
+
+      return Promise.resolve(res.data.facets)
+    } catch (error) {
+      console.error('Erreur lors de la récupération des facettes :', error)
+      return Promise.reject(error)
+    }
   }
 }

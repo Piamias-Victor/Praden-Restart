@@ -1,5 +1,4 @@
 <template lang="pug">
-//- pre {{categoriesVM}}
 div.py-4.px-2.flex.items-center.gap-2.overflow-x-scroll.custom-scrollbar.text-xl
     //- ft-button.bg-white.rounded-full.text-sm.p-2(@click="goBack")
     //-     icon.icon-md(name="icon-park-outline:return")

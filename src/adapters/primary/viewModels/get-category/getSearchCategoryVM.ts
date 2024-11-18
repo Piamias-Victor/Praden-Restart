@@ -3,6 +3,8 @@ import { useCategoryStore } from '@store/categoryStore'
 import { Category } from '@core/entities/category'
 import { formatCategoryName } from './getRootCategoriesVM'
 import { getRootCategoryUuid } from './getCategoryVM'
+import { useLaboratoryStore } from '@store/laboratoryStore'
+import { Laboratory } from '@core/entities/laboratory'
 
 export interface SearchCategoryItemVM {
   uuid: UUID
@@ -24,6 +26,21 @@ export const getSearchCategoriesVM = (query: string): SearchCategoriesVM => {
       .toLowerCase()
       .includes(removeAccents(query).toLowerCase())
   )
+
+  const sortedCategories = searchCategories.sort((a, b) => {
+    const queryLower = removeAccents(query).toLowerCase()
+    const aName = removeAccents(a.name).toLowerCase()
+    const bName = removeAccents(b.name).toLowerCase()
+
+    if (aName.startsWith(queryLower) && !bName.startsWith(queryLower)) {
+      return -1 // `a` avant `b`
+    }
+    if (!aName.startsWith(queryLower) && bName.startsWith(queryLower)) {
+      return 1 // `b` avant `a`
+    }
+    return aName.localeCompare(bName) // Tri alphabétique
+  })
+
   return {
     items: searchCategories.map((category: Category) => {
       return {
@@ -32,6 +49,40 @@ export const getSearchCategoriesVM = (query: string): SearchCategoriesVM => {
         href: `/categories/${category.uuid}`,
         img: getImageInMemory(category.uuid),
         icon: getIconInMemory(getRootCategoryUuid(category.uuid))
+      }
+    })
+  }
+}
+
+export const getSearchLaboratoriesVM = (query: string): SearchCategoriesVM => {
+  const laboratoryStore = useLaboratoryStore()
+  const laboratories = laboratoryStore.items
+  const searchLaboratories = laboratories.filter((l) =>
+    removeAccents(l.name)
+      .toLowerCase()
+      .includes(removeAccents(query).toLowerCase())
+  )
+  const sortedLaboratories = searchLaboratories.sort((a, b) => {
+    const queryLower = removeAccents(query).toLowerCase()
+    const aName = removeAccents(a.name).toLowerCase()
+    const bName = removeAccents(b.name).toLowerCase()
+
+    if (aName.startsWith(queryLower) && !bName.startsWith(queryLower)) {
+      return -1 // `a` avant `b`
+    }
+    if (!aName.startsWith(queryLower) && bName.startsWith(queryLower)) {
+      return 1 // `b` avant `a`
+    }
+    return aName.localeCompare(bName) // Tri alphabétique
+  })
+
+  return {
+    items: searchLaboratories.map((laboratory: any) => {
+      return {
+        uuid: laboratory.uuid,
+        name: formatCategoryName(laboratory.name),
+        href: `/laboratory/${laboratory.uuid}`,
+        description: laboratory.description
       }
     })
   }

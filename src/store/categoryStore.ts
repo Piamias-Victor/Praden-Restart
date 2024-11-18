@@ -1,5 +1,5 @@
 import { Category } from '@core/entities/category'
-import { CategoryDoesNotExistsError } from '@core/errors/CategoryDoesNotExistsError'
+import { CategoryDoesNotExistsError } from '@core/errors/CategoryDoesNotExistsError copy'
 import { UUID } from '@core/types/type'
 import { defineStore } from 'pinia'
 

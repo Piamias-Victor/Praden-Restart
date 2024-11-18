@@ -24,7 +24,7 @@ TransitionRoot(appear='' :show='true' as='template')
                                 icon.icon-md(name="ph:x-bold")
                         ft-navigation
                         div.px-4(v-if='query !== ""')
-                            ft-categories-search(:categoriesVM="categoriesVM" @close='close')
+                            ft-categories-search(:categoriesVM="categoriesVM" :laboratoriesVM="laboratoriesVM" @close='close')
                         div.flex.px-8.flex.items-center.justify-between.gap-4.my-4(v-if='query !== ""' ref='top')
                           span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') Recherche
                           div.flex.items-center.gap-4
@@ -98,7 +98,10 @@ import { searchGateway } from '../../../../../gateways/searchGateway'
 import { searchProduct } from '@core/usecases/search-product/searchProduct'
 import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM'
 import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM'
-import { getSearchCategoriesVM } from '@adapters/primary/viewModels/get-category/getSearchCategoryVM'
+import {
+  getSearchCategoriesVM,
+  getSearchLaboratoriesVM
+} from '@adapters/primary/viewModels/get-category/getSearchCategoryVM'
 import { SortType } from '@utils/sort'
 import { parsePrice } from '@utils/formater'
 const props = defineProps<{
@@ -201,6 +204,10 @@ let debounceTimeout: ReturnType<typeof setTimeout> | null = null
 
 const categoriesVM = computed(() => {
   return getSearchCategoriesVM(query.value)
+})
+
+const laboratoriesVM = computed(() => {
+  return getSearchLaboratoriesVM(query.value)
 })
 
 const searchChanged = (e: any) => {

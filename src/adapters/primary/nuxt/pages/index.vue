@@ -102,11 +102,13 @@ ft-navigation
 import { listDeliveryMethods } from '@core/usecases/delivery-methods-listing/listDeliveryMethods'
 import deliveryGateway from '../../../../../gateways/deliveryGateway'
 import { categoryGateway } from '../../../../../gateways/categoryGateway'
+import { laboratoryGateway } from '../../../../../gateways/laboratoryGateway'
 import { useProductGateway } from '../../../../../gateways/productGateway'
 import { listCategories } from '@core/usecases/list-categories/listCategories'
 import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM'
 import { listPromotions } from '@core/usecases/list-promotions/listPromotions'
 import { getProductInPromotionVM } from '@adapters/primary/viewModels/get-product/getProductVM'
+import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories'
 
 definePageMeta({ layout: 'main' })
 
@@ -115,6 +117,7 @@ const router = useRouter()
 onMounted(() => {
   listDeliveryMethods(deliveryGateway)
   listCategories(categoryGateway())
+  listLaboratories(laboratoryGateway())
   listPromotions(useProductGateway())
 })
 

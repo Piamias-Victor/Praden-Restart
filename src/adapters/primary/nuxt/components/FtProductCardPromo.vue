@@ -88,7 +88,9 @@ watchEffect(async () => {
 
 <style scoped>
 .promo-amount {
-  transition: font-size 0.3s ease, transform 0.3s ease;
+  transition:
+    font-size 0.3s ease,
+    transform 0.3s ease;
 }
 
 .promo-amount-hover {
