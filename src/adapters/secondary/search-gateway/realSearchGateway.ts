@@ -46,12 +46,16 @@ export class RealSearchGateway extends RealGateway implements SearchGateway {
     }
   ): Promise<Array<Product>> {
     try {
+      console.log('Options reçues dans searchProduct:', options) // Ajoutez ce log
+
       const payload = {
         query: query || undefined,
         laboratoryUuids: options?.laboratoryUuids || undefined,
         size: options?.size || undefined,
         isInPromotion: options?.isInPromotion || undefined
       }
+
+      console.log('Payload construit pour searchProduct:', payload) // Ajoutez ce log
 
       const res = await axios.post(`${this.baseUrl}/search/products`, payload)
 
@@ -64,7 +68,7 @@ export class RealSearchGateway extends RealGateway implements SearchGateway {
   }
 
   async searchFacet(
-    query: string,
+    query?: string,
     options?: {
       laboratoryUuids?: Array<string>
       size?: number
@@ -78,6 +82,8 @@ export class RealSearchGateway extends RealGateway implements SearchGateway {
         size: options?.size || undefined,
         isInPromotion: options?.isInPromotion || undefined
       }
+
+      console.log('laboratoryUuids', payload.laboratoryUuids)
 
       const res = await axios.post(`${this.baseUrl}/search/products`, payload)
 

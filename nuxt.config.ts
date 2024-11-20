@@ -1,4 +1,3 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
 import { defineNuxtConfig } from 'nuxt/config'
 import { fileURLToPath } from 'url'
 
@@ -36,7 +35,8 @@ export default defineNuxtConfig({
     dirs: [
       {
         path: '~/src/adapters/primary/nuxt/components/',
-        global: true
+        global: true,
+        pathPrefix: false
       },
       '~/components'
     ]
@@ -49,12 +49,8 @@ export default defineNuxtConfig({
   modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', '@nuxt/icon'],
 
   dir: {
-    // assets: 'custom-assets',
     layouts: './src/adapters/primary/nuxt/layouts',
-    // middleware: 'custom-middleware',
     pages: './src/adapters/primary/nuxt/pages/'
-    // static: 'custom-static',
-    // store: 'custom-store'
   },
 
   css: ['~/assets/css/tailwind.css'],

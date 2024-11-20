@@ -9,44 +9,62 @@ div.px-8.my-4.flex.flex-col.gap-4
         )
             nuxt-link(:to="'#letter-' + letter" class="text-main font-semibold text-xl") {{ letter }}
     div.mt-4.p-4.border.border-main.rounded-lg.bg-white(
-        v-for="(letter, index) in alphabet"
-        :key="'section-' + index"
+        v-for="(laboratories, letter) in groupedLaboratories"
+        :key="'section-' + letter"
         :id="'letter-' + letter"
     )
         h3.text-lg.font-semibold.text-main Lettre {{ letter }}
         div.h-4
         div.grid.grid-cols-2.gap-4(class='sm:grid-cols-4')
-            nuxt-link.cursor-pointer.text-center.bg-gray-100.p-2.rounded-lg(@click="goToLabo('avene')") Test
-            nuxt-link.cursor-pointer.text-center.bg-gray-100.p-2.rounded-lg(@click="goToLabo('avene')") Test
-            nuxt-link.cursor-pointer.text-center.bg-gray-100.p-2.rounded-lg(@click="goToLabo('avene')") Test
-            nuxt-link.cursor-pointer.text-center.bg-gray-100.p-2.rounded-lg(@click="goToLabo('avene')") Test
-            nuxt-link.cursor-pointer.text-center.bg-gray-100.p-2.rounded-lg(@click="goToLabo('avene')") Test
-            nuxt-link.cursor-pointer.text-center.bg-gray-100.p-2.rounded-lg(@click="goToLabo('avene')") Test
-            nuxt-link.cursor-pointer.text-center.bg-gray-100.p-2.rounded-lg(@click="goToLabo('avene')") Test
-            nuxt-link.cursor-pointer.text-center.bg-gray-100.p-2.rounded-lg(@click="goToLabo('avene')") Test
-            nuxt-link.cursor-pointer.text-center.bg-gray-100.p-2.rounded-lg(@click="goToLabo('avene')") Test
-            nuxt-link.cursor-pointer.text-center.bg-gray-100.p-2.rounded-lg(@click="goToLabo('avene')") Test
+            nuxt-link.cursor-pointer.text-center.bg-gray-100.p-2.rounded-lg(
+                v-for="laboratory in laboratories"
+                :key="laboratory.uuid"
+                :to="laboratory.href"
+            )
+                span {{ laboratory.name }}
 </template>
 
 <script lang="ts" setup>
-import { searchProduct } from '@core/usecases/search-product/searchProduct'
-import { searchGateway } from '../../../../../../gateways/searchGateway'
+import { ref, computed } from 'vue'
+import { getSearchLaboratoriesVM } from '@adapters/primary/viewModels/get-category/getSearchCategoryVM'
+import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories'
+import { laboratoryGateway } from '../../../../../../gateways/laboratoryGateway'
 
 definePageMeta({ layout: 'main' })
-const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
-const router = useRouter() // Crée un tableau des lettres de A à Z
 
-const goToLabo = async (laboratory: string) => {
-  console.log('test')
-  if (laboratory) {
-    try {
-      const result = await searchProduct(laboratory, searchGateway())
-      // Mettre à jour ici searchVM ou un autre état si nécessaire
-    } catch (error) {}
-  } else {
-  }
-  router.push('/laboratory/' + laboratory)
-}
+onMounted(() => {
+  listLaboratories(laboratoryGateway())
+})
+
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+
+// Récupération des laboratoires
+const laboratoriesVM = computed(() => {
+  return getSearchLaboratoriesVM('')
+})
+
+// Grouper les laboratoires par lettre
+const groupedLaboratories = computed(() => {
+  const grouped: Record<
+    string,
+    Array<{ uuid: string; name: string; href: string }>
+  > = {}
+
+  // Initialiser les clés pour chaque lettre
+  alphabet.forEach((letter) => {
+    grouped[letter] = []
+  })
+
+  // Ajouter les laboratoires dans leur groupe
+  laboratoriesVM.value.items.forEach((laboratory) => {
+    const firstLetter = laboratory.name[0]?.toUpperCase() || '#'
+    if (grouped[firstLetter]) {
+      grouped[firstLetter].push(laboratory)
+    }
+  })
+
+  return grouped
+})
 </script>
 
 <style scoped>

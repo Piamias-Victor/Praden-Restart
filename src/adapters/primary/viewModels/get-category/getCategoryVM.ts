@@ -7,6 +7,7 @@ import { useCategoryStore } from '@store/categoryStore'
 import { CategoryGateway } from '@core/gateways/categoryGateway'
 import { SearchGateway } from '@core/gateways/searchGateway'
 import { getChildCategoriesVM } from './getChildCategoryVM'
+import { LaboratoryGateway } from '@core/gateways/laboratoryGateway'
 
 export interface PromotionVM {
   type: ReductionType

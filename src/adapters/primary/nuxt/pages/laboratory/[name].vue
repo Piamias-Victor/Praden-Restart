@@ -1,4 +1,5 @@
 <template lang="pug">
+pre {{categoryUuid}}
 ft-laboratory-categories(:categoriesVM="facetsVM.categories")
 div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
     span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') Avene
@@ -43,8 +44,15 @@ import { getFacetsVM } from '@adapters/primary/viewModels/get-facets/getFacetsVM
 import { listCategories } from '@core/usecases/list-categories/listCategories'
 import { getChildCategoriesVM } from '@adapters/primary/viewModels/get-category/getChildCategoryVM'
 import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM'
+import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories'
+import { laboratoryGateway } from '../../../../../../gateways/laboratoryGateway'
 
 definePageMeta({ layout: 'main' })
+
+onMounted(() => {
+  listLaboratories(laboratoryGateway())
+  getCategory(categoryUuid, categoryGateway(), searchGateway())
+})
 
 const route = useRoute()
 const categoryUuid = route.params.uuid
