@@ -4,7 +4,7 @@ import {
   DeliveryStatus,
   PaymentStatus
 } from '@core/entities/order'
-import { CategoryDoesNotExistsError } from '@core/errors/CategoryDoesNotExistsError'
+import { CategoryDoesNotExistsError } from '@core/errors/CategoryDoesNotExistsError copy'
 import { OrderGateway } from '@core/gateways/orderGateway'
 import {
   PaymentGateway,

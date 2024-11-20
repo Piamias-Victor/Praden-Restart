@@ -7,6 +7,7 @@ import { useCategoryStore } from '@store/categoryStore'
 import { CategoryGateway } from '@core/gateways/categoryGateway'
 import { SearchGateway } from '@core/gateways/searchGateway'
 import { getChildCategoriesVM } from './getChildCategoryVM'
+import { LaboratoryGateway } from '@core/gateways/laboratoryGateway'
 
 export interface PromotionVM {
   type: ReductionType
@@ -123,7 +124,6 @@ export const getCategoryVM = (sortType: SortType = SortType.None) => {
   return {
     name: category?.name || '',
     childCategories: getChildCategoriesVM(category?.uuid),
-    // products: products,
     products: products.map((p) => {
       const promotion = getPromotionVM(p)
       const res = {

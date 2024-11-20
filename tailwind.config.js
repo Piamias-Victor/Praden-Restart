@@ -12,6 +12,7 @@ module.exports = {
     // ...
     require('@tailwindcss/forms'),
     require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/typography'),
     function ({ addUtilities }) {
       const newUtilities = {
         '.no-scrollbar::-webkit-scrollbar': {
