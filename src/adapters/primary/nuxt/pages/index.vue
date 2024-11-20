@@ -7,10 +7,10 @@ div.flex.flex-col.gap-10
   ft-brand-list
   ft-blog(:blogVm='blogVm')
   ft-review
-  ft-information
-  ft-network
+  //- ft-information
+  //- ft-network
   div.h-10
-  ft-newsletter
+  //- ft-newsletter
   ft-navigation
 </template>
 
