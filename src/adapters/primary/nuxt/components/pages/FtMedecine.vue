@@ -59,56 +59,51 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogPanel
-} from '@headlessui/vue'
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM'
-import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart'
+import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
+import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart';
 
 const props = defineProps({
-  item: { type: Array, required: true }
-})
+  item: { type: Array, required: true },
+});
 
-const contactOpened = ref(false)
-const cartQuantity = ref<CartQuantityVM | null>(null)
-const notice = ref(true)
+const contactOpened = ref(false);
+const cartQuantity = ref<CartQuantityVM | null>(null);
+const notice = ref(true);
 
 const emit = defineEmits<{
-  (e: 'close'): void
-  (e: 'move-stepper'): void
-  (e: 'valid-medecine'): void
-}>()
+  (e: 'close'): void;
+  (e: 'move-stepper'): void;
+  (e: 'valid-medecine'): void;
+}>();
 
 const openContact = () => {
-  contactOpened.value = true
-}
+  contactOpened.value = true;
+};
 
 const closeContact = () => {
-  contactOpened.value = false
-}
+  contactOpened.value = false;
+};
 
 const switchNotice = () => {
-  notice.value = !notice.value
-}
+  notice.value = !notice.value;
+};
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 const validMedecine = () => {
-  emit('move-stepper')
-  emit('valid-medecine')
-}
+  emit('move-stepper');
+  emit('valid-medecine');
+};
 
 const validateCart = () => {
-  if (notice) validMedecine()
-  emit('close')
-}
+  if (notice) validMedecine();
+  emit('close');
+};
 
 const filteredItems = computed(() => {
   return Object.values(props.item).filter((product: any) => product.medecine);
@@ -116,13 +111,10 @@ const filteredItems = computed(() => {
 
 watchEffect(async () => {
   try {
-    cartQuantity.value = await getCartQuantityVM(useProductGateway())
+    cartQuantity.value = await getCartQuantityVM(useProductGateway());
   } catch (error) {
-    console.error(
-      'Erreur lors de la récupération de la quantité du panier',
-      error
-    )
-    cartQuantity.value = { totalQuantity: 0 } // Assurer une valeur par défaut si l'appel échoue
+    console.error('Erreur lors de la récupération de la quantité du panier', error);
+    cartQuantity.value = { totalQuantity: 0 }; // Assurer une valeur par défaut si l'appel échoue
   }
-})
+});
 </script>

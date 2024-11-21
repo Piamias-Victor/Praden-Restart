@@ -47,14 +47,14 @@ div(v-else class='').px-4
 </template>
 
 <script lang="ts" setup>
-import { register } from 'swiper/element/bundle'
-register()
+import { register } from 'swiper/element/bundle';
+register();
 
-const isLoading = ref(true)
+const isLoading = ref(true);
 
 onMounted(() => {
   setTimeout(() => {
-    isLoading.value = false
-  }, 1000)
-})
+    isLoading.value = false;
+  }, 1000);
+});
 </script>

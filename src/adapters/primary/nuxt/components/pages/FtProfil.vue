@@ -73,84 +73,79 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
-import { logoutUser } from '@core/usecases/user/logout'
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogPanel
-} from '@headlessui/vue'
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import { logoutUser } from '@core/usecases/user/logout';
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
 
-const connexionOpened = ref(false)
+const connexionOpened = ref(false);
 
-const subscribeOpened = ref(false)
+const subscribeOpened = ref(false);
 
-const contactOpened = ref(false)
+const contactOpened = ref(false);
 
-const ordoOpened = ref(false)
+const ordoOpened = ref(false);
 
-const addressOpened = ref(false)
+const addressOpened = ref(false);
 
-const fileInput = ref(null)
+const fileInput = ref(null);
 
 const emit = defineEmits<{
-  (e: 'close'): void
-}>()
+  (e: 'close'): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 function closeModal() {
-  emit('close')
+  emit('close');
 }
 
 const openConnexion = () => {
-  connexionOpened.value = true
-}
+  connexionOpened.value = true;
+};
 
 const closeConnexion = () => {
-  connexionOpened.value = false
-}
+  connexionOpened.value = false;
+};
 
 const openSubscribe = () => {
-  subscribeOpened.value = true
-}
+  subscribeOpened.value = true;
+};
 
 const closeSubscribe = () => {
-  subscribeOpened.value = false
-}
+  subscribeOpened.value = false;
+};
 
 const openContact = () => {
-  contactOpened.value = true
-}
+  contactOpened.value = true;
+};
 
 const closeContact = () => {
-  contactOpened.value = false
-}
+  contactOpened.value = false;
+};
 
 const openOrdo = () => {
-  ordoOpened.value = true
-}
+  ordoOpened.value = true;
+};
 
 const closeOrdo = () => {
-  ordoOpened.value = false
-}
+  ordoOpened.value = false;
+};
 
 const openAddress = () => {
-  addressOpened.value = true
-}
+  addressOpened.value = true;
+};
 
 const closeAddress = () => {
-  addressOpened.value = false
-}
+  addressOpened.value = false;
+};
 
 const logout = () => {
-  logoutUser()
-}
+  logoutUser();
+};
 
 const user = computed(() => {
-  return getUserVM()
-})
+  return getUserVM();
+});
 </script>

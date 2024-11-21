@@ -7,11 +7,11 @@ Vue3Marquee(v-else)
 </template>
 
 <script lang="ts" setup>
-import { Vue3Marquee } from 'vue3-marquee'
+import { Vue3Marquee } from 'vue3-marquee';
 
-const isLoading = ref(true)
+const isLoading = ref(true);
 
 setTimeout(() => {
-  isLoading.value = false
-}, 1000)
+  isLoading.value = false;
+}, 1000);
 </script>

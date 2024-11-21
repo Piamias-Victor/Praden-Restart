@@ -50,26 +50,23 @@ div.mt-4
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref, computed, watchEffect } from 'vue'
-import { getProduct } from '@core/usecases/get-product/getProduct'
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { categoryGateway } from '../../../../../../gateways/categoryGateway'
-import { getProductVM } from '@adapters/primary/viewModels/get-product/getProductVM'
-import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM'
-import { listCategories } from '@core/usecases/list-categories/listCategories'
-import { getSearchResultVMFirstSix } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM'
-import { searchGateway } from '../../../../../../gateways/searchGateway'
-import { searchProduct } from '@core/usecases/search-product/searchProduct'
-import {
-  addToFavorite,
-  removeFromFavorite
-} from '@core/usecases/add-to-favorite/addToFavorite'
-import { sendNotifLike } from '@core/usecases/add-notif/cartNotif'
-import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification'
-import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm'
-import { getCategoryVM } from '@adapters/primary/viewModels/get-category/getCategoryVM'
+import { onMounted, ref, computed, watchEffect } from 'vue';
+import { getProduct } from '@core/usecases/get-product/getProduct';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { categoryGateway } from '../../../../../../gateways/categoryGateway';
+import { getProductVM } from '@adapters/primary/viewModels/get-product/getProductVM';
+import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
+import { listCategories } from '@core/usecases/list-categories/listCategories';
+import { getSearchResultVMFirstSix } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM';
+import { searchGateway } from '../../../../../../gateways/searchGateway';
+import { searchProduct } from '@core/usecases/search-product/searchProduct';
+import { addToFavorite, removeFromFavorite } from '@core/usecases/add-to-favorite/addToFavorite';
+import { sendNotifLike } from '@core/usecases/add-notif/cartNotif';
+import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification';
+import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm';
+import { getCategoryVM } from '@adapters/primary/viewModels/get-category/getCategoryVM';
 
-definePageMeta({ layout: 'main' })
+definePageMeta({ layout: 'main' });
 
 const productTest1 = {
   href: '/products/83f04e67-7d59-4bdb-97df-cc67804ae621',
@@ -78,10 +75,8 @@ const productTest1 = {
   name: 'Boiron Mag',
   laboratory: 'AVENE',
   availableStock: 14,
-  images: [
-    'https://www.pharmacieagnespraden.com/41314-large_default/avne-eau-thermale-spray-300ml.jpg'
-  ]
-}
+  images: ['https://www.pharmacieagnespraden.com/41314-large_default/avne-eau-thermale-spray-300ml.jpg'],
+};
 
 const productTest2 = {
   href: '/products/5fff6558-c618-42d9-984b-9a8493e0fa46',
@@ -91,9 +86,9 @@ const productTest2 = {
   laboratory: 'GILBERT',
   availableStock: 200,
   images: [
-    'https://www.pharmacieagnespraden.com/69044-large_default/gilbert-physiodose-srum-physiologique-40-doses-5-ml.jpg'
-  ]
-}
+    'https://www.pharmacieagnespraden.com/69044-large_default/gilbert-physiodose-srum-physiologique-40-doses-5-ml.jpg',
+  ],
+};
 
 const productTest3 = {
   href: '/products/5fff6558-c618-42d9-984b-9a8493e0fa46',
@@ -102,10 +97,8 @@ const productTest3 = {
   name: 'Cinq sur Cinq crème apaisante 3 en 1 40g',
   laboratory: 'BAUSCH & LOMB',
   availableStock: 200,
-  images: [
-    'https://www.pharmacieagnespraden.com/51065-large_default/n-cinq-sur-cinq-cr-apais-40g-1.jpg'
-  ]
-}
+  images: ['https://www.pharmacieagnespraden.com/51065-large_default/n-cinq-sur-cinq-cr-apais-40g-1.jpg'],
+};
 
 const productsArray = [
   productTest1,
@@ -115,8 +108,8 @@ const productsArray = [
   productTest2,
   productTest3,
   productTest1,
-  productTest2
-]
+  productTest2,
+];
 
 const promoTest1 = {
   href: '/products/ba553d06-6ce4-49a5-a561-d903ed8a6b1e',
@@ -128,9 +121,9 @@ const promoTest1 = {
   laboratory: 'LA ROCHE POSAY',
   availableStock: 14,
   images: [
-    'https://praden.s3.eu-west-3.amazonaws.com/public/products/030326ec23cf2772478917236e0df8dd019651127310493127e00de6b92f4f30'
-  ]
-}
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/030326ec23cf2772478917236e0df8dd019651127310493127e00de6b92f4f30',
+  ],
+};
 
 const promoTest2 = {
   href: '/products/6e6ca9f0-fc53-4d2d-ac6d-fc257e180190',
@@ -141,9 +134,9 @@ const promoTest2 = {
   laboratory: 'ARKOPHARMA',
   availableStock: 14,
   images: [
-    'https://praden.s3.eu-west-3.amazonaws.com/public/products/5d948d47b842ca6cdab9f6812ec994f312c4827a26170ce81e00e7c0be3de1ba'
-  ]
-}
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/5d948d47b842ca6cdab9f6812ec994f312c4827a26170ce81e00e7c0be3de1ba',
+  ],
+};
 
 const promoTest3 = {
   href: '/products/68152e41-11d4-4e1f-b2aa-48290be298d6',
@@ -155,9 +148,9 @@ const promoTest3 = {
   laboratory: 'LEURQUIN-MEDIOLANUM',
   availableStock: 14,
   images: [
-    'https://praden.s3.eu-west-3.amazonaws.com/public/products/dedf7cfb5fc1c17acce8737d2d15e887c307fa3b758ca46343acf937aad33900'
-  ]
-}
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/dedf7cfb5fc1c17acce8737d2d15e887c307fa3b758ca46343acf937aad33900',
+  ],
+};
 
 const promoTest4 = {
   href: '/products/b9377ef8-73ae-4d52-8be2-02e85b8f6a85',
@@ -169,9 +162,9 @@ const promoTest4 = {
   laboratory: 'AVÈNE',
   availableStock: 14,
   images: [
-    'https://praden.s3.eu-west-3.amazonaws.com/public/products/f15e98798bc3ed93d3b965af9452cf3ecd545bfd824a6afbcb5664e5a524e00d'
-  ]
-}
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/f15e98798bc3ed93d3b965af9452cf3ecd545bfd824a6afbcb5664e5a524e00d',
+  ],
+};
 
 const promoTest5 = {
   href: '/products/532d8de1-9c3b-4e4b-b815-66d65868e43a',
@@ -183,9 +176,9 @@ const promoTest5 = {
   laboratory: 'AVÈNE',
   availableStock: 14,
   images: [
-    'https://praden.s3.eu-west-3.amazonaws.com/public/products/53fecf14dfc68709d317a14b9fde9c05518a981732163730f6dab4ec8c05cd5a'
-  ]
-}
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/53fecf14dfc68709d317a14b9fde9c05518a981732163730f6dab4ec8c05cd5a',
+  ],
+};
 
 const promoTest6 = {
   href: '/products/570f55ce-76fb-461d-9935-097c574f8f84',
@@ -197,109 +190,101 @@ const promoTest6 = {
   laboratory: 'PROCTER & GAMBLE',
   availableStock: 14,
   images: [
-    'https://praden.s3.eu-west-3.amazonaws.com/public/products/4e54d3891394fd2ea4d3ac669c66d939622a72c8ce05daa5404fa2ab69f552f0'
-  ]
-}
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/4e54d3891394fd2ea4d3ac669c66d939622a72c8ce05daa5404fa2ab69f552f0',
+  ],
+};
 
-const promoArray = [
-  promoTest4,
-  promoTest5,
-  promoTest6,
-  promoTest2,
-  promoTest3,
-  promoTest1
-]
+const promoArray = [promoTest4, promoTest5, promoTest6, promoTest2, promoTest3, promoTest1];
 
-const productId = ref<string | null>(null)
+const productId = ref<string | null>(null);
 
 function isUuidNotInArray(uuid) {
-  const promo = promoArray.find((promo) => promo.uuid === uuid)
-  return promo || null
+  const promo = promoArray.find((promo) => promo.uuid === uuid);
+  return promo || null;
 }
 
-const isPromo = ref(false)
+const isPromo = ref(false);
 
-const route = useRoute()
+const route = useRoute();
 
 onMounted(() => {
-  productId.value = route.params.uuid as string
-  getProduct(productId.value, useProductGateway())
-  listCategories(categoryGateway())
-})
+  productId.value = route.params.uuid as string;
+  getProduct(productId.value, useProductGateway());
+  listCategories(categoryGateway());
+});
 
 const productVM = computed(() => {
-  return getProductVM()
-})
+  return getProductVM();
+});
 
 const categoriesVM = computed(() => {
-  return getRootCategoriesVM()
-})
+  return getRootCategoriesVM();
+});
 
 const sendUserNotif = () => {
-  setTimeout(sendNotifLike)
-  setTimeout(removeFirstNotification, 1500)
-}
+  setTimeout(sendNotifLike);
+  setTimeout(removeFirstNotification, 1500);
+};
 
 const addItemToFavorite = (uuid: string) => {
-  addToFavorite(uuid, useProductGateway())
-  sendUserNotif()
-}
+  addToFavorite(uuid, useProductGateway());
+  sendUserNotif();
+};
 
 const removeItemFromFavorite = (uuid: string) => {
-  removeFromFavorite(uuid)
-}
+  removeFromFavorite(uuid);
+};
 
 export interface LikeQuantityVM {
-  items: HashTable<number>
-  totalQuantity: number
+  items: HashTable<number>;
+  totalQuantity: number;
 }
 
-const likeQuantity = ref<LikeQuantityVM | null>(null)
+const likeQuantity = ref<LikeQuantityVM | null>(null);
 
 watchEffect(async () => {
-  likeQuantity.value = await getLikeQuantityVM(useProductGateway())
-})
+  likeQuantity.value = await getLikeQuantityVM(useProductGateway());
+});
 
 const categoryVM = computed(() => {
-  return getCategoryVM()
-})
+  return getCategoryVM();
+});
 
 const searchVM = computed(() => {
-  let res = getSearchResultVMFirstSix(route.params.uuid as string)
+  let res = getSearchResultVMFirstSix(route.params.uuid as string);
   if (res.items && res.items.length > 0) {
-    return res.items
+    return res.items;
   }
-  return productsArray
-})
+  return productsArray;
+});
 
 // Utilisation de watchEffect pour détecter les changements de laboratory
 watchEffect(async () => {
-  const laboratory = productVM.value?.laboratory
+  const laboratory = productVM.value?.laboratory;
   if (laboratory) {
     try {
-      const laboratoryName = laboratory.split(' ')[0].toLowerCase()
+      const laboratoryName = laboratory.split(' ')[0].toLowerCase();
 
-      const result = await searchProduct(laboratoryName, searchGateway())
+      const result = await searchProduct(laboratoryName, searchGateway());
       // Mettre à jour ici searchVM ou un autre état si nécessaire
     } catch (error) {}
   } else {
   }
-})
+});
 
 watchEffect(async () => {
-  const laboratory = productVM.value?.laboratory
+  const laboratory = productVM.value?.laboratory;
   if (laboratory) {
     try {
-      const laboratoryName = laboratory.toLowerCase()
-      const result = await searchProduct(laboratoryName, searchGateway())
+      const laboratoryName = laboratory.toLowerCase();
+      const result = await searchProduct(laboratoryName, searchGateway());
       // Mettre à jour ici searchVM ou un autre état si nécessaire
     } catch (error) {}
   } else {
   }
-})
+});
 
 watchEffect(async () => {
-  if (productId && productId.value)
-    isPromo.value = isUuidNotInArray(productId.value)
-})
+  if (productId.value && productId.value) isPromo.value = isUuidNotInArray(productId.value);
+});
 </script>

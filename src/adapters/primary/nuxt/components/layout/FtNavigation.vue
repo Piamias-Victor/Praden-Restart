@@ -15,85 +15,69 @@ ft-like-panel(v-if="likeOpened" @close="closeLike")
 </template>
 
 <script lang="ts" setup>
-import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm'
+import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm';
 
 export interface CartQuantityVM {
-  items: HashTable<number>
-  totalQuantity: number
-  medecine: boolean
+  items: HashTable<number>;
+  totalQuantity: number;
+  medecine: boolean;
 }
 
 export interface LikeQuantityVM {
-  items: HashTable<number>
-  totalQuantity: number
+  items: HashTable<number>;
+  totalQuantity: number;
 }
-const heartColor = ref('text-contrast')
+const heartColor = ref('text-contrast');
 
-const bagColor = ref('text-contrast')
+const bagColor = ref('text-contrast');
 
-const cartOpened = ref(false)
+const cartOpened = ref(false);
 
-const likeOpened = ref(false)
+const likeOpened = ref(false);
 
-const cartQuantity = ref<CartQuantityVM | null>(null)
+const cartQuantity = ref<CartQuantityVM | null>(null);
 
-const likeQuantity = ref<LikeQuantityVM | null>(null)
+const likeQuantity = ref<LikeQuantityVM | null>(null);
 
 const openCart = () => {
-  cartOpened.value = true
-}
+  cartOpened.value = true;
+};
 
 const closeCart = () => {
-  cartOpened.value = false
-}
+  cartOpened.value = false;
+};
 
 const openLike = () => {
-  likeOpened.value = true
-}
+  likeOpened.value = true;
+};
 
 const closeLike = () => {
-  likeOpened.value = false
-}
+  likeOpened.value = false;
+};
 
 watchEffect(async () => {
-  cartQuantity.value = await getCartQuantityVM(useProductGateway())
-})
+  cartQuantity.value = await getCartQuantityVM(useProductGateway());
+});
 
 watchEffect(async () => {
-  if (
-    cartQuantity.value &&
-    cartQuantity.value.totalQuantity &&
-    cartQuantity.value.totalQuantity === 0
-  )
-    heartColor.value = 'text-contrast'
-  else if (
-    cartQuantity.value &&
-    cartQuantity.value.totalQuantity &&
-    cartQuantity.value.totalQuantity !== 0
-  )
-    heartColor.value = 'text-main'
-  else heartColor.value = 'text-contrast'
-})
+  if (cartQuantity.value && cartQuantity.value.totalQuantity && cartQuantity.value.totalQuantity === 0)
+    heartColor.value = 'text-contrast';
+  else if (cartQuantity.value && cartQuantity.value.totalQuantity && cartQuantity.value.totalQuantity !== 0)
+    heartColor.value = 'text-main';
+  else heartColor.value = 'text-contrast';
+});
 
 watchEffect(async () => {
-  if (
-    likeQuantity.value &&
-    likeQuantity.value.totalQuantity &&
-    likeQuantity.value.totalQuantity === 0
-  )
-    bagColor.value = 'text-contrast'
-  else if (
-    likeQuantity.value &&
-    likeQuantity.value.totalQuantity &&
-    likeQuantity.value.totalQuantity !== 0
-  )
-    bagColor.value = 'text-main'
-  else bagColor.value = 'text-contrast'
-})
+  if (likeQuantity.value && likeQuantity.value.totalQuantity && likeQuantity.value.totalQuantity === 0)
+    bagColor.value = 'text-contrast';
+  else if (likeQuantity.value && likeQuantity.value.totalQuantity && likeQuantity.value.totalQuantity !== 0)
+    bagColor.value = 'text-main';
+  else bagColor.value = 'text-contrast';
+});
 
 watchEffect(async () => {
-  likeQuantity.value = await getLikeQuantityVM(useProductGateway())
-})
+  likeQuantity.value = await getLikeQuantityVM(useProductGateway());
+});
 </script>

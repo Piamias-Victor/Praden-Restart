@@ -6,7 +6,7 @@ module.exports = {
     './src/adapters/primary/nuxt/layouts/**/*.vue',
     './src/adapters/primary/nuxt/pages/**/*.vue',
     './src/adapters/primary/nuxt/plugins/**/*.{js,ts}',
-    './nuxt.config.{js,ts}'
+    './nuxt.config.{js,ts}',
   ],
   plugins: [
     // ...
@@ -16,18 +16,18 @@ module.exports = {
     function ({ addUtilities }) {
       const newUtilities = {
         '.no-scrollbar::-webkit-scrollbar': {
-          display: 'none'
+          display: 'none',
         },
         '.no-scrollbar': {
           '-ms-overflow-style': 'none',
-          'scrollbar-width': 'none'
-        }
-      }
-      addUtilities(newUtilities)
-    }
+          'scrollbar-width': 'none',
+        },
+      };
+      addUtilities(newUtilities);
+    },
   ],
   variants: {
-    extend: {}
+    extend: {},
   },
   theme: {
     extend: {
@@ -58,8 +58,8 @@ module.exports = {
         grass9: '#46a758',
         grass10: '#3d9a50',
         grass11: '#297c3b',
-        grass12: '#1b311e'
-      }
-    }
-  }
-}
+        grass12: '#1b311e',
+      },
+    },
+  },
+};

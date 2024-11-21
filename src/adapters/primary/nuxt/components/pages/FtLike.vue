@@ -26,41 +26,41 @@ div.mt-2.border-t.py-6.px-4(class="sm:px-6")
 </template>
 
 <script lang="ts" setup>
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM'
-import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm'
-import { getLikeVM } from '@adapters/primary/viewModels/get-like/getLikeVM'
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
+import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm';
+import { getLikeVM } from '@adapters/primary/viewModels/get-like/getLikeVM';
 
-const router = useRouter()
+const router = useRouter();
 
-const likeQuantity = ref<LikeQuantityVM | null>(null)
+const likeQuantity = ref<LikeQuantityVM | null>(null);
 
 const cart = computed(() => {
-  return getCartVM()
-})
+  return getCartVM();
+});
 
 const like = computed(() => {
-  return getLikeVM()
-})
+  return getLikeVM();
+});
 
 const emit = defineEmits<{
-  (e: 'close'): void
-  (e: 'move-stepper'): void
-}>()
+  (e: 'close'): void;
+  (e: 'move-stepper'): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 function closeModal() {
-  emit('close')
+  emit('close');
 }
 
 const validateCart = () => {
-  emit('move-stepper')
-}
+  emit('move-stepper');
+};
 
 watchEffect(async () => {
-  likeQuantity.value = await getLikeQuantityVM(useProductGateway())
-})
+  likeQuantity.value = await getLikeQuantityVM(useProductGateway());
+});
 </script>

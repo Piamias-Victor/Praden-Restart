@@ -13,53 +13,47 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogPanel
-} from '@headlessui/vue'
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM'
-
+import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
 
 const emit = defineEmits<{
-  (e: 'close'): void
-  (e: 'move-stepper'): void
-}>()
+  (e: 'close'): void;
+  (e: 'move-stepper'): void;
+}>();
 
-const router = useRouter()
+const router = useRouter();
 
-const stepper = ref(0)
+const stepper = ref(0);
 
-const medecineOpened = ref(false)
+const medecineOpened = ref(false);
 
 const moveStepper = () => {
-  stepper.value += 1
-}
+  stepper.value += 1;
+};
 
 const openMedecine = () => {
-  medecineOpened.value = true
-}
+  medecineOpened.value = true;
+};
 
 const closeMedecine = () => {
-  medecineOpened.value = false
-}
+  medecineOpened.value = false;
+};
 
 const closeCart = () => {
-  closeModal()
-}
+  closeModal();
+};
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 const cart = computed(() => {
-  return getCartVM()
-})
+  return getCartVM();
+});
 
 function closeModal() {
-  emit('close')
+  emit('close');
 }
 </script>

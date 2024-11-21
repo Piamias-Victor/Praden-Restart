@@ -14,20 +14,20 @@ div.py-4.px-2.flex.items-center.gap-2.overflow-x-scroll.custom-scrollbar.text-xl
 
 <script lang="ts" setup>
 const props = defineProps<{
-  categoriesVM: any
-}>()
+  categoriesVM: any;
+}>();
 
-definePageMeta({ layout: 'main' })
+definePageMeta({ layout: 'main' });
 
-const router = useRouter()
+const router = useRouter();
 
 const goToCat = (path: string, name: string) => {
-  router.push('/categories/' + path + '?' + name)
-}
+  router.push('/categories/' + path + '?' + name);
+};
 
 const goBack = () => {
-  router.back()
-}
+  router.back();
+};
 </script>
 
 <style scoped>

@@ -1,9 +1,9 @@
-import { User } from '@core/types/type'
-import { useUserStore } from '@store/userStore'
+import { User } from '@core/types/type';
+import { useUserStore } from '@store/userStore';
 
 export const createGoogleUser = (user: any) => {
-  const userStore = useUserStore()
-  const name = parseName(user.displayName)
+  const userStore = useUserStore();
+  const name = parseName(user.displayName);
   const newUser: User = {
     id: '',
     pwd: '',
@@ -16,19 +16,18 @@ export const createGoogleUser = (user: any) => {
     address: '',
     postal: '',
     appartement: '',
-    city: ''
-  }
-  userStore.listUser(newUser)
-  userStore.connect()
-}
+    city: '',
+  };
+  userStore.listUser(newUser);
+  userStore.connect();
+};
 
 export const parseName = (fullName: string) => {
-  const trimmedStr = fullName.trim()
+  const trimmedStr = fullName.trim();
 
-  const spaceIndex = trimmedStr.indexOf(' ')
+  const spaceIndex = trimmedStr.indexOf(' ');
 
-  const firstName =
-    spaceIndex === -1 ? trimmedStr : trimmedStr.substring(0, spaceIndex)
-  const lastName = spaceIndex === -1 ? '' : trimmedStr.substring(spaceIndex + 1)
-  return { firstName, lastName }
-}
+  const firstName = spaceIndex === -1 ? trimmedStr : trimmedStr.substring(0, spaceIndex);
+  const lastName = spaceIndex === -1 ? '' : trimmedStr.substring(spaceIndex + 1);
+  return { firstName, lastName };
+};

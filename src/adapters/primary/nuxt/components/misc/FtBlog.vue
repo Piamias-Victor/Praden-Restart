@@ -25,12 +25,12 @@ section.px-2
 
 <script lang="ts" setup>
 const props = defineProps<{
-  blogVm: any
-}>()
+  blogVm: any;
+}>();
 
-definePageMeta({ layout: 'main' })
+definePageMeta({ layout: 'main' });
 
-const router = useRouter()
+const router = useRouter();
 </script>
 
 <style scoped>

@@ -32,99 +32,94 @@ ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaborat
 </template>
 
 <script lang="ts" setup>
-import {
-  getCategory,
-  getCategoryVM
-} from '@adapters/primary/viewModels/get-category/getCategoryVM'
-import { categoryGateway } from '../../../../../../gateways/categoryGateway'
-import { searchGateway } from '../../../../../../gateways/searchGateway'
-import { SortType } from '@utils/sort'
-import { onMounted, ref, computed, watchEffect } from 'vue'
-import { getFacetsVM } from '@adapters/primary/viewModels/get-facets/getFacetsVM'
-import { listCategories } from '@core/usecases/list-categories/listCategories'
-import { getChildCategoriesVM } from '@adapters/primary/viewModels/get-category/getChildCategoryVM'
-import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM'
-import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories'
-import { laboratoryGateway } from '../../../../../../gateways/laboratoryGateway'
+import { getCategory, getCategoryVM } from '@adapters/primary/viewModels/get-category/getCategoryVM';
+import { categoryGateway } from '../../../../../../gateways/categoryGateway';
+import { searchGateway } from '../../../../../../gateways/searchGateway';
+import { SortType } from '@utils/sort';
+import { onMounted, ref, computed, watchEffect } from 'vue';
+import { getFacetsVM } from '@adapters/primary/viewModels/get-facets/getFacetsVM';
+import { listCategories } from '@core/usecases/list-categories/listCategories';
+import { getChildCategoriesVM } from '@adapters/primary/viewModels/get-category/getChildCategoryVM';
+import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM';
+import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
+import { laboratoryGateway } from '../../../../../../gateways/laboratoryGateway';
 
-definePageMeta({ layout: 'main' })
+definePageMeta({ layout: 'main' });
 
 onMounted(() => {
-  listLaboratories(laboratoryGateway())
-  getCategory(categoryUuid, categoryGateway(), searchGateway())
-})
+  listLaboratories(laboratoryGateway());
+  getCategory(categoryUuid, categoryGateway(), searchGateway());
+});
 
-const route = useRoute()
-const categoryUuid = route.params.uuid
+const route = useRoute();
+const categoryUuid = route.params.uuid;
 
-const sortType = ref(SortType.None)
-const displayProduct = ref<any | null>(null)
-const laboratoryFilter = ref<string | null>(null) // Variable pour le laboratoire filtré
+const sortType = ref(SortType.None);
+const displayProduct = ref<any | null>(null);
+const laboratoryFilter = ref<string | null>(null); // Variable pour le laboratoire filtré
 
-const dropdownOpen = ref(false)
+const dropdownOpen = ref(false);
 
 const toggleDropdown = () => {
-  dropdownOpen.value = !dropdownOpen.value
-}
+  dropdownOpen.value = !dropdownOpen.value;
+};
 
 const sortBy = (st: number) => {
-  if (sortType && typeof sortType.value !== 'undefined') {
+  if (sortType.value && typeof sortType.value !== 'undefined') {
     if (sortType.value === st) {
-      sortType.value = SortType.None
+      sortType.value = SortType.None;
     } else {
-      sortType.value = st
+      sortType.value = st;
     }
   }
-  dropdownOpen.value = false // Fermer le dropdown après avoir sélectionné une option
-}
+  dropdownOpen.value = false; // Fermer le dropdown après avoir sélectionné une option
+};
 
 const searchLaboratory = (labo: string | null) => {
-  laboratoryFilter.value = labo // Mettez à jour le filtre de laboratoire
-}
+  laboratoryFilter.value = labo; // Mettez à jour le filtre de laboratoire
+};
 
 const filteredProducts = computed(() => {
-  let res
+  let res;
   // Vérifie si `searchVM.value.items` est défini
   if (searchVM.value && searchVM.value.items) {
     if (!laboratoryFilter.value) {
-      res = searchVM.value.items // Retourne tous les produits si aucun filtre
+      res = searchVM.value.items; // Retourne tous les produits si aucun filtre
     } else {
-      res = searchVM.value.items.filter(
-        (product) => product.laboratory === laboratoryFilter.value
-      )
+      res = searchVM.value.items.filter((product) => product.laboratory === laboratoryFilter.value);
     }
   } else {
-    console.warn('searchVM.value.items est undefined')
-    res = [] // Retourne un tableau vide si `items` n'est pas défini
+    console.warn('searchVM.value.items est undefined');
+    res = []; // Retourne un tableau vide si `items` n'est pas défini
   }
-  return res
-})
+  return res;
+});
 
-onMounted(() => {})
+onMounted(() => {});
 
 const searchVM = computed(() => {
-  const result = getSearchResultVM(sortType.value)
+  const result = getSearchResultVM(sortType.value);
   if (!result) {
-    console.warn('getSearchResultVM() a retourné undefined')
+    console.warn('getSearchResultVM() a retourné undefined');
   }
-  return result || { items: [] } // Retourne un objet par défaut si `result` est `undefined`
-})
+  return result || { items: [] }; // Retourne un objet par défaut si `result` est `undefined`
+});
 
 const facetsVM = computed(() => {
-  const result = getFacetsVM()
+  const result = getFacetsVM();
   if (!result) {
-    console.warn('getFacetsVM() a retourné undefined')
+    console.warn('getFacetsVM() a retourné undefined');
   }
-  return result || { categories: [] } // Retourne un objet par défaut si `result` est `undefined`
-})
+  return result || { categories: [] }; // Retourne un objet par défaut si `result` est `undefined`
+});
 
-const filterOpened = ref(false)
+const filterOpened = ref(false);
 
 const openFilter = () => {
-  filterOpened.value = true
-}
+  filterOpened.value = true;
+};
 
 const closeCart = () => {
-  filterOpened.value = false
-}
+  filterOpened.value = false;
+};
 </script>

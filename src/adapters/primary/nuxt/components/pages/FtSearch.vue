@@ -73,68 +73,61 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogPanel
-} from '@headlessui/vue'
-import { searchGateway } from '../../../../../../gateways/searchGateway'
-import { searchProduct } from '@core/usecases/search-product/searchProduct'
-import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM'
-import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM'
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
+import { searchGateway } from '../../../../../../gateways/searchGateway';
+import { searchProduct } from '@core/usecases/search-product/searchProduct';
+import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM';
+import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
 import {
   getSearchCategoriesVM,
-  getSearchLaboratoriesVM
-} from '@adapters/primary/viewModels/get-category/getSearchCategoryVM'
-import { SortType } from '@utils/sort'
-import { parsePrice } from '@utils/formater'
+  getSearchLaboratoriesVM,
+} from '@adapters/primary/viewModels/get-category/getSearchCategoryVM';
+import { SortType } from '@utils/sort';
+import { parsePrice } from '@utils/formater';
 const props = defineProps<{
-  categoriesVM: any
-}>()
+  categoriesVM: any;
+}>();
 
 const emit = defineEmits<{
-  (e: 'close'): void
-}>()
+  (e: 'close'): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 function closeModal() {
-  emit('close')
+  emit('close');
 }
 
-const filterOpened = ref(false)
+const filterOpened = ref(false);
 
 const openFilter = () => {
-  filterOpened.value = true
-}
+  filterOpened.value = true;
+};
 
-const dropdownOpen = ref(false)
+const dropdownOpen = ref(false);
 
 const toggleDropdown = () => {
-  dropdownOpen.value = !dropdownOpen.value
-}
+  dropdownOpen.value = !dropdownOpen.value;
+};
 
-const sortType = ref(SortType.None)
+const sortType = ref(SortType.None);
 
-const laboratoryFilter = ref<string | null>(null) // Variable pour le laboratoire filtré
+const laboratoryFilter = ref<string | null>(null); // Variable pour le laboratoire filtré
 
-const categoryFilter = ref<string | null>(null)
+const categoryFilter = ref<string | null>(null);
 
-const priceFilter = ref<string | null>(null)
+const priceFilter = ref<string | null>(null);
 
-const displayProduct = ref<any | null>(null)
+const displayProduct = ref<any | null>(null);
 
 const filteredProducts = computed(() => {
-  let res = searchVM.value.items
+  let res = searchVM.value.items;
   // Filtrer les produits en fonction du laboratoire
   if (!laboratoryFilter.value) {
   } else {
-    res = searchVM.value.items.filter(
-      (product) => product.laboratory === laboratoryFilter.value
-    )
+    res = searchVM.value.items.filter((product) => product.laboratory === laboratoryFilter.value);
   }
   // if (!categoryFilter.value) {
   //   return res // Retourner tous les produits si aucun filtre
@@ -143,65 +136,64 @@ const filteredProducts = computed(() => {
   } else {
     res = res.filter(
       (product) =>
-        parsePrice(product.price) >= priceFilter.value[0] &&
-        parsePrice(product.price) <= priceFilter.value[1]
-    )
+        parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1],
+    );
   }
   // res = searchVM.value.items.filter(
   //   (product) => product.laboratory === laboratoryFilter.value
   // )
-  return res
-})
+  return res;
+});
 
 const sortBy = (st: number) => {
   if (sortType && typeof sortType.value !== 'undefined') {
     if (sortType.value === st) {
-      sortType.value = SortType.None
+      sortType.value = SortType.None;
     } else {
-      sortType.value = st
+      sortType.value = st;
     }
   }
-  dropdownOpen.value = false
-}
+  dropdownOpen.value = false;
+};
 
 const searchLaboratory = (labo: string | null) => {
-  laboratoryFilter.value = labo // Mettez à jour le filtre de laboratoire
-}
+  laboratoryFilter.value = labo; // Mettez à jour le filtre de laboratoire
+};
 
 const searchCategory = (cat: string | null) => {
-  categoryFilter.value = cat // Mettez à jour le filtre de laboratoire
-}
+  categoryFilter.value = cat; // Mettez à jour le filtre de laboratoire
+};
 
 const searchPrice = (price: any) => {
-  priceFilter.value = price // Mettez à jour le filtre de laboratoire
-}
+  priceFilter.value = price; // Mettez à jour le filtre de laboratoire
+};
 
-const query = ref('')
-let debounceTimeout: ReturnType<typeof setTimeout> | null = null
+const query = ref('');
+let debounceTimeout: ReturnType<typeof setTimeout> | null = null;
 
 const categoriesVM = computed(() => {
-  return getSearchCategoriesVM(query.value)
-})
+  return getSearchCategoriesVM(query.value);
+});
 
 const laboratoriesVM = computed(() => {
-  return getSearchLaboratoriesVM(query.value)
-})
+  return getSearchLaboratoriesVM(query.value);
+});
 
 const searchChanged = (e: any) => {
   if (debounceTimeout) {
-    clearTimeout(debounceTimeout)
+    clearTimeout(debounceTimeout);
   }
-  query.value = e.target.value
+  query.value = e.target.value;
   debounceTimeout = setTimeout(() => {
-    searchProduct(query.value, searchGateway())
-  }, 500)
-}
+    searchProduct(query.value, searchGateway());
+  }, 500);
+};
 
 const searchVM = computed(() => {
-  return getSearchResultVM(sortType.value)
-})
+  return getSearchResultVM(sortType.value);
+});
 
 const closeCart = () => {
-  filterOpened.value = false
-}
+  filterOpened.value = false;
+};
 </script>

@@ -45,83 +45,78 @@
 </template>
 
 <script lang="ts" setup>
-import {
-  getCategory,
-  getCategoryVM
-} from '@adapters/primary/viewModels/get-category/getCategoryVM'
-import { categoryGateway } from '../../../../../../gateways/categoryGateway'
-import { searchGateway } from '../../../../../../gateways/searchGateway'
-import { SortType } from '@utils/sort'
-import { onMounted, ref, computed, watchEffect } from 'vue'
-import { getFacetsVM } from '@adapters/primary/viewModels/get-facets/getFacetsVM'
-import { listCategories } from '@core/usecases/list-categories/listCategories'
-import { getChildCategoriesVM } from '@adapters/primary/viewModels/get-category/getChildCategoryVM'
-import { parsePrice } from '@utils/formater'
+import { getCategory, getCategoryVM } from '@adapters/primary/viewModels/get-category/getCategoryVM';
+import { categoryGateway } from '../../../../../../gateways/categoryGateway';
+import { searchGateway } from '../../../../../../gateways/searchGateway';
+import { SortType } from '@utils/sort';
+import { onMounted, ref, computed, watchEffect } from 'vue';
+import { getFacetsVM } from '@adapters/primary/viewModels/get-facets/getFacetsVM';
+import { listCategories } from '@core/usecases/list-categories/listCategories';
+import { getChildCategoriesVM } from '@adapters/primary/viewModels/get-category/getChildCategoryVM';
+import { parsePrice } from '@utils/formater';
 
-definePageMeta({ layout: 'main' })
+definePageMeta({ layout: 'main' });
 
-const description = ref(null)
-const top = ref(null)
+const description = ref(null);
+const top = ref(null);
 
 const text =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar velit sit amet imperdiet viverra. Nullam ullamcorper, urna et egestas ultricies, est dolor porta felis, non placerat metus nulla eu libero. Donec felis velit, tincidunt vitae euismod sed, consequat in arcu. Aenean tincidunt auctor sem, ut porta nisl facilisis in. Nunc ut commodo dolor. Vivamus a laoreet nunc, vitae gravida enim. Praesent hendrerit lobortis porttitor. Fusce augue metus, efficitur in gravida in, tempor gravida augue. Nam vel odio in augue gravida cursus vel sit amet orci. Etiam a tellus accumsan, finibus tellus et, efficitur eros. Donec blandit at leo ut auctor. Vivamus odio quam, vestibulum sit amet sem a, finibus imperdiet arcu. Nulla pharetra nulla porttitor metus maximus, in vulputate risus lacinia. Vestibulum eu massa condimentum, consectetur ex at, pretium odio. Quisque at dui bibendum, consequat magna in, tempus massa. Donec gravida arcu quis lacinia tristique. Morbi sit amet porta velit. Praesent quis nisl vulputate diam auctor rutrum. Mauris est eros, hendrerit sit amet mi non, consectetur tristique ante. Sed facilisis mauris elit, eu iaculis justo semper vel. Praesent eu aliquet massa, vitae mattis nisi. Donec rhoncus metus sagittis metus venenatis, at egestas nulla dignissim. Duis convallis sem vel purus ornare, id sodales enim viverra. Nam ornare tortor id luctus interdum. Proin pharetra dictum turpis sed cursus. Morbi pretium dolor ex, eget aliquet sapien vulputate at. Aenean vitae rhoncus dui. Pellentesque tincidunt arcu nec orci feugiat laoreet. Proin gravida eros mi. Mauris a est nisl. Morbi maximus ligula et libero pellentesque elementum. In vitae iaculis risus, in gravida dolor. Proin efficitur scelerisque suscipit. Aliquam pharetra magna eu metus dignissim, at dapibus sem efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non nisl eu ante convallis sollicitudin sit amet at magna. Nulla hendrerit enim vel quam finibus, ac rhoncus turpis rutrum. Sed finibus commodo tellus rhoncus accumsan.'
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar velit sit amet imperdiet viverra. Nullam ullamcorper, urna et egestas ultricies, est dolor porta felis, non placerat metus nulla eu libero. Donec felis velit, tincidunt vitae euismod sed, consequat in arcu. Aenean tincidunt auctor sem, ut porta nisl facilisis in. Nunc ut commodo dolor. Vivamus a laoreet nunc, vitae gravida enim. Praesent hendrerit lobortis porttitor. Fusce augue metus, efficitur in gravida in, tempor gravida augue. Nam vel odio in augue gravida cursus vel sit amet orci. Etiam a tellus accumsan, finibus tellus et, efficitur eros. Donec blandit at leo ut auctor. Vivamus odio quam, vestibulum sit amet sem a, finibus imperdiet arcu. Nulla pharetra nulla porttitor metus maximus, in vulputate risus lacinia. Vestibulum eu massa condimentum, consectetur ex at, pretium odio. Quisque at dui bibendum, consequat magna in, tempus massa. Donec gravida arcu quis lacinia tristique. Morbi sit amet porta velit. Praesent quis nisl vulputate diam auctor rutrum. Mauris est eros, hendrerit sit amet mi non, consectetur tristique ante. Sed facilisis mauris elit, eu iaculis justo semper vel. Praesent eu aliquet massa, vitae mattis nisi. Donec rhoncus metus sagittis metus venenatis, at egestas nulla dignissim. Duis convallis sem vel purus ornare, id sodales enim viverra. Nam ornare tortor id luctus interdum. Proin pharetra dictum turpis sed cursus. Morbi pretium dolor ex, eget aliquet sapien vulputate at. Aenean vitae rhoncus dui. Pellentesque tincidunt arcu nec orci feugiat laoreet. Proin gravida eros mi. Mauris a est nisl. Morbi maximus ligula et libero pellentesque elementum. In vitae iaculis risus, in gravida dolor. Proin efficitur scelerisque suscipit. Aliquam pharetra magna eu metus dignissim, at dapibus sem efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non nisl eu ante convallis sollicitudin sit amet at magna. Nulla hendrerit enim vel quam finibus, ac rhoncus turpis rutrum. Sed finibus commodo tellus rhoncus accumsan.';
 
 function scrollToDescription() {
   if (description.value) {
-    description.value.scrollIntoView({ behavior: 'smooth' })
+    description.value.scrollIntoView({ behavior: 'smooth' });
   }
 }
 
 function scrollToTop() {
   if (top.value) {
-    top.value.scrollIntoView({ behavior: 'smooth' })
+    top.value.scrollIntoView({ behavior: 'smooth' });
   }
 }
 
-const dropdownOpen = ref(false)
+const dropdownOpen = ref(false);
 
 const toggleDropdown = () => {
-  dropdownOpen.value = !dropdownOpen.value
-}
+  dropdownOpen.value = !dropdownOpen.value;
+};
 
-const route = useRoute()
-const categoryUuid = route.params.uuid
-const priceFilter = ref<string | null>(null)
+const route = useRoute();
+const categoryUuid = route.params.uuid;
+const priceFilter = ref<string | null>(null);
 const Name = computed(() => {
-  return route.fullPath.split('?')[1] || '' // Récupère la chaîne après le "?"
-})
+  return route.fullPath.split('?')[1] || ''; // Récupère la chaîne après le "?"
+});
 
-const sortType = ref(SortType.None)
-const displayProduct = ref<any | null>(null)
-const laboratoryFilter = ref<string | null>(null) // Variable pour le laboratoire filtré
+const sortType = ref(SortType.None);
+const displayProduct = ref<any | null>(null);
+const laboratoryFilter = ref<string | null>(null); // Variable pour le laboratoire filtré
 
 const searchPrice = (price: any) => {
-  priceFilter.value = price // Mettez à jour le filtre de laboratoire
-}
+  priceFilter.value = price; // Mettez à jour le filtre de laboratoire
+};
 
 const sortBy = (st: number) => {
-  if (sortType && typeof sortType.value !== 'undefined') {
+  if (sortType.value && typeof sortType.value !== 'undefined') {
     if (sortType.value === st) {
-      sortType.value = SortType.None
+      sortType.value = SortType.None;
     } else {
-      sortType.value = st
+      sortType.value = st;
     }
   }
-  dropdownOpen.value = false
-}
+  dropdownOpen.value = false;
+};
 
 const searchLaboratory = (labo: string | null) => {
-  laboratoryFilter.value = labo // Mettez à jour le filtre de laboratoire
-}
+  laboratoryFilter.value = labo; // Mettez à jour le filtre de laboratoire
+};
 
 const filteredProducts = computed(() => {
-  let res = categoryVM.value.products
+  let res = categoryVM.value.products;
   // Filtrer les produits en fonction du laboratoire
   if (!laboratoryFilter.value) {
   } else {
-    res = categoryVM.value.products.filter(
-      (product) => product.laboratory === laboratoryFilter.value
-    )
+    res = categoryVM.value.products.filter((product) => product.laboratory === laboratoryFilter.value);
   }
   // if (!categoryFilter.value) {
   //   return res // Retourner tous les produits si aucun filtre
@@ -130,51 +125,50 @@ const filteredProducts = computed(() => {
   } else {
     res = res.filter(
       (product) =>
-        parsePrice(product.price) >= priceFilter.value[0] &&
-        parsePrice(product.price) <= priceFilter.value[1]
-    )
+        parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1],
+    );
   }
   // res = searchVM.value.items.filter(
   //   (product) => product.laboratory === laboratoryFilter.value
   // )
-  return res
-})
+  return res;
+});
 
 const parsePrice = (priceString) => {
   // Enlever les espaces et le symbole de l'euro
-  const cleanedString = priceString.replace(/[^0-9,]/g, '').replace(',', '.')
+  const cleanedString = priceString.replace(/[^0-9,]/g, '').replace(',', '.');
 
   // Convertir la chaîne en nombre flottant
-  const priceNumber = parseFloat(cleanedString)
+  const priceNumber = parseFloat(cleanedString);
 
   // Convertir le prix en centimes (multiplication par 100 et arrondi)
-  return Math.round(priceNumber * 100)
-}
+  return Math.round(priceNumber * 100);
+};
 
 onMounted(() => {
-  listCategories(categoryGateway())
-  getCategory(categoryUuid, categoryGateway(), searchGateway())
-})
+  listCategories(categoryGateway());
+  getCategory(categoryUuid, categoryGateway(), searchGateway());
+});
 
 const categoriesVM = computed(() => {
-  return getChildCategoriesVM(categoryUuid)
-})
+  return getChildCategoriesVM(categoryUuid);
+});
 
 const categoryVM = computed(() => {
-  return getCategoryVM(sortType.value)
-})
+  return getCategoryVM(sortType.value);
+});
 
 const facetsVM = computed(() => {
-  return getFacetsVM()
-})
+  return getFacetsVM();
+});
 
-const filterOpened = ref(false)
+const filterOpened = ref(false);
 
 const openFilter = () => {
-  filterOpened.value = true
-}
+  filterOpened.value = true;
+};
 
 const closeCart = () => {
-  filterOpened.value = false
-}
+  filterOpened.value = false;
+};
 </script>

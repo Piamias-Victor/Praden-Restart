@@ -59,36 +59,36 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
 </template>
 
 <script lang="ts" setup>
-import VueSlider from 'vue-3-slider-component'
-import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
-import { ref, computed, watchEffect } from 'vue'
+import VueSlider from 'vue-3-slider-component';
+import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
+import { ref, computed, watchEffect } from 'vue';
 
 const props = defineProps<{
-  facetsVM: any
-  sortType: any
-}>()
+  facetsVM: any;
+  sortType: any;
+}>();
 
-const hoveredLaboratory = ref<string | null>(null) // Variable pour suivre le laboratoire survolé
+const hoveredLaboratory = ref<string | null>(null); // Variable pour suivre le laboratoire survolé
 
 const setHoveredLaboratory = (key: string) => {
-  hoveredLaboratory.value = key
-}
+  hoveredLaboratory.value = key;
+};
 
 const clearHoveredLaboratory = () => {
-  hoveredLaboratory.value = null
-}
+  hoveredLaboratory.value = null;
+};
 
 const isTruncated = (text: string) => {
-  const span = document.createElement('span')
-  span.style.display = 'inline-block'
-  span.style.width = '140px'
-  span.style.whiteSpace = 'nowrap'
-  span.innerText = text
-  document.body.appendChild(span)
-  const truncated = span.scrollWidth > span.clientWidth
-  document.body.removeChild(span)
-  return truncated
-}
+  const span = document.createElement('span');
+  span.style.display = 'inline-block';
+  span.style.width = '140px';
+  span.style.whiteSpace = 'nowrap';
+  span.innerText = text;
+  document.body.appendChild(span);
+  const truncated = span.scrollWidth > span.clientWidth;
+  document.body.removeChild(span);
+  return truncated;
+};
 
 const rangeValues = ref(
   props.facetsVM &&
@@ -96,12 +96,9 @@ const rangeValues = ref(
     props.facetsVM.price.values &&
     props.facetsVM.price.values[0] &&
     props.facetsVM.price.values[1]
-    ? [
-        props.facetsVM.price.values[0].count,
-        props.facetsVM.price.values[1].count
-      ]
-    : [0, 100]
-)
+    ? [props.facetsVM.price.values[0].count, props.facetsVM.price.values[1].count]
+    : [0, 100],
+);
 
 const minMaxValues = ref(
   props.facetsVM &&
@@ -109,12 +106,9 @@ const minMaxValues = ref(
     props.facetsVM.price.values &&
     props.facetsVM.price.values[0] &&
     props.facetsVM.price.values[1]
-    ? [
-        props.facetsVM.price.values[0].count,
-        props.facetsVM.price.values[1].count
-      ]
-    : [0, 100]
-)
+    ? [props.facetsVM.price.values[0].count, props.facetsVM.price.values[1].count]
+    : [0, 100],
+);
 
 // Initialisation dynamique des valeurs de rangeValues lorsque facetsVM est prêt
 watchEffect(() => {
@@ -122,45 +116,42 @@ watchEffect(() => {
     props.facetsVM?.price?.values?.[0]?.count !== undefined &&
     props.facetsVM?.price?.values?.[1]?.count !== undefined
   ) {
-    rangeValues.value = [
-      props.facetsVM.price.values[0].count,
-      props.facetsVM.price.values[1].count
-    ]
+    rangeValues.value = [props.facetsVM.price.values[0].count, props.facetsVM.price.values[1].count];
   }
-})
+});
 
-const cartQuantity = ref(null)
+const cartQuantity = ref(null);
 
 const emit = defineEmits<{
-  (e: 'close'): void
-  (e: 'sortBy', st: number): void
-  (e: 'searchLaboratory', labo: string | null): void
-  (e: 'searchCategory', cat: string | null): void
-  (e: 'searchPrice', price: any): void
-}>()
+  (e: 'close'): void;
+  (e: 'sortBy', st: number): void;
+  (e: 'searchLaboratory', labo: string | null): void;
+  (e: 'searchCategory', cat: string | null): void;
+  (e: 'searchPrice', price: any): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 const searchLaboratory = (labo: string | null) => {
-  emit('searchLaboratory', labo)
-  close()
-}
+  emit('searchLaboratory', labo);
+  close();
+};
 
 const searchCategory = (cat: string | null) => {
-  emit('searchCategory', cat)
-  close()
-}
+  emit('searchCategory', cat);
+  close();
+};
 
 const searchPrice = (price: any) => {
-  emit('searchPrice', price)
-}
+  emit('searchPrice', price);
+};
 
 const sortBy = (st: number) => {
-  emit('sortBy', st)
-  close()
-}
+  emit('sortBy', st);
+  close();
+};
 </script>
 
 <style scoped>

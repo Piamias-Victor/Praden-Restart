@@ -1,50 +1,48 @@
-import { useNotificationsStore } from '@store/notificationsStore'
+import { useNotificationsStore } from '@store/notificationsStore';
 
 export enum NotificationType {
   Success,
-  Error
+  Error,
 }
 
 export interface NotificationVM {
-  type: NotificationType
-  msg: string
-  icon: string
-  name: string
+  type: NotificationType;
+  msg: string;
+  icon: string;
+  name: string;
 }
 export interface NotificationsVM {
-  notifications: Array<NotificationVM>
+  notifications: Array<NotificationVM>;
 }
 
 const getNotificationInfos = (notification: Notification) => {
   const error = {
     name: 'Erreur !',
     icon: 'radix-icons:cross-circled',
-    type: NotificationType.Error
-  }
+    type: NotificationType.Error,
+  };
 
   const success = {
     name: 'Succès !',
     icon: 'ic:round-check-circle-outline',
-    type: NotificationType.Success
-  }
+    type: NotificationType.Success,
+  };
 
-  return success
-}
+  return success;
+};
 
 export const getNotificationsVM = (): NotificationsVM => {
-  const notificationsStore = useNotificationsStore()
-  const notifications = notificationsStore.notifications
+  const notificationsStore = useNotificationsStore();
+  const notifications = notificationsStore.notifications;
   return {
     notifications: notifications.map((notification) => {
-      const { type, icon, name } = getNotificationInfos(
-        notification as Notification
-      )
+      const { type, icon, name } = getNotificationInfos(notification as Notification);
       return {
         msg: notification.msg,
         type: NotificationType.Success,
         icon: 'ic:round-check-circle-outline',
-        name
-      } as NotificationVM
-    })
-  }
-}
+        name,
+      } as NotificationVM;
+    }),
+  };
+};

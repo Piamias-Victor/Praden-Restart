@@ -25,46 +25,43 @@ div.px-8.my-4.flex.flex-col.gap-4
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
-import { getSearchLaboratoriesVM } from '@adapters/primary/viewModels/get-category/getSearchCategoryVM'
-import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories'
-import { laboratoryGateway } from '../../../../../../gateways/laboratoryGateway'
+import { ref, computed } from 'vue';
+import { getSearchLaboratoriesVM } from '@adapters/primary/viewModels/get-category/getSearchCategoryVM';
+import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
+import { laboratoryGateway } from '../../../../../../gateways/laboratoryGateway';
 
-definePageMeta({ layout: 'main' })
+definePageMeta({ layout: 'main' });
 
 onMounted(() => {
-  listLaboratories(laboratoryGateway())
-})
+  listLaboratories(laboratoryGateway());
+});
 
-const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 // Récupération des laboratoires
 const laboratoriesVM = computed(() => {
-  return getSearchLaboratoriesVM('')
-})
+  return getSearchLaboratoriesVM('');
+});
 
 // Grouper les laboratoires par lettre
 const groupedLaboratories = computed(() => {
-  const grouped: Record<
-    string,
-    Array<{ uuid: string; name: string; href: string }>
-  > = {}
+  const grouped: Record<string, Array<{ uuid: string; name: string; href: string }>> = {};
 
   // Initialiser les clés pour chaque lettre
   alphabet.forEach((letter) => {
-    grouped[letter] = []
-  })
+    grouped[letter] = [];
+  });
 
   // Ajouter les laboratoires dans leur groupe
   laboratoriesVM.value.items.forEach((laboratory) => {
-    const firstLetter = laboratory.name[0]?.toUpperCase() || '#'
+    const firstLetter = laboratory.name[0]?.toUpperCase() || '#';
     if (grouped[firstLetter]) {
-      grouped[firstLetter].push(laboratory)
+      grouped[firstLetter].push(laboratory);
     }
-  })
+  });
 
-  return grouped
-})
+  return grouped;
+});
 </script>
 
 <style scoped>

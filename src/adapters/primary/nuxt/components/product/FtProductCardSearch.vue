@@ -31,50 +31,47 @@ div.bg-white.rounded-xl.pt-2(@click='close' class='w-[65vw] sm:w-[15vw] min-h-[3
 </template>
 
 <script lang="ts" setup>
-import {
-  addToFavorite,
-  removeFromFavorite
-} from '@core/usecases/add-to-favorite/addToFavorite'
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm'
+import { addToFavorite, removeFromFavorite } from '@core/usecases/add-to-favorite/addToFavorite';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm';
 
 defineProps({
-  product: { type: Object, required: true }
-})
+  product: { type: Object, required: true },
+});
 
 const emit = defineEmits<{
-  (e: 'close'): void
-}>()
+  (e: 'close'): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 const addItemToFavorite = (uuid: string) => {
-  addToFavorite(uuid, useProductGateway())
-}
+  addToFavorite(uuid, useProductGateway());
+};
 
 const removeItemFromFavorite = (uuid: string) => {
-  removeFromFavorite(uuid)
-}
+  removeFromFavorite(uuid);
+};
 
 export interface LikeQuantityVM {
-  items: HashTable<number>
-  totalQuantity: number
+  items: HashTable<number>;
+  totalQuantity: number;
 }
-const router = useRouter()
+const router = useRouter();
 
-const likeQuantity = ref<LikeQuantityVM | null>(null)
+const likeQuantity = ref<LikeQuantityVM | null>(null);
 
 const goToProduct = (path: string) => {
-  router.push(path)
-  close()
+  router.push(path);
+  close();
   setTimeout(() => {
-    close()
-  }, 1000)
-}
+    close();
+  }, 1000);
+};
 
 watchEffect(async () => {
-  likeQuantity.value = await getLikeQuantityVM(useProductGateway())
-})
+  likeQuantity.value = await getLikeQuantityVM(useProductGateway());
+});
 </script>

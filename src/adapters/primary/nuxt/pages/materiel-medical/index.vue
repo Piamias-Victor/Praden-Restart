@@ -3,5 +3,5 @@
 </template>
 
 <script lang="ts" setup>
-definePageMeta({ layout: 'main' })
+definePageMeta({ layout: 'main' });
 </script>

@@ -1,5 +1,5 @@
-import { RealWindowGateway } from '@adapters/secondary/window-gateway/realWindowGateway'
+import { RealWindowGateway } from '@adapters/secondary/window-gateway/realWindowGateway';
 
-const windowGateway = new RealWindowGateway()
+const windowGateway = new RealWindowGateway();
 
-export default windowGateway
+export default windowGateway;

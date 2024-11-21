@@ -57,40 +57,35 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
-import { logoutUser } from '@core/usecases/user/logout'
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogPanel
-} from '@headlessui/vue'
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import { logoutUser } from '@core/usecases/user/logout';
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
 
 const emit = defineEmits<{
-  (e: 'close'): void
-}>()
+  (e: 'close'): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 function closeModal() {
-  emit('close')
+  emit('close');
 }
 
 const user = computed(() => {
-  return getUserVM()
-})
+  return getUserVM();
+});
 
 const sendMessage = () => {
-  close()
-}
+  close();
+};
 
-const fileInput = ref(null)
-const fileIsValid = ref(false)
+const fileInput = ref(null);
+const fileIsValid = ref(false);
 
 const triggerFileInput = () => {
-  fileInput.value.click()
-  fileIsValid.value = true
-}
+  fileInput.value.click();
+  fileIsValid.value = true;
+};
 </script>

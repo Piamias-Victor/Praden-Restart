@@ -21,35 +21,33 @@ li.flex.py-6
 </template>
 
 <script lang="ts" setup>
-import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM'
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { addToCart } from '@core/usecases/add-to-cart/addToCart'
-import { removeFromCart } from '@core/usecases/remove-from-cart/removeFromCart'
-import { ref } from 'vue'
+import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { addToCart } from '@core/usecases/add-to-cart/addToCart';
+import { removeFromCart } from '@core/usecases/remove-from-cart/removeFromCart';
+import { ref } from 'vue';
 
 defineProps({
-  item: { type: Object, required: true }
-})
+  item: { type: Object, required: true },
+});
 
 const cart = computed(() => {
-  return getCartVM()
-})
+  return getCartVM();
+});
 
 const isAddButtonHidden = (item: any) => {
-  return (
-    item.uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' && item.quantity >= 6
-  )
-}
+  return item.uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' && item.quantity >= 6;
+};
 
 const getCartQuantity = (uuid: string) => {
-  return cart.value.items[uuid]?.quantity || 0
-}
+  return cart.value.items[uuid]?.quantity || 0;
+};
 
 const addItemToCart = (uuid: string) => {
-  addToCart(uuid, useProductGateway())
-}
+  addToCart(uuid, useProductGateway());
+};
 
 const removeItemFromCart = (uuid: string) => {
-  removeFromCart(uuid)
-}
+  removeFromCart(uuid);
+};
 </script>

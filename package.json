@@ -46,19 +46,19 @@
     "vue3-slider": "^1.10.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.9.1",
+    "@eslint/js": "^9.15.0",
     "@iconify-json/heroicons": "^1.2.0",
     "@nuxt/types": "^2.18.1",
     "@types/jest": "^29.5.12",
     "@types/node": "^22.5.2",
     "@typescript-eslint/eslint-plugin": "^8.4.0",
     "@typescript-eslint/parser": "^8.4.0",
-    "eslint": "^9.9.1",
+    "eslint": "^9.15.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-pug": "^1.2.5",
-    "eslint-plugin-vue": "^9.28.0",
-    "globals": "^15.9.0",
+    "eslint-plugin-vue": "^9.31.0",
+    "globals": "^15.12.0",
     "prettier": "^3.3.3",
     "sass-embedded": "^1.79.5",
     "stylelint": "^16.9.0",
@@ -67,7 +67,7 @@
     "stylelint-config-tailwindcss": "^0.0.7",
     "stylelint-order": "^6.0.4",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.4.0",
+    "typescript-eslint": "^8.15.0",
     "vitest": "^2.0.5",
     "vue-eslint-parser": "^9.4.3"
   }

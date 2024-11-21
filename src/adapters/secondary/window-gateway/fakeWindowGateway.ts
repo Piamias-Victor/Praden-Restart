@@ -1,13 +1,13 @@
-import { WindowGateway } from '@core/gateways/windowGateway'
+import { WindowGateway } from '@core/gateways/windowGateway';
 
 export class FakeWindowGateway implements WindowGateway {
-  private currentUrl = ''
+  private currentUrl = '';
 
   redirectTo(url: string) {
-    this.currentUrl = url
+    this.currentUrl = url;
   }
 
   get url(): string {
-    return this.currentUrl
+    return this.currentUrl;
   }
 }

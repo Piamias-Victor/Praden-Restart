@@ -49,39 +49,39 @@ div.mt-4
 </template>
 
 <script lang="ts" setup>
-definePageMeta({ layout: 'main' })
+definePageMeta({ layout: 'main' });
 
-const newsletter = ref(false)
-const user = ref(false)
-const router = useRouter()
+const newsletter = ref(false);
+const user = ref(false);
+const router = useRouter();
 
 const validateCart = () => {
-  router.push('/checkout/success')
-}
+  router.push('/checkout/success');
+};
 
 const switchUser = () => {
-  user.value = !user.value
-}
+  user.value = !user.value;
+};
 
 const switchNewsletter = () => {
-  newsletter.value = !newsletter.value
-}
+  newsletter.value = !newsletter.value;
+};
 
-const emailChanged = (e: any) => {}
+const emailChanged = (e: any) => {};
 
-const phoneChanged = (e: any) => {}
+const phoneChanged = (e: any) => {};
 
-const firstnameChanged = (value: string) => {}
+const firstnameChanged = (value: string) => {};
 
-const lastnameChanged = (value: string) => {}
+const lastnameChanged = (value: string) => {};
 
-const countryChanged = (value: string) => {}
+const countryChanged = (value: string) => {};
 
-const addressChanged = (value: string) => {}
+const addressChanged = (value: string) => {};
 
-const appartementChanged = (value: string) => {}
+const appartementChanged = (value: string) => {};
 
-const cityChanged = (value: string) => {}
+const cityChanged = (value: string) => {};
 
-const zipChanged = (value: string) => {}
+const zipChanged = (value: string) => {};
 </script>

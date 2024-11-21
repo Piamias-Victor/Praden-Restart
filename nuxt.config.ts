@@ -1,5 +1,5 @@
-import { defineNuxtConfig } from 'nuxt/config'
-import { fileURLToPath } from 'url'
+import { defineNuxtConfig } from 'nuxt/config';
+import { fileURLToPath } from 'url';
 
 export default defineNuxtConfig({
   runtimeConfig: {
@@ -7,15 +7,15 @@ export default defineNuxtConfig({
       STRIPE_API_KEY: process.env.STRIPE_API_KEY,
       CONFIRMATION_TEMPLATE_ID: process.env.CONFIRMATION_TEMPLATE_ID,
       SEND_EMAIL_URL: process.env.SEND_EMAIL_URL,
-      BACKEND_URL: process.env.BACKEND_URL
-    }
+      BACKEND_URL: process.env.BACKEND_URL,
+    },
   },
 
   alias: {
     '@adapters/': fileURLToPath(new URL('./src/adapters/', import.meta.url)),
     '@core/': fileURLToPath(new URL('./src/core/', import.meta.url)),
     '@store/': fileURLToPath(new URL('./src/store/', import.meta.url)),
-    '@utils/': fileURLToPath(new URL('./src/utils/', import.meta.url))
+    '@utils/': fileURLToPath(new URL('./src/utils/', import.meta.url)),
   },
 
   app: {
@@ -25,10 +25,10 @@ export default defineNuxtConfig({
         { src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js' },
         { src: 'https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js' },
         {
-          src: 'https://ws.colissimo.fr/widget-colissimo/js/jquery.plugin.colissimo.min.js'
-        }
-      ]
-    }
+          src: 'https://ws.colissimo.fr/widget-colissimo/js/jquery.plugin.colissimo.min.js',
+        },
+      ],
+    },
   },
 
   components: {
@@ -36,24 +36,24 @@ export default defineNuxtConfig({
       {
         path: '~/src/adapters/primary/nuxt/components/',
         global: true,
-        pathPrefix: false
+        pathPrefix: false,
       },
-      '~/components'
-    ]
+      '~/components',
+    ],
   },
 
   typescript: {
-    strict: true
+    strict: true,
   },
 
   modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', '@nuxt/icon'],
 
   dir: {
     layouts: './src/adapters/primary/nuxt/layouts',
-    pages: './src/adapters/primary/nuxt/pages/'
+    pages: './src/adapters/primary/nuxt/pages/',
   },
 
   css: ['~/assets/css/tailwind.css'],
   ssr: true,
-  compatibilityDate: '2024-08-26'
-})
+  compatibilityDate: '2024-08-26',
+});

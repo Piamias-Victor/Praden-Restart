@@ -12,14 +12,14 @@ defineProps({
   for: {
     type: String,
     default() {
-      return ''
-    }
+      return '';
+    },
   },
   require: {
     type: Boolean,
     default() {
-      return false
-    }
-  }
-})
+      return false;
+    },
+  },
+});
 </script>

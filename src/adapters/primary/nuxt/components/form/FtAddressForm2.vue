@@ -64,40 +64,40 @@
 
 <script lang="ts" setup>
 const emit = defineEmits<{
-  (e: 'firstname-changed', value: string): void
-  (e: 'lastname-changed', value: string): void
-  (e: 'country-changed', value: string): void
-  (e: 'address-changed', value: string): void
-  (e: 'appartement-changed', value: string): void
-  (e: 'city-changed', value: string): void
-  (e: 'zip-changed', value: string): void
-}>()
+  (e: 'firstname-changed', value: string): void;
+  (e: 'lastname-changed', value: string): void;
+  (e: 'country-changed', value: string): void;
+  (e: 'address-changed', value: string): void;
+  (e: 'appartement-changed', value: string): void;
+  (e: 'city-changed', value: string): void;
+  (e: 'zip-changed', value: string): void;
+}>();
 
 const firstnameChanged = (e: any) => {
-  emit('firstname-changed', e.target.value)
-}
+  emit('firstname-changed', e.target.value);
+};
 
 const lastnameChanged = (e: any) => {
-  emit('lastname-changed', e.target.value)
-}
+  emit('lastname-changed', e.target.value);
+};
 
 const countryChanged = (e: any) => {
-  emit('country-changed', e.target.value)
-}
+  emit('country-changed', e.target.value);
+};
 
 const addressChanged = (e: any) => {
-  emit('address-changed', e.target.value)
-}
+  emit('address-changed', e.target.value);
+};
 
 const appartementChanged = (e: any) => {
-  emit('appartement-changed', e.target.value)
-}
+  emit('appartement-changed', e.target.value);
+};
 
 const cityChanged = (e: any) => {
-  emit('city-changed', e.target.value)
-}
+  emit('city-changed', e.target.value);
+};
 
 const zipChanged = (e: any) => {
-  emit('zip-changed', e.target.value)
-}
+  emit('zip-changed', e.target.value);
+};
 </script>

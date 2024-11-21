@@ -10,18 +10,16 @@ section.px-2.flex.justify-center
 
 <script lang="ts" setup>
 const props = defineProps({
-  products: { type: Array, required: true }
-})
+  products: { type: Array, required: true },
+});
 
 const emit = defineEmits<{
-  (e: 'close'): void
-}>()
+  (e: 'close'): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
-const sanitizedProducts = computed(() =>
-  props.products.map(({ category, ...product }) => product)
-)
+const sanitizedProducts = computed(() => props.products.map(({ category, ...product }) => product));
 </script>

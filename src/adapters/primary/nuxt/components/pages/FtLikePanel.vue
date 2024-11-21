@@ -11,24 +11,19 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
-import { logoutUser } from '@core/usecases/user/logout'
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogPanel
-} from '@headlessui/vue'
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import { logoutUser } from '@core/usecases/user/logout';
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
 
 const closeLike = () => {
-  closeModal()
-}
+  closeModal();
+};
 
 const emit = defineEmits<{
-  (e: 'close'): void
-}>()
+  (e: 'close'): void;
+}>();
 
 function closeModal() {
-  emit('close')
+  emit('close');
 }
 </script>

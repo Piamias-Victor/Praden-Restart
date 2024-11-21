@@ -50,38 +50,33 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import { createGoogleUser } from '@core/usecases/user/createGoogleUser'
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogPanel
-} from '@headlessui/vue'
-import { signInWithGoogle } from '@utils/google'
+import { createGoogleUser } from '@core/usecases/user/createGoogleUser';
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
+import { signInWithGoogle } from '@utils/google';
 
 const emit = defineEmits<{
-  (e: 'close'): void
-}>()
+  (e: 'close'): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 function closeModal() {
-  emit('close')
+  emit('close');
 }
 
 function connect() {
-  close()
+  close();
 }
 
 const connectWithGoogle = async () => {
   try {
-    const user = await signInWithGoogle()
-    createGoogleUser(user)
-    close()
+    const user = await signInWithGoogle();
+    createGoogleUser(user);
+    close();
   } catch (error) {
-    console.error('Erreur lors de la connexion avec Google: ', error)
+    console.error('Erreur lors de la connexion avec Google: ', error);
   }
-}
+};
 </script>

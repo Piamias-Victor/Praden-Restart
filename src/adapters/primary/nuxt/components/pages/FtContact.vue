@@ -98,82 +98,77 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
-import { logoutUser } from '@core/usecases/user/logout'
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogPanel
-} from '@headlessui/vue'
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import { logoutUser } from '@core/usecases/user/logout';
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
 
 const props = defineProps({
-  medecine: { type: Boolean, required: false }
-})
+  medecine: { type: Boolean, required: false },
+});
 
 const emit = defineEmits<{
-  (e: 'close'): void
-}>()
+  (e: 'close'): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 function closeModal() {
-  emit('close')
+  emit('close');
 }
 
 const user = computed(() => {
-  return getUserVM()
-})
+  return getUserVM();
+});
 
-const order = ref(false)
-const product = ref(false)
-const orderReturn = ref(false)
-const pharmacy = ref(false)
-const promo = ref(false)
-const other = ref(false)
+const order = ref(false);
+const product = ref(false);
+const orderReturn = ref(false);
+const pharmacy = ref(false);
+const promo = ref(false);
+const other = ref(false);
 
 const deselectAll = () => {
-  order.value = false
-  product.value = false
-  orderReturn.value = false
-  pharmacy.value = false
-  promo.value = false
-  other.value = false
-}
+  order.value = false;
+  product.value = false;
+  orderReturn.value = false;
+  pharmacy.value = false;
+  promo.value = false;
+  other.value = false;
+};
 
 const selectOrder = () => {
-  deselectAll()
-  order.value = true
-}
+  deselectAll();
+  order.value = true;
+};
 
 const selectProduct = () => {
-  deselectAll()
-  product.value = true
-}
+  deselectAll();
+  product.value = true;
+};
 
 const selectReturn = () => {
-  deselectAll()
-  orderReturn.value = true
-}
+  deselectAll();
+  orderReturn.value = true;
+};
 
 const selectPharmacy = () => {
-  deselectAll()
-  pharmacy.value = true
-}
+  deselectAll();
+  pharmacy.value = true;
+};
 
 const selectPromo = () => {
-  deselectAll()
-  promo.value = true
-}
+  deselectAll();
+  promo.value = true;
+};
 
 const selectOther = () => {
-  deselectAll()
-  other.value = true
-}
+  deselectAll();
+  other.value = true;
+};
 
 const sendMessage = () => {
-  close()
-}
+  close();
+};
 </script>

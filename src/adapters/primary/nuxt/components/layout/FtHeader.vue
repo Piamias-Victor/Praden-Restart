@@ -24,28 +24,28 @@ ft-search(v-if="searchOpened" @close="closeSearch")
 </template>
 
 <script lang="ts" setup>
-import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM'
+import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
 
-const profilOpened = ref(false)
-const searchOpened = ref(false)
+const profilOpened = ref(false);
+const searchOpened = ref(false);
 
 const categoriesVM = computed(() => {
-  return getRootCategoriesVM()
-})
+  return getRootCategoriesVM();
+});
 
 const openProfil = () => {
-  profilOpened.value = true
-}
+  profilOpened.value = true;
+};
 
 const closeProfil = () => {
-  profilOpened.value = false
-}
+  profilOpened.value = false;
+};
 
 const startSearch = () => {
-  searchOpened.value = true
-}
+  searchOpened.value = true;
+};
 
 const closeSearch = () => {
-  searchOpened.value = false
-}
+  searchOpened.value = false;
+};
 </script>

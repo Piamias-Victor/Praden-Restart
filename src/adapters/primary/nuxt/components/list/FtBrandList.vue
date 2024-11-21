@@ -11,9 +11,9 @@ section.px-2
 </template>
 
 <script lang="ts" setup>
-const router = useRouter()
+const router = useRouter();
 
 const goToLabo = async () => {
-  router.push('/laboratory')
-}
+  router.push('/laboratory');
+};
 </script>

@@ -11,75 +11,70 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogPanel
-} from '@headlessui/vue'
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM'
-import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart'
+import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
+import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart';
 const props = defineProps<{
-  facetsVM: any
-  sortType: any
-}>()
+  facetsVM: any;
+  sortType: any;
+}>();
 
-const router = useRouter()
+const router = useRouter();
 
-const cartQuantity = ref<CartQuantityVM | null>(null)
+const cartQuantity = ref<CartQuantityVM | null>(null);
 
-const stepper = ref(0)
+const stepper = ref(0);
 
 const moveStepper = () => {
-  stepper.value += 1
-}
+  stepper.value += 1;
+};
 
 const closeCart = () => {
-  closeModal()
-}
+  closeModal();
+};
 
 const cart = computed(() => {
-  return getCartVM()
-})
+  return getCartVM();
+});
 
 const emit = defineEmits<{
-  (e: 'close'): void
-  (e: 'sortBy', st: number): void
-  (e: 'searchLaboratory', labo: string | null): void
-  (e: 'searchCategory', cat: string | null): void
-  (e: 'searchPrice', price: any): void
-  (e: 'move-stepper'): void
-}>()
+  (e: 'close'): void;
+  (e: 'sortBy', st: number): void;
+  (e: 'searchLaboratory', labo: string | null): void;
+  (e: 'searchCategory', cat: string | null): void;
+  (e: 'searchPrice', price: any): void;
+  (e: 'move-stepper'): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 const sortBy = (st: number) => {
-  emit('sortBy', st)
-}
+  emit('sortBy', st);
+};
 
 const searchLaboratory = (labo: string | null) => {
-  emit('searchLaboratory', labo)
-  close()
-}
+  emit('searchLaboratory', labo);
+  close();
+};
 
 const searchCategory = (cat: string | null) => {
-  emit('searchCategory', cat)
-  close()
-}
+  emit('searchCategory', cat);
+  close();
+};
 
 const searchPrice = (price: any) => {
-  emit('searchPrice', price)
-}
+  emit('searchPrice', price);
+};
 
 function closeModal() {
-  emit('close')
+  emit('close');
 }
 
 watchEffect(async () => {
-  cartQuantity.value = await getCartQuantityVM(useProductGateway())
-})
+  cartQuantity.value = await getCartQuantityVM(useProductGateway());
+});
 </script>

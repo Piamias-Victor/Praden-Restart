@@ -28,45 +28,42 @@ div.py-4.px-2.flex.flex-col.gap-2.overflow-x-scroll.custom-scrollbar
 </template>
 
 <script lang="ts" setup>
-import {
-  searchLaboratory,
-  searchProduct
-} from '@core/usecases/search-product/searchProduct'
-import { searchGateway } from '../../../../../../gateways/searchGateway'
+import { searchLaboratory, searchProduct } from '@core/usecases/search-product/searchProduct';
+import { searchGateway } from '../../../../../../gateways/searchGateway';
 
 const props = defineProps<{
-  categoriesVM: any
-  laboratoriesVM: any
-}>()
+  categoriesVM: any;
+  laboratoriesVM: any;
+}>();
 
-definePageMeta({ layout: 'main' })
+definePageMeta({ layout: 'main' });
 
 const emit = defineEmits<{
-  (e: 'close'): void
-}>()
+  (e: 'close'): void;
+}>();
 
-const router = useRouter()
+const router = useRouter();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
-let debounceTimeout: ReturnType<typeof setTimeout> | null = null
+let debounceTimeout: ReturnType<typeof setTimeout> | null = null;
 
 const goToCat = (path: string, name: string) => {
-  router.push('/categories/' + path + '?' + name)
+  router.push('/categories/' + path + '?' + name);
   setTimeout(() => {
-    close()
-  }, 1000)
-}
+    close();
+  }, 1000);
+};
 
 const goToLab = (path: string, name: string) => {
-  searchLaboratory(path, searchGateway())
-  router.push('/laboratory/' + path + '?' + name)
+  searchLaboratory(path, searchGateway());
+  router.push('/laboratory/' + path + '?' + name);
   setTimeout(() => {
-    close()
-  }, 1000)
-}
+    close();
+  }, 1000);
+};
 </script>
 
 <style scoped>
