@@ -3,9 +3,21 @@ section.px-2
     div.flex.items-center.justify-center.py-2
         span.text-2xl.font-bold.text-center(class='lg:text-3xl')
             slot
-    section.py-4.flex.gap-4.overflow-hidden.overflow-x-auto.custom-scrollbar(class='max-w-[200vw]')
+
+    // Affichage du skeleton loader tant que les produits ne sont pas chargés
+    div(v-if="!products || products.length === 0").py-4.flex.gap-4.overflow-hidden.overflow-x-auto.custom-scrollbar(class='max-w-[200vw]')
+        div.bg-gray-200.animate-pulse.rounded-xl.w-full(class='h-[320px]')
+        div.bg-gray-200.animate-pulse.rounded-xl.w-full(class='h-[320px]')
+        div.bg-gray-200.animate-pulse.rounded-xl.w-full(class='h-[320px]')
+        div.bg-gray-200.animate-pulse.rounded-xl.w-full(class='h-[320px]')
+        div.bg-gray-200.animate-pulse.rounded-xl.w-full(class='h-[320px]')
+        div.bg-gray-200.animate-pulse.rounded-xl.w-full(class='h-[320px]')
+    
+    // Affichage des produits quand ils sont chargés
+    section(v-else).py-4.flex.gap-4.overflow-hidden.overflow-x-auto.custom-scrollbar(class='max-w-[200vw]')
         div(v-for='product in products' :key="product.uuid")
             ft-product-card(:product="product")
+
 </template>
 
 <script lang="ts" setup>
