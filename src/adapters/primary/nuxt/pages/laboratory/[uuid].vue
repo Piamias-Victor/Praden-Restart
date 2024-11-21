@@ -1,8 +1,8 @@
 <template lang="pug">
 //- ft-laboratory-categories(:categoriesVM="facetsVM.categories")
-//- pre {{facetsVM}}
+pre {{laboratoryInfo}}
 div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
-    span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') Avene
+    span.text-xl.text-main.font-semibold.capitalize(v-if='laboratoryInfo && laboratoryInfo.item' class='lg:text-3xl') {{laboratoryInfo.item.name}}
     div.flex.items-center.gap-4
         div.relative
             ft-button-animate.text-main.flex.items-center.justify-center.bg-white.px-6(@click="toggleDropdown")
@@ -26,6 +26,11 @@ div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
             span.text-main.font-semibold.hidden(class='sm:block') Filtres
             icon.icon-lg(name="mdi:filter-outline")
 ft-navigation
+div.h-2
+div.px-2.flex.flex-col.gap-2
+    span.text-sm.text-contrast(v-if='laboratoryInfo && laboratoryInfo.item' v-html="laboratoryInfo.item.description")
+    span.text-sm.text-contrast(class="sm:hidden") Lorem Ipsum is simply dummy text of the printing...
+    span.text-sm.text-main.cursor-pointer.underline.text-center Voir Plus
 div(v-if="filteredProducts.length")
     ft-product-search-list(:products="filteredProducts" @close='close').px-4
 ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" :facetsVM="facetsVM" :sortType="sortType")
@@ -41,15 +46,20 @@ import { getFacetsVM } from '@adapters/primary/viewModels/get-facets/getFacetsVM
 import { listCategories } from '@core/usecases/list-categories/listCategories';
 import { getChildCategoriesVM } from '@adapters/primary/viewModels/get-category/getChildCategoryVM';
 import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM';
-import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
+import { getLaboratoryInfo, listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
 import { laboratoryGateway } from '../../../../../../gateways/laboratoryGateway';
 import { getLaboratory } from '@adapters/primary/viewModels/get-laboratory/getLaboratoryVM';
 
 definePageMeta({ layout: 'main' });
 
-onMounted(() => {
+onMounted(async () => {
   listLaboratories(laboratoryGateway());
-  getLaboratory(categoryUuid, categoryGateway(), searchGateway());
+  getLaboratory(categoryUuid, laboratoryGateway(), searchGateway());
+  try {
+    laboratoryInfo.value = await getLaboratoryInfo(laboratoryGateway(), categoryUuid);
+  } catch (error) {
+    console.error("Erreur lors de la récupération des infos laboratoire :", error);
+  }
 });
 
 const route = useRoute();
@@ -57,12 +67,22 @@ const categoryUuid = route.params.uuid;
 
 const sortType = ref(SortType.None);
 const displayProduct = ref<any | null>(null);
-const laboratoryFilter = ref<string | null>(null); // Variable pour le laboratoire filtré
+const laboratoryFilter = ref<string | null>(null);
+const laboratoryInfo = ref(null);
 
 const dropdownOpen = ref(false);
 
 const toggleDropdown = () => {
   dropdownOpen.value = !dropdownOpen.value;
+};
+
+const laboratory = async () => {
+  try {
+    const laboratoryInfo = await getLaboratoryInfo(laboratoryGateway(), categoryUuid);
+    console.log(laboratoryInfo); // Ici vous avez accès aux données une fois la promesse résolue
+  } catch (error) {
+    console.error("Erreur lors de la récupération des infos laboratoire :", error);
+  }
 };
 
 const sortBy = (st: number) => {
