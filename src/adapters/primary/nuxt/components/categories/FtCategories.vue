@@ -10,7 +10,7 @@ div.py-4.px-2.flex.items-center.gap-4.overflow-x-scroll.custom-scrollbar
 
 <script lang="ts" setup>
 const props = defineProps<{
-  categoriesVM: RootCategoriesVM;
+  categoriesVM: any;
 }>();
 
 definePageMeta({ layout: 'main' });

@@ -1,6 +1,6 @@
 <template lang="pug">
-pre {{categoryUuid}}
-ft-laboratory-categories(:categoriesVM="facetsVM.categories")
+//- ft-laboratory-categories(:categoriesVM="facetsVM.categories")
+//- pre {{facetsVM}}
 div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
     span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') Avene
     div.flex.items-center.gap-4
@@ -43,12 +43,13 @@ import { getChildCategoriesVM } from '@adapters/primary/viewModels/get-category/
 import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM';
 import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
 import { laboratoryGateway } from '../../../../../../gateways/laboratoryGateway';
+import { getLaboratory } from '@adapters/primary/viewModels/get-laboratory/getLaboratoryVM';
 
 definePageMeta({ layout: 'main' });
 
 onMounted(() => {
   listLaboratories(laboratoryGateway());
-  getCategory(categoryUuid, categoryGateway(), searchGateway());
+  getLaboratory(categoryUuid, categoryGateway(), searchGateway());
 });
 
 const route = useRoute();

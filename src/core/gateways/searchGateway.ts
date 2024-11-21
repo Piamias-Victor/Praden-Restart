@@ -5,12 +5,13 @@ export interface SearchGateway {
   getCategory(categoryUuid: UUID): Promise<ProductsWithFacets>;
   search(categoryUuid: UUID, filters: Partial<Filters>): Promise<Array<Product>>;
   searchProduct(
-    query: string,
-    options?: {
-      laboratoryUuids?: Array<string>;
-      size?: number;
-      isInPromotion?: string;
-    },
+    query?: string,
+    laboratoryUuids?: Array<string>,
+    size?: number,
+    isInPromotion?: string,
   ): Promise<Array<Product>>;
-  searchFacet(query: string): any;
+  searchFacet(query?: string,
+    laboratoryUuids?: Array<string>,
+    size?: number,
+    isInPromotion?: string,): any;
 }

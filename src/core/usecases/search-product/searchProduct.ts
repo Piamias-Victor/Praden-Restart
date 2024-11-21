@@ -19,12 +19,10 @@ export const searchLaboratory = async (laboratoryUuids: string | Array<string>, 
     searchStore.setSearchResult([]);
   } else {
     const uuidsArray = Array.isArray(laboratoryUuids) ? laboratoryUuids : [laboratoryUuids];
-    console.log('laboratoryUuids1', uuidsArray);
 
     const options = {
       laboratoryUuids: uuidsArray,
     };
-    console.log('Options transmises à searchProduct:', options); // Ajoutez ce log
 
     const products = await searchGateway.searchProduct('', options);
     const facets = await searchGateway.searchFacet(options);

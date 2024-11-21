@@ -81,6 +81,8 @@ import { updateUser } from '@core/usecases/user/updateUser';
 const router = useRouter();
 
 const newsletter = ref(false);
+const email = ref('');
+const phone = ref('');
 
 const user = computed(() => {
   return getUserVM();
@@ -98,9 +100,6 @@ const newUser = ref({
   city: '',
 });
 
-const email = ref('');
-const phone = ref('');
-
 const emit = defineEmits<{
   (e: 'close'): void;
   (e: 'move-stepper'): void;
@@ -114,7 +113,6 @@ const switchNewsletter = () => {
   newsletter.value = !newsletter.value;
 };
 
-// Fonctions pour mettre à jour newUser
 const firstnameChanged = (value: string) => {
   newUser.value.firstName = value;
 };
@@ -163,20 +161,6 @@ const isFormValid = computed(() => {
   );
 });
 
-watchEffect(() => {
-  if (user.value) {
-    newUser.value.firstName = user.value.firstName || '';
-    newUser.value.lastName = user.value.lastName || '';
-    newUser.value.phone = user.value.phoneNumber || '';
-    newUser.value.mail = user.value.mail || '';
-    newUser.value.country = user.value.country || '';
-    newUser.value.postal = user.value.postal || '';
-    newUser.value.address = user.value.address || '';
-    newUser.value.city = user.value.city || '';
-    newUser.value.appartement = user.value.appartement || '';
-  }
-});
-
 const validateUser = () => {
   const photo =
     user.value.photo !== ''
@@ -206,4 +190,18 @@ const connectWithGoogle = async () => {
     console.error('Erreur lors de la connexion avec Google: ', error);
   }
 };
+
+watchEffect(() => {
+  if (user.value) {
+    newUser.value.firstName = user.value.firstName || '';
+    newUser.value.lastName = user.value.lastName || '';
+    newUser.value.phone = user.value.phoneNumber || '';
+    newUser.value.mail = user.value.mail || '';
+    newUser.value.country = user.value.country || '';
+    newUser.value.postal = user.value.postal || '';
+    newUser.value.address = user.value.address || '';
+    newUser.value.city = user.value.city || '';
+    newUser.value.appartement = user.value.appartement || '';
+  }
+});
 </script>

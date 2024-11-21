@@ -58,7 +58,6 @@ const goToCat = (path: string, name: string) => {
 };
 
 const goToLab = (path: string, name: string) => {
-  searchLaboratory(path, searchGateway());
   router.push('/laboratory/' + path + '?' + name);
   setTimeout(() => {
     close();
