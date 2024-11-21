@@ -1,18 +1,25 @@
 <template lang="pug">
 div.py-4.px-2.flex.items-center.gap-4.overflow-x-scroll.custom-scrollbar
-    ft-button-animate.bg-white.rounded-xl.px-6(v-for='category in props.categoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid)")
-        img.icon-md(:src="category.icon")
-        span.whitespace-nowrap {{ category.name }}
+    template(v-if="!categoriesLoaded")
+        div.bg-gray-200.rounded-xl.px-6.w-24.h-10.animate-pulse(v-for="n in 12" :key="n")
+    template(v-else)
+        ft-button-animate.bg-white.rounded-xl.px-6(v-for='category in props.categoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid)")
+            img.icon-md(:src="category.icon")
+            span.whitespace-nowrap {{ category.name }}
 </template>
 
 <script lang="ts" setup>
 const props = defineProps<{
-  categoriesVM: any
+  categoriesVM: RootCategoriesVM
 }>()
 
 definePageMeta({ layout: 'main' })
 
 const router = useRouter()
+
+const categoriesLoaded = computed(() => {
+  return props.categoriesVM?.items?.length > 0
+})
 
 const goToCat = (path: string) => {
   router.push('/categories/' + path)

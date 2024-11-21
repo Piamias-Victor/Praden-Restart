@@ -84,8 +84,9 @@ import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
 import { updateUser } from '@core/usecases/user/updateUser'
 
 const router = useRouter()
-
 const newsletter = ref(false)
+const email = ref('')
+const phone = ref('')
 
 const user = computed(() => {
   return getUserVM()
@@ -103,9 +104,6 @@ const newUser = ref({
   city: ''
 })
 
-const email = ref('')
-const phone = ref('')
-
 const emit = defineEmits<{
   (e: 'close'): void
   (e: 'move-stepper'): void
@@ -119,7 +117,6 @@ const switchNewsletter = () => {
   newsletter.value = !newsletter.value
 }
 
-// Fonctions pour mettre à jour newUser
 const firstnameChanged = (value: string) => {
   newUser.value.firstName = value
 }
