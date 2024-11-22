@@ -137,12 +137,12 @@ const close = () => {
 
 const searchLaboratory = (labo: string | null) => {
   emit('searchLaboratory', labo);
-  close();
+  // close();
 };
 
 const searchCategory = (cat: string | null) => {
   emit('searchCategory', cat);
-  close();
+  // close();
 };
 
 const searchPrice = (price: any) => {
@@ -151,7 +151,7 @@ const searchPrice = (price: any) => {
 
 const sortBy = (st: number) => {
   emit('sortBy', st);
-  close();
+  // close();
 };
 </script>
 
