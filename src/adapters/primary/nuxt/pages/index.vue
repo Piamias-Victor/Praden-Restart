@@ -46,6 +46,13 @@ const productInPromotion = computed(() => {
 const blogVm = {
   items: [
     {
+      uuid: '0',
+      name: 'Tout comprendre sur le CTR en SEO',
+      icon: 'https://www.tactee.fr/wp-content/uploads/2022/08/13.png',
+      url: 'http://localhost:3000/blog',
+      date: '01/11/2024',
+    },
+    {
       uuid: '1',
       name: 'Ensemble, prenons le cancer de vitesse',
       icon: 'https://i.postimg.cc/zXF5tKmm/oct-rose-cmjn.png',

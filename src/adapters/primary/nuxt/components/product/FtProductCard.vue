@@ -1,7 +1,7 @@
 <template lang="pug">
 div.bg-white.rounded-xl.pt-2(class='w-[65vw] sm:w-[15vw] min-h-[320px] flex flex-col justify-between transform transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-xl'
       @mouseenter="isHovered = true" @mouseleave="isHovered = false")
-  div.absolute.top-0.left-0.bg-main.text-white.text-xs.font-bold.p-2.rounded-tl-lg.rounded-full.z-10
+  div.absolute.top-0.left-0.bg-main.text-white.text-xs.font-bold.p-2.rounded-tl-lg.rounded-full.z-10(v-if="product.promotion?.price")
       span.text-xl.promo-amount(:class="{ 'promo-amount-hover': isHovered }") {{ product.promotion?.amount ? '- ' + product.promotion.amount : '' }}
   div.flex.flex-col.items-center.justify-center.gap-4.relative
       nuxt-link.h-full.flex.items-center(

@@ -1,6 +1,5 @@
 <template lang="pug">
 //- ft-laboratory-categories(:categoriesVM="facetsVM.categories")
-pre {{laboratoryInfo}}
 div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
     span.text-xl.text-main.font-semibold.capitalize(v-if='laboratoryInfo && laboratoryInfo.item' class='lg:text-3xl') {{laboratoryInfo.item.name}}
     div.flex.items-center.gap-4
@@ -28,11 +27,15 @@ div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
 ft-navigation
 div.h-2
 div.px-2.flex.flex-col.gap-2
-    span.text-sm.text-contrast(v-if='laboratoryInfo && laboratoryInfo.item' v-html="laboratoryInfo.item.description")
-    span.text-sm.text-contrast(class="sm:hidden") Lorem Ipsum is simply dummy text of the printing...
-    span.text-sm.text-main.cursor-pointer.underline.text-center Voir Plus
+    span.text-sm.prose-xl.line-clamp-2.text-contrast(v-if='laboratoryInfo && laboratoryInfo.item' v-html="laboratoryInfo.item.description")
+    span.text-sm.text-main.cursor-pointer.underline.text-center(@click="scrollToDescription") Voir Plus
 div(v-if="filteredProducts.length")
     ft-product-search-list(:products="filteredProducts" @close='close').px-4
+div.h-4
+div.px-2.mt-2.w-full.flex.items-center.flex-col.justify-center.gap-2(ref='description')
+  span.text-center.text-main.text-xl.font-semibold Description
+  span.text-sm.prose-xl(v-if='laboratoryInfo && laboratoryInfo.item' v-html="laboratoryInfo.item.description")
+div.h-10
 ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" :facetsVM="facetsVM" :sortType="sortType")
 </template>
 
@@ -71,10 +74,17 @@ const laboratoryFilter = ref<string | null>(null);
 const laboratoryInfo = ref(null);
 
 const dropdownOpen = ref(false);
+const description = ref(null);
 
 const toggleDropdown = () => {
   dropdownOpen.value = !dropdownOpen.value;
 };
+
+function scrollToDescription() {
+  if (description.value) {
+    description.value.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
 const laboratory = async () => {
   try {
