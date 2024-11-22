@@ -1,5 +1,6 @@
 import { LaboratoryGateway } from '@core/gateways/laboratoryGateway';
 import { SearchGateway } from '@core/gateways/searchGateway';
+import { useCategoryStore } from '@store/categoryStore';
 import { useLaboratoryStore } from '@store/laboratoryStore';
 import { useSearchStore } from '@store/searchStore';
 import { UUID } from 'crypto';
@@ -17,6 +18,7 @@ export const getLaboratory = async (uuid: UUID, laboratoryGateway: LaboratoryGat
 
 export const getLaboratoryByName = async (labo: Array<string>, query: string, searchGateway: SearchGateway) => {
   const laboratoryStore = useLaboratoryStore();
+  console.log('test')
 
   // Récupérer les UUID des laboratoires dans le tableau 'labo'
   const laboratoryUUIDs = labo
