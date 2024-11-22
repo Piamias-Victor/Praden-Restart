@@ -59,12 +59,12 @@ const sortBy = (st: number) => {
 
 const searchLaboratory = (labo: string | null) => {
   emit('searchLaboratory', labo);
-  close();
+  // close();
 };
 
 const searchCategory = (cat: string | null) => {
   emit('searchCategory', cat);
-  close();
+  // close();
 };
 
 const searchPrice = (price: any) => {
