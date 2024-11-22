@@ -150,6 +150,7 @@ export const getCategory = async (uuid: UUID, categoryGateway: CategoryGateway, 
   if (productsWithFacets) {
     searchStore.setCurrentCategory(uuid);
     searchStore.setProducts(productsWithFacets.items);
+    searchStore.setSearchResult(productsWithFacets.items)
     searchStore.setFacets(productsWithFacets.facets);
   } else {
     searchStore.reset();

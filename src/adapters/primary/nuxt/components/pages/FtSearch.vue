@@ -134,13 +134,13 @@ const filteredProducts = computed(() => {
   // // if (!categoryFilter.value) {
   // //   return res // Retourner tous les produits si aucun filtre
   // // }
-  // if (!priceFilter.value) {
-  // } else {
-  //   res = res.filter(
-  //     (product) =>
-  //       parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1],
-  //   );
-  // }
+  if (!priceFilter.value) {
+  } else {
+    res = res.filter(
+      (product) =>
+        parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1],
+    );
+  }
   // res = searchVM.value.items.filter(
   //   (product) => product.laboratory === laboratoryFilter.value
   // )
