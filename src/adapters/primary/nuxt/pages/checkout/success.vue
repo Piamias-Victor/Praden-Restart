@@ -17,11 +17,11 @@ div.flex.flex-col.items-center
 </template>
 
 <script lang="ts" setup>
-definePageMeta({ layout: 'main' })
+definePageMeta({ layout: 'main' });
 
-const router = useRouter()
+const router = useRouter();
 
 const backToHome = () => {
-  router.push('/')
-}
+  router.push('/');
+};
 </script>

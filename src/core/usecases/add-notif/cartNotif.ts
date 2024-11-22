@@ -1,43 +1,39 @@
-import { useNotificationsStore } from '@store/notificationsStore'
+import { useNotificationsStore } from '@store/notificationsStore';
 
 export abstract class Notification {
-  protected _msg = ''
+  protected _msg = '';
 
   protected constructor(msg: string) {
-    this._msg = msg
+    this._msg = msg;
   }
 
   get msg(): string {
-    return this._msg
+    return this._msg;
   }
 }
 
 export class SuccessNotification extends Notification {
   constructor(msg: string) {
-    super(msg)
+    super(msg);
   }
 }
 
 export const sendNotifCart = async () => {
-  const notificationsStore = useNotificationsStore()
+  const notificationsStore = useNotificationsStore();
 
   try {
-    notificationsStore.add(
-      new SuccessNotification('Produit ajouté au panier avec succès')
-    )
+    notificationsStore.add(new SuccessNotification('Produit ajouté au panier avec succès'));
   } catch (e: any) {
-    console.error('soucis')
+    console.error('soucis');
   }
-}
+};
 
 export const sendNotifLike = async () => {
-  const notificationsStore = useNotificationsStore()
+  const notificationsStore = useNotificationsStore();
 
   try {
-    notificationsStore.add(
-      new SuccessNotification('Produit ajouté au favoris avec succès')
-    )
+    notificationsStore.add(new SuccessNotification('Produit ajouté au favoris avec succès'));
   } catch (e: any) {
-    console.error('soucis')
+    console.error('soucis');
   }
-}
+};

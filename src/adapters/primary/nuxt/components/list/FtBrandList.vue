@@ -5,15 +5,15 @@ section.px-2
     ft-laboratory
     div.h-2
     div.flex.items-center.justify-center
-        ft-button.button-solid.text-xl.px-8(@click='goToLabo')
+        ft-button-animate.button-solid.text-xl.px-8(@click='goToLabo')
             span Voir toutes les marques
             icon.icon-md(name='bx:category')
 </template>
 
 <script lang="ts" setup>
-const router = useRouter()
+const router = useRouter();
 
 const goToLabo = async () => {
-  router.push('/laboratory')
-}
+  router.push('/laboratory');
+};
 </script>

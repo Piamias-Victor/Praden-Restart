@@ -17,23 +17,20 @@ div.px-2.fixed.z-50.top-16.right-2.flex.flex-col.gap-2(class="w-[96vw] lg:w-[35v
 </template>
 
 <script lang="ts" setup>
-import {
-  getNotificationsVM,
-  NotificationType
-} from '@adapters/primary/viewModels/get-notifications/getNotification'
-import { removeNotification } from '@core/usecases/remove-notification/removeNotification'
+import { getNotificationsVM, NotificationType } from '@adapters/primary/viewModels/get-notifications/getNotification';
+import { removeNotification } from '@core/usecases/remove-notification/removeNotification';
 
 const colorMap = {
   [NotificationType.Success]: 'text-success',
-  [NotificationType.Error]: 'text-error'
-}
+  [NotificationType.Error]: 'text-error',
+};
 
 const notifications = computed(() => {
-  const data = getNotificationsVM()
-  return data.notifications || [] // Assure-toi que tu renvoies un tableau
-})
+  const data = getNotificationsVM();
+  return data.notifications || []; // Assure-toi que tu renvoies un tableau
+});
 
 const dismissNotification = (index: number) => {
-  removeNotification(index)
-}
+  removeNotification(index);
+};
 </script>

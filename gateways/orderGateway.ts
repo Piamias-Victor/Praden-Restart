@@ -1,9 +1,9 @@
 import {
   InMemoryOrderGateway,
   FakeUUIDGenerator,
-  RealDateProvider
-} from '@adapters/secondary/order-gateway/inMemoryOrderGateway'
-import { StripePaymentGateway } from '@adapters/secondary/payment-gateway/stripePaymentGateway'
+  RealDateProvider,
+} from '@adapters/secondary/order-gateway/inMemoryOrderGateway';
+import { StripePaymentGateway } from '@adapters/secondary/payment-gateway/stripePaymentGateway';
 
 export const useOrderGateway = () => {
   // const { BACKEND_URL } = useRuntimeConfig().public
@@ -12,8 +12,8 @@ export const useOrderGateway = () => {
   const orderGateway = new InMemoryOrderGateway(
     new FakeUUIDGenerator(),
     new StripePaymentGateway('test'),
-    new RealDateProvider()
-  )
-  orderGateway.feedWith()
-  return orderGateway
-}
+    new RealDateProvider(),
+  );
+  orderGateway.feedWith();
+  return orderGateway;
+};

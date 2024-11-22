@@ -32,36 +32,33 @@ div.bg-white.rounded-xl.pt-2(class='w-[65vw] sm:w-[15vw] min-h-[320px] flex flex
 </template>
 
 <script lang="ts" setup>
-import {
-  addToFavorite,
-  removeFromFavorite
-} from '@core/usecases/add-to-favorite/addToFavorite'
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm'
-import { priceFormatter } from '@utils/formater'
+import { addToFavorite, removeFromFavorite } from '@core/usecases/add-to-favorite/addToFavorite';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm';
+import { priceFormatter } from '@utils/formater';
 
 defineProps({
-  product: { type: Object, required: true }
-})
+  product: { type: Object, required: true },
+});
 
 const addItemToFavorite = (uuid: string) => {
-  addToFavorite(uuid, useProductGateway())
-}
+  addToFavorite(uuid, useProductGateway());
+};
 
 const removeItemFromFavorite = (uuid: string) => {
-  removeFromFavorite(uuid)
-}
+  removeFromFavorite(uuid);
+};
 
 export interface LikeQuantityVM {
-  items: HashTable<number>
-  totalQuantity: number
+  items: HashTable<number>;
+  totalQuantity: number;
 }
 
-const likeQuantity = ref<LikeQuantityVM | null>(null)
+const likeQuantity = ref<LikeQuantityVM | null>(null);
 
-const formatter = priceFormatter('fr-FR', 'EUR')
+const formatter = priceFormatter('fr-FR', 'EUR');
 
 watchEffect(async () => {
-  likeQuantity.value = await getLikeQuantityVM(useProductGateway())
-})
+  likeQuantity.value = await getLikeQuantityVM(useProductGateway());
+});
 </script>

@@ -19,14 +19,14 @@ tab-group.flex.flex-col(as='div').bg-white.rounded-xl.p-2
 </template>
 
 <script lang="ts" setup>
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue'
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/vue';
 
 defineProps({
   images: {
     type: Array,
     default: () => {
-      return []
-    }
-  }
-})
+      return [];
+    },
+  },
+});
 </script>

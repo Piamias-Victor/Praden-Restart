@@ -67,30 +67,26 @@ div.mt-2.border-t.py-6.px-4(class="sm:px-6")
 </template>
 
 <script lang="ts" setup>
-import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogPanel
-} from '@headlessui/vue'
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM'
-import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart'
-import { createGoogleUser } from '@core/usecases/user/createGoogleUser'
-import { signInWithGoogle } from '@utils/google'
-import { ref, computed, watchEffect } from 'vue'
-import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
-import { updateUser } from '@core/usecases/user/updateUser'
+import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
+import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart';
+import { createGoogleUser } from '@core/usecases/user/createGoogleUser';
+import { signInWithGoogle } from '@utils/google';
+import { ref, computed, watchEffect } from 'vue';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import { updateUser } from '@core/usecases/user/updateUser';
 
-const router = useRouter()
-const newsletter = ref(false)
-const email = ref('')
-const phone = ref('')
+const router = useRouter();
+
+const newsletter = ref(false);
+const email = ref('');
+const phone = ref('');
 
 const user = computed(() => {
-  return getUserVM()
-})
+  return getUserVM();
+});
 
 const newUser = ref({
   firstName: '',
@@ -101,57 +97,57 @@ const newUser = ref({
   postal: '',
   address: '',
   appartement: '',
-  city: ''
-})
+  city: '',
+});
 
 const emit = defineEmits<{
-  (e: 'close'): void
-  (e: 'move-stepper'): void
-}>()
+  (e: 'close'): void;
+  (e: 'move-stepper'): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 const switchNewsletter = () => {
-  newsletter.value = !newsletter.value
-}
+  newsletter.value = !newsletter.value;
+};
 
 const firstnameChanged = (value: string) => {
-  newUser.value.firstName = value
-}
+  newUser.value.firstName = value;
+};
 
 const mailChanged = (e: any) => {
-  newUser.value.mail = e.target.value
-}
+  newUser.value.mail = e.target.value;
+};
 
 const phoneChanged = (e: any) => {
-  newUser.value.phone = e.target.value
-}
+  newUser.value.phone = e.target.value;
+};
 
 const lastnameChanged = (value: string) => {
-  newUser.value.lastName = value
-}
+  newUser.value.lastName = value;
+};
 
 const countryChanged = (value: string) => {
-  newUser.value.country = value
-}
+  newUser.value.country = value;
+};
 
 const addressChanged = (value: string) => {
-  newUser.value.address = value
-}
+  newUser.value.address = value;
+};
 
 const appartementChanged = (value: string) => {
-  newUser.value.appartement = value
-}
+  newUser.value.appartement = value;
+};
 
 const cityChanged = (value: string) => {
-  newUser.value.city = value
-}
+  newUser.value.city = value;
+};
 
 const zipChanged = (value: string) => {
-  newUser.value.postal = value
-}
+  newUser.value.postal = value;
+};
 
 const isFormValid = computed(() => {
   return (
@@ -162,28 +158,14 @@ const isFormValid = computed(() => {
     newUser.value.country &&
     newUser.value.postal &&
     newUser.value.city
-  )
-})
-
-watchEffect(() => {
-  if (user.value) {
-    newUser.value.firstName = user.value.firstName || ''
-    newUser.value.lastName = user.value.lastName || ''
-    newUser.value.phone = user.value.phoneNumber || ''
-    newUser.value.mail = user.value.mail || ''
-    newUser.value.country = user.value.country || ''
-    newUser.value.postal = user.value.postal || ''
-    newUser.value.address = user.value.address || ''
-    newUser.value.city = user.value.city || ''
-    newUser.value.appartement = user.value.appartement || ''
-  }
-})
+  );
+});
 
 const validateUser = () => {
   const photo =
     user.value.photo !== ''
       ? user.value.photo
-      : 'https://media1.vetsecurite.com/img/cms/BLOG/Workwear/Pr%C3%A9parateur%20pharmacie/Logo-Pharmacie.png'
+      : 'https://media1.vetsecurite.com/img/cms/BLOG/Workwear/Pr%C3%A9parateur%20pharmacie/Logo-Pharmacie.png';
 
   updateUser({
     firstName: newUser.value.firstName,
@@ -195,17 +177,31 @@ const validateUser = () => {
     address: newUser.value.address,
     appartement: newUser.value.appartement,
     city: newUser.value.city,
-    photo
-  })
-  emit('move-stepper')
-}
+    photo,
+  });
+  emit('move-stepper');
+};
 
 const connectWithGoogle = async () => {
   try {
-    const user = await signInWithGoogle()
-    createGoogleUser(user)
+    const user = await signInWithGoogle();
+    createGoogleUser(user);
   } catch (error) {
-    console.error('Erreur lors de la connexion avec Google: ', error)
+    console.error('Erreur lors de la connexion avec Google: ', error);
   }
-}
+};
+
+watchEffect(() => {
+  if (user.value) {
+    newUser.value.firstName = user.value.firstName || '';
+    newUser.value.lastName = user.value.lastName || '';
+    newUser.value.phone = user.value.phoneNumber || '';
+    newUser.value.mail = user.value.mail || '';
+    newUser.value.country = user.value.country || '';
+    newUser.value.postal = user.value.postal || '';
+    newUser.value.address = user.value.address || '';
+    newUser.value.city = user.value.city || '';
+    newUser.value.appartement = user.value.appartement || '';
+  }
+});
 </script>

@@ -48,84 +48,75 @@ ft-popup(:show="showPopup" @close="closePopup")
 </template>
 
 <script lang="ts" setup>
-import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogPanel
-} from '@headlessui/vue'
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM'
-import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart'
+import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
+import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart';
 import {
   listDeliveryMethods,
-  selectDeliveryMethods
-} from '@core/usecases/delivery-methods-listing/listDeliveryMethods'
-import deliveryGateway, {
-  express
-} from '../../../../../../gateways/deliveryGateway'
-import { getCheckoutVM } from '@adapters/primary/viewModels/get-checkout/getCheckoutVM'
-import { getDeliveryVM } from '@adapters/primary/viewModels/get-delivery/getDeliveryVM'
-import { createOrder } from '@core/usecases/orders/order-creation/createOrder'
-import { useEmailGateway } from '../../../../../../gateways/emailGateway'
-import { useOrderGateway } from '../../../../../../gateways/orderGateway'
-import windowGateway from '../../../../../../gateways/windowGateway'
-import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
+  selectDeliveryMethods,
+} from '@core/usecases/delivery-methods-listing/listDeliveryMethods';
+import deliveryGateway, { express } from '../../../../../../gateways/deliveryGateway';
+import { getCheckoutVM } from '@adapters/primary/viewModels/get-checkout/getCheckoutVM';
+import { getDeliveryVM } from '@adapters/primary/viewModels/get-delivery/getDeliveryVM';
+import { createOrder } from '@core/usecases/orders/order-creation/createOrder';
+import { useEmailGateway } from '../../../../../../gateways/emailGateway';
+import { useOrderGateway } from '../../../../../../gateways/orderGateway';
+import windowGateway from '../../../../../../gateways/windowGateway';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 
-const router = useRouter()
+const router = useRouter();
 
-const showPopup = ref(false)
+const showPopup = ref(false);
 
 const openPopup = () => {
-  showPopup.value = true
-}
+  showPopup.value = true;
+};
 
 const closePopup = () => {
-  showPopup.value = false
-}
+  showPopup.value = false;
+};
 
-const cartQuantity = ref<CartQuantityVM | null>(null)
+const cartQuantity = ref<CartQuantityVM | null>(null);
 
 const deliveryMethods = computed(() => {
-  return getDeliveryVM()
-})
+  return getDeliveryVM();
+});
 
-const selectedDeliveryMethod = ref(express.uuid)
+const selectedDeliveryMethod = ref(express.uuid);
 
 const deliveryMethodSelected = (method: any) => {
-  selectDeliveryMethods(method)
-  deliveryMethods.value.selectedDeliveryMethod = method
-  selectedDeliveryMethod.value = method.uuid
-  if (method.name === 'Point Relais') openPopup()
-}
+  selectDeliveryMethods(method);
+  deliveryMethods.value.selectedDeliveryMethod = method;
+  selectedDeliveryMethod.value = method.uuid;
+  if (method.name === 'Point Relais') openPopup();
+};
 
 const hasMedicineReference = computed(() => {
-  return Object.values(cart.value.items).some(
-    (item: any) => item.uuid === '505209a2-7acb-4891-b933-e084d786d7ea '
-  )
-})
+  return Object.values(cart.value.items).some((item: any) => item.uuid === '505209a2-7acb-4891-b933-e084d786d7ea ');
+});
 
 const cart = computed(() => {
-  return getCartVM()
-})
+  return getCartVM();
+});
 
 const emit = defineEmits<{
-  (e: 'close'): void
-  (e: 'move-stepper'): void
-}>()
+  (e: 'close'): void;
+  (e: 'move-stepper'): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 function closeModal() {
-  emit('close')
+  emit('close');
 }
 
 const user = computed(() => {
-  return getUserVM()
-})
+  return getUserVM();
+});
 
 const validateOrder = () => {
   createOrder(
@@ -136,12 +127,12 @@ const validateOrder = () => {
     useOrderGateway(),
     useProductGateway(),
     windowGateway,
-    useEmailGateway()
-  )
-  router.push('/checkout/success')
-}
+    useEmailGateway(),
+  );
+  router.push('/checkout/success');
+};
 
 watchEffect(async () => {
-  cartQuantity.value = await getCartQuantityVM(useProductGateway())
-})
+  cartQuantity.value = await getCartQuantityVM(useProductGateway());
+});
 </script>

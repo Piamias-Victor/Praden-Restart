@@ -77,5 +77,5 @@ ft-navigation
 </style>
 
 <script lang="ts" setup>
-definePageMeta({ layout: 'main' })
+definePageMeta({ layout: 'main' });
 </script>

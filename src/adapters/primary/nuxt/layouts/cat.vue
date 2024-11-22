@@ -12,5 +12,5 @@ div.flex.flex-col.h-screen
 </template>
 
 <script lang="ts" setup>
-definePageMeta({ layout: 'cat' })
+definePageMeta({ layout: 'cat' });
 </script>

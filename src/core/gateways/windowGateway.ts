@@ -1,3 +1,3 @@
 export interface WindowGateway {
-  redirectTo(url: string): void
+  redirectTo(url: string): void;
 }

@@ -1,5 +1,5 @@
 export class WrongUserError extends Error {
   constructor() {
-    super('Identifiant incorrect')
+    super('Identifiant incorrect');
   }
 }

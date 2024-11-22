@@ -4,13 +4,13 @@
 </template>
 
 <script lang="ts" setup>
-const showPopup = ref(false)
+const showPopup = ref(false);
 
 const openPopup = () => {
-  showPopup.value = true
-}
+  showPopup.value = true;
+};
 
 const closePopup = () => {
-  showPopup.value = false
-}
+  showPopup.value = false;
+};
 </script>

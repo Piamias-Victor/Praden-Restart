@@ -21,23 +21,23 @@ li.flex.py-6
 </template>
 
 <script lang="ts" setup>
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { addToCart } from '@core/usecases/add-to-cart/addToCart'
-import { removeFromCart } from '@core/usecases/remove-from-cart/removeFromCart'
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { addToCart } from '@core/usecases/add-to-cart/addToCart';
+import { removeFromCart } from '@core/usecases/remove-from-cart/removeFromCart';
 
 defineProps({
-  item: { type: Object, required: true }
-})
+  item: { type: Object, required: true },
+});
 
 const addItemToCart = (uuid: string) => {
-  addToCart(uuid, useProductGateway())
-}
+  addToCart(uuid, useProductGateway());
+};
 
 const removeItemFromCart = (uuid: string) => {
-  removeFromCart(uuid)
-}
+  removeFromCart(uuid);
+};
 
 const removeAllItemByUuidFromCart = (uuid: string) => {
-  removeAllItemFromCartByUuid(uuid)
-}
+  removeAllItemFromCartByUuid(uuid);
+};
 </script>

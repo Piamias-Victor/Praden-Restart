@@ -60,42 +60,37 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
-import { createGoogleUser } from '@core/usecases/user/createGoogleUser'
-import { updateUser } from '@core/usecases/user/updateUser'
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogPanel
-} from '@headlessui/vue'
-import { signInWithGoogle } from '@utils/google'
-import { ref } from 'vue'
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import { createGoogleUser } from '@core/usecases/user/createGoogleUser';
+import { updateUser } from '@core/usecases/user/updateUser';
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
+import { signInWithGoogle } from '@utils/google';
+import { ref } from 'vue';
 
 const emit = defineEmits<{
-  (e: 'close'): void
-}>()
+  (e: 'close'): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 function closeModal() {
-  emit('close')
+  emit('close');
 }
 
 const user = computed(() => {
-  return getUserVM()
-})
+  return getUserVM();
+});
 
-const newsletter = ref(false)
-const phone = ref('')
-const firstName = ref('')
-const lastName = ref('')
-const country = ref('')
-const postal = ref('')
-const address = ref('')
-const city = ref('')
+const newsletter = ref(false);
+const phone = ref('');
+const firstName = ref('');
+const lastName = ref('');
+const country = ref('');
+const postal = ref('');
+const address = ref('');
+const city = ref('');
 const newUser = ref({
   firstName: '',
   lastName: '',
@@ -105,67 +100,67 @@ const newUser = ref({
   postal: '',
   address: '',
   appartement: '',
-  city: ''
-})
+  city: '',
+});
 
 const connect = () => {
-  close()
-}
+  close();
+};
 
 const switchNewsletter = () => {
-  newsletter.value = !newsletter.value
-}
+  newsletter.value = !newsletter.value;
+};
 
 const firstnameChanged = (value: string) => {
-  newUser.value.firstName = value
-}
+  newUser.value.firstName = value;
+};
 
 const phoneChanged = (e: any) => {
-  newUser.value.phone = e.target.value
-}
+  newUser.value.phone = e.target.value;
+};
 
 const lastnameChanged = (value: string) => {
-  newUser.value.lastName = value
-}
+  newUser.value.lastName = value;
+};
 
 const countryChanged = (value: string) => {
-  newUser.value.country = value
-}
+  newUser.value.country = value;
+};
 
 const addressChanged = (value: string) => {
-  newUser.value.address = value
-}
+  newUser.value.address = value;
+};
 
 const appartementChanged = (value: string) => {
-  newUser.value.appartement = value
-}
+  newUser.value.appartement = value;
+};
 
 const cityChanged = (value: string) => {
-  newUser.value.city = value
-}
+  newUser.value.city = value;
+};
 
 const zipChanged = (value: string) => {
-  newUser.value.postal = value
-}
+  newUser.value.postal = value;
+};
 
 watchEffect(() => {
   if (user.value) {
-    newUser.value.firstName = user.value.firstName || ''
-    newUser.value.lastName = user.value.lastName || ''
-    newUser.value.phone = user.value.phoneNumber || ''
-    newUser.value.mail = user.value.mail || ''
-    newUser.value.country = user.value.country || ''
-    newUser.value.postal = user.value.postal || ''
-    newUser.value.address = user.value.address || ''
-    newUser.value.city = user.value.city || ''
+    newUser.value.firstName = user.value.firstName || '';
+    newUser.value.lastName = user.value.lastName || '';
+    newUser.value.phone = user.value.phoneNumber || '';
+    newUser.value.mail = user.value.mail || '';
+    newUser.value.country = user.value.country || '';
+    newUser.value.postal = user.value.postal || '';
+    newUser.value.address = user.value.address || '';
+    newUser.value.city = user.value.city || '';
   }
-})
+});
 
 const validateUser = () => {
   const photo =
     user.value.photo !== ''
       ? user.value.photo
-      : 'https://media1.vetsecurite.com/img/cms/BLOG/Workwear/Pr%C3%A9parateur%20pharmacie/Logo-Pharmacie.png'
+      : 'https://media1.vetsecurite.com/img/cms/BLOG/Workwear/Pr%C3%A9parateur%20pharmacie/Logo-Pharmacie.png';
 
   updateUser({
     firstName: newUser.value.firstName,
@@ -177,8 +172,8 @@ const validateUser = () => {
     address: newUser.value.address,
     appartement: newUser.value.appartement,
     city: newUser.value.city,
-    photo
-  })
-  close()
-}
+    photo,
+  });
+  close();
+};
 </script>

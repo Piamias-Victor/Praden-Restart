@@ -10,20 +10,20 @@ div.py-4.px-2.flex.items-center.gap-4.overflow-x-scroll.custom-scrollbar
 
 <script lang="ts" setup>
 const props = defineProps<{
-  categoriesVM: RootCategoriesVM
-}>()
+  categoriesVM: any;
+}>();
 
-definePageMeta({ layout: 'main' })
+definePageMeta({ layout: 'main' });
 
-const router = useRouter()
+const router = useRouter();
 
 const categoriesLoaded = computed(() => {
-  return props.categoriesVM?.items?.length > 0
-})
+  return props.categoriesVM?.items?.length > 0;
+});
 
 const goToCat = (path: string) => {
-  router.push('/categories/' + path)
-}
+  router.push('/categories/' + path);
+};
 </script>
 
 <style scoped>

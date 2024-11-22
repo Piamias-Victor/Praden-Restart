@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import VueSlider from 'vue-3-slider-component'
+import { ref } from 'vue';
+import VueSlider from 'vue-3-slider-component';
 
-const rangeValues = ref([20, 80]) // Initialiser avec deux valeurs pour la fourchette de prix
+const rangeValues = ref([20, 80]); // Initialiser avec deux valeurs pour la fourchette de prix
 </script>
 
 <template>

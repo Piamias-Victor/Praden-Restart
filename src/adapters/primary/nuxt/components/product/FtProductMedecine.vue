@@ -16,6 +16,6 @@ div
 
 <script lang="ts" setup>
 defineProps({
-  item: { type: Object, required: true }
-})
+  item: { type: Object, required: true },
+});
 </script>

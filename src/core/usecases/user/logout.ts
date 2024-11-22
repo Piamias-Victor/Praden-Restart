@@ -1,7 +1,7 @@
-import { User } from '@core/types/type'
-import { useUserStore } from '@store/userStore'
+import { User } from '@core/types/type';
+import { useUserStore } from '@store/userStore';
 
 export const logoutUser = () => {
-  const userStore = useUserStore()
-  userStore.disconnect()
-}
+  const userStore = useUserStore();
+  userStore.disconnect();
+};

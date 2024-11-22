@@ -72,68 +72,63 @@ TransitionRoot(appear='' :show='true' as='template')
 </template>
 
 <script lang="ts" setup>
-import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
-import { createGoogleUser } from '@core/usecases/user/createGoogleUser'
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogPanel
-} from '@headlessui/vue'
-import { signInWithGoogle } from '@utils/google'
-import { ref } from 'vue'
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import { createGoogleUser } from '@core/usecases/user/createGoogleUser';
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
+import { signInWithGoogle } from '@utils/google';
+import { ref } from 'vue';
 
 const emit = defineEmits<{
-  (e: 'close'): void
-}>()
+  (e: 'close'): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 function closeModal() {
-  emit('close')
+  emit('close');
 }
 
 const user = computed(() => {
-  return getUserVM()
-})
+  return getUserVM();
+});
 
-const newsletter = ref(false)
+const newsletter = ref(false);
 
 const connect = () => {
-  close()
-}
+  close();
+};
 
 const connectWithGoogle = async () => {
   try {
-    const user = await signInWithGoogle()
-    createGoogleUser(user)
-    close()
+    const user = await signInWithGoogle();
+    createGoogleUser(user);
+    close();
   } catch (error) {
-    console.error('Erreur lors de la connexion avec Google: ', error)
+    console.error('Erreur lors de la connexion avec Google: ', error);
   }
-}
+};
 
 const switchNewsletter = () => {
-  newsletter.value = !newsletter.value
-}
+  newsletter.value = !newsletter.value;
+};
 
-const emailChanged = (e: any) => {}
+const emailChanged = (e: any) => {};
 
-const phoneChanged = (e: any) => {}
+const phoneChanged = (e: any) => {};
 
-const firstnameChanged = (value: string) => {}
+const firstnameChanged = (value: string) => {};
 
-const lastnameChanged = (value: string) => {}
+const lastnameChanged = (value: string) => {};
 
-const countryChanged = (value: string) => {}
+const countryChanged = (value: string) => {};
 
-const addressChanged = (value: string) => {}
+const addressChanged = (value: string) => {};
 
-const appartementChanged = (value: string) => {}
+const appartementChanged = (value: string) => {};
 
-const cityChanged = (value: string) => {}
+const cityChanged = (value: string) => {};
 
-const zipChanged = (value: string) => {}
+const zipChanged = (value: string) => {};
 </script>

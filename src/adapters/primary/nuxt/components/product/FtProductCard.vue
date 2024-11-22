@@ -1,7 +1,7 @@
 <template lang="pug">
 div.bg-white.rounded-xl.pt-2(class='w-[65vw] sm:w-[15vw] min-h-[320px] flex flex-col justify-between transform transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-xl'
       @mouseenter="isHovered = true" @mouseleave="isHovered = false")
-  div.absolute.top-0.left-0.bg-main.text-white.text-xs.font-bold.p-2.rounded-tl-lg.rounded-full.z-10
+  div.absolute.top-0.left-0.bg-main.text-white.text-xs.font-bold.p-2.rounded-tl-lg.rounded-full.z-10(v-if="product.promotion?.price")
       span.text-xl.promo-amount(:class="{ 'promo-amount-hover': isHovered }") {{ product.promotion?.amount ? '- ' + product.promotion.amount : '' }}
   div.flex.flex-col.items-center.justify-center.gap-4.relative
       nuxt-link.h-full.flex.items-center(
@@ -32,44 +32,41 @@ div.bg-white.rounded-xl.pt-2(class='w-[65vw] sm:w-[15vw] min-h-[320px] flex flex
 </template>
 
 <script lang="ts" setup>
-import {
-  addToFavorite,
-  removeFromFavorite
-} from '@core/usecases/add-to-favorite/addToFavorite'
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm'
-import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification'
-import { sendNotifLike } from '@core/usecases/add-notif/cartNotif'
+import { addToFavorite, removeFromFavorite } from '@core/usecases/add-to-favorite/addToFavorite';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm';
+import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification';
+import { sendNotifLike } from '@core/usecases/add-notif/cartNotif';
 
 defineProps({
-  product: { type: Object, required: true }
-})
+  product: { type: Object, required: true },
+});
 
 export interface LikeQuantityVM {
-  items: HashTable<number>
-  totalQuantity: number
+  items: HashTable<number>;
+  totalQuantity: number;
 }
 
-const isHovered = ref(false)
-const likeQuantity = ref<LikeQuantityVM | null>(null)
+const isHovered = ref(false);
+const likeQuantity = ref<LikeQuantityVM | null>(null);
 
 const addItemToFavorite = (uuid: string) => {
-  addToFavorite(uuid, useProductGateway())
-  sendUserNotif()
-}
+  addToFavorite(uuid, useProductGateway());
+  sendUserNotif();
+};
 
 const removeItemFromFavorite = (uuid: string) => {
-  removeFromFavorite(uuid)
-}
+  removeFromFavorite(uuid);
+};
 
 const sendUserNotif = () => {
-  setTimeout(sendNotifLike)
-  setTimeout(removeFirstNotification, 1500)
-}
+  setTimeout(sendNotifLike);
+  setTimeout(removeFirstNotification, 1500);
+};
 
 watchEffect(async () => {
-  likeQuantity.value = await getLikeQuantityVM(useProductGateway())
-})
+  likeQuantity.value = await getLikeQuantityVM(useProductGateway());
+});
 </script>
 
 <style scoped>

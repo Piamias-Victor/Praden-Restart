@@ -11,8 +11,8 @@ section.px-2
 
 <script lang="ts" setup>
 defineProps({
-  products: { type: Array, required: true }
-})
+  products: { type: Array, required: true },
+});
 </script>
 
 <style scoped>

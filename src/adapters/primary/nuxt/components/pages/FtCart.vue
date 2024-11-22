@@ -40,67 +40,61 @@ ft-medecine(v-if="medecineOpened" :item="cart.items" @close="closeMedecine" @val
 </template>
 
 <script lang="ts" setup>
-import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM'
-import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart'
+import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
+import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart';
 
 const emit = defineEmits<{
-  (e: 'close'): void
-  (e: 'move-stepper'): void
-  (e: 'valid-medecine'): void
-}>()
+  (e: 'close'): void;
+  (e: 'move-stepper'): void;
+  (e: 'valid-medecine'): void;
+}>();
 
-const router = useRouter()
-const cartQuantity = ref<CartQuantityVM | null>(null)
-const medecineOpened = ref(false)
-const medecineValid = ref(false)
+const router = useRouter();
+const cartQuantity = ref<CartQuantityVM | null>(null);
+const medecineOpened = ref(false);
+const medecineValid = ref(false);
 
 const openMedecine = () => {
-  medecineOpened.value = true
-}
+  medecineOpened.value = true;
+};
 
 const closeMedecine = () => {
-  medecineOpened.value = false
-}
+  medecineOpened.value = false;
+};
 
 const cart = computed(() => {
-  return getCartVM()
-})
+  return getCartVM();
+});
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 const moveStepper = () => {
-  emit('move-stepper')
-}
+  emit('move-stepper');
+};
 
 const validateCart = () => {
-  if (cartQuantity.value.medecine > 0 && medecineValid.value === false)
-    return openMedecine()
-  emit('move-stepper')
-}
+  if (cartQuantity.value.medecine > 0 && medecineValid.value === false) return openMedecine();
+  emit('move-stepper');
+};
 
 const hasMedicineReference = computed(() => {
-  return Object.values(cart.value.items).some(
-    (item: any) => item.medecine === true
-  )
-})
+  return Object.values(cart.value.items).some((item: any) => item.medecine === true);
+});
 
 const removeAllItemFromCart = () => {
-  removeAllFromCart()
-}
+  removeAllFromCart();
+};
 
 watchEffect(async () => {
   try {
-    cartQuantity.value = await getCartQuantityVM(useProductGateway())
+    cartQuantity.value = await getCartQuantityVM(useProductGateway());
   } catch (error) {
-    console.error(
-      'Erreur lors de la récupération de la quantité du panier',
-      error
-    )
-    cartQuantity.value = { totalQuantity: 0 }
+    console.error('Erreur lors de la récupération de la quantité du panier', error);
+    cartQuantity.value = { totalQuantity: 0 };
   }
-})
+});
 </script>

@@ -1,6 +1,6 @@
-import { useCartStore } from '@store/cartStore'
+import { useCartStore } from '@store/cartStore';
 
 export const removeAllFromCart = async () => {
-  const cartStore = useCartStore()
-  cartStore.removeAll()
-}
+  const cartStore = useCartStore();
+  cartStore.removeAll();
+};

@@ -15,5 +15,5 @@ div.flex.flex-col.h-screen.bg-background
 </template>
 
 <script lang="ts" setup>
-definePageMeta({ layout: 'main' })
+definePageMeta({ layout: 'main' });
 </script>

@@ -7,9 +7,8 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
         div.ml-3.flex.h-7.items-center
             ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
                 icon.icon-sm(name="ph:x-bold")
-
     div.h-4
-    h2.font-medium.text-gray-900 1 - Filtre de prix
+    h2.font-medium.text-gray-900 Filtre de prix
     div.h-4
     div.px-4
       VueSlider(
@@ -28,23 +27,24 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
         :dotStyle="{backgroundColor:'#e5017d'}"
         :interval="1"
         @change="(value) => searchPrice(value)")
-    div.h-4
-    h2.font-medium.text-gray-900 2 - Filtre marque
-    div(v-if="props.facetsVM && props.facetsVM.laboratory")
+    div.h-4(v-if="props.facetsVM?.laboratory?.values?.length > 1")
+    h2.font-medium.text-gray-900(v-if="props.facetsVM?.laboratory?.values?.length > 1") Filtre marque
+    div(v-if="props.facetsVM && props.facetsVM.laboratory && props.facetsVM?.laboratory?.values?.length > 1") 
         div.grid.grid-cols-2.gap-4.mt-4.justify-items-center
             ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='laboratory in props.facetsVM.laboratory.values' :key="laboratory.key" @click='searchLaboratory(laboratory.key)' class="w-full text-center relative"
+              :class="{ 'button-solid': laboratoryFilter && laboratoryFilter.includes(laboratory.key) }" 
               @mouseover="setHoveredLaboratory(laboratory.key)" 
               @mouseleave="clearHoveredLaboratory")
                 span.text-sm.line-clamp-1 {{ laboratory.key }}
                 span.tooltip-text(v-if="hoveredLaboratory === laboratory.key && isTruncated(laboratory.key)") {{ laboratory.key }}
 
     div.h-4
-    ft-button.button-solid.w-full(@click='searchLaboratory(null)')
+    ft-button.button-solid.w-full(@click='searchLaboratory(null)' v-if="props.facetsVM?.laboratory?.values?.length > 1")
       icon.icon-md(name="tabler:category")
       span Afficher toutes les marques
     div.h-4
-    h2.font-medium.text-gray-900 3 - Filtre categories
-    div(v-if="props.facetsVM && props.facetsVM.categories")
+    h2.font-medium.text-gray-900(v-if="props.facetsVM?.categories?.values?.length > 1") Filtre categories
+    div(v-if="props.facetsVM && props.facetsVM.categories && props.facetsVM?.categories?.values?.length > 1")
         div.grid.grid-cols-2.gap-4.mt-4.justify-items-center
             ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='category in props.facetsVM.categories.values' :key="category.key" @click='searchLaboratory(category.key)' class="w-full text-center relative"
               @mouseover="setHoveredLaboratory(category.key)" 
@@ -52,43 +52,44 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
                 span.text-sm.line-clamp-1 {{ category.key }}
                 span.tooltip-text(v-if="hoveredLaboratory === category.key && isTruncated(category.key)") {{ category.key }}
     div.h-4
-    ft-button.button-solid.w-full(@click='searchLaboratory(null)')
+    ft-button.button-solid.w-full(@click='searchLaboratory(null)' v-if="props.facetsVM?.categories?.values?.length > 1")
       icon.icon-md(name="tabler:category")
       span Afficher toutes les categories
     div.mt-8
 </template>
 
 <script lang="ts" setup>
-import VueSlider from 'vue-3-slider-component'
-import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
-import { ref, computed, watchEffect } from 'vue'
+import VueSlider from 'vue-3-slider-component';
+import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
+import { ref, computed, watchEffect } from 'vue';
 
 const props = defineProps<{
-  facetsVM: any
-  sortType: any
-}>()
+  facetsVM: any;
+  sortType: any;
+  laboratoryFilter: any;
+}>();
 
-const hoveredLaboratory = ref<string | null>(null) // Variable pour suivre le laboratoire survolé
+const hoveredLaboratory = ref<string | null>(null); // Variable pour suivre le laboratoire survolé
 
 const setHoveredLaboratory = (key: string) => {
-  hoveredLaboratory.value = key
-}
+  hoveredLaboratory.value = key;
+};
 
 const clearHoveredLaboratory = () => {
-  hoveredLaboratory.value = null
-}
+  hoveredLaboratory.value = null;
+};
 
 const isTruncated = (text: string) => {
-  const span = document.createElement('span')
-  span.style.display = 'inline-block'
-  span.style.width = '140px'
-  span.style.whiteSpace = 'nowrap'
-  span.innerText = text
-  document.body.appendChild(span)
-  const truncated = span.scrollWidth > span.clientWidth
-  document.body.removeChild(span)
-  return truncated
-}
+  const span = document.createElement('span');
+  span.style.display = 'inline-block';
+  span.style.width = '140px';
+  span.style.whiteSpace = 'nowrap';
+  span.innerText = text;
+  document.body.appendChild(span);
+  const truncated = span.scrollWidth > span.clientWidth;
+  document.body.removeChild(span);
+  return truncated;
+};
 
 const rangeValues = ref(
   props.facetsVM &&
@@ -96,12 +97,9 @@ const rangeValues = ref(
     props.facetsVM.price.values &&
     props.facetsVM.price.values[0] &&
     props.facetsVM.price.values[1]
-    ? [
-        props.facetsVM.price.values[0].count,
-        props.facetsVM.price.values[1].count
-      ]
-    : [0, 100]
-)
+    ? [props.facetsVM.price.values[0].count, props.facetsVM.price.values[1].count]
+    : [0, 100],
+);
 
 const minMaxValues = ref(
   props.facetsVM &&
@@ -109,12 +107,9 @@ const minMaxValues = ref(
     props.facetsVM.price.values &&
     props.facetsVM.price.values[0] &&
     props.facetsVM.price.values[1]
-    ? [
-        props.facetsVM.price.values[0].count,
-        props.facetsVM.price.values[1].count
-      ]
-    : [0, 100]
-)
+    ? [props.facetsVM.price.values[0].count, props.facetsVM.price.values[1].count]
+    : [0, 100],
+);
 
 // Initialisation dynamique des valeurs de rangeValues lorsque facetsVM est prêt
 watchEffect(() => {
@@ -122,45 +117,42 @@ watchEffect(() => {
     props.facetsVM?.price?.values?.[0]?.count !== undefined &&
     props.facetsVM?.price?.values?.[1]?.count !== undefined
   ) {
-    rangeValues.value = [
-      props.facetsVM.price.values[0].count,
-      props.facetsVM.price.values[1].count
-    ]
+    rangeValues.value = [props.facetsVM.price.values[0].count, props.facetsVM.price.values[1].count];
   }
-})
+});
 
-const cartQuantity = ref(null)
+const cartQuantity = ref(null);
 
 const emit = defineEmits<{
-  (e: 'close'): void
-  (e: 'sortBy', st: number): void
-  (e: 'searchLaboratory', labo: string | null): void
-  (e: 'searchCategory', cat: string | null): void
-  (e: 'searchPrice', price: any): void
-}>()
+  (e: 'close'): void;
+  (e: 'sortBy', st: number): void;
+  (e: 'searchLaboratory', labo: string | null): void;
+  (e: 'searchCategory', cat: string | null): void;
+  (e: 'searchPrice', price: any): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 const searchLaboratory = (labo: string | null) => {
-  emit('searchLaboratory', labo)
-  close()
-}
+  emit('searchLaboratory', labo);
+  close();
+};
 
 const searchCategory = (cat: string | null) => {
-  emit('searchCategory', cat)
-  close()
-}
+  emit('searchCategory', cat);
+  close();
+};
 
 const searchPrice = (price: any) => {
-  emit('searchPrice', price)
-}
+  emit('searchPrice', price);
+};
 
 const sortBy = (st: number) => {
-  emit('sortBy', st)
-  close()
-}
+  emit('sortBy', st);
+  close();
+};
 </script>
 
 <style scoped>

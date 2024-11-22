@@ -14,14 +14,14 @@ div.ft-disclosure
 </template>
 
 <script lang="ts" setup>
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
 
 defineProps({
   defaultOpen: {
     type: Boolean,
     default: () => {
-      return false
-    }
-  }
-})
+      return false;
+    },
+  },
+});
 </script>

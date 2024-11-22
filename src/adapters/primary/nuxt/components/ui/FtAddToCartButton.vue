@@ -15,19 +15,19 @@ div.bg-main.rounded-b-xl.mt-1(class='p-0.5')
 </template>
 
 <script lang="ts" setup>
-import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
-import { addToCart } from '@core/usecases/add-to-cart/addToCart'
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { removeFromCart } from '@core/usecases/remove-from-cart/removeFromCart'
-import { sendNotifCart } from '@core/usecases/add-notif/cartNotif'
-import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification'
+import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
+import { addToCart } from '@core/usecases/add-to-cart/addToCart';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { removeFromCart } from '@core/usecases/remove-from-cart/removeFromCart';
+import { sendNotifCart } from '@core/usecases/add-notif/cartNotif';
+import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification';
 
 defineProps({
-  productUuid: { type: String, required: true }
-})
+  productUuid: { type: String, required: true },
+});
 
-const cartQuantity = ref<CartQuantityVM | null>(null)
-const limit = ref(false)
+const cartQuantity = ref<CartQuantityVM | null>(null);
+const limit = ref(false);
 
 const removeItemFromCart = (uuid: string) => {
   if (
@@ -37,10 +37,10 @@ const removeItemFromCart = (uuid: string) => {
     cartQuantity.value.items &&
     cartQuantity.value.items[uuid] <= 6
   ) {
-    limit.value = false
+    limit.value = false;
   }
-  removeFromCart(uuid)
-}
+  removeFromCart(uuid);
+};
 
 const addItemToCart = (uuid: string) => {
   if (
@@ -50,13 +50,13 @@ const addItemToCart = (uuid: string) => {
     cartQuantity.value.items &&
     cartQuantity.value.items[uuid] >= 5
   ) {
-    limit.value = true
+    limit.value = true;
   } else {
-    limit.value = false
+    limit.value = false;
   }
-  addToCart(uuid, useProductGateway())
-  sendUserNotif()
-}
+  addToCart(uuid, useProductGateway());
+  sendUserNotif();
+};
 
 const isAddButtonHidden = (uuid: string) => {
   return (
@@ -64,15 +64,15 @@ const isAddButtonHidden = (uuid: string) => {
     cartQuantity.value &&
     cartQuantity.value.items &&
     cartQuantity.value.items[uuid] >= 6
-  )
-}
+  );
+};
 
 const sendUserNotif = () => {
-  setTimeout(sendNotifCart)
-  setTimeout(removeFirstNotification, 1500)
-}
+  setTimeout(sendNotifCart);
+  setTimeout(removeFirstNotification, 1500);
+};
 
 watchEffect(async () => {
-  cartQuantity.value = await getCartQuantityVM(useProductGateway())
-})
+  cartQuantity.value = await getCartQuantityVM(useProductGateway());
+});
 </script>

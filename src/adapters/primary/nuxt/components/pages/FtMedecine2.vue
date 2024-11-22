@@ -56,65 +56,57 @@ ft-contact(v-if="contactOpened" @close="closeContact")
 </template>
 
 <script lang="ts" setup>
-import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm'
-import {
-  TransitionRoot,
-  TransitionChild,
-  Dialog,
-  DialogPanel
-} from '@headlessui/vue'
-import { useProductGateway } from '../../../../../../gateways/productGateway'
-import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM'
-import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart'
+import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
+import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart';
 
-const contactOpened = ref(false)
+const contactOpened = ref(false);
 
-const router = useRouter()
+const router = useRouter();
 
-const cartQuantity = ref<CartQuantityVM | null>(null)
+const cartQuantity = ref<CartQuantityVM | null>(null);
 
 const cart = computed(() => {
-  return getCartVM()
-})
+  return getCartVM();
+});
 
 const openContact = () => {
-  contactOpened.value = true
-}
+  contactOpened.value = true;
+};
 
 const closeContact = () => {
-  contactOpened.value = false
-}
+  contactOpened.value = false;
+};
 
-const notice = ref(true)
+const notice = ref(true);
 
 const switchNotice = () => {
-  notice.value = !notice.value
-}
+  notice.value = !notice.value;
+};
 
 const emit = defineEmits<{
-  (e: 'close'): void
-  (e: 'move-stepper'): void
-}>()
+  (e: 'close'): void;
+  (e: 'move-stepper'): void;
+}>();
 
 const close = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 const validateCart = () => {
-  emit('move-stepper')
-}
+  emit('move-stepper');
+};
 
 watchEffect(async () => {
   try {
-    cartQuantity.value = await getCartQuantityVM(useProductGateway())
+    cartQuantity.value = await getCartQuantityVM(useProductGateway());
   } catch (error) {
-    console.error(
-      'Erreur lors de la récupération de la quantité du panier',
-      error
-    )
-    cartQuantity.value = { totalQuantity: 0 } // Assurer une valeur par défaut si l'appel échoue
+    console.error('Erreur lors de la récupération de la quantité du panier', error);
+    cartQuantity.value = { totalQuantity: 0 }; // Assurer une valeur par défaut si l'appel échoue
   }
-})
+});
 
 const doliprane = {
   uuid: '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e',
@@ -125,12 +117,12 @@ const doliprane = {
   freeDelivery: '66,82 €',
   quantity: 1,
   img: [
-    'https://praden.s3.eu-west-3.amazonaws.com/public/products/5197c037c0c960190f3a4e3c064777f7c88630d3d229c1e97c07ce9c85043c4c'
+    'https://praden.s3.eu-west-3.amazonaws.com/public/products/5197c037c0c960190f3a4e3c064777f7c88630d3d229c1e97c07ce9c85043c4c',
   ],
-  medecine: true
-}
+  medecine: true,
+};
 
 const removeAllItemFromCart = () => {
-  removeAllFromCart()
-}
+  removeAllFromCart();
+};
 </script>

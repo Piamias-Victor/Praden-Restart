@@ -14,33 +14,33 @@ div.fixed.inset-0.z-50.flex.items-center.justify-center.bg-black.bg-opacity-50(v
 </template>
 
 <script lang="ts" setup>
-import { ref, watch, computed } from 'vue'
-import { onMounted } from 'vue'
+import { ref, watch, computed } from 'vue';
+import { onMounted } from 'vue';
 
 // Fonction pour récupérer le token Colissimo
-import { getColissimoTokenVM } from '@adapters/primary/viewModels/get-delivery/getColissimoTokenVM'
-import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM'
+import { getColissimoTokenVM } from '@adapters/primary/viewModels/get-delivery/getColissimoTokenVM';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 
-const props = defineProps<{ show: boolean }>()
+const props = defineProps<{ show: boolean }>();
 const emit = defineEmits<{
-  (e: 'close'): void
-}>()
+  (e: 'close'): void;
+}>();
 
 const closePopup = () => {
-  emit('close')
-}
+  emit('close');
+};
 
 const token = computed(async () => {
-  const tokenValue = await getColissimoTokenVM() // Récupérer le token
-  return tokenValue
-})
+  const tokenValue = await getColissimoTokenVM(); // Récupérer le token
+  return tokenValue;
+});
 
 // Variable pour suivre l'état du chargement
-const isLoading = ref(true)
+const isLoading = ref(true);
 
 const user = computed(() => {
-  return getUserVM()
-})
+  return getUserVM();
+});
 
 const updateWidgetText = () => {
   // Créer un observer pour attendre que le texte soit chargé dans le DOM
@@ -48,40 +48,35 @@ const updateWidgetText = () => {
     for (const mutation of mutationsList) {
       // Vérifie si le noeud a bien été ajouté
       if (mutation.type === 'childList') {
-        const widgetTextElement = document.querySelector(
-          '.widget_colissimo_text_bouton'
-        )
+        const widgetTextElement = document.querySelector('.widget_colissimo_text_bouton');
         if (widgetTextElement) {
-          widgetTextElement.innerHTML = 'Ton nouveau texte ici' // Change le texte
-          observer.disconnect() // Arrêter l'observation une fois le texte changé
+          widgetTextElement.innerHTML = 'Ton nouveau texte ici'; // Change le texte
+          observer.disconnect(); // Arrêter l'observation une fois le texte changé
         }
       }
     }
-  })
+  });
 
   // Observer les changements dans l'élément parent du texte
-  const targetNode = document.querySelector(
-    '.widget_colissimo_bouton_validation'
-  )
+  const targetNode = document.querySelector('.widget_colissimo_bouton_validation');
   if (targetNode) {
-    observer.observe(targetNode, { childList: true, subtree: true })
+    observer.observe(targetNode, { childList: true, subtree: true });
   }
-}
+};
 
 const loadColissimoWidget = async () => {
-  const link = document.createElement('link')
-  link.rel = 'stylesheet'
-  link.href = 'https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css'
-  document.head.appendChild(link)
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css';
+  document.head.appendChild(link);
 
   // Ajouter le script Colissimo
-  const script = document.createElement('script')
-  script.src =
-    'https://ws.colissimo.fr/widget-colissimo/js/jquery.plugin.colissimo.min.js'
-  script.type = 'text/javascript'
-  document.body.appendChild(script)
+  const script = document.createElement('script');
+  script.src = 'https://ws.colissimo.fr/widget-colissimo/js/jquery.plugin.colissimo.min.js';
+  script.type = 'text/javascript';
+  document.body.appendChild(script);
 
-  const style = document.createElement('style')
+  const style = document.createElement('style');
   style.innerHTML = `
   .widget_colissimo_bouton_validation {
     height: 65px !important; /* Nouvelle hauteur */
@@ -89,28 +84,28 @@ const loadColissimoWidget = async () => {
     justify-content: center; /* Centrer horizontalement */
     align-items: center; /* Centrer verticalement */
   }
-`
-  document.head.appendChild(style)
+`;
+  document.head.appendChild(style);
 
   script.onload = () => {
     token.value.then((token) => {
-      const url_serveur = 'https://ws.colissimo.fr'
-      const ceCountry = 'FR'
-      const ceAddress = user.value.address
-      const ceZipCode = user.value.postal
-      const ceTown = user.value.city
+      const url_serveur = 'https://ws.colissimo.fr';
+      const ceCountry = 'FR';
+      const ceAddress = user.value.address;
+      const ceZipCode = user.value.postal;
+      const ceTown = user.value.city;
 
       window.maMethodeDeCallBack = function (point) {
-        console.log('Call back frame')
-        console.log(point)
+        console.log('Call back frame');
+        console.log(point);
         user.value.billingAddress = {
           firstname: user.value.firstName,
           lastname: user.value.lastName,
           country: user.value.country,
           address: user.value.address,
           city: user.value.city,
-          zip: user.value.postal
-        }
+          zip: user.value.postal,
+        };
 
         user.value.deliveryAddress = {
           firstname: user.value.firstName,
@@ -118,14 +113,14 @@ const loadColissimoWidget = async () => {
           country: user.value.country,
           address: point.adresse1,
           city: point.localite,
-          zip: point.codePostal
-        }
+          zip: point.codePostal,
+        };
         // Fermer le widget Colissimo
-        jQuery('#monIdDeWidgetColissimo').frameColissimoClose()
+        jQuery('#monIdDeWidgetColissimo').frameColissimoClose();
 
         // Fermer le popup également
-        closePopup() // Ferme le popup après la sélection du point relais
-      }
+        closePopup(); // Ferme le popup après la sélection du point relais
+      };
 
       $('#monIdDeWidgetColissimo').frameColissimoOpen({
         URLColissimo: url_serveur,
@@ -134,27 +129,27 @@ const loadColissimoWidget = async () => {
         ceAddress: ceAddress,
         ceZipCode: ceZipCode,
         ceTown: ceTown,
-        token: token
-      })
+        token: token,
+      });
 
       // Mettre à jour le texte après le chargement du widget
-      updateWidgetText()
+      updateWidgetText();
 
       // Lorsque le widget est chargé, cacher le loader
-      isLoading.value = false
-    })
-  }
-}
+      isLoading.value = false;
+    });
+  };
+};
 
 watch(
   () => props.show,
   (newValue) => {
     if (newValue) {
-      isLoading.value = true // Afficher le loader lors de l'ouverture du popup
-      loadColissimoWidget()
+      isLoading.value = true; // Afficher le loader lors de l'ouverture du popup
+      loadColissimoWidget();
     }
-  }
-)
+  },
+);
 </script>
 
 <style scoped>

@@ -21,16 +21,25 @@ section.px-2
           ft-button.button-solid.w-full
             span En savoir plus
             icon.icon-md(name="akar-icons:send")
+  div.h-4
+  div.flex.items-center.justify-center
+    ft-button-animate.button-solid.text-xl.px-8(@click='goToBlog')
+        span Voir tous les articles
+        icon.icon-md(name='bx:category')
 </template>
 
 <script lang="ts" setup>
 const props = defineProps<{
-  blogVm: any
-}>()
+  blogVm: any;
+}>();
 
-definePageMeta({ layout: 'main' })
+definePageMeta({ layout: 'main' });
 
-const router = useRouter()
+const router = useRouter();
+
+const goToBlog = async () => {
+  router.push('/blog');
+};
 </script>
 
 <style scoped>
