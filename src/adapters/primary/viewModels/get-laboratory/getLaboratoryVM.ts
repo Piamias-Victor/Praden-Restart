@@ -13,11 +13,32 @@ export const getLaboratory = async (uuid: UUID, laboratoryGateway: LaboratoryGat
   const searchStore = useSearchStore();
   searchStore.setSearchResult(productsWithFacets);
   searchStore.setFacets(facets);
-  // if (productsWithFacets) {
-  //   searchStore.setCurrentCategory(uuid);
-  //   searchStore.setProducts(productsWithFacets.items);
-  //   searchStore.setFacets(productsWithFacets.facets);
-  // } else {
-  //   searchStore.reset();
-  // }
+};
+
+export const getLaboratoryByName = async (labo: Array<string>, query: string, searchGateway: SearchGateway) => {
+  const laboratoryStore = useLaboratoryStore();
+
+  // Récupérer les UUID des laboratoires dans le tableau 'labo'
+  const laboratoryUUIDs = labo
+    .map((labName) => {
+      const res = laboratoryStore.getByName(labName); // Obtenez le laboratoire par son nom
+      return res ? res.uuid : null; // Retourne l'UUID ou null si pas trouvé
+    })
+    .filter((uuid) => uuid !== null); // Filtrer les UUIDs valides
+
+  if (laboratoryUUIDs.length > 0) {
+    try {
+      // Recherchez tous les produits avec un tableau d'UUIDs
+      const productsWithFacets = await searchGateway.searchProduct(query, laboratoryUUIDs);
+
+      // Mettre à jour le store avec les résultats obtenus
+      const searchStore = useSearchStore();
+      console.log('Products with facets', productsWithFacets);
+      searchStore.setSearchResult(productsWithFacets);
+    } catch (error) {
+      console.error('Erreur lors de la récupération des produits pour les laboratoires', error);
+    }
+  } else {
+    console.warn('Aucun laboratoire trouvé pour les noms fournis');
+  }
 };

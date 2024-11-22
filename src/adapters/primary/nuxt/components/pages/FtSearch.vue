@@ -51,7 +51,7 @@ TransitionRoot(appear='' :show='true' as='template')
                               icon.icon-lg(name="mdi:filter-outline")
                         div.flex-1.overflow-y-auto
                             ft-product-search-list(:products="filteredProducts" @close='close').px-4
-                            ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" @searchCategory="searchCategory" @searchPrice="searchPrice" :facetsVM="searchVM.facets" :sortType="sortType")
+                            ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" @searchCategory="searchCategory" @searchPrice="searchPrice" :facetsVM="searchVM.facets" :sortType="sortType" :laboratoryFilter="laboratoryFilter")
                             div.px-4(
                                 v-if='query === ""'
                                 @click="clicked").flex.flex-col.items-center.justify-center.gap-4.w-full
@@ -84,6 +84,7 @@ import {
 } from '@adapters/primary/viewModels/get-category/getSearchCategoryVM';
 import { SortType } from '@utils/sort';
 import { parsePrice } from '@utils/formater';
+import { getLaboratory, getLaboratoryByName } from '@adapters/primary/viewModels/get-laboratory/getLaboratoryVM';
 const props = defineProps<{
   categoriesVM: any;
 }>();
@@ -114,7 +115,7 @@ const toggleDropdown = () => {
 
 const sortType = ref(SortType.None);
 
-const laboratoryFilter = ref<string | null>(null); // Variable pour le laboratoire filtré
+const laboratoryFilter = ref<Array<string> | null>(null); // Variable pour le laboratoire filtré
 
 const categoryFilter = ref<string | null>(null);
 
@@ -123,22 +124,23 @@ const priceFilter = ref<string | null>(null);
 const displayProduct = ref<any | null>(null);
 
 const filteredProducts = computed(() => {
+  getLaboratoryByName(laboratoryFilter.value, query.value, searchGateway());
   let res = searchVM.value.items;
   // Filtrer les produits en fonction du laboratoire
-  if (!laboratoryFilter.value) {
-  } else {
-    res = searchVM.value.items.filter((product) => product.laboratory === laboratoryFilter.value);
-  }
-  // if (!categoryFilter.value) {
-  //   return res // Retourner tous les produits si aucun filtre
+  // if (!laboratoryFilter.value) {
+  // } else {
+  //   res = searchVM.value.items.filter((product) => product.laboratory === laboratoryFilter.value);
   // }
-  if (!priceFilter.value) {
-  } else {
-    res = res.filter(
-      (product) =>
-        parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1],
-    );
-  }
+  // // if (!categoryFilter.value) {
+  // //   return res // Retourner tous les produits si aucun filtre
+  // // }
+  // if (!priceFilter.value) {
+  // } else {
+  //   res = res.filter(
+  //     (product) =>
+  //       parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1],
+  //   );
+  // }
   // res = searchVM.value.items.filter(
   //   (product) => product.laboratory === laboratoryFilter.value
   // )
@@ -157,7 +159,18 @@ const sortBy = (st: number) => {
 };
 
 const searchLaboratory = (labo: string | null) => {
-  laboratoryFilter.value = labo; // Mettez à jour le filtre de laboratoire
+  if (!labo) {
+    laboratoryFilter.value = null; // Réinitialiser le filtre si labo est null
+  } else {
+    if (!laboratoryFilter.value) {
+      laboratoryFilter.value = [labo]; // Initialiser le tableau si null
+    } else if (!laboratoryFilter.value.includes(labo)) {
+      laboratoryFilter.value.push(labo); // Ajouter si non déjà présent
+    } else {
+      // Retirer le labo s'il est déjà dans le tableau (toggle)
+      laboratoryFilter.value = laboratoryFilter.value.filter((item) => item !== labo);
+    }
+  }
 };
 
 const searchCategory = (cat: string | null) => {

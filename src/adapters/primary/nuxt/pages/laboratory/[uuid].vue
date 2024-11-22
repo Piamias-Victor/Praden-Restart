@@ -1,7 +1,6 @@
 <template lang="pug">
-//- ft-laboratory-categories(:categoriesVM="facetsVM.categories")
 div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
-    span.text-xl.text-main.font-semibold.capitalize(v-if='laboratoryInfo && laboratoryInfo.item' class='lg:text-3xl') {{laboratoryInfo.item.name}}
+    span.text-xl.text-main.font-semibold.capitalize(v-if='laboratoryInfo && laboratoryInfo.item' class='lg:text-3xl') {{ laboratoryInfo.item.name }}
     div.flex.items-center.gap-4
         div.relative
             ft-button-animate.text-main.flex.items-center.justify-center.bg-white.px-6(@click="toggleDropdown")
@@ -25,7 +24,7 @@ div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
             span.text-main.font-semibold.hidden(class='sm:block') Filtres
             icon.icon-lg(name="mdi:filter-outline")
 ft-navigation
-div.h-2
+div.h-4
 div.px-2.flex.flex-col.gap-2
     span.text-sm.prose-xl.line-clamp-2.text-contrast(v-if='laboratoryInfo && laboratoryInfo.item' v-html="laboratoryInfo.item.description")
     span.text-sm.text-main.cursor-pointer.underline.text-center(@click="scrollToDescription") Voir Plus
@@ -33,10 +32,10 @@ div(v-if="filteredProducts.length")
     ft-product-search-list(:products="filteredProducts" @close='close').px-4
 div.h-4
 div.px-2.mt-2.w-full.flex.items-center.flex-col.justify-center.gap-2(ref='description')
-  span.text-center.text-main.text-xl.font-semibold Description
-  span.text-sm.prose-xl(v-if='laboratoryInfo && laboratoryInfo.item' v-html="laboratoryInfo.item.description")
+    span.text-center.text-main.text-4xl.font-semibold Description
+    span.text-sm.prose-xl(v-if='laboratoryInfo && laboratoryInfo.item' v-html="laboratoryInfo.item.description")
 div.h-10
-ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" :facetsVM="facetsVM" :sortType="sortType")
+ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" @searchPrice="searchPrice" :facetsVM="facetsVM" :sortType="sortType")
 </template>
 
 <script lang="ts" setup>
@@ -61,7 +60,7 @@ onMounted(async () => {
   try {
     laboratoryInfo.value = await getLaboratoryInfo(laboratoryGateway(), categoryUuid);
   } catch (error) {
-    console.error("Erreur lors de la récupération des infos laboratoire :", error);
+    console.error('Erreur lors de la récupération des infos laboratoire :', error);
   }
 });
 
@@ -69,82 +68,83 @@ const route = useRoute();
 const categoryUuid = route.params.uuid;
 
 const sortType = ref(SortType.None);
-const displayProduct = ref<any | null>(null);
-const laboratoryFilter = ref<string | null>(null);
-const laboratoryInfo = ref(null);
-
 const dropdownOpen = ref(false);
+const filterOpened = ref(false);
 const description = ref(null);
+const laboratoryFilter = ref<string | null>(null);
+const priceFilter = ref<string | null>(null);
+const laboratoryInfo = ref(null);
 
 const toggleDropdown = () => {
   dropdownOpen.value = !dropdownOpen.value;
 };
 
-function scrollToDescription() {
+const scrollToDescription = () => {
   if (description.value) {
     description.value.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-const laboratory = async () => {
-  try {
-    const laboratoryInfo = await getLaboratoryInfo(laboratoryGateway(), categoryUuid);
-    console.log(laboratoryInfo); // Ici vous avez accès aux données une fois la promesse résolue
-  } catch (error) {
-    console.error("Erreur lors de la récupération des infos laboratoire :", error);
   }
 };
 
 const sortBy = (st: number) => {
-  if (sortType.value && typeof sortType.value !== 'undefined') {
-    if (sortType.value === st) {
-      sortType.value = SortType.None;
-    } else {
-      sortType.value = st;
-    }
+  if (sortType.value === st) {
+    sortType.value = SortType.None;
+  } else {
+    sortType.value = st;
   }
-  dropdownOpen.value = false; // Fermer le dropdown après avoir sélectionné une option
+  dropdownOpen.value = false;
 };
 
 const searchLaboratory = (labo: string | null) => {
-  laboratoryFilter.value = labo; // Mettez à jour le filtre de laboratoire
+  laboratoryFilter.value = labo;
 };
 
-const filteredProducts = computed(() => {
-  let res;
-  // Vérifie si `searchVM.value.items` est défini
-  if (searchVM.value && searchVM.value.items) {
-    if (!laboratoryFilter.value) {
-      res = searchVM.value.items; // Retourne tous les produits si aucun filtre
-    } else {
-      res = searchVM.value.items.filter((product) => product.laboratory === laboratoryFilter.value);
-    }
-  } else {
-    console.warn('searchVM.value.items est undefined');
-    res = []; // Retourne un tableau vide si `items` n'est pas défini
-  }
-  return res;
-});
-
-onMounted(() => {});
+const searchPrice = (price: any) => {
+  priceFilter.value = price; // Mettez à jour le filtre de laboratoire
+};
 
 const searchVM = computed(() => {
   const result = getSearchResultVM(sortType.value);
-  if (!result) {
-    console.warn('getSearchResultVM() a retourné undefined');
-  }
-  return result || { items: [] }; // Retourne un objet par défaut si `result` est `undefined`
+  return result || { items: [] };
 });
+
+const filteredProducts = computed(() => {
+  let res = searchVM.value.items || [];
+  // Filtrer les produits en fonction du laboratoire
+  if (!laboratoryFilter.value) {
+  } else {
+    res = searchVM.value.products.filter((product) => product.laboratory === laboratoryFilter.value);
+  }
+  // if (!categoryFilter.value) {
+  //   return res // Retourner tous les produits si aucun filtre
+  // }
+  if (!priceFilter.value) {
+  } else {
+    res = res.filter(
+      (product) =>
+        parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1],
+    );
+  }
+  // res = searchVM.value.items.filter(
+  //   (product) => product.laboratory === laboratoryFilter.value
+  // )
+  return res;
+});
+
+const parsePrice = (priceString) => {
+  // Enlever les espaces et le symbole de l'euro
+  const cleanedString = priceString.replace(/[^0-9,]/g, '').replace(',', '.');
+
+  // Convertir la chaîne en nombre flottant
+  const priceNumber = parseFloat(cleanedString);
+
+  // Convertir le prix en centimes (multiplication par 100 et arrondi)
+  return Math.round(priceNumber * 100);
+};
 
 const facetsVM = computed(() => {
   const result = getFacetsVM();
-  if (!result) {
-    console.warn('getFacetsVM() a retourné undefined');
-  }
-  return result || { categories: [] }; // Retourne un objet par défaut si `result` est `undefined`
+  return result || { categories: [] };
 });
-
-const filterOpened = ref(false);
 
 const openFilter = () => {
   filterOpened.value = true;

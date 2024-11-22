@@ -10,8 +10,5 @@ export interface SearchGateway {
     size?: number,
     isInPromotion?: string,
   ): Promise<Array<Product>>;
-  searchFacet(query?: string,
-    laboratoryUuids?: Array<string>,
-    size?: number,
-    isInPromotion?: string,): any;
+  searchFacet(query?: string, laboratoryUuids?: Array<string>, size?: number, isInPromotion?: string): any;
 }

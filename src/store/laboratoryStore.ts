@@ -22,6 +22,18 @@ export const useLaboratoryStore = defineStore('LaboratoryStore', {
     items: (state) => {
       return Array.from(state.itemsSet);
     },
+
+    getByName: (state) => {
+      return (name: string): Laboratory => {
+        const laboratories = Array.from(state.itemsSet);
+        const category = laboratories.find((p) => p.name === name);
+        if (!category) throw new LaboratoryDoesNotExistsError(name);
+        return category;
+      };
+    },
+    itemsName: (state) => {
+      return Array.from(state.itemsSet);
+    },
   },
   actions: {
     list(laboratories: Array<Laboratory>) {

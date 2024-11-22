@@ -74,7 +74,7 @@ export class RealSearchGateway extends RealGateway implements SearchGateway {
       // console.log('laboratoryUuids', payload.laboratoryUuids);
 
       const res = await axios.post(`${this.baseUrl}/search/products`, payload);
-      console.log('facet :', res)
+      console.log('facet :', res);
       return Promise.resolve(res.data.facets);
     } catch (error) {
       console.error('Erreur lors de la récupération des facettes :', error);

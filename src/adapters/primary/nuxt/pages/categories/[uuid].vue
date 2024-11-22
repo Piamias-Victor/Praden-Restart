@@ -33,7 +33,7 @@
   ft-product-cat-list(:products="filteredProducts")
   div.h-4
   div.px-2.mt-2.w-full.flex.items-center.flex-col.justify-center.gap-2(ref='description')
-    span.text-center.text-main.text-xl.font-semibold Description
+    span.text-center.text-main.text-xl.font-semibold.text-4xl Description
     span.text-sm.text-contrast {{text}}
   div.h-4
   div.flex.items-center.justify-center
@@ -114,6 +114,7 @@ const searchLaboratory = (labo: string | null) => {
 const filteredProducts = computed(() => {
   let res = categoryVM.value.products;
   // Filtrer les produits en fonction du laboratoire
+  console.log('laboratoryFilter', laboratoryFilter.value);
   if (!laboratoryFilter.value) {
   } else {
     res = categoryVM.value.products.filter((product) => product.laboratory === laboratoryFilter.value);

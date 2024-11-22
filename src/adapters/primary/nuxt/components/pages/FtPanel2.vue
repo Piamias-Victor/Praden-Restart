@@ -7,7 +7,7 @@ TransitionRoot(appear='' :show='true' as='template')
             div.flex.min-h-full.items-center.justify-center.text-center.fixed.inset-y-0.right-0.flex.max-w-full.w-screen.max-w-md(class="md:pl-10")
                 TransitionChild(as='template' class="w-full")
                     DialogPanel.flex.h-full.flex-col.overflow-y-scroll.bg-background.shadow-xl.animate-slideright
-                      ft-filter(:facetsVM="facetsVM" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" @searchCategory="searchCategory" @searchPrice="searchPrice" :sortType="sortType")  
+                      ft-filter(:facetsVM="facetsVM" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" @searchCategory="searchCategory" @searchPrice="searchPrice" :sortType="sortType" :laboratoryFilter="laboratoryFilter")  
 </template>
 
 <script lang="ts" setup>
@@ -19,6 +19,7 @@ import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFrom
 const props = defineProps<{
   facetsVM: any;
   sortType: any;
+  laboratoryFilter: any;
 }>();
 
 const router = useRouter();
