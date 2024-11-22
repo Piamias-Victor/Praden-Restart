@@ -23,9 +23,9 @@ TransitionRoot(appear='' :show='true' as='template')
                             ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
                                 icon.icon-md(name="ph:x-bold")
                         ft-navigation
-                        div.px-4(v-if='query !== ""')
+                        div.px-4(v-if='filteredProducts.length > 0')
                             ft-categories-search(:categoriesVM="categoriesVM" :laboratoriesVM="laboratoriesVM" @close='close')
-                        div.flex.px-8.flex.items-center.justify-between.gap-4.my-4(v-if='query !== ""' ref='top')
+                        div.flex.px-8.flex.items-center.justify-between.gap-4.my-4(v-if='filteredProducts.length > 0' ref='top')
                           span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') Recherche
                           div.flex.items-center.gap-4
                             div.relative
@@ -53,7 +53,7 @@ TransitionRoot(appear='' :show='true' as='template')
                             ft-product-search-list(:products="filteredProducts" @close='close').px-4
                             ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" @searchCategory="searchCategory" @searchPrice="searchPrice" :facetsVM="searchVM.facets" :sortType="sortType" :laboratoryFilter="laboratoryFilter")
                             div.px-4(
-                                v-if='query === ""'
+                                v-if='filteredProducts.length === 0'
                                 @click="clicked").flex.flex-col.items-center.justify-center.gap-4.w-full
                                 nuxt-link.flex.flex-col.items-center.bg-main.text-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]' href='https://2f440074.praden-restart.pages.dev/categories/03c3ddc9-7616-48df-9bf7-3290da61b23b?Promotions')
                                     span.font-semibold.w-full.text-left.px-4 DES PROMOTIONS ALLANT JUSQU'À -20%
