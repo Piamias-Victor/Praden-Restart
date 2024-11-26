@@ -25,13 +25,13 @@ div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
             icon.icon-lg(name="mdi:filter-outline")
 ft-navigation
 div.h-4
-div.px-2.flex.flex-col.gap-2
+div.px-2.flex.flex-col.gap-2(v-if='laboratoryInfo && laboratoryInfo.item && laboratoryInfo.item.description')
     span.text-sm.prose-xl.line-clamp-2.text-contrast(v-if='laboratoryInfo && laboratoryInfo.item' v-html="laboratoryInfo.item.description")
     span.text-sm.text-main.cursor-pointer.underline.text-center(@click="scrollToDescription") Voir Plus
 div(v-if="filteredProducts.length")
     ft-product-search-list(:products="filteredProducts" @close='close').px-4
 div.h-4
-div.px-2.mt-2.w-full.flex.items-center.flex-col.justify-center.gap-2(ref='description')
+div.px-2.mt-2.w-full.flex.items-center.flex-col.justify-center.gap-2(ref='description' v-if='laboratoryInfo && laboratoryInfo.item && laboratoryInfo.item.description')
     span.text-center.text-main.text-4xl.font-semibold Description
     span.text-sm.prose-xl(v-if='laboratoryInfo && laboratoryInfo.item' v-html="laboratoryInfo.item.description")
 div.h-10

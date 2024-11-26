@@ -36,6 +36,6 @@ const goToLabo = async (laboratory: string) => {
     } catch (error) {}
   } else {
   }
-  router.push('/laboratory/' + laboratory);
+  router.push('/laboratory');
 };
 </script>

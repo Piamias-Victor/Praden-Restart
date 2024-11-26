@@ -99,6 +99,7 @@ export const getCategoryVM = (sortType: SortType = SortType.None) => {
   const searchStore = useSearchStore();
   const categoryUuid = searchStore.currentCategory;
   const category = categories.find((c) => c.uuid === categoryUuid);
+  console.log('category', category)
   const subCategories = categories.filter((c) => c.parentUuid === categoryUuid);
   const formatter = priceFormatter('fr-FR', 'EUR');
   const sortOptions: Array<SortOption> = [
@@ -117,6 +118,7 @@ export const getCategoryVM = (sortType: SortType = SortType.None) => {
   products.sort(sortByPrice(sortType));
   return {
     name: category?.name || '',
+    description: category?.description || '',
     childCategories: getChildCategoriesVM(category?.uuid),
     products: products.map((p) => {
       const promotion = getPromotionVM(p);

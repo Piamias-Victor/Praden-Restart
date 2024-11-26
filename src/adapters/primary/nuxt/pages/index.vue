@@ -49,7 +49,7 @@ const blogVm = {
       uuid: '0',
       name: 'Tout comprendre sur le CTR en SEO',
       icon: 'https://www.tactee.fr/wp-content/uploads/2022/08/13.png',
-      url: 'http://localhost:3000/blog/0',
+      url: 'https://0cb194fc.praden-restart.pages.dev/blog/0',
       date: '01/11/2024',
     },
     {

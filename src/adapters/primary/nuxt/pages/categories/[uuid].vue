@@ -26,15 +26,14 @@ div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4(ref='top')
             icon.icon-lg(name="mdi:filter-outline")
 ft-navigation
 div.h-2
-div.px-2.flex.flex-col.gap-2
-    span.text-sm.text-contrast.hidden(class="sm:block") Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and when an u...
-    span.text-sm.text-contrast(class="sm:hidden") Lorem Ipsum is simply dummy text of the printing...
+div.px-2.flex.flex-col.gap-2(v-if='categoryVM && categoryVM.description')
+    span.text-sm.prose-xl.line-clamp-2.text-contrast(v-if='categoryVM' v-html="categoryVM.description")
     span.text-sm.text-main.cursor-pointer.underline.text-center(@click="scrollToDescription") Voir Plus
 ft-product-cat-list(:products="filteredProducts")
 div.h-4
-div.px-2.mt-2.w-full.flex.items-center.flex-col.justify-center.gap-2(ref='description')
-    span.text-center.text-main.text-xl.font-semibold.text-4xl Description
-    span.text-sm.text-contrast {{text}}
+div.px-2.mt-2.w-full.flex.items-center.flex-col.justify-center.gap-2(ref='description' v-if='categoryVM && categoryVM.description')
+    span.text-center.text-main.text-4xl.font-semibold Description
+    span.text-sm.prose-xl(v-if='categoryVM' v-html="categoryVM.description")
 div.h-4
 div.flex.items-center.justify-center
     ft-button.button-solid.text-xl.px-8(@click="scrollToTop")
