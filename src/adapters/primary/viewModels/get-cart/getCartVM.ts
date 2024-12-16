@@ -79,6 +79,7 @@ export const getProductsInCart = (): ProductsInCart => {
             quantity,
             img: p.images,
             medecine: p.isMedicine,
+            weight: p.weight,
             promotion: p.promotions[0],
           },
         },
@@ -98,7 +99,7 @@ export const getProductsInCart = (): ProductsInCart => {
   );
 };
 
-export const getTotalWithDelivery = (total: number): number => {
+export const getTotalWithDelivery = (total: number, totalWeight: number): number => {
   const deliveryStore = useDeliveryStore();
   if (total > 6900 && deliveryStore.selected!.name === 'Point Relais') return total;
   return total + deliveryStore.selected!.price;
@@ -124,6 +125,7 @@ export const createCartItemsVMFromCartItems = (items: HashTable<CartItem>): Hash
       freeDelivery: formatter.format(getFreeDelivery(item.totalPrice) / 100),
       quantity: item.quantity,
       img: item.img,
+      weight: item.weight,
       medecine: item.medecine,
     };
     if (item.totalPriceWithPromotion) {
