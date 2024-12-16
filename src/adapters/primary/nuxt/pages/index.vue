@@ -18,6 +18,7 @@ div.flex.flex-col.gap-10
 import { listDeliveryMethods } from '@core/usecases/delivery-methods-listing/listDeliveryMethods';
 import deliveryGateway from '../../../../../gateways/deliveryGateway';
 import { categoryGateway } from '../../../../../gateways/categoryGateway';
+import { myOrderGateway } from '../../../../../gateways/myOrderGateway';
 import { laboratoryGateway } from '../../../../../gateways/laboratoryGateway';
 import { useProductGateway } from '../../../../../gateways/productGateway';
 import { listCategories } from '@core/usecases/list-categories/listCategories';
@@ -25,12 +26,14 @@ import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/g
 import { listPromotions } from '@core/usecases/list-promotions/listPromotions';
 import { getProductInPromotionVM } from '@adapters/primary/viewModels/get-product/getProductVM';
 import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
+import { listMyOrder } from '@core/usecases/list-my-orders/listMyOrders';
 
 definePageMeta({ layout: 'main' });
 
 onMounted(() => {
   listDeliveryMethods(deliveryGateway);
   listCategories(categoryGateway());
+  listMyOrder(myOrderGateway());
   listLaboratories(laboratoryGateway());
   listPromotions(useProductGateway());
 });
