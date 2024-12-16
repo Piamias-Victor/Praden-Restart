@@ -38,7 +38,7 @@ TransitionRoot(appear='' :show='true' as='template')
                               span.font-semibold Téléphone
                             div.px-3
                               span.font-semibold Message*
-                              textarea.block.w-full.rounded-md.border-light.shadow-sm
+                              textarea.block.w-full.rounded-md.border-light.shadow-sm(v-model="message")
                             div.mt-2
                             div.px-3(v-if='!medecine')
                               span.font-semibold Sujet*
@@ -101,11 +101,20 @@ TransitionRoot(appear='' :show='true' as='template')
 import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 import { logoutUser } from '@core/usecases/user/logout';
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
+import { useEmailGateway } from '../../../../../../gateways/emailGateway';
 
 const props = defineProps({
   medecine: { type: Boolean, required: false },
 });
 
+const message = ref('');
+
+const messageChanged = (value: string) => {
+  message.value = value;
+  console.log('message', message.value)
+};
+
+const emailGateway = useEmailGateway();
 const emit = defineEmits<{
   (e: 'close'): void;
 }>();
@@ -169,6 +178,8 @@ const selectOther = () => {
 };
 
 const sendMessage = () => {
+  console.log('avant :', message.value)
+  emailGateway.sendTestEmail('victorpiamiaspro@gmail.com', user.value.mail, message.value);
   close();
 };
 </script>

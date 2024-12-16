@@ -38,6 +38,59 @@ export class RealEmailGateway implements EmailGateway {
     this.confirmationTemplateID = confirmationTemplateID;
   }
 
+  async sendTestEmail(to: string, subject: string, message: string): Promise<void> {
+    console.log('dans la gateway:', message);
+    console.log('dans la gateway 2:', subject);
+    const test = message;
+    const test2 = subject;
+    const body = {
+      to: to,
+      subject: subject,
+      templateId: '6566616', // Utiliser le template ID de test
+      data: {
+        shipp: {
+          first_name: test,
+          last_name: subject,
+          address: 'test',
+          phone: 'test',
+          link: 'test',
+        },
+        bill: {
+          first_name: 'test',
+          last_name: 'test',
+          address: 'test',
+          phone: 'test',
+        },
+        linesHtml: 'test',
+        total: {
+          product_price: '1',
+          shipping_price: '1',
+          price: '1',
+        },
+      },
+    };
+
+    try {
+      const response = await fetch('https://contact.gmevelec.workers.dev/send-email/', {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status}`);
+      }
+
+      const result = await response.json();
+      console.log('Test email sent successfully:', result);
+    } catch (error) {
+      console.error('Error sending test email:', error);
+      throw error;
+    }
+  }
+
   async sendOrderConfirmation(confirmationDTO: SendOrderConfirmationDTO): Promise<void> {
     const shippingAddress = this.getShippingAddress(confirmationDTO.shippingAddress, confirmationDTO.contact);
     const billingAddress = this.getBillingAddress(confirmationDTO.billingAddress, confirmationDTO.contact);

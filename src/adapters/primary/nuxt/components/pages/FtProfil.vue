@@ -18,20 +18,20 @@ TransitionRoot(appear='' :show='true' as='template')
                             div.mt-4
                             div(v-if="user.firstName")
                               div.flex.flex-col.items-center.justify-center
-                                img.rounded-full.border.border-main.border-2(class='w-[110px] h-[110px]' :src='user.photo', alt='Profile Picture')
+                                //- img.rounded-full.border.border-main.border-2(class='w-[110px] h-[110px]' src='https://www.pharma365.fr/wp-content/uploads/2023/11/logo_Pharmabest.png', alt='Profile Picture')
                                 div.mt-4.text-lg Bonjour,
                                 div.font-semibold.text-xl {{user.firstName}}
                               div.mt-4
                               div.flex.flex-col.gap-4
-                                ft-button.button-solid.w-full
+                                ft-button.button-solid.w-full(@click="openOrder")
                                   icon.icon-md(name="akar-icons:shopping-bag")
                                   span Mes commandes
                                 ft-button.button-solid.w-full(@click="openAddress")
                                   icon.icon-md(name="material-symbols:supervised-user-circle-outline")
                                   span Mon profil
-                                ft-button.button-solid.w-full(@click="openOrdo")
-                                  icon.icon-md(name="iconoir:page")
-                                  span Déposer une ordo
+                                //- ft-button.button-solid.w-full(@click="openOrdo")
+                                //-   icon.icon-md(name="iconoir:page")
+                                //-   span Déposer une ordo
                                 ft-button.button-solid.w-full(@click="openContact")
                                   icon.icon-md(name="bx:message")
                                   span Nous contacter
@@ -43,15 +43,16 @@ TransitionRoot(appear='' :show='true' as='template')
                                   ft-button.button-solid.w-full
                                     icon.icon-md(name="ion:logo-google")
                                     span Laisser un avis
-                                ft-button.button-solid.w-full
-                                  icon.icon-md(name="material-symbols:loyalty-outline")
-                                  span Ma fidélité
+                                //- ft-button.button-solid.w-full
+                                //-   icon.icon-md(name="material-symbols:loyalty-outline")
+                                //-   span Ma fidélité
                                 ft-button.button-solid.w-full(@click='logout')
                                   icon.icon-md(name="tabler:logout")
                                   span Déconnexion
                               ft-contact(v-if="contactOpened" @close="closeContact")
                               ft-ordo(v-if="ordoOpened" @close="closeOrdo")
                               ft-address(v-if="addressOpened" @close="closeAddress")
+                              ft-order(v-if="orderOpened" @close="closeOrder")
                             div(v-if="!user.firstName").flex.flex-col.items-center
                                 div.mt-4
                                 img.block.h-48.w-auto(
@@ -86,6 +87,8 @@ const contactOpened = ref(false);
 const ordoOpened = ref(false);
 
 const addressOpened = ref(false);
+
+const orderOpened = ref(false);
 
 const fileInput = ref(null);
 
@@ -137,8 +140,17 @@ const openAddress = () => {
   addressOpened.value = true;
 };
 
+const openOrder = () => {
+  orderOpened.value = true;
+};
+
+
 const closeAddress = () => {
   addressOpened.value = false;
+};
+
+const closeOrder = () => {
+  orderOpened.value = false;
 };
 
 const logout = () => {
