@@ -5,5 +5,5 @@ export type CreateCheckoutDTO = Pick<Order, 'lines' | 'delivery'> & {
 };
 
 export interface PaymentGateway {
-  createCheckoutSession(createCheckoutDTO: CreateCheckoutDTO): Promise<string>;
+  createCheckoutSession(createCheckoutDTO: CreateCheckoutDTO, deliveryPrice: string): Promise<string>;
 }

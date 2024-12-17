@@ -65,7 +65,7 @@ export const getProductsInCart = (): ProductsInCart => {
       let total = acc.total;
       let totalWithPromotion = acc.totalWithPromotion;
       total += p.price;
-      totalWeight += p.weight
+      totalWeight += p.weight;
       const priceWithPromotion = getProductPriceWithPromotion(p);
       totalWithPromotion += priceWithPromotion || p.price;
       if (acc.items[p.uuid]) {
@@ -112,19 +112,13 @@ export const getProductsInCart = (): ProductsInCart => {
  * @param weight - Le poids total des articles.
  * @returns Le prix de livraison applicable.
  */
-const getDeliveryPrice = (method: DeliveryMethod, weight: number, total: number): number => {
+export const getDeliveryPrice = (method: DeliveryMethod, weight: number, total: number): number => {
   // Trouve la tranche de poids appropriée
-  if (
-    method.uuid === '505209a2-7acb-4891-b933-e084d786d7ea' &&
-    total > 6900 &&
-    weight < 5000
-  ) {
+  if (method.uuid === '505209a2-7acb-4891-b933-e084d786d7ea' && total > 6900 && weight < 5000) {
     return 0; // Livraison gratuite
   }
-  
-  const applicableRange = method.priceRanges.find(
-    (range) => weight >= range.minWeight && weight <= range.maxWeight
-  );
+
+  const applicableRange = method.priceRanges.find((range) => weight >= range.minWeight && weight <= range.maxWeight);
 
   // Si une tranche est trouvée, retourne son prix, sinon retourne 0 ou une valeur par défaut
   return applicableRange ? applicableRange.price : 0;

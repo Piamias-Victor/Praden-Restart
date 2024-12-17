@@ -1,10 +1,10 @@
+// inMemoryOrderGateway.ts
+
 import { Order, OrderLine, DeliveryStatus, PaymentStatus } from '@core/entities/order';
-import { CategoryDoesNotExistsError } from '@core/errors/CategoryDoesNotExistsError copy';
 import { OrderGateway } from '@core/gateways/orderGateway';
 import { PaymentGateway, CreateCheckoutDTO } from '@core/gateways/paymentGateway';
 import { UUID } from '@core/types/type';
 import { CreateOrderDTO, CreateOrderLineDTO } from '@core/usecases/orders/order-creation/createOrder';
-import { pickup, express } from 'gateways/deliveryGateway';
 
 export class InMemoryOrderGateway implements OrderGateway {
   private orders: Array<Order> = [];
@@ -18,7 +18,7 @@ export class InMemoryOrderGateway implements OrderGateway {
     this.dateProvider = dateProvider;
   }
 
-  async create(orderDTO: CreateOrderDTO): Promise<Order> {
+  async create(orderDTO: CreateOrderDTO, deliveryPrice: string): Promise<Order> {
     const now = this.dateProvider.now();
     const uuid = this.uuidGenerator.generate();
     const lines: Array<OrderLine> = orderDTO.lines.map((line: CreateOrderLineDTO) => {
@@ -28,14 +28,20 @@ export class InMemoryOrderGateway implements OrderGateway {
         updatedAt: now,
       };
     });
+
     const checkoutDTO: CreateCheckoutDTO = {
       orderUuid: uuid,
       lines,
       delivery: orderDTO.delivery,
     };
+
     if (!orderDTO.deliveryAddress.appartement) {
       delete orderDTO.deliveryAddress.appartement;
     }
+
+    // Créer la session de paiement Stripe
+    const sessionUrl = await this.paymentGateway.createCheckoutSession(checkoutDTO, deliveryPrice);
+
     const order: Order = {
       uuid,
       contact: orderDTO.contact,
@@ -44,10 +50,11 @@ export class InMemoryOrderGateway implements OrderGateway {
       deliveryAddress: orderDTO.deliveryAddress,
       createdAt: now,
       payment: {
-        sessionUrl: '',
+        sessionUrl, // Assigner l'URL de la session Stripe
         status: PaymentStatus.WaitingForPayment,
       },
     };
+
     this.orders.push(order);
     return Promise.resolve(order);
   }
@@ -58,7 +65,7 @@ export class InMemoryOrderGateway implements OrderGateway {
 
   async getByUuid(uuid: UUID): Promise<Order> {
     const res = this.orders.find((order: Order) => order.uuid === uuid);
-    if (!res) throw new CategoryDoesNotExistsError(uuid);
+    if (!res) throw new Error(`Order with UUID ${uuid} does not exist`); // Utiliser une erreur appropriée
     return Promise.resolve(res);
   }
 

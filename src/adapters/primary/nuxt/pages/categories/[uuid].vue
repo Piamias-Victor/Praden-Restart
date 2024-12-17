@@ -70,25 +70,23 @@ onMounted(() => {
   listPromotions(useProductGateway());
 });
 
-
 const description = ref(null);
 const top = ref(null);
 
-const text =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit...';
+const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...';
 
 function scrollToDescription() {
-    description.value?.scrollIntoView({ behavior: 'smooth' });
+  description.value?.scrollIntoView({ behavior: 'smooth' });
 }
 
 function scrollToTop() {
-    top.value?.scrollIntoView({ behavior: 'smooth' });
+  top.value?.scrollIntoView({ behavior: 'smooth' });
 }
 
 const dropdownOpen = ref(false);
 
 const toggleDropdown = () => {
-    dropdownOpen.value = !dropdownOpen.value;
+  dropdownOpen.value = !dropdownOpen.value;
 };
 
 const route = useRoute();
@@ -98,70 +96,69 @@ const sortType = ref(SortType.None);
 const laboratoryFilter = ref<Array<string>>([]);
 
 const searchPrice = (price: any) => {
-    priceFilter.value = price;
+  priceFilter.value = price;
 };
 
 const sortBy = (st: number) => {
-    if (sortType.value === st) {
-        sortType.value = SortType.None;
-    } else {
-        sortType.value = st;
-    }
-    console.log('Nouveau sortType:', sortType.value);
-    dropdownOpen.value = false;
+  if (sortType.value === st) {
+    sortType.value = SortType.None;
+  } else {
+    sortType.value = st;
+  }
+  console.log('Nouveau sortType:', sortType.value);
+  dropdownOpen.value = false;
 };
 
 const searchLaboratory = (labo: string | null) => {
-    if (!labo) {
-        laboratoryFilter.value = [];
-    } else if (!laboratoryFilter.value.includes(labo)) {
-        laboratoryFilter.value.push(labo);
-    } else {
-        laboratoryFilter.value = laboratoryFilter.value.filter((item) => item !== labo);
-    }
+  if (!labo) {
+    laboratoryFilter.value = [];
+  } else if (!laboratoryFilter.value.includes(labo)) {
+    laboratoryFilter.value.push(labo);
+  } else {
+    laboratoryFilter.value = laboratoryFilter.value.filter((item) => item !== labo);
+  }
 };
 
 const filteredProducts = computed(() => {
-    console.log('laboratoryFilter.value', laboratoryFilter.value)
-    getLaboratoryByName(laboratoryFilter.value, '', searchGateway());
-    let res = searchVM.value.items || [];
-    if (priceFilter.value) {
-        res = res.filter(
-            (product) =>
-                parsePrice(product.price) >= priceFilter.value[0] &&
-                parsePrice(product.price) <= priceFilter.value[1],
-        );
-    }
-    return res;
+  console.log('laboratoryFilter.value', laboratoryFilter.value);
+  getLaboratoryByName(laboratoryFilter.value, '', searchGateway());
+  let res = searchVM.value.items || [];
+  if (priceFilter.value) {
+    res = res.filter(
+      (product) =>
+        parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1],
+    );
+  }
+  return res;
 });
 
 const parsePrice = (priceString: string) => {
-    const cleanedString = priceString.replace(/[^0-9,]/g, '').replace(',', '.');
-    return Math.round(parseFloat(cleanedString) * 100);
+  const cleanedString = priceString.replace(/[^0-9,]/g, '').replace(',', '.');
+  return Math.round(parseFloat(cleanedString) * 100);
 };
 
 onMounted(() => {
-    listCategories(categoryGateway());
-    getCategory(categoryUuid, categoryGateway(), searchGateway());
+  listCategories(categoryGateway());
+  getCategory(categoryUuid, categoryGateway(), searchGateway());
 });
 
 const categoriesVM = computed(() => getChildCategoriesVM(categoryUuid));
 const categoryVM = computed(() => getCategoryVM(sortType.value));
 
 const searchVM = computed(() => {
-    console.log('searchVM recalculé avec sortType:', sortType.value);
-    const result = getSearchResultVM(sortType.value);
-    return { ...result }; // Force une réactivité
+  console.log('searchVM recalculé avec sortType:', sortType.value);
+  const result = getSearchResultVM(sortType.value);
+  return { ...result }; // Force une réactivité
 });
 
 const facetsVM = computed(() => getFacetsVM());
 const filterOpened = ref(false);
 
 const openFilter = () => {
-    filterOpened.value = true;
+  filterOpened.value = true;
 };
 
 const closeCart = () => {
-    filterOpened.value = false;
+  filterOpened.value = false;
 };
 </script>

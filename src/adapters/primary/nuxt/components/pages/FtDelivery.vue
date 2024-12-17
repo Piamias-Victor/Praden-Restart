@@ -133,8 +133,9 @@ const validateOrder = () => {
     useProductGateway(),
     windowGateway,
     useEmailGateway(),
+    cart.value.DeliveryPrice
   );
-  router.push('/checkout/success');
+  //- router.push('/checkout/success');
 };
 
 watchEffect(async () => {
