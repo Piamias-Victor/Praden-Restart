@@ -111,7 +111,7 @@ const message = ref('');
 
 const messageChanged = (value: string) => {
   message.value = value;
-  console.log('message', message.value)
+  console.log('message', message.value);
 };
 
 const emailGateway = useEmailGateway();
@@ -178,7 +178,7 @@ const selectOther = () => {
 };
 
 const sendMessage = () => {
-  console.log('avant :', message.value)
+  console.log('avant :', message.value);
   emailGateway.sendTestEmail('victorpiamiaspro@gmail.com', user.value.mail, message.value);
   close();
 };

@@ -18,9 +18,9 @@ div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(v-if='!hasMedicin
   span Plus que 
   span.text-main.font-bold {{ cart.freeDelivery }}
   span pour profiter des frais de ports gratuit
+span(v-if='!hasMedicineReference' class='lg:text-sm') (- de 5kg)
 div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(v-if='hasMedicineReference' class='lg:text-sm')
   span Votre panier contient des médicaments, vous ne pouvez donc pas bénéficier des frais de port gratuit
-
 div.mt-2.border-t.py-2.px-2(class='lg:py-6 lg:px-4')
   h2.font-medium.text-gray-900.mb-2.text-sm(class='lg:text-xl') Mode de livraison
   div.flex.flex-col.items-center.gap-2.w-full.mb-2(class='lg:mb-4')
@@ -29,14 +29,19 @@ div.mt-2.border-t.py-2.px-2(class='lg:py-6 lg:px-4')
         div.flex.flex-col.items-start.border-main.relative.flex.cursor-pointer.rounded-lg.border.bg-white.shadow-sm.ring-2.ring-main.p-3(class='lg:p-4')
           div.flex.items-center.justify-between.w-full
             span.text-xs(class='lg:text-sm') {{ deliveryMethod.name }}
-            span.text-xs(class='lg:text-sm') {{ deliveryMethod.price }}
+            span.text-xs(class='lg:text-sm')
           span.text-xs.text-contrast {{ deliveryMethod.description }}
       div(v-if='deliveryMethod.uuid !== selectedDeliveryMethod')
         div.flex.flex-col.items-start.border-main.relative.flex.cursor-pointer.rounded-lg.border.bg-white.shadow-sm.p-3(class='lg:p-4')
           div.flex.items-center.justify-between.w-full
             span.text-xs(class='lg:text-sm') {{ deliveryMethod.name }}
-            span.text-xs(class='lg:text-sm') {{ deliveryMethod.price }}
+            span.text-xs(class='lg:text-sm')
           span.text-xs.text-contrast {{ deliveryMethod.description }}
+  div.flex.justify-between.items-center
+      p.font-semibold.text Frais de port
+      div.flex.flex-col.pl-2
+          span.text-xs(class='lg:text-sm' class="font-semibold") {{ cart.DeliveryPrice }}
+  div.m-2.border-t
   div.flex.justify-between.items-center.text-lg
       p.font-semibold.text-main.text Total
       div.flex.flex-col.pl-2
@@ -128,8 +133,9 @@ const validateOrder = () => {
     useProductGateway(),
     windowGateway,
     useEmailGateway(),
+    cart.value.DeliveryPrice
   );
-  router.push('/checkout/success');
+  //- router.push('/checkout/success');
 };
 
 watchEffect(async () => {

@@ -22,8 +22,11 @@ div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(v-if='!hasMedicin
   span Plus que 
   span.text-main.font-bold {{ cart.freeDelivery }}
   span pour profiter des frais de ports gratuit
+span(v-if='!hasMedicineReference' class='lg:text-sm') (- de 5kg)
 div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(v-if='hasMedicineReference' class='lg:text-sm')
   span Votre panier contient des médicaments, vous ne pouvez donc pas bénéficier des frais de port gratuit
+div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(v-if='!hasMedicineReference && cart.freeDelivery === "0,00 €" && cart.DeliveryPrice !== "0,00 €"' class='lg:text-sm')
+  span bhsdifbhusdbfhusdbfhub
 div.mt-2.border-t.py-6.px-4(class="sm:px-6")
     div.flex.justify-between.items-center.text-lg
         p.font-semibold.text-main.text Total panier

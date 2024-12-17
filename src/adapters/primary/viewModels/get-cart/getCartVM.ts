@@ -1,3 +1,4 @@
+import { DeliveryMethod } from '@core/entities/deliveryMethod';
 import { getProductPriceWithPromotion, Product } from '@core/entities/product';
 import { HashTable, UUID } from '@core/types/type';
 import { useCartStore } from '@store/cartStore';
@@ -24,6 +25,7 @@ export interface CartVM {
   totalPriceWithPromotion?: string;
   totalPriceWithDelivery: string;
   freeDelivery: string;
+  DeliveryPrice: string;
 }
 
 export interface CartItem {
@@ -46,6 +48,7 @@ export interface ProductsInCart {
   totalWithPromotion: number;
   totalWithDelivery: number;
   freeDelivery: number;
+  totalWeight: number;
 }
 
 export const getProductsInCart = (): ProductsInCart => {
@@ -58,9 +61,11 @@ export const getProductsInCart = (): ProductsInCart => {
   return productsInCart.reduce(
     (acc: ProductsInCart, p: Product) => {
       let quantity = 1;
+      let totalWeight = acc.totalWeight;
       let total = acc.total;
       let totalWithPromotion = acc.totalWithPromotion;
       total += p.price;
+      totalWeight += p.weight;
       const priceWithPromotion = getProductPriceWithPromotion(p);
       totalWithPromotion += priceWithPromotion || p.price;
       if (acc.items[p.uuid]) {
@@ -79,12 +84,14 @@ export const getProductsInCart = (): ProductsInCart => {
             quantity,
             img: p.images,
             medecine: p.isMedicine,
+            weight: p.weight,
             promotion: p.promotions[0],
           },
         },
         total,
         totalWithPromotion,
-        totalWithDelivery: getTotalWithDelivery(total),
+        totalWeight,
+        totalWithDelivery: getTotalWithDelivery(total, totalWeight),
         freeDelivery: getFreeDelivery(total),
       };
     },
@@ -93,15 +100,57 @@ export const getProductsInCart = (): ProductsInCart => {
       total: 0,
       totalWithPromotion: 0,
       totalWithDelivery: 0,
+      totalWeight: 0,
       freeDelivery: 6900,
     } as ProductsInCart,
   );
 };
 
-export const getTotalWithDelivery = (total: number): number => {
+/**
+ * Calcule le prix de livraison en fonction du poids et de la méthode de livraison.
+ * @param method - La méthode de livraison sélectionnée.
+ * @param weight - Le poids total des articles.
+ * @returns Le prix de livraison applicable.
+ */
+export const getDeliveryPrice = (method: DeliveryMethod, weight: number, total: number): number => {
+  // Trouve la tranche de poids appropriée
+  if (method.uuid === '505209a2-7acb-4891-b933-e084d786d7ea' && total > 6900 && weight < 5000) {
+    return 0; // Livraison gratuite
+  }
+
+  const applicableRange = method.priceRanges.find((range) => weight >= range.minWeight && weight <= range.maxWeight);
+
+  // Si une tranche est trouvée, retourne son prix, sinon retourne 0 ou une valeur par défaut
+  return applicableRange ? applicableRange.price : 0;
+};
+
+/**
+ * Calcule le total incluant le prix de livraison.
+ * @param total - Le total des articles.
+ * @param totalWeight - Le poids total des articles.
+ * @returns Le total incluant la livraison.
+ */
+export const getTotalWithDelivery = (total: number, totalWeight: number): number => {
   const deliveryStore = useDeliveryStore();
-  if (total > 6900 && deliveryStore.selected!.name === 'Point Relais') return total;
-  return total + deliveryStore.selected!.price;
+  const selectedMethod = deliveryStore.selected;
+
+  // Vérifie si une méthode de livraison est sélectionnée
+  if (!selectedMethod) {
+    // Gérer le cas où aucune méthode de livraison n'est sélectionnée
+    // Par exemple, retourner le total sans ajout de livraison
+    return total;
+  }
+
+  // Vérifie si la livraison est gratuite pour "Point Relais" lorsque le total dépasse 6900
+  // if (total > 6900 && selectedMethod.name === 'Point Relais') {
+  //   return total;
+  // }
+
+  // Calcule le prix de livraison basé sur le poids
+  const deliveryPrice = getDeliveryPrice(selectedMethod, totalWeight, total);
+
+  // Retourne le total incluant le prix de livraison
+  return total + deliveryPrice;
 };
 
 export const getFreeDelivery = (total: number): number => {
@@ -120,10 +169,11 @@ export const createCartItemsVMFromCartItems = (items: HashTable<CartItem>): Hash
       name: item.name,
       laboratory: item.laboratory,
       totalPrice: formatter.format(item.totalPrice / 100),
-      totalPriceWithDelivery: formatter.format(getTotalWithDelivery(item.totalPrice) / 100),
+      // totalPriceWithDelivery: formatter.format(getTotalWithDelivery(item.totalPrice, 900) / 100),
       freeDelivery: formatter.format(getFreeDelivery(item.totalPrice) / 100),
       quantity: item.quantity,
       img: item.img,
+      weight: item.weight,
       medecine: item.medecine,
     };
     if (item.totalPriceWithPromotion) {
@@ -135,15 +185,18 @@ export const createCartItemsVMFromCartItems = (items: HashTable<CartItem>): Hash
 
 export const getCartVM = (): CartVM => {
   const formatter = priceFormatter('fr-FR', 'EUR');
-  const { items, total, totalWithPromotion, totalWithDelivery } = getProductsInCart();
+  const deliveryStore = useDeliveryStore();
+  const selectedMethod = deliveryStore.selected;
+  const { items, total, totalWithPromotion, totalWithDelivery, totalWeight } = getProductsInCart();
   const res: CartVM = {
     items: createCartItemsVMFromCartItems(items),
     totalPrice: formatter.format(total / 100),
-    totalPriceWithDelivery: formatter.format(getTotalWithDelivery(total) / 100),
+    totalPriceWithDelivery: formatter.format(getTotalWithDelivery(total, totalWeight) / 100),
     freeDelivery: formatter.format(getFreeDelivery(total) / 100),
+    DeliveryPrice: formatter.format(getDeliveryPrice(selectedMethod!, totalWeight, total) / 100),
   };
   if (total != totalWithPromotion) {
-    res.totalPriceWithPromotion = formatter.format(getTotalWithDelivery(totalWithPromotion) / 100);
+    res.totalPriceWithPromotion = formatter.format(getTotalWithDelivery(totalWithPromotion, totalWeight) / 100);
   }
   return res;
 };

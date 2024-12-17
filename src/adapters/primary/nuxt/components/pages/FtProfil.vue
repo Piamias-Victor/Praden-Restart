@@ -144,7 +144,6 @@ const openOrder = () => {
   orderOpened.value = true;
 };
 
-
 const closeAddress = () => {
   addressOpened.value = false;
 };

@@ -105,7 +105,7 @@ const isOpen = (uuid: string) => {
 
 // Méthode pour obtenir la classe de statut
 const getStatusClass = (status: string) => {
-  switch(status) {
+  switch (status) {
     case 'WAITINGFORPAYMENT':
       return 'text-yellow-900 bg-yellow-400';
     case 'PAYED':
@@ -117,7 +117,7 @@ const getStatusClass = (status: string) => {
 
 // Méthode pour obtenir le texte de statut en français
 const getStatusText = (status: string) => {
-  switch(status) {
+  switch (status) {
     case 'WAITINGFORPAYMENT':
       return 'En cours de livraison';
     case 'PAYED':

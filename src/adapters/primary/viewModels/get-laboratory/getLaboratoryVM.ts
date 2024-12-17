@@ -18,7 +18,7 @@ export const getLaboratory = async (uuid: UUID, laboratoryGateway: LaboratoryGat
 
 export const getLaboratoryByName = async (labo: Array<string>, query: string, searchGateway: SearchGateway) => {
   const laboratoryStore = useLaboratoryStore();
-  console.log('test')
+  console.log('test');
 
   // Récupérer les UUID des laboratoires dans le tableau 'labo'
   const laboratoryUUIDs = labo

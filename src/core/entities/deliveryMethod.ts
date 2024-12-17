@@ -10,5 +10,11 @@ export interface DeliveryMethod {
   name: string;
   description: string;
   type: DeliveryType;
+  priceRanges: PriceRange[];
+}
+
+export interface PriceRange {
+  minWeight: number;
+  maxWeight: number;
   price: number;
 }

@@ -99,7 +99,7 @@ export const getCategoryVM = (sortType: SortType = SortType.None) => {
   const searchStore = useSearchStore();
   const categoryUuid = searchStore.currentCategory;
   const category = categories.find((c) => c.uuid === categoryUuid);
-  console.log('category', category)
+  console.log('category', category);
   const subCategories = categories.filter((c) => c.parentUuid === categoryUuid);
   const formatter = priceFormatter('fr-FR', 'EUR');
   const sortOptions: Array<SortOption> = [
@@ -152,7 +152,7 @@ export const getCategory = async (uuid: UUID, categoryGateway: CategoryGateway, 
   if (productsWithFacets) {
     searchStore.setCurrentCategory(uuid);
     searchStore.setProducts(productsWithFacets.items);
-    searchStore.setSearchResult(productsWithFacets.items)
+    searchStore.setSearchResult(productsWithFacets.items);
     searchStore.setFacets(productsWithFacets.facets);
   } else {
     searchStore.reset();
