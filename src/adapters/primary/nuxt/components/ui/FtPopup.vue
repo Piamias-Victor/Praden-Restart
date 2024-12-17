@@ -20,6 +20,7 @@ import { onMounted } from 'vue';
 // Fonction pour récupérer le token Colissimo
 import { getColissimoTokenVM } from '@adapters/primary/viewModels/get-delivery/getColissimoTokenVM';
 import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import { getDeliveryVM } from '@adapters/primary/viewModels/get-delivery/getDeliveryVM';
 
 const props = defineProps<{ show: boolean }>();
 const emit = defineEmits<{
@@ -94,10 +95,14 @@ const loadColissimoWidget = async () => {
       const ceAddress = user.value.address;
       const ceZipCode = user.value.postal;
       const ceTown = user.value.city;
+      const deliveryMethods = getDeliveryVM();
 
       window.maMethodeDeCallBack = function (point) {
         console.log('Call back frame');
-        console.log(point);
+        console.log('point', point.identifiant);
+        deliveryMethods.selected!.point = point.identifiant
+        console.log('deliveryMethods', deliveryMethods);
+        // deliveryMethods.selected.point = point.identifiant;
         user.value.billingAddress = {
           firstname: user.value.firstName,
           lastname: user.value.lastName,

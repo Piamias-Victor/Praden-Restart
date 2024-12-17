@@ -8,12 +8,16 @@ import { onMounted } from 'vue';
 
 // Fonction pour récupérer le token Colissimo
 import { getColissimoTokenVM } from '@adapters/primary/viewModels/get-delivery/getColissimoTokenVM';
+import { getDeliveryVM } from '@adapters/primary/viewModels/get-delivery/getDeliveryVM';
 
 const token = computed(async () => {
   const tokenValue = await getColissimoTokenVM(); // Récupérer le token
   return tokenValue;
 });
 
+const deliveryMethods = computed(() => {
+  return getDeliveryVM();
+});
 // Ajouter dynamiquement le CSS de Mapbox dans le <head>
 onMounted(() => {
   const link = document.createElement('link');
@@ -39,7 +43,8 @@ onMounted(() => {
       // Définir la fonction callback dans le scope global
       window.maMethodeDeCallBack = function (point) {
         console.log('Call back frame');
-        console.log(point);
+        deliveryMethods.selected.point = point.identifiant;
+        console.log('sendOrderConfirmationDTO', JSON.stringify(point, null, 2));
         jQuery('#monIdDeWidgetColissimo').frameColissimoClose();
       };
 

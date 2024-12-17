@@ -54,9 +54,6 @@ export const createOrder = async (
     // Récupérer les produits dans le panier
     const { items } = getProductsInCart();
 
-    console.log('deliveryPrice :', deliveryPrice);
-    console.log('items :', JSON.stringify(items, null, 2));
-
     // Créer les lignes de commande
     const lines: Array<CreateOrderLineDTO> = await Promise.all(
       Object.keys(items).map(async (key) => {
@@ -77,8 +74,6 @@ export const createOrder = async (
         return res;
       }),
     );
-
-    console.log('lines :', JSON.stringify(lines, null, 2));
 
     // Obtenir la méthode de livraison sélectionnée
     const deliveryStore = useDeliveryStore();

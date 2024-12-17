@@ -22,6 +22,7 @@ export const relais: DeliveryMethod = {
   name: 'Point Relais',
   description: '2-5 jours ouvrés',
   type: DeliveryType.Delivery,
+  point: 0,
   priceRanges: [
     { minWeight: 0, maxWeight: 500, price: 531 },
     { minWeight: 501, maxWeight: 1000, price: 674 },

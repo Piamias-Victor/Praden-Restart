@@ -14,6 +14,7 @@ export interface SelectedDeliveryMethodVM {
   uuid: UUID;
   name: string;
   price: string;
+  point?: number;
 }
 
 export interface CheckoutDeliveryVM {
