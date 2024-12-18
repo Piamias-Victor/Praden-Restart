@@ -28,6 +28,7 @@ export class RealOrderGateway implements OrderGateway {
         return res;
       }),
     };
+    console.log('body', body);
     const res = await axios.post(`${this.orderUrl}/`, JSON.stringify(body));
     return Promise.resolve(this.convertToOrder(res.data));
   }

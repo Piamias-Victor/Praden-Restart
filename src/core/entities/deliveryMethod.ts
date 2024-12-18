@@ -10,6 +10,7 @@ export interface DeliveryMethod {
   name: string;
   description: string;
   type: DeliveryType;
+  point?: number;
   priceRanges: PriceRange[];
 }
 
