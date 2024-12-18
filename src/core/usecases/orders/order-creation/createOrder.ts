@@ -69,7 +69,7 @@ export const createOrder = async (
         };
         if (product.promotions) {
           res.promotion = product.promotions[0];
-          res.unitAmount = Math.round(item.unitPrice - product.promotions[0].amount)
+          res.unitAmount = Math.round(item.unitPrice - product.promotions[0].amount);
         }
         return res;
       }),

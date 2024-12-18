@@ -1,10 +1,13 @@
 // inMemoryOrderGateway.ts
 
+import { getDeliveryVM } from '@adapters/primary/viewModels/get-delivery/getDeliveryVM';
 import { Order, OrderLine, DeliveryStatus, PaymentStatus } from '@core/entities/order';
 import { OrderGateway } from '@core/gateways/orderGateway';
 import { PaymentGateway, CreateCheckoutDTO } from '@core/gateways/paymentGateway';
 import { UUID } from '@core/types/type';
 import { CreateOrderDTO, CreateOrderLineDTO } from '@core/usecases/orders/order-creation/createOrder';
+import { useDeliveryStore } from '@store/deliveryStore';
+import axios from 'axios';
 
 export class InMemoryOrderGateway implements OrderGateway {
   private orders: Array<Order> = [];
@@ -55,8 +58,62 @@ export class InMemoryOrderGateway implements OrderGateway {
       },
     };
 
+    const { delivery, ...rest } = orderDTO;
+    const deliveryMethodsStore = useDeliveryStore();
+    console.log('deliveryMethods', deliveryMethodsStore.selected!.point);
+    let body;
+    if (deliveryMethodsStore.selected!.point) {
+      body = {
+        ...rest,
+        billingAddress: orderDTO.deliveryAddress,
+        pickupId: deliveryMethodsStore.selected!.point,
+        deliveryMethodUuid: orderDTO.delivery.method.uuid,
+        lines: orderDTO.lines.map((l) => {
+          const res: any = {
+            productUuid: l.productUuid,
+            quantity: l.quantity,
+          };
+          return res;
+        }),
+      };
+    } else {
+      body = {
+        ...rest,
+        billingAddress: orderDTO.deliveryAddress,
+        deliveryMethodUuid: orderDTO.delivery.method.uuid,
+        lines: orderDTO.lines.map((l) => {
+          const res: any = {
+            productUuid: l.productUuid,
+            quantity: l.quantity,
+          };
+          return res;
+        }),
+      };
+    }
+
+    console.log('body', body);
+    const res = await axios.post(
+      `https://ecommerce-backend-production.admin-a5f.workers.dev/orders`,
+      JSON.stringify(body),
+    );
     this.orders.push(order);
+    return Promise.resolve(this.convertToOrder(res.data));
     return Promise.resolve(order);
+  }
+
+  private convertToOrder(data: any): Order {
+    const copy = JSON.parse(JSON.stringify(data));
+    delete copy.messages;
+    delete copy.payment.invoiceNumber;
+    copy.lines.forEach((l: any) => {
+      l.productUuid = l.cip13;
+      delete l.cip13;
+      delete l.location;
+      delete l.percentTaxRate;
+      delete l.preparedQuantity;
+      delete l.expectedQuantity;
+    });
+    return copy;
   }
 
   async list(): Promise<Array<Order>> {
