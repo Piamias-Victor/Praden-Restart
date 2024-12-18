@@ -55,6 +55,7 @@ export const createOrder = async (
     const { items } = getProductsInCart();
 
     // Créer les lignes de commande
+    console.log('items:', JSON.stringify(items, null, 2));
     const lines: Array<CreateOrderLineDTO> = await Promise.all(
       Object.keys(items).map(async (key) => {
         const item = items[key];
@@ -67,7 +68,8 @@ export const createOrder = async (
           description: product.description,
           img: product.images,
         };
-        if (product.promotions) {
+        console.log('product.promotions', product.promotions.length !== 0);
+        if (product.promotions.length !== 0) {
           res.promotion = product.promotions[0];
           res.unitAmount = Math.round(item.unitPrice - product.promotions[0].amount);
         }
@@ -123,10 +125,15 @@ export const createOrder = async (
       deliveryMethod: order.delivery.method,
     };
 
+    console.log('2')
+
+
     // Envoyer la confirmation de commande par email
     await emailGateway.sendOrderConfirmation(sendOrderConfirmationDTO);
 
     // Rediriger vers l'URL de la session Stripe
+    console.log('3')
+
     if (order.payment && order.payment.sessionUrl) {
       console.log('Redirecting to Stripe Checkout URL:', order.payment.sessionUrl);
       window.location.href = order.payment.sessionUrl;

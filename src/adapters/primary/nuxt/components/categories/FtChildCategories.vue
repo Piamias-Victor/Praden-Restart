@@ -4,7 +4,7 @@ div.py-4.px-2.flex.items-center.gap-2.overflow-x-scroll.custom-scrollbar.text-xl
     //-     icon.icon-md(name="icon-park-outline:return")
     //-     span Retour
     button.rounded-xl.px-6.text-xl.flex.flex-col.items-center.justify-center.text-contrast(v-for='category in props.categoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid, category.name)" class='hover:text-main')
-      img.rounded-full(class='w-[60px] transform transition-transform duration-300 hover:scale-110 shadow-lg hover:shadow-xl' src='https://m.media-amazon.com/images/I/61bUInrLxlL._AC_UF350,350_QL80_.jpg', alt='Profile Picture')
+      img.rounded-full(class='w-[60px] transform transition-transform duration-300 hover:scale-110 shadow-lg hover:shadow-xl' :src='category.icon', alt='Profile Picture')
       span.whitespace-nowrap.text-sm.font-semibold.mt-1 {{ category.name }}
     //- ft-button.bg-white.rounded-xl.px-6.text-xl(v-for='category in props.categoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid, category.name)")
     //-   img.rounded-full.border.border-main.border-2(class='w-[50px] h-[50px]' src='https://i-sam.unimedias.fr/2022/06/13/istock-103956934.jpg?auto=format%2Ccompress&crop=faces&cs=tinysrgb&fit=crop&h=501&w=890', alt='Profile Picture')

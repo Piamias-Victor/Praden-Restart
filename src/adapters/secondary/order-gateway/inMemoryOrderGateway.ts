@@ -8,6 +8,7 @@ import { UUID } from '@core/types/type';
 import { CreateOrderDTO, CreateOrderLineDTO } from '@core/usecases/orders/order-creation/createOrder';
 import { useDeliveryStore } from '@store/deliveryStore';
 import axios from 'axios';
+import { useProductGateway } from '../../../../gateways/productGateway';
 
 export class InMemoryOrderGateway implements OrderGateway {
   private orders: Array<Order> = [];
@@ -59,6 +60,7 @@ export class InMemoryOrderGateway implements OrderGateway {
     };
 
     const { delivery, ...rest } = orderDTO;
+    const productGateway = useProductGateway();
     const deliveryMethodsStore = useDeliveryStore();
     console.log('deliveryMethods', deliveryMethodsStore.selected!.point);
     let body;
@@ -68,53 +70,121 @@ export class InMemoryOrderGateway implements OrderGateway {
         billingAddress: orderDTO.deliveryAddress,
         pickupId: deliveryMethodsStore.selected!.point,
         deliveryMethodUuid: orderDTO.delivery.method.uuid,
-        lines: orderDTO.lines.map((l) => {
-          const res: any = {
-            productUuid: l.productUuid,
-            quantity: l.quantity,
-          };
-          return res;
-        }),
+        lines: await Promise.all(
+          orderDTO.lines.map(async (l) => {
+            // Utilisez `l.productUuid` pour récupérer le produit
+            const product = await productGateway.getByUuid(l.productUuid);
+            console.log('product', product);
+            let priceWithoutTax: number;
+            let promotionUuid: string | undefined = undefined;
+
+            if (product.promotions && product.promotions.length > 0) {
+              // Supposons que vous utilisez la première promotion
+              const promotion = product.promotions[0];
+              priceWithoutTax = this.calculatePriceHT(product.price - promotion.amount, product.percentTaxRate);
+              promotionUuid = promotion.uuid;
+            } else {
+              priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
+            }
+            // Construisez l'objet `res` selon vos besoins
+            const res: any = {
+              productUuid: l.productUuid,
+              quantity: l.quantity,
+              priceWithoutTax: Math.round(priceWithoutTax),
+              percentTaxRate: product.percentTaxRate,
+              ...(promotionUuid ? { promotionUuid } : {}),
+            };
+            console.log('ress', res)
+            return res;
+          }),
+        ),
       };
     } else {
       body = {
         ...rest,
         billingAddress: orderDTO.deliveryAddress,
         deliveryMethodUuid: orderDTO.delivery.method.uuid,
-        lines: orderDTO.lines.map((l) => {
-          const res: any = {
-            productUuid: l.productUuid,
-            quantity: l.quantity,
-          };
-          return res;
-        }),
+        lines: await Promise.all(
+          orderDTO.lines.map(async (l) => {
+            // Utilisez `l.productUuid` pour récupérer le produit
+            const product = await productGateway.getByUuid(l.productUuid);
+            let priceWithoutTax: number;
+            let promotionUuid: string | undefined = undefined;
+
+            // Vérification des promotions
+            if (product.promotions && product.promotions.length > 0) {
+              // Supposons que vous utilisez la première promotion
+              const promotion = product.promotions[0];
+              priceWithoutTax = this.calculatePriceHT(product.price - promotion.amount, product.percentTaxRate);
+              promotionUuid = promotion.uuid;
+            } else {
+              priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
+            }
+            // Construisez l'objet `res` selon vos besoins
+            const res: any = {
+              productUuid: l.productUuid,
+              quantity: l.quantity,
+              priceWithoutTax: Math.round(priceWithoutTax),
+              percentTaxRate: product.percentTaxRate,
+              ...(promotionUuid ? { promotionUuid } : {}),
+            };
+            console.log('ress', res)
+            return res;
+          }),
+        ),
       };
     }
 
-    console.log('body', body);
+    // console.log('body', body);
+    console.log('0')
     const res = await axios.post(
       `https://ecommerce-backend-production.admin-a5f.workers.dev/orders`,
       JSON.stringify(body),
     );
     this.orders.push(order);
-    return Promise.resolve(this.convertToOrder(res.data));
+    console.log('1');
+    // return Promise.resolve(this.convertToOrder(res.data));
     return Promise.resolve(order);
   }
 
+  private calculatePriceHT(priceWithTax: number, taxRate: number): number {
+    const priceHT = priceWithTax / (1 + taxRate / 100);
+    // Arrondir à deux décimales
+    return Math.round(priceHT * 100) / 100;
+  }
+
   private convertToOrder(data: any): Order {
+    if (!data || typeof data !== 'object') {
+      throw new TypeError('Cannot convert undefined or null to object');
+    }
+  
     const copy = JSON.parse(JSON.stringify(data));
     delete copy.messages;
-    delete copy.payment.invoiceNumber;
-    copy.lines.forEach((l: any) => {
-      l.productUuid = l.cip13;
-      delete l.cip13;
-      delete l.location;
-      delete l.percentTaxRate;
-      delete l.preparedQuantity;
-      delete l.expectedQuantity;
-    });
+    delete copy.payment?.invoiceNumber;
+  
+    if (copy.lines && Array.isArray(copy.lines)) {
+      copy.lines.forEach((l: any) => {
+        // Renommer `cip13` en `productUuid` et supprimer les autres propriétés inutiles
+        l.productUuid = l.cip13;
+        delete l.cip13;
+        delete l.location;
+        delete l.percentTaxRate;
+        delete l.preparedQuantity;
+        delete l.expectedQuantity;
+        delete l.priceWithoutTax;
+  
+        // Supprimer `promotionUuid` si undefined ou null
+        if (l.promotionUuid === undefined || l.promotionUuid === null) {
+          delete l.promotionUuid;
+        }
+      });
+    } else {
+      console.warn('copy.lines est manquant ou n\'est pas un tableau');
+    }
+  
     return copy;
   }
+  
 
   async list(): Promise<Array<Order>> {
     return Promise.resolve(this.orders);
