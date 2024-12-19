@@ -42,10 +42,27 @@ defineProps({
   product: { type: Object, required: true },
 });
 
+const emit = defineEmits<{
+  (e: 'close'): void;
+}>();
+
+const close = () => {
+  emit('close');
+};
+
+const router = useRouter();
+
+
 export interface LikeQuantityVM {
   items: HashTable<number>;
   totalQuantity: number;
 }
+
+const goToProduct = (path: string) => {
+  console.log('ca doit fermer')
+  router.push(path);
+  close();
+};
 
 const isHovered = ref(false);
 const likeQuantity = ref<LikeQuantityVM | null>(null);
