@@ -94,7 +94,7 @@ export class InMemoryOrderGateway implements OrderGateway {
               percentTaxRate: product.percentTaxRate,
               ...(promotionUuid ? { promotionUuid } : {}),
             };
-            console.log('ress', res)
+            console.log('ress', res);
             return res;
           }),
         ),
@@ -128,7 +128,7 @@ export class InMemoryOrderGateway implements OrderGateway {
               percentTaxRate: product.percentTaxRate,
               ...(promotionUuid ? { promotionUuid } : {}),
             };
-            console.log('ress', res)
+            console.log('ress', res);
             return res;
           }),
         ),
@@ -136,7 +136,7 @@ export class InMemoryOrderGateway implements OrderGateway {
     }
 
     // console.log('body', body);
-    console.log('0')
+    console.log('0');
     const res = await axios.post(
       `https://ecommerce-backend-production.admin-a5f.workers.dev/orders`,
       JSON.stringify(body),
@@ -157,11 +157,11 @@ export class InMemoryOrderGateway implements OrderGateway {
     if (!data || typeof data !== 'object') {
       throw new TypeError('Cannot convert undefined or null to object');
     }
-  
+
     const copy = JSON.parse(JSON.stringify(data));
     delete copy.messages;
     delete copy.payment?.invoiceNumber;
-  
+
     if (copy.lines && Array.isArray(copy.lines)) {
       copy.lines.forEach((l: any) => {
         // Renommer `cip13` en `productUuid` et supprimer les autres propriétés inutiles
@@ -172,19 +172,18 @@ export class InMemoryOrderGateway implements OrderGateway {
         delete l.preparedQuantity;
         delete l.expectedQuantity;
         delete l.priceWithoutTax;
-  
+
         // Supprimer `promotionUuid` si undefined ou null
         if (l.promotionUuid === undefined || l.promotionUuid === null) {
           delete l.promotionUuid;
         }
       });
     } else {
-      console.warn('copy.lines est manquant ou n\'est pas un tableau');
+      console.warn("copy.lines est manquant ou n'est pas un tableau");
     }
-  
+
     return copy;
   }
-  
 
   async list(): Promise<Array<Order>> {
     return Promise.resolve(this.orders);

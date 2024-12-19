@@ -8,8 +8,13 @@ export default defineNuxtConfig({
       CONFIRMATION_TEMPLATE_ID: process.env.CONFIRMATION_TEMPLATE_ID,
       SEND_EMAIL_URL: process.env.SEND_EMAIL_URL,
       BACKEND_URL: process.env.BACKEND_URL,
+      KEYCLOAK_URL: process.env.KEYCLOAK_URL,
+      KEYCLOAK_REALM: process.env.KEYCLOAK_REALM,
+      KEYCLOAK_CLIENT_ID: process.env.KEYCLOAK_CLIENT_ID,
     },
   },
+
+  plugins: ['~/src/plugins/keycloak.client.ts'], // Facultatif si vous suivez la convention
 
   alias: {
     '@adapters/': fileURLToPath(new URL('./src/adapters/', import.meta.url)),
