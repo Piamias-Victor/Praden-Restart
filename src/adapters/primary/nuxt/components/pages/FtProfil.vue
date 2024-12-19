@@ -59,7 +59,7 @@
                                   ft-button.button-solid.text-xl.w-full(@click="login")
                                       span Connexion
                                   div.mt-4
-                                  ft-button.bg-contrast.text-xl.w-full(@click="openSubscribe")
+                                  ft-button.bg-contrast.text-xl.w-full(@click="register")
                                       span S'inscrire
                                   ft-connexion(v-if="connexionOpened" @close="closeConnexion")
                                   ft-subscribe(v-if="subscribeOpened" @close="closeSubscribe")
@@ -115,6 +115,14 @@ const login = () => {
     console.error('Erreur lors de la connexion :', error);
   });
 };
+
+// Fonction inscription
+const register = () => {
+  keycloak?.register().catch((error) => {
+    console.error('Erreur lors de l\'inscription :', error);
+  });
+};
+
 
 // Fonction déconnexion
 const logout = () => {
