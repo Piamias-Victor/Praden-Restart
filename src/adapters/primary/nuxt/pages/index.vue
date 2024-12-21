@@ -1,18 +1,18 @@
 <template lang="pug">
-div.flex.flex-col.gap-10
-  ft-categories(:categoriesVM="categoriesVM")
-  ft-slider
-  ft-product-list(:products="productInPromotion.products") La sélection du pharmacien
-  ft-product-list(:products="productInPromotion.products") Promotion
-  ft-brand-list
-  ft-blog(:blogVm='blogVm')
-  ft-review
-  ft-information
-  ft-network
-  div.h-10
-  ft-newsletter
-  ft-navigation
-</template>
+    div.flex.flex-col.gap-10
+      ft-categories(:categoriesVM="categoriesVM")
+      ft-slider
+      ft-product-list(:products="productInPromotion.products") La sélection du pharmacien
+      ft-product-list(:products="productInPromotion.products") Promotion
+      ft-brand-list
+      ft-blog(:blogVm='blogVm')
+      ft-review
+      ft-information
+      ft-network
+      div.h-10
+      ft-newsletter
+      ft-navigation
+    </template>
 
 <script lang="ts" setup>
 import { listDeliveryMethods } from '@core/usecases/delivery-methods-listing/listDeliveryMethods';

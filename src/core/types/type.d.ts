@@ -53,3 +53,13 @@ export interface Facets {
     products: Array<Product>
     facets: Partial<Facets>
   }
+
+  // types/nuxt.d.ts
+import Keycloak from 'keycloak-js'
+
+declare module '#app' {
+  interface NuxtApp {
+    $keycloak: Keycloak.KeycloakInstance
+    $keycloakReady: Promise<void>
+  }
+}

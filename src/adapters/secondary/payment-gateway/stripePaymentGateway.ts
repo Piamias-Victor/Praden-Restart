@@ -85,8 +85,8 @@ export class StripePaymentGateway implements PaymentGateway {
       payment_method_types: ['card'],
       mode: 'payment',
       line_items: lineItems,
-      success_url: 'https://votre-domaine.com/checkout/success', // Mettez à jour pour la production
-      cancel_url: 'https://votre-domaine.com/checkout/cancel', // Mettez à jour pour la production
+      success_url: 'http://localhost:3000/checkout/success', // Mettez à jour pour la production
+      cancel_url: 'http://localhost:3000/checkout/success', // Mettez à jour pour la production
     };
 
     // Utiliser qs pour formater les données

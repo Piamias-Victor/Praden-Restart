@@ -197,6 +197,8 @@ export const getCartVM = (): CartVM => {
   };
   if (total != totalWithPromotion) {
     res.totalPriceWithPromotion = formatter.format(getTotalWithDelivery(totalWithPromotion, totalWeight) / 100);
+    res.DeliveryPrice = formatter.format(getDeliveryPrice(selectedMethod!, totalWeight, totalWithPromotion) / 100);
+    res.freeDelivery = formatter.format(getFreeDelivery(totalWithPromotion) / 100);
   }
   return res;
 };

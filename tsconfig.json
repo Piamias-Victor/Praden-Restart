@@ -1,21 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node16", // Ou "nodenext"
+    "lib": ["esnext", "dom"],
     "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "types": ["jest", "@nuxt/types"],
+    "types": ["@types/node"],
     "baseUrl": ".",
     "paths": {
-      "@adapters/*": ["src/adapters/*"],
-      "@core/*": ["src/core/*"],
-      "@store/*": ["src/store/*"],
-      "@utils/*": ["src/utils/*"],
-      "@/*": ["src/*"]
+      "#app": ["./node_modules/@nuxt/schema/dist/app.d.ts"],
+      "#app/*": ["./node_modules/@nuxt/schema/dist/app/*.d.ts"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue"],
+  "exclude": ["node_modules"]
 }

@@ -55,6 +55,7 @@ export const createOrder = async (
     const { items } = getProductsInCart();
 
     // Créer les lignes de commande
+    console.log('items:', JSON.stringify(items, null, 2));
     const lines: Array<CreateOrderLineDTO> = await Promise.all(
       Object.keys(items).map(async (key) => {
         const item = items[key];
@@ -67,7 +68,8 @@ export const createOrder = async (
           description: product.description,
           img: product.images,
         };
-        if (product.promotions) {
+        console.log('product.promotions', product.promotions.length !== 0);
+        if (product.promotions.length !== 0) {
           res.promotion = product.promotions[0];
           res.unitAmount = Math.round(item.unitPrice - product.promotions[0].amount);
         }
@@ -96,6 +98,7 @@ export const createOrder = async (
         appartement: deliveryAddress.appartement,
         zip: deliveryAddress.zip,
         city: deliveryAddress.city,
+        country: deliveryAddress.country,
       },
     };
     // Créer la commande via OrderGateway
@@ -118,15 +121,19 @@ export const createOrder = async (
       orderUuid: order.uuid,
       contact: order.contact,
       shippingAddress: order.deliveryAddress,
-      billingAddress: user.value.billingAddress,
+      billingAddress: order.deliveryAddress,
       orderLines: order.lines,
       deliveryMethod: order.delivery.method,
     };
+
+    console.log('2');
 
     // Envoyer la confirmation de commande par email
     await emailGateway.sendOrderConfirmation(sendOrderConfirmationDTO);
 
     // Rediriger vers l'URL de la session Stripe
+    console.log('3');
+
     if (order.payment && order.payment.sessionUrl) {
       console.log('Redirecting to Stripe Checkout URL:', order.payment.sessionUrl);
       window.location.href = order.payment.sessionUrl;

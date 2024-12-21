@@ -6,7 +6,7 @@ section.px-2
         //- span.text-xs.text-contrast Voir tout
     section.py-4.flex.gap-4.overflow-hidden.overflow-x-auto.custom-scrollbar(class='max-w-[200vw]')
         div(v-for='product in products' :key="product.uuid")
-            ft-product-card-promo(:product="product")
+            ft-product-card(:product="product")
 </template>
 
 <script lang="ts" setup>
