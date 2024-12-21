@@ -62,7 +62,6 @@ export class RealOrderGateway implements OrderGateway {
     const { delivery, ...rest } = orderDTO;
     const productGateway = useProductGateway();
     const deliveryMethodsStore = useDeliveryStore();
-    console.log('deliveryMethods', deliveryMethodsStore.selected!.point);
     let body;
     if (deliveryMethodsStore.selected!.point) {
       body = {
@@ -94,7 +93,6 @@ export class RealOrderGateway implements OrderGateway {
               percentTaxRate: product.percentTaxRate,
               ...(promotionUuid ? { promotionUuid } : {}),
             };
-            console.log('ress', res);
             return res;
           }),
         ),
@@ -128,7 +126,6 @@ export class RealOrderGateway implements OrderGateway {
               percentTaxRate: product.percentTaxRate,
               ...(promotionUuid ? { promotionUuid } : {}),
             };
-            console.log('ress', res);
             return res;
           }),
         ),
