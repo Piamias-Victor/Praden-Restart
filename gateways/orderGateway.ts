@@ -1,9 +1,11 @@
 // useOrderGateway.ts
 
+import {
+  RealOrderGateway,
+  FakeUUIDGenerator,
+  RealDateProvider,
+} from '@adapters/secondary/order-gateway/RealOrderGateway';
 import { StripePaymentGateway } from '@adapters/secondary/payment-gateway/stripePaymentGateway';
-import { RealDateProvider } from 'src/adapters/secondary/order-gateway/RealOrderGateway';
-import { FakeUUIDGenerator } from 'src/adapters/secondary/order-gateway/RealOrderGateway';
-import { RealOrderGateway } from 'src/adapters/secondary/order-gateway/RealOrderGateway';
 
 export const useOrderGateway = () => {
   const STRIPE_SECRET_KEY =

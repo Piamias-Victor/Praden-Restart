@@ -4,7 +4,7 @@ import { UUID } from '@core/types/types';
 import { CreateOrderDTO } from '@core/usecases/orders/order-creation/createOrder';
 import axios from 'axios';
 
-export class RealOrderGateway implements OrderGateway {
+export class RealOrderGateway2 implements OrderGateway {
   private readonly baseUrl: string;
   private readonly orderUrl: string;
 
