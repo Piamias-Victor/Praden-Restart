@@ -76,6 +76,7 @@ export const getProductVM = (): ProductDetailVM => {
   const formatter = priceFormatter('fr-FR', 'EUR');
   const details = getDetails(product);
   const promotion = getPromotionInProductVM(product);
+  console.log("pro", product)
   const res: ProductDetailVM = {
     uuid: product?.uuid || '',
     name: product?.name || '',
@@ -103,6 +104,7 @@ export const getProductInPromotionVM = () => {
         laboratory: p.laboratory,
         images: p.images,
         price: formatter.format(p.priceWithTax / 100),
+        availableStock: p.availableStock,
         href: `/products/${p.uuid}`,
       };
       if (promotion) {
@@ -124,6 +126,7 @@ export const getSearchProductVM = () => {
     laboratory: product?.laboratory || '',
     price: product ? formatter.format(product.priceWithTaxe / 100) : '',
     images: product ? [{ src: product.images, alt: product?.name }] : [],
+    availableStock: product.availableStock,
   };
   return res;
 };
