@@ -99,10 +99,7 @@ const loadColissimoWidget = async () => {
       const deliveryMethodsStore = useDeliveryStore();
 
       window.maMethodeDeCallBack = function (point) {
-        console.log('Call back frame');
-        console.log('point', point.identifiant);
         deliveryMethodsStore.selected!.point = point.identifiant;
-        console.log('deliveryMethods', deliveryMethodsStore);
         // deliveryMethods.selected.point = point.identifiant;
         user.value.billingAddress = {
           firstname: user.value.firstName,

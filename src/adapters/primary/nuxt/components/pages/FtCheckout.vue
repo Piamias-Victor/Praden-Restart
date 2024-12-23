@@ -86,7 +86,6 @@ import { createGoogleUser } from '@core/usecases/user/createGoogleUser';
 import { useNuxtApp } from '#app';
 import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
 
-
 const user = computed(() => {
   return getUserVM();
 });
@@ -97,31 +96,36 @@ const keycloakReady = nuxtApp.$keycloakReady;
 const isAuthenticated = ref(false);
 
 const login = () => {
-    // Sauvegarder le panier dans le localStorage
-    const cart = JSON.stringify(getCartVM().items);
-    localStorage.setItem('cart', cart);
+  // Récupérer le panier actuel
+  const cartVM = getCartVM();
 
-    // Redirection pour la connexion
-    keycloak?.login().catch((error) => {
-        console.error('Erreur lors de la connexion :', error);
-    });
+  // Créer un objet avec uniquement les UUID des produits
+  const cart = {
+    items: Object.keys(cartVM.items),
+  };
+
+  // Convertir en JSON et sauvegarder dans le localStorage
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  // Redirection pour la connexion
+  keycloak?.login().catch((error) => {
+    console.error('Erreur lors de la connexion :', error);
+  });
 };
-
 
 // Fonction inscription
 const register = () => {
-    keycloak?.register().catch((error) => {
-        console.error("Erreur lors de l'inscription :", error);
-    });
+  keycloak?.register().catch((error) => {
+    console.error("Erreur lors de l'inscription :", error);
+  });
 };
 
 // Fonction déconnexion
 const logout = () => {
-    keycloak?.logout({ redirectUri: window.location.origin }).catch((error) => {
-        console.error('Erreur lors de la déconnexion :', error);
-    });
+  keycloak?.logout({ redirectUri: window.location.origin }).catch((error) => {
+    console.error('Erreur lors de la déconnexion :', error);
+  });
 };
-
 
 const newsletter = ref(false);
 

@@ -3,6 +3,8 @@ import Keycloak from 'keycloak-js';
 import axios from 'axios';
 import { recoverUser } from '../../src/core/usecases/user/updateUser';
 import { useCartStore } from '../../src/store/cartStore';
+import { useProductStore } from '../../src/store/productStore';
+import { useProductGateway } from '../../gateways/productGateway';
 
 export default defineNuxtPlugin((nuxtApp) => {
   const { KEYCLOAK_URL, KEYCLOAK_REALM, KEYCLOAK_CLIENT_ID, API_BASE_URL } = useRuntimeConfig().public;
@@ -15,20 +17,14 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   const cartStore = useCartStore();
 
-  console.log('Instance Keycloak créée :', keycloak);
-
   const keycloakReady = (async () => {
-    console.log('Initialisation de Keycloak en cours...');
     try {
       const authenticated = await keycloak.init({
         checkLoginIframe: false,
       });
 
       if (authenticated) {
-        console.log('Utilisateur authentifié avec succès');
-
         const accessToken = keycloak.token;
-        console.log('Token récupéré :', accessToken);
 
         // Récupération du profil utilisateur
         try {
@@ -38,26 +34,47 @@ export default defineNuxtPlugin((nuxtApp) => {
             },
           });
           recoverUser(userProfile.data);
-          console.log('Profil utilisateur récupéré :', userProfile.data);
         } catch (error) {
           console.error('Erreur lors de la récupération du profil utilisateur :', error);
         }
 
         // **Restaurer le panier**
-        // const savedCart = localStorage.getItem('cart');
-        // if (savedCart) {
-        //   const cartItems = JSON.parse(savedCart);
-        //   cartStore.restoreCart(cartItems); // Fonction pour ajouter les produits au store du panier
-        //   localStorage.removeItem('cart'); // Supprimez le panier sauvegardé après restauration
-        //   console.log('Panier restauré depuis le localStorage');
-        // }
+        const savedCart = localStorage.getItem('cart');
+        console.log('savedCart', savedCart);
+
+        if (savedCart) {
+          const cartItems = JSON.parse(savedCart);
+          console.log('cartItems:', cartItems);
+
+          const productStore = useProductStore();
+          const cartStore = useCartStore();
+          const productGateway = useProductGateway();
+
+          // Parcourir les UUID et ajouter chaque produit individuellement
+          for (const productUuid of cartItems.items) {
+            try {
+              // Ajouter l'UUID au store du panier
+              cartStore.add(productUuid);
+
+              // Récupérer les détails du produit via la gateway
+              const product = await productGateway.getByUuid(productUuid);
+
+              // Ajouter le produit au store des produits
+              productStore.add(product);
+            } catch (error) {
+              console.error(`Erreur lors de la récupération ou de l'ajout du produit UUID: ${productUuid}`, error);
+            }
+          }
+
+          // Supprimer le panier sauvegardé après restauration
+          localStorage.removeItem('cart');
+        }
 
         // Rafraîchissement du token
         const intervalId = setInterval(async () => {
           try {
             const refreshed = await keycloak.updateToken(60);
             if (refreshed) {
-              console.log('Token Keycloak rafraîchi');
             }
           } catch (err) {
             console.error('Échec du rafraîchissement du token Keycloak', err);
@@ -75,5 +92,4 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   nuxtApp.provide('keycloak', keycloak);
   nuxtApp.provide('keycloakReady', keycloakReady);
-  console.log('Keycloak et keycloakReady fournis à Nuxt');
 });

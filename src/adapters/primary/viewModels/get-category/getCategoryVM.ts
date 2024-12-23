@@ -99,7 +99,6 @@ export const getCategoryVM = (sortType: SortType = SortType.None) => {
   const searchStore = useSearchStore();
   const categoryUuid = searchStore.currentCategory;
   const category = categories.find((c) => c.uuid === categoryUuid);
-  console.log('category', category);
   const subCategories = categories.filter((c) => c.parentUuid === categoryUuid);
   const formatter = priceFormatter('fr-FR', 'EUR');
   const sortOptions: Array<SortOption> = [

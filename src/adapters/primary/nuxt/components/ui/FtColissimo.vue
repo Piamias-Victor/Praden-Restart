@@ -41,9 +41,7 @@ onMounted(() => {
 
       // Définir la fonction callback dans le scope global
       window.maMethodeDeCallBack = function (point) {
-        console.log('Call back frame');
         deliveryMethods.selected.point = point.identifiant;
-        console.log('sendOrderConfirmationDTO', JSON.stringify(point, null, 2));
         jQuery('#monIdDeWidgetColissimo').frameColissimoClose();
       };
 

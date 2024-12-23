@@ -67,7 +67,6 @@ export const createOrder = async (
           description: product.description,
           img: product.images,
         };
-        console.log('product.promotions', product.promotions.length !== 0);
         if (product.promotions.length !== 0) {
           res.promotion = product.promotions[0];
           res.unitAmount = Math.round(item.unitPrice - product.promotions[0].amount);
@@ -101,7 +100,6 @@ export const createOrder = async (
       },
     };
     // Créer la commande via OrderGateway
-    console.log('ici');
 
     const order = await orderGateway.create(orderDTO, deliveryPrice);
     // console.log('order:', JSON.stringify(order, null, 2));
@@ -127,16 +125,12 @@ export const createOrder = async (
       deliveryMethod: order.delivery.method,
     };
 
-    console.log('2');
-
     // Envoyer la confirmation de commande par email
     await emailGateway.sendOrderConfirmation(sendOrderConfirmationDTO);
 
     // Rediriger vers l'URL de la session Stripe
-    console.log('3');
 
     if (order.payment && order.payment.sessionUrl) {
-      console.log('Redirecting to Stripe Checkout URL:', order.payment.sessionUrl);
       window.location.href = order.payment.sessionUrl;
     }
   } catch (error) {

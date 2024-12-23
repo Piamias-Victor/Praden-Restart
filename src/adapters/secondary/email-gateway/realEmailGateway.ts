@@ -39,8 +39,6 @@ export class RealEmailGateway implements EmailGateway {
   }
 
   async sendTestEmail(to: string, subject: string, message: string): Promise<void> {
-    console.log('dans la gateway:', message);
-    console.log('dans la gateway 2:', subject);
     const test = message;
     const test2 = subject;
     const body = {
@@ -84,7 +82,6 @@ export class RealEmailGateway implements EmailGateway {
       }
 
       const result = await response.json();
-      console.log('Test email sent successfully:', result);
     } catch (error) {
       console.error('Error sending test email:', error);
       throw error;

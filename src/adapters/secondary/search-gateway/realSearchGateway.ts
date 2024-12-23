@@ -36,7 +36,6 @@ export class RealSearchGateway extends RealGateway implements SearchGateway {
     size?: number,
     isInPromotion?: string,
   ): Promise<Array<Product>> {
-    console.log('laboratoryUuids', laboratoryUuids);
     try {
       const payload = {
         query: query || undefined,
@@ -45,11 +44,8 @@ export class RealSearchGateway extends RealGateway implements SearchGateway {
         isInPromotion: isInPromotion || undefined,
       };
 
-      console.log('Payload construit pour searchProduct:', payload); // Ajoutez ce log
-
       const res = await axios.post(`${this.baseUrl}/search/products`, payload);
 
-      console.log('res :', res);
       return Promise.resolve(res.data.items);
     } catch (error) {
       console.error('Erreur lors de la récupération des produits :', error);
@@ -71,10 +67,7 @@ export class RealSearchGateway extends RealGateway implements SearchGateway {
         isInPromotion: isInPromotion || undefined,
       };
 
-      // console.log('laboratoryUuids', payload.laboratoryUuids);
-
       const res = await axios.post(`${this.baseUrl}/search/products`, payload);
-      console.log('facet :', res);
       return Promise.resolve(res.data.facets);
     } catch (error) {
       console.error('Erreur lors de la récupération des facettes :', error);

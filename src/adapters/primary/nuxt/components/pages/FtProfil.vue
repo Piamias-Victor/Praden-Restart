@@ -109,8 +109,19 @@ keycloakReady?.then(() => {
   }
 });
 
-// Fonction connexion
 const login = () => {
+  // Récupérer le panier actuel
+  const cartVM = getCartVM();
+
+  // Créer un objet avec uniquement les UUID des produits
+  const cart = {
+    items: Object.keys(cartVM.items),
+  };
+
+  // Convertir en JSON et sauvegarder dans le localStorage
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  // Redirection pour la connexion
   keycloak?.login().catch((error) => {
     console.error('Erreur lors de la connexion :', error);
   });
@@ -119,10 +130,9 @@ const login = () => {
 // Fonction inscription
 const register = () => {
   keycloak?.register().catch((error) => {
-    console.error('Erreur lors de l\'inscription :', error);
+    console.error("Erreur lors de l'inscription :", error);
   });
 };
-
 
 // Fonction déconnexion
 const logout = () => {

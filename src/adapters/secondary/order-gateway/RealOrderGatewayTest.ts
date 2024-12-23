@@ -43,8 +43,6 @@ export class RealOrderGateway implements OrderGateway {
       delete orderDTO.deliveryAddress.appartement;
     }
 
-    console.log('createCheckoutDTO', checkoutDTO);
-
     // Créer la session de paiement Stripe
 
     const { delivery, ...rest } = orderDTO;
@@ -61,7 +59,6 @@ export class RealOrderGateway implements OrderGateway {
           orderDTO.lines.map(async (l) => {
             // Utilisez `l.productUuid` pour récupérer le produit
             const product = await productGateway.getByUuid(l.productUuid);
-            console.log('product', product);
             let priceWithoutTax: number;
             let promotionUuid: string | undefined = undefined;
 
@@ -120,15 +117,11 @@ export class RealOrderGateway implements OrderGateway {
       };
     }
 
-    // console.log('body', body);
-    console.log('0');
-
     const res = await axios.post(
       `https://ecommerce-backend-production.admin-a5f.workers.dev/orders`,
       JSON.stringify(body),
     );
 
-    console.log('res:', res.data);
     const sessionUrl = await this.paymentGateway.createCheckoutSession(checkoutDTO, deliveryPrice, res.data.uuid);
 
     const order: Order = {
@@ -144,7 +137,6 @@ export class RealOrderGateway implements OrderGateway {
       },
     };
     this.orders.push(order);
-    console.log('1');
 
     // return Promise.resolve(this.convertToOrder(res.data));
     return Promise.resolve(order);
