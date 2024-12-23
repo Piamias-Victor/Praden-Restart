@@ -33,7 +33,6 @@ definePageMeta({ layout: 'main' });
 onMounted(() => {
   listDeliveryMethods(deliveryGateway);
   listCategories(categoryGateway());
-  listMyOrder(myOrderGateway());
   listLaboratories(laboratoryGateway());
   listPromotions(useProductGateway());
 });

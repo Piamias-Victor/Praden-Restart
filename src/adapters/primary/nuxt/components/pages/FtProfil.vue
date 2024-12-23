@@ -25,9 +25,9 @@
                                   ft-button.button-solid.w-full(@click="openOrder")
                                     icon.icon-md(name="akar-icons:shopping-bag")
                                     span Mes commandes
-                                  ft-button.button-solid.w-full(@click="openAddress")
-                                    icon.icon-md(name="material-symbols:supervised-user-circle-outline")
-                                    span Mon profil
+                                  //- ft-button.button-solid.w-full(@click="openAddress")
+                                  //-   icon.icon-md(name="material-symbols:supervised-user-circle-outline")
+                                  //-   span Mon profil
                                   ft-button.button-solid.w-full(@click="openContact")
                                     icon.icon-md(name="bx:message")
                                     span Nous contacter
@@ -41,16 +41,16 @@
                                   ft-button.button-solid.w-full(@click="logout")
                                     icon.icon-md(name="tabler:logout")
                                     span Déconnexion
+                                ft-contact(v-if="contactOpened" @close="closeContact")
+                                ft-ordo(v-if="ordoOpened" @close="closeOrdo")
+                                ft-address(v-if="addressOpened" @close="closeAddress")
+                                ft-order(v-if="orderOpened" @close="closeOrder")
                               div(v-else).flex.flex-col.items-center
                                   div.mt-4
                                   img.block.h-48.w-auto(
                                       src="https://www.pharma365.fr/wp-content/uploads/2023/11/logo_Pharmabest.png"
                                       alt="logo"
                                   )
-                                  ft-contact(v-if="contactOpened" @close="closeContact")
-                                  ft-ordo(v-if="ordoOpened" @close="closeOrdo")
-                                  ft-address(v-if="addressOpened" @close="closeAddress")
-                                  ft-order(v-if="orderOpened" @close="closeOrder")
                                   div.mt-10
                                   span.font-semibold.text-xl REJOIGNEZ-NOUS
                                   div.mt-2
@@ -69,6 +69,7 @@
 import { ref, computed } from 'vue';
 import { useNuxtApp } from '#app';
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
+import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
 
 // Modaux
 const connexionOpened = ref(false);
@@ -160,7 +161,9 @@ const closeSubscribe = () => {
 
 // Autres modaux
 const openContact = () => {
+  console.log('ici je suis la ');
   contactOpened.value = true;
+  console.log('contactOpened.value', contactOpened.value);
 };
 
 const closeContact = () => {

@@ -5,6 +5,8 @@ import { recoverUser } from '../../src/core/usecases/user/updateUser';
 import { useCartStore } from '../../src/store/cartStore';
 import { useProductStore } from '../../src/store/productStore';
 import { useProductGateway } from '../../gateways/productGateway';
+import { listMyOrder } from '../../src/core/usecases/list-my-orders/listMyOrders';
+import { myOrderGateway } from '../../gateways/myOrderGateway';
 
 export default defineNuxtPlugin((nuxtApp) => {
   const { KEYCLOAK_URL, KEYCLOAK_REALM, KEYCLOAK_CLIENT_ID, API_BASE_URL } = useRuntimeConfig().public;
@@ -16,15 +18,20 @@ export default defineNuxtPlugin((nuxtApp) => {
   });
 
   const cartStore = useCartStore();
+  const storedTokens = localStorage.getItem('keycloakTokens');
+  const tokenData = storedTokens ? JSON.parse(storedTokens) : null;
 
+  console.log('tokenData:', tokenData);
   const keycloakReady = (async () => {
     try {
       const authenticated = await keycloak.init({
         checkLoginIframe: false,
+        token: tokenData?.token,
       });
 
       if (authenticated) {
         const accessToken = keycloak.token;
+        localStorage.setItem('keycloakTokens', JSON.stringify(accessToken));
 
         // Récupération du profil utilisateur
         try {
@@ -37,14 +44,15 @@ export default defineNuxtPlugin((nuxtApp) => {
         } catch (error) {
           console.error('Erreur lors de la récupération du profil utilisateur :', error);
         }
+        listMyOrder(myOrderGateway(), accessToken);
 
         // **Restaurer le panier**
         const savedCart = localStorage.getItem('cart');
-        console.log('savedCart', savedCart);
+        // console.log('savedCart', savedCart);
 
         if (savedCart) {
           const cartItems = JSON.parse(savedCart);
-          console.log('cartItems:', cartItems);
+          // console.log('cartItems:', cartItems);
 
           const productStore = useProductStore();
           const cartStore = useCartStore();
