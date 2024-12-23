@@ -1,5 +1,4 @@
 // useOrderGateway.ts
-
 import {
   RealOrderGateway,
   FakeUUIDGenerator,
