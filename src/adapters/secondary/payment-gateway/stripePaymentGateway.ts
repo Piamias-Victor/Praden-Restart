@@ -54,7 +54,7 @@ export class StripePaymentGateway implements PaymentGateway {
     });
   }
 
-  async createCheckoutSession(createCheckoutDTO: CreateCheckoutDTO, deliveryPrice: string): Promise<string> {
+  async createCheckoutSession(createCheckoutDTO: CreateCheckoutDTO, deliveryPrice: string, orderUuid: string): Promise<string> {
     const currency = 'eur';
     const lineItems = createCheckoutDTO.lines.map((line) => {
       return {
@@ -87,6 +87,11 @@ export class StripePaymentGateway implements PaymentGateway {
       line_items: lineItems,
       success_url: 'http://localhost:3000/checkout/success', // Mettez à jour pour la production
       cancel_url: 'http://localhost:3000/checkout/success', // Mettez à jour pour la production
+      payment_intent_data: {
+        metadata: {
+          orderUuid: orderUuid,
+        },
+      },
     };
 
     // Utiliser qs pour formater les données

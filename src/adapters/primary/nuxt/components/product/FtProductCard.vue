@@ -34,7 +34,6 @@
           ft-button.w-full.text-white.flex.items-center.justify-center.font-semibold
             span Bientôt disponible
 </template>
-  
 
 <script lang="ts" setup>
 import { addToFavorite, removeFromFavorite } from '@core/usecases/add-to-favorite/addToFavorite';
@@ -57,14 +56,13 @@ const close = () => {
 
 const router = useRouter();
 
-
 export interface LikeQuantityVM {
   items: HashTable<number>;
   totalQuantity: number;
 }
 
 const goToProduct = (path: string) => {
-  console.log('ca doit fermer')
+  console.log('ca doit fermer');
   router.push(path);
   close();
 };

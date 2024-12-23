@@ -1,7 +1,7 @@
 <template lang="pug">
 .mt-4.grid.grid-cols-1.gap-y-2
     ft-input(
-    :value="props.user.firstName"
+    :value="props.user.firstname"
     for="first-name"
     require
     type='text'
@@ -11,7 +11,7 @@
     ) 
         span.font-semibold.text-sm Prénom
     ft-input(
-    :value="props.user.lastName"
+    :value="props.user.lastname"
     for="last-name"
     require
     type='text'
@@ -21,16 +21,16 @@
     ) 
         span.font-semibold.text-sm Nom
     ft-input(
-        :value="props.user.country" 
-        for="country"
-        require
-        type='text'
-        name='country'
-        @input="countryChanged"
-    ) 
+    :value="props.user.address?.country || ''" 
+    for="country"
+    require
+    type='text'
+    name='country'
+    @input="countryChanged"
+)
         span.font-semibold.text-sm Pays
     ft-input(
-        :value="props.user.address"
+        :value="props.user.address?.address || ''"
         for="address"
         require
         type='text'
@@ -40,7 +40,7 @@
     ) 
         span.font-semibold.text-sm Adresse
     ft-input(
-        :value="props.user.appartement"
+        :value="props.user.address?.appartement || ''"
         for="apartment"
         type='text'
         name='apartment'
@@ -48,7 +48,7 @@
     ) 
         span.font-semibold.text-sm  Appartement
     ft-input(
-        :value="props.user.postal"
+        :value="props.user.address?.zip || ''"
         for="postal-code"
         require
         type='text'
@@ -58,7 +58,7 @@
     ) 
         span.font-semibold.text-sm Code postal
     ft-input(
-        :value="props.user.city"
+        :value="props.user.address?.city || ''"
         for="city"
         require
         type='text'

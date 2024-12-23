@@ -1,5 +1,4 @@
 <template lang="pug">
-div Test colissimo
 div(id="monIdDeWidgetColissimo")
 </template>
 

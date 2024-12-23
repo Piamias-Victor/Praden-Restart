@@ -72,92 +72,91 @@
                                     ft-connexion(v-if="connexionOpened" @close="closeConnexion")
                                     ft-subscribe(v-if="subscribeOpened" @close="closeSubscribe")
     </template>
-    
-    <script lang="ts" setup>
-    import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
-    import { logoutUser } from '@core/usecases/user/logout';
-    import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
-    
-    const connexionOpened = ref(false);
-    
-    const subscribeOpened = ref(false);
-    
-    const contactOpened = ref(false);
-    
-    const ordoOpened = ref(false);
-    
-    const addressOpened = ref(false);
-    
-    const orderOpened = ref(false);
-    
-    const fileInput = ref(null);
-    
-    const emit = defineEmits<{
-      (e: 'close'): void;
-    }>();
-    
-    const close = () => {
-      emit('close');
-    };
-    
-    function closeModal() {
-      emit('close');
-    }
-    
-    const openConnexion = () => {
-      connexionOpened.value = true;
-    };
-    
-    const closeConnexion = () => {
-      connexionOpened.value = false;
-    };
-    
-    const openSubscribe = () => {
-      subscribeOpened.value = true;
-    };
-    
-    const closeSubscribe = () => {
-      subscribeOpened.value = false;
-    };
-    
-    const openContact = () => {
-      contactOpened.value = true;
-    };
-    
-    const closeContact = () => {
-      contactOpened.value = false;
-    };
-    
-    const openOrdo = () => {
-      ordoOpened.value = true;
-    };
-    
-    const closeOrdo = () => {
-      ordoOpened.value = false;
-    };
-    
-    const openAddress = () => {
-      addressOpened.value = true;
-    };
-    
-    const openOrder = () => {
-      orderOpened.value = true;
-    };
-    
-    const closeAddress = () => {
-      addressOpened.value = false;
-    };
-    
-    const closeOrder = () => {
-      orderOpened.value = false;
-    };
-    
-    const logout = () => {
-      logoutUser();
-    };
-    
-    const user = computed(() => {
-      return getUserVM();
-    });
-    </script>
-    
+
+<script lang="ts" setup>
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import { logoutUser } from '@core/usecases/user/logout';
+import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
+
+const connexionOpened = ref(false);
+
+const subscribeOpened = ref(false);
+
+const contactOpened = ref(false);
+
+const ordoOpened = ref(false);
+
+const addressOpened = ref(false);
+
+const orderOpened = ref(false);
+
+const fileInput = ref(null);
+
+const emit = defineEmits<{
+  (e: 'close'): void;
+}>();
+
+const close = () => {
+  emit('close');
+};
+
+function closeModal() {
+  emit('close');
+}
+
+const openConnexion = () => {
+  connexionOpened.value = true;
+};
+
+const closeConnexion = () => {
+  connexionOpened.value = false;
+};
+
+const openSubscribe = () => {
+  subscribeOpened.value = true;
+};
+
+const closeSubscribe = () => {
+  subscribeOpened.value = false;
+};
+
+const openContact = () => {
+  contactOpened.value = true;
+};
+
+const closeContact = () => {
+  contactOpened.value = false;
+};
+
+const openOrdo = () => {
+  ordoOpened.value = true;
+};
+
+const closeOrdo = () => {
+  ordoOpened.value = false;
+};
+
+const openAddress = () => {
+  addressOpened.value = true;
+};
+
+const openOrder = () => {
+  orderOpened.value = true;
+};
+
+const closeAddress = () => {
+  addressOpened.value = false;
+};
+
+const closeOrder = () => {
+  orderOpened.value = false;
+};
+
+const logout = () => {
+  logoutUser();
+};
+
+const user = computed(() => {
+  return getUserVM();
+});
+</script>

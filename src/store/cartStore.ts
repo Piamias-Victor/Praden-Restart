@@ -27,5 +27,9 @@ export const useCartStore = defineStore('cartStore', {
       if (this.items.indexOf(productUuid) === -1) throw new ProductIsNotInCartError(productUuid);
       this.items = this.items.filter((uuid: UUID) => uuid !== productUuid);
     },
+
+    restoreCart(savedItems: any[]) {
+      this.items = savedItems;
+    },
   },
 });

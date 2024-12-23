@@ -125,10 +125,10 @@ const user = computed(() => {
 
 const validateOrder = () => {
   createOrder(
-    user.value.mail,
+    user.value.email,
     user.value.phone,
     selectedDeliveryMethod.value,
-    user.value.deliveryAddress,
+    user.value.address,
     useOrderGateway(),
     useProductGateway(),
     windowGateway,
