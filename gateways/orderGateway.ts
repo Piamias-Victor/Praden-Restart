@@ -4,7 +4,7 @@ import {
   RealOrderGateway,
   FakeUUIDGenerator,
   RealDateProvider,
-} from '../src/adapters/secondary/order-gateway/RealOrderGateway.ts';
+} from '../src/adapters/secondary/order-gateway/RealOrderGateway';
 import { StripePaymentGateway } from '@adapters/secondary/payment-gateway/stripePaymentGateway';
 
 export const useOrderGateway = () => {
