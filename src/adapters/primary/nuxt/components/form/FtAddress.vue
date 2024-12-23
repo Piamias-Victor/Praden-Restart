@@ -166,12 +166,13 @@ const validateUser = () => {
     firstName: newUser.value.firstName,
     lastName: newUser.value.lastName,
     phone: newUser.value.phone,
-    mail: user.value.mail,
     country: newUser.value.country,
     postal: newUser.value.postal,
     address: newUser.value.address,
     appartement: newUser.value.appartement,
     city: newUser.value.city,
+    mail: user.value.mail,
+    uuid: user.value.uuid,
     photo,
   });
   close();

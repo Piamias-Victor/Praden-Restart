@@ -14,21 +14,34 @@ export type Timestamp = number
 
 export type EmailMessage = SendOrderConfirmationDTO
 
+return {
+  email: user.mail,
+  firstname: user.firstName,
+  lastname: user.lastName,
+  phone: user.phoneNumber,
+  address: {
+    firstname: user.firstName,
+    lastname: user.lastName,
+    address: user.address,
+    city: user.city,
+    zip: user.postal,
+    country: user.country,
+    appartement: user.appartement,
+  },
+};
 export interface User {
-  id: string,
-  mail: string,
-  pwd: string
+  uuid: string,
+  email: string,
   firstName: string
   lastName: string
-  phoneNumber: string
-  photo: string
-  country: string
-  address: string
-  appartement: string
-  postal: string
-  city: string
-  billingAddress?: FullAddress
-  deliveryAddress?: FullAddress
+  address: {
+    address: string,
+    appartement?: string,
+    city: string,
+    firstname: string,
+    lastname: string,
+    zip: string
+  }
 }
 export interface laboratoryFacet {
   name: string

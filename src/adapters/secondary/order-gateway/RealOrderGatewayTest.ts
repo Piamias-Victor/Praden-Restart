@@ -43,21 +43,9 @@ export class RealOrderGateway implements OrderGateway {
       delete orderDTO.deliveryAddress.appartement;
     }
 
-    // Créer la session de paiement Stripe
-    const sessionUrl = await this.paymentGateway.createCheckoutSession(checkoutDTO, deliveryPrice);
+    console.log('createCheckoutDTO', checkoutDTO);
 
-    const order: Order = {
-      uuid,
-      contact: orderDTO.contact,
-      lines,
-      delivery: orderDTO.delivery,
-      deliveryAddress: orderDTO.deliveryAddress,
-      createdAt: now,
-      payment: {
-        sessionUrl, // Assigner l'URL de la session Stripe
-        status: PaymentStatus.WaitingForPayment,
-      },
-    };
+    // Créer la session de paiement Stripe
 
     const { delivery, ...rest } = orderDTO;
     const productGateway = useProductGateway();
@@ -134,12 +122,30 @@ export class RealOrderGateway implements OrderGateway {
 
     // console.log('body', body);
     console.log('0');
+
     const res = await axios.post(
       `https://ecommerce-backend-production.admin-a5f.workers.dev/orders`,
       JSON.stringify(body),
     );
+
+    console.log('res:', res.data);
+    const sessionUrl = await this.paymentGateway.createCheckoutSession(checkoutDTO, deliveryPrice, res.data.uuid);
+
+    const order: Order = {
+      uuid,
+      contact: orderDTO.contact,
+      lines,
+      delivery: orderDTO.delivery,
+      deliveryAddress: orderDTO.deliveryAddress,
+      createdAt: now,
+      payment: {
+        sessionUrl, // Assigner l'URL de la session Stripe
+        status: PaymentStatus.WaitingForPayment,
+      },
+    };
     this.orders.push(order);
     console.log('1');
+
     // return Promise.resolve(this.convertToOrder(res.data));
     return Promise.resolve(order);
   }
@@ -198,14 +204,14 @@ export class RealOrderGateway implements OrderGateway {
 }
 
 export class FakeUUIDGenerator implements UUIDGenerator {
-  private next = '';
+  private next = ''; // Chaîne vide par défaut
 
   generate(): string {
-    return this.next;
+    return this.next; // Retourne la valeur actuelle de `next`
   }
 
   setNext(next: string) {
-    this.next = next;
+    this.next = next; // Permet de définir la valeur suivante
   }
 }
 

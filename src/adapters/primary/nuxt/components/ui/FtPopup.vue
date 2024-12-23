@@ -93,9 +93,9 @@ const loadColissimoWidget = async () => {
     token.value.then((token) => {
       const url_serveur = 'https://ws.colissimo.fr';
       const ceCountry = 'FR';
-      const ceAddress = user.value.address;
-      const ceZipCode = user.value.postal;
-      const ceTown = user.value.city;
+      const ceAddress = user.value.address.address;
+      const ceZipCode = user.value.address.zip;
+      const ceTown = user.value.address.city;
       const deliveryMethodsStore = useDeliveryStore();
 
       window.maMethodeDeCallBack = function (point) {
@@ -107,16 +107,16 @@ const loadColissimoWidget = async () => {
         user.value.billingAddress = {
           firstname: user.value.firstName,
           lastname: user.value.lastName,
-          country: user.value.country,
-          address: user.value.address,
-          city: user.value.city,
-          zip: user.value.postal,
+          country: user.value.address.country,
+          address: user.value.address.address,
+          city: user.value.address.city,
+          zip: user.value.address.zip,
         };
 
         user.value.deliveryAddress = {
           firstname: user.value.firstName,
           lastname: user.value.lastName,
-          country: user.value.country,
+          country: user.value.address.country,
           address: point.adresse1,
           city: point.localite,
           zip: point.codePostal,

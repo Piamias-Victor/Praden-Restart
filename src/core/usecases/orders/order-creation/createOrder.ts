@@ -55,7 +55,6 @@ export const createOrder = async (
     const { items } = getProductsInCart();
 
     // Créer les lignes de commande
-    console.log('items:', JSON.stringify(items, null, 2));
     const lines: Array<CreateOrderLineDTO> = await Promise.all(
       Object.keys(items).map(async (key) => {
         const item = items[key];
@@ -102,8 +101,10 @@ export const createOrder = async (
       },
     };
     // Créer la commande via OrderGateway
-    const order = await orderGateway.create(orderDTO, deliveryPrice);
+    console.log('ici');
 
+    const order = await orderGateway.create(orderDTO, deliveryPrice);
+    // console.log('order:', JSON.stringify(order, null, 2));
     // Ajouter la commande au store
     const orderStore = useOrderStore();
     orderStore.add(order);
