@@ -195,3 +195,8 @@ export const getRootCategoryUuid = (uuid: string): string | null => {
 
   return null; // Si aucune catégorie racine n'est trouvée
 };
+
+export const getSimpleCategoryVM = () => {
+  const categoryStore = useCategoryStore();
+  return categoryStore.itemsSet;
+}
