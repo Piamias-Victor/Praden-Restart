@@ -9,6 +9,7 @@ TransitionRoot(appear='' :show='true' as='template')
                     DialogPanel.flex.h-full.flex-col.overflow-y-scroll.bg-background.shadow-xl.animate-slideright
                         div.w-full.bg-main.text-center.p-2.text-white.font-semibold.flex.items-center.justify-center.gap-2
                             span Livraison offerte pour 69 € d'achat
+                        pre {{categoriesVM}}
                         div.py-4.px-4.flex.items-center.gap-4
                             div.bg-white.rounded-full.px-2.grow.flex.items-center.gap-4.bg-contrast
                                 icon.icon-md(name="lucide:search")
@@ -55,18 +56,15 @@ TransitionRoot(appear='' :show='true' as='template')
                             div.px-4(
                                 v-if='filteredProducts.length === 0'
                                 @click="clicked").flex.flex-col.items-center.justify-center.gap-4.w-full
-                                nuxt-link.flex.flex-col.items-center.bg-main.text-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]' href='https://2f440074.praden-restart.pages.dev/categories/03c3ddc9-7616-48df-9bf7-3290da61b23b?Promotions')
-                                    span.font-semibold.w-full.text-left.px-4 DES PROMOTIONS ALLANT JUSQU'À -20%
-                                nuxt-link.border-2.border-main.flex.flex-col.items-center.justify-center.bg-cover.bg-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(href='https://2f440074.praden-restart.pages.dev/categories/7480b66f-d589-42de-a122-3cff0590dd40?Dermocosm%C3%A9tique' class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/kMtWv1gV/new.png')")
-                                    span.font-semibold.w-full.text-left.px-4 DERMOCOSMETIQUE
-                                nuxt-link.border-2.border-main.flex.flex-col.items-center.justify-center.bg-cover.bg-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(href='https://2f440074.praden-restart.pages.dev/categories/19730921-246e-4eec-9a3b-17b49e416c82?B%C3%A9b%C3%A9' class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/vDFr59VS/1.png')")
-                                    span.font-semibold.w-full.text-left.px-4 MAMAN & BEBE
-                                nuxt-link.border-2.border-main.flex.flex-col.items-center.justify-center.bg-cover.bg-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(href='https://2f440074.praden-restart.pages.dev/categories/aadb1ea0-3961-46c8-8005-172779c74756?Bien%20%C3%AAtre' class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/1zkwkwWR/56.png')")
-                                    span.font-semibold.w-full.text-left.px-4 BIEN ETRE
-                                nuxt-link.border-2.border-main.flex.flex-col.items-center.justify-center.bg-cover.bg-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(href='https://2f440074.praden-restart.pages.dev/categories/9869193d-f291-4a74-9d29-b09429b7f81d?Nature' class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/5yBnS04L/009.png')")
-                                    span.font-semibold.w-full.text-left.px-4 NATURE & SANTE
-                                nuxt-link.border-2.border-main.flex.flex-col.items-center.justify-center.bg-cover.bg-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(href='https://2f440074.praden-restart.pages.dev/categories/0f4946ae-2e5f-46e8-86a7-fb6d3ae8d75f?V%C3%A9t%C3%A9rinaire' class='h-[20vw] md:h-[8vw]' style="background-image: url('https://i.postimg.cc/Bvb7f4pf/10.png')")
-                                    span.font-semibold.w-full.text-left.px-4 VETERINAIRE
+                                div(v-for="category in rootCategoriesVM.items" :key="category.uuid" class="relative group bg-white shadow-lg rounded-xl overflow-hidden cursor-pointer transform transition-transform hover:scale-105 w-full px-[100px]" @click="goToCat(category.uuid)")
+                                  div.bg-cover.bg-center.absolute.inset-0.opacity-50.transition-opacity(class='group-hover:opacity-75')
+                                  div.relative.p-6
+                                    span.text-lg.font-semibold.text-gray-800.transition-colors(class='group-hover:text-main') {{ category.name }}
+                                
+                                //- nuxt-link.flex.flex-col.items-center.bg-main.text-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]' href='https://2f440074.praden-restart.pages.dev/categories/03c3ddc9-7616-48df-9bf7-3290da61b23b?Promotions')
+                                //-     span.font-semibold.w-full.text-left.px-4 DES PROMOTIONS ALLANT JUSQU'À -20%
+                                //- button(v-for='category in rootCategoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid)").border-2.border-main.flex.flex-col.items-center.justify-center.bg-cover.bg-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl
+                                //-     span.font-semibold.w-full.text-left.px-4 {{ category.name }}
                                 div(class='min-h-[13vh]').bg-main
                             ft-footer
                             div(class='min-h-[13vh]').bg-main
@@ -88,6 +86,10 @@ import { getLaboratory, getLaboratoryByName } from '@adapters/primary/viewModels
 const props = defineProps<{
   categoriesVM: any;
 }>();
+
+const rootCategoriesVM = computed(() => {
+  return getRootCategoriesVM();
+});
 
 const emit = defineEmits<{
   (e: 'close'): void;
@@ -201,6 +203,10 @@ const searchChanged = (e: any) => {
     searchProduct(query.value, searchGateway());
   }, 500);
 };
+
+const searchCategoryVM = computed(() => {
+  return getSearchCategoriesVM()
+})
 
 const searchVM = computed(() => {
   return getSearchResultVM(sortType.value);

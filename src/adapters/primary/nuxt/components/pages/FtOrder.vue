@@ -23,25 +23,45 @@
                       icon.icon-sm(name="ph:x-bold")
                 div.mt-4
                 ul.space-y-4
-                  li(v-for='order in orders' :key="order.uuid" class="p-4 border rounded-lg shadow-sm bg-white hover:bg-gray-50 transition-colors duration-200 cursor-pointer" @click="toggleOrder(order.uuid)")
+                  li(v-for='order in sortedOrders' :key="order.uuid" class="p-4 border rounded-lg shadow-sm bg-white hover:bg-gray-50 transition-colors duration-200 cursor-pointer" @click="toggleOrder(order.uuid)")
                     div.flex.justify-between
                       div.flex.flex-col.items-start.w-full.gap-2
                         div.flex.items-center.gap-2.w-full.justify-between
                           p.text-sm.text-gray-600 Date: {{ formatDate(order.createdAt) }}
-                          p.text-sm.text-gray-600.font-semibold Montant: {{ formatTotal(order.lines) }}€
+                          p.text-sm.text-gray-600.font-semibold Montant: {{ calculateOrderTotalWithDelivery(order.lines, order.delivery.price) }}€
                         div.flex.items-center.gap-2.w-full.justify-between
                           ft-button.text-xs(:class="getStatusClass(order.payment.status)") {{ getStatusText(order.payment.status) }}
                           ft-button.button-solid
                             icon.icon-sm.text-white.hidden(class='sm:block' name="mdi:chevron-down")
-                    // Section conditionnelle pour afficher les détails des produits
-                    div.mt-4(v-if="isOpen(order.uuid)")
-                      h4.text-sm.font-semibold.mb-2
-                      ul.ml-4.flex.flex-col.items-start.justify-start.text-left.gap-4
+                    div.mt-4(v-if="isOpen(order.uuid)").text-left
+                      h4.text-sm.font-semibold.mb-2 Produits
+                      ul.flex.flex-col.items-start.justify-start.text-left.gap-4
                         li.flex.flex-col.gap-2(v-for='line in order.lines' :key="line.ean13" class="text-xs")
-                          span.font-semibold {{ line.name }}
                           div.flex.items-center.gap-2
-                            ft-button.button-solid(class='w-[75px]') {{ line.expectedQuantity }}
-                            ft-button.button-solid(class='w-[75px]') {{ (line.unitAmount / 100).toFixed(2) }}€
+                            img.w-12.h-12.object-cover(:src="line.miniature" :alt="line.name")
+                            span.font-semibold {{ line.name }}
+                          div.flex.items-center.gap-4
+                            span Quantité: {{ line.expectedQuantity }}
+                            span Prix: {{ (line.unitAmount / 100).toFixed(2) }}€
+                      div.mt-4
+                        h4.text-sm.font-semibold.mb-2 Totaux
+                        p.text-sm.text-gray-600 Quantité Totale: {{ calculateTotalQuantity(order.lines) }}
+                        p.text-sm.text-gray-600 Prix Total: {{ calculateOrderTotalWithDelivery(order.lines, order.delivery.price) }}€
+                      div.mt-4
+                        h4.text-sm.font-semibold.mb-2 Adresse de Livraison
+                        p.text-sm.text-gray-600 {{ order.deliveryAddress.firstname }} {{ order.deliveryAddress.lastname }}
+                        p.text-sm.text-gray-600 {{ order.deliveryAddress.address }}
+                        p.text-sm.text-gray-600 {{ order.deliveryAddress.appartement ? `Appartement: ${order.deliveryAddress.appartement}` : '' }}
+                        p.text-sm.text-gray-600 {{ order.deliveryAddress.zip }} {{ order.deliveryAddress.city }}, {{ order.deliveryAddress.country }}
+                      div.mt-4
+                        h4.text-sm.font-semibold.mb-2 Contact
+                        p.text-sm.text-gray-600 Email: {{ order.contact.email }}
+                        p.text-sm.text-gray-600 Téléphone: {{ order.contact.phone }}
+                      div.mt-4
+                        h4.text-sm.font-semibold.mb-2 Mode de Livraison
+                        p.text-sm.text-gray-600 Méthode: {{ order.delivery.method.name }}
+                        p.text-sm.text-gray-600 Description: {{ order.delivery.method.description }}
+                        p.text-sm.text-gray-600 Prix: {{ (order.delivery.price / 100).toFixed(2) }}€
                     div(v-if="isOpen(order.uuid)").h-4
                     ft-button(v-if="isOpen(order.uuid)").button-solid.w-full Voir ma facture
               div.w-full.justify-end.flex-shrink-0.p-4
@@ -86,6 +106,11 @@ const orders = computed(() => {
   } else {
     return [];
   }
+});
+
+// Trier les commandes par date de création (les plus récentes en premier)
+const sortedOrders = computed(() => {
+  return [...orders.value].sort((a, b) => b.createdAt - a.createdAt);
 });
 
 // Gestion de l'état d'expansion des commandes
@@ -136,5 +161,16 @@ const formatDate = (timestamp: number) => {
 const formatTotal = (lines: any[]) => {
   const total = lines.reduce((acc, line) => acc + (line.unitAmount || 0) * (line.expectedQuantity || 1), 0);
   return (total / 100).toFixed(2); // Convertir en euros et formater
+};
+
+// Méthode pour calculer le total des quantités
+const calculateTotalQuantity = (lines: any[]) => {
+  return lines.reduce((acc, line) => acc + (line.expectedQuantity || 0), 0);
+};
+
+// Méthode pour calculer le prix total de la commande (incluant la livraison)
+const calculateOrderTotalWithDelivery = (lines: any[], deliveryPrice: number) => {
+  const total = lines.reduce((acc, line) => acc + (line.unitAmount || 0) * (line.expectedQuantity || 1), 0);
+  return ((total + deliveryPrice) / 100).toFixed(2); // Ajouter la livraison, convertir en euros et formater
 };
 </script>

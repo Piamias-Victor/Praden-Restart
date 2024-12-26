@@ -32,6 +32,13 @@
                                     icon.icon-md(name="bx:message")
                                     span Nous contacter
                                   nuxt-link.w-full(
+                                    href="https://www.maiia.com/pharmacie/30100-ales/pharmacie-agnes-praden"
+                                    target="_blank"
+                                  )
+                                    ft-button.button-solid.w-full
+                                      icon.icon-md(name="mdi:paper-outline")
+                                      span Envoyer une ordo
+                                  nuxt-link.w-full(
                                     href="http://search.google.com/local/writereview?placeid=ChIJuZQjzvRCtBIRfsJukIkyXLY"
                                     target="_blank"
                                   )
