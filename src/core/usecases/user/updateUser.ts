@@ -35,9 +35,7 @@ export const updateUser = async (user: User) => {
   userStore.update(user);
 
   // Préparer le corps de la requête pour l'API
-  console.log('user', user);
   const requestBody = mapUserToEditProfileSchema(user);
-  console.log('requestBody', requestBody);
 
   try {
     // Vérifier et rafraîchir le token si nécessaire
@@ -45,7 +43,6 @@ export const updateUser = async (user: User) => {
       try {
         const refreshed = await $keycloak.updateToken(30); // Rafraîchit si le token expire dans les 30 secondes
         if (refreshed) {
-          console.log('Token Keycloak rafraîchi avec succès.');
         }
       } catch (error) {
         console.error('Échec du rafraîchissement du token Keycloak', error);
@@ -69,8 +66,6 @@ export const updateUser = async (user: User) => {
       },
     );
 
-    console.log('Profil mis à jour avec succès :', response.data);
-
     // Mettre à jour le store utilisateur avec les nouvelles informations
   } catch (error) {
     console.error('Erreur lors de la mise à jour du profil utilisateur :', error);
@@ -79,7 +74,6 @@ export const updateUser = async (user: User) => {
 };
 
 export const recoverUser = (user: any) => {
-  console.log("Récupération de l'utilisateur :", user);
   const userStore = useUserStore();
   userStore.update(user);
 };

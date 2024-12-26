@@ -54,7 +54,11 @@ export class StripePaymentGateway implements PaymentGateway {
     });
   }
 
-  async createCheckoutSession(createCheckoutDTO: CreateCheckoutDTO, deliveryPrice: string, orderUuid: string): Promise<string> {
+  async createCheckoutSession(
+    createCheckoutDTO: CreateCheckoutDTO,
+    deliveryPrice: string,
+    orderUuid: string,
+  ): Promise<string> {
     const currency = 'eur';
     const lineItems = createCheckoutDTO.lines.map((line) => {
       return {

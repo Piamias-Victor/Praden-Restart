@@ -10,7 +10,6 @@ export const getToken = async (): Promise<string | null> => {
         return null
       }
       if (keycloak.isTokenExpired()) {
-        console.log('Token expiré, rafraîchissement')
         await keycloak.updateToken(30)
       }
       return keycloak.token || null

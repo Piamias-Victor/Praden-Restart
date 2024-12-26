@@ -15,7 +15,6 @@ const emit = defineEmits<{
 }>();
 
 const close = () => {
-  console.log('ca doit fermer ici aussi en 2');
   emit('close');
 };
 

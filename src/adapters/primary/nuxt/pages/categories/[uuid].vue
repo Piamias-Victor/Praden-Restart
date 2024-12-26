@@ -105,7 +105,6 @@ const sortBy = (st: number) => {
   } else {
     sortType.value = st;
   }
-  console.log('Nouveau sortType:', sortType.value);
   dropdownOpen.value = false;
 };
 
@@ -120,7 +119,6 @@ const searchLaboratory = (labo: string | null) => {
 };
 
 const filteredProducts = computed(() => {
-  console.log('laboratoryFilter.value', laboratoryFilter.value);
   getLaboratoryByName(laboratoryFilter.value, '', searchGateway());
   let res = searchVM.value.items || [];
   if (priceFilter.value) {
@@ -146,7 +144,6 @@ const categoriesVM = computed(() => getChildCategoriesVM(categoryUuid));
 const categoryVM = computed(() => getCategoryVM(sortType.value));
 
 const searchVM = computed(() => {
-  console.log('searchVM recalculé avec sortType:', sortType.value);
   const result = getSearchResultVM(sortType.value);
   return { ...result }; // Force une réactivité
 });

@@ -7,10 +7,8 @@ import { UUID } from 'crypto';
 
 export const getLaboratory = async (uuid: UUID, laboratoryGateway: LaboratoryGateway, searchGateway: SearchGateway) => {
   const laboratoryStore = useLaboratoryStore();
-  console.log('uuid', uuid);
   const productsWithFacets = await searchGateway.searchProduct(undefined, [uuid]);
   const facets = await searchGateway.searchFacet(undefined, [uuid]);
-  console.log('productsWithFacets', productsWithFacets);
   const searchStore = useSearchStore();
   searchStore.setSearchResult(productsWithFacets);
   searchStore.setFacets(facets);
@@ -18,7 +16,6 @@ export const getLaboratory = async (uuid: UUID, laboratoryGateway: LaboratoryGat
 
 export const getLaboratoryByName = async (labo: Array<string>, query: string, searchGateway: SearchGateway) => {
   const laboratoryStore = useLaboratoryStore();
-  console.log('test');
 
   // Récupérer les UUID des laboratoires dans le tableau 'labo'
   const laboratoryUUIDs = labo
@@ -35,7 +32,6 @@ export const getLaboratoryByName = async (labo: Array<string>, query: string, se
 
       // Mettre à jour le store avec les résultats obtenus
       const searchStore = useSearchStore();
-      console.log('Products with facets', productsWithFacets);
       searchStore.setSearchResult(productsWithFacets);
     } catch (error) {
       console.error('Erreur lors de la récupération des produits pour les laboratoires', error);

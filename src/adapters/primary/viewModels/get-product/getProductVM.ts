@@ -76,7 +76,6 @@ export const getProductVM = (): ProductDetailVM => {
   const formatter = priceFormatter('fr-FR', 'EUR');
   const details = getDetails(product);
   const promotion = getPromotionInProductVM(product);
-  console.log('pro', product);
   const res: ProductDetailVM = {
     uuid: product?.uuid || '',
     name: product?.name || '',

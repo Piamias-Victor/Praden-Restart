@@ -49,8 +49,6 @@ const loadColissimoWidget = async () => {
 
       // Définir la fonction callback dans le scope global
       window.maMethodeDeCallBack = function (point) {
-        console.log('Call back frame');
-        console.log(point);
         jQuery('#widget_colissimo_map').frameColissimoClose();
       };
 

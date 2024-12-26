@@ -45,12 +45,10 @@ import { getSearchResultVMFirstSix } from '@adapters/primary/viewModels/get-sear
 definePageMeta({ layout: 'main' });
 
 onMounted(async () => {
-  console.log('ici');
   listLaboratories(laboratoryGateway());
   getLaboratory('d38863a4-8396-4979-8e37-88df1d4c3068', laboratoryGateway(), searchGateway());
   try {
     laboratoryInfo.value = await getLaboratoryInfo(laboratoryGateway(), 'd38863a4-8396-4979-8e37-88df1d4c3068');
-    console.log('ici');
   } catch (error) {
     console.error('Erreur lors de la récupération des infos laboratoire :', error);
   }

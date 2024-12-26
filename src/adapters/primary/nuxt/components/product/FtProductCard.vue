@@ -62,7 +62,6 @@ export interface LikeQuantityVM {
 }
 
 const goToProduct = (path: string) => {
-  console.log('ca doit fermer');
   router.push(path);
   close();
 };
