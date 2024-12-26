@@ -62,9 +62,12 @@
                         p.text-sm.text-gray-600 Méthode: {{ order.delivery.method.name }}
                         p.text-sm.text-gray-600 Description: {{ order.delivery.method.description }}
                         p.text-sm.text-gray-600 Prix: {{ (order.delivery.price / 100).toFixed(2) }}€
-                    div(v-if="isOpen(order.uuid)").h-4
-                    ft-button(v-if="isOpen(order.uuid)").button-solid.w-full Voir ma facture
-              div.w-full.justify-end.flex-shrink-0.p-4
+                    div(v-if="isOpen(order.uuid)").mt-2
+                        a(v-if="order && order.delivery && order.delivery.trackingNumber" 
+                          :href="`https://laposte.fr/outils/suivre-vos-envois?code=${order.delivery.trackingNumber}`" 
+                          target="_blank" 
+                          rel="noopener noreferrer")
+                          ft-button.button-solid.w-full Suivre mon colis
                 ft-button.button-solid.text-xl.w-full(@click='close')
                   span Fermer
 </template>
@@ -107,6 +110,8 @@ const orders = computed(() => {
     return [];
   }
 });
+
+console.log('orders', orders)
 
 // Trier les commandes par date de création (les plus récentes en premier)
 const sortedOrders = computed(() => {
