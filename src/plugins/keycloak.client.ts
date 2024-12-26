@@ -39,7 +39,7 @@ export default defineNuxtPlugin((nuxtApp) => {
           });
           recoverUser(userProfile.data);
         } catch (error) {
-          console.error('Erreur lors de la récupération du profil utilisateur1 :', error);
+          console.error('Erreur lors de la récupération du profil utilisateur :', error);
         }
 
         listMyOrder(myOrderGateway(), accessToken);
