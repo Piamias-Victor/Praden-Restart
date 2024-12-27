@@ -40,6 +40,18 @@
       C'est grâce au respect de ces différents engagements que la pharmacie Agnès Praden est aujourd'hui certifiée ISO
       9001v2008 /QMS-Pharma 2010.
     </p>
+    <div class="h-10"/>
+    <div class="flex items-center gap-20 justify-center">
+      <a class="w-[10vw]" href="https://www.ars.sante.fr/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/ARS_logo.svg/1200px-ARS_logo.svg.png">
+      </a>
+      <a class="w-[10vw]" href="https://www.ordre.pharmacien.fr/je-suis/patient-grand-public/rechercher-un-site-de-vente-en-ligne-autorise-a-vendre-des-medicaments?site=" target="_blank">
+        <img src="https://www.adop.help/wp-content/uploads/2022/12/logo-ordre-national-des-pharmaciens.png">
+      </a>
+      <a class="w-[10vw]" href="https://ansm.sante.fr/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/ANSM_logo.svg/1280px-ANSM_logo.svg.png">
+      </a>
+    </div>
     <ft-navigation />
   </section>
 </template>

@@ -90,7 +90,7 @@ export class StripePaymentGateway implements PaymentGateway {
       mode: 'payment',
       line_items: lineItems,
       success_url: 'http://localhost:3000/checkout/success', // Mettez à jour pour la production
-      cancel_url: 'http://localhost:3000/checkout/success', // Mettez à jour pour la production
+      cancel_url: 'http://localhost:3000/checkout/error', // Mettez à jour pour la production
       payment_intent_data: {
         metadata: {
           orderUuid: orderUuid,
