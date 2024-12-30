@@ -11,7 +11,6 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
         div.flow-root
             ul.-my-6.divide-y.divide-gray12.text-left
                 div(v-for='item in like.items' :key="item.uuid")
-                  pre {{item.medecine}}
                   ft-product-cart(:item="item")
 div.mt-4
 span.px-4.text-contrast.font-semibold Sauvegarder vos articles favoris pour les retrouver en un clic
