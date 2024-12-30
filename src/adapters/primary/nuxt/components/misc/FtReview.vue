@@ -12,7 +12,7 @@ section.px-2.hidden(class='sm:block')
           icon.icon-md.text-main(name="ph:star-fill")
           icon.icon-md.text-main(name="ph:star-fill")
           icon.icon-md.text-main(name="ph:star-fill")
-        span Envoie super rapide, qualité au top ! Je recommande
+        span Colis expédié le jour de la commande,recu très rapidement ! Vraiment très bien emballé ! Dans du papier bulle donc produit liquide ne peuvent pas se casser ! Et prix très intéressants !
     div.bg-white.rounded-xl.p-4.w-full.flex.items-center.gap-4(class='transform transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-xl')
       img.flex.items-center.justify-center.rounded-full.bg-contrast.border.border-main.border-2(class="w-[50px]" src="https://i.postimg.cc/kGYwjTyM/woman.png")
       div.flex.flex-col.gap-2
@@ -21,8 +21,8 @@ section.px-2.hidden(class='sm:block')
           icon.icon-md.text-main(name="ph:star-fill")
           icon.icon-md.text-main(name="ph:star-fill")
           icon.icon-md.text-main(name="ph:star-fill")
-          icon.icon-md.text-white(name="ph:star-fill")
-        span Service client très réactif et à l'écoute. Je recommande vivement !
+          icon.icon-md.text-main(name="ph:star-fill")
+        span Ma commande internet s'est très bien passée, livraison rapide, prix attractifs, je recommanderais 🤗
     div.bg-white.rounded-xl.p-4.w-full.flex.items-center.gap-4(class='transform transition-transform duration-300 hover:scale-105 shadow-lg hover:shadow-xl')
       img.flex.items-center.justify-center.rounded-full.bg-contrast.border.border-main.border-2(class="w-[50px] h-[50px]" src="https://i.postimg.cc/nr3SyFnJ/profile.png")
       div.flex.flex-col.gap-2
@@ -32,5 +32,5 @@ section.px-2.hidden(class='sm:block')
           icon.icon-md.text-main(name="ph:star-fill")
           icon.icon-md.text-main(name="ph:star-fill")
           icon.icon-md.text-main(name="ph:star-fill")
-        span Livraison rapide et produits conformes à la description. Très satisfait !
+        span La livraison est toujours très rapide, je reçois en général 2 jours après ma commande. Et les prix défient toute concurrence. Je commande environ une fois par mois pour le lait infantile, je ne suis jamais déçue !
 </template>
