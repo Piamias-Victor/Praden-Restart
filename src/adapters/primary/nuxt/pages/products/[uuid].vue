@@ -125,25 +125,22 @@ const searchVM = computed(() => {
   return res.items;
 });
 
+const laboratoriesVM = computed(() => {
+  return getSearchLaboratoriesVM(query.value);
+});
+
+function removeAccents(str: string): string {
+  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
 // Utilisation de watchEffect pour détecter les changements de laboratory
 watchEffect(async () => {
   const laboratory = productVM.value?.laboratory;
+  console.log('laboratory', laboratory)
   if (laboratory) {
     try {
-      const laboratoryName = laboratory.split(' ')[0].toLowerCase();
-
-      const result = await searchProduct(laboratoryName, searchGateway());
-      // Mettre à jour ici searchVM ou un autre état si nécessaire
-    } catch (error) {}
-  } else {
-  }
-});
-
-watchEffect(async () => {
-  const laboratory = productVM.value?.laboratory;
-  if (laboratory) {
-    try {
-      const laboratoryName = laboratory.toLowerCase();
+      const laboratoryName = removeAccents(laboratory.split(' ')[0].toLowerCase());
+      console.log('laboratoryName', laboratoryName)
       const result = await searchProduct(laboratoryName, searchGateway());
       // Mettre à jour ici searchVM ou un autre état si nécessaire
     } catch (error) {}

@@ -23,6 +23,10 @@ const emit = defineEmits<{
   (e: 'move-stepper'): void;
 }>();
 
+const user = computed(() => {
+  return getUserVM();
+});
+
 const router = useRouter();
 
 const stepper = ref(0);
