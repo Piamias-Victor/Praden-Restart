@@ -56,7 +56,7 @@ const closeCart = () => {
 };
 
 const closeProfil = () => {
-  profilOpened.value = false;
+  cartOpened.value = false;
 };
 
 const openLike = () => {
