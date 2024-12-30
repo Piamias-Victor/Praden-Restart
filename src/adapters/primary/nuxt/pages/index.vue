@@ -1,7 +1,7 @@
 <template lang="pug">
     div.flex.flex-col.gap-10
       ft-categories(:categoriesVM="categoriesVM")
-      ft-slider
+      ft-slider(:bannerVM="bannerVM")
       ft-product-list(:products="productInPromotion.products") La sélection du pharmacien
       ft-product-list(:products="productInPromotion.products") Promotion
       ft-brand-list
@@ -20,6 +20,7 @@ import deliveryGateway from '../../../../../gateways/deliveryGateway';
 import { categoryGateway } from '../../../../../gateways/categoryGateway';
 import { myOrderGateway } from '../../../../../gateways/myOrderGateway';
 import { laboratoryGateway } from '../../../../../gateways/laboratoryGateway';
+import { bannerGateway } from '../../../../../gateways/bannerGateway';
 import { useProductGateway } from '../../../../../gateways/productGateway';
 import { listCategories } from '@core/usecases/list-categories/listCategories';
 import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
@@ -27,6 +28,8 @@ import { listPromotions } from '@core/usecases/list-promotions/listPromotions';
 import { getProductInPromotionVM } from '@adapters/primary/viewModels/get-product/getProductVM';
 import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
 import { listMyOrder } from '@core/usecases/list-my-orders/listMyOrders';
+import { listBanner } from '@core/usecases/list-banner/listBanner';
+import { getBannerVM } from '@adapters/primary/viewModels/get-banner/getBannerVM';
 
 definePageMeta({ layout: 'main' });
 
@@ -35,11 +38,14 @@ onMounted(() => {
   listCategories(categoryGateway());
   listLaboratories(laboratoryGateway());
   listPromotions(useProductGateway());
+  listBanner(bannerGateway())
 });
 
 const categoriesVM = computed(() => {
   return getRootCategoriesVM();
 });
+
+const bannerVM = getBannerVM();
 
 const productInPromotion = computed(() => {
   return getProductInPromotionVM();
