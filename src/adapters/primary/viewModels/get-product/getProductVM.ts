@@ -7,6 +7,8 @@ import { getPromotionVM, PromotionVM } from '../get-category/getCategoryVM';
 import { ProductGateway } from '@core/gateways/productGateway';
 import { getProduct } from '@core/usecases/get-product/getProduct';
 
+const DEFAULT_IMAGE_URL = 'https://i.postimg.cc/GpcFkW2C/Whats-App-Image-2024-12-30-at-10-52-33.jpg';
+
 export interface Image {
   src: string;
   alt: string;
@@ -77,12 +79,16 @@ export const getProductVM = (): ProductDetailVM => {
   const formatter = priceFormatter('fr-FR', 'EUR');
   const details = getDetails(product);
   const promotion = getPromotionInProductVM(product);
+
+  const images: Array<Image> =
+    product && product.images.length > 0 ? product.images.map((url) => url) : [DEFAULT_IMAGE_URL];
+
   const res: ProductDetailVM = {
     uuid: product?.uuid || '',
     name: product?.name || '',
     laboratory: product?.laboratory || '',
     price: product ? formatter.format(product.price / 100) : '',
-    images: product ? [{ src: product.images, alt: product?.name }] : [],
+    images: images,
     description: product?.description || '',
     rating: product?.rating,
     availableStock: product?.availableStock,
@@ -99,11 +105,12 @@ export const getProductInPromotionVM = () => {
   return {
     products: productInPromotion.slice(0, 20).map((p) => {
       const promotion = getPromotionVM(p);
+      const images: Array<Image> = p && p.images.length > 0 ? p.images.map((url) => url) : [DEFAULT_IMAGE_URL];
       const res = {
         uuid: p.uuid,
         name: p.name,
         laboratory: p.laboratory,
-        images: p.images,
+        images: images,
         price: formatter.format(p.priceWithTax / 100),
         availableStock: p.availableStock,
         href: `/products/${p.uuid}`,
@@ -121,12 +128,15 @@ export const getSearchProductVM = () => {
   const product = searchStore.products;
   const formatter = priceFormatter('fr-FR', 'EUR');
   const details = getDetails(product);
+  console.log('product', product)
+  const images: Array<Image> =
+    product && product.images.length > 0 ? product.images.map((url) => url) : [DEFAULT_IMAGE_URL];
   const res = {
     uuid: product?.uuid || '',
     name: product?.name || '',
     laboratory: product?.laboratory || '',
     price: product ? formatter.format(product.priceWithTaxe / 100) : '',
-    images: product ? [{ src: product.images, alt: product?.name }] : [],
+    images: images,
     availableStock: product.availableStock,
   };
   return res;

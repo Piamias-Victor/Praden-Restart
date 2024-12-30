@@ -9,8 +9,10 @@ tab-group.flex.flex-col(as='div').bg-white.rounded-xl.p-2
     //-         class="hover:bg-gray-50 focus:outline-none focus:ring ring-colored ring-opacity-50 ring-offset-4"
     //-         )
     tab-panels(class='max-h-[45vh]')
-        tab-panel.flex.justify-center(class='h-[45vh]' v-for='(image, index) in images' :key='index')
-            img.object-cover.object-center(class='' :src='image.src' :alt='image.alt')
+        tab-panel.flex.justify-center(v-if="images && images.length > 0" class='h-[45vh]' v-for='(image, index) in images' :key='index')
+            img.object-cover.object-center(class='' :src='image' alt='produit')
+        tab-panel.flex.justify-center(v-else)
+            img.object-cover.object-center(class='' src='https://i.postimg.cc/GpcFkW2C/Whats-App-Image-2024-12-30-at-10-52-33.jpg' alt='image')
     section.mb-2
         div.flex.justify-center.p-1.gap-1
             div.h-1.w-5.bg-black.rounded-full
