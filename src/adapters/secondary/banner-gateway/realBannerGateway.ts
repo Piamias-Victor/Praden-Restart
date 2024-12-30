@@ -1,6 +1,5 @@
-import axios from "axios";
-import { BannerGateway } from "src/core/gateways/bannerGateway";
-
+import axios from 'axios';
+import { BannerGateway } from 'src/core/gateways/bannerGateway';
 
 export class RealBannerGateway implements BannerGateway {
   private readonly baseUrl: string;

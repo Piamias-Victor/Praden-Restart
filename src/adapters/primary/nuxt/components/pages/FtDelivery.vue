@@ -99,7 +99,7 @@ const deliveryMethodSelected = (method: any) => {
 };
 
 const hasMedicineReference = computed(() => {
-  return Object.values(cart.value.items).some((item: any) => item.uuid === '505209a2-7acb-4891-b933-e084d786d7ea ');
+  return Object.values(cart.value.items).some((item: any) => item.medecine === true);
 });
 
 const cart = computed(() => {

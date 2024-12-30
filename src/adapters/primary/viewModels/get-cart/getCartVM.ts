@@ -91,7 +91,7 @@ export const getProductsInCart = (): ProductsInCart => {
         total,
         totalWithPromotion,
         totalWeight,
-        totalWithDelivery: getTotalWithDelivery(total, totalWeight),
+        // totalWithDelivery: getTotalWithDelivery(total, totalWeight, ),
         freeDelivery: getFreeDelivery(total),
       };
     },
@@ -112,9 +112,12 @@ export const getProductsInCart = (): ProductsInCart => {
  * @param weight - Le poids total des articles.
  * @returns Le prix de livraison applicable.
  */
-export const getDeliveryPrice = (method: DeliveryMethod, weight: number, total: number): number => {
+export const getDeliveryPrice = (method: DeliveryMethod, weight: number, total: number, medecine: boolean): number => {
   // Trouve la tranche de poids appropriée
-  if (method.uuid === '505209a2-7acb-4891-b933-e084d786d7ea' && total > 6900 && weight < 5000) {
+
+  console.log('medecine', medecine);
+
+  if (method.uuid === '505209a2-7acb-4891-b933-e084d786d7ea' && total > 6900 && weight < 5000 && medecine === false) {
     return 0; // Livraison gratuite
   }
 
@@ -130,7 +133,7 @@ export const getDeliveryPrice = (method: DeliveryMethod, weight: number, total: 
  * @param totalWeight - Le poids total des articles.
  * @returns Le total incluant la livraison.
  */
-export const getTotalWithDelivery = (total: number, totalWeight: number): number => {
+export const getTotalWithDelivery = (total: number, totalWeight: number, medecine: boolean): number => {
   const deliveryStore = useDeliveryStore();
   const selectedMethod = deliveryStore.selected;
 
@@ -147,7 +150,7 @@ export const getTotalWithDelivery = (total: number, totalWeight: number): number
   // }
 
   // Calcule le prix de livraison basé sur le poids
-  const deliveryPrice = getDeliveryPrice(selectedMethod, totalWeight, total);
+  const deliveryPrice = getDeliveryPrice(selectedMethod, totalWeight, total, medecine);
 
   // Retourne le total incluant le prix de livraison
   return total + deliveryPrice;
@@ -169,7 +172,6 @@ export const createCartItemsVMFromCartItems = (items: HashTable<CartItem>): Hash
       name: item.name,
       laboratory: item.laboratory,
       totalPrice: formatter.format(item.totalPrice / 100),
-      // totalPriceWithDelivery: formatter.format(getTotalWithDelivery(item.totalPrice, 900) / 100),
       freeDelivery: formatter.format(getFreeDelivery(item.totalPrice) / 100),
       quantity: item.quantity,
       img: item.img,
@@ -188,16 +190,43 @@ export const getCartVM = (): CartVM => {
   const deliveryStore = useDeliveryStore();
   const selectedMethod = deliveryStore.selected;
   const { items, total, totalWithPromotion, totalWithDelivery, totalWeight } = getProductsInCart();
+
   const res: CartVM = {
     items: createCartItemsVMFromCartItems(items),
     totalPrice: formatter.format(total / 100),
-    totalPriceWithDelivery: formatter.format(getTotalWithDelivery(total, totalWeight) / 100),
+    totalPriceWithDelivery: formatter.format(
+      getTotalWithDelivery(
+        total,
+        totalWeight,
+        Object.values(createCartItemsVMFromCartItems(items)).some((item: any) => item.medecine === true),
+      ) / 100,
+    ),
     freeDelivery: formatter.format(getFreeDelivery(total) / 100),
-    DeliveryPrice: formatter.format(getDeliveryPrice(selectedMethod!, totalWeight, total) / 100),
+    DeliveryPrice: formatter.format(
+      getDeliveryPrice(
+        selectedMethod!,
+        totalWeight,
+        total,
+        Object.values(createCartItemsVMFromCartItems(items)).some((item: any) => item.medecine === true),
+      ) / 100,
+    ),
   };
   if (total != totalWithPromotion) {
-    res.totalPriceWithPromotion = formatter.format(getTotalWithDelivery(totalWithPromotion, totalWeight) / 100);
-    res.DeliveryPrice = formatter.format(getDeliveryPrice(selectedMethod!, totalWeight, totalWithPromotion) / 100);
+    res.totalPriceWithPromotion = formatter.format(
+      getTotalWithDelivery(
+        totalWithPromotion,
+        totalWeight,
+        Object.values(createCartItemsVMFromCartItems(items)).some((item: any) => item.medecine === true),
+      ) / 100,
+    );
+    res.DeliveryPrice = formatter.format(
+      getDeliveryPrice(
+        selectedMethod!,
+        totalWeight,
+        totalWithPromotion,
+        Object.values(createCartItemsVMFromCartItems(items)).some((item: any) => item.medecine === true),
+      ) / 100,
+    );
     res.freeDelivery = formatter.format(getFreeDelivery(totalWithPromotion) / 100);
   }
   return res;

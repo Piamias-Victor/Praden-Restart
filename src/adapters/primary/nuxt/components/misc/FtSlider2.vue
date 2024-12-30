@@ -51,7 +51,7 @@ div(v-else class='').px-4
 import { register } from 'swiper/element/bundle';
 
 const props = defineProps<{
-    bannerVM: any;
+  bannerVM: any;
 }>();
 
 register();

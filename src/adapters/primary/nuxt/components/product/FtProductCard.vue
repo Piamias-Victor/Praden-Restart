@@ -8,9 +8,15 @@
         :href="product.href"
         @click="goToProduct(product.href)")
             img.p-4(
+                v-if="product && product.images && product.images.length > 0"
                 class='min-h-[200px] h-[200px] w-full object-cover'
                 :src="product.images?.[0]" 
-                :alt="product.name")   
+                :alt="product.name") 
+            img.p-4(
+                v-else
+                class='min-h-[200px] h-[200px] w-full object-cover'
+                src="https://i.postimg.cc/GpcFkW2C/Whats-App-Image-2024-12-30-at-10-52-33.jpg" 
+                :alt="product.name")     
         ft-button-animate.bg-transparent.absolute.top-2.right-2.text-main.p-2.rounded-full(
             v-if="likeQuantity && likeQuantity.items && likeQuantity.items[product.uuid]"
             @click="removeItemFromFavorite(product.uuid)"
@@ -45,7 +51,6 @@ import { sendNotifLike } from '@core/usecases/add-notif/cartNotif';
 defineProps({
   product: { type: Object, required: true },
 });
-
 
 const emit = defineEmits<{
   (e: 'close'): void;

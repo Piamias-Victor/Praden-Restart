@@ -21,6 +21,6 @@ definePageMeta({ layout: 'main' });
 const router = useRouter();
 
 const backToHome = () => {
-    router.push('/');
+  router.push('/');
 };
 </script>

@@ -199,4 +199,4 @@ export const getRootCategoryUuid = (uuid: string): string | null => {
 export const getSimpleCategoryVM = () => {
   const categoryStore = useCategoryStore();
   return categoryStore.itemsSet;
-}
+};

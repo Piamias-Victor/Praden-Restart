@@ -38,7 +38,7 @@ onMounted(() => {
   listCategories(categoryGateway());
   listLaboratories(laboratoryGateway());
   listPromotions(useProductGateway());
-  listBanner(bannerGateway())
+  listBanner(bannerGateway());
 });
 
 const categoriesVM = computed(() => {
