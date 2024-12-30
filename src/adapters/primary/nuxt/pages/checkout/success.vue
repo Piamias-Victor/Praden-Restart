@@ -12,8 +12,6 @@ div.flex.flex-col.items-center
     span.px-4.font-semibold.text-contrast.text-center Toute l'équipe de la pharmacie vous remercie et met tout en oeuvre pour vous offrir un service de qualité.
     div.mt-6
     ft-button.button-solid.w-full.text-xl(@click="backToHome" class='sm:w-[30vw]') Retourner sur le site
-    div.mt-6
-    ft-button.bg-contrast.w-full.text-xl(@click="backToHome" class='sm:w-[30vw]') Voir le suivi de la commande
 </template>
 
 <script lang="ts" setup>

@@ -9,7 +9,6 @@ TransitionRoot(appear='' :show='true' as='template')
                     DialogPanel.flex.h-full.flex-col.overflow-y-scroll.bg-background.shadow-xl.animate-slideright
                         div.w-full.bg-main.text-center.p-2.text-white.font-semibold.flex.items-center.justify-center.gap-2
                             span Livraison offerte pour 69 € d'achat
-                        pre {{categoriesVM}}
                         div.py-4.px-4.flex.items-center.gap-4
                             div.bg-white.rounded-full.px-2.grow.flex.items-center.gap-4.bg-contrast
                                 icon.icon-md(name="lucide:search")
@@ -54,18 +53,21 @@ TransitionRoot(appear='' :show='true' as='template')
                             ft-product-search-list(:products="filteredProducts" @close='close').px-4
                             ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" @searchCategory="searchCategory" @searchPrice="searchPrice" :facetsVM="searchVM.facets" :sortType="sortType" :laboratoryFilter="laboratoryFilter")
                             div.px-4(
-                                v-if='filteredProducts.length === 0'
-                                @click="clicked").flex.flex-col.items-center.justify-center.gap-4.w-full
-                                div(v-for="category in rootCategoriesVM.items" :key="category.uuid" class="relative group bg-white shadow-lg rounded-xl overflow-hidden cursor-pointer transform transition-transform hover:scale-105 w-full px-[100px]" @click="goToCat(category.uuid)")
-                                  div.bg-cover.bg-center.absolute.inset-0.opacity-50.transition-opacity(class='group-hover:opacity-75')
-                                  div.relative.p-6
-                                    span.text-lg.font-semibold.text-gray-800.transition-colors(class='group-hover:text-main') {{ category.name }}
+                              v-if='filteredProducts.length === 0'
+                              @click="clicked").grid.grid-cols-1(class='sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full')
+                              div(v-for="category in rootCategoriesVM.items" :key="category.uuid" 
+                                  class="relative group bg-white shadow-lg rounded-xl overflow-hidden cursor-pointer transform transition-transform hover:scale-105" 
+                                  @click="goToCat(category.uuid)")
+                                div.bg-cover.bg-center.absolute.inset-0.opacity-50.transition-opacity(class='group-hover:opacity-75')
+                                div.relative.p-6
+                                  span.text-lg.font-semibold.text-gray-800.transition-colors(class='group-hover:text-main') {{ category.name }}
+
                                 
                                 //- nuxt-link.flex.flex-col.items-center.bg-main.text-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]' href='https://2f440074.praden-restart.pages.dev/categories/03c3ddc9-7616-48df-9bf7-3290da61b23b?Promotions')
                                 //-     span.font-semibold.w-full.text-left.px-4 DES PROMOTIONS ALLANT JUSQU'À -20%
                                 //- button(v-for='category in rootCategoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid)").border-2.border-main.flex.flex-col.items-center.justify-center.bg-cover.bg-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl
                                 //-     span.font-semibold.w-full.text-left.px-4 {{ category.name }}
-                                div(class='min-h-[13vh]').bg-main
+                            div(class='min-h-[13vh]')
                             ft-footer
                             div(class='min-h-[13vh]').bg-main
 </template>
@@ -83,13 +85,26 @@ import {
 import { SortType } from '@utils/sort';
 import { parsePrice } from '@utils/formater';
 import { getLaboratory, getLaboratoryByName } from '@adapters/primary/viewModels/get-laboratory/getLaboratoryVM';
+import { getSimpleCategoryVM } from '@adapters/primary/viewModels/get-category/getCategoryVM';
+import { useRouter } from 'nuxt/app';
 const props = defineProps<{
   categoriesVM: any;
 }>();
 
+const router = useRouter();
+
+const simpleCategory = computed(() => {
+  return getSimpleCategoryVM();
+});
+
 const rootCategoriesVM = computed(() => {
   return getRootCategoriesVM();
 });
+
+const goToCat = (path: string) => {
+  router.push('/categories/' + path);
+  closeModal()
+};
 
 const emit = defineEmits<{
   (e: 'close'): void;

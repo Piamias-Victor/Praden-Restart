@@ -30,7 +30,7 @@
                           p.text-sm.text-gray-600 Date: {{ formatDate(order.createdAt) }}
                           p.text-sm.text-gray-600.font-semibold Montant: {{ calculateOrderTotalWithDelivery(order.lines, order.delivery.price) }}€
                         div.flex.items-center.gap-2.w-full.justify-between
-                          ft-button.text-xs(:class="getStatusClass(order.payment.status)") {{ getStatusText(order.payment.status) }}
+                          ft-button.text-xs(:class="getStatusClass(order.lines[0].deliveryStatus)") {{ getStatusText(order.lines[0].deliveryStatus) }}
                           ft-button.button-solid
                             icon.icon-sm.text-white.hidden(class='sm:block' name="mdi:chevron-down")
                     div.mt-4(v-if="isOpen(order.uuid)").text-left
@@ -62,9 +62,12 @@
                         p.text-sm.text-gray-600 Méthode: {{ order.delivery.method.name }}
                         p.text-sm.text-gray-600 Description: {{ order.delivery.method.description }}
                         p.text-sm.text-gray-600 Prix: {{ (order.delivery.price / 100).toFixed(2) }}€
-                    div(v-if="isOpen(order.uuid)").h-4
-                    ft-button(v-if="isOpen(order.uuid)").button-solid.w-full Voir ma facture
-              div.w-full.justify-end.flex-shrink-0.p-4
+                    div(v-if="isOpen(order.uuid)").mt-2
+                        a(v-if="order && order.delivery && order.delivery.trackingNumber" 
+                          :href="`https://laposte.fr/outils/suivre-vos-envois?code=${order.delivery.trackingNumber}`" 
+                          target="_blank" 
+                          rel="noopener noreferrer")
+                          ft-button.button-solid.w-full Suivre mon colis
                 ft-button.button-solid.text-xl.w-full(@click='close')
                   span Fermer
 </template>
@@ -108,6 +111,8 @@ const orders = computed(() => {
   }
 });
 
+console.log('orders', orders)
+
 // Trier les commandes par date de création (les plus récentes en premier)
 const sortedOrders = computed(() => {
   return [...orders.value].sort((a, b) => b.createdAt - a.createdAt);
@@ -129,24 +134,37 @@ const isOpen = (uuid: string) => {
 };
 
 // Méthode pour obtenir la classe de statut
-const getStatusClass = (status: string) => {
+// Méthode pour obtenir la classe de statut
+const getStatusClass = (status: string): string => {
   switch (status) {
-    case 'WAITINGFORPAYMENT':
-      return 'text-yellow-900 bg-yellow-400';
-    case 'PAYED':
-      return 'text-green-900 bg-green-400';
+    case 'CREATED':
+      return 'text-blue-900 bg-blue-200'; // En attente de traitement
+    case 'PROCESSING':
+      return 'text-orange-900 bg-orange-300'; // En cours de traitement
+    case 'SHIPPED':
+      return 'text-yellow-900 bg-yellow-300'; // Expédié
+    case 'DELIVERED':
+      return 'text-green-900 bg-green-400'; // Livré
+    case 'CANCELED':
+      return 'text-red-900 bg-red-300'; // Annulé
     default:
-      return 'text-gray-500';
+      return 'text-gray-500'; // Statut inconnu
   }
 };
 
 // Méthode pour obtenir le texte de statut en français
-const getStatusText = (status: string) => {
+const getStatusText = (status: string): string => {
   switch (status) {
-    case 'WAITINGFORPAYMENT':
-      return 'En cours de livraison';
-    case 'PAYED':
+    case 'CREATED':
+      return 'En attente de traitement';
+    case 'PROCESSING':
+      return 'En cours de traitement';
+    case 'SHIPPED':
+      return 'Expédié';
+    case 'DELIVERED':
       return 'Livré';
+    case 'CANCELED':
+      return 'Annulé';
     default:
       return 'Statut inconnu';
   }
