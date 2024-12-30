@@ -23,7 +23,10 @@ div.mt-4
           )
             icon.icon-lg(name="ph:heart-bold")
 
-        ft-add-to-cart-button(:product-uuid="productId")
+        ft-add-to-cart-button(:product-uuid="productId" v-if="productVM && productVM.availableStock && productVM.availableStock > 0")
+        div.bg-main.rounded-b-xl.mt-1(class='p-0.5' v-else)
+          ft-button.w-full.text-white.flex.items-center.justify-center.font-semibold
+            span Bientôt disponible
         div.absolute.top-0.left-0.bg-main.text-white.text-xl.font-bold.p-2.rounded-tr-lg.rounded-bl-lg.z-10(v-if="productVM.promotion")
           span {{'- ' + productVM.promotion.amount}}
 

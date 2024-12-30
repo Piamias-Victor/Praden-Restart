@@ -23,6 +23,7 @@ export interface ProductDetailVM {
   rating?: number;
   notice?: string;
   details: Array<any>;
+  availableStock: number;
 }
 
 const getDetails = (product: ProductDetail | undefined): Array<any> => {
@@ -84,6 +85,7 @@ export const getProductVM = (): ProductDetailVM => {
     images: product ? [{ src: product.images, alt: product?.name }] : [],
     description: product?.description || '',
     rating: product?.rating,
+    availableStock: product?.availableStock,
     details,
     promotion,
   };
