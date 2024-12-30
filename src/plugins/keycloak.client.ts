@@ -23,8 +23,6 @@ export default defineNuxtPlugin((nuxtApp) => {
     try {
       const authenticated = await keycloak.init({
         checkLoginIframe: true,
-        onLoad: 'check-sso',
-        silentCheckSsoRedirectUri: `${window.location.origin}`, // Créez cette page si elle n'existe pas
       });
 
       if (authenticated) {
