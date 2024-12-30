@@ -3,7 +3,7 @@ div.py-4.px-2.flex.items-center.gap-4.overflow-x-scroll.custom-scrollbar
     template(v-if="!categoriesLoaded")
         div.bg-gray-200.rounded-xl.px-6.w-24.h-10.animate-pulse(v-for="n in 12" :key="n")
     template(v-else)
-        ft-button-animate.bg-white.rounded-xl.px-6(v-for='category in props.categoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid)")
+        ft-button-animate.bg-white.rounded-xl.px-6(v-for='category in sortedCategories' :key="category.uuid" @click="goToCat(category.uuid)")
             img.icon-md(:src="category.icon")
             span.whitespace-nowrap {{ category.name }}
 </template>
@@ -16,6 +16,25 @@ const props = defineProps<{
 definePageMeta({ layout: 'main' });
 
 const router = useRouter();
+
+const desiredOrder = [
+  "Médicament",
+  "Dermocosmétique",
+  "Bien être",
+  "Bébé",
+  "Nature",
+  "Premiers soins",
+  "Vétérinaire",
+  "Orthopédie"
+];
+
+const sortedCategories = computed(() => {
+  return props.categoriesVM.items
+    .filter(category => category.name !== "Promotions") // Exclure "Promotions"
+    .sort((a, b) => {
+      return desiredOrder.indexOf(a.name) - desiredOrder.indexOf(b.name);
+    });
+});
 
 const categoriesLoaded = computed(() => {
   return props.categoriesVM?.items?.length > 0;

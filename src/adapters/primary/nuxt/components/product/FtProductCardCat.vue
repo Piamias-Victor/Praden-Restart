@@ -28,7 +28,7 @@ div.bg-white.rounded-xl.pt-2(class='w-[65vw] sm:w-[15vw] min-h-[320px] flex flex
         div.flex.items-center.justify-between.gap-2
             span.font-bold.text-main {{formatter.format(product.priceWithTax / 100)}}
     
-    ft-add-to-cart-button(:product-uuid="product.uuid" class='mt-auto')
+    ft-add-to-cart-button(:product-uuid="product.uuid" :isMedicine="product.isMedecine" class='mt-auto')
 </template>
 
 <script lang="ts" setup>
