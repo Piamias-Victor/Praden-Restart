@@ -46,7 +46,6 @@ defineProps({
   product: { type: Object, required: true },
 });
 
-
 const emit = defineEmits<{
   (e: 'close'): void;
 }>();

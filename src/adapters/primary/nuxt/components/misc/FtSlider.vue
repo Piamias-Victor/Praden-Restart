@@ -24,13 +24,12 @@
               :alt="`Banner ${banner.order}`"
             )
 </template>
-  
 
 <script lang="ts" setup>
 import { register } from 'swiper/element/bundle';
 
 const props = defineProps<{
-    bannerVM: any;
+  bannerVM: any;
 }>();
 
 register();

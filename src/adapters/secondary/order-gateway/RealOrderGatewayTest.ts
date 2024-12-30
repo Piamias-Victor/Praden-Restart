@@ -74,7 +74,7 @@ export class RealOrderGateway implements OrderGateway {
               percentTaxRate: product.percentTaxRate,
               ...(promotionUuid ? { promotionUuid } : {}),
             };
-          })
+          }),
         ),
       };
     } else {
@@ -103,7 +103,7 @@ export class RealOrderGateway implements OrderGateway {
               percentTaxRate: product.percentTaxRate,
               ...(promotionUuid ? { promotionUuid } : {}),
             };
-          })
+          }),
         ),
       };
     }
@@ -125,18 +125,14 @@ export class RealOrderGateway implements OrderGateway {
         throw new Error('Token Keycloak non disponible pour authentification.');
       }
 
-      console.log('body : ', body)
+      console.log('body : ', body);
 
-      const res = await axios.post(
-        'https://ecommerce-backend-production.admin-a5f.workers.dev/orders',
-        body,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            'Content-Type': 'application/json',
-          },
-        }
-      );
+      const res = await axios.post('https://ecommerce-backend-production.admin-a5f.workers.dev/orders', body, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      });
 
       const sessionUrl = await this.paymentGateway.createCheckoutSession(checkoutDTO, deliveryPrice, res.data.uuid);
 

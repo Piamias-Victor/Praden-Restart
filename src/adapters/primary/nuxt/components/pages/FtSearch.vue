@@ -103,7 +103,7 @@ const rootCategoriesVM = computed(() => {
 
 const goToCat = (path: string) => {
   router.push('/categories/' + path);
-  closeModal()
+  closeModal();
 };
 
 const emit = defineEmits<{
@@ -220,8 +220,8 @@ const searchChanged = (e: any) => {
 };
 
 const searchCategoryVM = computed(() => {
-  return getSearchCategoriesVM()
-})
+  return getSearchCategoriesVM();
+});
 
 const searchVM = computed(() => {
   return getSearchResultVM(sortType.value);
