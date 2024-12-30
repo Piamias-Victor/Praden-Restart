@@ -25,6 +25,7 @@ export const getSearchResultVM = (sortType: SortType = SortType.None): GetSearch
         laboratory: p.laboratory,
         images: p.images,
         price: formatter.format(p.priceWithTax / 100),
+        availableStock: p.availableStock,
         href: `/products/${p.uuid}`,
       };
       if (promotion) {
