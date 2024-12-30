@@ -10,14 +10,16 @@ div.fixed.w-full.flex.justify-center.z-10.bottom-5.left-0
         ft-button.w-full.text-contrast.flex.items-center.justify-center(@click="openCart" :class='heartColor')
             icon.icon-lg(name="akar-icons:shopping-bag")
             span(v-if="cartQuantity && cartQuantity.totalQuantity") {{ cartQuantity.totalQuantity }}
-ft-cart-panel(v-if="cartOpened" @close="closeCart")
+ft-cart-panel(v-if="cartOpened && user.uuid" @close="closeCart")
 ft-like-panel(v-if="likeOpened" @close="closeLike")
+ft-profil(v-if="cartOpened && !user.uuid" @close="closeProfil")
 </template>
 
 <script lang="ts" setup>
 import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
 import { useProductGateway } from '../../../../../../gateways/productGateway';
 import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 
 export interface CartQuantityVM {
   items: HashTable<number>;
@@ -45,8 +47,16 @@ const openCart = () => {
   cartOpened.value = true;
 };
 
+const user = computed(() => {
+  return getUserVM();
+});
+
 const closeCart = () => {
   cartOpened.value = false;
+};
+
+const closeProfil = () => {
+  profilOpened.value = false;
 };
 
 const openLike = () => {
