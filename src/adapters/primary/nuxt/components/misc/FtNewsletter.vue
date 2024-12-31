@@ -5,7 +5,7 @@
       <h2 class="text-lg font-semibold text-center">Bienvenue chez la pharmacie Praden!</h2>
       <hr class="my-2" />
       <h3 class="text-4xl font-bold text-main text-center">INSCRIVEZ VOUS</h3>
-      <p class="text-center text-lg font-semibold text-black">ET PROFITER DES MEILLEURES OFFRES</p>
+      <p class="text-center text-lg font-semibold text-black">ET PROFITEZ DES MEILLEURES OFFRES</p>
       <p class="text-center text-sm font-medium text-contrast">+ Livraison offerte*</p>
       <div class="mt-4">
         <input

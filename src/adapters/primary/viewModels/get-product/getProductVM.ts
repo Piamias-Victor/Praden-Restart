@@ -128,6 +128,33 @@ export const getProductInPromotionVM = () => {
   };
 };
 
+export const get400ProductInPromotionVM = () => {
+  const productStore = useProductStore();
+  const productInPromotion = productStore.promotions;
+  const formatter = priceFormatter('fr-FR', 'EUR');
+  console.log('productInPromotion', productInPromotion)
+  return {
+    products: productInPromotion.slice(0, 400).map((p) => {
+      const promotion = getPromotionVM(p);
+      const images: Array<Image> = p && p.images.length > 0 ? p.images.map((url) => url) : [DEFAULT_IMAGE_URL];
+      const res = {
+        uuid: p.uuid,
+        name: p.name,
+        laboratory: p.laboratory,
+        images: images,
+        price: formatter.format(p.priceWithTax / 100),
+        availableStock: p.availableStock,
+        isMedecine: p.isMedicine,
+        href: `/products/${p.uuid}`,
+      };
+      if (promotion) {
+        res.promotion = promotion;
+      }
+      return res;
+    }),
+  };
+};
+
 export const getSearchProductVM = () => {
   const searchStore = useSearchStore();
   const product = searchStore.products;

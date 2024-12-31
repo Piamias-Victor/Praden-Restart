@@ -59,12 +59,14 @@ export class StripePaymentGateway implements PaymentGateway {
     deliveryPrice: string,
     orderUuid: string,
   ): Promise<string> {
+    console.log('createCheckoutDTO:', JSON.stringify(createCheckoutDTO, null, 2));
+    console.log('deliveryPrice:', JSON.stringify(deliveryPrice, null, 2));
     const currency = 'eur';
     const lineItems = createCheckoutDTO.lines.map((line) => {
       return {
         price_data: {
           currency,
-          unit_amount: line.unitAmount * line.quantity,
+          unit_amount: line.unitAmount,
           product_data: {
             name: line.name,
           },

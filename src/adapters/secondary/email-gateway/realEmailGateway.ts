@@ -2,6 +2,7 @@ import { DeliveryMethod } from '@core/entities/deliveryMethod';
 import { Address, Contact, OrderLine, getOrderLineUnitAmount } from '@core/entities/order';
 import { EmailGateway, SendOrderConfirmationDTO } from '@core/usecases/orders/order-creation/emailGateway';
 import { priceFormatter } from '@utils/formater';
+import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
 
 function generateLinesHtml(lines: any) {
   return `
@@ -42,9 +43,6 @@ export class RealEmailGateway implements EmailGateway {
     const userMessage = message;
     const userMail = to;
     const userPhone = phone;
-    console.log('userMessage', userMessage)
-    console.log('userMail', userMail)
-    console.log('userPhone', userPhone)
     const body = {
       to: 'victorpiamiaspro@gmail.com',
       subject: 'test',
@@ -112,6 +110,8 @@ export class RealEmailGateway implements EmailGateway {
       },
     };
 
+    // console.log('body:', JSON.stringify(body, null, 2));
+
     const headers = {
       'Content-Type': 'application/json',
     };
@@ -160,7 +160,7 @@ export class RealEmailGateway implements EmailGateway {
 
   private getLines(orderLines: Array<OrderLine>) {
     return orderLines.map((line) => {
-      const amount = getOrderLineUnitAmount(line);
+      const amount = line.unitAmount;
       return {
         img: line.img,
         name: line.name,
@@ -172,15 +172,21 @@ export class RealEmailGateway implements EmailGateway {
   }
 
   private getTotals(orderLines: Array<OrderLine>, deliveryMethod: DeliveryMethod) {
+    const cart = getCartVM();
+    console.log('cart:', JSON.stringify(cart, null, 2));
+
     const subTotal = orderLines.reduce((acc, line) => {
-      const amount = getOrderLineUnitAmount(line);
+      const amount = line.unitAmount;
       return acc + amount * line.quantity;
     }, 0);
-    const total = deliveryMethod.price + subTotal;
+    let total;
+    if (cart.totalPriceWithPromotion) total = cart.totalPriceWithPromotion;
+    else total = cart.totalPriceWithDelivery;
+    console.log('total', total)
     return {
       product_price: this.formatter.format(subTotal / 100),
-      shipping_price: deliveryMethod.price > 0 ? this.formatter.format(deliveryMethod.price / 100) : 'Gratuit',
-      price: this.formatter.format(total / 100),
+      shipping_price: cart.DeliveryPrice,
+      price: total,
     };
   }
 }
