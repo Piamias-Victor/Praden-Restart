@@ -34,6 +34,8 @@ footer.bg-main.text-white.py-8
                 a(href="/mentions-legales" class="hover:text-white") Mentions légales
                 li
                 a(href="/paiement" class="hover:text-white") Paiement
+                li
+                a(href="/confidentialite" class="hover:text-white") Confidentialite
 
     .text-center.mt-8.text-white
         | 2024 Phardev - Tous droits réservés.
