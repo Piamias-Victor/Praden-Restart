@@ -1,4 +1,5 @@
 <template lang="pug">
+//- pre {{facetsVM}}
 ft-categories(:categoriesVM="categoriesVM")
 div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4(ref='top')
     span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') Promotions
@@ -26,7 +27,7 @@ div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4(ref='top')
             icon.icon-lg(name="mdi:filter-outline")
 ft-navigation
 div.h-2
-ft-product-cat-list(:products="filteredProducts.products")
+ft-product-cat-list(:products="filteredProducts")
 div.h-4
 ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory"  @searchPrice="searchPrice" :facetsVM="facetsVM" :sortType="sortType" :laboratoryFilter="laboratoryFilter")
 </template>
@@ -50,6 +51,7 @@ import { laboratoryGateway } from '../../../../../gateways/laboratoryGateway';
 import { useProductGateway } from '../../../../../gateways/productGateway';
 import { get400ProductInPromotionVM } from '@adapters/primary/viewModels/get-product/getProductVM';
 import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
+import { searchPromotion } from '@core/usecases/search-product/searchProduct';
 
 definePageMeta({ layout: 'main' });
 
@@ -58,7 +60,7 @@ onMounted(() => {
   listCategories(categoryGateway());
   listLaboratories(laboratoryGateway());
   listPromotions(useProductGateway());
-
+  searchPromotion(searchGateway());
 });
 
 const categoriesVM = computed(() => {
@@ -113,9 +115,14 @@ const searchLaboratory = (labo: string | null) => {
   }
 };
 
+const searchVM = computed(() => {
+  const result = getSearchResultVM(sortType.value);
+  return { ...result }; // Force une réactivité
+});
+
 const filteredProducts = computed(() => {
   getLaboratoryByName(laboratoryFilter.value, '', searchGateway());
-  let res = get400ProductInPromotionVM() || [];
+  let res = searchVM.value.items || [];
   if (priceFilter.value) {
     res = res.filter(
       (product) =>
@@ -131,11 +138,6 @@ const parsePrice = (priceString: string) => {
 };
 
 const categoryVM = computed(() => getCategoryVM(sortType.value));
-
-const searchVM = computed(() => {
-  const result = getSearchResultVM(sortType.value);
-  return { ...result }; // Force une réactivité
-});
 
 const facetsVM = computed(() => getFacetsVM());
 const filterOpened = ref(false);
