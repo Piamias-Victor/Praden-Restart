@@ -6,7 +6,7 @@ export const listDeliveryMethods = async (deliveryGateway: DeliveryGateway) => {
   const methods = await deliveryGateway.listMethods();
   const deliveryStore = useDeliveryStore();
   deliveryStore.list(methods);
-  deliveryStore.setSelected(methods[2]);
+  deliveryStore.setSelected(methods[0]);
 };
 
 export const selectDeliveryMethods = (method: DeliveryMethod) => {

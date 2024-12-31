@@ -62,7 +62,7 @@ import {
   listDeliveryMethods,
   selectDeliveryMethods,
 } from '@core/usecases/delivery-methods-listing/listDeliveryMethods';
-import deliveryGateway, { express } from '../../../../../../gateways/deliveryGateway';
+import deliveryGateway, { pickup } from '../../../../../../gateways/deliveryGateway';
 import { getCheckoutVM } from '@adapters/primary/viewModels/get-checkout/getCheckoutVM';
 import { getDeliveryVM } from '@adapters/primary/viewModels/get-delivery/getDeliveryVM';
 import { createOrder } from '@core/usecases/orders/order-creation/createOrder';
@@ -89,7 +89,7 @@ const deliveryMethods = computed(() => {
   return getDeliveryVM();
 });
 
-const selectedDeliveryMethod = ref(express.uuid);
+const selectedDeliveryMethod = ref(pickup.uuid);
 
 const deliveryMethodSelected = (method: any) => {
   selectDeliveryMethods(method);

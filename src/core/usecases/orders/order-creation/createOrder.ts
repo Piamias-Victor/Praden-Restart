@@ -108,8 +108,6 @@ export const createOrder = async (
     orderStore.add(order);
 
     // Vider le panier
-    clearCart();
-
     // Obtenir les informations utilisateur
     const user = computed(() => {
       return getUserVM();
@@ -129,7 +127,7 @@ export const createOrder = async (
     await emailGateway.sendOrderConfirmation(sendOrderConfirmationDTO);
 
     // Rediriger vers l'URL de la session Stripe
-
+    clearCart();
     if (order.payment && order.payment.sessionUrl) {
       window.location.href = order.payment.sessionUrl;
     }
