@@ -21,17 +21,20 @@ import { useProductGateway } from '../../../../../../gateways/productGateway';
 import { removeFromCart } from '@core/usecases/remove-from-cart/removeFromCart';
 import { sendNotifCart } from '@core/usecases/add-notif/cartNotif';
 import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification';
+import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
 
-defineProps({
+const props = defineProps({
   productUuid: { type: String, required: true },
+  isMedicine: {type: Boolean, required: true}
 });
 
 const cartQuantity = ref<CartQuantityVM | null>(null);
+
 const limit = ref(false);
 
 const removeItemFromCart = (uuid: string) => {
   if (
-    uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' &&
+    props.isMedicine &&
     cartQuantity &&
     cartQuantity.value &&
     cartQuantity.value.items &&
@@ -44,7 +47,7 @@ const removeItemFromCart = (uuid: string) => {
 
 const addItemToCart = (uuid: string) => {
   if (
-    uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' &&
+    props.isMedicine &&
     cartQuantity &&
     cartQuantity.value &&
     cartQuantity.value.items &&
@@ -60,7 +63,7 @@ const addItemToCart = (uuid: string) => {
 
 const isAddButtonHidden = (uuid: string) => {
   return (
-    uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' &&
+    props.isMedicine &&
     cartQuantity.value &&
     cartQuantity.value.items &&
     cartQuantity.value.items[uuid] >= 6

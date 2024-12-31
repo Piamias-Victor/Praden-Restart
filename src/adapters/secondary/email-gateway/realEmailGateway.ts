@@ -38,9 +38,10 @@ export class RealEmailGateway implements EmailGateway {
     this.confirmationTemplateID = confirmationTemplateID;
   }
 
-  async sendTestEmail(to: string, subject: string, message: string): Promise<void> {
-    const test = message;
-    const test2 = subject;
+  async sendTestEmail(to: string, phone: string, message: string): Promise<void> {
+    const userMessage = message;
+    const userMail = to;
+    const userPhone = phone;
     const body = {
       to: to,
       subject: subject,

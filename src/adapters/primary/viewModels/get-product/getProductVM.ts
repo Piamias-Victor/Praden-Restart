@@ -26,6 +26,7 @@ export interface ProductDetailVM {
   notice?: string;
   details: Array<any>;
   availableStock: number;
+  isMedicine: boolean;
 }
 
 const getDetails = (product: ProductDetail | undefined): Array<any> => {
@@ -83,6 +84,7 @@ export const getProductVM = (): ProductDetailVM => {
   const images: Array<Image> =
     product && product.images.length > 0 ? product.images.map((url) => url) : [DEFAULT_IMAGE_URL];
 
+  console.log('product', product)
   const res: ProductDetailVM = {
     uuid: product?.uuid || '',
     name: product?.name || '',
@@ -91,6 +93,7 @@ export const getProductVM = (): ProductDetailVM => {
     images: images,
     description: product?.description || '',
     rating: product?.rating,
+    isMedicine: product?.isMedicine,
     availableStock: product?.availableStock,
     details,
     promotion,
@@ -102,6 +105,7 @@ export const getProductInPromotionVM = () => {
   const productStore = useProductStore();
   const productInPromotion = productStore.promotions;
   const formatter = priceFormatter('fr-FR', 'EUR');
+  console.log('productInPromotion', productInPromotion)
   return {
     products: productInPromotion.slice(0, 20).map((p) => {
       const promotion = getPromotionVM(p);
@@ -113,6 +117,7 @@ export const getProductInPromotionVM = () => {
         images: images,
         price: formatter.format(p.priceWithTax / 100),
         availableStock: p.availableStock,
+        isMedecine: p.isMedicine,
         href: `/products/${p.uuid}`,
       };
       if (promotion) {
@@ -137,6 +142,7 @@ export const getSearchProductVM = () => {
     laboratory: product?.laboratory || '',
     price: product ? formatter.format(product.priceWithTaxe / 100) : '',
     images: images,
+    isMedicine: product.isMedicine,
     availableStock: product.availableStock,
   };
   return res;

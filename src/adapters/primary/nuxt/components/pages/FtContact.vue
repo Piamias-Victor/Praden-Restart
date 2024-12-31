@@ -17,7 +17,7 @@ TransitionRoot(appear='' :show='true' as='template')
                                         icon.icon-sm(name="ph:x-bold")
                             div.mt-4
                             ft-input(
-                              :value="user.mail"
+                              :value="email"
                               for="email-address"
                               require
                               type='email'
@@ -27,13 +27,13 @@ TransitionRoot(appear='' :show='true' as='template')
                             ) 
                               span.font-semibold E-mail
                             ft-input(
-                              :value="user.phone"
-                              for="email-address"
+                              :value="phone"
+                              for="phone"
                               require
                               type='text'
-                              name='email-address'
-                              autocomplete='email'
-                              @input="emailChanged"
+                              name='phone'
+                              autocomplete='phone'
+                              @input="phoneChanged"
                             ) 
                               span.font-semibold Téléphone
                             div.px-3
@@ -108,9 +108,24 @@ const props = defineProps({
 });
 
 const message = ref('');
+const phone = ref('')
+const email = ref('')
+
+
+const emailChanged = (e: any) => {
+  email.value = e.target.value;
+  console.log('email.value', email.value)
+};
+
+const phoneChanged = (e: any) => {
+  phone.value = e.target.value;
+  console.log('phone.value', phone.value)
+};
 
 const messageChanged = (value: string) => {
   message.value = value;
+  console.log('message.value', message.value)
+
 };
 
 const emailGateway = useEmailGateway();
@@ -177,7 +192,7 @@ const selectOther = () => {
 };
 
 const sendMessage = () => {
-  emailGateway.sendTestEmail('victorpiamiaspro@gmail.com', user.value.mail, message.value);
+  emailGateway.sendTestEmail(user.value.mail, user.value.phone, message.value);
   close();
 };
 </script>

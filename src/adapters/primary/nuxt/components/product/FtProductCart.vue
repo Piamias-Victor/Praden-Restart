@@ -2,7 +2,13 @@
 li.flex.py-6
   div.h-24.w-24.flex-shrink-0.overflow-hidden.rounded-md.border
     img.h-full.w-full.object-cover.object-center(
+      v-if="item && item.img && item.img.length > 0"
       :src="item.img"
+      :alt="item.name"
+    )
+    img.h-full.w-full.object-cover.object-center(
+      v-else
+      src="https://i.postimg.cc/GpcFkW2C/Whats-App-Image-2024-12-30-at-10-52-33.jpg"
       :alt="item.name"
     )
   div.flex.justify-between.items-center.w-full
@@ -36,7 +42,7 @@ const cart = computed(() => {
 });
 
 const isAddButtonHidden = (item: any) => {
-  return item.uuid === '81b02fbc-9cbd-49c9-8a7b-ecd8451b289e' && item.quantity >= 6;
+  return item.medecine && item.quantity >= 6;
 };
 
 const getCartQuantity = (uuid: string) => {

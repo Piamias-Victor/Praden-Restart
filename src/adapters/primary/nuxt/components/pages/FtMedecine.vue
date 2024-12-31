@@ -22,11 +22,11 @@ TransitionRoot(appear='' :show='true' as='template')
                                       ft-product-medecine(:item="product")
                               div.mt-2
                               ft-input(
-                                  for="email-address"
+                                  for="number"
                                   require
                                   type='number'
                                   inputmode="numeric"
-                                  name='email-address'
+                                  name='number'
                                   @input="emailChanged"
                                 ) Votre poids en kg
                               div.mt-2
@@ -35,7 +35,7 @@ TransitionRoot(appear='' :show='true' as='template')
                                   require
                                   type='number'
                                   inputmode="numeric"
-                                  name='email-address'
+                                  name='number'
                                   @input="emailChanged"
                                 ) Votre taille en cm
                               div.mt-4

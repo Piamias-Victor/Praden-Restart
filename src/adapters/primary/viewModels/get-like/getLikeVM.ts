@@ -76,6 +76,7 @@ export const getProductsInCart = (): ProductsInCart => {
             unitPrice: p.price,
             totalPrice: p.price * quantity,
             totalPriceWithPromotion: priceWithPromotion! * quantity,
+            medecine: p.isMedicine,
             quantity,
             img: p.images,
           },
@@ -113,6 +114,7 @@ export const createCartItemsVMFromCartItems = (items: HashTable<CartItem>): Hash
   const itemsVM: HashTable<CartItemVM> = {};
   Object.keys(items).forEach((key) => {
     const item = items[key];
+    console.log('item', item);
     itemsVM[key] = {
       uuid: item.uuid,
       name: item.name,
@@ -120,6 +122,7 @@ export const createCartItemsVMFromCartItems = (items: HashTable<CartItem>): Hash
       totalPrice: formatter.format(item.totalPrice / 100),
       totalPriceWithDelivery: formatter.format(getTotalWithDelivery(item.totalPrice) / 100),
       freeDelivery: formatter.format(getFreeDelivery(item.totalPrice) / 100),
+      medecine: item.medecine,
       quantity: item.quantity,
       img: item.img,
     };

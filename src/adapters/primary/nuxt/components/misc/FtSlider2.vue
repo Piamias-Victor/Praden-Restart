@@ -1,5 +1,4 @@
 <template lang="pug">
-pre {{bannerVM}}
 div.px-6.py-2(v-if='isLoading')
     div(class='rounded-xl min-h-[335px] bg-gray-200 animate-pulse')
 div(v-else class='').px-4
