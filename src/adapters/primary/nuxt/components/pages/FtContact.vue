@@ -192,7 +192,7 @@ const selectOther = () => {
 };
 
 const sendMessage = () => {
-  emailGateway.sendTestEmail(user.value.mail, user.value.phone, message.value);
+  emailGateway.sendTestEmail(email.value, phone.value, message.value);
   close();
 };
 </script>
