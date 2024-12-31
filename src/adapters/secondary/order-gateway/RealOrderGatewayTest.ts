@@ -50,6 +50,7 @@ export class RealOrderGateway implements OrderGateway {
     if (deliveryMethodsStore.selected!.point) {
       body = {
         ...rest,
+        customerMessage: 'test de message',
         billingAddress: orderDTO.deliveryAddress,
         pickupId: deliveryMethodsStore.selected!.point,
         deliveryMethodUuid: orderDTO.delivery.method.uuid,
@@ -80,6 +81,7 @@ export class RealOrderGateway implements OrderGateway {
     } else {
       body = {
         ...rest,
+        customerMessage: 'test de message',
         billingAddress: orderDTO.deliveryAddress,
         deliveryMethodUuid: orderDTO.delivery.method.uuid,
         lines: await Promise.all(
@@ -125,7 +127,7 @@ export class RealOrderGateway implements OrderGateway {
         throw new Error('Token Keycloak non disponible pour authentification.');
       }
 
-      console.log('body : ', body);
+      console.log('body2 : ', body);
 
       const res = await axios.post('https://ecommerce-backend-production.admin-a5f.workers.dev/orders', body, {
         headers: {

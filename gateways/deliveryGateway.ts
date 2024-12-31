@@ -44,7 +44,7 @@ export const relais: DeliveryMethod = {
 
 export const express: DeliveryMethod = {
   uuid: 'b5f26b31-ad03-4aaf-af89-395471795066',
-  name: 'Express',
+  name: 'À domicile',
   description: '2-5 jours ouvrés',
   type: DeliveryType.Delivery,
   priceRanges: [
