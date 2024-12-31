@@ -53,6 +53,27 @@ export class RealSearchGateway extends RealGateway implements SearchGateway {
     }
   }
 
+  async searchPromotion(
+    laboratoryUuids?: Array<string>,
+    size?: number,
+    isInPromotion?: string,
+  ): Promise<Array<Product>> {
+    try {
+      const payload = {
+        laboratoryUuids: laboratoryUuids || undefined,
+        size: size || undefined,
+        isInPromotion: isInPromotion || undefined,
+      };
+
+      const res = await axios.post(`${this.baseUrl}/search/products`, payload);
+
+      return Promise.resolve(res.data.items);
+    } catch (error) {
+      console.error('Erreur lors de la récupération des produits :', error);
+      return Promise.reject(error);
+    }
+  }
+
   async searchFacet(
     query?: string,
     laboratoryUuids?: Array<string>,

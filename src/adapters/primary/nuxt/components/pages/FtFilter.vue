@@ -43,19 +43,6 @@ div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
       icon.icon-md(name="tabler:category")
       span Afficher toutes les marques
     div.h-4
-    h2.font-medium.text-gray-900(v-if="props.facetsVM?.categories?.values?.length > 1") Filtre categories
-    div(v-if="props.facetsVM && props.facetsVM.categories && props.facetsVM?.categories?.values?.length > 1")
-        div.grid.grid-cols-2.gap-4.mt-4.justify-items-center
-            ft-button.bg-white.rounded-xl.px-6.text-primary11(v-for='category in props.facetsVM.categories.values' :key="category.key" @click='searchLaboratory(category.key)' class="w-full text-center relative"
-              @mouseover="setHoveredLaboratory(category.key)" 
-              @mouseleave="clearHoveredLaboratory")
-                span.text-sm.line-clamp-1 {{ category.key }}
-                span.tooltip-text(v-if="hoveredLaboratory === category.key && isTruncated(category.key)") {{ category.key }}
-    div.h-4
-    ft-button.button-solid.w-full(@click='searchLaboratory(null)' v-if="props.facetsVM?.categories?.values?.length > 1")
-      icon.icon-md(name="tabler:category")
-      span Afficher toutes les categories
-    div.mt-8
 </template>
 
 <script lang="ts" setup>
