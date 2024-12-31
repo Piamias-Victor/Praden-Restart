@@ -6,6 +6,9 @@ div.py-4.px-2.flex.items-center.gap-4.overflow-x-scroll.custom-scrollbar
         ft-button-animate.bg-white.rounded-xl.px-6(v-for='category in sortedCategories' :key="category.uuid" @click="goToCat(category.uuid)")
             img.icon-md(:src="category.icon")
             span.whitespace-nowrap {{ category.name }}
+        ft-button-animate.bg-white.rounded-xl.px-6(@click="goToPromo()")
+            img.icon-md(src="https://i.postimg.cc/HkthTcR1/promo.png")
+            span.whitespace-nowrap Promotions
 </template>
 
 <script lang="ts" setup>
@@ -42,6 +45,10 @@ const categoriesLoaded = computed(() => {
 
 const goToCat = (path: string) => {
   router.push('/categories/' + path);
+};
+
+const goToPromo = () => {
+  router.push('/promotions');
 };
 </script>
 
