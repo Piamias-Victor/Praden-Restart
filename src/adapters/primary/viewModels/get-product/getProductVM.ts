@@ -105,7 +105,6 @@ export const getProductInPromotionVM = () => {
   const productStore = useProductStore();
   const productInPromotion = productStore.promotions;
   const formatter = priceFormatter('fr-FR', 'EUR');
-  console.log('productInPromotion', productInPromotion);
   return {
     products: productInPromotion.slice(0, 20).map((p) => {
       const promotion = getPromotionVM(p);
@@ -118,6 +117,34 @@ export const getProductInPromotionVM = () => {
         price: formatter.format(p.priceWithTax / 100),
         availableStock: p.availableStock,
         isMedecine: p.isMedicine,
+        href: `/products/${p.uuid}`,
+      };
+      if (promotion) {
+        res.promotion = promotion;
+      }
+      return res;
+    }),
+  };
+};
+
+export const getBestSales = () => {
+  const productStore = useProductStore();
+  const bestSales = productStore.bestSales;
+  console.log('bestSales', bestSales)
+  const formatter = priceFormatter('fr-FR', 'EUR');
+  return {
+    products: bestSales.map((product) => {
+      const p = product.item;
+      const promotion = getPromotionVM(p);
+      const images: Array<Image> = p && p.images.length > 0 ? p.images.map((url) => url) : [DEFAULT_IMAGE_URL];
+      const res = {
+        uuid: p.uuid,
+        name: p.name,
+        laboratory: p.laboratory,
+        images: images,
+        price: formatter.format(p.price / 100),
+        availableStock: p.availableStock,
+        isMedicine: p.isMedicine,
         href: `/products/${p.uuid}`,
       };
       if (promotion) {

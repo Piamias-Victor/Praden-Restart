@@ -2,7 +2,7 @@
     div.flex.flex-col.gap-10
       ft-categories(:categoriesVM="categoriesVM")
       ft-slider(:bannerVM="bannerVM")
-      ft-product-list(:products="productInPromotion.products") La sélection du pharmacien
+      ft-product-list(:products="products.products") La sélection du pharmacien
       ft-product-list(:products="productInPromotion.products") Promotion
       ft-brand-list
       ft-blog(:blogVm='blogVm')
@@ -24,8 +24,8 @@ import { bannerGateway } from '../../../../../gateways/bannerGateway';
 import { useProductGateway } from '../../../../../gateways/productGateway';
 import { listCategories } from '@core/usecases/list-categories/listCategories';
 import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
-import { listPromotions } from '@core/usecases/list-promotions/listPromotions';
-import { getProductInPromotionVM } from '@adapters/primary/viewModels/get-product/getProductVM';
+import { listPromotions, listBestSales } from '@core/usecases/list-promotions/listPromotions';
+import { getProductInPromotionVM, getBestSales } from '@adapters/primary/viewModels/get-product/getProductVM';
 import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
 import { listMyOrder } from '@core/usecases/list-my-orders/listMyOrders';
 import { listBanner } from '@core/usecases/list-banner/listBanner';
@@ -39,6 +39,7 @@ onMounted(() => {
   listLaboratories(laboratoryGateway());
   listPromotions(useProductGateway());
   listBanner(bannerGateway());
+  listBestSales(useProductGateway());
 });
 
 const categoriesVM = computed(() => {
@@ -49,6 +50,10 @@ const bannerVM = getBannerVM();
 
 const productInPromotion = computed(() => {
   return getProductInPromotionVM();
+});
+
+const products = computed(() => {
+  return getBestSales();
 });
 
 const blogVm = {
