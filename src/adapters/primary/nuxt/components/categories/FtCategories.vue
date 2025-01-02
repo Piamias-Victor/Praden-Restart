@@ -21,19 +21,19 @@ definePageMeta({ layout: 'main' });
 const router = useRouter();
 
 const desiredOrder = [
-  "Médicament",
-  "Dermocosmétique",
-  "Bien être",
-  "Bébé",
-  "Nature",
-  "Premiers soins",
-  "Vétérinaire",
-  "Orthopédie"
+  'Médicament',
+  'Dermocosmétique',
+  'Bien être',
+  'Bébé',
+  'Nature',
+  'Premiers soins',
+  'Vétérinaire',
+  'Orthopédie',
 ];
 
 const sortedCategories = computed(() => {
   return props.categoriesVM.items
-    .filter(category => category.name !== "Promotions") // Exclure "Promotions"
+    .filter((category) => category.name !== 'Promotions') // Exclure "Promotions"
     .sort((a, b) => {
       return desiredOrder.indexOf(a.name) - desiredOrder.indexOf(b.name);
     });

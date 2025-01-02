@@ -16,7 +16,7 @@ export const searchProduct = async (query: string, searchGateway: SearchGateway,
 
 export const searchPromotion = async (searchGateway: SearchGateway, laboratoryUuids?: Array<string>) => {
   const searchStore = useSearchStore();
-  const products = await searchGateway.searchProduct('', laboratoryUuids, 200, "true");
+  const products = await searchGateway.searchProduct('', laboratoryUuids, 200, 'true');
   const facets = await searchGateway.searchFacet('', laboratoryUuids, 200, 'true');
   searchStore.setFacets(facets);
   searchStore.setSearchResult(products);

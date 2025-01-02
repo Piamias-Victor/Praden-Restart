@@ -44,6 +44,10 @@ export class RealSearchGateway extends RealGateway implements SearchGateway {
         isInPromotion: isInPromotion || undefined,
       };
 
+      payload.query = '';
+
+      console.log('payload', payload);
+
       const res = await axios.post(`${this.baseUrl}/search/products`, payload);
 
       return Promise.resolve(res.data.items);

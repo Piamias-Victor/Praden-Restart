@@ -25,7 +25,7 @@ import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
 
 const props = defineProps({
   productUuid: { type: String, required: true },
-  isMedicine: {type: Boolean, required: true}
+  isMedicine: { type: Boolean, required: true },
 });
 
 const cartQuantity = ref<CartQuantityVM | null>(null);
@@ -62,12 +62,7 @@ const addItemToCart = (uuid: string) => {
 };
 
 const isAddButtonHidden = (uuid: string) => {
-  return (
-    props.isMedicine &&
-    cartQuantity.value &&
-    cartQuantity.value.items &&
-    cartQuantity.value.items[uuid] >= 6
-  );
+  return props.isMedicine && cartQuantity.value && cartQuantity.value.items && cartQuantity.value.items[uuid] >= 6;
 };
 
 const sendUserNotif = () => {

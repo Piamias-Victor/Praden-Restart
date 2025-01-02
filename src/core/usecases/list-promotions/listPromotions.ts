@@ -11,3 +11,9 @@ export const listPromotions = async (productGateway: ProductGateway) => {
   const productStore = useProductStore();
   productStore.promotions = product;
 };
+
+export const listBestSales = async (productGateway: ProductGateway) => {
+  const product: Array<UUID> = await productGateway.listBestSales();
+  const productStore = useProductStore();
+  productStore.bestSales = product;
+};

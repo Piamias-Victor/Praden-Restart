@@ -30,8 +30,9 @@ export class RealProductGateway implements ProductGateway {
   }
 
   async listBestSales(): Promise<Array<UUID>> {
-    const res = await axios.get(`${this.baseUrl}/best-sales/`);
-    return Promise.resolve(JSON.parse(JSON.stringify(res.data.items)));
+    const res = await axios.get(`${this.baseUrl}/selection/products`);
+    console.log('res', res)
+    return Promise.resolve(JSON.parse(JSON.stringify(res.data)));
   }
 
   async listPromotions(): Promise<Array<UUID>> {

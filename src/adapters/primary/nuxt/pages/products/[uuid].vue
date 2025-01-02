@@ -136,11 +136,11 @@ function removeAccents(str: string): string {
 // Utilisation de watchEffect pour détecter les changements de laboratory
 watchEffect(async () => {
   const laboratory = productVM.value?.laboratory;
-  console.log('laboratory', laboratory)
+  console.log('laboratory', laboratory);
   if (laboratory) {
     try {
       const laboratoryName = removeAccents(laboratory.split(' ')[0].toLowerCase());
-      console.log('laboratoryName', laboratoryName)
+      console.log('laboratoryName', laboratoryName);
       const result = await searchProduct(laboratoryName, searchGateway());
       // Mettre à jour ici searchVM ou un autre état si nécessaire
     } catch (error) {}

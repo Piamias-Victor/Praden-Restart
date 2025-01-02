@@ -41,7 +41,7 @@ import { onMounted, ref, computed } from 'vue';
 import { getFacetsVM } from '@adapters/primary/viewModels/get-facets/getFacetsVM';
 import { listCategories } from '@core/usecases/list-categories/listCategories';
 import { getChildCategoriesVM } from '@adapters/primary/viewModels/get-category/getChildCategoryVM';
-import { getLaboratoryByName } from '@adapters/primary/viewModels/get-laboratory/getLaboratoryVM';
+import { getLaboratoryByNamePromo } from '@adapters/primary/viewModels/get-laboratory/getLaboratoryVM';
 import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM';
 import { listDeliveryMethods } from '@core/usecases/delivery-methods-listing/listDeliveryMethods';
 import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
@@ -121,7 +121,7 @@ const searchVM = computed(() => {
 });
 
 const filteredProducts = computed(() => {
-  getLaboratoryByName(laboratoryFilter.value, '', searchGateway());
+  getLaboratoryByNamePromo(laboratoryFilter.value, '', searchGateway());
   let res = searchVM.value.items || [];
   if (priceFilter.value) {
     res = res.filter(

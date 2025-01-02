@@ -182,7 +182,7 @@ export class RealEmailGateway implements EmailGateway {
     let total;
     if (cart.totalPriceWithPromotion) total = cart.totalPriceWithPromotion;
     else total = cart.totalPriceWithDelivery;
-    console.log('total', total)
+    console.log('total', total);
     return {
       product_price: this.formatter.format(subTotal / 100),
       shipping_price: cart.DeliveryPrice,

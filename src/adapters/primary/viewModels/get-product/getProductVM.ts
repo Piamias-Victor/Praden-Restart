@@ -84,7 +84,7 @@ export const getProductVM = (): ProductDetailVM => {
   const images: Array<Image> =
     product && product.images.length > 0 ? product.images.map((url) => url) : [DEFAULT_IMAGE_URL];
 
-  console.log('product', product)
+  console.log('product', product);
   const res: ProductDetailVM = {
     uuid: product?.uuid || '',
     name: product?.name || '',
@@ -105,7 +105,6 @@ export const getProductInPromotionVM = () => {
   const productStore = useProductStore();
   const productInPromotion = productStore.promotions;
   const formatter = priceFormatter('fr-FR', 'EUR');
-  console.log('productInPromotion', productInPromotion)
   return {
     products: productInPromotion.slice(0, 20).map((p) => {
       const promotion = getPromotionVM(p);
@@ -128,11 +127,39 @@ export const getProductInPromotionVM = () => {
   };
 };
 
+export const getBestSales = () => {
+  const productStore = useProductStore();
+  const bestSales = productStore.bestSales;
+  console.log('bestSales', bestSales)
+  const formatter = priceFormatter('fr-FR', 'EUR');
+  return {
+    products: bestSales.map((product) => {
+      const p = product.item;
+      const promotion = getPromotionVM(p);
+      const images: Array<Image> = p && p.images.length > 0 ? p.images.map((url) => url) : [DEFAULT_IMAGE_URL];
+      const res = {
+        uuid: p.uuid,
+        name: p.name,
+        laboratory: p.laboratory,
+        images: images,
+        price: formatter.format(p.price / 100),
+        availableStock: p.availableStock,
+        isMedicine: p.isMedicine,
+        href: `/products/${p.uuid}`,
+      };
+      if (promotion) {
+        res.promotion = promotion;
+      }
+      return res;
+    }),
+  };
+};
+
 export const get400ProductInPromotionVM = () => {
   const productStore = useProductStore();
   const productInPromotion = productStore.promotions;
   const formatter = priceFormatter('fr-FR', 'EUR');
-  console.log('productInPromotion', productInPromotion)
+  console.log('productInPromotion', productInPromotion);
   return {
     products: productInPromotion.slice(0, 400).map((p) => {
       const promotion = getPromotionVM(p);
@@ -160,7 +187,7 @@ export const getSearchProductVM = () => {
   const product = searchStore.products;
   const formatter = priceFormatter('fr-FR', 'EUR');
   const details = getDetails(product);
-  console.log('product', product)
+  console.log('product', product);
   const images: Array<Image> =
     product && product.images.length > 0 ? product.images.map((url) => url) : [DEFAULT_IMAGE_URL];
   const res = {
