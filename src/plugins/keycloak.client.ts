@@ -49,9 +49,17 @@ export default defineNuxtPlugin((nuxtApp) => {
           const productStore = useProductStore();
           const productGateway = useProductGateway();
 
-          for (const productUuid of cartItems.items) {
+          console.log('savedCart', savedCart);
+
+          // Itérer sur chaque produit dans savedCart
+          for (const [productUuid, productData] of Object.entries(cartItems)) {
             try {
-              cartStore.add(productUuid);
+              // Ajouter le produit au cartStore autant de fois que la quantité
+              for (let i = 0; i < productData.quantity; i++) {
+                cartStore.add(productUuid);
+              }
+
+              // Récupérer les détails du produit depuis le gateway
               const product = await productGateway.getByUuid(productUuid);
               productStore.add(product);
             } catch (error) {
@@ -59,6 +67,7 @@ export default defineNuxtPlugin((nuxtApp) => {
             }
           }
 
+          // Supprimer le panier sauvegardé de localStorage après restauration
           localStorage.removeItem('cart');
         }
 

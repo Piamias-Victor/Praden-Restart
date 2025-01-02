@@ -121,13 +121,15 @@ const login = () => {
   // Récupérer le panier actuel
   const cartVM = getCartVM();
 
+  console.log('cartVM', cartVM.items);
+
   // Créer un objet avec uniquement les UUID des produits
   const cart = {
     items: Object.keys(cartVM.items),
   };
 
   // Convertir en JSON et sauvegarder dans le localStorage
-  localStorage.setItem('cart', JSON.stringify(cart));
+  localStorage.setItem('cart', JSON.stringify(cartVM.items));
 
   // Redirection pour la connexion
   keycloak?.login().catch((error) => {

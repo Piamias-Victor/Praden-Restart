@@ -16,7 +16,6 @@ export const getSearchResultVM = (sortType: SortType = SortType.None): GetSearch
   const formatter = priceFormatter('fr-FR', 'EUR');
   if (products.length === 0) return { items: [] };
   products.sort(sortByPrice(sortType));
-  console.log('products', products);
   return {
     items: products.map((p) => {
       const promotion = getPromotionVM(p);

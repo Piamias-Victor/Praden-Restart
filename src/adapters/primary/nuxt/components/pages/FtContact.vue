@@ -108,24 +108,22 @@ const props = defineProps({
 });
 
 const message = ref('');
-const phone = ref('')
-const email = ref('')
-
+const phone = ref('');
+const email = ref('');
 
 const emailChanged = (e: any) => {
   email.value = e.target.value;
-  console.log('email.value', email.value)
+  console.log('email.value', email.value);
 };
 
 const phoneChanged = (e: any) => {
   phone.value = e.target.value;
-  console.log('phone.value', phone.value)
+  console.log('phone.value', phone.value);
 };
 
 const messageChanged = (value: string) => {
   message.value = value;
-  console.log('message.value', message.value)
-
+  console.log('message.value', message.value);
 };
 
 const emailGateway = useEmailGateway();
