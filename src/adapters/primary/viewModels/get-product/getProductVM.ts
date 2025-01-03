@@ -130,7 +130,7 @@ export const getProductInPromotionVM = () => {
 export const getBestSales = () => {
   const productStore = useProductStore();
   const bestSales = productStore.bestSales;
-  console.log('bestSales', bestSales)
+  console.log('bestSales', bestSales);
   const formatter = priceFormatter('fr-FR', 'EUR');
   return {
     products: bestSales.map((product) => {
