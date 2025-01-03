@@ -26,7 +26,13 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Praden MarketPlace',
-      link: [{ rel: 'icon', type: 'image/x-icon', href: '/logo_Pharmabest.ico' }],
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico',
+        },
+      ],
       script: [
         { src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js' },
         { src: 'https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js' },
