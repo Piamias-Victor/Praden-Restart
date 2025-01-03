@@ -4,7 +4,7 @@ import { fileURLToPath } from 'url';
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      STRIPE_API_KEY: process.env.STRIPE_API_KEY,
+      STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
       CONFIRMATION_TEMPLATE_ID: process.env.CONFIRMATION_TEMPLATE_ID,
       SEND_EMAIL_URL: process.env.SEND_EMAIL_URL,
       BACKEND_URL: process.env.BACKEND_URL,
@@ -26,6 +26,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Praden MarketPlace',
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/logo_Pharmabest.ico' }],
       script: [
         { src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js' },
         { src: 'https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js' },
