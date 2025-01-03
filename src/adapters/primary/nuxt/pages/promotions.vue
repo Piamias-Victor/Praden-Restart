@@ -27,7 +27,19 @@ div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4(ref='top')
             icon.icon-lg(name="mdi:filter-outline")
 ft-navigation
 div.h-2
+div.px-2.flex.flex-col.gap-2
+    span.text-sm.prose-xl.line-clamp-2.text-contrast(v-if='laboratoryInfo && laboratoryInfo.item' v-html="laboratoryInfo.item.description")
+    span.text-sm.text-main.cursor-pointer.underline.text-center(@click="scrollToDescription") Voir Plus
 ft-product-cat-list(:products="filteredProducts")
+div.h-4
+div.px-2.mt-2.w-full.flex.items-center.flex-col.justify-center.gap-2(ref='description' v-if='laboratoryInfo && laboratoryInfo.item')
+    span.text-center.text-main.text-4xl.font-semibold Description
+    span.text-sm.prose-xl(v-if='laboratoryInfo && laboratoryInfo.item' v-html="laboratoryInfo.item.description")
+div.h-4
+div.flex.items-center.justify-center
+    ft-button.button-solid.text-xl.px-8(@click="scrollToTop")
+        span Retourner en haut de page
+        icon.icon-md(name='line-md:arrow-up')
 div.h-4
 ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory"  @searchPrice="searchPrice" :facetsVM="facetsVM" :sortType="sortType" :laboratoryFilter="laboratoryFilter")
 </template>
@@ -52,16 +64,27 @@ import { useProductGateway } from '../../../../../gateways/productGateway';
 import { get400ProductInPromotionVM } from '@adapters/primary/viewModels/get-product/getProductVM';
 import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
 import { searchPromotion } from '@core/usecases/search-product/searchProduct';
+import { getLaboratory } from '@adapters/primary/viewModels/get-laboratory/getLaboratoryVM';
+import { getLaboratoryInfo } from '@core/usecases/list-laboratories/listLaboratories';
 
 definePageMeta({ layout: 'main' });
 
-onMounted(() => {
+onMounted(async () => {
   listDeliveryMethods(deliveryGateway);
   listCategories(categoryGateway());
   listLaboratories(laboratoryGateway());
   listPromotions(useProductGateway());
   searchPromotion(searchGateway());
+  listLaboratories(laboratoryGateway());
+  getLaboratory('f464691f-7f61-464e-a063-9eff0ab7a714', laboratoryGateway(), searchGateway());
+  try {
+    laboratoryInfo.value = await getLaboratoryInfo(laboratoryGateway(), 'f464691f-7f61-464e-a063-9eff0ab7a714');
+  } catch (error) {
+    console.error('Erreur lors de la récupération des infos laboratoire :', error);
+  }
 });
+
+const laboratoryInfo = ref(null);
 
 const categoriesVM = computed(() => {
   return getRootCategoriesVM();
