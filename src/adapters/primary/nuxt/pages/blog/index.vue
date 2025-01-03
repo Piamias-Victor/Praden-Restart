@@ -13,9 +13,6 @@ section.px-2
       div.flex.flex-col.gap-2
         span.font-semibold.text-lg Tags :
         div.flex.items-center.gap-2
-          ft-button-animate.button-solid SEO
-          ft-button-animate.button-solid Référencement
-          ft-button-animate.button-solid Web
           ft-button-animate.button-solid Santé
           ft-button-animate.button-solid Beauté
   div.py-4.flex.items-center.gap-4
