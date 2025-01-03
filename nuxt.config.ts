@@ -25,7 +25,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Praden MarketPlace',
+      title: 'Pharmacie Agnes Praden - ALES',
       link: [
         {
           rel: 'icon',
