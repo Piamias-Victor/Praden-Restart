@@ -51,10 +51,24 @@ import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-resul
 import { getLaboratoryInfo, listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
 import { laboratoryGateway } from '../../../../../../gateways/laboratoryGateway';
 import { getLaboratory } from '@adapters/primary/viewModels/get-laboratory/getLaboratoryVM';
+import { bannerGateway } from '../../../../../../gateways/bannerGateway';
+import deliveryGateway from '../../../../../../gateways/deliveryGateway';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { useRoute } from 'nuxt/app';
+import { listDeliveryMethods } from '@core/usecases/delivery-methods-listing/listDeliveryMethods';
+import { listBanner } from '@core/usecases/list-banner/listBanner';
+import { listPromotions, listBestSales } from '@core/usecases/list-promotions/listPromotions';
 
 definePageMeta({ layout: 'main' });
 
 onMounted(async () => {
+  listDeliveryMethods(deliveryGateway);
+  listCategories(categoryGateway());
+  listLaboratories(laboratoryGateway());
+  listPromotions(useProductGateway());
+  listDeliveryMethods(deliveryGateway);
+  listBanner(bannerGateway());
+  listBestSales(useProductGateway());
   listLaboratories(laboratoryGateway());
   getLaboratory(categoryUuid, laboratoryGateway(), searchGateway());
   try {

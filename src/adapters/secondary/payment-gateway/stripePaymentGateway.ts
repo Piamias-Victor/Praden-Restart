@@ -89,8 +89,8 @@ export class StripePaymentGateway implements PaymentGateway {
       payment_method_types: ['card'],
       mode: 'payment',
       line_items: lineItems,
-      success_url: 'https://praden-restart.pages.dev/checkout/success', // Mettez à jour pour la production
-      cancel_url: 'https://praden-restart.pages.dev/checkout/error', // Mettez à jour pour la production
+      success_url: 'https://www.pharmacieagnespraden.com/checkout/success', // Mettez à jour pour la production
+      cancel_url: 'https://www.pharmacieagnespraden.com/checkout/error', // Mettez à jour pour la production
       payment_intent_data: {
         metadata: {
           orderUuid: orderUuid,
