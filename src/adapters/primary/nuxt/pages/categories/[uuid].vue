@@ -127,9 +127,6 @@ const searchLaboratory = (labo: string | null) => {
 
 const filteredProducts = computed(() => {
   getLaboratoryByName(laboratoryFilter.value, '', searchGateway());
-  if (laboratoryFilter.value.length === 0) {
-    getCategory(categoryUuid, categoryGateway(), searchGateway());
-  }
   let res = searchVM.value.items || [];
   if (priceFilter.value) {
     res = res.filter(
@@ -138,6 +135,12 @@ const filteredProducts = computed(() => {
     );
   }
   return res;
+});
+
+watchEffect(() => {
+  if (laboratoryFilter.value.length === 0) {
+    getCategory(categoryUuid, categoryGateway(), searchGateway());
+  }
 });
 
 const parsePrice = (priceString: string) => {
