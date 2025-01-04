@@ -50,7 +50,7 @@ export class RealOrderGateway implements OrderGateway {
     if (deliveryMethodsStore.selected!.point) {
       body = {
         ...rest,
-        customerMessage: 'test de message',
+        customerMessage: '',
         billingAddress: orderDTO.deliveryAddress,
         pickupId: deliveryMethodsStore.selected!.point,
         deliveryMethodUuid: orderDTO.delivery.method.uuid,
