@@ -110,8 +110,6 @@ export class RealEmailGateway implements EmailGateway {
       },
     };
 
-    // console.log('body:', JSON.stringify(body, null, 2));
-
     const headers = {
       'Content-Type': 'application/json',
     };
@@ -173,7 +171,6 @@ export class RealEmailGateway implements EmailGateway {
 
   private getTotals(orderLines: Array<OrderLine>, deliveryMethod: DeliveryMethod) {
     const cart = getCartVM();
-    console.log('cart:', JSON.stringify(cart, null, 2));
 
     const subTotal = orderLines.reduce((acc, line) => {
       const amount = line.unitAmount;
@@ -182,7 +179,6 @@ export class RealEmailGateway implements EmailGateway {
     let total;
     if (cart.totalPriceWithPromotion) total = cart.totalPriceWithPromotion;
     else total = cart.totalPriceWithDelivery;
-    console.log('total', total);
     return {
       product_price: this.formatter.format(subTotal / 100),
       shipping_price: cart.DeliveryPrice,

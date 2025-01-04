@@ -2,7 +2,6 @@ import { SearchGateway } from '@core/gateways/searchGateway';
 import { useSearchStore } from '@store/searchStore';
 
 export const searchProduct = async (query: string, searchGateway: SearchGateway, laboratoryUuids?: Array<string>) => {
-  console.log('query', query);
   const searchStore = useSearchStore();
   if (!query) {
     searchStore.setSearchResult([]);

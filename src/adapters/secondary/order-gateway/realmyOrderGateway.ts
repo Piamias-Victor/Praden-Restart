@@ -17,8 +17,6 @@ export class RealmyOrderGateway implements MyOrderGateway {
           Authorization: `Bearer ${token}`, // Ajout du token ici
         },
       });
-      console.log('token pour order :', token);
-      console.log('data', res.data);
       return Promise.resolve(res.data.items);
     } catch (error) {
       console.error('Erreur lors de la récupération des commandes :', error);

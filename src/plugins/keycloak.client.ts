@@ -49,8 +49,6 @@ export default defineNuxtPlugin((nuxtApp) => {
           const productStore = useProductStore();
           const productGateway = useProductGateway();
 
-          console.log('savedCart', savedCart);
-
           // Itérer sur chaque produit dans savedCart
           for (const [productUuid, productData] of Object.entries(cartItems)) {
             try {
@@ -76,7 +74,6 @@ export default defineNuxtPlugin((nuxtApp) => {
           try {
             const refreshed = await keycloak.updateToken(60);
             if (refreshed) {
-              console.log('Token rafraîchi');
             }
           } catch (err) {
             console.error('Échec du rafraîchissement du token Keycloak', err);
@@ -90,7 +87,6 @@ export default defineNuxtPlugin((nuxtApp) => {
     } catch (err) {
       console.error('Échec de initialisation de Keycloak', err);
       if (err.error === 'login_required') {
-        console.log('Connexion requise. Redirection...');
         await keycloak.login();
       }
     }

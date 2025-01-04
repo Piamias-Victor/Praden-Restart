@@ -58,7 +58,6 @@ export const getSearchLaboratoriesVM = (query: string): SearchCategoriesVM => {
   const searchLaboratories = laboratories.filter((l) =>
     removeAccents(l.name).toLowerCase().includes(removeAccents(query).toLowerCase()),
   );
-  console.log('searchLaboratories', searchLaboratories);
   const sortedLaboratories = searchLaboratories.sort((a, b) => {
     const queryLower = removeAccents(query).toLowerCase();
     const aName = removeAccents(a.name).toLowerCase();

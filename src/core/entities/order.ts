@@ -16,7 +16,6 @@ export interface OrderLine {
 }
 
 export const getOrderLineUnitAmount = (line: OrderLine): number => {
-  console.log('line:', JSON.stringify(line, null, 2));
   let res = line.unitAmount;
   if (line.promotion) {
     const promotion = line.promotion;

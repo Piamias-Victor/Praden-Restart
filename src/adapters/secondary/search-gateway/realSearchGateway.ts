@@ -46,8 +46,6 @@ export class RealSearchGateway extends RealGateway implements SearchGateway {
 
       payload.query = '';
 
-      console.log('payload', payload);
-
       const res = await axios.post(`${this.baseUrl}/search/products`, payload);
 
       return Promise.resolve(res.data.items);

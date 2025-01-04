@@ -9,6 +9,5 @@ export const getBannerVM = () => {
   // Utilisation de `computed` pour garantir la réactivité
   const banners = computed(() => bannerStore.items);
 
-  console.log('banners: dans le get', banners.value);
   return banners;
 };

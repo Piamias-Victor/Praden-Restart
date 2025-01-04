@@ -116,8 +116,6 @@ export const getProductsInCart = (): ProductsInCart => {
 export const getDeliveryPrice = (method: DeliveryMethod, weight: number, total: number, medecine: boolean): number => {
   // Trouve la tranche de poids appropriée
 
-  console.log('medecine', medecine);
-
   if (method.uuid === '505209a2-7acb-4891-b933-e084d786d7ea' && total > 6900 && weight < 5000 && medecine === false) {
     return 0; // Livraison gratuite
   }

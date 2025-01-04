@@ -114,7 +114,6 @@ export const createCartItemsVMFromCartItems = (items: HashTable<CartItem>): Hash
   const itemsVM: HashTable<CartItemVM> = {};
   Object.keys(items).forEach((key) => {
     const item = items[key];
-    console.log('item', item);
     itemsVM[key] = {
       uuid: item.uuid,
       name: item.name,
