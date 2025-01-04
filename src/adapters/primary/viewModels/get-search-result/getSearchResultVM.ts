@@ -2,22 +2,27 @@ import { useSearchStore } from '@store/searchStore';
 import { priceFormatter } from '@utils/formater';
 import { ProductItemVM, getPromotionVM } from '../get-category/getCategoryVM';
 import { sortByPrice, SortType } from '@utils/sort';
+import { getBestSales } from '../get-product/getProductVM';
 
 type GetSearchResultItemVM = ProductItemVM;
 
-export interface GetSearchResultVM {
-  items: Array<GetSearchResultItemVM>;
-  facets: any;
-}
 export const getSearchResultVM = (sortType: SortType = SortType.None): GetSearchResultVM => {
   const searchStore = useSearchStore();
   const products = searchStore.result;
   const facets = searchStore.facets;
   const formatter = priceFormatter('fr-FR', 'EUR');
-  if (products.length === 0) return { items: [] };
-  products.sort(sortByPrice(sortType));
+
+  if (products.length === 0) {
+    return { items: [] };
+  }
+
+  // Au lieu de `products.sort(...)`, on crée une copie avec le spread operator
+// - products.sort(sortByPrice(sortType));
+const sortedProducts = [...products].sort(sortByPrice(sortType));
+
   return {
-    items: products.map((p) => {
+// -   items: products.map((p) => {
+    items: sortedProducts.map((p) => {
       const promotion = getPromotionVM(p);
       const res: GetSearchResultItemVM = {
         uuid: p.uuid,
@@ -38,16 +43,21 @@ export const getSearchResultVM = (sortType: SortType = SortType.None): GetSearch
   };
 };
 
+
 export const getSearchResultVMFirstSix = (excludeUuid: string): GetSearchResultVM => {
   const searchStore = useSearchStore();
   const products = searchStore.result;
   const formatter = priceFormatter('fr-FR', 'EUR');
+  const defaultProducts = getBestSales();
 
   // Si aucun produit, renvoyer un tableau vide
-  if (products.length === 0) return { items: [] };
+  // if (products.length === 0) return defaultProducts.products;
 
   // Filtrer les produits pour exclure celui avec l'uuid spécifié
   const filteredProducts = products.filter((p) => p.uuid !== excludeUuid);
+
+  console.log('filteredProducts', filteredProducts)
+  console.log('defaultProducts', defaultProducts)
 
   // Retourner les 6 premiers produits après filtrage
   return {

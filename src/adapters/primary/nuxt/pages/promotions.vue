@@ -1,5 +1,5 @@
 <template lang="pug">
-//- pre {{facetsVM}}
+pre {{laboratoryFilter}}
 ft-categories(:categoriesVM="categoriesVM")
 div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4(ref='top')
     span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') Promotions
@@ -145,6 +145,10 @@ const searchVM = computed(() => {
 
 const filteredProducts = computed(() => {
   getLaboratoryByNamePromo(laboratoryFilter.value, '', searchGateway());
+  console.log(laboratoryFilter.value)
+  if (laboratoryFilter.value.length === 0) {
+    searchPromotion(searchGateway());
+  }
   let res = searchVM.value.items || [];
   if (priceFilter.value) {
     res = res.filter(

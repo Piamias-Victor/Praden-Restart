@@ -27,6 +27,7 @@ export interface ProductDetailVM {
   details: Array<any>;
   availableStock: number;
   isMedicine: boolean;
+  noticeUrl?: string;
 }
 
 const getDetails = (product: ProductDetail | undefined): Array<any> => {
@@ -95,6 +96,7 @@ export const getProductVM = (): ProductDetailVM => {
     rating: product?.rating,
     isMedicine: product?.isMedicine,
     availableStock: product?.availableStock,
+    noticeUrl: product?.noticeUrl,
     details,
     promotion,
   };
@@ -117,6 +119,7 @@ export const getProductInPromotionVM = () => {
         price: formatter.format(p.priceWithTax / 100),
         availableStock: p.availableStock,
         isMedecine: p.isMedicine,
+        noticeUrl: p?.noticeUrl,
         href: `/products/${p.uuid}`,
       };
       if (promotion) {
@@ -145,6 +148,7 @@ export const getBestSales = () => {
         price: formatter.format(p.price / 100),
         availableStock: p.availableStock,
         isMedicine: p.isMedicine,
+        noticeUrl: p?.noticeUrl,
         href: `/products/${p.uuid}`,
       };
       if (promotion) {
@@ -172,6 +176,7 @@ export const get400ProductInPromotionVM = () => {
         price: formatter.format(p.priceWithTax / 100),
         availableStock: p.availableStock,
         isMedecine: p.isMedicine,
+        noticeUrl: p?.noticeUrl,
         href: `/products/${p.uuid}`,
       };
       if (promotion) {
@@ -198,6 +203,7 @@ export const getSearchProductVM = () => {
     images: images,
     isMedicine: product.isMedicine,
     availableStock: product.availableStock,
+    noticeUrl: product?.noticeUrl,
   };
   return res;
 };
