@@ -17,7 +17,7 @@ section.px-2
           ft-button-animate.button-solid Bien Etre
       span.text-contrast.font-semibold Date de publication : 01/12/2024
     span.text-sm.prose-xl(v-if='laboratoryInfo && laboratoryInfo.item' v-html="laboratoryInfo.item.description")
-  ft-product-list.mt-4(:products="searchVM") Ces produits peuvent vous plaire
+  //- ft-product-list.mt-4(:products="searchVM") Ces produits peuvent vous plaire
 </template>
 
 <script lang="ts" setup>
