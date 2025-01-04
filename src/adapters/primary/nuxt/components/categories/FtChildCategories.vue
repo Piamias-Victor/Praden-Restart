@@ -22,7 +22,9 @@ definePageMeta({ layout: 'main' });
 const router = useRouter();
 
 const goToCat = (path: string, name: string) => {
-  router.push('/categories/' + path + '?' + name);
+  setTimeout(() => {
+    router.push(`/categories/${path}?${name}`);
+  }, 1000);
 };
 
 const goBack = () => {
