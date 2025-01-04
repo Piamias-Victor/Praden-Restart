@@ -68,6 +68,11 @@ import { sendNotifLike } from '@core/usecases/add-notif/cartNotif';
 import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification';
 import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm';
 import { getCategoryVM } from '@adapters/primary/viewModels/get-category/getCategoryVM';
+import { listBestSales } from '@core/usecases/list-promotions/listPromotions';
+import { getSearchLaboratoriesVM } from '@adapters/primary/viewModels/get-category/getSearchCategoryVM';
+import { getLaboratoryByName } from '@adapters/primary/viewModels/get-laboratory/getLaboratoryVM';
+import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
+import { laboratoryGateway } from '../../../../../../gateways/laboratoryGateway';
 
 definePageMeta({ layout: 'main' });
 
@@ -81,6 +86,8 @@ onMounted(() => {
   productId.value = route.params.uuid as string;
   getProduct(productId.value, useProductGateway());
   listCategories(categoryGateway());
+  listBestSales(useProductGateway());
+  listLaboratories(laboratoryGateway());
 });
 
 const productVM = computed(() => {
@@ -139,9 +146,9 @@ watchEffect(async () => {
   console.log('laboratory', laboratory);
   if (laboratory) {
     try {
-      const laboratoryName = removeAccents(laboratory.split(' ')[0].toLowerCase());
-      console.log('laboratoryName', laboratoryName);
-      const result = await searchProduct(laboratoryName, searchGateway());
+      // const laboratoryName = removeAccents(laboratory.split(' ')[0].toLowerCase());
+      console.log('laboratoryName', laboratory);
+      const result = getLaboratoryByName([laboratory], '', searchGateway());
       // Mettre à jour ici searchVM ou un autre état si nécessaire
     } catch (error) {}
   } else {

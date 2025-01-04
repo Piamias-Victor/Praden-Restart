@@ -14,7 +14,7 @@ div
         )
       div.ml-4.flex.flex-1.flex-col.items-center.justify-center
           p.mr-1.text-sm.line-clamp-3.font-semibold {{ item.name }}
-  a(href='https://agence-prd.ansm.sante.fr/php/ecodex/frames.php?specid=60234100&typedoc=R&ref=R0189465.htm' target='_blank')
+  a(:href='item.noticeUrl' target='_blank')
     ft-button.button-solid.w-full
       span Voir la notice
       icon.icon-md(name="akar-icons:send")

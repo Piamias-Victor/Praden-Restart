@@ -120,6 +120,9 @@ const searchLaboratory = (labo: string | null) => {
 
 const filteredProducts = computed(() => {
   getLaboratoryByName(laboratoryFilter.value, '', searchGateway());
+  if (laboratoryFilter.value.length === 0) {
+    getCategory(categoryUuid, categoryGateway(), searchGateway());
+  }
   let res = searchVM.value.items || [];
   if (priceFilter.value) {
     res = res.filter(
@@ -144,6 +147,7 @@ const categoriesVM = computed(() => getChildCategoriesVM(categoryUuid));
 const categoryVM = computed(() => getCategoryVM(sortType.value));
 
 const searchVM = computed(() => {
+  console.log('ici')
   const result = getSearchResultVM(sortType.value);
   return { ...result }; // Force une réactivité
 });

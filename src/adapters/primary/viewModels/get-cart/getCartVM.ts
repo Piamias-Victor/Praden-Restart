@@ -86,6 +86,7 @@ export const getProductsInCart = (): ProductsInCart => {
             medecine: p.isMedicine,
             weight: p.weight,
             promotion: p.promotions[0],
+            noticeUrl: p?.noticeUrl,
           },
         },
         total,
@@ -177,6 +178,7 @@ export const createCartItemsVMFromCartItems = (items: HashTable<CartItem>): Hash
       img: item.img,
       weight: item.weight,
       medecine: item.medecine,
+      noticeUrl: item?.noticeUrl,
     };
     if (item.totalPriceWithPromotion) {
       itemsVM[key].totalPriceWithPromotion = formatter.format(item.totalPriceWithPromotion / 100);
