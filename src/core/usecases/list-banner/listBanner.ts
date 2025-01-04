@@ -7,7 +7,6 @@ import { useBannerStore } from '@store/bannerStore';
 
 export const listBanner = async (bannerGateway: BannerGateway) => {
   const banner: Array<any> = await bannerGateway.get();
-  console.log('banner', banner);
   const bannerStore = useBannerStore();
   bannerStore.list(banner);
 };

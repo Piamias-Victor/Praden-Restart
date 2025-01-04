@@ -17,11 +17,11 @@ export const getSearchResultVM = (sortType: SortType = SortType.None): GetSearch
   }
 
   // Au lieu de `products.sort(...)`, on crée une copie avec le spread operator
-// - products.sort(sortByPrice(sortType));
-const sortedProducts = [...products].sort(sortByPrice(sortType));
+  // - products.sort(sortByPrice(sortType));
+  const sortedProducts = [...products].sort(sortByPrice(sortType));
 
   return {
-// -   items: products.map((p) => {
+    // -   items: products.map((p) => {
     items: sortedProducts.map((p) => {
       const promotion = getPromotionVM(p);
       const res: GetSearchResultItemVM = {
@@ -43,7 +43,6 @@ const sortedProducts = [...products].sort(sortByPrice(sortType));
   };
 };
 
-
 export const getSearchResultVMFirstSix = (excludeUuid: string): GetSearchResultVM => {
   const searchStore = useSearchStore();
   const products = searchStore.result;
@@ -54,10 +53,29 @@ export const getSearchResultVMFirstSix = (excludeUuid: string): GetSearchResultV
   // if (products.length === 0) return defaultProducts.products;
 
   // Filtrer les produits pour exclure celui avec l'uuid spécifié
-  const filteredProducts = products.filter((p) => p.uuid !== excludeUuid);
+  let filteredProducts = products.filter((p) => p.uuid !== excludeUuid);
 
-  console.log('filteredProducts', filteredProducts)
-  console.log('defaultProducts', defaultProducts)
+  if (filteredProducts.length === 0) {
+    return {
+      items: defaultProducts.products.slice(0, 6).map((p) => {
+        // Utilisation de slice(0, 6) pour prendre les 6 premiers produits
+        const promotion = getPromotionVM(p);
+        const res: GetSearchResultItemVM = {
+          uuid: p.uuid,
+          name: p.name,
+          laboratory: p.laboratory,
+          images: p.images,
+          price: p.price,
+          href: `/products/${p.uuid}`,
+          availableStock: p.availableStock,
+        };
+        if (promotion) {
+          res.promotion = promotion;
+        }
+        return res;
+      }),
+    };
+  }
 
   // Retourner les 6 premiers produits après filtrage
   return {
@@ -71,6 +89,7 @@ export const getSearchResultVMFirstSix = (excludeUuid: string): GetSearchResultV
         images: p.images,
         price: formatter.format(p.priceWithTax / 100),
         href: `/products/${p.uuid}`,
+        availableStock: p.availableStock,
       };
       if (promotion) {
         res.promotion = promotion;

@@ -121,8 +121,6 @@ const login = () => {
   // Récupérer le panier actuel
   const cartVM = getCartVM();
 
-  console.log('cartVM', cartVM.items);
-
   // Créer un objet avec uniquement les UUID des produits
   const cart = {
     items: Object.keys(cartVM.items),
@@ -170,9 +168,7 @@ const closeSubscribe = () => {
 
 // Autres modaux
 const openContact = () => {
-  console.log('ici je suis la ');
   contactOpened.value = true;
-  console.log('contactOpened.value', contactOpened.value);
 };
 
 const closeContact = () => {

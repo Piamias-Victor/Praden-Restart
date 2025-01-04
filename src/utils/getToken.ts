@@ -14,7 +14,7 @@ export const getToken = async (): Promise<string | null> => {
       }
       return keycloak.token || null
     } catch (error: any) {
-      console.error('Échec du rafraîchissement du token:', error)
+      console.error('Échec du rafraîchissement du token :', error)
       return null
     }
   }

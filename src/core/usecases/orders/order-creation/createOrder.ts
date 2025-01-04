@@ -102,7 +102,6 @@ export const createOrder = async (
     // Créer la commande via OrderGateway
 
     const order = await orderGateway.create(orderDTO, deliveryPrice);
-    // console.log('order:', JSON.stringify(order, null, 2));
     // Ajouter la commande au store
     const orderStore = useOrderStore();
     orderStore.add(order);

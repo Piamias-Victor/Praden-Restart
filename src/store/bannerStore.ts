@@ -14,7 +14,6 @@ export const useBannerStore = defineStore('BannerStore', {
   },
   actions: {
     list(banner: Array<any>) {
-      console.log('dans le store : ', banner);
       this.items = banner;
     },
   },

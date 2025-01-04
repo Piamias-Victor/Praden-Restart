@@ -73,6 +73,11 @@ import { getSearchLaboratoriesVM } from '@adapters/primary/viewModels/get-catego
 import { getLaboratoryByName } from '@adapters/primary/viewModels/get-laboratory/getLaboratoryVM';
 import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
 import { laboratoryGateway } from '../../../../../../gateways/laboratoryGateway';
+import { listDeliveryMethods } from '@core/usecases/delivery-methods-listing/listDeliveryMethods';
+import { listPromotions } from '@core/usecases/list-promotions/listPromotions';
+import { listBanner } from '@core/usecases/list-banner/listBanner';
+import { bannerGateway } from '../../../../../../gateways/bannerGateway';
+import deliveryGateway from '../../../../../../gateways/deliveryGateway';
 
 definePageMeta({ layout: 'main' });
 
@@ -83,6 +88,9 @@ const isPromo = ref(false);
 const route = useRoute();
 
 onMounted(() => {
+  listDeliveryMethods(deliveryGateway);
+  listPromotions(useProductGateway());
+  listBanner(bannerGateway());
   productId.value = route.params.uuid as string;
   getProduct(productId.value, useProductGateway());
   listCategories(categoryGateway());
@@ -143,11 +151,9 @@ function removeAccents(str: string): string {
 // Utilisation de watchEffect pour détecter les changements de laboratory
 watchEffect(async () => {
   const laboratory = productVM.value?.laboratory;
-  console.log('laboratory', laboratory);
   if (laboratory) {
     try {
       // const laboratoryName = removeAccents(laboratory.split(' ')[0].toLowerCase());
-      console.log('laboratoryName', laboratory);
       const result = getLaboratoryByName([laboratory], '', searchGateway());
       // Mettre à jour ici searchVM ou un autre état si nécessaire
     } catch (error) {}

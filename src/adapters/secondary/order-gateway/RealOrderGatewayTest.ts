@@ -117,7 +117,6 @@ export class RealOrderGateway implements OrderGateway {
       if ($keycloak) {
         const refreshed = await $keycloak.updateToken(30);
         if (refreshed) {
-          console.log('Token Keycloak rafraîchi avec succès.');
         }
       }
 
@@ -126,8 +125,6 @@ export class RealOrderGateway implements OrderGateway {
       if (!token) {
         throw new Error('Token Keycloak non disponible pour authentification.');
       }
-
-      console.log('body2 : ', body);
 
       const res = await axios.post('https://ecommerce-backend-production.admin-a5f.workers.dev/orders', body, {
         headers: {

@@ -111,8 +111,6 @@ const orders = computed(() => {
   }
 });
 
-console.log('orders', orders);
-
 // Trier les commandes par date de création (les plus récentes en premier)
 const sortedOrders = computed(() => {
   return [...orders.value].sort((a, b) => b.createdAt - a.createdAt);

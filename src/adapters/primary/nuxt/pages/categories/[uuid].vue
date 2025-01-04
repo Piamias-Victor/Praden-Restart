@@ -60,6 +60,9 @@ import { listPromotions } from '@core/usecases/list-promotions/listPromotions';
 import deliveryGateway from '../../../../../../gateways/deliveryGateway';
 import { laboratoryGateway } from '../../../../../../gateways/laboratoryGateway';
 import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { listBanner } from '@core/usecases/list-banner/listBanner';
+import { bannerGateway } from '../../../../../../gateways/bannerGateway';
+import { listBestSales } from '@core/usecases/list-promotions/listPromotions';
 
 definePageMeta({ layout: 'main' });
 
@@ -68,6 +71,9 @@ onMounted(() => {
   listCategories(categoryGateway());
   listLaboratories(laboratoryGateway());
   listPromotions(useProductGateway());
+  listDeliveryMethods(deliveryGateway);
+  listBanner(bannerGateway());
+  listBestSales(useProductGateway());
 });
 
 const description = ref(null);
@@ -147,7 +153,6 @@ const categoriesVM = computed(() => getChildCategoriesVM(categoryUuid));
 const categoryVM = computed(() => getCategoryVM(sortType.value));
 
 const searchVM = computed(() => {
-  console.log('ici')
   const result = getSearchResultVM(sortType.value);
   return { ...result }; // Force une réactivité
 });

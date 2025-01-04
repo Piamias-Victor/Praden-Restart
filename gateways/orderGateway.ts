@@ -12,7 +12,6 @@ export const useOrderGateway = () => {
   const {
     public: { STRIPE_SECRET_KEY },
   } = useRuntimeConfig();
-  console.log('STRIPE_SECRET_KEY', STRIPE_SECRET_KEY);
 
   const orderGateway = new RealOrderGateway(
     new FakeUUIDGenerator(),
