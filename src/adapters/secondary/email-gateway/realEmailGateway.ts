@@ -44,7 +44,7 @@ export class RealEmailGateway implements EmailGateway {
     const userMail = to;
     const userPhone = phone;
     const body = {
-      to: 'victorpiamiaspro@gmail.com',
+      to: 'webpharmaciepraden@gmail.com',
       subject: 'test',
       templateId: '6600780', // Utiliser le template ID de test
       data: {
