@@ -10,7 +10,7 @@ nav.flex.items-center.justify-center.p-2.px-9
             @click="clicked"
             )
           img.block(
-                  class='h-[70px]'
+                  class='h-[40px] sm:h-[60px]'
                   src="https://i.postimg.cc/FsS7CdM5/p-removebg-preview.png"
                   alt="logo"
                   )
