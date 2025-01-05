@@ -106,6 +106,8 @@ export const getProductInPromotionVM = () => {
   const productStore = useProductStore();
   const productInPromotion = productStore.promotions;
   const formatter = priceFormatter('fr-FR', 'EUR');
+  console.log('productInPromotion', productInPromotion)
+
   return {
     products: productInPromotion.slice(0, 20).map((p) => {
       const promotion = getPromotionVM(p);
@@ -133,10 +135,11 @@ export const getBestSales = () => {
   const productStore = useProductStore();
   const bestSales = productStore.bestSales;
   const formatter = priceFormatter('fr-FR', 'EUR');
+  console.log('bestSales', bestSales)
   return {
     products: bestSales.map((product) => {
       const p = product.item;
-      const promotion = getPromotionVM(p);
+      const promotion = getPromotionInProductVM(p);
       const images: Array<Image> = p && p.images.length > 0 ? p.images.map((url) => url) : [DEFAULT_IMAGE_URL];
       const res = {
         uuid: p.uuid,
