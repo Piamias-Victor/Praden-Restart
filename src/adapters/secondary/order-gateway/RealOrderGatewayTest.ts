@@ -109,7 +109,6 @@ export class RealOrderGateway implements OrderGateway {
         ),
       };
     }
-
     const { $keycloak }: any = useNuxtApp();
 
     try {
@@ -125,6 +124,9 @@ export class RealOrderGateway implements OrderGateway {
       if (!token) {
         throw new Error('Token Keycloak non disponible pour authentification.');
       }
+
+      console.log('body', body)
+
 
       const res = await axios.post('https://ecommerce-backend-production.admin-a5f.workers.dev/orders', body, {
         headers: {

@@ -54,6 +54,12 @@ export const createOrder = async (
     // Récupérer les produits dans le panier
     const { items } = getProductsInCart();
 
+        // Vider le panier
+    // Obtenir les informations utilisateur
+    const user = computed(() => {
+      return getUserVM();
+    });
+
     // Créer les lignes de commande
     const lines: Array<CreateOrderLineDTO> = await Promise.all(
       Object.keys(items).map(async (key) => {
@@ -78,6 +84,7 @@ export const createOrder = async (
     // Obtenir la méthode de livraison sélectionnée
     const deliveryStore = useDeliveryStore();
     const deliveryMethod = deliveryStore.getByUuid(deliveryMethodUuid);
+    console.log('user', user)
 
     // Construire le DTO de commande
     const orderDTO: CreateOrderDTO = {
@@ -90,8 +97,8 @@ export const createOrder = async (
         method: deliveryMethod,
       },
       deliveryAddress: {
-        firstname: deliveryAddress.firstname,
-        lastname: deliveryAddress.lastname,
+        firstname: user.value.firstname,
+        lastname: user.value.lastname,
         address: deliveryAddress.address,
         appartement: deliveryAddress.appartement,
         zip: deliveryAddress.zip,
@@ -105,12 +112,6 @@ export const createOrder = async (
     // Ajouter la commande au store
     const orderStore = useOrderStore();
     orderStore.add(order);
-
-    // Vider le panier
-    // Obtenir les informations utilisateur
-    const user = computed(() => {
-      return getUserVM();
-    });
 
     // Préparer les données de confirmation de commande
     const sendOrderConfirmationDTO: SendOrderConfirmationDTO = {
