@@ -81,7 +81,7 @@ export class RealOrderGateway implements OrderGateway {
     } else {
       body = {
         ...rest,
-        customerMessage: 'test de message',
+        customerMessage: '',
         billingAddress: orderDTO.deliveryAddress,
         deliveryMethodUuid: orderDTO.delivery.method.uuid,
         lines: await Promise.all(
