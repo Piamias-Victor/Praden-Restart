@@ -70,6 +70,7 @@ import { useEmailGateway } from '../../../../../../gateways/emailGateway';
 import { useOrderGateway } from '../../../../../../gateways/orderGateway';
 import windowGateway from '../../../../../../gateways/windowGateway';
 import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import { useDeliveryStore } from '@store/deliveryStore';
 
 const router = useRouter();
 
@@ -124,17 +125,27 @@ const user = computed(() => {
 });
 
 const validateOrder = () => {
-  createOrder(
-    user.value.email,
-    user.value.phone,
-    selectedDeliveryMethod.value,
-    user.value.address,
-    useOrderGateway(),
-    useProductGateway(),
-    windowGateway,
-    useEmailGateway(),
-    cart.value.DeliveryPrice,
-  );
+  const deliveryMethodsStore = useDeliveryStore();
+
+  if (
+    deliveryMethodsStore.selected.uuid === '505209a2-7acb-4891-b933-e084d786d7ea' &&
+    !deliveryMethodsStore.selected.point
+  ) {
+    console.log('pas de delivery pickup');
+  } else {
+    createOrder(
+      user.value.email,
+      user.value.phone,
+      selectedDeliveryMethod.value,
+      user.value.address,
+      useOrderGateway(),
+      useProductGateway(),
+      windowGateway,
+      useEmailGateway(),
+      cart.value.DeliveryPrice,
+    );
+  }
+
   //- router.push('/checkout/success');
 };
 

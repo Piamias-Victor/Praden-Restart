@@ -54,7 +54,7 @@ export const createOrder = async (
     // Récupérer les produits dans le panier
     const { items } = getProductsInCart();
 
-        // Vider le panier
+    // Vider le panier
     // Obtenir les informations utilisateur
     const user = computed(() => {
       return getUserVM();
@@ -84,7 +84,7 @@ export const createOrder = async (
     // Obtenir la méthode de livraison sélectionnée
     const deliveryStore = useDeliveryStore();
     const deliveryMethod = deliveryStore.getByUuid(deliveryMethodUuid);
-    console.log('user', user)
+    console.log('user', user);
 
     // Construire le DTO de commande
     const orderDTO: CreateOrderDTO = {

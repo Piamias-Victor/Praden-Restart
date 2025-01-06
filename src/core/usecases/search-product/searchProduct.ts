@@ -6,9 +6,9 @@ export const searchProduct = async (query: string, searchGateway: SearchGateway,
   if (!query) {
     searchStore.setSearchResult([]);
   } else {
-    console.log('query', query)
+    console.log('query', query);
     const products = await searchGateway.searchProduct(query, laboratoryUuids);
-    console.log('products', products)
+    console.log('products', products);
     const facets = await searchGateway.searchFacet(query, laboratoryUuids);
     searchStore.setFacets(facets);
     searchStore.setSearchResult(products);

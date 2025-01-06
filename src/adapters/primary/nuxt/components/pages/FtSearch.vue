@@ -214,7 +214,7 @@ const searchChanged = (e: any) => {
     clearTimeout(debounceTimeout);
   }
   query.value = e.target.value;
-  console.log('query.value', query.value)
+  console.log('query.value', query.value);
   debounceTimeout = setTimeout(() => {
     searchProduct(query.value, searchGateway());
   }, 500);

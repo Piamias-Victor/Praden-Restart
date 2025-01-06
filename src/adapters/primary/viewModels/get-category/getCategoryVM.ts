@@ -94,7 +94,7 @@ export const getPromotionVM = (product: Product | ProductDetail): PromotionVM | 
 };
 
 export const getCategoryVM = (sortType: SortType = SortType.None) => {
-  console.log('la')
+  console.log('la');
   const categoryStore = useCategoryStore();
   const categories = categoryStore.items;
   const searchStore = useSearchStore();

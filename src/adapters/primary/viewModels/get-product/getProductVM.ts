@@ -106,7 +106,7 @@ export const getProductInPromotionVM = () => {
   const productStore = useProductStore();
   const productInPromotion = productStore.promotions;
   const formatter = priceFormatter('fr-FR', 'EUR');
-  console.log('productInPromotion', productInPromotion)
+  console.log('productInPromotion', productInPromotion);
 
   return {
     products: productInPromotion.slice(0, 20).map((p) => {
@@ -135,7 +135,7 @@ export const getBestSales = () => {
   const productStore = useProductStore();
   const bestSales = productStore.bestSales;
   const formatter = priceFormatter('fr-FR', 'EUR');
-  console.log('bestSales', bestSales)
+  console.log('bestSales', bestSales);
   return {
     products: bestSales.map((product) => {
       const p = product.item;
