@@ -2,8 +2,8 @@
     div.flex.flex-col.gap-10
       ft-categories(:categoriesVM="categoriesVM")
       ft-slider(:bannerVM="bannerVM")
-      ft-product-list(:products="products.products") La sélection du pharmacien
       ft-product-list(:products="productInPromotion.products") Promotion
+      ft-product-list(:products="products.products") La sélection du pharmacien
       ft-brand-list
       ft-blog(:blogVm='blogVm')
       ft-review

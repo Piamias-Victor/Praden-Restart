@@ -7,7 +7,7 @@ section.px-2.hidden(class='sm:block')
       iframe.block.rounded-xl.w-full(
         width="560"
         height="560"
-        src="https://www.youtube.com/embed/zLmfyGVF2h0"
+        src="https://www.youtube.com/embed/hbwXYfO4wOQ?si=dK6ONlcR-pYKnRya"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
