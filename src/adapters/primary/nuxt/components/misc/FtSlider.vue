@@ -5,10 +5,10 @@
       swiper-container(
         class='lg:p-2'
         slides-per-view="1"
-        speed="500"
+        speed="1000"
         loop="true"
         css-mode="true"
-        autoplay-delay="3000"
+        autoplay-delay="5000"
         autoplay-disable-on-interaction="true"
       )
         swiper-slide(v-for="banner in bannerVM.items" :key="banner.uuid")
