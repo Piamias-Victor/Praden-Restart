@@ -13,6 +13,7 @@ import { useCartStore } from '@store/cartStore';
 import { getProductsInCart } from '@adapters/primary/viewModels/get-cart/getCartVM';
 import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 import { computed } from 'vue';
+import { ReductionType } from '@core/entities/product';
 
 export type CreateOrderLineDTO = Omit<OrderLine, 'deliveryStatus' | 'updatedAt'>;
 
@@ -75,7 +76,12 @@ export const createOrder = async (
         };
         if (product.promotions.length !== 0) {
           res.promotion = product.promotions[0];
-          res.unitAmount = Math.round(item.unitPrice - product.promotions[0].amount);
+          console.log('product.promotions[0]', product.promotions[0])
+          if (product.promotions[0] && product.promotions[0].type !== ReductionType.Fixed) {
+            res.unitAmount = item.unitPrice - item.unitPrice * (product.promotions[0].amount / 100);
+          } else {
+            res.unitAmount = Math.round(item.unitPrice - product.promotions[0].amount);
+          }
         }
         return res;
       }),

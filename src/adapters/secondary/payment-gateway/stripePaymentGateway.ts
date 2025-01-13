@@ -4,6 +4,7 @@ import { CreateCheckoutDTO, PaymentGateway } from '@core/gateways/paymentGateway
 import axios, { AxiosInstance } from 'axios';
 import { getOrderLineUnitAmount } from '@core/entities/order';
 import qs from 'qs'; // Importez qs pour formater les données en x-www-form-urlencoded
+import { ReductionType } from '@core/entities/product';
 
 /**
  * Convertit une chaîne de caractères représentant un prix formaté en un nombre en centimes.
@@ -61,10 +62,18 @@ export class StripePaymentGateway implements PaymentGateway {
   ): Promise<string> {
     const currency = 'eur';
     const lineItems = createCheckoutDTO.lines.map((line) => {
+      console.log('line:', JSON.stringify(line));
+      let price = line.unitAmount;
+      // if (line.promotion && line.promotion.type !== ReductionType.Fixed) {
+      //   console.log('line.unitAmount', line.unitAmount);
+      //   console.log('line.promotion.amount', line.promotion.amount);
+      //   price = line.unitAmount - line.unitAmount * (line.promotion.amount / 100);
+      // }
+      console.log('price', price);
       return {
         price_data: {
           currency,
-          unit_amount: line.unitAmount,
+          unit_amount: price,
           product_data: {
             name: line.name,
           },

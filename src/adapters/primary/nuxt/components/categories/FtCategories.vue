@@ -29,7 +29,7 @@ const desiredOrder = [
   'Premiers soins',
   'Vétérinaire',
   'Orthopédie',
-  'Divers'
+  'Divers',
 ];
 
 const sortedCategories = computed(() => {
