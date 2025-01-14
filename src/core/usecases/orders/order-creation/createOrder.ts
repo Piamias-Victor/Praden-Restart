@@ -130,7 +130,7 @@ export const createOrder = async (
     };
 
     // Envoyer la confirmation de commande par email
-    await emailGateway.sendOrderConfirmation(sendOrderConfirmationDTO);
+    // await emailGateway.sendOrderConfirmation(sendOrderConfirmationDTO);
 
     // Rediriger vers l'URL de la session Stripe
     clearCart();
