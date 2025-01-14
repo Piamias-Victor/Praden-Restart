@@ -62,7 +62,6 @@ export class StripePaymentGateway implements PaymentGateway {
   ): Promise<string> {
     const currency = 'eur';
     const lineItems = createCheckoutDTO.lines.map((line) => {
-      console.log('line:', JSON.stringify(line));
       let price = line.unitAmount;
       // if (line.promotion && line.promotion.type !== ReductionType.Fixed) {
       //   console.log('line.unitAmount', line.unitAmount);
@@ -106,6 +105,9 @@ export class StripePaymentGateway implements PaymentGateway {
         },
       },
     };
+
+    console.log('orderUuid', orderUuid);
+    console.log('session:', JSON.stringify(session));
 
     // Utiliser qs pour formater les données
     const res = await this.stripe.post('/checkout/sessions', qs.stringify(session));

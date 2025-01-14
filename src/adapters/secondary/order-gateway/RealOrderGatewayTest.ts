@@ -125,7 +125,7 @@ export class RealOrderGateway implements OrderGateway {
         throw new Error('Token Keycloak non disponible pour authentification.');
       }
 
-      console.log('body', body);
+      // console.log('body:', JSON.stringify(body));
 
       const res = await axios.post('https://ecommerce-backend-production.admin-a5f.workers.dev/orders', body, {
         headers: {
@@ -134,7 +134,9 @@ export class RealOrderGateway implements OrderGateway {
         },
       });
 
-      const sessionUrl = await this.paymentGateway.createCheckoutSession(checkoutDTO, deliveryPrice, res.data.uuid);
+      console.log('res:', JSON.stringify(res.data.item));
+
+      const sessionUrl = await this.paymentGateway.createCheckoutSession(checkoutDTO, deliveryPrice, res.data.item.uuid);
 
       const order: Order = {
         uuid,
