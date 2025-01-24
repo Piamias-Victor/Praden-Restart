@@ -1,7 +1,7 @@
 <template lang="pug">
 ft-child-categories(:categoriesVM="categoriesVM")
 div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4(ref='top')
-    span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') {{categoryVM.name}}
+    h1.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') {{categoryVM.name}}
     div.flex.items-center.gap-4
         div.relative
             ft-button-animate.text-main.flex.items-center.justify-center.bg-white.px-6(@click="toggleDropdown")
@@ -63,8 +63,16 @@ import { useProductGateway } from '../../../../../../gateways/productGateway';
 import { listBanner } from '@core/usecases/list-banner/listBanner';
 import { bannerGateway } from '../../../../../../gateways/bannerGateway';
 import { listBestSales } from '@core/usecases/list-promotions/listPromotions';
+import { useHead, useRoute } from 'nuxt/app';
 
 definePageMeta({ layout: 'main' });
+
+function extractUuidFromPath(path: string): string {
+  console.log('path', path)
+  const [_, uuid] = path.split('?');
+  console.log('uuid', uuid)
+  return uuid || '';
+}
 
 onMounted(() => {
   listDeliveryMethods(deliveryGateway);
@@ -76,6 +84,12 @@ onMounted(() => {
   listBestSales(useProductGateway());
 });
 
+const route = useRoute();
+
+
+const fullPath = route.fullPath as string; // Assurez-vous que `uuid` est le bon paramètre dans vos routes
+const extractedUuid = extractUuidFromPath(fullPath);
+const categoryUuid = extractedUuid
 const description = ref(null);
 const top = ref(null);
 
@@ -95,8 +109,6 @@ const toggleDropdown = () => {
   dropdownOpen.value = !dropdownOpen.value;
 };
 
-const route = useRoute();
-const categoryUuid = route.params.uuid;
 const priceFilter = ref<string | null>(null);
 const sortType = ref(SortType.None);
 const laboratoryFilter = ref<Array<string>>([]);
@@ -154,6 +166,24 @@ onMounted(() => {
 
 const categoriesVM = computed(() => getChildCategoriesVM(categoryUuid));
 const categoryVM = computed(() => getCategoryVM(sortType.value));
+
+useHead(() => ({
+  title: categoryVM.value ? `${categoryVM.value.name} - Catégorie` : 'Pharmacie Agnès',
+  meta: [
+    {
+      name: 'description',
+      content: categoryVM.value
+        ? `Explorez notre catégorie ${categoryVM.value.name}. ${categoryVM.value.description || 'Découvrez des produits de qualité adaptés à vos besoins.'}`
+        : 'Pharmacie Agnès - Produits pharmaceutiques de qualité.',
+    },
+  ],
+  link: [
+      {
+        rel: 'canonical',
+        href: `https://pharmacieagnespraden.com${route.fullPath}`, // URL actuelle de la page comme lien canonique
+      },
+    ],
+}));
 
 const searchVM = computed(() => {
   const result = getSearchResultVM(sortType.value);

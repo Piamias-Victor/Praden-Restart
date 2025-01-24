@@ -78,6 +78,7 @@ import { listPromotions } from '@core/usecases/list-promotions/listPromotions';
 import { listBanner } from '@core/usecases/list-banner/listBanner';
 import { bannerGateway } from '../../../../../../gateways/bannerGateway';
 import deliveryGateway from '../../../../../../gateways/deliveryGateway';
+import { useHead } from 'nuxt/app';
 
 definePageMeta({ layout: 'main' });
 
@@ -87,12 +88,29 @@ const isPromo = ref(false);
 
 const route = useRoute();
 
+function extractUuidFromPath(path: string): string {
+  console.log('path', path)
+  const [_, uuid] = path.split('?');
+  console.log('uuid', uuid)
+  return uuid || '';
+}
+
 onMounted(() => {
+  console.log('route.params', route.fullPath)
   listDeliveryMethods(deliveryGateway);
   listPromotions(useProductGateway());
   listBanner(bannerGateway());
-  productId.value = route.params.uuid as string;
+
+  // Extraire l'UUID du chemin
+  const fullPath = route.fullPath as string; // Assurez-vous que `uuid` est le bon paramètre dans vos routes
+  const extractedUuid = extractUuidFromPath(fullPath);
+  console.log('extractedUuid', extractedUuid)
+
+  productId.value = extractedUuid; // Stocker l'UUID extrait
+
+  // Fetch le produit avec l'UUID extrait
   getProduct(productId.value, useProductGateway());
+
   listCategories(categoryGateway());
   listBestSales(useProductGateway());
   listLaboratories(laboratoryGateway());
@@ -100,6 +118,28 @@ onMounted(() => {
 
 const productVM = computed(() => {
   return getProductVM();
+});
+
+useHead(() => {
+  return {
+    title: productVM.value
+      ? `${productVM.value.name} - ${productVM.value.laboratory}`
+      : 'Pharmacie Agnès',
+    meta: [
+      {
+        name: 'description',
+        content: productVM.value
+          ? `Découvrez ${productVM.value.name}, un produit de ${productVM.value.laboratory}. ${productVM.value.description}`
+          : 'Pharmacie Agnès - Produits pharmaceutiques de qualité.',
+      },
+    ],
+    link: [
+      {
+        rel: 'canonical',
+        href: `https://pharmacieagnespraden.com/products/${productVM.value?.name.replace(/\s+/g, '-')}+${productId.value}`, // Construire l'URL complète
+      },
+    ],
+  };
 });
 
 const categoriesVM = computed(() => {

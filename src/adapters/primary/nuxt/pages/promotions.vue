@@ -65,6 +65,7 @@ import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/g
 import { searchPromotion } from '@core/usecases/search-product/searchProduct';
 import { getLaboratory } from '@adapters/primary/viewModels/get-laboratory/getLaboratoryVM';
 import { getLaboratoryInfo } from '@core/usecases/list-laboratories/listLaboratories';
+import { useHead } from 'nuxt/app';
 
 definePageMeta({ layout: 'main' });
 
@@ -174,4 +175,15 @@ const openFilter = () => {
 const closeCart = () => {
   filterOpened.value = false;
 };
+
+useHead({
+  title: 'Promotions - Découvrez nos offres spéciales | Pharmacie Agnès Praden',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Profitez des meilleures promotions en parapharmacie et matériel médical chez la Pharmacie Agnès Praden. Découvrez des produits en promotion à prix réduits.',
+    },
+  ],
+});
 </script>

@@ -161,5 +161,18 @@
 </style>
 
 <script lang="ts" setup>
+import { useHead } from 'nuxt/app';
+
 definePageMeta({ layout: 'main' });
+
+useHead({
+  title: 'Paiement Sécurisé - Pharmacie Agnès Praden à Alès',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Découvrez les options de paiement sécurisé proposées par la Pharmacie Agnès Praden : cartes acceptées, processus de paiement, et mesures de sécurité pour vos transactions.',
+    },
+  ],
+});
 </script>

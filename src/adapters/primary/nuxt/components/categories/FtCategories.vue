@@ -3,7 +3,7 @@ div.py-4.px-2.flex.items-center.gap-4.overflow-x-scroll.custom-scrollbar
     template(v-if="!categoriesLoaded")
         div.bg-gray-200.rounded-xl.px-6.w-24.h-10.animate-pulse(v-for="n in 12" :key="n")
     template(v-else)
-        ft-button-animate.bg-white.rounded-xl.px-6(v-for='category in sortedCategories' :key="category.uuid" @click="goToCat(category.uuid)")
+        ft-button-animate.bg-white.rounded-xl.px-6(v-for='category in sortedCategories' :key="category.uuid" @click="goToCat(category)")
             img.icon-md(:src="category.icon")
             span.whitespace-nowrap {{ category.name }}
         ft-button-animate.bg-white.rounded-xl.px-6(@click="goToPromo()")
@@ -44,8 +44,16 @@ const categoriesLoaded = computed(() => {
   return props.categoriesVM?.items?.length > 0;
 });
 
-const goToCat = (path: string) => {
-  router.push('/categories/' + path);
+const goToCat = (category: { name: string; uuid: string }) => {
+  // Formate le nom pour créer une URL "friendly" (sans espaces ni accents)
+  const formattedName = category.name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-') // Remplace les caractères non alphanumériques par des tirets
+    .replace(/^-|-$/g, ''); // Supprime les tirets en début ou fin de chaîne
+
+  // Construit l'URL avec le nom et l'UUID
+  const formattedPath = `/categories/${formattedName}?${category.uuid}`;
+  router.push(formattedPath); // Redirige vers l'URL construite
 };
 
 const goToPromo = () => {

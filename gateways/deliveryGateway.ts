@@ -3,6 +3,20 @@ import { DeliveryMethod, DeliveryType } from '@core/entities/deliveryMethod';
 
 const deliveryGateway = new InMemoryDeliveryGateway();
 
+export const start: DeliveryMethod = {
+  uuid: '1',
+  name: 'start',
+  description: '198 avenue des Frères Lumières 30100 Alès',
+  type: DeliveryType.ClickAndCollect,
+  priceRanges: [
+    {
+      minWeight: 0,
+      maxWeight: 0,
+      price: 0,
+    },
+  ],
+};
+
 export const pickup: DeliveryMethod = {
   uuid: '570bdcfa-b704-4ed2-9fc0-175d687c1d8d',
   name: 'Retrait en pharmacie',
@@ -68,5 +82,5 @@ export const express: DeliveryMethod = {
   ],
 };
 
-deliveryGateway.feedWith(pickup, relais, express);
+deliveryGateway.feedWith(start, pickup, relais, express);
 export default deliveryGateway;

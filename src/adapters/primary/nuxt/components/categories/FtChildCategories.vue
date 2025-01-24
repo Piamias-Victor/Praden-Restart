@@ -21,10 +21,17 @@ definePageMeta({ layout: 'main' });
 
 const router = useRouter();
 
-const goToCat = (path: string, name: string) => {
-  setTimeout(() => {
-    router.push(`/categories/${path}?${name}`);
-  }, 1000);
+const formatUrl = (basePath: string, name: string, uuid: string): string => {
+  const formattedName = name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-') // Remplace les caractères non alphanumériques par des tirets
+    .replace(/^-|-$/g, ''); // Supprime les tirets au début ou à la fin
+  return `${basePath}/${formattedName}?${uuid}`;
+};
+
+const goToCat = (uuid: string, name: string) => {
+  const url = formatUrl('/categories', name, uuid);
+  router.push(url);
 };
 
 const goBack = () => {

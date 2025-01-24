@@ -670,5 +670,18 @@
 </style>
 
 <script lang="ts" setup>
+import { useHead } from 'nuxt/app';
+
 definePageMeta({ layout: 'main' });
+
+useHead({
+  title: 'Politique de Confidentialité - Pharmacie Agnès Praden',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Découvrez comment la Pharmacie Agnès Praden collecte, utilise et protège vos données personnelles conformément aux lois en vigueur.',
+    },
+  ],
+});
 </script>

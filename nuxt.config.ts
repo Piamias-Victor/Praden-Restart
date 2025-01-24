@@ -26,6 +26,12 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: 'Pharmacie Agnes Praden - ALES',
+      meta: [
+        {
+          name: 'description',
+          content: 'Bienvenue sur la Pharmacie Agnes Praden. Découvrez nos produits de santé, bien-être, et plus encore.',
+        },
+      ],
       link: [
         {
           rel: 'icon',

@@ -114,5 +114,18 @@
 </style>
 
 <script lang="ts" setup>
+import { useHead } from 'nuxt/app';
+
 definePageMeta({ layout: 'main' });
+
+useHead({
+  title: 'Pharmacie Agnès Praden Alès - Services, Adresse et Horaires',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Découvrez la Pharmacie Agnès Praden à Alès : services de santé, horaires d’ouverture, localisation et contact. Située au centre commercial Intermarché.',
+    },
+  ],
+});
 </script>

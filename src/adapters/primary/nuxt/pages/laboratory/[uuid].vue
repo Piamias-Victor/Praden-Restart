@@ -54,7 +54,7 @@ import { getLaboratory } from '@adapters/primary/viewModels/get-laboratory/getLa
 import { bannerGateway } from '../../../../../../gateways/bannerGateway';
 import deliveryGateway from '../../../../../../gateways/deliveryGateway';
 import { useProductGateway } from '../../../../../../gateways/productGateway';
-import { useRoute } from 'nuxt/app';
+import { useHead, useRoute } from 'nuxt/app';
 import { listDeliveryMethods } from '@core/usecases/delivery-methods-listing/listDeliveryMethods';
 import { listBanner } from '@core/usecases/list-banner/listBanner';
 import { listPromotions, listBestSales } from '@core/usecases/list-promotions/listPromotions';
@@ -78,8 +78,19 @@ onMounted(async () => {
   }
 });
 
+function extractUuidFromPath(path: string): string {
+  console.log('path', path)
+  const [_, uuid] = path.split('?');
+  console.log('uuid', uuid)
+  return uuid || '';
+}
+
+
 const route = useRoute();
-const categoryUuid = route.params.uuid;
+
+const fullPath = route.fullPath as string; // Assurez-vous que `uuid` est le bon paramètre dans vos routes
+const extractedUuid = extractUuidFromPath(fullPath);
+const categoryUuid = extractedUuid
 
 const sortType = ref(SortType.None);
 const dropdownOpen = ref(false);
@@ -88,6 +99,26 @@ const description = ref(null);
 const laboratoryFilter = ref<string | null>(null);
 const priceFilter = ref<string | null>(null);
 const laboratoryInfo = ref(null);
+
+useHead(() => ({
+  title: laboratoryInfo.value
+    ? `${laboratoryInfo.value.item.name} - Informations et produits - Pharmacie Agnès Praden`
+    : 'Laboratoire - Pharmacie Agnès Praden',
+  meta: [
+    {
+      name: 'description',
+      content: laboratoryInfo.value
+        ? `Découvrez les produits et informations du laboratoire ${laboratoryInfo.value.item.name}. ${laboratoryInfo.value.item.description || ''}`
+        : 'Informations et produits des laboratoires disponibles à la Pharmacie Agnès Praden.',
+    },
+  ],
+  link: [
+      {
+        rel: 'canonical',
+        href: `https://pharmacieagnespraden.com${route.fullPath}`, // URL actuelle de la page comme lien canonique
+      },
+    ],
+}));
 
 const toggleDropdown = () => {
   dropdownOpen.value = !dropdownOpen.value;

@@ -159,5 +159,18 @@
 </style>
 
 <script lang="ts" setup>
+import { useHead } from 'nuxt/app';
+
+useHead({
+  title: 'Conditions Générales de Vente - Pharmacie Agnès Praden',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Découvrez les conditions générales de vente de la Pharmacie Agnès Praden, incluant les modalités d’achat, de livraison et de paiement.',
+    },
+  ],
+});
+
 definePageMeta({ layout: 'main' });
 </script>

@@ -197,5 +197,21 @@
 </style>
 
 <script lang="ts" setup>
-definePageMeta({ layout: '[#E5017D]' });
+import { useHead } from 'nuxt/app';
+
+definePageMeta({ layout: 'main' });
+
+const sectionTitle = 'On parle de nous';
+const metaDescription =
+  "Découvrez ce que les médias disent de la pharmacie Agnès Praden. Innovation, apprentissage, diversité, et plus encore sont au cœur de nos valeurs.";
+
+useHead({
+  title: `${sectionTitle} - Pharmacie Agnès Praden`,
+  meta: [
+    {
+      name: 'description',
+      content: metaDescription,
+    },
+  ],
+});
 </script>
