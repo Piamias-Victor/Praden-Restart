@@ -6,7 +6,7 @@
   "author": "gmevelec <gregory.mevelec@gmail.com>",
   "scripts": {
     "build": "nuxt build",
-    "start": "yarn build && nuxt start",
+    "start": "nuxt build && nuxt start",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",

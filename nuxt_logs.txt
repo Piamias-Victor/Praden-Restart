@@ -1,0 +1,20 @@
+
+> praden-marketplace@1.0.0 dev
+> nuxt dev
+
+Nuxt 3.13.2 with Nitro 2.9.7
+
+  ➜ Local:    http://localhost:3000/
+  ➜ Network:  use --host to expose
+
+[nuxt:tailwindcss] ℹ Using Tailwind CSS from ~/assets/css/tailwind.css
+  ➜ DevTools: press Shift + Option + D in the browser (v1.6.0)
+
+ℹ Nuxt Icon server bundle mode is set to local
+✔ Nuxt Icon discovered local-installed 1 collections: heroicons
+[nuxt:tailwindcss] ℹ Tailwind Viewer: http://localhost:3000/_tailwind/
+✔ Vite client built in 118ms
+✔ Vite server built in 816ms
+[nitro] ✔ Nuxt Nitro server built in 699 ms
+ℹ Vite client warmed up in 0ms
+ℹ Vite server warmed up in 1276ms

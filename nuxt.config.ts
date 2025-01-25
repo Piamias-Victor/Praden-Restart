@@ -1,5 +1,8 @@
 import { defineNuxtConfig } from 'nuxt/config';
+import { createPinia } from 'pinia';
+import { useCategoryStore } from './src/store/categoryStore.js';
 import { fileURLToPath } from 'url';
+import axios from 'axios';
 
 export default defineNuxtConfig({
   runtimeConfig: {
@@ -76,27 +79,45 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-08-26',
 
   sitemap: {
-    hostname: 'https://www.pharmacieagnespraden.com',
+    hostname: 'https://www.pharmacieagnespraden.com', 
     gzip: true,
-    routes: () => {
-      const categories = [
-        { slug: 'dermocosm-tique', id: '7480b66f-d589-42de-a122-3cff0590dd40' },
-        { slug: 'complement-alimentaire', id: '12345678-aaaa-bbbb-cccc-123456789abc' },
-      ];
-      const products = [
-        { slug: 'pileje-phytobiane-harpagophytum-45-comprim-s', id: '05328c6f-a0fe-4a87-a17f-ff922c8a19ca' },
-        { slug: 'avene-eau-thermale-300ml', id: 'abcdef12-3456-7890-abcd-ef1234567890' },
-      ];
-      const laboratories = [
-        { slug: 'avene', id: '65e2dd9e-d56e-418f-87bd-7a46a5342f5d' },
-        { slug: 'bioderma', id: '98765432-aaaa-bbbb-cccc-9876543210ff' },
-      ];
+    routes: async () => {
+      console.log('Début de la génération du sitemap');
+      console.log('URL de l\'API utilisée :', 'https://ecommerce-backend-production.admin-a5f.workers.dev/categories');
+      try {
+        console.log('Début de la génération du sitemap pour les catégories.');
 
-      return [
-        ...categories.map((cat) => `/categories/${cat.slug}?${cat.id}`),
-        ...products.map((prod) => `/products/${prod.slug}?${prod.id}`),
-        ...laboratories.map((lab) => `/laboratory/${lab.slug}?${lab.id}`),
-      ];
+        // Appel à l'API pour récupérer les catégories
+        const response = await axios.get('https://ecommerce-backend-production.admin-a5f.workers.dev/categories');
+        console.log('Réponse de l\'API reçue :', response.data);
+
+        const categories = response.data.items;
+
+        if (!categories || categories.length === 0) {
+          console.warn('Aucune catégorie trouvée dans l\'API.');
+          return [];
+        }
+
+        // Générer les routes
+        const routes = categories.map((category: { name: string; uuid: string }) => {
+          const formattedName = category.name
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-') // Remplace les caractères non alphanumériques par des tirets
+            .replace(/^-|-$/g, ''); // Supprime les tirets en début ou fin de chaîne
+
+          return {
+            url: `/categories/${formattedName}?${category.uuid}`,
+            changefreq: 'weekly',
+            priority: 0.8,
+          };
+        });
+
+        console.log('Routes générées :', routes);
+        return routes;
+      } catch (error) {
+        console.error('Erreur lors de la récupération des catégories ou de la génération des routes :', error);
+        return [];
+      }
     },
   },
 });
