@@ -1,34 +1,44 @@
 <template lang="pug">
 div.fixed.inset-0.z-50.flex.items-center.justify-center.bg-black.bg-opacity-50(v-if="show")
-    div.relative.bg-white.p-6.rounded-lg.shadow-lg.overflow-y-auto.w-full.max-w-lg(class='')
+    div.relative.bg-white.p-6.rounded-lg.shadow-lg.overflow-y-auto.w-full.max-w-lg(class='h-[70vh]')
         div.flex.items-center.justify-between.gap-8.mb-4
-            span.text-xl.font-semibold.hidden(class='sm:block') Sélectionnez un jour et une heure
+            span.text-xl.font-semibold.hidden(class='sm:block') Sélectionnez une date et une heure
             ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="closePopup")
                 icon.icon-sm(name="ph:x-bold")
         div.flex.flex-col.items-center.gap-6
-            // Sélecteur de jour
+            // Sélecteur de jour (Calendrier)
             div.w-full
-                label.block.text-sm.font-medium.text-gray-700.mb-1 Sélectionnez un jour
-                select.w-full.p-2.border.rounded-lg(@change="updateDay($event)")
-                    option(value="" disabled selected) -- Choisir un jour --
-                    option(v-for="day in availableDays" :key="day" :value="day") {{ day }}
+                label.block.text-sm.font-medium.text-gray-700.mb-1 Sélectionnez une date
+                VueDatePicker(
+                    v-model="selectedDate"
+                    locale="fr"
+                    :translations="translations"
+                    cancelText="Annuler"
+                    selectText="Sélectionner"
+                    auto-apply
+                    :min-date="new Date()"
+                    :disabled-week-days="[0]"
+                    :model-config="{ type: 'date' }"
+                    class="w-full p-2 border rounded-lg"
+                    :min-time="{ hours: 8, minutes: 30 }"
+                    :max-time="{ hours: 19, minutes: 30 }"
+                    time-picker-inline
+                )
             // Sélecteur d'heure
-            div.w-full
-                label.block.text-sm.font-medium.text-gray-700.mb-1 Sélectionnez une heure
-                select.w-full.p-2.border.rounded-lg(@change="updateHour($event)")
-                    option(value="" disabled selected) -- Choisir une heure --
-                    option(v-for="hour in availableHours" :key="hour" :value="hour") {{ hour }}
             // Affichage de la sélection
-            p.text-main.font-semibold.text-lg.text-center(v-if="selectedDay && selectedHour")
-                | Vous avez sélectionné : {{ selectedDay }}, à {{ selectedHour }}
-            div(v-else)
-                p.text-gray-500.text-sm.text-center Veuillez choisir un jour et une heure
             // Bouton pour confirmer la sélection
-            ft-button.button-solid.w-full(@click="confirmSelection") Confirmer
+            ft-button.button-solid.w-full(
+                @click="confirmSelection"
+                :disabled="!selectedDate"
+                class="transition-opacity"
+                :class="{ 'opacity-50 cursor-not-allowed': !selectedDate }"
+            ) Confirmer
 </template>
 
 <script lang="ts" setup>
 import { ref, computed } from 'vue';
+import VueDatePicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css'; // Importez les styles du datepicker
 
 // Props pour afficher ou cacher le popup
 const props = defineProps<{ show: boolean }>();
@@ -36,24 +46,51 @@ const props = defineProps<{ show: boolean }>();
 // Émissions d'événements vers le parent
 const emit = defineEmits<{
   (e: 'close'): void;
-  (e: 'selection-confirmed', selection: { day: string; hour: string }): void;
+  (e: 'selection-confirmed', selection: { timestamp: number }): void;
 }>();
 
-// Variables réactives pour la sélection
-const selectedDay = ref<string | null>(null);
+const date = ref(new Date());
+
+// Ajoutez des traductions personnalisées en français
+const translations = {
+    cancel: "Annuler",
+    select: "Sélectionner",
+    days: ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"],
+    months: [
+        "Janvier",
+        "Février",
+        "Mars",
+        "Avril",
+        "Mai",
+        "Juin",
+        "Juillet",
+        "Août",
+        "Septembre",
+        "Octobre",
+        "Novembre",
+        "Décembre",
+    ],
+    monthsShort: [
+        "Janv",
+        "Févr",
+        "Mars",
+        "Avril",
+        "Mai",
+        "Juin",
+        "Juil",
+        "Août",
+        "Sept",
+        "Oct",
+        "Nov",
+        "Déc",
+    ],
+};
+
+// Variables réactives
+const selectedDate = ref<Date | null>(null);
 const selectedHour = ref<string | null>(null);
 
-// Liste des jours disponibles
-const availableDays = ref([
-  'Lundi',
-  'Mardi',
-  'Mercredi',
-  'Jeudi',
-  'Vendredi',
-  'Samedi',
-]);
-
-// Liste des heures disponibles (générées dynamiquement)
+// Liste des heures disponibles
 const availableHours = computed(() => {
   const hours = [];
   for (let i = 8; i <= 19; i++) {
@@ -62,31 +99,37 @@ const availableHours = computed(() => {
   return hours;
 });
 
-// Mise à jour du jour sélectionné
-const updateDay = (event: Event) => {
-  selectedDay.value = (event.target as HTMLSelectElement).value;
-};
+// Formattez la date pour l'affichage
+const formattedDate = computed(() => {
+  if (!selectedDate.value) return '';
+  return selectedDate.value.toLocaleDateString('fr-FR', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+});
 
-// Mise à jour de l'heure sélectionnée
+// Mettre à jour l'heure sélectionnée
 const updateHour = (event: Event) => {
   selectedHour.value = (event.target as HTMLSelectElement).value;
 };
 
-// Confirmer la sélection et émettre un événement vers le parent
+// Confirmez la sélection
 const confirmSelection = () => {
-  if (!selectedDay.value || !selectedHour.value) {
-    alert('Veuillez sélectionner un jour et une heure.');
+  if (!selectedDate.value) {
+    alert('Veuillez sélectionner une date et une heure.');
     return;
   }
 
-  emit('selection-confirmed', {
-    day: selectedDay.value,
-    hour: selectedHour.value,
-  });
+  // Créez un timestamp
+  const timestamp = new Date(selectedDate.value);
+
+  emit('selection-confirmed', { timestamp });
   closePopup();
 };
 
-// Fermer le popup
+// Fermez le popup
 const closePopup = () => {
   emit('close');
 };

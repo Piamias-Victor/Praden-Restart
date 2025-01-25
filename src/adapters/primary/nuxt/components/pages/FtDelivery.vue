@@ -51,7 +51,7 @@ div.mt-2.border-t.py-2.px-2(class='lg:py-6 lg:px-4')
   div.mt-2(class='lg:mt-4')
       ft-button.button-solid.w-full.text-xl( @click="validateOrder") Paiement
 ft-popup(:show="showPopup" @close="closePopup")
-//- ft-popup2(:show="showPopup2" @close="closePopup2")
+ft-popup2(:show="showPopup2" @close="closePopup2")
 </template>
 
 <script lang="ts" setup>
