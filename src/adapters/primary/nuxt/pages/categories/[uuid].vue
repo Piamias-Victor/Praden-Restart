@@ -1,7 +1,13 @@
 <template lang="pug">
-ft-child-categories(:categoriesVM="categoriesVM")
+ft-child-categories(:categoriesVM="categoriesVM" :categoriesVM2="categoriesVM2")
 div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4(ref='top')
     h1.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') {{categoryVM.name}}
+      nav.breadcrumbs.flex.items-center.text-sm.text-gray-600.mt-2
+        nuxt-link.text-main.font-medium(href="/") Accueil
+        span.mx-2 /
+        template(v-for="(breadcrumb, index) in breadcrumbs" :key="index")
+          nuxt-link.text-main.font-medium(:href="breadcrumb.href") {{ breadcrumb.name }}
+          span.mx-2(v-if="index < breadcrumbs.length - 1") /
     div.flex.items-center.gap-4
         div.relative
             ft-button-animate.text-main.flex.items-center.justify-center.bg-white.px-6(@click="toggleDropdown")
@@ -64,6 +70,8 @@ import { listBanner } from '@core/usecases/list-banner/listBanner';
 import { bannerGateway } from '../../../../../../gateways/bannerGateway';
 import { listBestSales } from '@core/usecases/list-promotions/listPromotions';
 import { useHead, useRoute } from 'nuxt/app';
+import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
+import { getBreadcrumbTrail } from '@adapters/primary/viewModels/get-category/getCategoryVM';
 
 definePageMeta({ layout: 'main' });
 
@@ -86,6 +94,7 @@ onMounted(() => {
 
 const route = useRoute();
 
+const breadcrumbs = computed(() => getBreadcrumbTrail(categoryUuid));
 
 const fullPath = route.fullPath as string; // Assurez-vous que `uuid` est le bon paramètre dans vos routes
 const extractedUuid = extractUuidFromPath(fullPath);
@@ -94,6 +103,10 @@ const description = ref(null);
 const top = ref(null);
 
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...';
+
+const categoriesVM2 = computed(() => {
+  return getRootCategoriesVM();
+});
 
 function scrollToDescription() {
   description.value?.scrollIntoView({ behavior: 'smooth' });
@@ -201,3 +214,4 @@ const closeCart = () => {
   filterOpened.value = false;
 };
 </script>
+

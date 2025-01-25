@@ -1,20 +1,25 @@
 <template lang="pug">
-div.py-4.px-2.flex.items-center.gap-2.overflow-x-scroll.custom-scrollbar.text-xl
-    //- ft-button.bg-white.rounded-full.text-sm.p-2(@click="goBack")
-    //-     icon.icon-md(name="icon-park-outline:return")
-    //-     span Retour
-    button.rounded-xl.px-6.text-xl.flex.flex-col.items-center.justify-center.text-contrast(v-for='category in props.categoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid, category.name)" class='hover:text-main')
-      img.rounded-full(class='w-[60px] transform transition-transform duration-300 hover:scale-110 shadow-lg hover:shadow-xl' :src='category.icon', alt='Profile Picture')
-      span.whitespace-nowrap.text-sm.font-semibold.mt-1(class='min-w-[5vw]') {{ category.name }}
-    //- ft-button.bg-white.rounded-xl.px-6.text-xl(v-for='category in props.categoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid, category.name)")
-    //-   img.rounded-full.border.border-main.border-2(class='w-[50px] h-[50px]' src='https://i-sam.unimedias.fr/2022/06/13/istock-103956934.jpg?auto=format%2Ccompress&crop=faces&cs=tinysrgb&fit=crop&h=501&w=890', alt='Profile Picture')
-      //- img.icon-md(:src="category.icon")
-      //- span.whitespace-nowrap {{ category.name }}
+div.py-4.px-2.flex.flex-col.gap-4.overflow-x-scroll.custom-scrollbar
+    div.flex.items-center.gap-2
+      ft-button-animate.bg-white.rounded-xl.px-6(@click="goBack")
+          icon.icon-md(name="mdi:arrow-left")
+          span.whitespace-nowrap Retour
+      ft-button-animate.bg-white.rounded-xl.px-6(v-for='category in props.categoriesVM2.items' :key="category.uuid" @click="goToCat(category.uuid, category.name)")
+          img.icon-md(:src="category.icon")
+          span.whitespace-nowrap {{ category.name }}
+      ft-button-animate.bg-white.rounded-xl.px-6(@click="goToPromo()")
+          img.icon-md(src="https://i.postimg.cc/HkthTcR1/promo.png")
+          span.whitespace-nowrap Promotions
+    div.flex.items-center.gap-4
+      button.rounded-xl.px-6.text-xl.flex.flex-col.items-center.justify-center.text-contrast(v-for='category in props.categoriesVM.items' :key="category.uuid" @click="goToCat(category.uuid, category.name)" class='hover:text-main')
+        img.rounded-full(class='w-[60px] transform transition-transform duration-300 hover:scale-110 shadow-lg hover:shadow-xl' :src='category.icon', alt='Profile Picture')
+        span.whitespace-nowrap.text-sm.font-semibold.mt-1(class='min-w-[5vw]') {{ category.name }}
 </template>
 
 <script lang="ts" setup>
 const props = defineProps<{
   categoriesVM: any;
+  categoriesVM2: any;
 }>();
 
 definePageMeta({ layout: 'main' });

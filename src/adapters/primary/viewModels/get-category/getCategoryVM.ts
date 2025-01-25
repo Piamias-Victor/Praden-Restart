@@ -169,6 +169,43 @@ export const getParentCategory = (uuid: string, categories: any[]) => {
   return category ? category : null;
 };
 
+export const getBreadcrumbTrail = (uuid: string): Array<{ name: string; href: string }> => {
+  const categoryStore = useCategoryStore();
+  const categories = Array.from(categoryStore.itemsSet); // Conversion du Set en tableau
+  let currentUuid = uuid;
+  const breadcrumbs: Array<{ name: string; href: string }> = [];
+  let iterations = 0; // Compteur d'itérations
+  const maxIterations = 10; // Limite d'itérations pour éviter les boucles infinies
+
+  while (currentUuid) {
+    iterations++;
+    if (iterations > maxIterations) {
+      break; // Arrête la recherche après trop d'itérations
+    }
+
+    const currentCategory = getParentCategory(currentUuid, categories);
+    if (!currentCategory) {
+      break; // Si aucune catégorie n'est trouvée, arrêtez la recherche
+    }
+
+    // Formate le nom pour l'URL friendly
+    const formattedName = currentCategory.name
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-') // Remplace les caractères non alphanumériques par des tirets
+      .replace(/^-|-$/g, ''); // Supprime les tirets en début ou fin de chaîne
+
+    // Ajouter la catégorie actuelle au fil d'Ariane
+    breadcrumbs.unshift({
+      name: currentCategory.name,
+      href: `/categories/${formattedName}?${currentCategory.uuid}`,
+    });
+
+    currentUuid = currentCategory.parentUuid; // Remonte à la catégorie parente
+  }
+
+  return breadcrumbs;
+};
+
 export const getRootCategoryUuid = (uuid: string): string | null => {
   const categoryStore = useCategoryStore();
   const categories = Array.from(categoryStore.itemsSet); // Conversion du Set en tableau
