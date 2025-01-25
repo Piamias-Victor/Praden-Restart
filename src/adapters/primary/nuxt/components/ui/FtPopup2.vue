@@ -15,7 +15,6 @@ div.fixed.inset-0.z-50.flex.items-center.justify-center.bg-black.bg-opacity-50(v
                     :translations="translations"
                     cancelText="Annuler"
                     selectText="Sélectionner"
-                    auto-apply
                     :min-date="new Date()"
                     :disabled-week-days="[0]"
                     :model-config="{ type: 'date' }"
@@ -124,6 +123,9 @@ const confirmSelection = () => {
 
   // Créez un timestamp
   const timestamp = new Date(selectedDate.value);
+
+  console.log('timestamp', timestamp)
+  console.log('selectedDate.value', selectedDate.value)
 
   emit('selection-confirmed', { timestamp });
   closePopup();
