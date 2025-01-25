@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     },
   },
 
-  plugins: ['~/src/plugins/keycloak.client.ts'], // Facultatif si vous suivez la convention
+  plugins: ['~/src/plugins/keycloak.client.ts'],
 
   alias: {
     '@adapters/': fileURLToPath(new URL('./src/adapters/', import.meta.url)),
@@ -64,7 +64,7 @@ export default defineNuxtConfig({
     strict: true,
   },
 
-  modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', '@nuxt/icon'],
+  modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxtjs/sitemap'],
 
   dir: {
     layouts: './src/adapters/primary/nuxt/layouts',
@@ -74,4 +74,29 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
   ssr: true,
   compatibilityDate: '2024-08-26',
+
+  sitemap: {
+    hostname: 'https://www.pharmacieagnespraden.com',
+    gzip: true,
+    routes: () => {
+      const categories = [
+        { slug: 'dermocosm-tique', id: '7480b66f-d589-42de-a122-3cff0590dd40' },
+        { slug: 'complement-alimentaire', id: '12345678-aaaa-bbbb-cccc-123456789abc' },
+      ];
+      const products = [
+        { slug: 'pileje-phytobiane-harpagophytum-45-comprim-s', id: '05328c6f-a0fe-4a87-a17f-ff922c8a19ca' },
+        { slug: 'avene-eau-thermale-300ml', id: 'abcdef12-3456-7890-abcd-ef1234567890' },
+      ];
+      const laboratories = [
+        { slug: 'avene', id: '65e2dd9e-d56e-418f-87bd-7a46a5342f5d' },
+        { slug: 'bioderma', id: '98765432-aaaa-bbbb-cccc-9876543210ff' },
+      ];
+
+      return [
+        ...categories.map((cat) => `/categories/${cat.slug}?${cat.id}`),
+        ...products.map((prod) => `/products/${prod.slug}?${prod.id}`),
+        ...laboratories.map((lab) => `/laboratory/${lab.slug}?${lab.id}`),
+      ];
+    },
+  },
 });
