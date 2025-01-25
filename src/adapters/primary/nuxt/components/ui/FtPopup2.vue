@@ -1,6 +1,6 @@
 <template lang="pug">
 div.fixed.inset-0.z-50.flex.items-center.justify-center.bg-black.bg-opacity-50(v-if="show")
-    div.relative.bg-white.p-6.rounded-lg.shadow-lg.overflow-y-auto.w-full.max-w-lg(class='h-[70vh]')
+    div.relative.bg-white.p-6.rounded-lg.shadow-lg.overflow-y-auto.w-full.max-w-lg(class='h-full sm:h-[70vh]')
         div.flex.items-center.justify-between.gap-8.mb-4
             span.text-xl.font-semibold.hidden(class='sm:block') Sélectionnez une date et une heure
             ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="closePopup")
@@ -122,7 +122,7 @@ const confirmSelection = () => {
   }
 
   // Créez un timestamp
-  const timestamp = new Date(selectedDate.value);
+  const timestamp = selectedDate.value.getTime();
 
   console.log('timestamp', timestamp)
   console.log('selectedDate.value', selectedDate.value)

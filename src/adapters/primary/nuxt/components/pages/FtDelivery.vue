@@ -23,6 +23,9 @@ div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(v-if='hasMedicine
   span Votre panier contient des médicaments, vous ne pouvez donc pas bénéficier des frais de port gratuit
 div.mt-2.border-t.py-2.px-2(class='lg:py-6 lg:px-4')
   h2.font-medium.text-gray-900.mb-2.text-sm(class='lg:text-xl') Mode de livraison
+  div.mt-2.text-center.text-sm(v-if="selectedTimestamp")
+    span.text-main.font-semibold Date sélectionnée :
+    span {{ new Date(selectedTimestamp).toLocaleString('fr-FR') }}
   div.flex.flex-col.items-center.gap-2.w-full.mb-2(class='lg:mb-4')
     div(v-for='deliveryMethod in deliveryMethods.methods' :key="deliveryMethod.uuid" @click="deliveryMethodSelected(deliveryMethod)").w-full
       div(v-if="deliveryMethod.uuid != 1" )
@@ -51,7 +54,7 @@ div.mt-2.border-t.py-2.px-2(class='lg:py-6 lg:px-4')
   div.mt-2(class='lg:mt-4')
       ft-button.button-solid.w-full.text-xl( @click="validateOrder") Paiement
 ft-popup(:show="showPopup" @close="closePopup")
-ft-popup2(:show="showPopup2" @close="closePopup2")
+ft-popup2(:show="showPopup2" @close="closePopup2" @selection-confirmed="handleSelection")
 </template>
 
 <script lang="ts" setup>
@@ -113,6 +116,17 @@ const deliveryMethodSelected = (method: any) => {
   if (method.name === pickup.name) openPopup2();
 };
 
+const selectedTimestamp = ref<number | null>(null);
+
+const handleSelection = (selection: { timestamp: number }) => {
+  selectedTimestamp.value = selection.timestamp;
+
+  // Optionnel : Convertir le timestamp en une date lisible
+  const selectedDate = new Date(selection.timestamp);
+  console.log('Timestamp sélectionné :', selection.timestamp);
+  console.log('Date sélectionnée :', selectedDate.toLocaleString('fr-FR'));
+};
+
 const hasMedicineReference = computed(() => {
   return Object.values(cart.value.items).some((item: any) => item.medecine === true);
 });
@@ -157,6 +171,7 @@ const validateOrder = () => {
       windowGateway,
       useEmailGateway(),
       cart.value.DeliveryPrice,
+      selectedTimestamp.value
     );
   }
 

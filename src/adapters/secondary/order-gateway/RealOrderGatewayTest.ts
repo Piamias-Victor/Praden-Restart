@@ -21,7 +21,7 @@ export class RealOrderGateway implements OrderGateway {
     this.dateProvider = dateProvider;
   }
 
-  async create(orderDTO: CreateOrderDTO, deliveryPrice: string): Promise<Order> {
+  async create(orderDTO: CreateOrderDTO, deliveryPrice: string, selectedTimestamp: string): Promise<Order> {
     const now = this.dateProvider.now();
     const uuid = this.uuidGenerator.generate();
     const lines: Array<OrderLine> = orderDTO.lines.map((line: CreateOrderLineDTO) => {
@@ -47,9 +47,12 @@ export class RealOrderGateway implements OrderGateway {
     const deliveryMethodsStore = useDeliveryStore();
     let body;
 
+    console.log('selectedTimestamp: selectedTimestamp,', selectedTimestamp)
+
     if (deliveryMethodsStore.selected!.point) {
       body = {
         ...rest,
+        pickingDate: selectedTimestamp,
         customerMessage: '',
         billingAddress: orderDTO.deliveryAddress,
         pickupId: deliveryMethodsStore.selected!.point,
@@ -81,6 +84,7 @@ export class RealOrderGateway implements OrderGateway {
     } else {
       body = {
         ...rest,
+        pickingDate: selectedTimestamp,
         customerMessage: '',
         billingAddress: orderDTO.deliveryAddress,
         deliveryMethodUuid: orderDTO.delivery.method.uuid,

@@ -50,6 +50,7 @@ export const createOrder = async (
   windowGateway: WindowGateway,
   emailGateway: EmailGateway,
   deliveryPrice: string,
+  selectedTimestamp: string,
 ) => {
   try {
     // Récupérer les produits dans le panier
@@ -113,7 +114,7 @@ export const createOrder = async (
       },
     };
     // Créer la commande via OrderGateway
-    const order = await orderGateway.create(orderDTO, deliveryPrice);
+    const order = await orderGateway.create(orderDTO, deliveryPrice, selectedTimestamp);
     // Ajouter la commande au store
     const orderStore = useOrderStore();
     orderStore.add(order);
