@@ -13,7 +13,7 @@
       )
         swiper-slide(v-for="banner in bannerVM.items" :key="banner.uuid")
           div
-            a(v-if="banner.href" :href="banner.href" target="_blank")
+            a(v-if="banner.href" :href="banner.href")
               img.block.rounded-xl.w-full(
                 :src="banner.image"
                 :alt="`Banner ${banner.order}`"
