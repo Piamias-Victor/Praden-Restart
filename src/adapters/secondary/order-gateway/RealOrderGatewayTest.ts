@@ -50,9 +50,9 @@ export class RealOrderGateway implements OrderGateway {
     console.log('selectedTimestamp: selectedTimestamp,', selectedTimestamp)
 
     if (deliveryMethodsStore.selected!.point) {
+      console.log('1', selectedTimestamp)
       body = {
         ...rest,
-        pickingDate: selectedTimestamp,
         customerMessage: '',
         billingAddress: orderDTO.deliveryAddress,
         pickupId: deliveryMethodsStore.selected!.point,
@@ -81,10 +81,42 @@ export class RealOrderGateway implements OrderGateway {
           }),
         ),
       };
-    } else {
+    } else if (selectedTimestamp !== null) {
+      console.log('2', selectedTimestamp)
       body = {
         ...rest,
         pickingDate: selectedTimestamp,
+        customerMessage: '',
+        billingAddress: orderDTO.deliveryAddress,
+        deliveryMethodUuid: orderDTO.delivery.method.uuid,
+        lines: await Promise.all(
+          orderDTO.lines.map(async (l) => {
+            const product = await productGateway.getByUuid(l.productUuid);
+            let priceWithoutTax: number;
+            let promotionUuid: string | undefined = undefined;
+
+            if (product.promotions && product.promotions.length > 0) {
+              const promotion = product.promotions[0];
+              priceWithoutTax = this.calculatePriceHT(product.price - promotion.amount, product.percentTaxRate);
+              promotionUuid = promotion.uuid;
+            } else {
+              priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
+            }
+
+            return {
+              productUuid: l.productUuid,
+              quantity: l.quantity,
+              priceWithoutTax: Math.round(priceWithoutTax),
+              percentTaxRate: product.percentTaxRate,
+              ...(promotionUuid ? { promotionUuid } : {}),
+            };
+          }),
+        ),
+      };
+    } else {
+      console.log('3', selectedTimestamp)
+      body = {
+        ...rest,
         customerMessage: '',
         billingAddress: orderDTO.deliveryAddress,
         deliveryMethodUuid: orderDTO.delivery.method.uuid,
