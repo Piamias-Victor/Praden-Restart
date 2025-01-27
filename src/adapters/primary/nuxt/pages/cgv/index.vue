@@ -1,153 +1,381 @@
 <template>
   <div class="w-full p-6">
     <ft-navigation />
-    <h1 class="text-4xl font-bold mb-4 text-center text-main">Conditions Générales de Vente</h1>
+    <!-- Titre principal -->
+    <h1 class="text-4xl font-bold mb-4 text-center text-main">
+      Conditions Générales de Vente
+    </h1>
 
+    <!-- ARTICLE 1 - OBJET -->
+    <h2 class="text-xl font-semibold mt-6">Article 1 - Objet</h2>
     <p>
-      Les présentes conditions générales de vente (ci-après les « Conditions Générales ») s’appliquent à tout achat
-      effectué par une personne physique (ci-après le « CLIENT ») sur le site Internet (ci-après le « SITE ») auprès de
-      la Pharmacie Agnès Praden, immatriculée au registre du commerce et des sociétés sous le numéro 494 972 664 000 28,
-      ayant son siège social 198 Avenue des Frères Lumière, 30100 ALES. Tél : 04 66 30 22 60, email :
-      <a href="mailto:webpharmaciepraden@gmail.com" class="text-blue-500">webpharmaciepraden@gmail.com</a>
-      (ci-après le « VENDEUR »).
+      Les présentes Conditions Générales de Vente (CGV) régissent les ventes des
+      produits proposés sur le site internet Pharmacie Agnès Praden accessible à
+      l'adresse suivante :
+      <a
+        href="https://www.pharmacieagnespraden.com/"
+        class="text-blue-500"
+        target="_blank"
+      >
+        https://www.pharmacieagnespraden.com/
+      </a>,
+      ci-après dénommé "le Site". Elles ont pour objectif de définir les droits
+      et obligations des parties dans le cadre des ventes en ligne réalisées sur
+      le Site.
     </p>
-
-    <h2 class="text-xl font-semibold mt-6">IMPORTANT</h2>
     <p>
-      Toute commande passée sur le Site implique obligatoirement l’acceptation sans réserve du CLIENT des présentes
-      conditions générales.
+      Ces CGV sont conclues entre, d'une part, Pharmacie Agnès Praden, Société
+      d'exercice libéral par action simplifiée, immatriculée au registre du
+      commerce et des sociétés sous le numéro 494 972 664 000 28, ayant son
+      siège social à Alès et, d'autre part, toute personne, physique ou morale,
+      souhaitant effectuer un achat sur le Site, ci-après dénommée "le Client".
     </p>
 
-    <p class="mt-4">
-      Vous avez la possibilité de vous inscrire gratuitement sur la liste d’opposition au démarchage téléphonique
-      BLOCTEL (<a href="https://www.bloctel.gouv.fr" class="text-blue-500" target="_blank">www.bloctel.gouv.fr</a>) afin
-      de ne plus être démarché téléphoniquement par un professionnel avec lequel vous n’avez pas de relation
-      contractuelle en cours, conformément à la loi n°2014-344 du 17 mars 2014 relative à la consommation. Inscription
-      gratuite sur le site :
-      <a href="https://conso.bloctel.fr/index.php/inscription.php" class="text-blue-500" target="_blank"
-        >https://conso.bloctel.fr/index.php/inscription.php</a
-      >.
+    <!-- ARTICLE 2 - ACCEPTATION DES CONDITIONS GENERALES DE VENTE -->
+    <h2 class="text-xl font-semibold mt-6">
+      Article 2 - Acceptation des Conditions Générales de Vente
+    </h2>
+    <p>
+      En validant sa commande, le Client accepte sans réserve les présentes CGV.
+      Le Client reconnaît avoir pris connaissance des CGV avant de procéder à sa
+      commande. Les CGV peuvent être modifiées à tout moment, et les
+      modifications seront applicables dès leur publication sur le Site.
     </p>
 
-    <h2 class="text-xl font-semibold mt-6">ARTICLE 1. DEFINITIONS</h2>
-    <p>Les termes employés ci-après ont, dans les présentes Conditions Générales, la signification suivante :</p>
+    <!-- ARTICLE 3 - PRODUITS -->
+    <h2 class="text-xl font-semibold mt-6">Article 3 - Produits</h2>
+    <p>
+      Les produits proposés à la vente sont ceux qui figurent sur le Site au
+      moment de la consultation par le Client. Chaque produit est présenté sur
+      une fiche descriptive détaillant ses caractéristiques principales. Les
+      photographies des produits sont illustratives et ne peuvent garantir une
+      parfaite similitude avec le produit livré, notamment en ce qui concerne
+      les couleurs.
+    </p>
+    <p>
+      Les produits sont proposés dans la limite des stocks disponibles. En cas
+      d'indisponibilité d'un produit après validation de la commande, le Client
+      sera informé par e-mail et pourra choisir entre un remboursement ou un
+      échange.
+    </p>
+
+    <!-- ARTICLE 4 - PRIX -->
+    <h2 class="text-xl font-semibold mt-6">Article 4 - Prix</h2>
+    <p>
+      Les prix des produits sont indiqués en euros, toutes taxes comprises
+      (TTC). Les frais de port sont calculés séparément et précisés avant la
+      validation définitive de la commande. En cas de modification du taux de
+      TVA applicable, ces prix pourront être réajustés.
+    </p>
+    <p>
+      La Pharmacie Agnès Praden se réserve le droit de modifier ses prix à tout
+      moment, mais s'engage à appliquer les prix en vigueur au moment de la
+      validation de la commande par le Client.
+    </p>
+    <p>
+      Selon la loi, les paniers contenant des médicaments ne pourront pas
+      bénéficier de frais de ports gratuits.
+    </p>
+
+    <!-- ARTICLE 5 - COMMANDE -->
+    <h2 class="text-xl font-semibold mt-6">Article 5 - Commande</h2>
+    <p>
+      Pour pouvoir acheter un produit, le Client doit être âgé d’au moins 18 ans
+      et disposer de la capacité légale ou, s’il est mineur, être en mesure de
+      justifier de l’accord de ses représentants légaux. Le Client sera invité à
+      fournir des informations permettant de l’identifier en complétant le
+      formulaire disponible sur le Site. Le signe (*) indique les champs
+      obligatoires qui doivent être remplis pour que la commande du Client soit
+      traitée par le Vendeur. Le Client peut vérifier sur le Site le statut de sa
+      commande. Le suivi des livraisons peut, le cas échéant, être effectué en
+      utilisant les outils de suivi en ligne de certains transporteurs. Le
+      Client peut également contacter le service commercial du Vendeur à tout
+      moment par courrier électronique, à l’adresse
+      <a href="mailto:webpharmaciepraden@gmail.com" class="text-blue-500"
+        >webpharmaciepraden@gmail.com</a
+      >, afin d’obtenir des informations sur le statut de sa commande. Les
+      informations que le Client fournit au Vendeur lors d’une commande doivent
+      être complètes, exactes et à jour. Le Vendeur se réserve le droit de
+      demander au Client de confirmer, par tout moyen approprié, son identité,
+      son éligibilité et les informations communiquées.
+    </p>
+    <p>
+      Le Client doit suivre le processus de commande en ligne, en remplissant un
+      formulaire avec les informations nécessaires à la gestion de la commande
+      (adresse, mode de paiement, etc.). Toute commande validée par le Client
+      constitue une vente ferme et définitive. La commande ne sera considérée
+      comme effective qu'après confirmation de la part de la Pharmacie Agnès
+      Praden par l'envoi d'un e-mail de confirmation.
+    </p>
+    <p>
+      Le Client s'engage à fournir des informations exactes et complètes. En cas
+      d'erreur dans les informations fournies (adresse de livraison incorrecte,
+      informations de paiement erronées), Pharmacie Agnès Praden ne pourra être
+      tenue responsable des retards ou erreurs de livraison.
+    </p>
+    <p>
+      Tous les produits vendus par le Vendeur sont neufs et conformes à la
+      législation européenne en vigueur et aux normes applicables en France.
+    </p>
+
+    <!-- ARTICLE 6 - MODALITES DE PAIEMENT -->
+    <h2 class="text-xl font-semibold mt-6">Article 6 - Modalités de Paiement</h2>
+    <p>
+      Les paiements s'effectuent via les modes de paiement suivants : carte
+      bancaire, directement sur le Site au moment de la validation de la
+      commande.
+    </p>
+    <p>
+      Les paiements par carte bancaire sont sécurisés grâce au système de
+      paiement u2Pay, qui garantit la confidentialité des informations
+      bancaires. En cas de paiement par chèque ou virement bancaire, la commande
+      sera expédiée après encaissement effectif du paiement.
+    </p>
+    <p>
+      Le Client garantit qu'il dispose des autorisations nécessaires pour
+      utiliser le moyen de paiement choisi et que celui-ci est valide au moment
+      de la commande.
+    </p>
+
+    <!-- ARTICLE 7 - LIVRAISON -->
+    <h2 class="text-xl font-semibold mt-6">Article 7 - Livraison</h2>
+    <p>
+      La livraison des produits se fait à l'adresse fournie par le Client lors
+      de la commande. Le délai de livraison indiqué sur le Site est une
+      estimation et peut varier en fonction de la disponibilité des produits et
+      du transporteur choisi. Les frais de livraison sont calculés en fonction
+      du poids et de la destination des produits.
+    </p>
+    <p>
+      Notre partenaire, La Poste, vous informe par mail et/ou SMS de toutes les
+      informations concernant la livraison de votre colis. Merci de vérifier que
+      vos coordonnées soient exactes et de vérifier vos spams. Nous ne prendrons
+      pas en charge les frais de renvois de colis non récupérés pour coordonnées
+      erronées ou pour non réception ou non consultation des mails de La Poste.
+    </p>
+    <p>
+      En cas de retard de livraison, la Pharmacie Agnès Praden ne pourra être
+      tenue responsable, sauf en cas de faute avérée de sa part.
+    </p>
+    <p>
+      En cas d'erreur dans le libellé des coordonnées du destinataire, ou en
+      l'absence de retrait par le client en point relais sélectionné par ses
+      soins, le Vendeur ne saurait être tenu responsable de l'impossibilité de
+      livrer les objets commandés. Aucune réexpédition ne pourra être réalisée
+      et le Client sera remboursé des produits à l'exception des frais de port
+      dans un délai de quatorze (14) jours à compter de la réception de la
+      commande par la Pharmacie A Praden. Dans ce cas, un montant forfaitaire de
+      5€ en tant que malus écologique et frais de traitement sera déduit du
+      remboursement. Si la commande est inférieure à 5€, il n'y aura lieu à
+      aucun remboursement.
+    </p>
+
+    <p>Les modes de livraison proposés sont les suivants :</p>
     <ul class="list-disc ml-6 mt-2">
-      <li><strong>VENDEUR</strong> : Désigne la Pharmacie Agnès Praden...</li>
-      <li><strong>CLIENT</strong> : Désigne le cocontractant...</li>
-      <li><strong>LIVRAISON</strong> : Désigne la première présentation des PRODUITS...</li>
-      <li><strong>PRODUITS</strong> : Désigne l’ensemble des produits disponibles...</li>
-      <li><strong>TERRITOIRE</strong> : Désigne la FRANCE Métropolitaine...</li>
+      <li>
+        <strong>Livraison en point relais</strong><br />
+        Une fois le colis remis à notre partenaire, La Poste Colissimo, nous ne
+        sommes pas responsables des modifications du lieu de livraison des colis
+        (causes : point relais saturé, fermé, etc.). Nous ne prendrons donc pas
+        en charge dans ce cas les frais de renvois de colis non récupérés. La
+        Poste prévient le client par mail des modifications.
+        <br />
+        Colis à disposition dans le point de retrait choisi par le destinataire.
+        À retirer : en relais commerçant sous 14 jours calendaires (avec pièce
+        d'identité et bon de retrait), en consigne sous 5 jours calendaires
+        (avec code reçu par le destinataire).
+        <br />
+        La livraison en point relais est gratuite pour 69€ d’achats en
+        parapharmacie et un colis de moins de 5 Kg.
+      </li>
+      <li class="mt-4">
+        <strong>Livraison à domicile contre signature</strong><br />
+        La pharmacie n'est pas responsable si le colis ne peut pas vous être
+        remis en mains propres (absence le jour de livraison, etc.). Dans ce
+        cas, le colis sera déposé au bureau de poste le plus proche. Vous
+        pourrez le récupérer vous ou une personne de confiance, avec votre pièce
+        d'identité.
+      </li>
+      <li class="mt-4">
+        <strong>Retrait en magasin (Click & Collect)</strong><br />
+        Pour retirer une commande, le client doit se présenter au comptoir avec
+        le mail de confirmation de la commande. À réception de la commande, le
+        client devra signer un papier confirmant qu’il a reçu sa commande. Une
+        pièce d’identité peut être demandée.<br />
+        Si une tierce personne vient récupérer votre commande, vous devez
+        obligatoirement nous informer par mail, du nom et prénom de la personne.
+      </li>
     </ul>
 
-    <h2 class="text-xl font-semibold mt-6">ARTICLE 2. OBJET</h2>
-    <p>Les présentes Conditions Générales régissent la vente par le VENDEUR à ses CLIENTS des PRODUITS...</p>
-
-    <h2 class="text-xl font-semibold mt-6">ARTICLE 3. ACCEPTATION DES CONDITIONS GENERALES</h2>
-    <p>Le CLIENT s’engage à lire attentivement les présentes Conditions Générales et à les accepter...</p>
-
-    <h2 class="text-xl font-semibold mt-6">ARTICLE 4. ACHAT DE PRODUITS SUR LE SITE</h2>
+    <h3 class="text-lg font-semibold mt-6">7.1 - Réception des produits</h3>
     <p>
-      Pour pouvoir acheter un PRODUIT, le CLIENT doit être âgé d’au moins 18 ans et disposer de la capacité légale ou,
-      s’il est mineur, être en mesure de justifier de l’accord de ses représentants légaux. Le CLIENT sera invité à
-      fournir des informations permettant de l’identifier en complétant le formulaire disponible sur le SITE. Le signe
-      (*) indique les champs obligatoires qui doivent être remplis pour que la commande du CLIENT soit traitée par le
-      VENDEUR. Le CLIENT peut vérifier sur le SITE le statut de sa commande. Le suivi des LIVRAISONS peut, le cas
-      échéant, être effectué en utilisant les outils de suivi en ligne de certains transporteurs. Le CLIENT peut
-      également contacter le service commercial du VENDEUR à tout moment par courrier électronique, à l’adresse
-      webpharmaciepraden [@] gmail.com, afin d’obtenir des informations sur le statut de sa commande. Les informations
-      que le CLIENT fournit au VENDEUR lors d’une commande doivent être complètes, exactes et à jour. Le VENDEUR se
-      réserve le droit de demander au CLIENT de confirmer, par tout moyen approprié, son identité, son éligibilité et
-      les informations communiquées.
+      Le client est tenu de vérifier l’état de l’emballage du colis lors de la
+      livraison et d’émettre des réserves si besoin. Le client doit s’assurer
+      que les produits livrés correspondent à la commande. En cas d’erreur, c’est
+      à dire une inversion de produit ou un produit inutilisable, le client doit
+      en informer le Vendeur, par mail
+      <a href="mailto:webpharmaciepraden@gmail.com" class="text-blue-500"
+        >webpharmaciepraden@gmail.com</a
+      >, dans un délai de 7 jours à partir de la date de réception de la
+      commande.
+    </p>
+    <p>
+      Lors du transport, l’emballage ou le produit peut être légèrement abîmé.
+      Dans l’optique de limiter l’impact environnemental, si cela est seulement
+      esthétique et n’empêche pas le bon fonctionnement du produit, le produit
+      ne sera ni repris ni échangé.
     </p>
 
-    <h2 class="text-xl font-semibold mt-6">ARTICLE 5. COMMANDES</h2>
     <p>
-      Article 5.1 Caractéristique des produits Le VENDEUR s’engage à présenter les caractéristiques essentielles des
-      PRODUITS (sur les fiches d’information disponibles sur le SITE) et les informations obligatoires que le CLIENT
-      doit recevoir en vertu du droit applicable. Le CLIENT s’engage à lire attentivement ces informations avant de
-      passer une commande sur le SITE. Tous les PRODUITS vendus par le VENDEUR sont neufs et conformes à la législation
-      européenne en vigueur et aux normes applicables en France. Article 5.2. Procédure de commande Les commandes de
-      PRODUITS sont directement passées sur le SITE. Pour effectuer une commande, le CLIENT doit suivre les étapes
-      décrites ci-dessous (veuillez noter cependant qu’en fonction de la page de démarrage du CLIENT, les étapes peuvent
-      légèrement différer). 5.2.1. Sélection des PRODUITS et options d’achat Le CLIENT devra sélectionner le(s)
-      PRODUIT(s) de son choix en cliquant sur le(s) PRODUIT(s) concerné(s) et en choisissant les caractéristiques et les
-      quantités souhaitées. Une fois le PRODUIT sélectionné, le PRODUIT est placé dans le panier du CLIENT. Ce dernier
-      peut ensuite ajouter à son panier autant de PRODUITS qu’il le souhaite. 5.2.2. Commandes Une fois les PRODUITS
-      sélectionnés et placés dans son panier, le CLIENT doit cliquer sur le panier et vérifier que le contenu de sa
-      commande est correct. Si le CLIENT ne l’a pas encore fait, il sera ensuite invité à s’identifier ou à s’inscrire.
-      Une fois que le CLIENT aura validé le contenu du panier et qu’il se sera identifié / inscrit, s’affichera à son
-      attention un formulaire en ligne complété automatiquement et récapitulant le prix, les taxes applicables et, le
-      cas échéant, les frais de livraison. Le CLIENT est invité à vérifier le contenu de sa commande (y compris la
-      quantité, les caractéristiques et les références des PRODUITS commandés, l’adresse de facturation, le moyen de
-      paiement et le prix) avant de valider son contenu. Le CLIENT peut alors procéder au paiement des PRODUITS en
-      suivant les instructions figurant sur le SITE et fournir toutes les informations nécessaires à la facturation et à
-      la LIVRAISON des PRODUITS. Concernant les PRODUITS pour lesquels des options sont disponibles, ces références
-      spécifiques apparaissent lorsque les bonnes options ont été sélectionnées. Les commandes passées doivent
-      comprendre toutes les informations nécessaires au bon traitement de la commande. Le CLIENT doit également
-      sélectionner le mode de livraison choisi. 5.2.3. Accusé de réception Une fois que toutes les étapes décrites
-      ci-dessus sont complétées, une page apparait sur le SITE afin d’accuser réception de la commande du CLIENT. Une
-      copie de l’accusé de réception de la commande est automatiquement adressée au CLIENT par courrier électronique, à
-      condition que l’adresse électronique communiquée par le biais du formulaire d’inscription soit correcte. Le
-      VENDEUR n’envoie aucune confirmation de commande par courrier postal ou par télécopie. 5.2.4. Facturation Pendant
-      la procédure de commande, le CLIENT devra saisir les informations nécessaires à la facturation (le signe (*)
-      indiquera les champs obligatoires devant être remplis pour que la commande du CLIENT soit traitée par le VENDEUR).
-      Le CLIENT doit notamment indiquer clairement toutes les informations relatives à la LIVRAISON, en particulier
-      l’adresse exacte de LIVRAISON, ainsi que tout éventuel code d’accès à l’adresse de LIVRAISON. Le CLIENT doit
-      également préciser le moyen de paiement choisi. Ni le bon de commande que le CLIENT établit en ligne, ni l’accusé
-      de réception de la commande que le VENDEUR envoie au CLIENT par courrier électronique ne constituent une facture.
-      Quel que soit le mode de commande ou de paiement utilisé, Le CLIENT recevra l’original de la facture à la
-      LIVRAISON des PRODUITS, à l’intérieur du colis. 5.3. Date de la commande La date de la commande est la date à
-      laquelle le VENDEUR accuse réception en ligne de la commande. Les délais indiqués sur le SITE ne commencent à
-      courir qu’à partir de cette date. 5.4. Prix Pour tous les PRODUITS, le CLIENT trouvera sur le SITE des prix
-      affichés en euros toutes taxes comprises, ainsi que les frais de livraison applicables (en fonction du poids du
-      colis, hors emballage et cadeaux, de l’adresse de LIVRAISON et du transporteur ou mode de transport choisi). Les
-      prix incluent en particulier la taxe sur la valeur ajoutée (TVA) au taux en vigueur à la date de commande. Toute
-      modification du taux applicable peut impacter le prix des PRODUITS à compter de la date d’entrée en vigueur du
-      nouveau taux. Le taux de TVA applicable est exprimé en pourcentage de la valeur du PRODUIT vendu. Les prix des
-      fournisseurs du VENDEUR sont susceptibles d’être modifiés. En conséquence, les prix indiqués sur le SITE peuvent
-      changer. Ils peuvent également être modifiés en cas d’offres ou de ventes spéciales. Les prix indiqués sont
-      valables, sauf erreur grossière. Le prix applicable est celui indiqué sur le SITE à la date à laquelle la commande
-      est passée par le CLIENT. 5.5. Disponibilité des PRODUITS Le professionnel s’engage à livrer le PRODUIT à la date
-      ou dans le délai indiqué au CLIENT, sauf si les parties en ont convenu autrement. L’indisponibilité d’un PRODUIT
-      est en principe indiquée sur la page du PRODUIT concerné. Les CLIENTS peuvent également être informés du réassort
-      d’un PRODUIT par le VENDEUR. En tout état de cause, si l’indisponibilité n’a pas été indiquée au moment de la
-      commande, le VENDEUR s’engage à informer le CLIENT sans délai si le PRODUIT est indisponible. Dans l’hypothèse où
-      un PRODUIT est indisponible, le VENDEUR peut, et si les parties en conviennent, proposer un PRODUIT alternatif de
-      qualité et de prix équivalents, accepté par le CLIENT. Si le CLIENT décide d’annuler sa commande de PRODUITS
-      indisponibles, il obtiendra le remboursement de toutes les sommes versées pour les PRODUITS indisponibles au plus
-      tard dans les quatorze (14) jours du paiement. Dans le cadre d'une indisponibilité prolongée (supérieur à 30 jour)
-      le client peut par courrier recommandé ou mail soit annuler la commande soit enjoindre la pharmacie de délivrer le
-      produit dans un délai raisonnable. Passé ce délai le client pourra demander l'annulation de la commande. Le client
-      sera remboursé sur le compte bancaire débité dans un délai maximum de quatorze (14) jours. 5.6. Commande des
-      médicaments Les médicaments qui sont issus de la chaîne du froid ou ayant une date de péremption proche sont
-      exclus de la commande. Il n’est pas imposé un seuil minimum d’achats, commander un seul médicament est possible.
-      Avant toute commande, un questionnaire relatif à l’état de la personne est rempli par le patient. La commande ne
-      doit pas dépasser les doses d’exonération accordée par principe actif, cf. à l’article R.5132-2 du CSP, pour que
-      le médicament demeure non soumis à prescription médicale obligatoire. Le pharmacien doit traiter la commande dans
-      les 48 heures. Avant toute validation de la commande, le pharmacien veille à l’absence de contre-indication et
-      interaction médicamenteuse. Dans le cas contraire, la commande est bloquée et le patient contacté pour lui
-      expliquer les raisons et lui délivrer le conseil approprié. L’activation du lien vers le site de l’ordre des
-      pharmaciens listant les sites autorisés est un préalable obligatoire à la validation de la commande. Les
-      médicaments en vente sont issus directement du stock de la pharmacie d’officine. Les commandes doivent être
-      passées sans l’entremise de courtiers conformément à l’article L.5125-25 du CSP.
+      <strong>Réclamations :</strong><br />
+      Pour toutes réclamations, merci de contacter la Pharmacie Agnès Praden,
+      par mail :
+      <a href="mailto:webpharmaciepraden@gmail.com" class="text-blue-500"
+        >webpharmaciepraden@gmail.com</a
+      >, en précisant, nom, prénom, les références de la commande, le problème
+      rencontré et en joignant des photos.
+    </p>
+    <p>
+      En cas d’un délai de livraison par La Poste supérieur à 10 jours, le Client
+      doit prévenir le Vendeur au plus vite, qui fera une réclamation à La Poste.
+      Aucun remboursement n’aura lieu sans la conclusion de La Poste annonçant
+      le colis perdu.
+    </p>
+    <p>
+      En cas de vol de colis, le Client doit en informer le Vendeur dans les 48h.
+      Le Vendeur demandera au Client de lui envoyer une copie de l'intégralité de
+      sa carte d’identité et de remplir un document avec attestation sur
+      l’honneur expliquant le problème. Suite à cela, le Vendeur pourra déposer
+      la réclamation auprès de son prestataire : La Poste. Aucun remboursement
+      n’aura lieu sans la conclusion de La Poste annonçant le colis volé. La
+      réponse de La Poste après dépôt d’une réclamation peut prendre 90 jours.
+    </p>
+    <p>
+      <strong>Remboursement :</strong><br />
+      Le mode de remboursement préférentiel sera un avoir, valable 1 an.
+      <br />
+      Si vous avez bénéficié d’un code promotionnel sur votre commande, le
+      montant sera ajusté en fonction de la valeur recalculée de la commande et
+      du taux de réduction adéquat.
     </p>
 
-    <h2 class="text-xl font-semibold mt-6">ARTICLE 6. PAIEMENT</h2>
+    <!-- ARTICLE 8 - DROIT DE RÉTRACTATION -->
+    <h2 class="text-xl font-semibold mt-6">Article 8 - Droit de rétractation</h2>
     <p>
-      7.1. Moyens de paiement Le CLIENT peut payer ses PRODUITS en ligne sur le SITE suivant les moyens proposés par le
-      VENDEUR. Le CLIENT garantit au VENDEUR qu’il détient toutes les autorisations requises pour utiliser le moyen de
-      paiement choisi. Le VENDEUR prendra toutes les mesures nécessaires pour garantir la sécurité et la confidentialité
-      des données transmises en ligne dans le cadre du paiement en ligne sur le SITE. Il est à ce titre précisé que
-      toutes les informations relatives au paiement fournies sur le SITE sont transmises à la banque du SITE et ne sont
-      pas traitées sur le SITE. 7.2. Date de paiement En cas de paiement unique par carte de crédit, le compte du CLIENT
-      sera débité dès la commande de PRODUITS passée sur le SITE. En cas de LIVRAISON partielle, le montant total sera
-      débité du compte du CLIENT au plus tôt lorsque le premier colis sera expédié. Si le CLIENT décide d’annuler sa
-      commande de PRODUITS indisponibles, le remboursement s’effectuera conformément au dernier paragraphe de l’article
-      5.5 des présentes Conditions Générales. 7.3. Retard ou refus de paiement Si la banque refuse de débiter une carte
-      ou autre moyen de paiement, le CLIENT devra contacter le Service Client du VENDEUR afin de payer la commande par
-      tout autre moyen de paiement valable. Dans l’hypothèse où, pour quelle que raison que ce soit, opposition, refus
-      ou autre, la transmission du flux d’argent dû par le CLIENT s’avèrerait impossible, la commande serait annulée et
-      la vente automatiquement résiliée.
+      Conformément à l'article L221-18 du Code de la consommation, le Client
+      dispose d'un délai de 14 jours à compter de la réception des produits pour
+      exercer son droit de rétractation sans avoir à justifier de motifs ni à
+      payer de pénalités. Ce droit peut être exercé en envoyant un formulaire de
+      rétractation ou toute déclaration dénuée d'ambiguïté indiquant la volonté
+      de se rétracter.
+    </p>
+    <p>
+      Les produits doivent être retournés dans leur état d'origine (non ouverts,
+      non utilisés) et dans leur emballage d'origine. Les frais de retour sont à
+      la charge du Client. Le remboursement sera effectué dans un délai de 14
+      jours suivant la réception des produits retournés, via le même moyen de
+      paiement utilisé pour la commande.
+    </p>
+    <p>Les médicaments ne peuvent être ni repris ni échangés.</p>
+
+    <!-- ARTICLE 9 - GARANTIES -->
+    <h2 class="text-xl font-semibold mt-6">Article 9 - Garanties</h2>
+    <p>
+      Tous les produits vendus bénéficient de la garantie légale de conformité
+      et de la garantie contre les vices cachés. En cas de défaut de conformité
+      ou de vice caché, le Client peut demander la réparation ou le remplacement
+      du produit, ou, si cela est impossible, un remboursement.
+    </p>
+    <p>
+      Les produits bénéficiant d'une garantie commerciale (en plus des garanties
+      légales) sont spécifiés sur la fiche produit. La garantie ne couvre pas
+      les défauts ou détériorations causés par une mauvaise utilisation ou un
+      accident.
+    </p>
+
+    <!-- ARTICLE 10 - RESPONSABILITÉ -->
+    <h2 class="text-xl font-semibold mt-6">Article 10 - Responsabilité</h2>
+    <p>
+      La Pharmacie Agnès Praden ne saurait être tenue responsable de
+      l'inexécution du contrat en cas de force majeure, de dysfonctionnements du
+      réseau internet, de problèmes de transport ou de problèmes liés aux
+      prestataires externes.
+    </p>
+    <p>
+      Le Client est responsable de l'utilisation des produits achetés,
+      conformément aux instructions données par le fabricant. Toute réclamation
+      relative à l’utilisation des produits doit être adressée directement au
+      fabricant.
+    </p>
+
+    <!-- ARTICLE 11 - PROTECTION DES DONNÉES PERSONNELLES -->
+    <h2 class="text-xl font-semibold mt-6">
+      Article 11 - Protection des données personnelles
+    </h2>
+    <p>
+      Les données personnelles collectées sont utilisées pour traiter les
+      commandes et améliorer l'expérience client sur le Site. En vertu de la loi
+      "Informatique et Libertés" et du Règlement Général sur la Protection des
+      Données (RGPD), le Client dispose d'un droit d'accès, de rectification, de
+      suppression, d'opposition et de portabilité sur ses données personnelles.
+    </p>
+    <p>
+      Le traitement des données personnelles est expliqué dans la Politique de
+      Confidentialité accessible sur le Site.
+    </p>
+
+    <!-- ARTICLE 12 - PROPRIÉTÉ INTELLECTUELLE -->
+    <h2 class="text-xl font-semibold mt-6">Article 12 - Propriété intellectuelle</h2>
+    <p>
+      Tous les contenus présents sur le Site, incluant textes, images, logos,
+      graphiques, icônes, vidéos, et logiciels, sont protégés par les droits de
+      propriété intellectuelle et sont la propriété exclusive de la Pharmacie
+      Agnès Praden ou de ses partenaires. Toute reproduction, représentation,
+      modification, ou exploitation, totale ou partielle, des éléments du Site
+      est interdite sans l'accord préalable écrit de la Pharmacie Agnès Praden.
+    </p>
+
+    <!-- ARTICLE 13 - LOI APPLICABLE ET RÉSOLUTION DES LITIGES -->
+    <h2 class="text-xl font-semibold mt-6">
+      Article 13 - Loi applicable et résolution des litiges
+    </h2>
+    <p>
+      Les présentes CGV sont régies par le droit français. En cas de litige, le
+      Client peut recourir à une médiation ou saisir le tribunal compétent. Le
+      Client est informé de la possibilité d'utiliser la plateforme de résolution
+      des litiges en ligne mise en place par la Commission Européenne.
+    </p>
+
+    <!-- ARTICLE 14 - CONTACT -->
+    <h2 class="text-xl font-semibold mt-6">Article 14 - Contact</h2>
+    <p>
+      Pour toute question ou réclamation, le Client peut contacter le service
+      client de la Pharmacie Agnès Praden à l'adresse suivante :
+    </p>
+    <ul class="list-disc ml-6 mt-2">
+      <li>
+        Par e-mail :
+        <a href="mailto:webpharmaciepraden@gmail.com" class="text-blue-500"
+          >webpharmaciepraden@gmail.com</a
+        >
+      </li>
+      <li>Par téléphone : 07 65 86 87 83</li>
+      <li>
+        Par courrier : Pharmacie Agnès Praden, Service web, 198 avenue des
+        Frères lumières 30100 Alès
+      </li>
+    </ul>
+
+    <!-- ARTICLE 15 - RESTRICTIONS DE QUANTITÉ -->
+    <h2 class="text-xl font-semibold mt-6">
+      Article 15 - Restrictions de Quantité pour Certaines Marques
+    </h2>
+    <p>
+      Afin de garantir une disponibilité équitable et de respecter les politiques
+      commerciales des marques partenaires, la pharmacie Agnès Praden peut
+      appliquer des restrictions sur les quantités des produits de certaines
+      marques, notamment pour des raisons de distribution, de protection contre
+      la revente non autorisée ou de contrôle des stocks.
     </p>
   </div>
 </template>

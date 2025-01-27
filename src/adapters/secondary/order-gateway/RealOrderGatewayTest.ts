@@ -114,7 +114,7 @@ export class RealOrderGateway implements OrderGateway {
         ),
       };
     } else {
-      console.log('3', selectedTimestamp)
+      console.log('3', selectedTimestamp);
       body = {
         ...rest,
         customerMessage: '',
