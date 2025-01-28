@@ -67,11 +67,15 @@ export default defineNuxtConfig({
     strict: true,
   },
 
-  modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxtjs/sitemap'],
+  modules: ['@pinia/nuxt', '@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxtjs/sitemap', 'nuxt-gtag'],
 
   dir: {
     layouts: './src/adapters/primary/nuxt/layouts',
     pages: './src/adapters/primary/nuxt/pages/',
+  },
+
+  gtag: {
+    id: 'G-RD9P3SEGJ7',
   },
 
   css: ['~/assets/css/tailwind.css'],
