@@ -1,7 +1,8 @@
 <template lang="pug">
 ft-child-categories(:categoriesVM="categoriesVM" :categoriesVM2="categoriesVM2")
 div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4(ref='top')
-    h1.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') {{categoryVM.name}}
+    div.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl')
+      h1 {{categoryVM.name}}
       nav.breadcrumbs.flex.items-center.text-sm.text-gray-600.mt-2
         nuxt-link.text-main.font-medium(href="/") Accueil
         span.mx-2 /
