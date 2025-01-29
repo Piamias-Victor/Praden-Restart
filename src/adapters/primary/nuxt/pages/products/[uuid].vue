@@ -1,5 +1,13 @@
 <template lang="pug">
 ft-categories(:categoriesVM="categoriesVM")
+nav.breadcrumbs.flex.items-center.text-sm.text-gray-600.m-2
+      nuxt-link.text-main.font-medium(href="/") Accueil
+      span.mx-2 /
+      nuxt-link.text-main.font-medium(href="/laboratory") Laboratoires
+      span.mx-2 /
+      nuxt-link.text-main.font-medium(:href="`/laboratory`") {{ productVM.laboratory }}
+      span.mx-2 /
+      span.text-main.font-semibold {{ productVM.name }}
 div.mt-4
   div.mx-auto.max-w-2xl(class='lg:max-w-none relative')
     div(class='grid grid-cols-1 sm:grid-cols-2 sm:items-start sm:gap-x-8')
@@ -88,6 +96,10 @@ const isPromo = ref(false);
 
 const route = useRoute();
 
+const formatLaboratory = (name: string): string => {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+};
+
 function extractUuidFromPath(path: string): string {
   console.log('path', path)
   const [_, uuid] = path.split('?');
@@ -120,6 +132,25 @@ const productVM = computed(() => {
   return getProductVM();
 });
 
+const formatProductHref = (product: { name: string; uuid: string }): string => {
+  // Formate le nom en un slug SEO-friendly
+  const formattedName = product.name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-') // Remplace les caractères non alphanumériques par des tirets
+    .replace(/^-|-$/g, ''); // Supprime les tirets en début ou fin de chaîne
+
+  return `/products/${formattedName}?${product.uuid}`;
+};
+
+const canonicalUrl = computed(() => {
+  if (!productVM.value || !productId.value) return '';
+
+  return `https://pharmacieagnespraden.com${formatProductHref({
+    name: productVM.value.name,
+    uuid: productId.value,
+  })}`;
+});
+
 useHead(() => {
   return {
     title: productVM.value
@@ -129,14 +160,14 @@ useHead(() => {
       {
         name: 'description',
         content: productVM.value
-          ? `Découvrez ${productVM.value.name}, un produit de ${productVM.value.laboratory}. ${productVM.value.description}`
+          ? `Découvrez ${productVM.value.name}, un produit de ${productVM.value.laboratory}. ${productVM.value.description}`.slice(0,160)
           : 'Pharmacie Agnès - Produits pharmaceutiques de qualité.',
       },
     ],
     link: [
       {
         rel: 'canonical',
-        href: `https://pharmacieagnespraden.com/products/${productVM.value?.name.replace(/\s+/g, '-')}+${productId.value}`, // Construire l'URL complète
+        href: canonicalUrl, // Construire l'URL complète
       },
     ],
   };
