@@ -8,6 +8,7 @@ declare module '@nuxt/schema' {
       routes?: (() => Promise<(string | SitemapRoute)[]>) | (string | SitemapRoute)[]; // Routes statiques ou dynamiques
     };
   }
+  
   interface NuxtOptions {
     sitemap?: {
       hostname: string;
