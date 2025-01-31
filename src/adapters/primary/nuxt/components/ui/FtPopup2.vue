@@ -48,7 +48,23 @@ const emit = defineEmits<{
   (e: 'selection-confirmed', selection: { timestamp: number }): void;
 }>();
 
+const minAvailableDate = ref(new Date());
+
+
+onMounted(() => {
+    minAvailableDate.value = getNextAvailableDate();
+    selectedDate.value = new Date(minAvailableDate.value);
+});
+
 const date = ref(new Date());
+
+const getNextAvailableDate = (): Date => {
+    let date = new Date();
+    while (date.getDay() === 0) { // 0 = Dimanche
+        date.setDate(date.getDate() + 1);
+    }
+    return date;
+};
 
 // Ajoutez des traductions personnalisées en français
 const translations = {
