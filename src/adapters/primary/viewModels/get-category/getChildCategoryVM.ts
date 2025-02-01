@@ -30,7 +30,8 @@ export const getChildCategoriesVM = (uuid: UUID): ChildCategoriesVM => {
         name: formatCategoryName(category.name),
         href: `/categories/${category.uuid}`,
         img: getImageInMemory(category.uuid),
-        icon: category.image ?? getIconInMemory(getRootCategoryUuid(category.uuid)), // Vérification de l'image
+        icon: category.image,
+        // icon: getIconInMemory(getRootCategoryUuid(category.uuid)),
       };
     }),
   };
