@@ -25,14 +25,12 @@ export const getChildCategoriesVM = (uuid: UUID): ChildCategoriesVM => {
   return {
     name: '',
     items: childCategories.map((category: Category) => {
-      if (category.uuid = 'b102f0cf-dee4-4a03-9e85-134875accb34') console.log('category :', category)
       return {
         uuid: category.uuid,
         name: formatCategoryName(category.name),
         href: `/categories/${category.uuid}`,
         img: getImageInMemory(category.uuid),
         icon: category.image ?? getIconInMemory(getRootCategoryUuid(category.uuid)), // Vérification de l'image
-        // icon: getIconInMemory(getRootCategoryUuid(category.uuid)),
       };
     }),
   };
