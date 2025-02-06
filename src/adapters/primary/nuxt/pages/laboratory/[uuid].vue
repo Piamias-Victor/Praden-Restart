@@ -79,6 +79,7 @@ onMounted(async () => {
   }
 });
 
+
 function extractUuidFromPath(path: string): string {
   console.log('path', path)
   const [_, uuid] = path.split('?');
