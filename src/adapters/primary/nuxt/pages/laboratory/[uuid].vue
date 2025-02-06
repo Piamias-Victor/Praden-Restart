@@ -61,6 +61,7 @@ import { listPromotions, listBestSales } from '@core/usecases/list-promotions/li
 
 definePageMeta({ layout: 'main' });
 
+
 onMounted(async () => {
   listDeliveryMethods(deliveryGateway);
   listCategories(categoryGateway());
