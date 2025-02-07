@@ -51,6 +51,7 @@ export class CreditAgricolePaymentGateway implements PaymentGateway {
     const {
       public: { HMAC },
     } = useRuntimeConfig();
+    
     this.hmacKey = HMAC as string || '';
 
     if (!this.hmacKey) {
