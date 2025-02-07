@@ -172,7 +172,16 @@ export class RealOrderGateway implements OrderGateway {
 
       console.log('res:', JSON.stringify(res.data.item));
 
-      const sessionUrl = await this.paymentGateway.createCheckoutSession(checkoutDTO, deliveryPrice, res.data.item.uuid);
+      const sessionUrl = await this.paymentGateway.createCheckoutSession(
+        {
+          orderUuid: uuid,
+          lines: lines, // Utilise les lignes de commande existantes
+          delivery: orderDTO.delivery,
+          contact: orderDTO.contact, // Ajout de l'email dynamique
+        },
+        deliveryPrice,
+        res.data.item.uuid,
+      );
 
       const order: Order = {
         uuid,

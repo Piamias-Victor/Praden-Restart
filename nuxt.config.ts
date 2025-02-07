@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
+      HMAC: process.env.HMAC,
       CONFIRMATION_TEMPLATE_ID: process.env.CONFIRMATION_TEMPLATE_ID,
       SEND_EMAIL_URL: process.env.SEND_EMAIL_URL,
       BACKEND_URL: process.env.BACKEND_URL,

@@ -5,7 +5,7 @@ import {
   FakeUUIDGenerator,
   RealDateProvider,
 } from '../src/adapters/secondary/order-gateway/RealOrderGatewayTest';
-import { StripePaymentGateway } from '@adapters/secondary/payment-gateway/stripePaymentGateway';
+import { CreditAgricolePaymentGateway } from '../src/adapters/secondary/payment-gateway/CreditAgricolePaymentGateway';
 
 export const useOrderGateway = () => {
   const {
@@ -13,7 +13,7 @@ export const useOrderGateway = () => {
   } = useRuntimeConfig();
   const orderGateway = new RealOrderGateway(
     new FakeUUIDGenerator(),
-    new StripePaymentGateway(STRIPE_SECRET_KEY),
+    new CreditAgricolePaymentGateway(STRIPE_SECRET_KEY),
     new RealDateProvider(),
   );
   orderGateway.feedWith(); // Ajoutez des commandes de test si nécessaire
