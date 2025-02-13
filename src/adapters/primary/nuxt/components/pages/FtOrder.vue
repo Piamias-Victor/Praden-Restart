@@ -42,7 +42,7 @@
                             span.font-semibold {{ line.name }}
                           div.flex.items-center.gap-4
                             span Quantité: {{ line.expectedQuantity }}
-                            span Prix: {{ (line.unitAmount / 100).toFixed(2) }}€
+                            span Prix TTC: {{ ((line.unitAmount * (1 + (line.percentTaxRate / 100))) / 100).toFixed(2) }}€
                       div.mt-4
                         h4.text-sm.font-semibold.mb-2 Totaux
                         p.text-sm.text-gray-600 Quantité Totale: {{ calculateTotalQuantity(order.lines) }}
@@ -186,7 +186,10 @@ const calculateTotalQuantity = (lines: any[]) => {
 
 // Méthode pour calculer le prix total de la commande (incluant la livraison)
 const calculateOrderTotalWithDelivery = (lines: any[], deliveryPrice: number) => {
-  const total = lines.reduce((acc, line) => acc + (line.unitAmount || 0) * (line.expectedQuantity || 1), 0);
-  return ((total + deliveryPrice) / 100).toFixed(2); // Ajouter la livraison, convertir en euros et formater
+  const total = lines.reduce((acc, line) => {
+    const ttcPrice = line.unitAmount * (1 + (line.percentTaxRate / 100)); // Ajouter la TVA
+    return acc + ttcPrice * (line.expectedQuantity || 1);
+  }, 0);
+  return ((total + deliveryPrice) / 100).toFixed(2); // Convertir en euros et formater
 };
 </script>
