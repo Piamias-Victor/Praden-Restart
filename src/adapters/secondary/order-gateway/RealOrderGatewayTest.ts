@@ -8,6 +8,7 @@ import { useDeliveryStore } from '@store/deliveryStore';
 import axios from 'axios';
 import { useProductGateway } from '../../../../gateways/productGateway';
 import { useNuxtApp } from 'nuxt/app';
+import { ReductionType } from '@core/entities/product';
 
 export class RealOrderGateway implements OrderGateway {
   private orders: Array<Order> = [];
@@ -62,11 +63,23 @@ export class RealOrderGateway implements OrderGateway {
             const product = await productGateway.getByUuid(l.productUuid);
             let priceWithoutTax: number;
             let promotionUuid: string | undefined = undefined;
+            priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
 
             if (product.promotions && product.promotions.length > 0) {
               const promotion = product.promotions[0];
-              priceWithoutTax = this.calculatePriceHT(product.price - promotion.amount, product.percentTaxRate);
-              promotionUuid = promotion.uuid;
+
+              if (promotion) {
+                let discountedPrice;
+
+                if (promotion.type === ReductionType.Fixed) {
+                  discountedPrice = product.price - promotion.amount;
+                } else {
+                  discountedPrice = product.price - (product.price * promotion.amount) / 100;
+                }
+
+                priceWithoutTax = this.calculatePriceHT(discountedPrice, product.percentTaxRate);
+                promotionUuid = promotion.uuid;
+              }
             } else {
               priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
             }
@@ -94,11 +107,23 @@ export class RealOrderGateway implements OrderGateway {
             const product = await productGateway.getByUuid(l.productUuid);
             let priceWithoutTax: number;
             let promotionUuid: string | undefined = undefined;
+            priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
 
             if (product.promotions && product.promotions.length > 0) {
               const promotion = product.promotions[0];
-              priceWithoutTax = this.calculatePriceHT(product.price - promotion.amount, product.percentTaxRate);
-              promotionUuid = promotion.uuid;
+
+              if (promotion) {
+                let discountedPrice;
+
+                if (promotion.type === ReductionType.Fixed) {
+                  discountedPrice = product.price - promotion.amount;
+                } else {
+                  discountedPrice = product.price - (product.price * promotion.amount) / 100;
+                }
+
+                priceWithoutTax = this.calculatePriceHT(discountedPrice, product.percentTaxRate);
+                promotionUuid = promotion.uuid;
+              }
             } else {
               priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
             }
@@ -125,11 +150,22 @@ export class RealOrderGateway implements OrderGateway {
             const product = await productGateway.getByUuid(l.productUuid);
             let priceWithoutTax: number;
             let promotionUuid: string | undefined = undefined;
+            priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
 
             if (product.promotions && product.promotions.length > 0) {
               const promotion = product.promotions[0];
-              priceWithoutTax = this.calculatePriceHT(product.price - promotion.amount, product.percentTaxRate);
-              promotionUuid = promotion.uuid;
+              if (promotion) {
+                let discountedPrice;
+
+                if (promotion.type === ReductionType.Fixed) {
+                  discountedPrice = product.price - promotion.amount;
+                } else {
+                  discountedPrice = product.price - (product.price * promotion.amount) / 100;
+                }
+
+                priceWithoutTax = this.calculatePriceHT(discountedPrice, product.percentTaxRate);
+                promotionUuid = promotion.uuid;
+              }
             } else {
               priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
             }
