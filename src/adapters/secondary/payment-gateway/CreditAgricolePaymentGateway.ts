@@ -71,12 +71,14 @@ export class CreditAgricolePaymentGateway implements PaymentGateway {
     const totalAmount =
       createCheckoutDTO.lines.reduce((total, line) => {
         let price = line.unitAmount;
-        if (line.promotion && line.promotion.type !== ReductionType.Fixed) {
-          price -= line.unitAmount * (line.promotion.amount / 100);
-        }
+        // if (line.promotion && line.promotion.type !== ReductionType.Fixed) {
+        //   price -= line.unitAmount * (line.promotion.amount / 100);
+        // }
         return total + Math.round(price) * line.quantity;
       }, 0) + parsePriceToCents(deliveryPrice);
 
+      console.log('totalAmount :', totalAmount)
+      console.log('createCheckoutDTO :', createCheckoutDTO)
     const dateTime = new Date().toISOString();
 
     const data: Record<string, string> = {
