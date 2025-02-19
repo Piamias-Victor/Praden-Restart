@@ -35,7 +35,7 @@
           span(:class="product.promotion?.price ? 'line-through' : 'font-bold text-main'") {{ product.price }}
           span.font-bold.text-main(v-if="product.promotion?.price") {{ product.promotion.price }}
     div.w-full.text-center.mt-auto
-        ft-add-to-cart-button(:product-uuid="product.uuid" :isMedicine="product.isMedecine" class='mt-auto' v-if="product.availableStock > 0")
+        ft-add-to-cart-button(:product-uuid="product.uuid" :isMedicine="product.isMedecine" :availableStock="product.availableStock" class='mt-auto' v-if="product.availableStock > 0")
         div.bg-main.rounded-b-xl.mt-1(class='p-0.5' v-else)
           ft-button.w-full.text-white.flex.items-center.justify-center.font-semibold
             span Bientôt disponible

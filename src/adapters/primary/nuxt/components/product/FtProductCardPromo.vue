@@ -32,7 +32,7 @@ div.bg-white.rounded-xl.pt-2(class='w-[65vw] sm:w-[15vw] min-h-[320px] flex flex
       div.flex.items-center.justify-between.gap-2
         span(:class="product.promotion?.price ? 'line-through' : 'font-bold text-main'") {{ product.price }}
         span.font-bold.text-main(v-if="product.promotion?.price") {{ product.promotion.price }}
-  ft-add-to-cart-button(:product-uuid="product.uuid" :isMedicine="product.isMedecine" class='mt-auto')
+  ft-add-to-cart-button(:product-uuid="product.uuid" :isMedicine="product.isMedecine" :availableStock="product.availableStock" class='mt-auto')
 </template>
 
 <script lang="ts" setup>

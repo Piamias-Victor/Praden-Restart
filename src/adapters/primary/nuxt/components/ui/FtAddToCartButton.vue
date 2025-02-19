@@ -26,6 +26,7 @@ import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
 const props = defineProps({
   productUuid: { type: String, required: true },
   isMedicine: { type: Boolean, required: true },
+  availableStock: { type: Number, required: false }, // Optionnel
 });
 
 const cartQuantity = ref<CartQuantityVM | null>(null);
@@ -46,23 +47,30 @@ const removeItemFromCart = (uuid: string) => {
 };
 
 const addItemToCart = (uuid: string) => {
-  if (
-    props.isMedicine &&
-    cartQuantity &&
-    cartQuantity.value &&
-    cartQuantity.value.items &&
-    cartQuantity.value.items[uuid] >= 5
-  ) {
+  const currentQuantity = cartQuantity.value?.items?.[uuid] || 0;
+
+  if (props.isMedicine && currentQuantity >= 5) {
     limit.value = true;
-  } else {
-    limit.value = false;
+    return;
   }
+
+  if (props.availableStock !== undefined && currentQuantity >= props.availableStock) {
+    limit.value = true;
+    return;
+  }
+
+  limit.value = false;
   addToCart(uuid, useProductGateway());
   sendUserNotif();
 };
 
 const isAddButtonHidden = (uuid: string) => {
-  return props.isMedicine && cartQuantity.value && cartQuantity.value.items && cartQuantity.value.items[uuid] >= 6;
+  const currentQuantity = cartQuantity.value?.items?.[uuid] || 0;
+
+  if (props.isMedicine && currentQuantity >= 6) return true;
+  if (props.availableStock !== undefined && currentQuantity >= props.availableStock) return true;
+
+  return false;
 };
 
 const sendUserNotif = () => {

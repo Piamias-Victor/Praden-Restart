@@ -31,7 +31,7 @@ div.mt-4
           )
             icon.icon-lg(name="ph:heart-bold")
 
-        ft-add-to-cart-button(:product-uuid="productId" :isMedicine="productVM.isMedicine" v-if="productVM && productVM.availableStock && productVM.availableStock > 0")
+        ft-add-to-cart-button(:product-uuid="productId" :isMedicine="productVM.isMedicine" :availableStock="productVM.availableStock" v-if="productVM && productVM.availableStock && productVM.availableStock > 0")
         div.bg-main.rounded-b-xl.mt-1(class='p-0.5' v-else)
           ft-button.w-full.text-white.flex.items-center.justify-center.font-semibold
             span Bientôt disponible
