@@ -84,10 +84,12 @@ export class RealOrderGateway implements OrderGateway {
               priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
             }
 
+            console.log('priceWithoutTax', priceWithoutTax)
+
             return {
               productUuid: l.productUuid,
               quantity: l.quantity,
-              priceWithoutTax: Math.round(priceWithoutTax),
+              priceWithoutTax: priceWithoutTax,
               percentTaxRate: product.percentTaxRate,
               ...(promotionUuid ? { promotionUuid } : {}),
             };
@@ -128,10 +130,13 @@ export class RealOrderGateway implements OrderGateway {
               priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
             }
 
+            console.log('priceWithoutTax', priceWithoutTax)
+
+
             return {
               productUuid: l.productUuid,
               quantity: l.quantity,
-              priceWithoutTax: Math.round(priceWithoutTax),
+              priceWithoutTax: priceWithoutTax,
               percentTaxRate: product.percentTaxRate,
               ...(promotionUuid ? { promotionUuid } : {}),
             };
@@ -170,10 +175,12 @@ export class RealOrderGateway implements OrderGateway {
               priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
             }
 
+            console.log('priceWithoutTax', priceWithoutTax)
+
             return {
               productUuid: l.productUuid,
               quantity: l.quantity,
-              priceWithoutTax: Math.round(priceWithoutTax),
+              priceWithoutTax: priceWithoutTax,
               percentTaxRate: product.percentTaxRate,
               ...(promotionUuid ? { promotionUuid } : {}),
             };
@@ -243,7 +250,7 @@ export class RealOrderGateway implements OrderGateway {
 
   private calculatePriceHT(priceWithTax: number, taxRate: number): number {
     const priceHT = priceWithTax / (1 + taxRate / 100);
-    return Math.round(priceHT * 100) / 100;
+    return (priceHT * 100) / 100;
   }
 
   async list(): Promise<Array<Order>> {
