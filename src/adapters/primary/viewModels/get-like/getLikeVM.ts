@@ -92,19 +92,19 @@ export const getProductsInCart = (): ProductsInCart => {
       total: 0,
       totalWithPromotion: 0,
       totalWithDelivery: 0,
-      freeDelivery: 6900,
+      freeDelivery: 3900,
     } as ProductsInCart,
   );
 };
 
 export const getTotalWithDelivery = (total: number): number => {
   const deliveryStore = useDeliveryStore();
-  if (total > 6900 && deliveryStore.selected!.uuid === 'relais-uuid') return total;
+  if (total > 3900 && deliveryStore.selected!.uuid === 'relais-uuid') return total;
   return total + deliveryStore.selected!.price;
 };
 
 export const getFreeDelivery = (total: number): number => {
-  const res = 6900 - total;
+  const res = 3900 - total;
   if (res > 0) return res;
   return 0;
 };

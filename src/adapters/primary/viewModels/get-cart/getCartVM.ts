@@ -102,7 +102,7 @@ export const getProductsInCart = (): ProductsInCart => {
       totalWithPromotion: 0,
       totalWithDelivery: 0,
       totalWeight: 0,
-      freeDelivery: 6900,
+      freeDelivery: 3900,
     } as ProductsInCart,
   );
 };
@@ -116,7 +116,7 @@ export const getProductsInCart = (): ProductsInCart => {
 export const getDeliveryPrice = (method: DeliveryMethod, weight: number, total: number, medecine: boolean): number => {
   // Trouve la tranche de poids appropriée
 
-  if (method.uuid === '505209a2-7acb-4891-b933-e084d786d7ea' && total > 6900 && weight < 5000 && medecine === false) {
+  if (method.uuid === '505209a2-7acb-4891-b933-e084d786d7ea' && total > 3900 && weight < 5000 && medecine === false) {
     return 0; // Livraison gratuite
   }
 
@@ -156,7 +156,7 @@ export const getTotalWithDelivery = (total: number, totalWeight: number, medecin
 };
 
 export const getFreeDelivery = (total: number): number => {
-  const res = 6900 - total;
+  const res = 3900 - total;
   if (res > 0) return res;
   return 0;
 };

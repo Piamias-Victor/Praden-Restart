@@ -35,12 +35,16 @@ div.mt-2.border-t.py-2.px-2(class='lg:py-6 lg:px-4')
               span.text-xs(class='lg:text-sm') {{ deliveryMethod.name }}
               span.text-xs(class='lg:text-sm')
             span.text-xs.text-contrast {{ deliveryMethod.description }}
+            div.text-main.font-bold.text-sm(v-if="deliveryMethod.uuid === '505209a2-7acb-4891-b933-e084d786d7ea'") 
+              span OFFRE DU WEEK-END : FDP GRATUIT dès 39€* !
         div(v-if='deliveryMethod.uuid !== selectedDeliveryMethod')
           div.flex.flex-col.items-start.border-main.relative.flex.cursor-pointer.rounded-lg.border.bg-white.shadow-sm.p-3(class='lg:p-4')
             div.flex.items-center.justify-between.w-full
               span.text-xs(class='lg:text-sm') {{ deliveryMethod.name }}
               span.text-xs(class='lg:text-sm')
             span.text-xs.text-contrast {{ deliveryMethod.description }}
+            div.text-main.font-bold.text-sm(v-if="deliveryMethod.uuid === '505209a2-7acb-4891-b933-e084d786d7ea'") 
+              span OFFRE DU WEEK-END : FDP GRATUIT dès 39€* !
   div.flex.justify-between.items-center
       p.font-semibold.text Frais de port
       div.flex.flex-col.pl-2
@@ -53,6 +57,7 @@ div.mt-2.border-t.py-2.px-2(class='lg:py-6 lg:px-4')
           span.font-semibold.text-main(v-if="cart.totalPriceWithPromotion") {{ cart.totalPriceWithPromotion }}
   div.mt-2(class='lg:mt-4')
       ft-button.button-solid.w-full.text-xl( @click="validateOrder") Paiement
+  span.text-xs * -5kg, hors médicaments.
 ft-popup(:show="showPopup" @close="closePopup")
 ft-popup2(:show="showPopup2" @close="closePopup2" @selection-confirmed="handleSelection")
 </template>
