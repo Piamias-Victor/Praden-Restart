@@ -91,7 +91,6 @@ export default defineNuxtConfig({
 
   sitemap: {
     hostname: 'https://www.pharmacieagnespraden.com/',
-    excludeAppSources: true,
     urls: async () => {
       try {
         const response = await axios.get(
@@ -99,19 +98,21 @@ export default defineNuxtConfig({
         );
         const categories = response.data.items || [];
 
-        const categoryUrls = categories.map((category: { name: string; uuid: string }) => ({
-          url: formatCategoryUrl(category), // 🔥 Utilisation de la fonction pour formater l'URL
+        const categoryUrls = categories.map((category: { name: string; uuid: string; image?: string; updated_at?: string }) => ({
+          url: formatCategoryUrl(category), // 🔥 URL formatée
           changefreq: 'weekly',
           priority: 0.8,
+          lastmod: category.updated_at || new Date().toISOString(), // 📅 Ajout de la date de mise à jour
+          img: category.image ? [{ url: category.image, caption: category.name }] : [], // 🖼 Ajout de l'image si dispo
         }));
 
         return [
-          { url: '/', changefreq: 'daily', priority: 1.0 },
+          { url: '/', changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() },
           ...categoryUrls,
         ];
       } catch (error) {
         console.error('❌ Erreur lors de la récupération des catégories:', error);
-        return [{ url: '/', changefreq: 'daily', priority: 1.0 }];
+        return [{ url: '/', changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() }];
       }
     },
   },
