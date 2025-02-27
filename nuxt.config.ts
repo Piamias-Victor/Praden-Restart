@@ -94,15 +94,16 @@ export default defineNuxtConfig({
 
   sitemap: {
     hostname: 'https://www.pharmacieagnespraden.com/',
+    xmlns: { xhtml: 'http://www.w3.org/1999/xhtml' }, // Ajout du namespace XHTML
     urls: async () => {
       try {
         console.log('📌 Début de la génération du sitemap');
-
+  
         // 🔹 Récupération des catégories
         console.log('📌 Récupération des catégories...');
         const categoryResponse = await axios.get('https://ecommerce-backend-production.admin-a5f.workers.dev/categories');
         const categories = categoryResponse.data.items || [];
-
+  
         const categoryUrls = categories.map((category: { name: string; uuid: string; image?: string; updated_at?: string }) => ({
           url: formatCategoryUrl(category),
           changefreq: 'weekly',
@@ -110,31 +111,31 @@ export default defineNuxtConfig({
           lastmod: category.updated_at || new Date().toISOString(),
           img: category.image ? [{ url: category.image, caption: category.name }] : [],
         }));
-
+  
         console.log(`✅ ${categoryUrls.length} catégories ajoutées`);
-
+  
         // 🔹 Récupération des produits
         console.log('📌 Récupération des produits...');
         const productResponse = await axios.get('https://ecommerce-backend-production.admin-a5f.workers.dev/sitemap');
         const products = productResponse.data || [];
-
+  
         const productUrls = products.map((product: { slug: string; uuid: string; image?: string }) => ({
           url: formatProductUrl(product),
           changefreq: 'daily',
           priority: 0.9,
-          lastmod: new Date().toISOString(), // On suppose que tous les produits sont mis à jour récemment
+          lastmod: new Date().toISOString(),
           img: product.image ? [{ url: product.image, caption: product.slug }] : [],
         }));
-
+  
         console.log(`✅ ${productUrls.length} produits ajoutés`);
-
+  
         // 🔹 Fusion des catégories et des produits
         const allUrls = [
           { url: '/', changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() },
           ...categoryUrls,
           ...productUrls,
         ];
-
+  
         console.log(`📌 Total des routes générées : ${allUrls.length}`);
         return allUrls;
       } catch (error) {
@@ -142,5 +143,5 @@ export default defineNuxtConfig({
         return [{ url: '/', changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() }];
       }
     },
-  },
+  }
 });
