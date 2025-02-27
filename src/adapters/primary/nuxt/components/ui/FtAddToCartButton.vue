@@ -1,4 +1,5 @@
 <template lang="pug">
+pre {{props.availableStock}}
 div.bg-main.rounded-b-xl.mt-1(class='p-0.5')
   div.flex.flex-center.gap-4.text-white(v-if="cartQuantity && cartQuantity.items && cartQuantity.items[productUuid]")
     ft-button.flex-shrink-0(@click='removeItemFromCart(productUuid)')
@@ -68,7 +69,7 @@ const isAddButtonHidden = (uuid: string) => {
   const currentQuantity = cartQuantity.value?.items?.[uuid] || 0;
 
   if (props.isMedicine && currentQuantity >= 6) return true;
-  if (props.availableStock !== undefined && currentQuantity >= props.availableStock) return true;
+  if (props.availableStock !== undefined && currentQuantity >= props.availableStock - 3) return true;
 
   return false;
 };
