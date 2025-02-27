@@ -1,10 +1,8 @@
 import { defineNuxtConfig } from 'nuxt/config';
-import { createPinia } from 'pinia';
-import { useCategoryStore } from './src/store/categoryStore.js';
 import { fileURLToPath } from 'url';
 import axios from 'axios';
 
-// Fonction pour formater les URLs des catégories
+// 🔹 Fonction pour formater les URLs des catégories
 const formatCategoryUrl = (category: { name: string; uuid: string }): string => {
   const formattedName = category.name
     .toLowerCase()
@@ -12,6 +10,11 @@ const formatCategoryUrl = (category: { name: string; uuid: string }): string => 
     .replace(/^-|-$/g, ''); // Supprime les tirets en début ou fin de chaîne
 
   return `/categories/${formattedName}?${category.uuid}`;
+};
+
+// 🔹 Fonction pour formater les URLs des produits
+const formatProductUrl = (product: { slug: string; uuid: string }): string => {
+  return `/products/${product.slug}?${product.uuid}`;
 };
 
 export default defineNuxtConfig({
@@ -93,25 +96,49 @@ export default defineNuxtConfig({
     hostname: 'https://www.pharmacieagnespraden.com/',
     urls: async () => {
       try {
-        const response = await axios.get(
-          'https://ecommerce-backend-production.admin-a5f.workers.dev/categories'
-        );
-        const categories = response.data.items || [];
+        console.log('📌 Début de la génération du sitemap');
+
+        // 🔹 Récupération des catégories
+        console.log('📌 Récupération des catégories...');
+        const categoryResponse = await axios.get('https://ecommerce-backend-production.admin-a5f.workers.dev/categories');
+        const categories = categoryResponse.data.items || [];
 
         const categoryUrls = categories.map((category: { name: string; uuid: string; image?: string; updated_at?: string }) => ({
-          url: formatCategoryUrl(category), // 🔥 URL formatée
+          url: formatCategoryUrl(category),
           changefreq: 'weekly',
           priority: 0.8,
-          lastmod: category.updated_at || new Date().toISOString(), // 📅 Ajout de la date de mise à jour
-          img: category.image ? [{ url: category.image, caption: category.name }] : [], // 🖼 Ajout de l'image si dispo
+          lastmod: category.updated_at || new Date().toISOString(),
+          img: category.image ? [{ url: category.image, caption: category.name }] : [],
         }));
 
-        return [
+        console.log(`✅ ${categoryUrls.length} catégories ajoutées`);
+
+        // 🔹 Récupération des produits
+        console.log('📌 Récupération des produits...');
+        const productResponse = await axios.get('https://ecommerce-backend-production.admin-a5f.workers.dev/sitemap');
+        const products = productResponse.data || [];
+
+        const productUrls = products.map((product: { slug: string; uuid: string; image?: string }) => ({
+          url: formatProductUrl(product),
+          changefreq: 'daily',
+          priority: 0.9,
+          lastmod: new Date().toISOString(), // On suppose que tous les produits sont mis à jour récemment
+          img: product.image ? [{ url: product.image, caption: product.slug }] : [],
+        }));
+
+        console.log(`✅ ${productUrls.length} produits ajoutés`);
+
+        // 🔹 Fusion des catégories et des produits
+        const allUrls = [
           { url: '/', changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() },
           ...categoryUrls,
+          ...productUrls,
         ];
+
+        console.log(`📌 Total des routes générées : ${allUrls.length}`);
+        return allUrls;
       } catch (error) {
-        console.error('❌ Erreur lors de la récupération des catégories:', error);
+        console.error('❌ Erreur lors de la récupération des données pour le sitemap:', error);
         return [{ url: '/', changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() }];
       }
     },
