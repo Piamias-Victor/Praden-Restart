@@ -1,64 +1,75 @@
 <template lang="pug">
-ft-categories(:categoriesVM="categoriesVM")
-nav.breadcrumbs.flex.items-center.text-sm.text-gray-600.m-2
-      nuxt-link.text-main.font-medium(href="/") Accueil
-      span.mx-2 /
-      nuxt-link.text-main.font-medium(href="/laboratory") Laboratoires
-      span.mx-2 /
-      nuxt-link.text-main.font-medium(:href="`/laboratory`") {{ productVM.laboratory }}
-      span.mx-2 /
-      span.text-main.font-semibold {{ productVM.name }}
-div.mt-4
-  div.mx-auto.max-w-2xl(class='lg:max-w-none relative')
-    div(class='grid grid-cols-1 sm:grid-cols-2 sm:items-start sm:gap-x-8')
-      div.flex.flex-col.justify-start
-        div.relative <!-- Ajoutez un conteneur relatif pour le positionnement absolu -->
-          ft-image-gallery(
-            :key="productVM.uuid"
-            :images="productVM.images"
-          )
-          ft-button.bg-transparent.absolute.top-2.right-2.text-main.p-2.rounded-full(
-            v-if="likeQuantity && likeQuantity.items && likeQuantity.items[productVM.uuid]"
-            @click="removeItemFromFavorite(productVM.uuid)"
-            aria-label="Remove from favorites"
-          )
-            icon.icon-lg(name="ph:heart-fill")
-
-          ft-button.bg-transparent.absolute.top-2.right-2.text-main.p-2.rounded-full(
-            v-if="likeQuantity && likeQuantity.items && !likeQuantity.items[productVM.uuid]"
-            @click="addItemToFavorite(productVM.uuid)"
-            aria-label="Add to favorites"
-          )
-            icon.icon-lg(name="ph:heart-bold")
-
-        ft-add-to-cart-button(:product-uuid="productId" :isMedicine="productVM.isMedicine" :availableStock="productVM.availableStock - 3" v-if="productVM && productVM.availableStock && productVM.availableStock > 0")
-        div.bg-main.rounded-b-xl.mt-1(class='p-0.5' v-else)
-          ft-button.w-full.text-white.flex.items-center.justify-center.font-semibold
-            span Bientôt disponible
-        div.absolute.top-0.left-0.bg-main.text-white.text-xl.font-bold.p-2.rounded-tr-lg.rounded-bl-lg.z-10(v-if="productVM.promotion")
-          span {{'- ' + productVM.promotion.amount}}
-
-      div.px-4.flex.flex-col.justify-between
-        div.mt-2
-          h1.text-lg.font-semibold.tracking-tight(class='lg:text-3xl')
-            | {{ productVM.name }}
-        div.mt-2.flex.justify-between.items-end(class='lg:pr-12')
-          span.font-bold.text-main.text-xl(v-if="productVM.promotion && productVM.promotion.price" class='lg:text-4xl') {{ productVM.promotion.price }}
-          span.text-xl.font-bold.tracking-tight(:class="productVM.promotion && productVM.promotion.price ? 'line-through lg:text-4xl' : 'font-bold text-main lg:text-4xl'") {{ productVM.price }}
-        div.h-2
-        span.text-sm.font-bold.tracking-tight.text-contrast(class='lg:text-xl') {{ productVM.laboratory }}
-        div.mt-4
-          div.space-y-6.text-base.text-contrast(style="white-space: pre-line")
-            div.text-sm(v-html="productVM.description")
-        div.mt-2.flex.flex-col.gap-4(aria-labelledby='details-heading')
-          ft-disclosure(v-for='detail in productVM.details' :key='detail.name')
-            template(#title) {{ detail.name }}
-            div.text-base.text-contrast(v-if="detail.name !== 'Notice'" style="white-space: pre-line")
-              div.text-xs(v-html="detail.value")
-            iframe.w-full.h-screen(v-else :src="detail.value")
-    ft-navigation
-    ft-product-list.mt-4(:products="searchVM") Ces produits peuvent vous plaire
-</template>
+  ft-categories(:categoriesVM="categoriesVM")
+  nav.breadcrumbs.flex.items-center.text-sm.text-gray-600.m-2
+        nuxt-link.text-main.font-medium(href="/") Accueil
+        span.mx-2 /
+        nuxt-link.text-main.font-medium(href="/laboratory") Laboratoires
+        span.mx-2 /
+        nuxt-link.text-main.font-medium(:href="`/laboratory`") {{ productVM.laboratory }}
+        span.mx-2 /
+        span.text-main.font-semibold {{ productVM.name }}
+  
+  div.mt-4
+    div.mx-auto.max-w-2xl(class='lg:max-w-none relative')
+      div(class='grid grid-cols-1 sm:grid-cols-2 sm:items-start sm:gap-x-8')
+        div.flex.flex-col.justify-start
+          div.relative
+            ft-image-gallery(
+              :key="productVM.uuid"
+              :images="productVM.images"
+            )
+            ft-button.bg-transparent.absolute.top-2.right-2.text-main.p-2.rounded-full(
+              v-if="likeQuantity && likeQuantity.items && likeQuantity.items[productVM.uuid]"
+              @click="removeItemFromFavorite(productVM.uuid)"
+              aria-label="Remove from favorites"
+            )
+              icon.icon-lg.text-main(name="ph:heart-fill")
+  
+            ft-button.bg-transparent.absolute.top-2.right-2.text-main.p-2.rounded-full(
+              v-if="likeQuantity && likeQuantity.items && !likeQuantity.items[productVM.uuid]"
+              @click="addItemToFavorite(productVM.uuid)"
+              aria-label="Add to favorites"
+            )
+              icon.icon-lg.text-main(name="ph:heart-bold")
+  
+          ft-add-to-cart-button(:product-uuid="productId" :isMedicine="productVM.isMedicine" :availableStock="productVM.availableStock - 3" v-if="productVM && productVM.availableStock && productVM.availableStock > 0")
+          div.bg-main.rounded-b-xl.mt-1(class='p-0.5' v-else)
+            ft-button.w-full.text-white.flex.items-center.justify-center.font-semibold
+              span Bientôt disponible
+  
+          div.absolute.top-0.left-0.bg-main.text-white.text-xl.font-bold.p-2.rounded-tr-lg.rounded-bl-lg.z-10(v-if="productVM.promotion")
+            span {{'- ' + productVM.promotion.amount}}
+  
+        div.px-4.flex.flex-col.justify-between
+          div.mt-2
+            h1.text-lg.font-semibold.tracking-tight(class='lg:text-3xl')
+              | {{ productVM.name }}
+  
+          div.mt-2.flex.justify-between.items-end(class='lg:pr-12')
+            span.font-bold.text-main.text-xl(v-if="productVM.promotion && productVM.promotion.price" class='lg:text-4xl') {{ productVM.promotion.price }}
+            span.text-xl.font-bold.tracking-tight(:class="productVM.promotion && productVM.promotion.price ? 'line-through lg:text-4xl' : 'font-bold text-main lg:text-4xl'") {{ productVM.price }}
+  
+          // 🔥 Ajout du texte simple pour les médicaments
+          div.mt-2.text-sm.text-main(v-if="productVM.isMedicine")
+            | Ce produit est un médicament et n'intègre pas l'offre frais de port offerts.
+  
+          div.h-2
+          span.text-sm.font-bold.tracking-tight.text-contrast(class='lg:text-xl') {{ productVM.laboratory }}
+  
+          div.mt-4
+            div.space-y-6.text-base.text-contrast(style="white-space: pre-line")
+              div.text-sm(v-html="productVM.description")
+  
+          div.mt-2.flex.flex-col.gap-4(aria-labelledby='details-heading')
+            ft-disclosure(v-for='detail in productVM.details' :key='detail.name')
+              template(#title) {{ detail.name }}
+              div.text-base.text-contrast(v-if="detail.name !== 'Notice'" style="white-space: pre-line")
+                div.text-xs(v-html="detail.value")
+              iframe.w-full.h-screen(v-else :src="detail.value")
+  
+      ft-navigation
+      ft-product-list.mt-4(:products="searchVM") Ces produits peuvent vous plaire
+  </template>
 
 <script lang="ts" setup>
 import { onMounted, ref, computed, watchEffect } from 'vue';
