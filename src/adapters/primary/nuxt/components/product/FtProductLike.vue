@@ -16,7 +16,7 @@ li.flex.py-6
             span.text-sm(:class="item.totalPriceWithPromotion ? 'line-through' : 'font-semibold'") {{ item.totalPrice }}
             span.font-semibold.text-colored(v-if="item.totalPriceWithPromotion") {{ item.totalPriceWithPromotion }}
         p.mr-1.text-sm.line-clamp-3 {{ item.name }}
-        ft-add-to-cart-button(:product-uuid="item.uuid" :isMedicine="item.medecine").w-full.text-sm
+        ft-add-to-cart-button(:product-uuid="item.uuid" :isMedicine="item.medecine" :availableStock="item.availableStock - 3").w-full.text-sm
     //- div.flex.flex-1.items-center.justify-between
     //-     div.flex.items-center.gap-4
     //-         ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click='removeItemFromCart(item.uuid)')

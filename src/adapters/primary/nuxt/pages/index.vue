@@ -2,8 +2,8 @@
     div.flex.flex-col.gap-10
       ft-categories(:categoriesVM="categoriesVM")
       ft-slider(:bannerVM="bannerVM")
-      ft-product-list(:products="products.products") La sélection du pharmacien
       ft-product-list(:products="productInPromotion.products") Promotion
+      ft-product-list(:products="products.products") La sélection du pharmacien
       ft-brand-list
       ft-blog(:blogVm='blogVm')
       ft-review
@@ -62,14 +62,14 @@ const blogVm = {
       uuid: '0',
       name: 'Grossesse et soins vergetures',
       icon: 'https://daylilyparis.com/cdn/shop/articles/vergetures_grossesse-Daylily_Paris.jpg?v=1708429258',
-      url: 'https://be7ceee6.praden-restart.pages.dev/blog/0',
+      url: 'https://www.pharmacieagnespraden.com/blog/grossesse-soins-vergetures',
       date: '01/12/2024',
     },
     {
       uuid: '1',
       name: 'Gérer efficacement son stress',
       icon: 'https://storage.letudiant.fr/mediatheque/letudiant/9/0/2410890-comment-ge-rer-son-stress-766x438.jpg',
-      url: 'https://be7ceee6.praden-restart.pages.dev/blog/1',
+      url: 'https://www.pharmacieagnespraden.com/blog/gerer-son-stress',
       date: '01/12/2024',
     },
   ],

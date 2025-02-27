@@ -5,6 +5,7 @@ import { useLaboratoryStore } from '@store/laboratoryStore';
 import { useSearchStore } from '@store/searchStore';
 import { UUID } from 'crypto';
 
+
 export const getLaboratory = async (uuid: UUID, laboratoryGateway: LaboratoryGateway, searchGateway: SearchGateway) => {
   const laboratoryStore = useLaboratoryStore();
   const productsWithFacets = await searchGateway.searchProduct(undefined, [uuid]);

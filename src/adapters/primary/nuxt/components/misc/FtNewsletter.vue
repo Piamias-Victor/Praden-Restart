@@ -18,7 +18,7 @@
       <FtButton @click="subscribe" class="w-full mt-4 bg-main text-white font-semibold py-3 rounded-lg">
         JE M'INSCRIS
       </FtButton>
-      <p class="mt-4 text-xs text-gray-500">*Livraison offerte dès 69 € d'achat.<br /></p>
+      <p class="mt-4 text-xs text-gray-500">*Livraison offerte dès 69 € d'achat uniquement en point relais (colis de -5kg).<br /></p>
     </div>
   </div>
 </template>
@@ -34,7 +34,7 @@ onMounted(() => {
     setTimeout(() => {
       showPopup.value = true;
       sessionStorage.setItem('popupDisplayed', 'true');
-    }, 2000);
+    }, 500);
   }
 });
 

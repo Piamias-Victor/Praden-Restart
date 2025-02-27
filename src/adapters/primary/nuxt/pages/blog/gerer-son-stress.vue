@@ -8,7 +8,7 @@ section.px-2
               alt="pub"
               )
   div.p-8.flex.flex-col.items-center.justify-center.gap-4
-    h1.text-main.text-6xl.font-semibold Gérer efficacement son stress
+    span.text-main.text-6xl.font-semibold Gérer efficacement son stress
     div.flex.items-center.justify-between.w-full
       div.flex.flex-col.gap-2
         span.font-semibold.text-lg Tags :
@@ -17,7 +17,7 @@ section.px-2
           ft-button-animate.button-solid Bien Etre
       span.text-contrast.font-semibold Date de publication : 01/12/2024
     span.text-sm.prose-xl(v-if='laboratoryInfo && laboratoryInfo.item' v-html="laboratoryInfo.item.description")
-  ft-product-list.mt-4(:products="searchVM") Ces produits peuvent vous plaire
+  //- ft-product-list.mt-4(:products="searchVM") Ces produits peuvent vous plaire
 </template>
 
 <script lang="ts" setup>
@@ -48,4 +48,21 @@ const searchVM = computed(() => {
   }
   return [];
 });
+
+useHead(() => ({
+  title: 'Gérer efficacement son stress - Astuces et Produits',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Découvrez nos conseils et produits pour gérer efficacement le stress au quotidien. Retrouvez bien-être et sérénité avec nos astuces et solutions adaptées.',
+    },
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://pharmacieagnespraden.com/blog/gerer-son-stress`, // URL actuelle de la page comme lien canonique
+    },
+  ],
+}));
 </script>

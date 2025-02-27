@@ -50,15 +50,25 @@ const close = () => {
 
 let debounceTimeout: ReturnType<typeof setTimeout> | null = null;
 
-const goToCat = (path: string, name: string) => {
-  router.push('/categories/' + path + '?' + name);
+const formatUrl = (basePath: string, name: string, uuid: string): string => {
+  const formattedName = name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-') // Remplace les caractères non alphanumériques par des tirets
+    .replace(/^-|-$/g, ''); // Supprime les tirets au début ou à la fin
+  return `${basePath}/${formattedName}?${uuid}`;
+};
+
+const goToCat = (uuid: string, name: string) => {
+  const url = formatUrl('/categories', name, uuid); // Formate l'URL pour les catégories
+  router.push(url);
   setTimeout(() => {
     close();
   }, 1000);
 };
 
-const goToLab = (path: string, name: string) => {
-  router.push('/laboratory/' + path + '?' + name);
+const goToLab = (uuid: string, name: string) => {
+  const url = formatUrl('/laboratory', name, uuid); // Formate l'URL pour les laboratoires
+  router.push(url);
   setTimeout(() => {
     close();
   }, 1000);

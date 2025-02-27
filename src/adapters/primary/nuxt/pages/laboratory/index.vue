@@ -19,7 +19,7 @@ div.px-8.my-4.flex.flex-col.gap-4
             nuxt-link.cursor-pointer.text-center.bg-gray-100.p-2.rounded-lg(
                 v-for="laboratory in laboratories"
                 :key="laboratory.uuid"
-                :to="laboratory.href"
+                :to="formatBrandHref(laboratory)"
             )
                 span {{ laboratory.name }}
 </template>
@@ -29,11 +29,35 @@ import { ref, computed } from 'vue';
 import { getSearchLaboratoriesVM } from '@adapters/primary/viewModels/get-category/getSearchCategoryVM';
 import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
 import { laboratoryGateway } from '../../../../../../gateways/laboratoryGateway';
+import { useHead } from 'nuxt/app';
 
 definePageMeta({ layout: 'main' });
 
 onMounted(() => {
   listLaboratories(laboratoryGateway());
+});
+
+const formatBrandHref = (laboratory: { name: string; uuid: string }): string => {
+  // Formate le nom de la marque pour créer une URL "friendly"
+  const formattedName = laboratory.name
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // Supprime les accents
+    .replace(/\s+/g, '-'); // Remplace les espaces par des tirets
+
+  // Construit l'URL avec le nom et l'UUID
+  return `/laboratory/${formattedName}?${laboratory.uuid}`;
+};
+
+useHead({
+  title: 'Marques - Découvrez nos laboratoires partenaires - Pharmacie Agnès Praden',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Parcourez toutes les marques disponibles à la Pharmacie Agnès Praden. Trouvez vos laboratoires préférés triés par ordre alphabétique.',
+    },
+  ],
 });
 
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');

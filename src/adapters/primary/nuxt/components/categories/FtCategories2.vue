@@ -1,5 +1,5 @@
 <template lang="pug">
-div.py-4.px-2.flex.items-center.gap-4.overflow-x-scroll.custom-scrollbar
+div.py-4.px-2.flex.items-center.gap-4.overflow-x-scroll
     template(v-if="!categoriesLoaded")
         div.bg-gray-200.rounded-xl.px-6.w-24.h-10.animate-pulse(v-for="n in 12" :key="n")
     template(v-else)

@@ -115,5 +115,18 @@
 </style>
 
 <script lang="ts" setup>
+import { useHead } from 'nuxt/app';
+
 definePageMeta({ layout: 'main' });
+
+useHead({
+  title: 'Matériel Médical à Alès - Pharmacie Agnès Praden',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Découvrez une large gamme de matériel médical à la Pharmacie Agnès Praden à Alès. Vente et location de matériel orthopédique, fauteuils roulants, lits médicalisés et plus encore.',
+    },
+  ],
+});
 </script>

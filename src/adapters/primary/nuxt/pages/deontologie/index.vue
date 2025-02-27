@@ -213,5 +213,18 @@
 </style>
 
 <script lang="ts" setup>
+import { useHead } from 'nuxt/app';
+
 definePageMeta({ layout: 'main' });
+
+useHead({
+  title: 'Déontologie - Pharmacie Agnès Praden',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Découvrez les engagements déontologiques de la Pharmacie Agnès Praden, garantissant confidentialité, respect des règles éthiques et qualité des services.',
+    },
+  ],
+});
 </script>

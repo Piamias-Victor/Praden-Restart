@@ -6,7 +6,7 @@ section.px-2
     div.px-4.grid.grid-cols-1.gap-8(class='lg:grid-cols-2 gap-8')
       div.flex.flex-col.gap-2
         iframe.block.rounded-xl.w-full(
-            src="https://www.instagram.com/p/DEPCK43Imdy/embed" 
+            src="https://www.instagram.com/p/DESiujmIlB9/embed" 
             width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
           )
         a(href='https://www.instagram.com/pharmacieagnespraden/?hl=en' target='_blank' rel='noopener noreferrer') 

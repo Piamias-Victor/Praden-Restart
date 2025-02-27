@@ -8,7 +8,7 @@ section.px-2
               alt="pub"
               )
   div.p-8.flex.flex-col.items-center.justify-center.gap-4
-    h1.text-main.text-6xl.font-semibold Grossesse et soins vergetures
+    span.text-main.text-6xl.font-semibold Grossesse et soins vergetures
     div.flex.items-center.justify-between.w-full
       div.flex.flex-col.gap-2
         span.font-semibold.text-lg Tags :
@@ -18,7 +18,7 @@ section.px-2
           ft-button-animate.button-solid Maman
       span.text-contrast.font-semibold Date de publication : 01/12/2024
     span.text-sm.prose-xl(v-if='laboratoryInfo && laboratoryInfo.item' v-html="laboratoryInfo.item.description")
-  ft-product-list.mt-4(:products="searchVM") Ces produits peuvent vous plaire
+  //- ft-product-list.mt-4(:products="searchVM") Ces produits peuvent vous plaire
 </template>
 
 <script lang="ts" setup>
@@ -27,6 +27,7 @@ import { listLaboratories, getLaboratoryInfo } from '@core/usecases/list-laborat
 import { laboratoryGateway } from '../../../../../../gateways/laboratoryGateway';
 import { searchGateway } from '../../../../../../gateways/searchGateway';
 import { getSearchResultVMFirstSix } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM';
+import { useHead } from 'nuxt/app';
 
 definePageMeta({ layout: 'main' });
 
@@ -49,4 +50,21 @@ const searchVM = computed(() => {
   }
   return [];
 });
+
+useHead(() => ({
+  title: 'Grossesse et soins vergetures - Conseils et Produits',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Découvrez nos conseils et produits pour prendre soin de votre peau pendant la grossesse et prévenir les vergetures. Guide complet pour les futures mamans.',
+    },
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://pharmacieagnespraden.com/blog/grossesse-soins-vergetures`, // URL actuelle de la page comme lien canonique
+    },
+  ],
+}));
 </script>

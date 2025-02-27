@@ -4,6 +4,7 @@ import { CreateCheckoutDTO, PaymentGateway } from '@core/gateways/paymentGateway
 import axios, { AxiosInstance } from 'axios';
 import { getOrderLineUnitAmount } from '@core/entities/order';
 import qs from 'qs'; // Importez qs pour formater les données en x-www-form-urlencoded
+import { ReductionType } from '@core/entities/product';
 
 /**
  * Convertit une chaîne de caractères représentant un prix formaté en un nombre en centimes.
@@ -61,10 +62,17 @@ export class StripePaymentGateway implements PaymentGateway {
   ): Promise<string> {
     const currency = 'eur';
     const lineItems = createCheckoutDTO.lines.map((line) => {
+      let price = line.unitAmount;
+      // if (line.promotion && line.promotion.type !== ReductionType.Fixed) {
+      //   console.log('line.unitAmount', line.unitAmount);
+      //   console.log('line.promotion.amount', line.promotion.amount);
+      //   price = line.unitAmount - line.unitAmount * (line.promotion.amount / 100);
+      // }
+      console.log('price', price);
       return {
         price_data: {
           currency,
-          unit_amount: line.unitAmount,
+          unit_amount: price,
           product_data: {
             name: line.name,
           },
@@ -89,14 +97,17 @@ export class StripePaymentGateway implements PaymentGateway {
       payment_method_types: ['card'],
       mode: 'payment',
       line_items: lineItems,
-      success_url: 'https://praden-restart.pages.dev/checkout/success', // Mettez à jour pour la production
-      cancel_url: 'https://praden-restart.pages.dev/checkout/error', // Mettez à jour pour la production
+      success_url: 'https://www.pharmacieagnespraden.com/checkout/success', // Mettez à jour pour la production
+      cancel_url: 'https://www.pharmacieagnespraden.com/checkout/error', // Mettez à jour pour la production
       payment_intent_data: {
         metadata: {
           orderUuid: orderUuid,
         },
       },
     };
+
+    console.log('orderUuid', orderUuid);
+    console.log('session:', JSON.stringify(session));
 
     // Utiliser qs pour formater les données
     const res = await this.stripe.post('/checkout/sessions', qs.stringify(session));

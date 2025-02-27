@@ -10,13 +10,13 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "types": ["@types/node"],
+    "types": ["@types/node", ".core/types/sitemap.d.ts"],
     "baseUrl": ".",
     "paths": {
       "#app": ["./node_modules/@nuxt/schema/dist/app.d.ts"],
       "#app/*": ["./node_modules/@nuxt/schema/dist/app/*.d.ts"]
     }
   },
-  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue"],
+  "include": ["**/*.ts", "**/*.d.ts", "**/*.vue", "_redirects"],
   "exclude": ["node_modules"]
 }

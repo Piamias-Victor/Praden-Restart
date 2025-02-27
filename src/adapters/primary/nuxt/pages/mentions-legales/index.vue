@@ -77,5 +77,18 @@ ft-navigation
 </style>
 
 <script lang="ts" setup>
+import { useHead } from 'nuxt/app';
+
 definePageMeta({ layout: 'main' });
+
+useHead({
+  title: 'Mentions légales - Pharmacie Agnès Praden à Alès',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Consultez les mentions légales de la Pharmacie Agnès Praden à Alès. Informations sur l’éditeur, l’hébergeur, les numéros d’identification, et les coordonnées utiles.',
+    },
+  ],
+});
 </script>

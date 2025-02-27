@@ -67,5 +67,18 @@
 </style>
 
 <script lang="ts" setup>
+import { useHead } from 'nuxt/app';
+
 definePageMeta({ layout: 'main' });
+
+useHead({
+  title: 'Nos engagements - Pharmacie Agnès Praden',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Découvrez les engagements de la Pharmacie Agnès Praden : qualité du service, conseil officinal, innovations, accessibilité, et respect de l’environnement.',
+    },
+  ],
+});
 </script>

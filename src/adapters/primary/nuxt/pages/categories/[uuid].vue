@@ -1,8 +1,14 @@
 <template lang="pug">
-ft-child-categories(:categoriesVM="categoriesVM")
-pre {{categoryVM}}
+ft-child-categories(:categoriesVM="categoriesVM" :categoriesVM2="categoriesVM2")
 div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4(ref='top')
-    span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') {{categoryVM.name}}
+    div.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl')
+      h1 {{categoryVM.name}}
+      nav.breadcrumbs.flex.items-center.text-sm.text-gray-600.mt-2
+        nuxt-link.text-main.font-medium(href="/") Accueil
+        span.mx-2 /
+        template(v-for="(breadcrumb, index) in breadcrumbs" :key="index")
+          nuxt-link.text-main.font-medium(:href="breadcrumb.href") {{ breadcrumb.name }}
+          span.mx-2(v-if="index < breadcrumbs.length - 1") /
     div.flex.items-center.gap-4
         div.relative
             ft-button-animate.text-main.flex.items-center.justify-center.bg-white.px-6(@click="toggleDropdown")
@@ -64,8 +70,18 @@ import { useProductGateway } from '../../../../../../gateways/productGateway';
 import { listBanner } from '@core/usecases/list-banner/listBanner';
 import { bannerGateway } from '../../../../../../gateways/bannerGateway';
 import { listBestSales } from '@core/usecases/list-promotions/listPromotions';
+import { useHead, useRoute } from 'nuxt/app';
+import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
+import { getBreadcrumbTrail } from '@adapters/primary/viewModels/get-category/getCategoryVM';
 
 definePageMeta({ layout: 'main' });
+
+function extractUuidFromPath(path: string): string {
+  console.log('path', path)
+  const [_, uuid] = path.split('?');
+  console.log('uuid', uuid)
+  return uuid || '';
+}
 
 onMounted(() => {
   listDeliveryMethods(deliveryGateway);
@@ -77,10 +93,21 @@ onMounted(() => {
   listBestSales(useProductGateway());
 });
 
+const route = useRoute();
+
+const breadcrumbs = computed(() => getBreadcrumbTrail(categoryUuid));
+
+const fullPath = route.fullPath as string; // Assurez-vous que `uuid` est le bon paramètre dans vos routes
+const extractedUuid = extractUuidFromPath(fullPath);
+const categoryUuid = extractedUuid
 const description = ref(null);
 const top = ref(null);
 
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...';
+
+const categoriesVM2 = computed(() => {
+  return getRootCategoriesVM();
+});
 
 function scrollToDescription() {
   description.value?.scrollIntoView({ behavior: 'smooth' });
@@ -96,8 +123,6 @@ const toggleDropdown = () => {
   dropdownOpen.value = !dropdownOpen.value;
 };
 
-const route = useRoute();
-const categoryUuid = route.params.uuid;
 const priceFilter = ref<string | null>(null);
 const sortType = ref(SortType.None);
 const laboratoryFilter = ref<Array<string>>([]);
@@ -127,9 +152,6 @@ const searchLaboratory = (labo: string | null) => {
 
 const filteredProducts = computed(() => {
   getLaboratoryByName(laboratoryFilter.value, '', searchGateway());
-  if (laboratoryFilter.value.length === 0) {
-    getCategory(categoryUuid, categoryGateway(), searchGateway());
-  }
   let res = searchVM.value.items || [];
   if (priceFilter.value) {
     res = res.filter(
@@ -138,6 +160,12 @@ const filteredProducts = computed(() => {
     );
   }
   return res;
+});
+
+watchEffect(() => {
+  if (laboratoryFilter.value.length === 0) {
+    getCategory(categoryUuid, categoryGateway(), searchGateway());
+  }
 });
 
 const parsePrice = (priceString: string) => {
@@ -152,6 +180,24 @@ onMounted(() => {
 
 const categoriesVM = computed(() => getChildCategoriesVM(categoryUuid));
 const categoryVM = computed(() => getCategoryVM(sortType.value));
+
+useHead(() => ({
+  title: categoryVM.value ? `${categoryVM.value.name} - Catégorie` : 'Pharmacie Agnès',
+  meta: [
+    {
+      name: 'description',
+      content: categoryVM.value
+        ? `Explorez notre catégorie ${categoryVM.value.name}. ${categoryVM.value.description || 'Découvrez des produits de qualité adaptés à vos besoins.'}`
+        : 'Pharmacie Agnès - Produits pharmaceutiques de qualité.',
+    },
+  ],
+  link: [
+      {
+        rel: 'canonical',
+        href: `https://pharmacieagnespraden.com${route.fullPath}`, // URL actuelle de la page comme lien canonique
+      },
+    ],
+}));
 
 const searchVM = computed(() => {
   const result = getSearchResultVM(sortType.value);
@@ -169,3 +215,4 @@ const closeCart = () => {
   filterOpened.value = false;
 };
 </script>
+

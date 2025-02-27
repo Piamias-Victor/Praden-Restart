@@ -64,17 +64,17 @@ const searchVM = computed(() => {
 const blogVm = {
   items: [
     {
-      uuid: '0',
+      uuid: 'Grossesse',
       name: 'Grossesse et soins vergetures',
       icon: 'https://daylilyparis.com/cdn/shop/articles/vergetures_grossesse-Daylily_Paris.jpg?v=1708429258',
-      url: 'https://be7ceee6.praden-restart.pages.dev/blog/0',
+      url: 'https://www.pharmacieagnespraden.com/blog/grossesse-soins-vergetures',
       date: '01/12/2024',
     },
     {
-      uuid: '1',
+      uuid: 'Stress',
       name: 'Gérer efficacement son stress',
       icon: 'https://storage.letudiant.fr/mediatheque/letudiant/9/0/2410890-comment-ge-rer-son-stress-766x438.jpg',
-      url: 'https://be7ceee6.praden-restart.pages.dev/blog/1',
+      url: 'https://www.pharmacieagnespraden.com/blog/gerer-son-stress',
       date: '01/12/2024',
     },
   ],

@@ -54,13 +54,13 @@ TransitionRoot(appear='' :show='true' as='template')
                             ft-panel2(v-if="filterOpened" @close="closeCart" @sortBy="sortBy" @searchLaboratory="searchLaboratory" @searchCategory="searchCategory" @searchPrice="searchPrice" :facetsVM="searchVM.facets" :sortType="sortType" :laboratoryFilter="laboratoryFilter")
                             div.px-4(
                               v-if='filteredProducts.length === 0'
-                              @click="clicked").grid.grid-cols-1(class='sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full')
-                              div(v-for="category in rootCategoriesVM.items" :key="category.uuid" 
-                                  class="relative group bg-white shadow-lg rounded-xl overflow-hidden cursor-pointer transform transition-transform hover:scale-105" 
-                                  @click="goToCat(category.uuid)")
-                                div.bg-cover.bg-center.absolute.inset-0.opacity-50.transition-opacity(class='group-hover:opacity-75')
-                                div.relative.p-6
-                                  span.text-lg.font-semibold.text-gray-800.transition-colors(class='group-hover:text-main') {{ category.name }}
+                              @click="clicked").grid.grid-cols-1(class='sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full h-full')
+                              //- div(v-for="category in rootCategoriesVM.items" :key="category.uuid" 
+                              //-     class="relative group bg-white shadow-lg rounded-xl overflow-hidden cursor-pointer transform transition-transform hover:scale-105" 
+                              //-     @click="goToCat(category.uuid)")
+                              //-   div.bg-cover.bg-center.absolute.inset-0.opacity-50.transition-opacity(class='group-hover:opacity-75')
+                              //-   div.relative.p-6
+                              //-     span.text-lg.font-semibold.text-gray-800.transition-colors(class='group-hover:text-main') {{ category.name }}
 
                                 
                                 //- nuxt-link.flex.flex-col.items-center.bg-main.text-white.rounded-sm.flex.items-center.justify-center.w-full.rounded-xl(class='h-[20vw] md:h-[8vw]' href='https://2f440074.praden-restart.pages.dev/categories/03c3ddc9-7616-48df-9bf7-3290da61b23b?Promotions')
@@ -214,6 +214,7 @@ const searchChanged = (e: any) => {
     clearTimeout(debounceTimeout);
   }
   query.value = e.target.value;
+  console.log('query.value', query.value);
   debounceTimeout = setTimeout(() => {
     searchProduct(query.value, searchGateway());
   }, 500);

@@ -23,20 +23,24 @@ div.flex.items-center.gap-1.text-xs.mt-2.w-full.justify-center(v-if='hasMedicine
   span Votre panier contient des médicaments, vous ne pouvez donc pas bénéficier des frais de port gratuit
 div.mt-2.border-t.py-2.px-2(class='lg:py-6 lg:px-4')
   h2.font-medium.text-gray-900.mb-2.text-sm(class='lg:text-xl') Mode de livraison
+  div.mt-2.text-center.text-sm(v-if="selectedTimestamp")
+    span.text-main.font-semibold Date sélectionnée :
+    span {{ new Date(selectedTimestamp).toLocaleString('fr-FR') }}
   div.flex.flex-col.items-center.gap-2.w-full.mb-2(class='lg:mb-4')
     div(v-for='deliveryMethod in deliveryMethods.methods' :key="deliveryMethod.uuid" @click="deliveryMethodSelected(deliveryMethod)").w-full
-      div(v-if='deliveryMethod.uuid === selectedDeliveryMethod')
-        div.flex.flex-col.items-start.border-main.relative.flex.cursor-pointer.rounded-lg.border.bg-white.shadow-sm.ring-2.ring-main.p-3(class='lg:p-4')
-          div.flex.items-center.justify-between.w-full
-            span.text-xs(class='lg:text-sm') {{ deliveryMethod.name }}
-            span.text-xs(class='lg:text-sm')
-          span.text-xs.text-contrast {{ deliveryMethod.description }}
-      div(v-if='deliveryMethod.uuid !== selectedDeliveryMethod')
-        div.flex.flex-col.items-start.border-main.relative.flex.cursor-pointer.rounded-lg.border.bg-white.shadow-sm.p-3(class='lg:p-4')
-          div.flex.items-center.justify-between.w-full
-            span.text-xs(class='lg:text-sm') {{ deliveryMethod.name }}
-            span.text-xs(class='lg:text-sm')
-          span.text-xs.text-contrast {{ deliveryMethod.description }}
+      div(v-if="deliveryMethod.uuid != 1" )
+        div(v-if='deliveryMethod.uuid === selectedDeliveryMethod')
+          div.flex.flex-col.items-start.border-main.relative.flex.cursor-pointer.rounded-lg.border.bg-white.shadow-sm.ring-2.ring-main.p-3(class='lg:p-4')
+            div.flex.items-center.justify-between.w-full
+              span.text-xs(class='lg:text-sm') {{ deliveryMethod.name }}
+              span.text-xs(class='lg:text-sm')
+            span.text-xs.text-contrast {{ deliveryMethod.description }}
+        div(v-if='deliveryMethod.uuid !== selectedDeliveryMethod')
+          div.flex.flex-col.items-start.border-main.relative.flex.cursor-pointer.rounded-lg.border.bg-white.shadow-sm.p-3(class='lg:p-4')
+            div.flex.items-center.justify-between.w-full
+              span.text-xs(class='lg:text-sm') {{ deliveryMethod.name }}
+              span.text-xs(class='lg:text-sm')
+            span.text-xs.text-contrast {{ deliveryMethod.description }}
   div.flex.justify-between.items-center
       p.font-semibold.text Frais de port
       div.flex.flex-col.pl-2
@@ -48,8 +52,9 @@ div.mt-2.border-t.py-2.px-2(class='lg:py-6 lg:px-4')
           span.text-xs(class='lg:text-sm' :class="cart.totalPriceWithPromotion ? 'line-through' : 'font-semibold'") {{ cart.totalPriceWithDelivery }}
           span.font-semibold.text-main(v-if="cart.totalPriceWithPromotion") {{ cart.totalPriceWithPromotion }}
   div.mt-2(class='lg:mt-4')
-      ft-button.button-solid.w-full.text-xl(@click="validateOrder") Paiement
+      ft-button.button-solid.w-full.text-xl( @click="validateOrder") Paiement
 ft-popup(:show="showPopup" @close="closePopup")
+ft-popup2(:show="showPopup2" @close="closePopup2" @selection-confirmed="handleSelection")
 </template>
 
 <script lang="ts" setup>
@@ -70,6 +75,8 @@ import { useEmailGateway } from '../../../../../../gateways/emailGateway';
 import { useOrderGateway } from '../../../../../../gateways/orderGateway';
 import windowGateway from '../../../../../../gateways/windowGateway';
 import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import { useDeliveryStore } from '@store/deliveryStore';
+import { start } from '../../../../../../gateways/deliveryGateway';
 
 const router = useRouter();
 
@@ -83,19 +90,41 @@ const closePopup = () => {
   showPopup.value = false;
 };
 
+const showPopup2 = ref(false);
+
+const openPopup2 = () => {
+  showPopup2.value = true;
+};
+
+const closePopup2 = () => {
+  showPopup2.value = false;
+};
+
 const cartQuantity = ref<CartQuantityVM | null>(null);
 
 const deliveryMethods = computed(() => {
   return getDeliveryVM();
 });
 
-const selectedDeliveryMethod = ref(pickup.uuid);
+const selectedDeliveryMethod = ref(start.uuid);
 
 const deliveryMethodSelected = (method: any) => {
   selectDeliveryMethods(method);
   deliveryMethods.value.selectedDeliveryMethod = method;
   selectedDeliveryMethod.value = method.uuid;
   if (method.name === 'Point Relais') openPopup();
+  if (method.name === pickup.name) openPopup2();
+};
+
+const selectedTimestamp = ref<number | null>(null);
+
+const handleSelection = (selection: { timestamp: number }) => {
+  selectedTimestamp.value = selection.timestamp;
+
+  // Optionnel : Convertir le timestamp en une date lisible
+  const selectedDate = new Date(selection.timestamp);
+  console.log('Timestamp sélectionné :', selection.timestamp);
+  console.log('Date sélectionnée :', selectedDate.toLocaleString('fr-FR'));
 };
 
 const hasMedicineReference = computed(() => {
@@ -124,17 +153,31 @@ const user = computed(() => {
 });
 
 const validateOrder = () => {
-  createOrder(
-    user.value.email,
-    user.value.phone,
-    selectedDeliveryMethod.value,
-    user.value.address,
-    useOrderGateway(),
-    useProductGateway(),
-    windowGateway,
-    useEmailGateway(),
-    cart.value.DeliveryPrice,
-  );
+  const deliveryMethodsStore = useDeliveryStore();
+
+  if (
+    deliveryMethodsStore.selected.uuid === '505209a2-7acb-4891-b933-e084d786d7ea' &&
+    !deliveryMethodsStore.selected.point
+  ) {
+    console.log('pas de delivery pickup');
+  } else if (deliveryMethodsStore.selected.uuid === '570bdcfa-b704-4ed2-9fc0-175d687c1d8d' && !selectedTimestamp.value) {
+    console.log('pas d horraire');
+  }
+  else {
+    createOrder(
+      user.value.email,
+      user.value.phone,
+      selectedDeliveryMethod.value,
+      user.value.address,
+      useOrderGateway(),
+      useProductGateway(),
+      windowGateway,
+      useEmailGateway(),
+      cart.value.DeliveryPrice,
+      selectedTimestamp.value
+    );
+  }
+
   //- router.push('/checkout/success');
 };
 

@@ -5,8 +5,8 @@
         span.text-xl.promo-amount(:class="{ 'promo-amount-hover': isHovered }") {{ product.promotion?.amount ? '- ' + product.promotion.amount : '' }}
     div.flex.flex-col.items-center.justify-center.gap-4.relative
         nuxt-link.h-full.flex.items-center(
-        :href="product.href"
-        @click="goToProduct(product.href)")
+        :href="formatProductHref(product)"
+        @click="goToProduct(product)")
             img.p-4(
                 v-if="product && product.images && product.images.length > 0"
                 class='min-h-[200px] h-[200px] w-full object-cover'
@@ -35,7 +35,7 @@
           span(:class="product.promotion?.price ? 'line-through' : 'font-bold text-main'") {{ product.price }}
           span.font-bold.text-main(v-if="product.promotion?.price") {{ product.promotion.price }}
     div.w-full.text-center.mt-auto
-        ft-add-to-cart-button(:product-uuid="product.uuid" :isMedicine="product.isMedecine" class='mt-auto' v-if="product.availableStock > 0")
+        ft-add-to-cart-button(:product-uuid="product.uuid" :isMedicine="product.isMedecine" :availableStock="product.availableStock - 3" class='mt-auto' v-if="product.availableStock > 0")
         div.bg-main.rounded-b-xl.mt-1(class='p-0.5' v-else)
           ft-button.w-full.text-white.flex.items-center.justify-center.font-semibold
             span Bientôt disponible
@@ -60,6 +60,16 @@ const close = () => {
   emit('close');
 };
 
+const formatProductHref = (product: { name: string; uuid: string }): string => {
+  // Formate le nom en un slug SEO-friendly
+  const formattedName = product.name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-') // Remplace les caractères non alphanumériques par des tirets
+    .replace(/^-|-$/g, ''); // Supprime les tirets en début ou fin de chaîne
+
+  return `/products/${formattedName}?${product.uuid}`;
+};
+
 const router = useRouter();
 
 export interface LikeQuantityVM {
@@ -67,9 +77,10 @@ export interface LikeQuantityVM {
   totalQuantity: number;
 }
 
-const goToProduct = (path: string) => {
-  router.push(path);
-  close();
+const goToProduct = (product: string) => {
+  const formattedUrl = formatProductHref(product); // Crée l'URL formatée
+  router.push(formattedUrl); // Redirige vers l'URL
+  close(); // Émet l'événement de fermeture
 };
 
 const isHovered = ref(false);

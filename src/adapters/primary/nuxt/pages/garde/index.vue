@@ -23,5 +23,18 @@
 </style>
 
 <script lang="ts" setup>
+import { useHead } from 'nuxt/app';
+
 definePageMeta({ layout: 'main' });
+
+useHead({
+  title: 'Pharmacies de garde - Pharmacie Agnès Praden',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Retrouvez les informations sur les pharmacies de garde à Alès. Découvrez comment accéder aux services de nuit, week-ends et jours fériés.',
+    },
+  ],
+});
 </script>

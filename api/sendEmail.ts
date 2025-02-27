@@ -21,7 +21,7 @@ const sendEmail = async (req: NextApiRequest, res: NextApiResponse) => {
               },
               To: [
                 {
-                  Email: 'victorpiamiaspro@gmail.com',
+                  Email: 'webpharmaciepraden@gmail.com',
                 },
               ],
               TemplateID: templateId,
