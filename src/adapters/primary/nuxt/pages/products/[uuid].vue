@@ -160,7 +160,7 @@ useHead(() => {
       {
         name: 'description',
         content: productVM.value
-          ? `Découvrez ${productVM.value.name}, un produit de ${productVM.value.laboratory}. ${productVM.value.description}`.slice(0,160)
+          ? `Commandez ${productVM.value.name} en ligne sur pharmacie Agnes Praden ou faites vous livrer à domicile, en point relais ou à la pharmacie à Alès en click and collect `
           : 'Pharmacie Agnès - Produits pharmaceutiques de qualité.',
       },
     ],
