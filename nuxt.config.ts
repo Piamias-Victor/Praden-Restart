@@ -4,6 +4,16 @@ import { useCategoryStore } from './src/store/categoryStore.js';
 import { fileURLToPath } from 'url';
 import axios from 'axios';
 
+// Fonction pour formater les URLs des catégories
+const formatCategoryUrl = (category: { name: string; uuid: string }): string => {
+  const formattedName = category.name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-') // Remplace les caractères non alphanumériques par des tirets
+    .replace(/^-|-$/g, ''); // Supprime les tirets en début ou fin de chaîne
+
+  return `/categories/${formattedName}?${category.uuid}`;
+};
+
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
@@ -75,53 +85,34 @@ export default defineNuxtConfig({
     pages: './src/adapters/primary/nuxt/pages/',
   },
 
-  gtag: {
-    id: 'G-RD9P3SEGJ7',
-  },
-
   css: ['~/assets/css/tailwind.css'],
   ssr: true,
   compatibilityDate: '2024-08-26',
 
   sitemap: {
-    hostname: 'https://www.pharmacieagnespraden.com', 
-    gzip: true,
-    routes: async () => {
-      console.log('Début de la génération du sitemap');
-      console.log('URL de l\'API utilisée :', 'https://ecommerce-backend-production.admin-a5f.workers.dev/categories');
+    hostname: 'https://www.pharmacieagnespraden.com/',
+    urls: async () => {
       try {
-        console.log('Début de la génération du sitemap pour les catégories.');
+        const response = await axios.get(
+          'https://ecommerce-backend-production.admin-a5f.workers.dev/categories'
+        );
+        const categories = response.data.items || [];
 
-        // Appel à l'API pour récupérer les catégories
-        const response = await axios.get('https://ecommerce-backend-production.admin-a5f.workers.dev/categories');
-        console.log('Réponse de l\'API reçue :', response.data);
+        const categoryUrls = categories.map((category: { name: string; uuid: string; image?: string; updated_at?: string }) => ({
+          url: formatCategoryUrl(category), // 🔥 URL formatée
+          changefreq: 'weekly',
+          priority: 0.8,
+          lastmod: category.updated_at || new Date().toISOString(), // 📅 Ajout de la date de mise à jour
+          img: category.image ? [{ url: category.image, caption: category.name }] : [], // 🖼 Ajout de l'image si dispo
+        }));
 
-        const categories = response.data.items;
-
-        if (!categories || categories.length === 0) {
-          console.warn('Aucune catégorie trouvée dans l\'API.');
-          return [];
-        }
-
-        // Générer les routes
-        const routes = categories.map((category: { name: string; uuid: string }) => {
-          const formattedName = category.name
-            .toLowerCase()
-            .replace(/[^a-z0-9]+/g, '-') // Remplace les caractères non alphanumériques par des tirets
-            .replace(/^-|-$/g, ''); // Supprime les tirets en début ou fin de chaîne
-
-          return {
-            url: `/categories/${formattedName}?${category.uuid}`,
-            changefreq: 'weekly',
-            priority: 0.8,
-          };
-        });
-
-        console.log('Routes générées :', routes);
-        return routes;
+        return [
+          { url: '/', changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() },
+          ...categoryUrls,
+        ];
       } catch (error) {
-        console.error('Erreur lors de la récupération des catégories ou de la génération des routes :', error);
-        return [];
+        console.error('❌ Erreur lors de la récupération des catégories:', error);
+        return [{ url: '/', changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() }];
       }
     },
   },
