@@ -12,6 +12,7 @@ const formatCategoryUrl = (category: { name: string; uuid: string }): string => 
   return `/categories/${formattedName}?${category.uuid}`;
 };
 
+// 🔹 Fonction pour formater les URLs des produits
 const formatProductUrl = (product: { slug: string; uuid: string }): string => {
   return `/products/${product.slug}?${product.uuid}`;
 };
@@ -49,7 +50,11 @@ export default defineNuxtConfig({
         },
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico',
+        },
       ],
       script: [
         { src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js' },
@@ -98,7 +103,7 @@ export default defineNuxtConfig({
         const categoryResponse = await axios.get('https://ecommerce-backend-production.admin-a5f.workers.dev/categories');
         const categories = categoryResponse.data.items || [];
 
-        const categoryUrls = categories.map((category: { name: string; uuid: string }) => ({
+        const categoryUrls = categories.map((category: { name: string }) => ({
           url: formatCategoryUrl(category),
         }));
 
@@ -109,7 +114,7 @@ export default defineNuxtConfig({
         const productResponse = await axios.get('https://ecommerce-backend-production.admin-a5f.workers.dev/sitemap');
         const products = productResponse.data || [];
 
-        const productUrls = products.map((product: { slug: string; uuid: string }) => ({
+        const productUrls = products.map((product: { slug: string }) => ({
           url: formatProductUrl(product),
         }));
 
