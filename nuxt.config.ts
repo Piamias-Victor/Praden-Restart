@@ -12,6 +12,10 @@ const formatCategoryUrl = (category: { name: string; uuid: string }): string => 
   return `/categories/${formattedName}?${category.uuid}`;
 };
 
+const formatProductUrl = (product: { slug: string; uuid: string }): string => {
+  return `/products/${product.slug}?${product.uuid}`;
+};
+
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
@@ -85,26 +89,34 @@ export default defineNuxtConfig({
 
   sitemap: {
     hostname: 'https://www.pharmacieagnespraden.com/',
-    gzip: true,
-    cacheTime: 600000,
     urls: async () => {
       try {
         console.log('📌 Début de la génération du sitemap');
 
         // 🔹 Récupération des catégories
-        const categoryResponse = await axios.get(
-          'https://ecommerce-backend-production.admin-a5f.workers.dev/categories'
-        );
+        console.log('📌 Récupération des catégories...');
+        const categoryResponse = await axios.get('https://ecommerce-backend-production.admin-a5f.workers.dev/categories');
         const categories = categoryResponse.data.items || [];
 
-        const categoryUrls = categories.map((category: { name: string }) => ({
+        const categoryUrls = categories.map((category: { name: string; uuid: string }) => ({
           url: formatCategoryUrl(category),
         }));
 
         console.log(`✅ ${categoryUrls.length} catégories ajoutées`);
 
-        // 🔹 Fusion des catégories avec la page d'accueil
-        const allUrls = [{ url: '/' }, ...categoryUrls];
+        // 🔹 Récupération des produits
+        console.log('📌 Récupération des produits...');
+        const productResponse = await axios.get('https://ecommerce-backend-production.admin-a5f.workers.dev/sitemap');
+        const products = productResponse.data || [];
+
+        const productUrls = products.map((product: { slug: string; uuid: string }) => ({
+          url: formatProductUrl(product),
+        }));
+
+        console.log(`✅ ${productUrls.length} produits ajoutés`);
+
+        // 🔹 Fusion des catégories et des produits
+        const allUrls = [{ url: '/' }, ...categoryUrls, ...productUrls];
 
         console.log(`📌 Total des routes générées : ${allUrls.length}`);
         return allUrls;
@@ -113,5 +125,5 @@ export default defineNuxtConfig({
         return [{ url: '/' }];
       }
     },
-  },
+  }
 });
