@@ -1,6 +1,6 @@
 <template lang="pug">
   ft-categories(:categoriesVM="categoriesVM")
-  nav.breadcrumbs.flex.items-center.text-sm.text-gray-600.m-2
+  nav.breadcrumbs.flex.items-center.text-sm.text-gray-600.m-2(v-if="productVM")
         nuxt-link.text-main.font-medium(href="/") Accueil
         span.mx-2 /
         nuxt-link.text-main.font-medium(href="/laboratory") Laboratoires
@@ -9,7 +9,7 @@
         span.mx-2 /
         span.text-main.font-semibold {{ productVM.name }}
   
-  div.mt-4
+  div.mt-4(v-if="productVM")
     div.mx-auto.max-w-2xl(class='lg:max-w-none relative')
       div(class='grid grid-cols-1 sm:grid-cols-2 sm:items-start sm:gap-x-8')
         div.flex.flex-col.justify-start
@@ -97,7 +97,7 @@ import { listPromotions } from '@core/usecases/list-promotions/listPromotions';
 import { listBanner } from '@core/usecases/list-banner/listBanner';
 import { bannerGateway } from '../../../../../../gateways/bannerGateway';
 import deliveryGateway from '../../../../../../gateways/deliveryGateway';
-import { useHead } from 'nuxt/app';
+import { useHead, useAsyncData } from 'nuxt/app';
 
 definePageMeta({ layout: 'main' });
 
@@ -118,6 +118,10 @@ function extractUuidFromPath(path: string): string {
   return uuid || '';
 }
 
+const fullPath = route.fullPath as string;
+const productUuid = extractUuidFromPath(fullPath);
+console.log("UUID final utilisé pour l'API :", productUuid);
+
 onMounted(() => {
   console.log('route.params', route.fullPath)
   listDeliveryMethods(deliveryGateway);
@@ -127,20 +131,42 @@ onMounted(() => {
   // Extraire l'UUID du chemin
   const fullPath = route.fullPath as string; // Assurez-vous que `uuid` est le bon paramètre dans vos routes
   const extractedUuid = extractUuidFromPath(fullPath);
-  console.log('extractedUuid', extractedUuid)
+  // console.log('extractedUuid', extractedUuid)
 
-  productId.value = extractedUuid; // Stocker l'UUID extrait
+  // productId.value = extractedUuid; // Stocker l'UUID extrait
 
-  // Fetch le produit avec l'UUID extrait
-  getProduct(productId.value, useProductGateway());
+  // // Fetch le produit avec l'UUID extrait
+  // getProduct(productId.value, useProductGateway());
 
   listCategories(categoryGateway());
   listBestSales(useProductGateway());
   listLaboratories(laboratoryGateway());
 });
 
-const productVM = computed(() => {
-  return getProductVM();
+// 📌 Charger les données du produit côté serveur avant l'affichage
+// 📌 Charger les données du produit côté serveur AVANT l'affichage
+const { data: productVM, pending, error } = await useAsyncData(`product-${productUuid}`, async () => {
+  if (!productUuid) {
+    console.error("Erreur : aucun UUID trouvé dans l'URL");
+    return null;
+  }
+
+  try {
+    console.log("Envoi de la requête API avec UUID :", productUuid);
+    await getProduct(productUuid, useProductGateway());
+    const product = getProductVM();
+
+    if (!product) {
+      console.error("Erreur : aucun produit retourné par `getProductVM()`");
+      return null;
+    }
+
+    console.log("Produit récupéré :", product);
+    return product;
+  } catch (err) {
+    console.error("Erreur lors de la récupération du produit :", err);
+    return null;
+  }
 });
 
 const formatProductHref = (product: { name: string; uuid: string }): string => {
@@ -153,7 +179,12 @@ const formatProductHref = (product: { name: string; uuid: string }): string => {
   return `/products/${formattedName}?${product.uuid}`;
 };
 
-const canonicalUrl = computed(() => {
+useHead(() => {
+  console.log('ici :' + productVM)
+  if (!productVM.value) return {};
+  console.log('ici 2:' + productVM)
+
+  const canonicalUrl = computed(() => {
   if (!productVM.value || !productId.value) return '';
 
   return `https://www.pharmacieagnespraden.com${formatProductHref({
@@ -162,17 +193,12 @@ const canonicalUrl = computed(() => {
   })}`;
 });
 
-useHead(() => {
   return {
-    title: productVM.value
-      ? `${productVM.value.name} - ${productVM.value.laboratory}`
-      : 'Pharmacie Agnès',
+    title: `${productVM.value.name} - Pharmacie Agnès Praden`,
     meta: [
       {
         name: 'description',
-        content: productVM.value
-          ? `Commandez ${productVM.value.name} en ligne sur pharmacie Agnes Praden ou faites vous livrer à domicile, en point relais ou à la pharmacie à Alès en click and collect `
-          : 'Pharmacie Agnès - Produits pharmaceutiques de qualité.',
+        content: `Commandez ${productVM.value.name} en ligne sur pharmacie Agnes Praden ou faites vous livrer à domicile, en point relais ou à la pharmacie à Alès en click and collect `,
       },
     ],
     link: [

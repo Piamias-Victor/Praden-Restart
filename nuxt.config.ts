@@ -85,6 +85,7 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/tailwind.css'],
   ssr: true,
+  target: 'server',
   compatibilityDate: '2024-08-26',
 
   sitemap: {

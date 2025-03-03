@@ -103,6 +103,7 @@ const categoryUuid = extractedUuid
 const description = ref(null);
 const top = ref(null);
 
+
 const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...';
 
 const categoriesVM2 = computed(() => {
@@ -179,25 +180,52 @@ onMounted(() => {
 });
 
 const categoriesVM = computed(() => getChildCategoriesVM(categoryUuid));
-const categoryVM = computed(() => getCategoryVM(sortType.value));
+const { data: categoryVM, pending, error } = await useAsyncData(`category-${categoryUuid}`, async () => {
+  if (!categoryUuid) {
+    console.error("Erreur : aucun UUID trouvé dans l'URL");
+    return null;
+  }
 
-useHead(() => ({
-  title: categoryVM.value ? `${categoryVM.value.name} - Catégorie` : 'Pharmacie Agnès',
-  meta: [
-    {
-      name: 'description',
-      content: categoryVM.value
-        ? `Explorez notre catégorie ${categoryVM.value.name}. ${categoryVM.value.description || 'Découvrez des produits de qualité adaptés à vos besoins.'}`
-        : 'Pharmacie Agnès - Produits pharmaceutiques de qualité.',
-    },
-  ],
-  link: [
+  try {
+    console.log("Envoi de la requête API avec UUID :", categoryUuid);
+    await getCategory(categoryUuid, categoryGateway(), searchGateway());
+    const category = getCategoryVM();
+
+    if (!category) {
+      console.error("Erreur : aucun résultat de `getCategoryVM()`");
+      return null;
+    }
+
+    console.log("Catégorie récupérée :", category);
+    return category;
+  } catch (err) {
+    console.error("Erreur lors de la récupération de la catégorie :", err);
+    return null;
+  }
+});
+useHead(() => {
+  console.log('categoryVM :',categoryVM.value)
+  if (!categoryVM.value) return {}; // ⚠️ Évite d'exécuter `useHead()` si `categoryVM` est vide
+  console.log('categoryVM :',categoryVM.value)
+
+  return {
+    title: `${categoryVM.value.name} - Catégorie`,
+    meta: [
       {
-        rel: 'canonical',
+        name: "description",
+        content: categoryVM.value.description && categoryVM.value.description.trim()
+          ? categoryVM.value.description
+          : `Explorez notre catégorie ${categoryVM.value.name}. Découvrez des produits de qualité adaptés à vos besoins.`,
+      },
+    ],
+    link: [
+      {
+        rel: "canonical",
         href: `https://pharmacieagnespraden.com${route.fullPath}`, // URL actuelle de la page comme lien canonique
       },
     ],
-}));
+  };
+});
 
 const searchVM = computed(() => {
   const result = getSearchResultVM(sortType.value);
