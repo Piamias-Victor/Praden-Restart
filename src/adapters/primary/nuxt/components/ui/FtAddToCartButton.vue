@@ -2,7 +2,7 @@
   div.bg-main.rounded-b-xl.mt-1(class='p-0.5')
   
     // Afficher "Bientôt de retour" si le stock est négatif
-    div.flex.flex-center.gap-4.text-white.group.flex.items-center.justify-center.p-2.transition-colors.rounded-xl(v-if="props.availableStock !== undefined && props.availableStock < 0")
+    div.flex.flex-center.gap-4.text-white.group.flex.items-center.justify-center.p-2.transition-colors.rounded-xl(v-if="props.availableStock !== undefined && props.availableStock <= 0")
       p.font-semibold.text-white Bientôt de retour
   
     div.flex.flex-center.gap-4.text-white(v-else-if="cartQuantity && cartQuantity.items && cartQuantity.items[productUuid]")
