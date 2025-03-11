@@ -154,7 +154,7 @@ const getStatusClass = (status: string): string => {
 const getStatusText = (status: string): string => {
   switch (status) {
     case 'CREATED':
-      return 'En attente de traitement';
+      return 'En attente de paiement';
     case 'PROCESSING':
       return 'En cours de traitement';
     case 'SHIPPED':
