@@ -23,8 +23,8 @@
                       icon.icon-sm(name="ph:x-bold")
                 div.mt-4
                 ul.space-y-4
-                  li(v-for='order in sortedOrders' :key="order.uuid" class="p-4 border rounded-lg shadow-sm bg-white hover:bg-gray-50 transition-colors duration-200 cursor-pointer" @click="toggleOrder(order.uuid)")
-                    div.flex.justify-between
+                  li(v-for='order in sortedOrders' :key="order.uuid")
+                    div(v-if='order.lines[0].deliveryStatus !== "CREATED"' class="p-4 border rounded-lg shadow-sm bg-white hover:bg-gray-50 transition-colors duration-200 cursor-pointer" @click="toggleOrder(order.uuid)").flex.justify-between
                       div.flex.flex-col.items-start.w-full.gap-2
                         div.flex.items-center.gap-2.w-full.justify-between
                           p.text-sm.text-gray-600 Date: {{ formatDate(order.createdAt) }}
