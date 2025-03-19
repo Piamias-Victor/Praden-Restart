@@ -66,7 +66,8 @@
               @city-changed="cityChanged"
               @zip-changed="zipChanged"
           )
-              
+          p.text-red-500.text-sm.mt-1(v-if="zipError") {{ zipError }}
+
   div.mt-2.border-t.py-6.px-4(class="sm:px-6")
       div.flex.items-center.gap-2.text-left.px-3
           div(v-if='newsletter').flex-shrink-0.flex.items-center.justify-center.bg-main.border.border-2.border-main.h-5.w-5.rounded-md.text-white(@click='switchNewsletter')
@@ -75,107 +76,57 @@
           span.text-sm(@click='switchNewsletter') S'inscrire à la newsletter et recevoir toutes les offres
       div().mt-4
           ft-button.button-solid.w-full.text-xl(@click="validateUser" :disabled="!isFormValid") Choisir ma livraison
-  </template>
+</template>
 
 <script lang="ts" setup>
-import { ref, computed, watchEffect } from 'vue';
+import { ref, computed } from 'vue';
 import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 import { updateUser } from '@core/usecases/user/updateUser';
-import { signInWithGoogle } from '@utils/google';
-import { createGoogleUser } from '@core/usecases/user/createGoogleUser';
 import { useNuxtApp } from '#app';
-import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
 
-const user = computed(() => {
-  return getUserVM();
-});
-
+const user = computed(() => getUserVM());
 const nuxtApp = useNuxtApp();
 const keycloak = nuxtApp.$keycloak;
-const keycloakReady = nuxtApp.$keycloakReady;
-const isAuthenticated = ref(false);
-
-const login = () => {
-  // Récupérer le panier actuel
-  const cartVM = getCartVM();
-
-  // Créer un objet avec uniquement les UUID des produits
-  const cart = {
-    items: Object.keys(cartVM.items),
-  };
-
-  // Convertir en JSON et sauvegarder dans le localStorage
-  localStorage.setItem('cart', JSON.stringify(cart));
-
-  // Redirection pour la connexion
-  keycloak?.login().catch((error) => {
-    console.error('Erreur lors de la connexion :', error);
-  });
-};
-
-// Fonction inscription
-const register = () => {
-  keycloak?.register().catch((error) => {
-    console.error("Erreur lors de l'inscription :", error);
-  });
-};
-
-// Fonction déconnexion
-const logout = () => {
-  keycloak?.logout({ redirectUri: window.location.origin }).catch((error) => {
-    console.error('Erreur lors de la déconnexion :', error);
-  });
-};
 
 const newsletter = ref(false);
+const zipError = ref<string | null>(null);
+const isZipValid = ref(true);
 
 const emit = defineEmits<{
   (e: 'close'): void;
   (e: 'move-stepper'): void;
 }>();
 
-const close = () => {
-  emit('close');
-};
+const close = () => emit('close');
 
 const switchNewsletter = () => {
   newsletter.value = !newsletter.value;
 };
 
-const mailChanged = (e: any) => {
-  user.value.email = e.target.value;
-};
+const mailChanged = (e: any) => user.value.email = e.target.value;
+const phoneChanged = (e: any) => user.value.phone = e.target.value;
+const firstnameChanged = (value: string) => user.value.firstname = value;
+const lastnameChanged = (value: string) => user.value.lastname = value;
+const countryChanged = (value: string) => user.value.address.country = value;
+const addressChanged = (value: string) => user.value.address.address = value;
+const appartementChanged = (value: string) => user.value.address.appartement = value;
+const cityChanged = (value: string) => user.value.address.city = value;
 
-const phoneChanged = (e: any) => {
-  user.value.phone = e.target.value;
-};
+const validateFrenchZip = (zip: string) => {
+  const regexFranceMetropole = /^(0[1-9]|[1-8]\d|9[0-5])\d{3}$/;
 
-const firstnameChanged = (value: string) => {
-  user.value.firstname = value;
-};
-
-const lastnameChanged = (value: string) => {
-  user.value.lastname = value;
-};
-
-const countryChanged = (value: string) => {
-  user.value.address.country = value;
-};
-
-const addressChanged = (value: string) => {
-  user.value.address.address = value;
-};
-
-const appartementChanged = (value: string) => {
-  user.value.address.appartement = value;
-};
-
-const cityChanged = (value: string) => {
-  user.value.address.city = value;
+  if (!regexFranceMetropole.test(zip)) {
+    zipError.value = "Nous ne livrons pas à cette adresse.";
+    isZipValid.value = false;
+  } else {
+    zipError.value = null;
+    isZipValid.value = true;
+  }
 };
 
 const zipChanged = (value: string) => {
   user.value.address.zip = value;
+  validateFrenchZip(value);
 };
 
 const isFormValid = computed(() => {
@@ -187,29 +138,13 @@ const isFormValid = computed(() => {
     user.value.address &&
     user.value.address.country &&
     user.value.address.zip &&
-    user.value.address.city
+    user.value.address.city &&
+    isZipValid.value // Vérification du code postal
   );
 });
 
 const validateUser = () => {
   updateUser(user.value);
   emit('move-stepper');
-};
-
-const connectWithGoogle = async () => {
-  try {
-    const googleUser = await signInWithGoogle();
-    createGoogleUser(googleUser);
-  } catch (error) {
-    console.error('Erreur lors de la connexion avec Google:', error);
-  }
-};
-
-const openLoginPage = () => {
-  window.location.href = '/login';
-};
-
-const openRegisterPage = () => {
-  window.location.href = '/register';
 };
 </script>
