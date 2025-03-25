@@ -203,6 +203,7 @@ const { data: categoryVM, pending, error } = await useAsyncData(`category-${cate
     return null;
   }
 });
+
 useHead(() => {
   console.log('categoryVM :',categoryVM.value)
   if (!categoryVM.value) return {}; // ⚠️ Évite d'exécuter `useHead()` si `categoryVM` est vide
@@ -214,7 +215,7 @@ useHead(() => {
       {
         name: "description",
         content: categoryVM.value.description && categoryVM.value.description.trim()
-          ? categoryVM.value.description
+          ? `${categoryVM.value.description.slice(0, 310)}...`
           : `Explorez notre catégorie ${categoryVM.value.name}. Découvrez des produits de qualité adaptés à vos besoins.`,
       },
     ],

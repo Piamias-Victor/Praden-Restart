@@ -187,7 +187,7 @@ useHead(() => {
   const canonicalUrl = computed(() => {
   if (!productVM.value || !productId.value) return '';
 
-  return `https://www.pharmacieagnespraden.com${formatProductHref({
+  return `https://pharmacieagnespraden.com${formatProductHref({
     name: productVM.value.name,
     uuid: productId.value,
   })}`;

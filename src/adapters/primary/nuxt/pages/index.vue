@@ -42,6 +42,24 @@ onMounted(() => {
   listBestSales(useProductGateway());
 });
 
+useHead(() => {
+  return {
+    title: `Pharmacie Agnes Praden - ALES`,
+    meta: [
+      {
+        name: 'description',
+        content: `Commandez en ligne sur pharmacie Agnes Praden ou faites vous livrer à domicile, en point relais ou à la pharmacie à Alès en click and collect `,
+      },
+    ],
+    link: [
+      {
+        rel: 'canonical',
+        href: 'https://pharmacieagnespraden.com', // Construire l'URL complète
+      },
+    ],
+  };
+});
+
 const categoriesVM = computed(() => {
   return getRootCategoriesVM();
 });
