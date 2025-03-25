@@ -185,11 +185,10 @@ useHead(() => {
   console.log('ici 2:' + productVM)
 
   const canonicalUrl = computed(() => {
-  if (!productVM.value || !productId.value) return '';
-
+  if (!productVM.value || !productUuid) return '';
   return `https://pharmacieagnespraden.com${formatProductHref({
     name: productVM.value.name,
-    uuid: productId.value,
+    uuid: productUuid,
   })}`;
 });
 
