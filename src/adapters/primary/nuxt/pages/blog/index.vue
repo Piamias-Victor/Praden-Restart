@@ -77,6 +77,13 @@ const blogVm = {
       url: 'https://www.pharmacieagnespraden.com/blog/gerer-son-stress',
       date: '01/12/2024',
     },
+    {
+      uuid: 'AutoBronzant',
+      name: 'Autobronzants corps & visage ',
+      icon: 'https://i.postimg.cc/MGr3B9HF/Capture-d-e-cran-2025-04-09-a-13-17-37.png',
+      url: 'https://www.pharmacieagnespraden.com/blog/autobronzants',
+      date: '01/05/2025',
+    },
   ],
 };
 </script>

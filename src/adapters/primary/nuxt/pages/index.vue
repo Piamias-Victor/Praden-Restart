@@ -94,7 +94,7 @@ const blogVm = {
       uuid: '2',
       name: 'Autobronzants corps & visage ',
       icon: 'https://i.postimg.cc/MGr3B9HF/Capture-d-e-cran-2025-04-09-a-13-17-37.png',
-      url: 'https://www.pharmacieagnespraden.com/blog/autobronzants-corps-visage',
+      url: 'https://www.pharmacieagnespraden.com/blog/autobronzants',
       date: '01/05/2025',
     },
   ],
