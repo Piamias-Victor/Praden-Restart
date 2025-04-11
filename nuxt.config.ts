@@ -89,7 +89,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-08-26',
 
   sitemap: {
-    hostname: 'https://www.pharmacieagnespraden.com/',
+    hostname: 'https://pharmacieagnespraden.com/',
     urls: async () => {
       try {
         console.log('📌 Début de la génération du sitemap');
