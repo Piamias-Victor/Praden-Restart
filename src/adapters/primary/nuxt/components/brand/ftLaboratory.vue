@@ -4,7 +4,7 @@
             img(src='https://logo-marque.com/wp-content/uploads/2020/12/Avene-Logo.png' class='w-[200px]') 
         div(class='w-[100px]')
         nuxt-link.cursor-pointer(@click="goToLabo('uriage?4d18306b-04aa-471c-8d1c-0553bb97facc')")
-            img(src='https://www.resonance-coaching.com/wp-content/uploads/2018/02/logo-uriage-blanc-300x228.png' class='w-[200px]')
+            img(src='https://i.postimg.cc/0ycF1wnh/logo-uriage-blanc-300x228.png' class='w-[200px]')
         div(class='w-[100px]')
         nuxt-link.cursor-pointer(@click="goToLabo('a-derma?4bf91ddb-1546-44f5-8c13-f8298daf13b2')")
             img(src='https://pharmaciedelacapte.fr/wp-content/uploads/2020/04/A-Derma-logo-carr%C3%A9-copie.png' class='w-[200px]')
