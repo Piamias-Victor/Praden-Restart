@@ -80,5 +80,11 @@ useHead({
         'Découvrez les engagements de la Pharmacie Agnès Praden : qualité du service, conseil officinal, innovations, accessibilité, et respect de l’environnement.',
     },
   ],
+  link: [
+      {
+        rel: "canonical",
+        href: `https://pharmacieagnespraden.com/engagement`, // URL actuelle de la page comme lien canonique
+      },
+    ],
 });
 </script>

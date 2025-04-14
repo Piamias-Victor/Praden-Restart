@@ -226,5 +226,6 @@ useHead({
         'Découvrez les engagements déontologiques de la Pharmacie Agnès Praden, garantissant confidentialité, respect des règles éthiques et qualité des services.',
     },
   ],
+  
 });
 </script>

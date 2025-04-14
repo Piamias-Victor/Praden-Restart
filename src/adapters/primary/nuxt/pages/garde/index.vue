@@ -36,5 +36,11 @@ useHead({
         'Retrouvez les informations sur les pharmacies de garde à Alès. Découvrez comment accéder aux services de nuit, week-ends et jours fériés.',
     },
   ],
+  link: [
+      {
+        rel: "canonical",
+        href: `https://pharmacieagnespraden.com/garde`, // URL actuelle de la page comme lien canonique
+      },
+    ],
 });
 </script>

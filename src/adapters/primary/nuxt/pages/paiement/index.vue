@@ -174,5 +174,11 @@ useHead({
         'Découvrez les options de paiement sécurisé proposées par la Pharmacie Agnès Praden : cartes acceptées, processus de paiement, et mesures de sécurité pour vos transactions.',
     },
   ],
+  link: [
+      {
+        rel: "canonical",
+        href: `https://pharmacieagnespraden.com/paiement`, // URL actuelle de la page comme lien canonique
+      },
+    ],
 });
 </script>

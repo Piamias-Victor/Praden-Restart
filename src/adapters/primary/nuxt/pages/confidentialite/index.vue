@@ -683,5 +683,11 @@ useHead({
         'Découvrez comment la Pharmacie Agnès Praden collecte, utilise et protège vos données personnelles conformément aux lois en vigueur.',
     },
   ],
+  link: [
+      {
+        rel: "canonical",
+        href: `https://pharmacieagnespraden.com/confidentialite`, // URL actuelle de la page comme lien canonique
+      },
+    ],
 });
 </script>

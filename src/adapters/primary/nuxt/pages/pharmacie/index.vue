@@ -127,5 +127,11 @@ useHead({
         'Découvrez la Pharmacie Agnès Praden à Alès : services de santé, horaires d’ouverture, localisation et contact. Située au centre commercial Intermarché.',
     },
   ],
+  link: [
+      {
+        rel: "canonical",
+        href: `https://pharmacieagnespraden.com/pharmacie`, // URL actuelle de la page comme lien canonique
+      },
+    ],
 });
 </script>

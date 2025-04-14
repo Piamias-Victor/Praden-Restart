@@ -398,6 +398,12 @@ useHead({
         'Découvrez les conditions générales de vente de la Pharmacie Agnès Praden, incluant les modalités d’achat, de livraison et de paiement.',
     },
   ],
+  link: [
+      {
+        rel: "canonical",
+        href: `https://pharmacieagnespraden.com/cgv`, // URL actuelle de la page comme lien canonique
+      },
+    ],
 });
 
 definePageMeta({ layout: 'main' });

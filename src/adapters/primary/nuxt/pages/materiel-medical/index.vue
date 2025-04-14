@@ -128,5 +128,11 @@ useHead({
         'Découvrez une large gamme de matériel médical à la Pharmacie Agnès Praden à Alès. Vente et location de matériel orthopédique, fauteuils roulants, lits médicalisés et plus encore.',
     },
   ],
+  link: [
+      {
+        rel: "canonical",
+        href: `https://pharmacieagnespraden.com/materiel-medical`, // URL actuelle de la page comme lien canonique
+      },
+    ],
 });
 </script>

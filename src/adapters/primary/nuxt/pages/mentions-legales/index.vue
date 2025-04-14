@@ -90,5 +90,11 @@ useHead({
         'Consultez les mentions légales de la Pharmacie Agnès Praden à Alès. Informations sur l’éditeur, l’hébergeur, les numéros d’identification, et les coordonnées utiles.',
     },
   ],
+  link: [
+      {
+        rel: "canonical",
+        href: `https://pharmacieagnespraden.com/mentions-legales`, // URL actuelle de la page comme lien canonique
+      },
+    ],
 });
 </script>
