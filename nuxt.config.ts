@@ -89,7 +89,11 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-08-26',
 
   sitemap: {
-    hostname: 'https://pharmacieagnespraden.com/',
+    hostname: 'https://pharmacieagnespraden.com',
+    xsl: false, // Désactiver la feuille de style XSL par défaut
+    strictNoDupe: true, // Éviter les doublons d'URLs
+    trailingSlash: false, // Ne pas ajouter de slash à la fin des URLs
+    canonicalURL: 'https://pharmacieagnespraden.com', // S'assurer que l'URL canonique reste sans www
     urls: async () => {
       try {
         console.log('📌 Début de la génération du sitemap');
@@ -101,6 +105,8 @@ export default defineNuxtConfig({
 
         const categoryUrls = categories.map((category: { name: string; uuid: string }) => ({
           url: formatCategoryUrl(category),
+          changefreq: 'weekly',
+          priority: 0.8,
         }));
 
         console.log(`✅ ${categoryUrls.length} catégories ajoutées`);
@@ -112,12 +118,19 @@ export default defineNuxtConfig({
 
         const productUrls = products.map((product: { slug: string; uuid: string }) => ({
           url: formatProductUrl(product),
+          changefreq: 'weekly',
+          priority: 0.7,
         }));
 
         console.log(`✅ ${productUrls.length} produits ajoutés`);
 
         // 🔹 Fusion des catégories et des produits
-        const allUrls = [{ url: '/' }, ...categoryUrls, ...productUrls];
+        // Modifié pour inclure l'accueil directement dans la liste
+        const allUrls = [
+          { url: '/', changefreq: 'daily', priority: 1.0 },
+          ...categoryUrls, 
+          ...productUrls
+        ];
 
         console.log(`📌 Total des routes générées : ${allUrls.length}`);
         return allUrls;
