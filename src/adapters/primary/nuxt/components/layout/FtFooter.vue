@@ -18,7 +18,7 @@ footer.bg-main.text-white.py-8
                 li
                 a(href="/engagement" class="hover:text-white") Nos engagements
                 li
-                a(href="/garde" class="hover:text-white") Pharmacie de garde
+                a(href="/pharmacie-de-garde" class="hover:text-white") Pharmacie de garde
                 li
                 a(href="/pharmacie" class="hover:text-white") Agnès Praden Alès
                 li
@@ -39,7 +39,6 @@ footer.bg-main.text-white.py-8
                 li
                 a(href="/confidentialite" class="hover:text-white") Confidentialite
                 li
-                a(href="/pharmacie-de-garde" class="hover:text-white") Pharmacie de garde
 
     .text-center.mt-8.text-white
         | 2024 Phardev - Tous droits réservés.
