@@ -25,6 +25,8 @@ footer.bg-main.text-white.py-8
                 a(href="/article" class="hover:text-white") On parle de nous
                 li
                 a(href="/materiel-medical" class="hover:text-white") Matériel médical
+                li
+                a(href="/recrutement" class="hover:text-white") Recrutement
         div.flex.flex-col
             h3.text-xl.font-semibold.mb-4 Informations légales
             ul.space-y-2.text-white
@@ -36,6 +38,8 @@ footer.bg-main.text-white.py-8
                 a(href="/paiement" class="hover:text-white") Paiement
                 li
                 a(href="/confidentialite" class="hover:text-white") Confidentialite
+                li
+                a(href="/pharmacie-de-garde" class="hover:text-white") Pharmacie de garde
 
     .text-center.mt-8.text-white
         | 2024 Phardev - Tous droits réservés.
