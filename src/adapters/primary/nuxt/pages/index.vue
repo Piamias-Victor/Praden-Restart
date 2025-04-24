@@ -80,11 +80,18 @@ const products = computed(() => {
 const blogVm = {
   items: [
     {
-      uuid: '0',
-      name: 'Grossesse et soins vergetures',
-      icon: 'https://daylilyparis.com/cdn/shop/articles/vergetures_grossesse-Daylily_Paris.jpg?v=1708429258',
-      url: 'https://pharmacieagnespraden.com/blog/grossesse-soins-vergetures',
-      date: '01/12/2024',
+      uuid: '3',
+      name: 'Quels sont les meilleurs produits anti-cellulite pour une peau lisse ?',
+      icon: 'https://i.postimg.cc/V6WbM1qt/4.png',
+      url: 'https://pharmacieagnespraden.com/blog/anticellulite',
+      date: '24/04/2025',
+    },
+    {
+      uuid: '2',
+      name: 'Autobronzants corps & visage ',
+      icon: 'https://i.postimg.cc/R0m8dLrH/3.png',
+      url: 'https://pharmacieagnespraden.com/blog/autobronzants',
+      date: '01/05/2025',
     },
     {
       uuid: '1',
@@ -94,19 +101,11 @@ const blogVm = {
       date: '01/12/2024',
     },
     {
-      uuid: '2',
-      name: 'Autobronzants corps & visage ',
-      icon: 'https://i.postimg.cc/MGr3B9HF/Capture-d-e-cran-2025-04-09-a-13-17-37.png',
-      url: 'https://pharmacieagnespraden.com/blog/autobronzants',
-      date: '01/05/2025',
-    },
-    // Ajout du nouvel article
-    {
-      uuid: '3',
-      name: 'Quels sont les meilleurs produits anti-cellulite pour une peau lisse ?',
-      icon: 'https://i.postimg.cc/j5SfZwNX/Capture-d-e-cran-2025-04-24-a-12-44-38.png',
-      url: 'https://pharmacieagnespraden.com/blog/anticellulite',
-      date: '24/04/2025',
+      uuid: '0',
+      name: 'Grossesse et soins vergetures',
+      icon: 'https://daylilyparis.com/cdn/shop/articles/vergetures_grossesse-Daylily_Paris.jpg?v=1708429258',
+      url: 'https://pharmacieagnespraden.com/blog/grossesse-soins-vergetures',
+      date: '01/12/2024',
     },
   ],
 };
