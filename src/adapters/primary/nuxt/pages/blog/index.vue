@@ -84,6 +84,13 @@ const blogVm = {
       url: 'https://www.pharmacieagnespraden.com/blog/autobronzants',
       date: '01/05/2025',
     },
+    {
+      uuid: 'AntiCellulite',
+      name: 'Quels sont les meilleurs produits anti-cellulite pour une peau lisse ?',
+      icon: 'https://i.postimg.cc/j5SfZwNX/Capture-d-e-cran-2025-04-24-a-12-44-38.png',
+      url: 'https://www.pharmacieagnespraden.com/blog/anticellulite',
+      date: '24/04/2025',
+    },
   ],
 };
 </script>

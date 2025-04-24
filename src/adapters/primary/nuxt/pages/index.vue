@@ -74,6 +74,9 @@ const products = computed(() => {
   return getBestSales();
 });
 
+// Voici comment mettre à jour la variable blogVm dans votre page index.vue
+// ou dans tout autre fichier qui contient cette liste
+
 const blogVm = {
   items: [
     {
@@ -96,6 +99,14 @@ const blogVm = {
       icon: 'https://i.postimg.cc/MGr3B9HF/Capture-d-e-cran-2025-04-09-a-13-17-37.png',
       url: 'https://www.pharmacieagnespraden.com/blog/autobronzants',
       date: '01/05/2025',
+    },
+    // Ajout du nouvel article
+    {
+      uuid: '3',
+      name: 'Quels sont les meilleurs produits anti-cellulite pour une peau lisse ?',
+      icon: 'https://i.postimg.cc/j5SfZwNX/Capture-d-e-cran-2025-04-24-a-12-44-38.png',
+      url: 'https://www.pharmacieagnespraden.com/blog/anticellulite',
+      date: '24/04/2025',
     },
   ],
 };

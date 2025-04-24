@@ -45,14 +45,16 @@
     // Ajout du bloc code promo
     div.w-full.my-3.border-t.border-b.py-3
       div.flex.flex-col.gap-2(class='sm:flex-row sm:items-center sm:gap-4')
-        div.flex.w-full
+        div.flex.items-center.justify-between.w-full
+          p.font-semibold.text-sm(class='lg:text-base') Vous avez un code promo ?
+        div.flex.w-full(class='sm:max-w-[70%]')
           input.w-full.border.rounded-l-lg.px-3.py-2.text-sm.outline-none(
             type="text"
             v-model="promoCode"
             placeholder="Entrez votre code"
             class="focus:border-main"
           )
-          button.bg-main.text-white.rounded-r-lg.py-2.px-3.text-xs.font-medium(
+          ft-button.bg-main.text-white.rounded-r-lg.py-2.px-3.text-xs.font-medium(
             @click="applyPromoCode"
             :disabled="isApplyingCode"
             class='min-w-[80px] sm:min-w-[100px]'
@@ -95,7 +97,7 @@
   import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
   import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
   import { useProductGateway } from '../../../../../../gateways/productGateway';
-  import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
+  import { getCartVM, getProductsInCart } from '@adapters/primary/viewModels/get-cart/getCartVM';
   import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart';
   import {
     listDeliveryMethods,
@@ -112,6 +114,7 @@
   import { useDeliveryStore } from '@store/deliveryStore';
   import { start } from '../../../../../../gateways/deliveryGateway';
   import { priceFormatter } from '@utils/formater';
+  import { ReductionType } from '@core/entities/product';
   
   const router = useRouter();
   
@@ -165,14 +168,62 @@
     return formatPrice(discountedPrice);
   };
   
-  // Fonction pour créer les lignes de commande pour l'API
-  const createOrderLines = () => {
-    return Object.entries(cart.value.items).map(([uuid, item]) => {
-      return {
-        productUuid: uuid,
-        quantity: item.quantity,
-      };
-    });
+  // Fonction pour calculer le prix HT
+  const calculatePriceHT = (priceWithTax: number, taxRate: number): number => {
+    const priceHT = priceWithTax / (1 + taxRate / 100);
+    return Math.round(priceHT * 100) / 100;
+  };
+  
+  // Fonction mise à jour pour créer les lignes de commande pour l'API
+  const createOrderLines = async () => {
+    try {
+      // Récupérer les produits dans le panier
+      const { items } = getProductsInCart();
+      const productGateway = useProductGateway();
+      
+      const lines = await Promise.all(
+        Object.keys(items).map(async (key) => {
+          const item = items[key];
+          const product = await productGateway.getByUuid(item.uuid);
+          
+          // Calculer le prix HT
+          let priceWithoutTax = calculatePriceHT(product.price, product.percentTaxRate);
+          let promotionUuid = undefined;
+          
+          // Gérer les promotions
+          if (product.promotions && product.promotions.length > 0) {
+            const promotion = product.promotions[0];
+            if (promotion) {
+              let discountedPrice;
+              
+              if (promotion.type === ReductionType.Fixed) {
+                discountedPrice = product.price - promotion.amount;
+              } else {
+                discountedPrice = product.price - (product.price * promotion.amount) / 100;
+              }
+              
+              priceWithoutTax = calculatePriceHT(discountedPrice, product.percentTaxRate);
+              promotionUuid = promotion.uuid;
+            }
+          }
+          
+          // Conformément au schéma createOrderLineSchema
+          return {
+            productUuid: product.uuid,
+            quantity: item.quantity,
+            priceWithoutTax: priceWithoutTax,
+            percentTaxRate: product.percentTaxRate,
+            weight: product.weight || 100, // Ajout du poids, valeur par défaut si non disponible
+            ...(promotionUuid ? { promotionUuid } : {})
+          };
+        })
+      );
+      
+      return lines;
+    } catch (error) {
+      console.error("Erreur lors de la création des lignes de commande:", error);
+      return [];
+    }
   };
   
   // Fonction pour appliquer le code promo
@@ -190,7 +241,20 @@
     
     try {
       // Créer les lignes de commande pour l'API
-      const lines = createOrderLines();
+      const lines = await createOrderLines();
+      
+      console.log("Code promo à appliquer:", promoCode.value);
+      console.log("Méthode de livraison sélectionnée:", selectedDeliveryMethod.value);
+      console.log("Lignes de commande:", lines);
+      
+      // Créer le payload au format exact attendu par l'API
+      const payload = {
+        code: promoCode.value,
+        lines: lines,
+        deliveryMethodUuid: selectedDeliveryMethod.value
+      };
+      
+      console.log("Payload envoyé à l'API:", JSON.stringify(payload));
       
       // Appel à l'API pour valider le code promo
       const response = await fetch('https://ecommerce-backend-development.admin-a5f.workers.dev/promotion-codes/apply', {
@@ -198,16 +262,37 @@
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          code: promoCode.value,
-          lines: lines,
-          deliveryMethodUuid: selectedDeliveryMethod.value
-        }),
+        body: JSON.stringify(payload),
       });
       
-      const data = await response.json();
+      console.log("Statut HTTP de la réponse:", response.status, response.statusText);
       
-      if (response.ok && data.totalDiscounted) {
+      // Si la réponse n'est pas OK, afficher le texte brut pour le débogage
+      if (!response.ok) {
+        const textResponse = await response.text();
+        console.log("Réponse brute en cas d'erreur:", textResponse);
+        try {
+          const data = JSON.parse(textResponse);
+          console.log("Réponse d'erreur parsée:", data);
+          promoCodeStatus.value = {
+            success: false,
+            message: Array.isArray(data) ? data[0] : (data.message || 'Code promo invalide')
+          };
+        } catch (e) {
+          console.log("Impossible de parser la réponse d'erreur");
+          promoCodeStatus.value = {
+            success: false,
+            message: 'Code promo invalide'
+          };
+        }
+        isApplyingCode.value = false;
+        return;
+      }
+      
+      const data = await response.json();
+      console.log("Réponse de l'API:", data);
+      
+      if (data.totalDiscounted) {
         // Code promo valide
         appliedPromoCode.value = promoCode.value;
         totalDiscount.value = data.totalDiscounted;
@@ -238,6 +323,8 @@
     deliveryMethods.value.selectedDeliveryMethod = method;
     selectedDeliveryMethod.value = method.uuid;
     
+    console.log("Nouvelle méthode de livraison sélectionnée:", method.uuid, method.name);
+    
     // Réinitialiser le code promo si la méthode de livraison change
     if (appliedPromoCode.value) {
       appliedPromoCode.value = '';
@@ -265,7 +352,9 @@
   });
   
   const cart = computed(() => {
-    return getCartVM();
+    const cartData = getCartVM();
+    console.log("Contenu du panier:", cartData);
+    return cartData;
   });
   
   const emit = defineEmits<{
@@ -287,6 +376,12 @@
   
   const validateOrder = async () => {
     const deliveryMethodsStore = useDeliveryStore();
+  
+    console.log("Validation de la commande");
+    console.log("Méthode de livraison:", selectedDeliveryMethod.value);
+    console.log("Point de livraison:", deliveryMethodsStore.selected.point);
+    console.log("Timestamp sélectionné:", selectedTimestamp.value);
+    console.log("Code promo appliqué:", appliedPromoCode.value);
   
     if (
       deliveryMethodsStore.selected.uuid === '505209a2-7acb-4891-b933-e084d786d7ea' &&
@@ -325,6 +420,13 @@
       isProcessingOrder.value = false;
     }
   };
+  
+  // Log de débogage au chargement du composant
+  onMounted(() => {
+    console.log("Composant FtDelivery monté");
+    console.log("Méthode de livraison par défaut:", selectedDeliveryMethod.value);
+    console.log("Méthodes de livraison disponibles:", deliveryMethods.value);
+  });
   
   watchEffect(async () => {
     cartQuantity.value = await getCartQuantityVM(useProductGateway());

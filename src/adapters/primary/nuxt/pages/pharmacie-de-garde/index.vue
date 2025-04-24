@@ -204,8 +204,15 @@
             alt="ANSM"
           />
         </a>
+        <a class="w-[10vw]" target="_blank" rel="noopener">
+          <img
+            src="https://i.postimg.cc/rpQ00Vbt/unnamed.png"
+            alt="Telephone Santé"
+          />
+        </a>
       </div>
-  
+
+     
       <!-- Navigation Footer -->
       <ft-navigation />
     </section>
