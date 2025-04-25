@@ -30,6 +30,7 @@
             ft-image-gallery(
               :key="productVM.uuid"
               :images="productVM.images"
+              :alt-text="`${productVM.name} - Pharmacie Agnès Praden à Alès`"
             )
             ft-button.bg-transparent.absolute.top-2.right-2.text-main.p-2.rounded-full(
               v-if="likeQuantity && likeQuantity.items && likeQuantity.items[productVM.uuid]"
@@ -208,9 +209,13 @@ useHead(() => {
   
   const cleanDescription = rawDescription.substring(0, 160) + (rawDescription.length > 160 ? '...' : '');
   
-  // Préparation des images
+  // Préparation des images améliorées pour SEO
   const productImages = productVM.value.images && productVM.value.images.length > 0 
-    ? productVM.value.images.map(img => ({ "@type": "ImageObject", "url": img }))
+    ? productVM.value.images.map(img => ({
+        "@type": "ImageObject",
+        "url": img,
+        "caption": `${productVM.value.name} - Pharmacie Agnès Praden à Alès`,
+      }))
     : [];
   
   // Construction du schéma JSON-LD
@@ -234,7 +239,7 @@ useHead(() => {
         "name": "Pharmacie Agnès Praden"
       }
     },
-    "image": productVM.value.images && productVM.value.images.length > 0 ? productVM.value.images[0] : "",
+    "image": productImages,
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",
@@ -306,6 +311,18 @@ useHead(() => {
       {
         property: 'og:image',
         content: productVM.value.images && productVM.value.images.length > 0 ? productVM.value.images[0] : ""
+      },
+      {
+        property: 'og:image:width',
+        content: '800'
+      },
+      {
+        property: 'og:image:height',
+        content: '600'
+      },
+      {
+        property: 'og:image:alt',
+        content: `${productVM.value.name} - Pharmacie Agnès Praden à Alès`
       },
       // Twitter Card
       {
