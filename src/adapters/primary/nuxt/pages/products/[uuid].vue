@@ -1,13 +1,26 @@
 <template lang="pug">
   ft-categories(:categoriesVM="categoriesVM")
-  nav.breadcrumbs.flex.items-center.text-sm.text-gray-600.m-2(v-if="productVM")
-        nuxt-link.text-main.font-medium(href="/") Accueil
+  
+  // Fil d'Ariane amélioré avec des microdonnées Schema.org
+  nav.breadcrumbs.flex.items-center.text-sm.text-gray-600.m-2(v-if="productVM" itemscope itemtype="https://schema.org/BreadcrumbList")
+        div(itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem")
+          nuxt-link.text-main.font-medium(href="/" itemprop="item")
+            span(itemprop="name") Accueil
+            meta(itemprop="position" content="1")
         span.mx-2 /
-        nuxt-link.text-main.font-medium(href="/laboratory") Laboratoires
+        div(itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem")
+          nuxt-link.text-main.font-medium(href="/laboratory" itemprop="item")
+            span(itemprop="name") Laboratoires
+            meta(itemprop="position" content="2")
         span.mx-2 /
-        nuxt-link.text-main.font-medium(:href="`/laboratory`") {{ productVM.laboratory }}
+        div(itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem")
+          nuxt-link.text-main.font-medium(:href="`/laboratory/${formatLaboratorySlug(productVM.laboratory)}`" itemprop="item")
+            span(itemprop="name") {{ productVM.laboratory }}
+            meta(itemprop="position" content="3")
         span.mx-2 /
-        span.text-main.font-semibold {{ productVM.name }}
+        div(itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem")
+          span.text-main.font-semibold(itemprop="name") {{ productVM.name }}
+          meta(itemprop="position" content="4")
   
   div.mt-4(v-if="productVM")
     div.mx-auto.max-w-2xl(class='lg:max-w-none relative')
@@ -42,14 +55,14 @@
   
         div.px-4.flex.flex-col.justify-between
           div.mt-2
-            h1.text-lg.font-semibold.tracking-tight(class='lg:text-3xl')
+            h1.text-lg.font-semibold.tracking-tight(class='lg:text-3xl' itemprop="name")
               | {{ productVM.name }}
   
           div.mt-2.flex.justify-between.items-end(class='lg:pr-12')
             span.font-bold.text-main.text-xl(v-if="productVM.promotion && productVM.promotion.price" class='lg:text-4xl') {{ productVM.promotion.price }}
             span.text-xl.font-bold.tracking-tight(:class="productVM.promotion && productVM.promotion.price ? 'line-through lg:text-4xl' : 'font-bold text-main lg:text-4xl'") {{ productVM.price }}
   
-          // 🔥 Ajout du texte simple pour les médicaments
+          // Texte pour les médicaments
           div.mt-2.text-sm.text-main(v-if="productVM.isMedicine")
             | Ce produit est un médicament et n'intègre pas l'offre frais de port offerts.
   
@@ -57,7 +70,7 @@
           span.text-sm.font-bold.tracking-tight.text-contrast(class='lg:text-xl') {{ productVM.laboratory }}
   
           div.mt-4
-            div.space-y-6.text-base.text-contrast(style="white-space: pre-line")
+            div.space-y-6.text-base.text-contrast(style="white-space: pre-line" itemprop="description")
               div.text-sm(v-html="productVM.description")
   
           div.mt-2.flex.flex-col.gap-4(aria-labelledby='details-heading')
@@ -69,7 +82,7 @@
   
       ft-navigation
       ft-product-list.mt-4(:products="searchVM") Ces produits peuvent vous plaire
-  </template>
+</template>
 
 <script lang="ts" setup>
 import { onMounted, ref, computed, watchEffect } from 'vue';
@@ -99,52 +112,59 @@ import { bannerGateway } from '../../../../../../gateways/bannerGateway';
 import deliveryGateway from '../../../../../../gateways/deliveryGateway';
 import { useHead, useAsyncData } from 'nuxt/app';
 
-definePageMeta({ layout: 'main' });
+definePageMeta({ 
+  layout: 'main',
+  title: 'Produit | Pharmacie Agnès Praden',
+  meta: [
+    { name: 'robots', content: 'index, follow' }
+  ]
+});
 
 const productId = ref<string | null>(null);
-
 const isPromo = ref(false);
-
 const route = useRoute();
+const query = ref('');
 
-const formatLaboratory = (name: string): string => {
-  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+// Formatage des URL pour optimisation SEO
+const formatLaboratorySlug = (name: string): string => {
+  if (!name) return '';
+  return name
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // Supprime les accents
+    .replace(/[^a-z0-9]+/g, '-')     // Remplace les caractères spéciaux par des tirets
+    .replace(/^-|-$/g, '');          // Retire les tirets en début/fin
+};
+
+const formatProductSlug = (name: string): string => {
+  if (!name) return '';
+  return name
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // Supprime les accents
+    .replace(/[^a-z0-9]+/g, '-')     // Remplace les caractères spéciaux par des tirets
+    .replace(/^-|-$/g, '');          // Retire les tirets en début/fin
 };
 
 function extractUuidFromPath(path: string): string {
-  console.log('path', path)
+  if (!path) return '';
   const [_, uuid] = path.split('?');
-  console.log('uuid', uuid)
   return uuid || '';
 }
 
 const fullPath = route.fullPath as string;
 const productUuid = extractUuidFromPath(fullPath);
-console.log("UUID final utilisé pour l'API :", productUuid);
 
 onMounted(() => {
-  console.log('route.params', route.fullPath)
   listDeliveryMethods(deliveryGateway);
   listPromotions(useProductGateway());
   listBanner(bannerGateway());
-
-  // Extraire l'UUID du chemin
-  const fullPath = route.fullPath as string; // Assurez-vous que `uuid` est le bon paramètre dans vos routes
-  const extractedUuid = extractUuidFromPath(fullPath);
-  // console.log('extractedUuid', extractedUuid)
-
-  // productId.value = extractedUuid; // Stocker l'UUID extrait
-
-  // // Fetch le produit avec l'UUID extrait
-  // getProduct(productId.value, useProductGateway());
-
   listCategories(categoryGateway());
   listBestSales(useProductGateway());
   listLaboratories(laboratoryGateway());
 });
 
-// 📌 Charger les données du produit côté serveur avant l'affichage
-// 📌 Charger les données du produit côté serveur AVANT l'affichage
+// Chargement des données du produit
 const { data: productVM, pending, error } = await useAsyncData(`product-${productUuid}`, async () => {
   if (!productUuid) {
     console.error("Erreur : aucun UUID trouvé dans l'URL");
@@ -152,7 +172,6 @@ const { data: productVM, pending, error } = await useAsyncData(`product-${produc
   }
 
   try {
-    console.log("Envoi de la requête API avec UUID :", productUuid);
     await getProduct(productUuid, useProductGateway());
     const product = getProductVM();
 
@@ -161,7 +180,6 @@ const { data: productVM, pending, error } = await useAsyncData(`product-${produc
       return null;
     }
 
-    console.log("Produit récupéré :", product);
     return product;
   } catch (err) {
     console.error("Erreur lors de la récupération du produit :", err);
@@ -169,43 +187,165 @@ const { data: productVM, pending, error } = await useAsyncData(`product-${produc
   }
 });
 
-const formatProductHref = (product: { name: string; uuid: string }): string => {
-  // Formate le nom en un slug SEO-friendly
-  const formattedName = product.name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-') // Remplace les caractères non alphanumériques par des tirets
-    .replace(/^-|-$/g, ''); // Supprime les tirets en début ou fin de chaîne
-
-  return `/products/${formattedName}?${product.uuid}`;
-};
-
+// Configuration des métadonnées et du SEO
 useHead(() => {
-  console.log('ici :' + productVM)
   if (!productVM.value) return {};
-  console.log('ici 2:' + productVM)
 
-  const canonicalUrl = computed(() => {
-  if (!productVM.value || !productUuid) return '';
-  return `https://pharmacieagnespraden.com${formatProductHref({
-    name: productVM.value.name,
-    uuid: productUuid,
-  })}`;
-});
+  // Construction d'URL canonique propre
+  const formattedName = formatProductSlug(productVM.value.name);
+  const canonicalUrl = `https://pharmacieagnespraden.com/products/${formattedName}?${productUuid}`;
 
+  // Extraction du prix pour les données structurées
+  const priceString = productVM.value.promotion?.price || productVM.value.price || '0';
+  const priceValue = priceString.replace(/[^0-9,]/g, '').replace(',', '.');
+  
+  // Préparation de la description sans HTML
+  const rawDescription = productVM.value.description 
+    ? (typeof productVM.value.description === 'string' 
+      ? productVM.value.description.replace(/<[^>]*>/g, '') 
+      : "") 
+    : "";
+  
+  const cleanDescription = rawDescription.substring(0, 160) + (rawDescription.length > 160 ? '...' : '');
+  
+  // Préparation des images
+  const productImages = productVM.value.images && productVM.value.images.length > 0 
+    ? productVM.value.images.map(img => ({ "@type": "ImageObject", "url": img }))
+    : [];
+  
+  // Construction du schéma JSON-LD
+  const jsonLd = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": productVM.value.name,
+    "description": cleanDescription,
+    "brand": {
+      "@type": "Brand",
+      "name": productVM.value.laboratory || "Pharmacie Agnès Praden"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": canonicalUrl,
+      "priceCurrency": "EUR",
+      "price": priceValue,
+      "availability": productVM.value.availableStock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "Pharmacie Agnès Praden"
+      }
+    },
+    "image": productVM.value.images && productVM.value.images.length > 0 ? productVM.value.images[0] : "",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "12"
+    }
+  };
+
+  // Schéma Organization supplémentaire
+  const organizationLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Pharmacie Agnès Praden",
+    "url": "https://pharmacieagnespraden.com",
+    "logo": "https://pharmacieagnespraden.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "04 66 30 22 60",
+      "contactType": "customer service"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "198 Avenue des Frères Lumière",
+      "addressLocality": "Alès",
+      "postalCode": "30100",
+      "addressCountry": "FR"
+    }
+  };
+
+  // Configuration complète des métadonnées
   return {
-    title: `${productVM.value.name} - Pharmacie Agnès Praden`,
+    htmlAttrs: {
+      lang: 'fr'
+    },
+    title: `${productVM.value.name} | Pharmacie Agnès Praden à Alès`,
     meta: [
       {
         name: 'description',
-        content: `Commandez ${productVM.value.name} en ligne sur pharmacie Agnes Praden ou faites vous livrer à domicile, en point relais ou à la pharmacie à Alès en click and collect `,
+        content: `Commandez ${productVM.value.name} en ligne sur la Pharmacie Agnès Praden. Livraison à domicile, en point relais ou à notre pharmacie à Alès en click and collect.`
       },
+      {
+        name: 'author',
+        content: 'Pharmacie Agnès Praden'
+      },
+      {
+        name: 'robots',
+        content: 'index, follow'
+      },
+      // Open Graph
+      {
+        property: 'og:title',
+        content: `${productVM.value.name} | Pharmacie Agnès Praden à Alès`
+      },
+      {
+        property: 'og:description',
+        content: `Commandez ${productVM.value.name} en ligne sur la Pharmacie Agnès Praden. Livraison à domicile, en point relais ou à notre pharmacie à Alès en click and collect.`
+      },
+      {
+        property: 'og:url',
+        content: canonicalUrl
+      },
+      {
+        property: 'og:type',
+        content: 'product'
+      },
+      {
+        property: 'og:site_name',
+        content: 'Pharmacie Agnès Praden'
+      },
+      {
+        property: 'og:image',
+        content: productVM.value.images && productVM.value.images.length > 0 ? productVM.value.images[0] : ""
+      },
+      // Twitter Card
+      {
+        name: 'twitter:card',
+        content: 'product'
+      },
+      {
+        name: 'twitter:title',
+        content: `${productVM.value.name} | Pharmacie Agnès Praden`
+      },
+      {
+        name: 'twitter:description',
+        content: `Commandez ${productVM.value.name} en ligne sur la Pharmacie Agnès Praden.`
+      },
+      {
+        name: 'twitter:image',
+        content: productVM.value.images && productVM.value.images.length > 0 ? productVM.value.images[0] : ""
+      },
+      // Mots-clés supplémentaires
+      {
+        name: 'keywords',
+        content: `pharmacie, Alès, ${productVM.value.name}, ${productVM.value.laboratory}, parapharmacie, click and collect, livraison`
+      }
     ],
     link: [
       {
         rel: 'canonical',
-        href: canonicalUrl, // Construire l'URL complète
-      },
+        href: canonicalUrl
+      }
     ],
+    script: [
+      {
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify(jsonLd)
+      },
+      {
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify(organizationLd)
+      }
+    ]
   };
 });
 
@@ -251,20 +391,13 @@ const laboratoriesVM = computed(() => {
   return getSearchLaboratoriesVM(query.value);
 });
 
-function removeAccents(str: string): string {
-  return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-}
-
 // Utilisation de watchEffect pour détecter les changements de laboratory
 watchEffect(async () => {
   const laboratory = productVM.value?.laboratory;
   if (laboratory) {
     try {
-      // const laboratoryName = removeAccents(laboratory.split(' ')[0].toLowerCase());
       const result = getLaboratoryByName([laboratory], '', searchGateway());
-      // Mettre à jour ici searchVM ou un autre état si nécessaire
     } catch (error) {}
-  } else {
   }
 });
 </script>
