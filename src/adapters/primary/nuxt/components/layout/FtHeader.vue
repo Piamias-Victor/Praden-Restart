@@ -27,55 +27,62 @@
   ft-search(v-if="searchOpened" @close="closeSearch")
   ft-cart-panel(v-if="cartOpened && user.uuid" @close="closeCart")
   ft-profil(v-if="cartOpened && !user.uuid" @close="closeProfil")
-  </template>
+</template>
   
-  <script lang="ts" setup>
-  import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
-  import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
-  import { useProductGateway } from '../../../../../../gateways/productGateway';
-  import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+<script lang="ts" setup>
+import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
+import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
+import { useProductGateway } from '../../../../../../gateways/productGateway';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
   
-  const profilOpened = ref(false);
-  const searchOpened = ref(false);
-  const cartOpened = ref(false);
+const profilOpened = ref(false);
+const searchOpened = ref(false);
+const cartOpened = ref(false);
   
-  const categoriesVM = computed(() => {
-    return getRootCategoriesVM();
-  });
+const categoriesVM = computed(() => {
+  return getRootCategoriesVM();
+});
   
-  const cartQuantity = ref<{ totalQuantity: number } | null>(null);
+const cartQuantity = ref<{ totalQuantity: number } | null>(null);
+const router = useRouter();
   
-  const openProfil = () => {
-    profilOpened.value = true;
-  };
+const openProfil = () => {
+  profilOpened.value = true;
+};
   
-  const closeProfil = () => {
-    profilOpened.value = false;
-    cartOpened.value = false;
-  };
+const closeProfil = () => {
+  profilOpened.value = false;
+  cartOpened.value = false;
+};
   
-  const startSearch = () => {
-    searchOpened.value = true;
-  };
+// Modification ici: rediriger vers la page de recherche au lieu d'ouvrir la modal
+const startSearch = () => {
+  // Redirection vers la nouvelle page de recherche
+  router.push('/search');
   
-  const closeSearch = () => {
-    searchOpened.value = false;
-  };
+  // Pour conserver la compatibilité, on peut toujours permettre l'ouverture
+  // de la fenêtre de recherche pendant la transition
+  // searchOpened.value = true;
+};
   
-  const openCart = () => {
-    cartOpened.value = true;
-  };
+const closeSearch = () => {
+  searchOpened.value = false;
+};
   
-  const closeCart = () => {
-    cartOpened.value = false;
-  };
+const openCart = () => {
+  cartOpened.value = true;
+};
   
-  const user = computed(() => {
-    return getUserVM();
-  });
+const closeCart = () => {
+  cartOpened.value = false;
+};
   
-  // Mise à jour automatique du panier
-  watchEffect(async () => {
-    cartQuantity.value = await getCartQuantityVM(useProductGateway());
-  });
-  </script>
+const user = computed(() => {
+  return getUserVM();
+});
+  
+// Mise à jour automatique du panier
+watchEffect(async () => {
+  cartQuantity.value = await getCartQuantityVM(useProductGateway());
+});
+</script>
