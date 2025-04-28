@@ -22,7 +22,7 @@ export class RealOrderGateway implements OrderGateway {
     this.dateProvider = dateProvider;
   }
 
-  async create(orderDTO: CreateOrderDTO, deliveryPrice: string, selectedTimestamp: string): Promise<Order> {
+  async create(orderDTO: CreateOrderDTO, deliveryPrice: string, selectedTimestamp: string, promotionCode?: string): Promise<Order> {
     const now = this.dateProvider.now();
     const uuid = this.uuidGenerator.generate();
     const lines: Array<OrderLine> = orderDTO.lines.map((line: CreateOrderLineDTO) => {
@@ -46,148 +46,52 @@ export class RealOrderGateway implements OrderGateway {
     const { delivery, ...rest } = orderDTO;
     const productGateway = useProductGateway();
     const deliveryMethodsStore = useDeliveryStore();
-    let body;
 
-    console.log('selectedTimestamp: selectedTimestamp,', selectedTimestamp)
+    // Création des lignes au format attendu
+    const formattedLines = await Promise.all(
+      orderDTO.lines.map(async (l) => {
+        const product = await productGateway.getByUuid(l.productUuid);
+        let priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
+        let promotionUuid = undefined;
 
-    if (deliveryMethodsStore.selected!.point) {
-      console.log('1', selectedTimestamp)
-      body = {
-        ...rest,
-        customerMessage: '',
-        billingAddress: orderDTO.deliveryAddress,
-        pickupId: deliveryMethodsStore.selected!.point,
-        deliveryMethodUuid: orderDTO.delivery.method.uuid,
-        lines: await Promise.all(
-          orderDTO.lines.map(async (l) => {
-            const product = await productGateway.getByUuid(l.productUuid);
-            let priceWithoutTax: number;
-            let promotionUuid: string | undefined = undefined;
-            priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
-
-            if (product.promotions && product.promotions.length > 0) {
-              const promotion = product.promotions[0];
-
-              if (promotion) {
-                let discountedPrice;
-
-                if (promotion.type === ReductionType.Fixed) {
-                  discountedPrice = product.price - promotion.amount;
-                } else {
-                  discountedPrice = product.price - (product.price * promotion.amount) / 100;
-                }
-
-                priceWithoutTax = this.calculatePriceHT(discountedPrice, product.percentTaxRate);
-                promotionUuid = promotion.uuid;
-              }
+        if (product.promotions && product.promotions.length > 0) {
+          const promotion = product.promotions[0];
+          if (promotion) {
+            let discountedPrice;
+            if (promotion.type === ReductionType.Fixed) {
+              discountedPrice = product.price - promotion.amount;
             } else {
-              priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
+              discountedPrice = product.price - (product.price * promotion.amount) / 100;
             }
+            priceWithoutTax = this.calculatePriceHT(discountedPrice, product.percentTaxRate);
+            promotionUuid = promotion.uuid;
+          }
+        }
 
-            console.log('priceWithoutTax', priceWithoutTax)
+        return {
+          productUuid: l.productUuid,
+          quantity: l.quantity,
+          priceWithoutTax: priceWithoutTax,
+          percentTaxRate: product.percentTaxRate,
+          weight: product.weight || 100,
+          ...(promotionUuid ? { promotionUuid } : {})
+        };
+      })
+    );
 
-            return {
-              productUuid: l.productUuid,
-              quantity: l.quantity,
-              priceWithoutTax: priceWithoutTax,
-              percentTaxRate: product.percentTaxRate,
-              ...(promotionUuid ? { promotionUuid } : {}),
-            };
-          }),
-        ),
-      };
-    } else if (selectedTimestamp !== null) {
-      console.log('2', selectedTimestamp)
-      body = {
-        ...rest,
-        pickingDate: selectedTimestamp,
-        customerMessage: '',
-        billingAddress: orderDTO.deliveryAddress,
-        deliveryMethodUuid: orderDTO.delivery.method.uuid,
-        lines: await Promise.all(
-          orderDTO.lines.map(async (l) => {
-            const product = await productGateway.getByUuid(l.productUuid);
-            let priceWithoutTax: number;
-            let promotionUuid: string | undefined = undefined;
-            priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
+    // Construction du body de la requête avec tous les champs requis
+    const body = {
+      contact: orderDTO.contact,
+      deliveryAddress: orderDTO.deliveryAddress,
+      billingAddress: orderDTO.deliveryAddress,
+      deliveryMethodUuid: orderDTO.delivery.method.uuid,
+      customerMessage: '',
+      lines: formattedLines, // Utilisation des lignes formatées
+      ...(deliveryMethodsStore.selected?.point ? { pickupId: deliveryMethodsStore.selected.point } : {}),
+      ...(selectedTimestamp ? { pickingDate: parseInt(selectedTimestamp) } : {}),
+      ...(promotionCode ? { promotionCode } : {})
+    };
 
-            if (product.promotions && product.promotions.length > 0) {
-              const promotion = product.promotions[0];
-
-              if (promotion) {
-                let discountedPrice;
-
-                if (promotion.type === ReductionType.Fixed) {
-                  discountedPrice = product.price - promotion.amount;
-                } else {
-                  discountedPrice = product.price - (product.price * promotion.amount) / 100;
-                }
-
-                priceWithoutTax = this.calculatePriceHT(discountedPrice, product.percentTaxRate);
-                promotionUuid = promotion.uuid;
-              }
-            } else {
-              priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
-            }
-
-            console.log('priceWithoutTax', priceWithoutTax)
-
-
-            return {
-              productUuid: l.productUuid,
-              quantity: l.quantity,
-              priceWithoutTax: priceWithoutTax,
-              percentTaxRate: product.percentTaxRate,
-              ...(promotionUuid ? { promotionUuid } : {}),
-            };
-          }),
-        ),
-      };
-    } else {
-      console.log('3', selectedTimestamp);
-      body = {
-        ...rest,
-        customerMessage: '',
-        billingAddress: orderDTO.deliveryAddress,
-        deliveryMethodUuid: orderDTO.delivery.method.uuid,
-        lines: await Promise.all(
-          orderDTO.lines.map(async (l) => {
-            const product = await productGateway.getByUuid(l.productUuid);
-            let priceWithoutTax: number;
-            let promotionUuid: string | undefined = undefined;
-            priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
-
-            if (product.promotions && product.promotions.length > 0) {
-              const promotion = product.promotions[0];
-              if (promotion) {
-                let discountedPrice;
-
-                if (promotion.type === ReductionType.Fixed) {
-                  discountedPrice = product.price - promotion.amount;
-                } else {
-                  discountedPrice = product.price - (product.price * promotion.amount) / 100;
-                }
-
-                priceWithoutTax = this.calculatePriceHT(discountedPrice, product.percentTaxRate);
-                promotionUuid = promotion.uuid;
-              }
-            } else {
-              priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
-            }
-
-            console.log('priceWithoutTax', priceWithoutTax)
-
-            return {
-              productUuid: l.productUuid,
-              quantity: l.quantity,
-              priceWithoutTax: priceWithoutTax,
-              percentTaxRate: product.percentTaxRate,
-              ...(promotionUuid ? { promotionUuid } : {}),
-            };
-          }),
-        ),
-      };
-    }
     const { $keycloak }: any = useNuxtApp();
 
     try {
@@ -195,6 +99,7 @@ export class RealOrderGateway implements OrderGateway {
       if ($keycloak) {
         const refreshed = await $keycloak.updateToken(30);
         if (refreshed) {
+          console.log('Token refreshed');
         }
       }
 
@@ -204,7 +109,7 @@ export class RealOrderGateway implements OrderGateway {
         throw new Error('Token Keycloak non disponible pour authentification.');
       }
 
-      // console.log('body:', JSON.stringify(body));
+      console.log('body:', JSON.stringify(body));
 
       const res = await axios.post('https://ecommerce-backend-production.admin-a5f.workers.dev/orders', body, {
         headers: {
@@ -218,9 +123,9 @@ export class RealOrderGateway implements OrderGateway {
       const sessionUrl = await this.paymentGateway.createCheckoutSession(
         {
           orderUuid: uuid,
-          lines: lines, // Utilise les lignes de commande existantes
+          lines: lines,
           delivery: orderDTO.delivery,
-          contact: orderDTO.contact, // Ajout de l'email dynamique
+          contact: orderDTO.contact,
         },
         deliveryPrice,
         res.data.item.uuid,
@@ -250,7 +155,7 @@ export class RealOrderGateway implements OrderGateway {
 
   private calculatePriceHT(priceWithTax: number, taxRate: number): number {
     const priceHT = priceWithTax / (1 + taxRate / 100);
-    return (priceHT * 100) / 100;
+    return Math.round(priceHT * 100) / 100;
   }
 
   async list(): Promise<Array<Order>> {

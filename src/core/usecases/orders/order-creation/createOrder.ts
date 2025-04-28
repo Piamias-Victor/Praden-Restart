@@ -51,12 +51,12 @@ export const createOrder = async (
   emailGateway: EmailGateway,
   deliveryPrice: string,
   selectedTimestamp: string,
+  promotionCode?: string
 ) => {
   try {
     // Récupérer les produits dans le panier
     const { items } = getProductsInCart();
 
-    // Vider le panier
     // Obtenir les informations utilisateur
     const user = computed(() => {
       return getUserVM();
@@ -114,7 +114,7 @@ export const createOrder = async (
       },
     };
     // Créer la commande via OrderGateway
-    const order = await orderGateway.create(orderDTO, deliveryPrice, selectedTimestamp);
+    const order = await orderGateway.create(orderDTO, deliveryPrice, selectedTimestamp, promotionCode);
     // Ajouter la commande au store
     const orderStore = useOrderStore();
     orderStore.add(order);
@@ -140,6 +140,7 @@ export const createOrder = async (
   } catch (error) {
     console.error('Error creating order:', error);
     // Gérer l'erreur (afficher un message à l'utilisateur, etc.)
+    throw error;
   }
 };
 

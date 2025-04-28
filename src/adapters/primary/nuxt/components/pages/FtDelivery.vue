@@ -45,16 +45,14 @@
     // Ajout du bloc code promo
     div.w-full.my-3.border-t.border-b.py-3
       div.flex.flex-col.gap-2(class='sm:flex-row sm:items-center sm:gap-4')
-        div.flex.items-center.justify-between.w-full
-          p.font-semibold.text-sm(class='lg:text-base') Vous avez un code promo ?
-        div.flex.w-full(class='sm:max-w-[70%]')
+        div.flex.w-full(class='')
           input.w-full.border.rounded-l-lg.px-3.py-2.text-sm.outline-none(
             type="text"
             v-model="promoCode"
             placeholder="Entrez votre code"
             class="focus:border-main"
           )
-          ft-button.bg-main.text-white.rounded-r-lg.py-2.px-3.text-xs.font-medium(
+          button.bg-main.text-white.rounded-r-lg.py-2.px-3.text-xs.font-medium(
             @click="applyPromoCode"
             :disabled="isApplyingCode"
             class='min-w-[80px] sm:min-w-[100px]'
@@ -249,7 +247,7 @@
       
       // Créer le payload au format exact attendu par l'API
       const payload = {
-        code: promoCode.value,
+        code: promoCode.value, // Utilise "code" comme défini dans applyPromotionCodeSchema
         lines: lines,
         deliveryMethodUuid: selectedDeliveryMethod.value
       };
@@ -257,7 +255,7 @@
       console.log("Payload envoyé à l'API:", JSON.stringify(payload));
       
       // Appel à l'API pour valider le code promo
-      const response = await fetch('https://ecommerce-backend-development.admin-a5f.workers.dev/promotion-codes/apply', {
+      const response = await fetch('https://ecommerce-backend-production.admin-a5f.workers.dev/promotion-codes/apply', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
