@@ -31,6 +31,7 @@ import { removeFromCart } from '@core/usecases/remove-from-cart/removeFromCart';
 import { sendNotifCart } from '@core/usecases/add-notif/cartNotif';
 import { removeFirstNotification } from '@core/usecases/remove-notification/removeNotification';
 import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
+import { trackAddToCart } from '@utils/dataLayer'; // Import fonction dataLayer
 
 const props = defineProps({
   productUuid: { type: String, required: true },
@@ -39,8 +40,8 @@ const props = defineProps({
 });
 
 const cartQuantity = ref<CartQuantityVM | null>(null);
-
 const limit = ref(false);
+const productGateway = useProductGateway();
 
 const removeItemFromCart = (uuid: string) => {
   if (
@@ -55,7 +56,7 @@ const removeItemFromCart = (uuid: string) => {
   removeFromCart(uuid);
 };
 
-const addItemToCart = (uuid: string) => {
+const addItemToCart = async (uuid: string) => {
   const currentQuantity = cartQuantity.value?.items?.[uuid] || 0;
 
   if (props.isMedicine && currentQuantity >= 5) {
@@ -69,14 +70,20 @@ const addItemToCart = (uuid: string) => {
   }
 
   limit.value = false;
-  addToCart(uuid, useProductGateway());
+  addToCart(uuid, productGateway);
   sendUserNotif();
+  
+  // Tracking dataLayer add_to_cart
+  try {
+    const product = await productGateway.getByUuid(uuid);
+    trackAddToCart(product, 1); // Envoyer événement add_to_cart
+  } catch (err) {
+    console.error('Erreur lors du tracking add_to_cart:', err);
+  }
 };
 
 const isAddButtonHidden = (uuid: string) => {
   const currentQuantity = cartQuantity.value?.items?.[uuid] || 0;
-
-  console.log('props.availableStock', props.availableStock)
 
   if (props.isMedicine && currentQuantity >= 6) return true;
   if (props.availableStock !== undefined && props.availableStock <= 0) return true;

@@ -30,7 +30,10 @@ export default defineNuxtConfig({
     },
   },
 
-  plugins: ['~/src/plugins/keycloak.client.ts'],
+  plugins: [
+    '~/src/plugins/keycloak.client.ts',
+    '~/src/plugins/dataLayer.client.ts', // Ajout du plugin dataLayer
+  ],
 
   alias: {
     '@adapters/': fileURLToPath(new URL('./src/adapters/', import.meta.url)),
@@ -139,5 +142,13 @@ export default defineNuxtConfig({
         return [{ url: '/' }];
       }
     },
+  },
+
+  // Configuration pour nuxt-gtag (si vous souhaitez utiliser cette méthode plutôt que le dataLayer manuel)
+  gtag: {
+    id: 'GTM-K9S5LG3', // Remplacez par votre ID GTM
+    config: {
+      send_page_view: true
+    }
   }
 });
