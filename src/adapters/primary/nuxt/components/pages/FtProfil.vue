@@ -121,30 +121,37 @@ const login = () => {
   // Récupérer le panier actuel
   const cartVM = getCartVM();
 
-  // Créer un objet avec uniquement les UUID des produits
-  const cart = {
-    items: Object.keys(cartVM.items),
-  };
-
-  // Convertir en JSON et sauvegarder dans le localStorage
+  // Sauvegarder dans le localStorage
   localStorage.setItem('cart', JSON.stringify(cartVM.items));
+  
+  // Sauvegarder l'URL actuelle pour redirection post-authentification
+  localStorage.setItem('redirectAfterLogin', window.location.href);
 
-  // Redirection pour la connexion
-  keycloak?.login().catch((error) => {
+  // Redirection pour la connexion avec l'URL actuelle comme redirectUri
+  keycloak?.login({
+    redirectUri: window.location.href
+  }).catch((error) => {
     console.error('Erreur lors de la connexion :', error);
   });
 };
 
 // Fonction inscription
 const register = () => {
-  keycloak?.register().catch((error) => {
+  // Sauvegarder l'URL actuelle pour redirection post-inscription
+  localStorage.setItem('redirectAfterLogin', window.location.href);
+  
+  keycloak?.register({
+    redirectUri: window.location.href
+  }).catch((error) => {
     console.error("Erreur lors de l'inscription :", error);
   });
 };
 
 // Fonction déconnexion
 const logout = () => {
-  keycloak?.logout({ redirectUri: window.location.origin }).catch((error) => {
+  keycloak?.logout({ 
+    redirectUri: window.location.origin 
+  }).catch((error) => {
     console.error('Erreur lors de la déconnexion :', error);
   });
 };

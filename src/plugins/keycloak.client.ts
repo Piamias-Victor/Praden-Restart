@@ -10,6 +10,12 @@ import { myOrderGateway } from '../../gateways/myOrderGateway';
 
 export default defineNuxtPlugin((nuxtApp) => {
   const { KEYCLOAK_URL, KEYCLOAK_REALM, KEYCLOAK_CLIENT_ID } = useRuntimeConfig().public;
+  
+  console.log('[Keycloak Plugin] Initialisation avec:', { 
+    url: KEYCLOAK_URL, 
+    realm: KEYCLOAK_REALM, 
+    clientId: KEYCLOAK_CLIENT_ID 
+  });
 
   const keycloak = new Keycloak({
     url: KEYCLOAK_URL,
@@ -19,54 +25,101 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   const cartStore = useCartStore();
 
+  // Ajouter un écouteur d'événements pour les redirections
+  keycloak.onAuthSuccess = () => {
+    console.log('[Keycloak] Authentification réussie');
+  };
+
+  keycloak.onAuthError = (error) => {
+    console.error('[Keycloak] Erreur d\'authentification:', error);
+  };
+
+  keycloak.onTokenExpired = () => {
+    console.log('[Keycloak] Token expiré, tentative de rafraîchissement...');
+  };
+
   const keycloakReady = (async () => {
     try {
+      // Récupérer l'URL sauvegardée pour la redirection
+      const redirectUrl = localStorage.getItem('redirectAfterLogin');
+      console.log('[Keycloak] URL de redirection sauvegardée:', redirectUrl);
+      console.log('[Keycloak] URL actuelle:', window.location.href);
+      
+      console.log('[Keycloak] Tentative d\'initialisation...');
       const authenticated = await keycloak.init({
-        checkLoginIframe: true,
+        checkLoginIframe: false, // Désactiver ceci temporairement peut aider
+        enableLogging: true, // Activer les logs internes de Keycloak
+        onLoad: 'check-sso', // Ne tente pas de connexion automatique
+        silentCheckSsoRedirectUri: window.location.origin + '/silent-check-sso.html',
+        pkceMethod: 'S256', // Utiliser PKCE pour plus de sécurité
       });
+      console.log('[Keycloak] Initialisation terminée. Authentifié:', authenticated);
 
       if (authenticated) {
+        console.log('[Keycloak] Token:', keycloak.token ? 'Présent' : 'Absent');
+        console.log('[Keycloak] Token Parse:', keycloak.tokenParsed);
+        
+        // Nettoyer l'URL sauvegardée après authentification réussie
+        localStorage.removeItem('redirectAfterLogin');
+        
         const accessToken = keycloak.token;
 
         // Récupération du profil utilisateur
         try {
+          console.log('[Keycloak] Récupération du profil utilisateur...');
           const userProfile = await axios.get(`https://ecommerce-backend-production.admin-a5f.workers.dev/profile`, {
             headers: {
               Authorization: `Bearer ${accessToken}`,
             },
           });
+          console.log('[Keycloak] Profil utilisateur récupéré:', userProfile.data);
           recoverUser(userProfile.data);
         } catch (error) {
-          console.error('Erreur lors de la récupération du profil utilisateur :', error);
+          console.error('[Keycloak] Erreur lors de la récupération du profil utilisateur:', error);
         }
 
-        listMyOrder(myOrderGateway(), accessToken);
+        try {
+          console.log('[Keycloak] Récupération des commandes...');
+          await listMyOrder(myOrderGateway(), accessToken);
+          console.log('[Keycloak] Commandes récupérées avec succès');
+        } catch (error) {
+          console.error('[Keycloak] Erreur lors de la récupération des commandes:', error);
+        }
 
         // **Restaurer le panier**
         const savedCart = localStorage.getItem('cart');
         if (savedCart) {
-          const cartItems = JSON.parse(savedCart);
-          const productStore = useProductStore();
-          const productGateway = useProductGateway();
+          console.log('[Keycloak] Restauration du panier sauvegardé...');
+          try {
+            const cartItems = JSON.parse(savedCart);
+            const productStore = useProductStore();
+            const productGateway = useProductGateway();
 
-          // Itérer sur chaque produit dans savedCart
-          for (const [productUuid, productData] of Object.entries(cartItems)) {
-            try {
-              // Ajouter le produit au cartStore autant de fois que la quantité
-              for (let i = 0; i < productData.quantity; i++) {
-                cartStore.add(productUuid);
+            console.log('[Keycloak] Produits dans le panier:', Object.keys(cartItems).length);
+            
+            // Itérer sur chaque produit dans savedCart
+            for (const [productUuid, productData] of Object.entries(cartItems)) {
+              try {
+                // Ajouter le produit au cartStore autant de fois que la quantité
+                for (let i = 0; i < productData.quantity; i++) {
+                  cartStore.add(productUuid);
+                }
+
+                // Récupérer les détails du produit depuis le gateway
+                const product = await productGateway.getByUuid(productUuid);
+                productStore.add(product);
+                console.log(`[Keycloak] Produit ${productUuid} ajouté au panier`);
+              } catch (error) {
+                console.error(`[Keycloak] Erreur lors de la récupération ou de l'ajout du produit UUID: ${productUuid}`, error);
               }
-
-              // Récupérer les détails du produit depuis le gateway
-              const product = await productGateway.getByUuid(productUuid);
-              productStore.add(product);
-            } catch (error) {
-              console.error(`Erreur lors de la récupération ou de l'ajout du produit UUID: ${productUuid}`, error);
             }
-          }
 
-          // Supprimer le panier sauvegardé de localStorage après restauration
-          localStorage.removeItem('cart');
+            // Supprimer le panier sauvegardé de localStorage après restauration
+            localStorage.removeItem('cart');
+            console.log('[Keycloak] Panier restauré et sauvegarde supprimée');
+          } catch (error) {
+            console.error('[Keycloak] Erreur lors de la restauration du panier:', error);
+          }
         }
 
         // Rafraîchissement du token
@@ -74,24 +127,56 @@ export default defineNuxtPlugin((nuxtApp) => {
           try {
             const refreshed = await keycloak.updateToken(60);
             if (refreshed) {
+              console.log('[Keycloak] Token rafraîchi avec succès');
             }
           } catch (err) {
-            console.error('Échec du rafraîchissement du token Keycloak', err);
+            console.error('[Keycloak] Échec du rafraîchissement du token', err);
             clearInterval(intervalId);
           }
         }, 60000);
       } else {
-        console.warn('Utilisateur non authentifié');
-        // Rediriger ou afficher un message ici
+        console.warn('[Keycloak] Utilisateur non authentifié');
       }
     } catch (err) {
-      console.error('Échec de initialisation de Keycloak', err);
+      console.error('[Keycloak] Échec de l\'initialisation', err);
+      console.log('[Keycloak] URL actuelle lors de l\'erreur:', window.location.href);
+      
       if (err.error === 'login_required') {
-        await keycloak.login();
+        console.log('[Keycloak] Login requis, tentative de connexion...');
+        // Récupérer l'URL sauvegardée pour la redirection
+        const redirectUrl = localStorage.getItem('redirectAfterLogin') || window.location.href;
+        console.log('[Keycloak] Redirection après login:', redirectUrl);
+        
+        try {
+          await keycloak.login({
+            redirectUri: redirectUrl
+          });
+        } catch (loginError) {
+          console.error('[Keycloak] Erreur lors de la tentative de connexion:', loginError);
+        }
       }
     }
   })();
 
   nuxtApp.provide('keycloak', keycloak);
   nuxtApp.provide('keycloakReady', keycloakReady);
+  
+  // Ajouter une méthode utilitaire pour le débogage
+  nuxtApp.provide('debugKeycloak', () => {
+    console.log('[Keycloak Debug]', {
+      authenticated: keycloak.authenticated,
+      token: keycloak.token ? 'Présent' : 'Absent',
+      tokenExpired: keycloak.isTokenExpired(),
+      tokenParsed: keycloak.tokenParsed,
+      subject: keycloak.subject,
+      idToken: keycloak.idToken ? 'Présent' : 'Absent',
+      realmAccess: keycloak.realmAccess,
+      resourceAccess: keycloak.resourceAccess,
+      timeSkew: keycloak.timeSkew,
+      responseMode: keycloak.responseMode,
+      flow: keycloak.flow,
+      adapter: keycloak.adapter
+    });
+    return true;
+  });
 });
