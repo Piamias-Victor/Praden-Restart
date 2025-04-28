@@ -26,9 +26,7 @@ function parsePriceToCents(priceStr: string): number {
     throw new Error(`Le prix "${priceStr}" n'est pas un nombre valide.`);
   }
 
-  const result = Math.round(priceFloat * 100);
-  console.log(`[PAYMENT] parsePriceToCents: "${priceStr}" -> ${result} centimes`);
-  return result;
+  return Math.round(priceFloat * 100);
 }
 
 export class CreditAgricolePaymentGateway implements PaymentGateway {
@@ -68,62 +66,33 @@ export class CreditAgricolePaymentGateway implements PaymentGateway {
     promotionCode?: string,
     discountAmount?: number
   ): Promise<string> {
-    console.log(`[PAYMENT] Début createCheckoutSession avec code promo: ${promotionCode || 'aucun'}`);
-    console.log(`[PAYMENT] Réduction code promo: ${discountAmount || 0} centimes`);
-    console.log(`[PAYMENT] Frais de livraison: ${deliveryPrice}`);
-    console.log(`[PAYMENT] Nombre d'articles: ${createCheckoutDTO.lines.length}`);
 
     const currency = '978'; // EUR
 
-    // Log des lignes individuelles
-    console.log('[PAYMENT] Détail des articles:');
-    createCheckoutDTO.lines.forEach((line, index) => {
-      console.log(`[PAYMENT] Article ${index + 1}: ${line.name || 'Sans nom'}`);
-      console.log(`[PAYMENT]   - Prix unitaire: ${line.unitAmount} centimes`);
-      console.log(`[PAYMENT]   - Quantité: ${line.quantity}`);
-      if (line.promotion) {
-        console.log(`[PAYMENT]   - Promotion: type=${line.promotion.type}, montant=${line.promotion.amount}`);
-      }
-    });
-
-    // Calcul du montant des produits avec promotion
-    let productsAmount = createCheckoutDTO.lines.reduce((total, line) => {
-      let price = line.unitAmount;
-      if (line.promotion) {
-        const originalPrice = price;
-        if (line.promotion.type === ReductionType.Fixed) {
-          price = line.unitAmount - line.promotion.amount;
-          console.log(`[PAYMENT] Prix après réduction fixe: ${originalPrice} - ${line.promotion.amount} = ${price} centimes`);
-        } else {
-          price = line.unitAmount - (line.unitAmount * line.promotion.amount / 100);
-          console.log(`[PAYMENT] Prix après réduction pourcentage: ${originalPrice} - ${line.promotion.amount}% = ${price} centimes`);
-        }
-      }
-      const lineTotal = Math.round(price) * line.quantity;
-      console.log(`[PAYMENT] Sous-total ligne: ${lineTotal} centimes`);
-      return total + lineTotal;
+    // Calcul du montant des produits
+    // IMPORTANT: On considère que les prix unitaires incluent déjà les réductions produit
+    // puisque les promotions ont été retirées des lignes dans RealOrderGateway
+    const productsAmount = createCheckoutDTO.lines.reduce((total, line) => {
+      // Utiliser directement le prix unitaire sans appliquer les promotions
+      return total + Math.round(line.unitAmount) * line.quantity;
     }, 0);
 
-    console.log(`[PAYMENT] Montant total des produits: ${productsAmount} centimes`);
+    console.log(`[PAYMENT] Montant des produits (sans double application de promotion): ${productsAmount} centimes`);
 
     // Ajout des frais de livraison
     const deliveryAmount = parsePriceToCents(deliveryPrice);
-    console.log(`[PAYMENT] Frais de livraison en centimes: ${deliveryAmount}`);
-    
     let totalAmount = productsAmount + deliveryAmount;
-    console.log(`[PAYMENT] Montant total avant réduction code promo: ${totalAmount} centimes`);
 
-    // Application de la réduction du code promo
+    console.log(`[PAYMENT] Montant avec livraison: ${totalAmount} centimes`);
+    
+    // Application de la réduction du code promo si disponible
     if (discountAmount && discountAmount > 0) {
       console.log(`[PAYMENT] Application de la réduction code promo: -${discountAmount} centimes`);
       totalAmount = Math.max(0, totalAmount - discountAmount);
-      console.log(`[PAYMENT] Montant total après réduction code promo: ${totalAmount} centimes`);
-    } else if (promotionCode) {
-      console.log(`[PAYMENT] ATTENTION: Code promo ${promotionCode} fourni mais sans montant de réduction`);
+      console.log(`[PAYMENT] Montant final après réduction code promo: ${totalAmount} centimes`);
     }
 
     const dateTime = new Date().toISOString();
-    console.log(`[PAYMENT] Date et heure de la transaction: ${dateTime}`);
 
     const data: Record<string, string> = {
       PBX_SITE: this.payboxConfig.payboxSite,
@@ -149,8 +118,6 @@ export class CreditAgricolePaymentGateway implements PaymentGateway {
       PBX_HMAC: '',
     };
 
-    console.log(`[PAYMENT] Montant envoyé au Crédit Agricole: ${data.PBX_TOTAL} centimes`);
-
     // Génération du HMAC
     const sortedParams = Object.entries(data)
       .filter(([key]) => key !== 'PBX_HMAC')
@@ -165,9 +132,6 @@ export class CreditAgricolePaymentGateway implements PaymentGateway {
     data.PBX_HMAC = hmac;
 
     const queryString = new URLSearchParams(data).toString();
-    const finalUrl = `${this.gatewayUrl}?${queryString}`;
-    
-    console.log(`[PAYMENT] URL de paiement créée: ${this.gatewayUrl}?...`);
-    return finalUrl;
+    return `${this.gatewayUrl}?${queryString}`;
   }
 }
