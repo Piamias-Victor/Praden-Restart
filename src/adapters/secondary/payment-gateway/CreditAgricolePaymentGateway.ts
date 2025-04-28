@@ -26,7 +26,9 @@ function parsePriceToCents(priceStr: string): number {
     throw new Error(`Le prix "${priceStr}" n'est pas un nombre valide.`);
   }
 
-  return Math.round(priceFloat * 100);
+  const result = Math.round(priceFloat * 100);
+  console.log(`[PAYMENT] parsePriceToCents: "${priceStr}" -> ${result} centimes`);
+  return result;
 }
 
 export class CreditAgricolePaymentGateway implements PaymentGateway {
@@ -55,39 +57,83 @@ export class CreditAgricolePaymentGateway implements PaymentGateway {
     this.hmacKey = HMAC as string || '';
 
     if (!this.hmacKey) {
-      throw new Error('❌ ERREUR : La clé HMAC est absente des variables d’environnement.');
+      throw new Error('Error: HMAC key is missing from environment variables.');
     }
   }
 
   async createCheckoutSession(
     createCheckoutDTO: CreateCheckoutDTO,
     deliveryPrice: string,
-    orderUuid: string
+    orderUuid: string,
+    promotionCode?: string,
+    discountAmount?: number
   ): Promise<string> {
+    console.log(`[PAYMENT] Début createCheckoutSession avec code promo: ${promotionCode || 'aucun'}`);
+    console.log(`[PAYMENT] Réduction code promo: ${discountAmount || 0} centimes`);
+    console.log(`[PAYMENT] Frais de livraison: ${deliveryPrice}`);
+    console.log(`[PAYMENT] Nombre d'articles: ${createCheckoutDTO.lines.length}`);
 
     const currency = '978'; // EUR
 
-    // ✅ Correction du calcul de `totalAmount` en utilisant `parsePriceToCents`
-    const totalAmount =
-      createCheckoutDTO.lines.reduce((total, line) => {
-        let price = line.unitAmount;
-        // if (line.promotion && line.promotion.type !== ReductionType.Fixed) {
-        //   price -= line.unitAmount * (line.promotion.amount / 100);
-        // }
-        return total + Math.round(price) * line.quantity;
-      }, 0) + parsePriceToCents(deliveryPrice);
+    // Log des lignes individuelles
+    console.log('[PAYMENT] Détail des articles:');
+    createCheckoutDTO.lines.forEach((line, index) => {
+      console.log(`[PAYMENT] Article ${index + 1}: ${line.name || 'Sans nom'}`);
+      console.log(`[PAYMENT]   - Prix unitaire: ${line.unitAmount} centimes`);
+      console.log(`[PAYMENT]   - Quantité: ${line.quantity}`);
+      if (line.promotion) {
+        console.log(`[PAYMENT]   - Promotion: type=${line.promotion.type}, montant=${line.promotion.amount}`);
+      }
+    });
+
+    // Calcul du montant des produits avec promotion
+    let productsAmount = createCheckoutDTO.lines.reduce((total, line) => {
+      let price = line.unitAmount;
+      if (line.promotion) {
+        const originalPrice = price;
+        if (line.promotion.type === ReductionType.Fixed) {
+          price = line.unitAmount - line.promotion.amount;
+          console.log(`[PAYMENT] Prix après réduction fixe: ${originalPrice} - ${line.promotion.amount} = ${price} centimes`);
+        } else {
+          price = line.unitAmount - (line.unitAmount * line.promotion.amount / 100);
+          console.log(`[PAYMENT] Prix après réduction pourcentage: ${originalPrice} - ${line.promotion.amount}% = ${price} centimes`);
+        }
+      }
+      const lineTotal = Math.round(price) * line.quantity;
+      console.log(`[PAYMENT] Sous-total ligne: ${lineTotal} centimes`);
+      return total + lineTotal;
+    }, 0);
+
+    console.log(`[PAYMENT] Montant total des produits: ${productsAmount} centimes`);
+
+    // Ajout des frais de livraison
+    const deliveryAmount = parsePriceToCents(deliveryPrice);
+    console.log(`[PAYMENT] Frais de livraison en centimes: ${deliveryAmount}`);
+    
+    let totalAmount = productsAmount + deliveryAmount;
+    console.log(`[PAYMENT] Montant total avant réduction code promo: ${totalAmount} centimes`);
+
+    // Application de la réduction du code promo
+    if (discountAmount && discountAmount > 0) {
+      console.log(`[PAYMENT] Application de la réduction code promo: -${discountAmount} centimes`);
+      totalAmount = Math.max(0, totalAmount - discountAmount);
+      console.log(`[PAYMENT] Montant total après réduction code promo: ${totalAmount} centimes`);
+    } else if (promotionCode) {
+      console.log(`[PAYMENT] ATTENTION: Code promo ${promotionCode} fourni mais sans montant de réduction`);
+    }
 
     const dateTime = new Date().toISOString();
+    console.log(`[PAYMENT] Date et heure de la transaction: ${dateTime}`);
 
     const data: Record<string, string> = {
       PBX_SITE: this.payboxConfig.payboxSite,
       PBX_RANG: this.payboxConfig.payboxRang,
       PBX_IDENTIFIANT: this.payboxConfig.payboxIdentifiant,
       PBX_SOURCE: this.payboxConfig.payboxSource,
-      PBX_TOTAL: String(totalAmount), // ✅ Montant correctement calculé
+      PBX_TOTAL: String(totalAmount),
       PBX_DEVISE: currency,
-      PBX_CMD: orderUuid, // ✅ Référence dynamique
-      PBX_PORTEUR: createCheckoutDTO.contact.email, // ✅ Email dynamique
+      PBX_CMD: orderUuid,
+      PBX_PORTEUR: createCheckoutDTO.contact.email,
       PBX_RETOUR: 'montant:M;ref:R;auto:A;idtrans:S;erreur:E;sign:K',
       PBX_HASH: 'SHA512',
       PBX_TIME: dateTime,
@@ -103,13 +149,14 @@ export class CreditAgricolePaymentGateway implements PaymentGateway {
       PBX_HMAC: '',
     };
 
-    // 📌 Génération du HMAC
+    console.log(`[PAYMENT] Montant envoyé au Crédit Agricole: ${data.PBX_TOTAL} centimes`);
+
+    // Génération du HMAC
     const sortedParams = Object.entries(data)
       .filter(([key]) => key !== 'PBX_HMAC')
       .map(([key, value]) => `${key}=${value}`)
       .join('&');
 
-    // 📌 Utilisation de la clé HMAC depuis l'`env`
     const hmacKey = CryptoJS.enc.Hex.parse(this.hmacKey);
     const hmac = CryptoJS.HmacSHA512(sortedParams, hmacKey)
       .toString(CryptoJS.enc.Hex)
@@ -118,6 +165,9 @@ export class CreditAgricolePaymentGateway implements PaymentGateway {
     data.PBX_HMAC = hmac;
 
     const queryString = new URLSearchParams(data).toString();
-    return `${this.gatewayUrl}?${queryString}`;
+    const finalUrl = `${this.gatewayUrl}?${queryString}`;
+    
+    console.log(`[PAYMENT] URL de paiement créée: ${this.gatewayUrl}?...`);
+    return finalUrl;
   }
 }

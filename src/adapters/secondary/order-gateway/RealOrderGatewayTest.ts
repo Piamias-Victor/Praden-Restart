@@ -32,28 +32,22 @@ export class RealOrderGateway implements OrderGateway {
         updatedAt: now,
       };
     });
-
-    const checkoutDTO: CreateCheckoutDTO = {
-      orderUuid: uuid,
-      lines,
-      delivery: orderDTO.delivery,
-    };
-
+  
     if (!orderDTO.deliveryAddress.appartement) {
       delete orderDTO.deliveryAddress.appartement;
     }
-
+  
     const { delivery, ...rest } = orderDTO;
     const productGateway = useProductGateway();
     const deliveryMethodsStore = useDeliveryStore();
-
+  
     // Création des lignes au format attendu
     const formattedLines = await Promise.all(
       orderDTO.lines.map(async (l) => {
         const product = await productGateway.getByUuid(l.productUuid);
         let priceWithoutTax = this.calculatePriceHT(product.price, product.percentTaxRate);
         let promotionUuid = undefined;
-
+  
         if (product.promotions && product.promotions.length > 0) {
           const promotion = product.promotions[0];
           if (promotion) {
@@ -67,7 +61,7 @@ export class RealOrderGateway implements OrderGateway {
             promotionUuid = promotion.uuid;
           }
         }
-
+  
         return {
           productUuid: l.productUuid,
           quantity: l.quantity,
@@ -78,7 +72,7 @@ export class RealOrderGateway implements OrderGateway {
         };
       })
     );
-
+  
     // Construction du body de la requête avec tous les champs requis
     const body = {
       contact: orderDTO.contact,
@@ -91,9 +85,9 @@ export class RealOrderGateway implements OrderGateway {
       ...(selectedTimestamp ? { pickingDate: parseInt(selectedTimestamp) } : {}),
       ...(promotionCode ? { promotionCode } : {})
     };
-
+  
     const { $keycloak }: any = useNuxtApp();
-
+  
     try {
       // Vérifier et rafraîchir le token si nécessaire
       if ($keycloak) {
@@ -102,24 +96,31 @@ export class RealOrderGateway implements OrderGateway {
           console.log('Token refreshed');
         }
       }
-
+  
       const token = $keycloak.token;
-
+  
       if (!token) {
         throw new Error('Token Keycloak non disponible pour authentification.');
       }
-
+  
       console.log('body:', JSON.stringify(body));
-
+  
       const res = await axios.post('https://ecommerce-backend-production.admin-a5f.workers.dev/orders', body, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
       });
-
+  
       console.log('res:', JSON.stringify(res.data.item));
-
+  
+      // Récupérer le montant de la réduction depuis la réponse
+      let discountAmount = 0;
+      if (res.data.item.promotionCode.discount) {
+        discountAmount = res.data.item.promotionCode.discount;
+        console.log(`Réduction appliquée: ${discountAmount} centimes`);
+      }
+  
       const sessionUrl = await this.paymentGateway.createCheckoutSession(
         {
           orderUuid: uuid,
@@ -129,8 +130,10 @@ export class RealOrderGateway implements OrderGateway {
         },
         deliveryPrice,
         res.data.item.uuid,
+        promotionCode,
+        discountAmount
       );
-
+  
       const order: Order = {
         uuid,
         contact: orderDTO.contact,
@@ -143,9 +146,9 @@ export class RealOrderGateway implements OrderGateway {
           status: PaymentStatus.WaitingForPayment,
         },
       };
-
+  
       this.orders.push(order);
-
+  
       return order;
     } catch (error) {
       console.error('Erreur lors de la création de la commande :', error);
