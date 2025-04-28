@@ -81,8 +81,9 @@
     div.flex.justify-between.items-center.text-lg
         p.font-semibold.text-main.text Total
         div.flex.flex-col.pl-2
-            span.text-xs(class='lg:text-sm' :class="totalDiscount > 0 ? 'line-through' : 'font-semibold'") {{ cart.totalPriceWithDelivery }}
-            span.font-semibold.text-main(v-if="totalDiscount > 0") {{ calculateFinalPrice() }}
+            span.text-xs(class='lg:text-sm' :class="totalDiscount > 0 || cart.totalPriceWithPromotion ? 'line-through' : 'font-semibold'") {{ cart.totalPriceWithDelivery }}
+            span.font-semibold.text-main(v-if="cart.totalPriceWithPromotion") {{ cart.totalPriceWithPromotion }}
+            span.font-semibold.text-main(v-if="totalDiscount > 0 && !cart.totalPriceWithPromotion") {{ calculateFinalPrice() }}
     div.mt-2(class='lg:mt-4')
         ft-button.button-solid.w-full.text-xl( @click="validateOrder" :disabled="isProcessingOrder") 
           span(v-if="!isProcessingOrder") Paiement
@@ -410,7 +411,7 @@
       );
       
       // Redirection vers la page de succès
-      router.push('/checkout/success');
+      //- router.push('/checkout/success');
     } catch (error) {
       console.error('Erreur lors de la création de la commande:', error);
       // Gérer l'erreur ici (afficher un message, etc.)
