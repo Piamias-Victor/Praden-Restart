@@ -20,15 +20,20 @@
           @input="lastnameChanged"
       ) 
           span.font-semibold.text-sm Nom
-      ft-input(
-          :value="props.user.address?.country || ''" 
+      ft-select(
+          :value="props.user.address?.country || 'France métropolitaine'"
           for="country"
           require
-          type='text'
           name='country'
           @input="countryChanged"
-      )
+      ) 
           span.font-semibold.text-sm Pays
+          template(#options)
+            option(value="Allemagne") Allemagne
+            option(value="Belgique") Belgique
+            option(value="Espagne") Espagne
+            option(value="France métropolitaine") France métropolitaine
+            option(value="Italie") Italie
       ft-input(
           :value="props.user.address?.address || ''"
           for="address"
