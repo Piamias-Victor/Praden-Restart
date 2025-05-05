@@ -19,7 +19,7 @@ div.fixed.inset-0.z-50.flex.items-center.justify-center.bg-black.bg-opacity-50(v
                     :disabled-week-days="[0]"
                     :model-config="{ type: 'date' }"
                     class="w-full p-2 border rounded-lg"
-                    :min-time="{ hours: 8, minutes: 30 }"
+                    :min-time="{ hours: 9, minutes: 30 }"
                     :max-time="{ hours: 19, minutes: 30 }"
                     time-picker-inline
                 )
