@@ -14,11 +14,11 @@
           v-for='category in sortedCategories' 
           :key="category.uuid" 
           class="relative group"
-          @mouseenter="showCategoryMenu(category)"
-          @mouseleave="hideCategoryMenu"
+          @mouseenter="isMobile ? null : showCategoryMenu(category)"
+          @mouseleave="isMobile ? null : hideCategoryMenu"
+          @click="handleCategoryClick(category)"
         )
           ft-button-animate(
-            @click="goToCat(category)"
             class="bg-white rounded-xl px-6 transition-all"
             :class="{'shadow-md border-b-2 border-main text-main': hoveredCategory && hoveredCategory.uuid === category.uuid}"
           )
@@ -45,13 +45,30 @@
     )
       div(
         v-if="showMegaMenu && hoveredCategory && childCategories.items.length > 0"
-        @mouseenter="keepMegaMenuOpen"
-        @mouseleave="hideCategoryMenu"
-        class="absolute left-0 right-0 bg-white rounded-xl shadow-md z-50 border-t border-gray-100 mt-2"
+        @mouseenter="isMobile ? null : keepMegaMenuOpen"
+        @mouseleave="isMobile ? null : hideCategoryMenu"
+        class="absolute left-0 right-0 bg-white shadow-md z-50 border-t border-gray-100 mt-2"
       )
         div(class="max-w-7xl mx-auto py-6 px-8")
-          // Titre de la catégorie sélectionnée
-          h3(class="text-xl font-semibold text-main mb-4 border-b border-gray-100 pb-3") {{ hoveredCategory ? hoveredCategory.name : '' }}
+          // Titre avec bouton vers catégorie principale pour mobile
+          div(class="flex justify-between items-center mb-4 border-b border-gray-100 pb-3")
+            h3(class="text-xl font-semibold text-main") {{ hoveredCategory ? hoveredCategory.name : '' }}
+            
+            // Bouton pour aller à la catégorie principale sur mobile
+            button(
+              @click="navigateToCategory(hoveredCategory.uuid, hoveredCategory.name)"
+              class="text-white bg-main px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition-colors"
+            )
+              icon(name="ph:arrow-right-bold" class="w-4 h-4")
+            
+            // Bouton pour fermer le menu sur mobile
+            button(
+              v-if="isMobile"
+              @click="closeMegaMenu"
+              class="ml-2 text-gray-500 hover:text-main transition-colors p-2"
+              aria-label="Fermer"
+            )
+              icon(name="ph:x-bold" class="w-5 h-5")
           
           // Grille de sous-catégories
           div(class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6")
@@ -99,7 +116,7 @@
   <script lang="ts" setup>
   import { ref, computed, onMounted, onBeforeUnmount, reactive } from 'vue';
   import { getChildCategoriesVM } from '../../../viewModels/get-category/getChildCategoryVM.js';
-  
+
   const props = defineProps<{
     categoriesVM: any;
   }>();
@@ -115,6 +132,7 @@
   const categoryBar = ref(null);
   const hoverTimer = ref(null);
   const closeTimer = ref(null);
+  const isMobile = ref(false);
   
   // Stockage des sous-sous-catégories pour chaque sous-catégorie
   const subSubCategories = reactive({});
@@ -179,6 +197,21 @@
     setTimeout(() => {
       router.push(formattedPath);
     }, 50);
+  };
+  
+  // Gestion du clic sur une catégorie principale
+  const handleCategoryClick = (category) => {
+    if (isMobile.value) {
+      // Sur mobile, le clic ouvre/ferme le menu
+      if (hoveredCategory.value && hoveredCategory.value.uuid === category.uuid && showMegaMenu.value) {
+        closeMegaMenu();
+      } else {
+        showCategoryMenu(category);
+      }
+    } else {
+      // Sur desktop, le clic redirige directement
+      navigateToCategory(category.uuid, category.name);
+    }
   };
   
   // Récupérer les sous-sous-catégories pour une sous-catégorie donnée
@@ -247,23 +280,23 @@
     }
   };
   
-  // Cacher le menu
-  const hideCategoryMenu = () => {
+  // Fermer le menu
+  const closeMegaMenu = () => {
     // Annuler tout timer d'ouverture en cours
     if (hoverTimer.value) {
       clearTimeout(hoverTimer.value);
       hoverTimer.value = null;
     }
     
-    // Ajouter un délai avant de fermer pour améliorer l'UX
-    closeTimer.value = setTimeout(() => {
+    // Fermer immédiatement sur mobile, utiliser un délai sur desktop
+    if (isMobile.value) {
       showMegaMenu.value = false;
-    }, 150);
-  };
-  
-  // Navigation vers une catégorie principale
-  const goToCat = (category) => {
-    navigateToCategory(category.uuid, category.name);
+    } else {
+      // Ajouter un délai avant de fermer pour améliorer l'UX
+      closeTimer.value = setTimeout(() => {
+        showMegaMenu.value = false;
+      }, 150);
+    }
   };
   
   // Aller à la page promotions
@@ -271,10 +304,70 @@
     router.push('/promotions');
   };
   
-  // Nettoyer les timers à la destruction du composant
+  // Détection du mobile et configuration des événements
+  onMounted(() => {
+    // Détecter si l'appareil est mobile
+    const checkMobile = () => {
+      isMobile.value = window.innerWidth < 768;
+    };
+    
+    // Vérifier au chargement
+    checkMobile();
+    
+    // Vérifier lors du redimensionnement
+    window.addEventListener('resize', checkMobile);
+    
+    // Configuration des événements clavier
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && showMegaMenu.value) {
+        closeMegaMenu();
+      }
+    });
+    
+    // Configuration de l'écouteur d'événement de clic à l'extérieur
+    document.addEventListener('click', (e) => {
+      if (showMegaMenu.value && isMobile.value) {
+        // Vérifier si le clic est à l'extérieur du menu et des boutons de catégorie
+        const megaMenu = document.querySelector('.mega-menu');
+        const categoryButtons = document.querySelectorAll('.category-button');
+        
+        let clickedOutside = true;
+        
+        if (megaMenu && megaMenu.contains(e.target)) {
+          clickedOutside = false;
+        }
+        
+        categoryButtons.forEach(button => {
+          if (button.contains(e.target)) {
+            clickedOutside = false;
+          }
+        });
+        
+        if (clickedOutside) {
+          closeMegaMenu();
+        }
+      }
+    });
+  });
+  
+  // Nettoyer les timers et écouteurs d'événements à la destruction du composant
   onBeforeUnmount(() => {
     if (hoverTimer.value) clearTimeout(hoverTimer.value);
     if (closeTimer.value) clearTimeout(closeTimer.value);
+    
+    // Supprimer l'écouteur de redimensionnement
+    window.removeEventListener('resize', () => {
+      isMobile.value = window.innerWidth < 768;
+    });
+    
+    // Supprimer les autres écouteurs d'événements
+    document.removeEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && showMegaMenu.value) {
+        closeMegaMenu();
+      }
+    });
+    
+    document.removeEventListener('click', () => {});
   });
   </script>
   

@@ -1,7 +1,6 @@
 <template lang="pug">
   div.bg-main.rounded-b-xl.mt-1(class='p-0.5')
-  
-    // Afficher "Bientôt de retour" si le stock est négatif ou nul
+    // Afficher "Bientôt de retour" si le stock est négatif
     div.flex.flex-center.gap-4.text-white.group.flex.items-center.justify-center.p-2.transition-colors.rounded-xl(v-if="props.availableStock !== undefined && props.availableStock <= 0")
       p.font-semibold.text-white Bientôt de retour
   
@@ -17,7 +16,7 @@
     ft-button.w-full.text-white.flex.items-center.justify-center.font-semibold(
       v-else-if="cartQuantity && cartQuantity.items && !cartQuantity.items[productUuid]" 
       @click='addItemToCart(productUuid)' 
-      :disabled="props.availableStock !== undefined && props.availableStock <= 0"
+      :disabled="props.availableStock !== undefined && props.availableStock < 0"
     )
       span Ajouter au panier
       icon.icon-sm(name="ph:plus-bold")
@@ -46,35 +45,29 @@ const props = defineProps({
 const cartQuantity = ref<any | null>(null);
 const limit = ref(false);
 const productGateway = useProductGateway();
-const maxQuantity = ref(999999); // Valeur très élevée par défaut (pas de limite)
-const hasMaxQuantity = ref(false); // Flag pour savoir si une limite existe
-const productDetail = ref<any | null>(null);
+const maxQuantity = ref(0);
+const hasMaxQuantity = ref(false);
 const showMaxQuantityMessage = ref(false);
 
-// Récupérer les détails du produit pour obtenir maxQuantityForOrder
+// Essayez de récupérer maxQuantityForOrder seulement si nécessaire
 onMounted(async () => {
   try {
-    productDetail.value = await productGateway.getByUuid(props.productUuid);
-    if (productDetail.value && productDetail.value.maxQuantityForOrder) {
-      maxQuantity.value = productDetail.value.maxQuantityForOrder;
-      hasMaxQuantity.value = true; // Une limite existe
+    // Seulement si l'UUID est valide
+    if (props.productUuid) {
+      const productDetail = await productGateway.getByUuid(props.productUuid);
+      if (productDetail && productDetail.maxQuantityForOrder) {
+        maxQuantity.value = productDetail.maxQuantityForOrder;
+        hasMaxQuantity.value = true;
+      }
     }
   } catch (error) {
-    console.error('Erreur lors de la récupération des détails du produit:', error);
+    // Ignorer silencieusement, la limite ne sera tout simplement pas appliquée
+    console.warn("Impossible de récupérer la quantité maximale pour ce produit", error);
   }
 });
 
 const removeItemFromCart = (uuid: string) => {
-  showMaxQuantityMessage.value = false; // Masquer le message quand on diminue la quantité
-  if (
-    props.isMedicine &&
-    cartQuantity &&
-    cartQuantity.value &&
-    cartQuantity.value.items &&
-    cartQuantity.value.items[uuid] <= (props.isMedicine ? 5 : maxQuantity.value)
-  ) {
-    limit.value = false;
-  }
+  showMaxQuantityMessage.value = false;
   removeFromCart(uuid);
 };
 
@@ -88,14 +81,14 @@ const addItemToCart = async (uuid: string) => {
     return;
   }
 
-  // Pour les autres produits, vérifier maxQuantityForOrder seulement s'il existe
+  // Limite personnalisée seulement si elle a été récupérée
   if (hasMaxQuantity.value && currentQuantity >= maxQuantity.value) {
     limit.value = true;
     showMaxQuantityMessage.value = true;
     return;
   }
 
-  // Toujours vérifier le stock disponible
+  // Vérifier le stock disponible
   if (props.availableStock !== undefined && currentQuantity >= props.availableStock) {
     limit.value = true;
     showMaxQuantityMessage.value = true;
@@ -109,22 +102,26 @@ const addItemToCart = async (uuid: string) => {
   // Tracking dataLayer add_to_cart
   try {
     const product = await productGateway.getByUuid(uuid);
-    trackAddToCart(product, 1); // Envoyer événement add_to_cart
+    if (product) {
+      trackAddToCart(product, 1);
+    }
   } catch (err) {
     console.error('Erreur lors du tracking add_to_cart:', err);
   }
 };
 
 const isAddButtonHidden = (uuid: string) => {
-  const currentQuantity = cartQuantity.value?.items?.[uuid] || 0;
+  if (!uuid || !cartQuantity.value || !cartQuantity.value.items) return true;
+  
+  const currentQuantity = cartQuantity.value.items[uuid] || 0;
 
-  // Pour les médicaments, limite fixe de 6
+  // Pour les médicaments, limite fixe
   if (props.isMedicine && currentQuantity >= 6) return true;
   
-  // Pour les autres produits, vérifier maxQuantityForOrder seulement s'il existe
+  // Limite personnalisée seulement si elle a été récupérée
   if (hasMaxQuantity.value && currentQuantity >= maxQuantity.value) return true;
   
-  // Toujours vérifier le stock disponible
+  // Stock disponible
   if (props.availableStock !== undefined && props.availableStock <= 0) return true;
   if (props.availableStock !== undefined && currentQuantity >= props.availableStock) return true;
 
@@ -137,15 +134,23 @@ const sendUserNotif = () => {
 };
 
 watchEffect(async () => {
-  cartQuantity.value = await getCartQuantityVM(useProductGateway());
-
-  // Vérifier si la quantité actuelle a atteint la limite
-  if (hasMaxQuantity.value && cartQuantity.value?.items?.[props.productUuid] >= maxQuantity.value) {
-    showMaxQuantityMessage.value = true;
-  } else if (props.isMedicine && cartQuantity.value?.items?.[props.productUuid] >= 5) {
-    showMaxQuantityMessage.value = true;
-  } else {
-    showMaxQuantityMessage.value = false;
+  try {
+    cartQuantity.value = await getCartQuantityVM(useProductGateway());
+    
+    // Vérifier si la quantité actuelle a atteint la limite
+    if (cartQuantity.value?.items) {
+      const currentQuantity = cartQuantity.value.items[props.productUuid] || 0;
+      
+      if (hasMaxQuantity.value && currentQuantity >= maxQuantity.value) {
+        showMaxQuantityMessage.value = true;
+      } else if (props.isMedicine && currentQuantity >= 5) {
+        showMaxQuantityMessage.value = true;
+      } else {
+        showMaxQuantityMessage.value = false;
+      }
+    }
+  } catch (error) {
+    console.error('Erreur dans watchEffect:', error);
   }
 });
 </script>
