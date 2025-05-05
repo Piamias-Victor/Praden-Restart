@@ -5,6 +5,7 @@
   "repository": "https://github.com/Pharlog/praden-marketplace.git",
   "author": "gmevelec <gregory.mevelec@gmail.com>",
   "scripts": {
+    "prebuild": "node scripts/generate-merchant-feed.js",
     "build": "nuxt build",
     "start": "nuxt build && nuxt start",
     "dev": "nuxt dev",
