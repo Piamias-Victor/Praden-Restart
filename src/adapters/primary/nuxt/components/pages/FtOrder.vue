@@ -137,11 +137,13 @@ const getStatusClass = (status: string): string => {
   switch (status) {
     case 'CREATED':
       return 'text-blue-900 bg-blue-200'; // En attente de traitement
-    case 'PROCESSING':
+    case 'STARTED':
       return 'text-orange-900 bg-orange-300'; // En cours de traitement
     case 'SHIPPED':
       return 'text-yellow-900 bg-yellow-300'; // Expédié
     case 'DELIVERED':
+      return 'text-green-900 bg-green-400'; // Livré
+    case 'PREPARED':
       return 'text-green-900 bg-green-400'; // Livré
     case 'CANCELED':
       return 'text-red-900 bg-red-300'; // Annulé
@@ -155,10 +157,12 @@ const getStatusText = (status: string): string => {
   switch (status) {
     case 'CREATED':
       return 'En attente de paiement';
-    case 'PROCESSING':
+    case 'STARTED':
       return 'En cours de traitement';
     case 'SHIPPED':
       return 'Expédié';
+    case 'PREPARED':
+      return 'Prete'; // Livré
     case 'DELIVERED':
       return 'Livré';
     case 'CANCELED':
