@@ -44,7 +44,7 @@
       leave-to-class="opacity-0 translate-y-1"
     )
       div(
-        v-if="showMegaMenu && hoveredCategory && childCategories.items.length > 0"
+        v-if="showMegaMenu && hoveredCategory"
         @mouseenter="isMobile ? null : keepMegaMenuOpen"
         @mouseleave="isMobile ? null : hideCategoryMenu"
         class="absolute left-0 right-0 bg-white shadow-md z-50 border-t border-gray-100 mt-2"
@@ -52,26 +52,42 @@
         div(class="max-w-7xl mx-auto py-6 px-8")
           // Titre avec bouton vers catégorie principale pour mobile
           div(class="flex justify-between items-center mb-4 border-b border-gray-100 pb-3")
+            // Titre de la catégorie
             h3(class="text-xl font-semibold text-main") {{ hoveredCategory ? hoveredCategory.name : '' }}
             
-            // Bouton pour aller à la catégorie principale sur mobile
+            // Conteneur des boutons
+            div(class="flex items-center gap-2")
+              // Bouton pour aller à la catégorie principale
+              button(
+                @click="navigateToCategory(hoveredCategory.uuid, hoveredCategory.name)"
+                class="text-white bg-main px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition-colors"
+              )
+                icon(name="ph:arrow-right-bold" class="w-4 h-4")
+              
+              // Bouton pour fermer le menu (toujours visible)
+              button(
+                @click="closeMegaMenu"
+                class="text-gray-500 hover:text-main transition-colors p-2 rounded-lg hover:bg-gray-50"
+                aria-label="Fermer"
+                title="Fermer le menu"
+              )
+                icon(name="ph:x-bold" class="w-5 h-5")
+          
+          // Message spécial si pas de sous-catégories
+          div(v-if="!childCategories.items || childCategories.items.length === 0" class="py-4 text-center")
+            p(class="text-gray-500 mb-3") Cette catégorie ne contient pas de sous-catégories.
             button(
               @click="navigateToCategory(hoveredCategory.uuid, hoveredCategory.name)"
-              class="text-white bg-main px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition-colors"
+              class="text-white bg-main px-6 py-3 rounded-lg font-medium inline-flex items-center gap-2 mx-auto transition-colors hover:bg-opacity-90"
             )
+              span Accéder à la catégorie
               icon(name="ph:arrow-right-bold" class="w-4 h-4")
-            
-            // Bouton pour fermer le menu sur mobile
-            button(
-              v-if="isMobile"
-              @click="closeMegaMenu"
-              class="ml-2 text-gray-500 hover:text-main transition-colors p-2"
-              aria-label="Fermer"
-            )
-              icon(name="ph:x-bold" class="w-5 h-5")
           
-          // Grille de sous-catégories
-          div(class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6")
+          // Grille de sous-catégories si disponibles
+          div(
+            v-else
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          )
             // Pour chaque sous-catégorie
             div(
               v-for="subCat in childCategories.items"
@@ -133,6 +149,7 @@
   const hoverTimer = ref(null);
   const closeTimer = ref(null);
   const isMobile = ref(false);
+  const menuLoaded = ref(false);
   
   // Stockage des sous-sous-catégories pour chaque sous-catégorie
   const subSubCategories = reactive({});
@@ -202,15 +219,52 @@
   // Gestion du clic sur une catégorie principale
   const handleCategoryClick = (category) => {
     if (isMobile.value) {
-      // Sur mobile, le clic ouvre/ferme le menu
+      // Sur mobile, vérifier d'abord si cette catégorie a déjà été chargée
       if (hoveredCategory.value && hoveredCategory.value.uuid === category.uuid && showMegaMenu.value) {
+        // Si le menu est déjà ouvert pour cette catégorie, le fermer
         closeMegaMenu();
       } else {
-        showCategoryMenu(category);
+        // Charger les sous-catégories et vérifier si elles existent
+        loadCategoryMenu(category).then(hasChildren => {
+          if (!hasChildren && !menuLoaded.value) {
+            // Si pas de sous-catégories et le menu n'est pas encore chargé, rediriger directement
+            navigateToCategory(category.uuid, category.name);
+          } else {
+            // Sinon, afficher le menu (qui montrera soit les sous-catégories, soit un message)
+            showMegaMenu.value = true;
+          }
+        });
       }
     } else {
       // Sur desktop, le clic redirige directement
       navigateToCategory(category.uuid, category.name);
+    }
+  };
+  
+  // Fonction pour charger le menu d'une catégorie
+  const loadCategoryMenu = async (category) => {
+    menuLoaded.value = false;
+    hoveredCategory.value = category;
+    
+    try {
+      // Récupérer les sous-catégories
+      childCategories.value = getChildCategoriesVM(category.uuid);
+      menuLoaded.value = true;
+      
+      // Pré-charger les sous-sous-catégories pour chaque sous-catégorie
+      if (childCategories.value.items && childCategories.value.items.length > 0) {
+        childCategories.value.items.forEach(subCat => {
+          getChildSubCategories(subCat.uuid);
+        });
+        return true; // A des sous-catégories
+      } else {
+        return false; // N'a pas de sous-catégories
+      }
+    } catch (error) {
+      console.error("Erreur lors du chargement des sous-catégories:", error);
+      childCategories.value = { items: [], name: '' };
+      menuLoaded.value = true;
+      return false; // Considérer qu'il n'y a pas de sous-catégories en cas d'erreur
     }
   };
   
@@ -250,25 +304,11 @@
     
     // Utiliser un léger délai pour éviter l'ouverture accidentelle
     hoverTimer.value = setTimeout(async () => {
-      hoveredCategory.value = category;
+      // Charger les données
+      await loadCategoryMenu(category);
       
-      // Récupérer les sous-catégories réelles en utilisant la fonction fournie
-      try {
-        childCategories.value = getChildCategoriesVM(category.uuid);
-        
-        // Pré-charger les sous-sous-catégories pour chaque sous-catégorie
-        childCategories.value.items.forEach(subCat => {
-          getChildSubCategories(subCat.uuid);
-        });
-        
-        // Afficher le mega menu uniquement s'il y a des sous-catégories
-        if (childCategories.value.items.length > 0) {
-          showMegaMenu.value = true;
-        }
-      } catch (error) {
-        console.error("Erreur lors du chargement des sous-catégories:", error);
-        childCategories.value = { items: [], name: '' };
-      }
+      // Afficher le mega menu, qu'il y ait des sous-catégories ou non
+      showMegaMenu.value = true;
     }, 100); // Délai court pour éviter les ouvertures accidentelles
   };
   
@@ -288,15 +328,8 @@
       hoverTimer.value = null;
     }
     
-    // Fermer immédiatement sur mobile, utiliser un délai sur desktop
-    if (isMobile.value) {
-      showMegaMenu.value = false;
-    } else {
-      // Ajouter un délai avant de fermer pour améliorer l'UX
-      closeTimer.value = setTimeout(() => {
-        showMegaMenu.value = false;
-      }, 150);
-    }
+    // Fermer immédiatement le menu
+    showMegaMenu.value = false;
   };
   
   // Aller à la page promotions
@@ -323,31 +356,6 @@
         closeMegaMenu();
       }
     });
-    
-    // Configuration de l'écouteur d'événement de clic à l'extérieur
-    document.addEventListener('click', (e) => {
-      if (showMegaMenu.value && isMobile.value) {
-        // Vérifier si le clic est à l'extérieur du menu et des boutons de catégorie
-        const megaMenu = document.querySelector('.mega-menu');
-        const categoryButtons = document.querySelectorAll('.category-button');
-        
-        let clickedOutside = true;
-        
-        if (megaMenu && megaMenu.contains(e.target)) {
-          clickedOutside = false;
-        }
-        
-        categoryButtons.forEach(button => {
-          if (button.contains(e.target)) {
-            clickedOutside = false;
-          }
-        });
-        
-        if (clickedOutside) {
-          closeMegaMenu();
-        }
-      }
-    });
   });
   
   // Nettoyer les timers et écouteurs d'événements à la destruction du composant
@@ -366,8 +374,6 @@
         closeMegaMenu();
       }
     });
-    
-    document.removeEventListener('click', () => {});
   });
   </script>
   
