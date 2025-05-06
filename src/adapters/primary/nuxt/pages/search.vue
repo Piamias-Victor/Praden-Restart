@@ -20,6 +20,7 @@
                   autocomplete='off'
                   v-model="searchInput"
                   @input="debouncedSearch"
+                  ref="searchInputElement"
               )
           ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="executeSearch")
               icon.icon-md(name="akar-icons:send")
@@ -65,7 +66,7 @@
   
   <script lang="ts" setup>
   import { useRoute, useRouter } from 'vue-router';
-  import { ref, computed, onMounted, watch } from 'vue';
+  import { ref, computed, onMounted, watch, nextTick } from 'vue';
   import { searchProduct } from '@core/usecases/search-product/searchProduct';
   import { searchGateway } from '../../../../../gateways/searchGateway';
   import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM';
@@ -98,9 +99,10 @@
   const sortType = ref(SortType.None);
   const laboratoryFilter = ref<Array<string>>([]);
   const priceFilter = ref<any>(null);
+  const searchInputElement = ref<HTMLInputElement | null>(null);
   
   // Charger les données nécessaires
-  onMounted(() => {
+  onMounted(async () => {
     listCategories(categoryGateway());
     listDeliveryMethods(deliveryGateway);
     listLaboratories(laboratoryGateway());
@@ -113,6 +115,12 @@
       query.value = searchQuery;
       searchInput.value = searchQuery;
       executeSearch();
+    }
+    
+    // Mettre le focus sur l'input de recherche après le rendu du DOM
+    await nextTick();
+    if (searchInputElement.value) {
+      searchInputElement.value.focus();
     }
   });
   

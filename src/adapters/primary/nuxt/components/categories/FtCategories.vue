@@ -14,8 +14,8 @@
           v-for='category in sortedCategories' 
           :key="category.uuid" 
           class="relative group"
-          @mouseenter="isMobile ? null : showCategoryMenu(category)"
-          @mouseleave="isMobile ? null : hideCategoryMenu"
+          @mouseenter="isMobile ? null : startIntentTimer(category)"
+          @mouseleave="isMobile ? null : cancelIntentTimer()"
           @click="handleCategoryClick(category)"
         )
           ft-button-animate(
@@ -62,6 +62,7 @@
                 @click="navigateToCategory(hoveredCategory.uuid, hoveredCategory.name)"
                 class="text-white bg-main px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 transition-colors"
               )
+                span Voir toute la catégorie
                 icon(name="ph:arrow-right-bold" class="w-4 h-4")
               
               // Bouton pour fermer le menu (toujours visible)
@@ -132,7 +133,7 @@
   <script lang="ts" setup>
   import { ref, computed, onMounted, onBeforeUnmount, reactive } from 'vue';
   import { getChildCategoriesVM } from '../../../viewModels/get-category/getChildCategoryVM.js';
-
+    
   const props = defineProps<{
     categoriesVM: any;
   }>();
@@ -146,11 +147,12 @@
   const hoveredCategory = ref(null);
   const childCategories = ref<ChildCategoriesVM>({ items: [], name: '' });
   const categoryBar = ref(null);
-  const hoverTimer = ref(null);
+  const intentTimer = ref(null); // Timer pour l'intention de l'utilisateur
   const closeTimer = ref(null);
   const isMobile = ref(false);
   const menuLoaded = ref(false);
-  const currentHoveredUuid = ref(null); // Pour suivre la catégorie actuellement survolée
+  const intentTimerStartTime = ref(0); // Heure de début du timer d'intention
+  const INTENTION_DELAY = 1000; // Délai d'intention de 1 seconde
   
   // Stockage des sous-sous-catégories pour chaque sous-catégorie
   const subSubCategories = reactive({});
@@ -219,6 +221,9 @@
   
   // Gestion du clic sur une catégorie principale
   const handleCategoryClick = (category) => {
+    // Annuler tout timer d'intention en cours
+    cancelIntentTimer();
+    
     if (isMobile.value) {
       // Sur mobile, vérifier d'abord si cette catégorie a déjà été chargée
       if (hoveredCategory.value && hoveredCategory.value.uuid === category.uuid && showMegaMenu.value) {
@@ -240,6 +245,40 @@
       // Sur desktop, le clic redirige directement
       navigateToCategory(category.uuid, category.name);
     }
+  };
+  
+  // Démarrer le timer d'intention quand la souris entre sur une catégorie
+  const startIntentTimer = (category) => {
+    // Annuler tout timer existant
+    cancelIntentTimer();
+    
+    // Enregistrer l'heure de début
+    intentTimerStartTime.value = Date.now();
+    
+    // Créer un nouveau timer qui vérifiera régulièrement si le délai est écoulé
+    intentTimer.value = setInterval(() => {
+      const timeElapsed = Date.now() - intentTimerStartTime.value;
+      
+      // Si le délai d'intention est atteint, ouvrir le menu
+      if (timeElapsed >= INTENTION_DELAY) {
+        // Arrêter le timer
+        cancelIntentTimer();
+        
+        // Charger et ouvrir le menu
+        loadCategoryMenu(category).then(() => {
+          showMegaMenu.value = true;
+        });
+      }
+    }, 100); // Vérifier toutes les 100ms pour une réponse fluide
+  };
+  
+  // Annuler le timer d'intention
+  const cancelIntentTimer = () => {
+    if (intentTimer.value) {
+      clearInterval(intentTimer.value);
+      intentTimer.value = null;
+    }
+    intentTimerStartTime.value = 0;
   };
   
   // Fonction pour charger le menu d'une catégorie
@@ -295,56 +334,22 @@
     return subSubCategories[subCategoryUuid] || [];
   };
   
-  // Afficher le menu au survol (avec un délai de 1 seconde)
-  const showCategoryMenu = async (category) => {
+  // Maintenir le menu ouvert quand on survole le mega menu
+  const keepMegaMenuOpen = () => {
+    // Annuler tout timer d'intention en cours
+    cancelIntentTimer();
+    
     // Annuler tout timer de fermeture en cours
     if (closeTimer.value) {
       clearTimeout(closeTimer.value);
       closeTimer.value = null;
     }
-    
-    // Enregistrer l'UUID de la catégorie survolée
-    currentHoveredUuid.value = category.uuid;
-    
-    // Annuler tout timer d'ouverture en cours
-    if (hoverTimer.value) {
-      clearTimeout(hoverTimer.value);
-    }
-    
-    // Définir un nouveau timer d'ouverture de 1 seconde
-    hoverTimer.value = setTimeout(async () => {
-      // Vérifier si on survole toujours la même catégorie après le délai
-      if (currentHoveredUuid.value === category.uuid) {
-        // Charger les données
-        await loadCategoryMenu(category);
-        
-        // Afficher le mega menu, qu'il y ait des sous-catégories ou non
-        showMegaMenu.value = true;
-      }
-    }, 1000); // Délai de 1 seconde avant l'ouverture
   };
   
-  // Maintenir le menu ouvert quand on survole le mega menu
-  const keepMegaMenuOpen = () => {
-    if (closeTimer.value) {
-      clearTimeout(closeTimer.value);
-      closeTimer.value = null;
-    }
-    
-    // Réinitialiser l'UUID survolé pour éviter les conflits
-    currentHoveredUuid.value = null;
-  };
-  
-  // Cacher le menu
+  // Cacher le menu avec un délai
   const hideCategoryMenu = () => {
-    // Annuler tout timer d'ouverture en cours
-    if (hoverTimer.value) {
-      clearTimeout(hoverTimer.value);
-      hoverTimer.value = null;
-    }
-    
-    // Réinitialiser l'UUID survolé
-    currentHoveredUuid.value = null;
+    // Annuler tout timer d'intention en cours
+    cancelIntentTimer();
     
     // Fermer avec un court délai pour permettre de passer au menu
     closeTimer.value = setTimeout(() => {
@@ -354,14 +359,14 @@
   
   // Fermer le menu immédiatement (pour le bouton de fermeture)
   const closeMegaMenu = () => {
-    // Annuler tout timer d'ouverture en cours
-    if (hoverTimer.value) {
-      clearTimeout(hoverTimer.value);
-      hoverTimer.value = null;
-    }
+    // Annuler tout timer d'intention en cours
+    cancelIntentTimer();
     
-    // Réinitialiser l'UUID survolé
-    currentHoveredUuid.value = null;
+    // Annuler tout timer de fermeture en cours
+    if (closeTimer.value) {
+      clearTimeout(closeTimer.value);
+      closeTimer.value = null;
+    }
     
     // Fermer immédiatement le menu
     showMegaMenu.value = false;
@@ -395,13 +400,15 @@
   
   // Nettoyer les timers et écouteurs d'événements à la destruction du composant
   onBeforeUnmount(() => {
-    if (hoverTimer.value) clearTimeout(hoverTimer.value);
-    if (closeTimer.value) clearTimeout(closeTimer.value);
+    cancelIntentTimer();
+    
+    if (closeTimer.value) {
+      clearTimeout(closeTimer.value);
+      closeTimer.value = null;
+    }
     
     // Supprimer l'écouteur de redimensionnement
-    window.removeEventListener('resize', () => {
-      isMobile.value = window.innerWidth < 768;
-    });
+    window.removeEventListener('resize', checkMobile);
     
     // Supprimer les autres écouteurs d'événements
     document.removeEventListener('keydown', (e) => {
