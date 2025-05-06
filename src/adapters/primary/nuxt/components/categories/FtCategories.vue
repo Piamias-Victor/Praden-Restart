@@ -150,6 +150,7 @@
   const closeTimer = ref(null);
   const isMobile = ref(false);
   const menuLoaded = ref(false);
+  const currentHoveredUuid = ref(null); // Pour suivre la catégorie actuellement survolée
   
   // Stockage des sous-sous-catégories pour chaque sous-catégorie
   const subSubCategories = reactive({});
@@ -294,7 +295,7 @@
     return subSubCategories[subCategoryUuid] || [];
   };
   
-  // Afficher le menu au survol
+  // Afficher le menu au survol (avec un délai de 1 seconde)
   const showCategoryMenu = async (category) => {
     // Annuler tout timer de fermeture en cours
     if (closeTimer.value) {
@@ -302,14 +303,25 @@
       closeTimer.value = null;
     }
     
-    // Utiliser un léger délai pour éviter l'ouverture accidentelle
+    // Enregistrer l'UUID de la catégorie survolée
+    currentHoveredUuid.value = category.uuid;
+    
+    // Annuler tout timer d'ouverture en cours
+    if (hoverTimer.value) {
+      clearTimeout(hoverTimer.value);
+    }
+    
+    // Définir un nouveau timer d'ouverture de 1 seconde
     hoverTimer.value = setTimeout(async () => {
-      // Charger les données
-      await loadCategoryMenu(category);
-      
-      // Afficher le mega menu, qu'il y ait des sous-catégories ou non
-      showMegaMenu.value = true;
-    }, 100); // Délai court pour éviter les ouvertures accidentelles
+      // Vérifier si on survole toujours la même catégorie après le délai
+      if (currentHoveredUuid.value === category.uuid) {
+        // Charger les données
+        await loadCategoryMenu(category);
+        
+        // Afficher le mega menu, qu'il y ait des sous-catégories ou non
+        showMegaMenu.value = true;
+      }
+    }, 1000); // Délai de 1 seconde avant l'ouverture
   };
   
   // Maintenir le menu ouvert quand on survole le mega menu
@@ -318,15 +330,38 @@
       clearTimeout(closeTimer.value);
       closeTimer.value = null;
     }
+    
+    // Réinitialiser l'UUID survolé pour éviter les conflits
+    currentHoveredUuid.value = null;
   };
   
-  // Fermer le menu
+  // Cacher le menu
+  const hideCategoryMenu = () => {
+    // Annuler tout timer d'ouverture en cours
+    if (hoverTimer.value) {
+      clearTimeout(hoverTimer.value);
+      hoverTimer.value = null;
+    }
+    
+    // Réinitialiser l'UUID survolé
+    currentHoveredUuid.value = null;
+    
+    // Fermer avec un court délai pour permettre de passer au menu
+    closeTimer.value = setTimeout(() => {
+      showMegaMenu.value = false;
+    }, 150);
+  };
+  
+  // Fermer le menu immédiatement (pour le bouton de fermeture)
   const closeMegaMenu = () => {
     // Annuler tout timer d'ouverture en cours
     if (hoverTimer.value) {
       clearTimeout(hoverTimer.value);
       hoverTimer.value = null;
     }
+    
+    // Réinitialiser l'UUID survolé
+    currentHoveredUuid.value = null;
     
     // Fermer immédiatement le menu
     showMegaMenu.value = false;
