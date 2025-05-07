@@ -120,12 +120,8 @@ const checkAuthentication = async () => {
   console.log('[FtProfil] Vérification de l\'authentification...');
   
   try {
-    // Si reinitKeycloak est disponible, l'utiliser pour garantir une vérification fraîche
-    if (reinitKeycloak) {
-      await reinitKeycloak();
-    }
-    
-    // Mettre à jour l'état d'authentification
+    // Simplement mettre à jour l'état d'authentification sans réinitialiser
+    // Nous n'utilisons plus reinitKeycloak qui cause des erreurs
     isAuthenticated.value = keycloak?.authenticated || false;
     
     if (isAuthenticated.value && keycloak?.tokenParsed) {
@@ -163,12 +159,12 @@ const setupAuthCheck = () => {
     clearInterval(authCheckInterval);
   }
   
-  // Vérifier toutes les 5 secondes
+  // Vérifier toutes les 10 secondes (moins fréquent pour éviter trop d'appels)
   authCheckInterval = window.setInterval(() => {
     if (!isCheckingAuth.value) {
       checkAuthentication();
     }
-  }, 5000);
+  }, 10000);
 };
 
 // Nettoyage de l'intervalle lors de la destruction du composant
@@ -187,8 +183,18 @@ onMounted(async () => {
     // Attendre que Keycloak soit prêt
     await keycloakReady;
     
-    // Vérifier l'authentification
-    await checkAuthentication();
+    // Petite pause pour éviter des conflits d'initialisation
+    await new Promise(resolve => setTimeout(resolve, 500));
+    
+    // Simplement mettre à jour l'état d'authentification sans réinitialiser
+    isAuthenticated.value = keycloak?.authenticated || false;
+    
+    if (isAuthenticated.value && keycloak?.tokenParsed) {
+      user.value = {
+        firstName: keycloak.tokenParsed?.given_name || '',
+      };
+      console.log('[FtProfil] Utilisateur authentifié après initialisation:', user.value.firstName);
+    }
     
     // Mettre en place la vérification périodique
     setupAuthCheck();
@@ -206,16 +212,43 @@ const isMobile = () => {
 };
 
 // Fonction de connexion
+// Fonction de connexion sécurisée
 const login = () => {
   console.log('[FtProfil] Tentative de connexion...');
   
   try {
-    // Récupérer le panier actuel et le sauvegarder
-    const cartVM = getCartVM();
-    if (cartVM && cartVM.items) {
-      localStorage.setItem('cart', JSON.stringify(cartVM.items));
-      console.log('[FtProfil] Panier sauvegardé dans localStorage:', Object.keys(cartVM.items).length, 'articles');
+    // Récupérer le panier actuel de manière sécurisée
+    let cartItems = {};
+    
+    try {
+      const cartVM = getCartVM();
+      if (cartVM && cartVM.items) {
+        cartItems = cartVM.items;
+      }
+    } catch (cartError) {
+      console.warn('[FtProfil] Erreur lors de la récupération du panier via getCartVM:', cartError);
+      
+      // Alternative : utiliser directement le store si getCartVM échoue
+      try {
+        const cartStore = useCartStore();
+        if (cartStore && cartStore.items) {
+          // Convertir en format compatible
+          cartItems = cartStore.items.reduce((acc, uuid) => {
+            if (!acc[uuid]) {
+              acc[uuid] = { quantity: 0 };
+            }
+            acc[uuid].quantity += 1;
+            return acc;
+          }, {});
+        }
+      } catch (storeError) {
+        console.error('[FtProfil] Erreur lors de la récupération du panier depuis le store:', storeError);
+      }
     }
+    
+    // Sauvegarder le panier (même s'il est vide)
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    console.log('[FtProfil] Panier sauvegardé dans localStorage:', Object.keys(cartItems).length, 'articles différents');
     
     // Nettoyer et sauvegarder l'URL actuelle
     let currentUrl = window.location.href;
@@ -248,6 +281,15 @@ const login = () => {
     }
   } catch (error) {
     console.error('[FtProfil] Erreur lors de la préparation de la connexion:', error);
+    
+    // En cas d'erreur, essayer de se connecter quand même sans sauvegarder le panier
+    if (keycloak) {
+      keycloak.login({
+        redirectUri: window.location.origin + '/callback'
+      }).catch((loginError) => {
+        console.error('[FtProfil] Erreur lors de la tentative de connexion après erreur:', loginError);
+      });
+    }
   }
 };
 
@@ -296,12 +338,6 @@ const logout = () => {
     }
     
     if (keycloak) {
-      // Nettoyer les tokens Keycloak du localStorage si vous les stockez manuellement
-      localStorage.removeItem('keycloak_token');
-      localStorage.removeItem('keycloak_refresh_token');
-      localStorage.removeItem('keycloak_id_token');
-      localStorage.removeItem('keycloak_token_parsed');
-      
       keycloak.logout({ 
         redirectUri: window.location.origin 
       }).catch((error) => {
