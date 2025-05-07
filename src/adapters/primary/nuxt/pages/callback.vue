@@ -95,13 +95,13 @@ onMounted(() => {
         
         // Après un bref délai, rediriger vers la recherche
         setTimeout(() => {
-          window.location.replace(finalUrl);
+          window.location.replace('/');
         }, 100);
       } else if (redirectUrl) {
         // Redirection standard vers une URL nettoyée
         const cleanRedirectUrl = cleanUrl(redirectUrl);
         console.log('[Callback] Redirection standard vers:', cleanRedirectUrl);
-        window.location.replace(cleanRedirectUrl);
+        window.location.replace('/');
       } else {
         // Aucune URL sauvegardée, retour à l'accueil
         console.log('[Callback] Aucune URL de redirection, retour à l\'accueil');

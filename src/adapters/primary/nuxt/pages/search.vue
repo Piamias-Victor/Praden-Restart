@@ -22,8 +22,16 @@
                   @input="debouncedSearch"
                   ref="searchInputElement"
               )
-          ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="executeSearch")
-              icon.icon-md(name="akar-icons:send")
+          ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(
+            @click="executeSearch"
+            :disabled="isSearching"
+          )
+              icon.icon-md(:name="isSearching ? 'eos-icons:loading' : 'akar-icons:send'")
+      
+      // Message d'erreur
+      div.mt-4.text-center.text-red-600.font-medium(v-if="searchError") 
+        p {{ searchErrorMessage }}
+        button.underline.text-main.mt-2(@click="retrySearch") Réessayer
       
       // Filtres et tri
       div(v-if='filteredProducts.length > 0').flex.px-2.flex.items-center.justify-between.gap-4.mt-4
@@ -50,8 +58,13 @@
                 span.text-main.font-semibold.hidden(class='sm:block') Filtres
                 icon.icon-lg(name="mdi:filter-outline")
       
+      // Indicateur de chargement
+      div.flex.flex-col.items-center.justify-center.py-16(v-if="isSearching")
+        icon.icon-6xl.text-main.animate-spin(name="eos-icons:loading")
+        p.mt-4.text-gray-600 Recherche en cours...
+      
       // Résultats de recherche
-      div(v-if="filteredProducts.length")
+      div(v-else-if="filteredProducts.length")
           ft-product-search-list(:products="filteredProducts")
       
       // Message aucun résultat
@@ -101,6 +114,11 @@ const sortType = ref(SortType.None);
 const laboratoryFilter = ref<Array<string>>([]);
 const priceFilter = ref<any>(null);
 const searchInputElement = ref<HTMLInputElement | null>(null);
+const isSearching = ref(false);
+const searchError = ref(false);
+const searchErrorMessage = ref('Une erreur est survenue lors de la recherche');
+const searchRetryCount = ref(0);
+const MAX_RETRIES = 3;
 
 // État pour le débogage
 const showDebug = ref(false); // Mettre à false en production
@@ -127,7 +145,60 @@ const isMobile = () => {
   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 };
 
-// Charger les données nécessaires
+// Fonction pour gérer les erreurs API de manière générique
+const handleApiError = (error: any, context: string) => {
+  console.error(`[Search] Erreur ${context}:`, error);
+  
+  // Déterminer un message d'erreur adapté
+  let errorMessage = 'Une erreur est survenue';
+  
+  if (error.response) {
+    // Erreur avec réponse du serveur
+    if (error.response.status === 400) {
+      errorMessage = 'Requête invalide. Veuillez réessayer avec des termes différents.';
+    } else if (error.response.status === 401 || error.response.status === 403) {
+      errorMessage = 'Vous devez être connecté pour effectuer cette action.';
+    } else if (error.response.status === 404) {
+      errorMessage = 'Information non trouvée. Veuillez réessayer.';
+    } else if (error.response.status >= 500) {
+      errorMessage = 'Problème temporaire avec le service. Veuillez réessayer plus tard.';
+    }
+  } else if (error.request) {
+    // Pas de réponse du serveur
+    errorMessage = 'Impossible de communiquer avec le serveur. Vérifiez votre connexion Internet.';
+  }
+  
+  return errorMessage;
+};
+
+// Fonction pour réessayer la recherche
+const retrySearch = async () => {
+  if (searchRetryCount.value < MAX_RETRIES) {
+    searchRetryCount.value++;
+    searchError.value = false;
+    await executeSearch();
+  } else {
+    searchErrorMessage.value = 'Nombre maximal de tentatives atteint. Veuillez réessayer plus tard.';
+  }
+};
+
+// Initialisation
+const initializeData = async () => {
+  try {
+    await Promise.allSettled([
+      listCategories(categoryGateway()),
+      listDeliveryMethods(deliveryGateway),
+      listLaboratories(laboratoryGateway()),
+      listPromotions(useProductGateway()),
+      listBanner(bannerGateway()),
+      listBestSales(useProductGateway())
+    ]);
+  } catch (error) {
+    console.error('[Search] Erreur lors de l\'initialisation des données:', error);
+  }
+};
+
+// Chargement des données principales
 onMounted(async () => {
   console.log('[Search] Page de recherche chargée');
   currentUrl.value = window.location.href;
@@ -139,12 +210,7 @@ onMounted(async () => {
   }
 
   // Chargement des données initiales
-  listCategories(categoryGateway());
-  listDeliveryMethods(deliveryGateway);
-  listLaboratories(laboratoryGateway());
-  listPromotions(useProductGateway());
-  listBanner(bannerGateway());
-  listBestSales(useProductGateway());
+  await initializeData();
 
   // Vérifier si nous venons juste de nous authentifier (après une redirection)
   const justAuthenticated = localStorage.getItem('justAuthenticated');
@@ -193,46 +259,58 @@ onMounted(async () => {
   }
 
   const pendingSearchQuery = localStorage.getItem('pendingSearchQuery');
-if (pendingSearchQuery) {
-  console.log('[Search] Requête en attente trouvée:', pendingSearchQuery);
-  localStorage.removeItem('pendingSearchQuery');
-  
-  // Appliquer la requête
-  searchInput.value = pendingSearchQuery;
-  query.value = pendingSearchQuery;
-  
-  // Exécuter la recherche
-  setTimeout(() => {
-    executeSearch();
-  }, 300);
-}
+  if (pendingSearchQuery) {
+    console.log('[Search] Requête en attente trouvée:', pendingSearchQuery);
+    localStorage.removeItem('pendingSearchQuery');
+    
+    // Appliquer la requête
+    searchInput.value = pendingSearchQuery;
+    query.value = pendingSearchQuery;
+    
+    // Exécuter la recherche
+    setTimeout(() => {
+      executeSearch();
+    }, 300);
+  }
 });
 
-// Fonction de recherche avec mise à jour de l'URL
+// Fonction de recherche avec mise à jour de l'URL et gestion d'erreurs
 const executeSearch = async () => {
+  if (isSearching.value) return;
+  
   console.log('[Search] Exécution de la recherche:', searchInput.value);
   query.value = searchInput.value;
+  isSearching.value = true;
+  searchError.value = false;
   
-  if (query.value) {
-    // Mettre à jour l'URL sans recharger la page
-    router.replace({ 
-      path: '/search',
-      query: { 
-        q: query.value
-      }
-    });
+  try {
+    if (query.value) {
+      // Mettre à jour l'URL sans recharger la page
+      router.replace({ 
+        path: '/search',
+        query: { 
+          q: query.value
+        }
+      });
+      
+      // Effectuer la recherche
+      await searchProduct(query.value, searchGateway());
+    } else {
+      // Si pas de requête, supprimer les paramètres
+      router.replace({ 
+        path: '/search',
+        query: {}
+      });
+    }
     
-    // Effectuer la recherche
-    await searchProduct(query.value, searchGateway());
-  } else {
-    // Si pas de requête, supprimer les paramètres
-    router.replace({ 
-      path: '/search',
-      query: {}
-    });
+    searchDone.value = true;
+  } catch (error) {
+    console.error('[Search] Erreur lors de la recherche:', error);
+    searchError.value = true;
+    searchErrorMessage.value = handleApiError(error, 'lors de la recherche');
+  } finally {
+    isSearching.value = false;
   }
-  
-  searchDone.value = true;
 };
 
 // Fonction de recherche avec debounce
@@ -296,24 +374,35 @@ const searchVM = computed(() => {
 
 const facetsVM = computed(() => getFacetsVM());
 
-// Produits filtrés avec application des filtres
+// Produits filtrés avec application des filtres et gestion d'erreurs
 const filteredProducts = computed(() => {
-  getLaboratoryByName(laboratoryFilter.value, query.value, searchGateway());
-  let res = searchVM.value.items || [];
-  
-  if (priceFilter.value) {
-    const parsePrice = (priceString: string) => {
-      const cleanedString = priceString.replace(/[^0-9,]/g, '').replace(',', '.');
-      return Math.round(parseFloat(cleanedString) * 100);
-    };
+  try {
+    // Tenter de récupérer les laboratoires par nom pour le filtrage
+    if (laboratoryFilter.value.length > 0) {
+      getLaboratoryByName(laboratoryFilter.value, query.value, searchGateway());
+    }
     
-    res = res.filter(
-      (product) =>
-        parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1]
-    );
+    let res = searchVM.value.items || [];
+    
+    if (priceFilter.value) {
+      const parsePrice = (priceString: string) => {
+        const cleanedString = priceString.replace(/[^0-9,]/g, '').replace(',', '.');
+        return Math.round(parseFloat(cleanedString) * 100);
+      };
+      
+      res = res.filter(
+        (product) =>
+          parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1]
+      );
+    }
+    
+    return res;
+  } catch (error) {
+    console.error('[Search] Erreur lors du filtrage des produits:', error);
+    searchError.value = true;
+    searchErrorMessage.value = handleApiError(error, 'lors du filtrage');
+    return [];
   }
-  
-  return res;
 });
 
 // SEO
@@ -355,5 +444,19 @@ useHead({
 .icon-6xl {
   width: 6rem;
   height: 6rem;
+}
+
+/* Animation pour l'icône de chargement */
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>
