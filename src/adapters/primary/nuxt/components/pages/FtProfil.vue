@@ -128,6 +128,7 @@ keycloakReady?.then(() => {
 
 // Uniquement les parties à modifier dans le fichier
 
+// Dans FtProfil.vue, assurez-vous de nettoyer l'URL avant de la sauvegarder:
 const login = () => {
   console.log('[FtProfil] Tentative de connexion...');
   // Récupérer le panier actuel
@@ -136,8 +137,14 @@ const login = () => {
   // Sauvegarder dans le localStorage
   localStorage.setItem('cart', JSON.stringify(cartVM.items));
   
-  // Sauvegarder l'URL actuelle pour redirection post-authentification
-  const currentUrl = window.location.href;
+  // Nettoyer et sauvegarder l'URL actuelle
+  let currentUrl = window.location.href;
+  // Nettoyer les fragments d'authentification
+  const hashIndex = currentUrl.indexOf('#state=');
+  if (hashIndex !== -1) {
+    currentUrl = currentUrl.substring(0, hashIndex);
+  }
+  
   console.log('[FtProfil] URL de redirection sauvegardée:', currentUrl);
   localStorage.setItem('redirectAfterLogin', currentUrl);
   

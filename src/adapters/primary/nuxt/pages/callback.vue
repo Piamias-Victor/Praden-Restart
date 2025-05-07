@@ -10,6 +10,19 @@
   <script setup>
   import { onMounted } from 'vue';
   
+  // Fonction pour nettoyer une URL en retirant les fragments d'authentification
+  const cleanUrl = (url) => {
+    if (!url) return url;
+    
+    // Si l'URL contient un fragment d'authentification (#state=...)
+    const hashIndex = url.indexOf('#state=');
+    if (hashIndex !== -1) {
+      return url.substring(0, hashIndex);
+    }
+    
+    return url;
+  };
+  
   onMounted(() => {
     console.log('[Callback] Page de callback chargée');
     
@@ -22,24 +35,38 @@
       console.log('[Callback] URL sauvegardée:', redirectUrl);
       console.log('[Callback] Paramètres de recherche:', searchParams);
       
-      // Nettoyer l'URL de redirection pour éviter les redirections cycliques
+      // Nettoyer l'URL de redirection
       localStorage.removeItem('redirectAfterLogin');
+      localStorage.removeItem('searchParams');
       
-      // Marquer que nous venons juste de nous authentifier
-      localStorage.setItem('justAuthenticated', 'true');
-      
-      // Redirection spéciale pour la page de recherche
+      // Si nous sommes sur la page de recherche avec une requête
       if (redirectUrl && redirectUrl.includes('/search') && searchParams) {
+        // Construire une URL propre sans aucun fragment d'authentification
         const baseUrl = window.location.origin + '/search';
         const finalUrl = baseUrl + '?' + searchParams;
-        console.log('[Callback] Redirection vers la page de recherche:', finalUrl);
+        console.log('[Callback] Redirection vers la page de recherche nettoyée:', finalUrl);
         
-        // Pour mobile, construire une URL propre sans aucune référence à l'authentification
-        window.location.replace(finalUrl);
+        // Stocker la requête directement pour la page de recherche
+        const params = new URLSearchParams(searchParams);
+        const searchQuery = params.get('q');
+        if (searchQuery) {
+          localStorage.setItem('pendingSearchQuery', searchQuery);
+          console.log('[Callback] Requête de recherche sauvegardée:', searchQuery);
+        }
+        
+        // Rediriger vers la page d'accueil d'abord pour empêcher les redirections cycliques
+        // puis laisser la page de recherche se charger correctement
+        window.location.replace('/');
+        
+        // Après un bref délai, rediriger vers la recherche
+        setTimeout(() => {
+          window.location.replace(finalUrl);
+        }, 100);
       } else if (redirectUrl) {
-        // Redirection standard
-        console.log('[Callback] Redirection standard vers:', redirectUrl);
-        window.location.replace(redirectUrl);
+        // Redirection standard vers une URL nettoyée
+        const cleanRedirectUrl = cleanUrl(redirectUrl);
+        console.log('[Callback] Redirection standard vers:', cleanRedirectUrl);
+        window.location.replace(cleanRedirectUrl);
       } else {
         // Aucune URL sauvegardée, retour à l'accueil
         console.log('[Callback] Aucune URL de redirection, retour à l\'accueil');

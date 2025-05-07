@@ -191,6 +191,21 @@ onMounted(async () => {
   if (searchInputElement.value) {
     searchInputElement.value.focus();
   }
+
+  const pendingSearchQuery = localStorage.getItem('pendingSearchQuery');
+if (pendingSearchQuery) {
+  console.log('[Search] Requête en attente trouvée:', pendingSearchQuery);
+  localStorage.removeItem('pendingSearchQuery');
+  
+  // Appliquer la requête
+  searchInput.value = pendingSearchQuery;
+  query.value = pendingSearchQuery;
+  
+  // Exécuter la recherche
+  setTimeout(() => {
+    executeSearch();
+  }, 300);
+}
 });
 
 // Fonction de recherche avec mise à jour de l'URL
