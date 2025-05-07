@@ -9,50 +9,43 @@
   
   <script setup>
   import { onMounted } from 'vue';
-  import { useRouter } from 'vue-router';
-  
-  const router = useRouter();
-  
-  const isMobile = () => {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  };
   
   onMounted(() => {
     console.log('[Callback] Page de callback chargée');
     
-    // Récupérer l'URL sauvegardée et les paramètres de recherche
-    const redirectUrl = localStorage.getItem('redirectAfterLogin');
-    const searchParams = localStorage.getItem('searchParams');
-    
-    console.log('[Callback] URL sauvegardée:', redirectUrl);
-    console.log('[Callback] Paramètres de recherche:', searchParams);
-    
-    // Marquer que nous venons juste de nous authentifier
-    localStorage.setItem('justAuthenticated', 'true');
-    
-    // Redirection spéciale pour la page de recherche sur mobile
-    if (redirectUrl && redirectUrl.includes('/search') && searchParams && isMobile()) {
-      const baseUrl = window.location.origin + '/search';
-      const finalUrl = baseUrl + '?' + searchParams;
-      console.log('[Callback] Redirection mobile vers:', finalUrl);
+    // Attendre un moment pour s'assurer que tout est chargé
+    setTimeout(() => {
+      // Récupérer l'URL sauvegardée et les paramètres de recherche
+      const redirectUrl = localStorage.getItem('redirectAfterLogin');
+      const searchParams = localStorage.getItem('searchParams');
       
-      // Léger délai pour éviter les redirections trop rapides
-      setTimeout(() => {
-        window.location.href = finalUrl;
-      }, 300);
-    } else if (redirectUrl) {
-      // Redirection standard
-      console.log('[Callback] Redirection standard vers:', redirectUrl);
-      setTimeout(() => {
-        window.location.href = redirectUrl;
-      }, 300);
-    } else {
-      // Aucune URL sauvegardée, retour à l'accueil
-      console.log('[Callback] Aucune URL de redirection, retour à l\'accueil');
-      setTimeout(() => {
-        window.location.href = '/';
-      }, 300);
-    }
+      console.log('[Callback] URL sauvegardée:', redirectUrl);
+      console.log('[Callback] Paramètres de recherche:', searchParams);
+      
+      // Nettoyer l'URL de redirection pour éviter les redirections cycliques
+      localStorage.removeItem('redirectAfterLogin');
+      
+      // Marquer que nous venons juste de nous authentifier
+      localStorage.setItem('justAuthenticated', 'true');
+      
+      // Redirection spéciale pour la page de recherche
+      if (redirectUrl && redirectUrl.includes('/search') && searchParams) {
+        const baseUrl = window.location.origin + '/search';
+        const finalUrl = baseUrl + '?' + searchParams;
+        console.log('[Callback] Redirection vers la page de recherche:', finalUrl);
+        
+        // Pour mobile, construire une URL propre sans aucune référence à l'authentification
+        window.location.replace(finalUrl);
+      } else if (redirectUrl) {
+        // Redirection standard
+        console.log('[Callback] Redirection standard vers:', redirectUrl);
+        window.location.replace(redirectUrl);
+      } else {
+        // Aucune URL sauvegardée, retour à l'accueil
+        console.log('[Callback] Aucune URL de redirection, retour à l\'accueil');
+        window.location.replace('/');
+      }
+    }, 500);
   });
   </script>
   

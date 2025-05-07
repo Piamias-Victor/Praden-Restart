@@ -134,7 +134,7 @@ export const createOrder = async (
 
     // Rediriger vers l'URL de la session Stripe
     if (order.payment && order.payment.sessionUrl) {
-      clearCart();
+      // clearCart();
       window.location.href = order.payment.sessionUrl;
     }
   } catch (error) {

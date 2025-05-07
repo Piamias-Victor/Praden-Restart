@@ -126,6 +126,8 @@ keycloakReady?.then(() => {
   console.error('[FtProfil] Erreur lors de l\'initialisation de Keycloak:', error);
 });
 
+// Uniquement les parties à modifier dans le fichier
+
 const login = () => {
   console.log('[FtProfil] Tentative de connexion...');
   // Récupérer le panier actuel
@@ -146,15 +148,15 @@ const login = () => {
     console.log('[FtProfil] Paramètres de recherche sauvegardés:', searchParamsString);
   }
 
-  // Redirection pour la connexion avec l'URL actuelle comme redirectUri
+  // Redirection pour la connexion avec la page de callback
   keycloak?.login({
-    redirectUri: window.location.href
+    redirectUri: window.location.origin + '/callback'
   }).catch((error) => {
     console.error('[FtProfil] Erreur lors de la connexion:', error);
   });
 };
 
-// Fonction inscription
+// Modifier également la fonction register
 const register = () => {
   // Sauvegarder l'URL actuelle pour redirection post-inscription
   const currentUrl = window.location.href;
@@ -167,7 +169,7 @@ const register = () => {
   }
   
   keycloak?.register({
-    redirectUri: window.location.href
+    redirectUri: window.location.origin + '/callback'
   }).catch((error) => {
     console.error("[FtProfil] Erreur lors de l'inscription :", error);
   });
