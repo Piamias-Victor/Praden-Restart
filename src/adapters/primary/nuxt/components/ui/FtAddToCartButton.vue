@@ -60,53 +60,89 @@ onMounted(async () => {
         hasMaxQuantity.value = true;
       }
     }
+    
+    // Initialisation sécurisée de cartQuantity
+    updateCartQuantity();
   } catch (error) {
     // Ignorer silencieusement, la limite ne sera tout simplement pas appliquée
     console.warn("Impossible de récupérer la quantité maximale pour ce produit", error);
   }
 });
 
+// Fonction pour mettre à jour la quantité du panier de manière sécurisée
+const updateCartQuantity = async () => {
+  try {
+    cartQuantity.value = await getCartQuantityVM(useProductGateway());
+    
+    // Vérifier si la quantité actuelle a atteint la limite
+    if (cartQuantity.value?.items) {
+      const currentQuantity = cartQuantity.value.items[props.productUuid] || 0;
+      
+      if (hasMaxQuantity.value && currentQuantity >= maxQuantity.value) {
+        showMaxQuantityMessage.value = true;
+      } else if (props.isMedicine && currentQuantity >= 5) {
+        showMaxQuantityMessage.value = true;
+      } else {
+        showMaxQuantityMessage.value = false;
+      }
+    }
+  } catch (error) {
+    console.error('Erreur lors de la mise à jour de la quantité du panier:', error);
+    // Initialiser avec des valeurs par défaut en cas d'erreur
+    cartQuantity.value = { items: {}, total: 0, medicineInfo: {} };
+  }
+};
+
 const removeItemFromCart = (uuid: string) => {
   showMaxQuantityMessage.value = false;
   removeFromCart(uuid);
+  // Mettre à jour le panier après suppression
+  setTimeout(() => updateCartQuantity(), 100);
 };
 
 const addItemToCart = async (uuid: string) => {
-  const currentQuantity = cartQuantity.value?.items?.[uuid] || 0;
-
-  // Pour les médicaments, limite fixe de 5
-  if (props.isMedicine && currentQuantity >= 5) {
-    limit.value = true;
-    showMaxQuantityMessage.value = true;
-    return;
-  }
-
-  // Limite personnalisée seulement si elle a été récupérée
-  if (hasMaxQuantity.value && currentQuantity >= maxQuantity.value) {
-    limit.value = true;
-    showMaxQuantityMessage.value = true;
-    return;
-  }
-
-  // Vérifier le stock disponible
-  if (props.availableStock !== undefined && currentQuantity >= props.availableStock) {
-    limit.value = true;
-    showMaxQuantityMessage.value = true;
-    return;
-  }
-
-  limit.value = false;
-  addToCart(uuid, productGateway);
-  sendUserNotif();
-  
-  // Tracking dataLayer add_to_cart
   try {
-    const product = await productGateway.getByUuid(uuid);
-    if (product) {
-      trackAddToCart(product, 1);
+    const currentQuantity = cartQuantity.value?.items?.[uuid] || 0;
+
+    // Pour les médicaments, limite fixe de 5
+    if (props.isMedicine && currentQuantity >= 5) {
+      limit.value = true;
+      showMaxQuantityMessage.value = true;
+      return;
     }
-  } catch (err) {
-    console.error('Erreur lors du tracking add_to_cart:', err);
+
+    // Limite personnalisée seulement si elle a été récupérée
+    if (hasMaxQuantity.value && currentQuantity >= maxQuantity.value) {
+      limit.value = true;
+      showMaxQuantityMessage.value = true;
+      return;
+    }
+
+    // Vérifier le stock disponible
+    if (props.availableStock !== undefined && currentQuantity >= props.availableStock) {
+      limit.value = true;
+      showMaxQuantityMessage.value = true;
+      return;
+    }
+
+    limit.value = false;
+    await addToCart(uuid, productGateway);
+    sendUserNotif();
+    
+    // Mettre à jour le panier après ajout
+    setTimeout(() => updateCartQuantity(), 100);
+    
+    // Tracking dataLayer add_to_cart
+    try {
+      const product = await productGateway.getByUuid(uuid);
+      if (product) {
+        trackAddToCart(product, 1);
+      }
+    } catch (err) {
+      console.error('Erreur lors du tracking add_to_cart:', err);
+    }
+  } catch (error) {
+    console.error('Erreur lors de l\'ajout au panier:', error);
   }
 };
 
@@ -135,20 +171,7 @@ const sendUserNotif = () => {
 
 watchEffect(async () => {
   try {
-    cartQuantity.value = await getCartQuantityVM(useProductGateway());
-    
-    // Vérifier si la quantité actuelle a atteint la limite
-    if (cartQuantity.value?.items) {
-      const currentQuantity = cartQuantity.value.items[props.productUuid] || 0;
-      
-      if (hasMaxQuantity.value && currentQuantity >= maxQuantity.value) {
-        showMaxQuantityMessage.value = true;
-      } else if (props.isMedicine && currentQuantity >= 5) {
-        showMaxQuantityMessage.value = true;
-      } else {
-        showMaxQuantityMessage.value = false;
-      }
-    }
+    await updateCartQuantity();
   } catch (error) {
     console.error('Erreur dans watchEffect:', error);
   }
