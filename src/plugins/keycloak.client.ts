@@ -9,6 +9,25 @@ import { listMyOrder } from '../../src/core/usecases/list-my-orders/listMyOrders
 import { myOrderGateway } from '../../gateways/myOrderGateway';
 
 export default defineNuxtPlugin((nuxtApp) => {
+  // Ne pas exécuter côté serveur
+  if (!process.client) {
+    console.log('[Keycloak Plugin] Exécution côté serveur ignorée');
+    const dummyKeycloak = {
+      authenticated: false,
+      token: null,
+      tokenParsed: null,
+      login: () => Promise.resolve(),
+      logout: () => Promise.resolve(),
+      register: () => Promise.resolve(),
+      updateToken: () => Promise.resolve(false),
+      init: () => Promise.resolve(false),
+    };
+    nuxtApp.provide('keycloak', dummyKeycloak);
+    nuxtApp.provide('keycloakReady', Promise.resolve());
+    nuxtApp.provide('debugKeycloak', () => false);
+    return;
+  }
+
   const { KEYCLOAK_URL, KEYCLOAK_REALM, KEYCLOAK_CLIENT_ID } = useRuntimeConfig().public;
   
   console.log('[Keycloak Plugin] Initialisation avec:', { 
@@ -17,62 +36,141 @@ export default defineNuxtPlugin((nuxtApp) => {
     clientId: KEYCLOAK_CLIENT_ID 
   });
 
+  // Création de l'instance Keycloak
   const keycloak = new Keycloak({
     url: KEYCLOAK_URL,
     realm: KEYCLOAK_REALM,
     clientId: KEYCLOAK_CLIENT_ID,
   });
 
-  const cartStore = useCartStore();
-  
-  // Détection si appareil mobile
-  const isMobile = () => {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  // Stockage pour suivre l'état de l'authentification et éviter les problèmes de déconnexion
+  const authState = {
+    isAuthenticating: false,
+    lastAuthCheck: 0,
+    refreshInterval: null as number | null,
   };
 
-  // Ajouter un écouteur d'événements pour les redirections
+  // Mettre en place le rafraîchissement automatique du token
+  const setupTokenRefresh = () => {
+    if (authState.refreshInterval) {
+      clearInterval(authState.refreshInterval);
+    }
+    
+    // Rafraîchir le token toutes les 30 secondes (plus fréquent que le défaut)
+    authState.refreshInterval = window.setInterval(async () => {
+      if (keycloak.authenticated) {
+        try {
+          // Essayer de rafraîchir 30 secondes avant l'expiration
+          const refreshed = await keycloak.updateToken(30);
+          if (refreshed) {
+            console.log('[Keycloak] Token rafraîchi avec succès');
+          }
+        } catch (error) {
+          console.error('[Keycloak] Erreur lors du rafraîchissement du token:', error);
+          // Ne pas arrêter l'intervalle - essayer encore au prochain cycle
+        }
+      }
+    }, 30000);
+  };
+
+  // Ajouter les écouteurs d'événements
   keycloak.onAuthSuccess = () => {
     console.log('[Keycloak] Authentification réussie');
-    // Nous laissons la page de callback gérer la redirection
+    authState.isAuthenticating = false;
+    
+    // Configurer le rafraîchissement automatique du token
+    setupTokenRefresh();
+    
+    // Restaurer le panier depuis localStorage après connexion
+    const cartStore = useCartStore();
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+      try {
+        const parsedCart = JSON.parse(savedCart);
+        console.log('[Keycloak] Restauration du panier sauvegardé:', parsedCart);
+        
+        // Utiliser la fonction restoreCart du store
+        cartStore.restoreCart(parsedCart);
+        
+        // Nettoyer le panier temporaire
+        localStorage.removeItem('cart');
+      } catch (error) {
+        console.error('[Keycloak] Erreur lors de la restauration du panier:', error);
+      }
+    }
   };
 
   keycloak.onAuthError = (error) => {
     console.error('[Keycloak] Erreur d\'authentification:', error);
+    authState.isAuthenticating = false;
+  };
+
+  keycloak.onAuthLogout = () => {
+    console.log('[Keycloak] Déconnexion');
+    authState.isAuthenticating = false;
+    if (authState.refreshInterval) {
+      clearInterval(authState.refreshInterval);
+      authState.refreshInterval = null;
+    }
   };
 
   keycloak.onTokenExpired = () => {
     console.log('[Keycloak] Token expiré, tentative de rafraîchissement...');
+    // La gestion de cet événement est déjà couverte par setupTokenRefresh
   };
 
+  // Fonction principale d'initialisation
   const keycloakReady = (async () => {
     try {
-      // Si nous sommes sur la page silent-check-sso ou la page callback, ne pas initialiser
+      // Éviter les réinitialisations pendant l'authentification
+      if (authState.isAuthenticating) {
+        console.log('[Keycloak] Déjà en cours d\'authentification, attente...');
+        return;
+      }
+      
+      // Éviter les vérifications trop fréquentes (limiter à une fois toutes les 2 secondes)
+      const now = Date.now();
+      if (now - authState.lastAuthCheck < 2000) {
+        console.log('[Keycloak] Vérification récente, attente...');
+        return;
+      }
+      authState.lastAuthCheck = now;
+      
+      // Ignorer l'initialisation sur les pages spéciales
       if (window.location.pathname === '/silent-check-sso.html' || window.location.pathname === '/callback') {
         console.log('[Keycloak] Sur une page spéciale, pas d\'initialisation');
         return;
       }
 
       console.log('[Keycloak] Tentative d\'initialisation...');
+      authState.isAuthenticating = true;
+      
+      // Initialiser avec options optimales pour la persistance
       const authenticated = await keycloak.init({
-        checkLoginIframe: false,
-        onLoad: 'check-sso',
+        checkLoginIframe: false,          // Désactiver pour éviter les problèmes de CORS
+        onLoad: 'check-sso',              // Vérifier l'authentification silencieusement
         silentCheckSsoRedirectUri: window.location.origin + '/silent-check-sso.html',
-        pkceMethod: 'S256',
+        pkceMethod: 'S256',               // Améliorer la sécurité
+        enableLogging: true,              // Activer les logs pour le débogage
+        responseMode: 'fragment',         // Mode compatible avec la plupart des navigateurs
+        flow: 'standard',                 // Flux standard OAuth/OIDC
       });
+      
+      authState.isAuthenticating = false;
       console.log('[Keycloak] Initialisation terminée. Authentifié:', authenticated);
-
+      
       if (authenticated) {
         console.log('[Keycloak] Token:', keycloak.token ? 'Présent' : 'Absent');
-        console.log('[Keycloak] Token Parse:', keycloak.tokenParsed);
         
-        const accessToken = keycloak.token;
-
+        // Configurer le rafraîchissement automatique du token
+        setupTokenRefresh();
+        
         // Récupération du profil utilisateur
         try {
           console.log('[Keycloak] Récupération du profil utilisateur...');
           const userProfile = await axios.get(`https://ecommerce-backend-production.admin-a5f.workers.dev/profile`, {
             headers: {
-              Authorization: `Bearer ${accessToken}`,
+              Authorization: `Bearer ${keycloak.token}`,
             },
           });
           console.log('[Keycloak] Profil utilisateur récupéré:', userProfile.data);
@@ -81,26 +179,28 @@ export default defineNuxtPlugin((nuxtApp) => {
           console.error('[Keycloak] Erreur lors de la récupération du profil utilisateur:', error);
         }
 
+        // Récupération des commandes utilisateur
         try {
           console.log('[Keycloak] Récupération des commandes...');
-          await listMyOrder(myOrderGateway(), accessToken);
+          await listMyOrder(myOrderGateway(), keycloak.token);
           console.log('[Keycloak] Commandes récupérées avec succès');
         } catch (error) {
           console.error('[Keycloak] Erreur lors de la récupération des commandes:', error);
         }
 
-        // **Restaurer le panier**
+        // Restauration du panier
+        const cartStore = useCartStore();
+        const productStore = useProductStore();
+        const productGateway = useProductGateway();
+        
+        // D'abord essayer de restaurer depuis 'cart' (panier temporaire pendant la connexion)
         const savedCart = localStorage.getItem('cart');
         if (savedCart) {
-          console.log('[Keycloak] Restauration du panier sauvegardé...');
+          console.log('[Keycloak] Restauration du panier sauvegardé temporaire...');
           try {
             const cartItems = JSON.parse(savedCart);
-            const productStore = useProductStore();
-            const productGateway = useProductGateway();
-
-            console.log('[Keycloak] Produits dans le panier:', Object.keys(cartItems).length);
             
-            // Itérer sur chaque produit dans savedCart
+            // Ajouter les produits au panier
             for (const [productUuid, productData] of Object.entries(cartItems)) {
               try {
                 // Ajouter le produit au cartStore autant de fois que la quantité
@@ -108,76 +208,119 @@ export default defineNuxtPlugin((nuxtApp) => {
                   cartStore.add(productUuid);
                 }
 
-                // Récupérer les détails du produit depuis le gateway
+                // Récupérer les détails du produit
                 const product = await productGateway.getByUuid(productUuid);
                 productStore.add(product);
-                console.log(`[Keycloak] Produit ${productUuid} ajouté au panier`);
               } catch (error) {
-                console.error(`[Keycloak] Erreur lors de la récupération ou de l'ajout du produit UUID: ${productUuid}`, error);
+                console.error(`[Keycloak] Erreur pour le produit ${productUuid}:`, error);
               }
             }
-
-            // Supprimer le panier sauvegardé de localStorage après restauration
+            
+            // Supprimer le panier temporaire après restauration
             localStorage.removeItem('cart');
-            console.log('[Keycloak] Panier restauré et sauvegarde supprimée');
+            console.log('[Keycloak] Panier temporaire restauré et supprimé');
           } catch (error) {
-            console.error('[Keycloak] Erreur lors de la restauration du panier:', error);
+            console.error('[Keycloak] Erreur lors de la restauration du panier temporaire:', error);
+          }
+        } 
+        // Sinon, essayer de charger depuis le stockage persistant
+        else {
+          console.log('[Keycloak] Vérification du panier persistant...');
+          // La méthode loadFromLocalStorage retournera true si un panier valide est trouvé
+          if (cartStore.loadFromLocalStorage && cartStore.loadFromLocalStorage()) {
+            console.log('[Keycloak] Panier persistant restauré');
+            
+            // Synchroniser les produits avec le store de produits
+            for (const productUuid of cartStore.items) {
+              try {
+                const product = await productGateway.getByUuid(productUuid);
+                productStore.add(product);
+              } catch (error) {
+                console.error(`[Keycloak] Erreur pour le produit ${productUuid}:`, error);
+              }
+            }
           }
         }
-
-        // Rafraîchissement du token
-        const intervalId = setInterval(async () => {
-          try {
-            const refreshed = await keycloak.updateToken(60);
-            if (refreshed) {
-              console.log('[Keycloak] Token rafraîchi avec succès');
-            }
-          } catch (err) {
-            console.error('[Keycloak] Échec du rafraîchissement du token', err);
-            clearInterval(intervalId);
-          }
-        }, 60000);
       } else {
         console.warn('[Keycloak] Utilisateur non authentifié');
+        
+        // Même si non authentifié, essayer de charger le panier persistant
+        const cartStore = useCartStore();
+        if (cartStore.loadFromLocalStorage && typeof cartStore.loadFromLocalStorage === 'function') {
+          cartStore.loadFromLocalStorage();
+        }
       }
     } catch (err) {
       console.error('[Keycloak] Échec de l\'initialisation', err);
       console.log('[Keycloak] URL actuelle lors de l\'erreur:', window.location.href);
       
+      authState.isAuthenticating = false;
+      
       if (err.error === 'login_required') {
-        console.log('[Keycloak] Login requis, tentative de connexion...');
-        // Rediriger vers la page de callback
-        try {
-          await keycloak.login({
-            redirectUri: window.location.origin + '/callback'
-          });
-        } catch (loginError) {
-          console.error('[Keycloak] Erreur lors de la tentative de connexion:', loginError);
-        }
+        console.log('[Keycloak] Login requis, redirection possible...');
+        // Ne pas automatiquement rediriger - laisser le bouton de connexion dans l'interface
       }
     }
   })();
 
+  // Fournir l'instance Keycloak et les fonctions utilitaires à l'application
   nuxtApp.provide('keycloak', keycloak);
   nuxtApp.provide('keycloakReady', keycloakReady);
   
-  // Ajouter une méthode utilitaire pour le débogage
+  // Utilitaire de débogage
   nuxtApp.provide('debugKeycloak', () => {
-    console.log('[Keycloak Debug]', {
+    const detailedInfo = {
       authenticated: keycloak.authenticated,
       token: keycloak.token ? 'Présent' : 'Absent',
       tokenExpired: keycloak.isTokenExpired(),
       tokenParsed: keycloak.tokenParsed,
       subject: keycloak.subject,
       idToken: keycloak.idToken ? 'Présent' : 'Absent',
+      refreshToken: keycloak.refreshToken ? 'Présent' : 'Absent',
       realmAccess: keycloak.realmAccess,
       resourceAccess: keycloak.resourceAccess,
       timeSkew: keycloak.timeSkew,
       responseMode: keycloak.responseMode,
       flow: keycloak.flow,
       adapter: keycloak.adapter,
-      isMobile: isMobile()
-    });
-    return true;
+      authState: { ...authState, refreshInterval: authState.refreshInterval !== null },
+      isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    };
+    
+    console.log('[Keycloak Debug]', detailedInfo);
+    return detailedInfo;
+  });
+  
+  // Ajouter une fonction pour réinitialiser manuellement l'authentification
+  nuxtApp.provide('reinitKeycloak', async () => {
+    console.log('[Keycloak] Réinitialisation manuelle...');
+    
+    // Arrêter l'intervalle de rafraîchissement s'il existe
+    if (authState.refreshInterval) {
+      clearInterval(authState.refreshInterval);
+      authState.refreshInterval = null;
+    }
+    
+    // Réinitialiser Keycloak
+    try {
+      await keycloak.init({
+        checkLoginIframe: false,
+        onLoad: 'check-sso',
+        silentCheckSsoRedirectUri: window.location.origin + '/silent-check-sso.html',
+        pkceMethod: 'S256',
+      });
+      
+      console.log('[Keycloak] Réinitialisation terminée. Authentifié:', keycloak.authenticated);
+      
+      // Relancer le rafraîchissement si authentifié
+      if (keycloak.authenticated) {
+        setupTokenRefresh();
+      }
+      
+      return keycloak.authenticated;
+    } catch (error) {
+      console.error('[Keycloak] Erreur lors de la réinitialisation:', error);
+      return false;
+    }
   });
 });
