@@ -52,59 +52,90 @@ export interface ProductsInCart {
 }
 
 export const getProductsInCart = (): ProductsInCart => {
-  const cartStore = useCartStore();
-  const productStore = useProductStore();
-  const deliveryStore = useDeliveryStore();
-  const cartItems = cartStore.items;
-  const products = productStore.items;
-  const productsInCart = cartItems.map((uuid: UUID) => products.find((product: Product) => uuid === product.uuid));
-  return productsInCart.reduce(
-    (acc: ProductsInCart, p: Product) => {
-      let quantity = 1;
-      let totalWeight = acc.totalWeight;
-      let total = acc.total;
-      let totalWithPromotion = acc.totalWithPromotion;
-      total += p.price;
-      totalWeight += p.weight;
-      const priceWithPromotion = getProductPriceWithPromotion(p);
-      totalWithPromotion += priceWithPromotion || p.price;
-      if (acc.items[p.uuid]) {
-        quantity = acc.items[p.uuid].quantity + 1;
-      }
-      return {
-        items: {
-          ...acc.items,
-          [p.uuid]: {
-            uuid: p.uuid,
-            name: p.name,
-            laboratory: p.laboratory,
-            unitPrice: p.price,
-            totalPrice: p.price * quantity,
-            totalPriceWithPromotion: priceWithPromotion! * quantity,
-            quantity,
-            img: p.images,
-            medecine: p.isMedicine,
-            weight: p.weight,
-            promotion: p.promotions[0],
-            noticeUrl: p?.noticeUrl,
+  try {
+    const cartStore = useCartStore();
+    const productStore = useProductStore();
+    const deliveryStore = useDeliveryStore();
+    const cartItems = cartStore.items;
+    const products = productStore.items;
+    
+    // Filtrer les produits indéfinis pour éviter les erreurs
+    const productsInCart = cartItems
+      .map((uuid: UUID) => products.find((product: Product) => uuid === product.uuid))
+      .filter((product): product is Product => product !== undefined);
+    
+    return productsInCart.reduce(
+      (acc: ProductsInCart, p: Product) => {
+        // Vérifier que le produit existe et a les propriétés nécessaires
+        if (!p) {
+          return acc;
+        }
+
+        // Utiliser des valeurs par défaut si les propriétés sont manquantes
+        const price = p.price ?? 0;
+        const weight = p.weight ?? 0;
+        
+        let quantity = 1;
+        let totalWeight = acc.totalWeight;
+        let total = acc.total;
+        let totalWithPromotion = acc.totalWithPromotion;
+        
+        total += price;
+        totalWeight += weight;
+        
+        // Obtenir le prix avec promotion de manière sécurisée
+        const priceWithPromotion = getProductPriceWithPromotion(p);
+        totalWithPromotion += priceWithPromotion || price;
+        
+        if (acc.items[p.uuid]) {
+          quantity = acc.items[p.uuid].quantity + 1;
+        }
+        
+        return {
+          items: {
+            ...acc.items,
+            [p.uuid]: {
+              uuid: p.uuid,
+              name: p.name || '',
+              laboratory: p.laboratory || '',
+              unitPrice: price,
+              totalPrice: price * quantity,
+              totalPriceWithPromotion: priceWithPromotion ? priceWithPromotion * quantity : undefined,
+              quantity,
+              img: p.images || '',
+              medecine: p.isMedicine || false,
+              weight: weight,
+              promotion: p.promotions && p.promotions.length > 0 ? p.promotions[0] : undefined,
+              noticeUrl: p.noticeUrl || '',
+            },
           },
-        },
-        total,
-        totalWithPromotion,
-        totalWeight,
-        // totalWithDelivery: getTotalWithDelivery(total, totalWeight, ),
-        freeDelivery: getFreeDelivery(total),
-      };
-    },
-    {
+          total,
+          totalWithPromotion,
+          totalWeight,
+          freeDelivery: getFreeDelivery(total),
+        };
+      },
+      {
+        items: {},
+        total: 0,
+        totalWithPromotion: 0,
+        totalWithDelivery: 0,
+        totalWeight: 0,
+        freeDelivery: 6900,
+      } as ProductsInCart,
+    );
+  } catch (error) {
+    console.error('Erreur dans getProductsInCart:', error);
+    // Retourner un objet par défaut en cas d'erreur
+    return {
       items: {},
       total: 0,
       totalWithPromotion: 0,
       totalWithDelivery: 0,
       totalWeight: 0,
       freeDelivery: 6900,
-    } as ProductsInCart,
-  );
+    };
+  }
 };
 
 /**
@@ -114,16 +145,31 @@ export const getProductsInCart = (): ProductsInCart => {
  * @returns Le prix de livraison applicable.
  */
 export const getDeliveryPrice = (method: DeliveryMethod, weight: number, total: number, medecine: boolean): number => {
-  // Trouve la tranche de poids appropriée
+  try {
+    // Vérifier que les paramètres nécessaires existent
+    if (!method) {
+      return 0;
+    }
+    
+    if (method.uuid === '505209a2-7acb-4891-b933-e084d786d7ea' && total > 6900 && weight < 5000 && medecine === false) {
+      return 0; // Livraison gratuite
+    }
 
-  if (method.uuid === '505209a2-7acb-4891-b933-e084d786d7ea' && total > 6900 && weight < 5000 && medecine === false) {
-    return 0; // Livraison gratuite
+    // Vérifier que priceRanges existe et est un tableau
+    if (!method.priceRanges || !Array.isArray(method.priceRanges)) {
+      return 0;
+    }
+
+    const applicableRange = method.priceRanges.find((range) => 
+      range && weight >= (range.minWeight || 0) && weight <= (range.maxWeight || Infinity)
+    );
+
+    // Si une tranche est trouvée, retourne son prix, sinon retourne 0 ou une valeur par défaut
+    return applicableRange ? (applicableRange.price || 0) : 0;
+  } catch (error) {
+    console.error('Erreur dans getDeliveryPrice:', error);
+    return 0;
   }
-
-  const applicableRange = method.priceRanges.find((range) => weight >= range.minWeight && weight <= range.maxWeight);
-
-  // Si une tranche est trouvée, retourne son prix, sinon retourne 0 ou une valeur par défaut
-  return applicableRange ? applicableRange.price : 0;
 };
 
 /**
@@ -133,101 +179,130 @@ export const getDeliveryPrice = (method: DeliveryMethod, weight: number, total: 
  * @returns Le total incluant la livraison.
  */
 export const getTotalWithDelivery = (total: number, totalWeight: number, medecine: boolean): number => {
-  const deliveryStore = useDeliveryStore();
-  const selectedMethod = deliveryStore.selected;
+  try {
+    const deliveryStore = useDeliveryStore();
+    const selectedMethod = deliveryStore.selected;
 
-  // Vérifie si une méthode de livraison est sélectionnée
-  if (!selectedMethod) {
-    // Gérer le cas où aucune méthode de livraison n'est sélectionnée
-    // Par exemple, retourner le total sans ajout de livraison
-    return total;
+    // Vérifie si une méthode de livraison est sélectionnée
+    if (!selectedMethod) {
+      // Gérer le cas où aucune méthode de livraison n'est sélectionnée
+      return total;
+    }
+
+    // Calcule le prix de livraison basé sur le poids
+    const deliveryPrice = getDeliveryPrice(selectedMethod, totalWeight, total, medecine);
+
+    // Retourne le total incluant le prix de livraison
+    return total + deliveryPrice;
+  } catch (error) {
+    console.error('Erreur dans getTotalWithDelivery:', error);
+    return total; // En cas d'erreur, retourner le total sans livraison
   }
-
-  // Vérifie si la livraison est gratuite pour "Point Relais" lorsque le total dépasse 6900
-  // if (total > 6900 && selectedMethod.name === 'Point Relais') {
-  //   return total;
-  // }
-
-  // Calcule le prix de livraison basé sur le poids
-  const deliveryPrice = getDeliveryPrice(selectedMethod, totalWeight, total, medecine);
-
-  // Retourne le total incluant le prix de livraison
-  return total + deliveryPrice;
 };
 
 export const getFreeDelivery = (total: number): number => {
-  const res = 6900 - total;
-  if (res > 0) return res;
-  return 0;
+  try {
+    const res = 6900 - total;
+    if (res > 0) return res;
+    return 0;
+  } catch (error) {
+    console.error('Erreur dans getFreeDelivery:', error);
+    return 6900; // Valeur par défaut en cas d'erreur
+  }
 };
 
 export const createCartItemsVMFromCartItems = (items: HashTable<CartItem>): HashTable<CartItemVM> => {
-  const formatter = priceFormatter('fr-FR', 'EUR');
-  const itemsVM: HashTable<CartItemVM> = {};
-  Object.keys(items).forEach((key) => {
-    const item = items[key];
-    itemsVM[key] = {
-      uuid: item.uuid,
-      name: item.name,
-      laboratory: item.laboratory,
-      totalPrice: formatter.format(item.totalPrice / 100),
-      freeDelivery: formatter.format(getFreeDelivery(item.totalPrice) / 100),
-      quantity: item.quantity,
-      img: item.img,
-      weight: item.weight,
-      medecine: item.medecine,
-      noticeUrl: item?.noticeUrl,
-    };
-    if (item.totalPriceWithPromotion) {
-      itemsVM[key].totalPriceWithPromotion = formatter.format(item.totalPriceWithPromotion / 100);
+  try {
+    const formatter = priceFormatter('fr-FR', 'EUR');
+    const itemsVM: HashTable<CartItemVM> = {};
+    
+    // Vérifier que items existe
+    if (!items) {
+      return {};
     }
-  });
-  return itemsVM;
+    
+    Object.keys(items).forEach((key) => {
+      try {
+        const item = items[key];
+        
+        // Vérifier que l'item existe
+        if (!item) {
+          return;
+        }
+        
+        itemsVM[key] = {
+          uuid: item.uuid || '',
+          name: item.name || '',
+          laboratory: item.laboratory || '',
+          totalPrice: formatter.format((item.totalPrice || 0) / 100),
+          freeDelivery: formatter.format(getFreeDelivery(item.totalPrice || 0) / 100),
+          quantity: item.quantity || 0,
+          img: item.img || '',
+          weight: item.weight || 0,
+          medecine: item.medecine || false,
+          noticeUrl: item.noticeUrl || '',
+          totalPriceWithDelivery: '',  // Sera défini plus tard
+        };
+        
+        if (item.totalPriceWithPromotion) {
+          itemsVM[key].totalPriceWithPromotion = formatter.format(item.totalPriceWithPromotion / 100);
+        }
+      } catch (itemError) {
+        console.error(`Erreur lors du traitement de l'item ${key}:`, itemError);
+      }
+    });
+    
+    return itemsVM;
+  } catch (error) {
+    console.error('Erreur dans createCartItemsVMFromCartItems:', error);
+    return {}; // Objet vide en cas d'erreur
+  }
 };
 
 export const getCartVM = (): CartVM => {
-  const formatter = priceFormatter('fr-FR', 'EUR');
-  const deliveryStore = useDeliveryStore();
-  const selectedMethod = deliveryStore.selected;
-  const { items, total, totalWithPromotion, totalWithDelivery, totalWeight } = getProductsInCart();
-
-  const res: CartVM = {
-    items: createCartItemsVMFromCartItems(items),
-    totalPrice: formatter.format(total / 100),
-    totalPriceWithDelivery: formatter.format(
-      getTotalWithDelivery(
-        total,
-        totalWeight,
-        Object.values(createCartItemsVMFromCartItems(items)).some((item: any) => item.medecine === true),
-      ) / 100,
-    ),
-    freeDelivery: formatter.format(getFreeDelivery(total) / 100),
-    DeliveryPrice: formatter.format(
-      getDeliveryPrice(
-        selectedMethod!,
-        totalWeight,
-        total,
-        Object.values(createCartItemsVMFromCartItems(items)).some((item: any) => item.medecine === true),
-      ) / 100,
-    ),
-  };
-  if (total != totalWithPromotion) {
-    res.totalPriceWithPromotion = formatter.format(
-      getTotalWithDelivery(
-        totalWithPromotion,
-        totalWeight,
-        Object.values(createCartItemsVMFromCartItems(items)).some((item: any) => item.medecine === true),
-      ) / 100,
-    );
-    res.DeliveryPrice = formatter.format(
-      getDeliveryPrice(
-        selectedMethod!,
-        totalWeight,
-        totalWithPromotion,
-        Object.values(createCartItemsVMFromCartItems(items)).some((item: any) => item.medecine === true),
-      ) / 100,
-    );
-    res.freeDelivery = formatter.format(getFreeDelivery(totalWithPromotion) / 100);
+  try {
+    const formatter = priceFormatter('fr-FR', 'EUR');
+    const deliveryStore = useDeliveryStore();
+    const selectedMethod = deliveryStore.selected || null;
+    
+    // Obtenir les produits du panier de manière sécurisée
+    const { items, total, totalWithPromotion, totalWeight } = getProductsInCart();
+    
+    // Vérifier si le panier contient des médicaments de manière sécurisée
+    const hasMedicine = Object.values(items).some((item: CartItem) => item && item.medecine === true);
+    
+    // Créer un objet CartVM par défaut
+    const res: CartVM = {
+      items: createCartItemsVMFromCartItems(items),
+      totalPrice: formatter.format(total / 100),
+      totalPriceWithDelivery: formatter.format(getTotalWithDelivery(total, totalWeight, hasMedicine) / 100),
+      freeDelivery: formatter.format(getFreeDelivery(total) / 100),
+      DeliveryPrice: selectedMethod 
+        ? formatter.format(getDeliveryPrice(selectedMethod, totalWeight, total, hasMedicine) / 100)
+        : formatter.format(0),
+    };
+    
+    // Ajouter le prix avec promotion si différent du prix normal
+    if (total !== totalWithPromotion) {
+      res.totalPriceWithPromotion = formatter.format(getTotalWithDelivery(totalWithPromotion, totalWeight, hasMedicine) / 100);
+      
+      if (selectedMethod) {
+        res.DeliveryPrice = formatter.format(getDeliveryPrice(selectedMethod, totalWeight, totalWithPromotion, hasMedicine) / 100);
+      }
+      
+      res.freeDelivery = formatter.format(getFreeDelivery(totalWithPromotion) / 100);
+    }
+    
+    return res;
+  } catch (error) {
+    console.error('Erreur dans getCartVM:', error);
+    // Retourner un objet CartVM par défaut en cas d'erreur
+    return {
+      items: {},
+      totalPrice: '0,00 €',
+      totalPriceWithDelivery: '0,00 €',
+      freeDelivery: '69,00 €',
+      DeliveryPrice: '0,00 €',
+    };
   }
-  return res;
 };
