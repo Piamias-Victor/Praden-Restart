@@ -133,7 +133,7 @@
   <script lang="ts" setup>
   import { ref, computed, onMounted, onBeforeUnmount, reactive } from 'vue';
   import { getChildCategoriesVM } from '../../../viewModels/get-category/getChildCategoryVM.js';
-    
+
   const props = defineProps<{
     categoriesVM: any;
   }>();
@@ -400,6 +400,10 @@
   
   // Nettoyer les timers et écouteurs d'événements à la destruction du composant
   onBeforeUnmount(() => {
+    const checkMobile = () => {
+      isMobile.value = window.innerWidth < 768;
+    };
+    
     cancelIntentTimer();
     
     if (closeTimer.value) {

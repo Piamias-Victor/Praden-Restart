@@ -86,6 +86,11 @@ const ordoOpened = ref(false);
 const addressOpened = ref(false);
 const orderOpened = ref(false);
 
+// Détection si appareil mobile
+const isMobile = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+};
+
 // Fermeture modale
 const emit = defineEmits<{
   (e: 'close'): void;
@@ -109,15 +114,20 @@ const user = ref<{ firstName?: string }>({});
 
 // Vérification de l'authentification
 keycloakReady?.then(() => {
+  console.log('[FtProfil] Keycloak prêt, authentifié:', keycloak.authenticated);
   isAuthenticated.value = keycloak.authenticated;
   if (isAuthenticated.value) {
     user.value = {
       firstName: keycloak.tokenParsed?.given_name || '',
     };
+    console.log('[FtProfil] Nom d\'utilisateur récupéré:', user.value.firstName);
   }
+}).catch(error => {
+  console.error('[FtProfil] Erreur lors de l\'initialisation de Keycloak:', error);
 });
 
 const login = () => {
+  console.log('[FtProfil] Tentative de connexion...');
   // Récupérer le panier actuel
   const cartVM = getCartVM();
 
@@ -125,25 +135,41 @@ const login = () => {
   localStorage.setItem('cart', JSON.stringify(cartVM.items));
   
   // Sauvegarder l'URL actuelle pour redirection post-authentification
-  localStorage.setItem('redirectAfterLogin', window.location.href);
+  const currentUrl = window.location.href;
+  console.log('[FtProfil] URL de redirection sauvegardée:', currentUrl);
+  localStorage.setItem('redirectAfterLogin', currentUrl);
+  
+  // Si nous sommes sur la page de recherche, sauvegarder les paramètres de recherche
+  if (window.location.pathname === '/search') {
+    const searchParamsString = window.location.search.substring(1); // Supprimer le '?' initial
+    localStorage.setItem('searchParams', searchParamsString);
+    console.log('[FtProfil] Paramètres de recherche sauvegardés:', searchParamsString);
+  }
 
   // Redirection pour la connexion avec l'URL actuelle comme redirectUri
   keycloak?.login({
     redirectUri: window.location.href
   }).catch((error) => {
-    console.error('Erreur lors de la connexion :', error);
+    console.error('[FtProfil] Erreur lors de la connexion:', error);
   });
 };
 
 // Fonction inscription
 const register = () => {
   // Sauvegarder l'URL actuelle pour redirection post-inscription
-  localStorage.setItem('redirectAfterLogin', window.location.href);
+  const currentUrl = window.location.href;
+  localStorage.setItem('redirectAfterLogin', currentUrl);
+  
+  // Si nous sommes sur la page de recherche, sauvegarder les paramètres de recherche
+  if (window.location.pathname === '/search') {
+    const searchParamsString = window.location.search.substring(1);
+    localStorage.setItem('searchParams', searchParamsString);
+  }
   
   keycloak?.register({
     redirectUri: window.location.href
   }).catch((error) => {
-    console.error("Erreur lors de l'inscription :", error);
+    console.error("[FtProfil] Erreur lors de l'inscription :", error);
   });
 };
 
@@ -152,7 +178,7 @@ const logout = () => {
   keycloak?.logout({ 
     redirectUri: window.location.origin 
   }).catch((error) => {
-    console.error('Erreur lors de la déconnexion :', error);
+    console.error('[FtProfil] Erreur lors de la déconnexion :', error);
   });
 };
 

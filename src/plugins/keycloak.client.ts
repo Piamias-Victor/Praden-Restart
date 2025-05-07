@@ -24,10 +24,48 @@ export default defineNuxtPlugin((nuxtApp) => {
   });
 
   const cartStore = useCartStore();
+  
+  // Détection si appareil mobile
+  const isMobile = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  };
 
   // Ajouter un écouteur d'événements pour les redirections
   keycloak.onAuthSuccess = () => {
     console.log('[Keycloak] Authentification réussie');
+    
+    // Récupérer l'URL sauvegardée et les paramètres de recherche
+    const savedUrl = localStorage.getItem('redirectAfterLogin');
+    const searchParams = localStorage.getItem('searchParams');
+    
+    console.log('[Keycloak] URL sauvegardée après authentification:', savedUrl);
+    console.log('[Keycloak] Paramètres de recherche:', searchParams);
+    
+    // Si nous avons une URL et des paramètres, et que nous sommes sur mobile
+    if (savedUrl && savedUrl.includes('/search') && searchParams && isMobile()) {
+      console.log('[Keycloak] Redirection mobile avec paramètres de recherche');
+      // Marquer que nous venons juste de nous authentifier
+      localStorage.setItem('justAuthenticated', 'true');
+      
+      // Pour éviter les redirections cycliques, rediriger vers l'URL de base
+      const baseUrl = window.location.origin + '/search';
+      const finalUrl = baseUrl + '?' + searchParams;
+      
+      // Utiliser un court délai pour éviter les problèmes de redirection trop rapides
+      setTimeout(() => {
+        window.location.href = finalUrl;
+      }, 300);
+    } else if (savedUrl) {
+      console.log('[Keycloak] Redirection standard vers:', savedUrl);
+      
+      // Utiliser un court délai
+      setTimeout(() => {
+        window.location.href = savedUrl;
+      }, 300);
+    }
+    
+    // Nettoyer pour éviter les redirections cycliques
+    localStorage.removeItem('redirectAfterLogin');
   };
 
   keycloak.onAuthError = (error) => {
@@ -40,6 +78,12 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   const keycloakReady = (async () => {
     try {
+      // Si nous sommes sur la page silent-check-sso, ne pas initialiser
+      if (window.location.pathname === '/silent-check-sso.html') {
+        console.log('[Keycloak] Sur la page silent-check-sso, pas d\'initialisation');
+        return;
+      }
+
       // Récupérer l'URL sauvegardée pour la redirection
       const redirectUrl = localStorage.getItem('redirectAfterLogin');
       console.log('[Keycloak] URL de redirection sauvegardée:', redirectUrl);
@@ -47,7 +91,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       
       console.log('[Keycloak] Tentative d\'initialisation...');
       const authenticated = await keycloak.init({
-        checkLoginIframe: false, // Désactiver ceci temporairement peut aider
+        checkLoginIframe: false, // Désactiver ceci pour éviter des problèmes
         enableLogging: true, // Activer les logs internes de Keycloak
         onLoad: 'check-sso', // Ne tente pas de connexion automatique
         silentCheckSsoRedirectUri: window.location.origin + '/silent-check-sso.html',
@@ -58,9 +102,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       if (authenticated) {
         console.log('[Keycloak] Token:', keycloak.token ? 'Présent' : 'Absent');
         console.log('[Keycloak] Token Parse:', keycloak.tokenParsed);
-        
-        // Nettoyer l'URL sauvegardée après authentification réussie
-        localStorage.removeItem('redirectAfterLogin');
         
         const accessToken = keycloak.token;
 
@@ -136,6 +177,15 @@ export default defineNuxtPlugin((nuxtApp) => {
         }, 60000);
       } else {
         console.warn('[Keycloak] Utilisateur non authentifié');
+        
+        // Vérifier si nous venons de nous authentifier
+        if (localStorage.getItem('justAuthenticated') === 'true') {
+          console.log('[Keycloak] Authentification détectée mais token non présent, nouvelle tentative...');
+          localStorage.removeItem('justAuthenticated');
+          
+          // Recharger la page pour réessayer
+          window.location.reload();
+        }
       }
     } catch (err) {
       console.error('[Keycloak] Échec de l\'initialisation', err);
@@ -175,7 +225,8 @@ export default defineNuxtPlugin((nuxtApp) => {
       timeSkew: keycloak.timeSkew,
       responseMode: keycloak.responseMode,
       flow: keycloak.flow,
-      adapter: keycloak.adapter
+      adapter: keycloak.adapter,
+      isMobile: isMobile()
     });
     return true;
   });

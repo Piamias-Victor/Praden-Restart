@@ -64,212 +64,281 @@
       ft-panel2(v-if="filterOpened" @close="closeFilter" @sortBy="sortBy" @searchLaboratory="searchLaboratory" @searchPrice="searchPrice" :facetsVM="facetsVM" :sortType="sortType" :laboratoryFilter="laboratoryFilter")
   </template>
   
-  <script lang="ts" setup>
-  import { useRoute, useRouter } from 'vue-router';
-  import { ref, computed, onMounted, watch, nextTick } from 'vue';
-  import { searchProduct } from '@core/usecases/search-product/searchProduct';
-  import { searchGateway } from '../../../../../gateways/searchGateway';
-  import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM';
-  import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
-  import { SortType } from '@utils/sort';
-  import { getFacetsVM } from '@adapters/primary/viewModels/get-facets/getFacetsVM';
-  import { listCategories } from '@core/usecases/list-categories/listCategories';
-  import { categoryGateway } from '../../../../../gateways/categoryGateway';
-  import { getLaboratoryByName } from '@adapters/primary/viewModels/get-laboratory/getLaboratoryVM';
-  import { listDeliveryMethods } from '@core/usecases/delivery-methods-listing/listDeliveryMethods';
-  import { listPromotions, listBestSales } from '@core/usecases/list-promotions/listPromotions';
-  import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
-  import { laboratoryGateway } from '../../../../../gateways/laboratoryGateway';
-  import { bannerGateway } from '../../../../../gateways/bannerGateway';
-  import { useProductGateway } from '../../../../../gateways/productGateway';
-  import { listBanner } from '@core/usecases/list-banner/listBanner';
-  import deliveryGateway from '../../../../../gateways/deliveryGateway';
+<script lang="ts" setup>
+import { useRoute, useRouter } from 'vue-router';
+import { ref, computed, onMounted, watch, nextTick } from 'vue';
+import { searchProduct } from '@core/usecases/search-product/searchProduct';
+import { searchGateway } from '../../../../../gateways/searchGateway';
+import { getSearchResultVM } from '@adapters/primary/viewModels/get-search-result/getSearchResultVM';
+import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
+import { SortType } from '@utils/sort';
+import { getFacetsVM } from '@adapters/primary/viewModels/get-facets/getFacetsVM';
+import { listCategories } from '@core/usecases/list-categories/listCategories';
+import { categoryGateway } from '../../../../../gateways/categoryGateway';
+import { getLaboratoryByName } from '@adapters/primary/viewModels/get-laboratory/getLaboratoryVM';
+import { listDeliveryMethods } from '@core/usecases/delivery-methods-listing/listDeliveryMethods';
+import { listPromotions, listBestSales } from '@core/usecases/list-promotions/listPromotions';
+import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
+import { laboratoryGateway } from '../../../../../gateways/laboratoryGateway';
+import { bannerGateway } from '../../../../../gateways/bannerGateway';
+import { useProductGateway } from '../../../../../gateways/productGateway';
+import { listBanner } from '@core/usecases/list-banner/listBanner';
+import deliveryGateway from '../../../../../gateways/deliveryGateway';
+import { useNuxtApp } from '#app';
+
+definePageMeta({ layout: 'main' });
+
+const route = useRoute();
+const router = useRouter();
+
+// État local
+const searchInput = ref('');
+const query = ref('');
+const searchDone = ref(false);
+const dropdownOpen = ref(false);
+const filterOpened = ref(false);
+const sortType = ref(SortType.None);
+const laboratoryFilter = ref<Array<string>>([]);
+const priceFilter = ref<any>(null);
+const searchInputElement = ref<HTMLInputElement | null>(null);
+
+// État pour le débogage
+const showDebug = ref(false); // Mettre à false en production
+const isAuthenticated = ref(false);
+const currentUrl = ref('');
+
+// Accès aux fonctions Keycloak 
+const nuxtApp = useNuxtApp();
+const keycloak = nuxtApp.$keycloak;
+const keycloakDebugger = nuxtApp.$debugKeycloak;
+
+// Fonction pour déboguer Keycloak
+const triggerDebugKeycloak = () => {
+  console.log('[Search] Débogage Keycloak');
+  if (keycloakDebugger) {
+    keycloakDebugger();
+  } else {
+    console.log('[Search] Fonction de débogage Keycloak non disponible');
+  }
+};
+
+// Détection si appareil mobile
+const isMobile = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+};
+
+// Charger les données nécessaires
+onMounted(async () => {
+  console.log('[Search] Page de recherche chargée');
+  currentUrl.value = window.location.href;
   
-  definePageMeta({ layout: 'main' });
-  
-  const route = useRoute();
-  const router = useRouter();
-  
-  // État local
-  const searchInput = ref('');
-  const query = ref('');
-  const searchDone = ref(false);
-  const dropdownOpen = ref(false);
-  const filterOpened = ref(false);
-  const sortType = ref(SortType.None);
-  const laboratoryFilter = ref<Array<string>>([]);
-  const priceFilter = ref<any>(null);
-  const searchInputElement = ref<HTMLInputElement | null>(null);
-  
-  // Charger les données nécessaires
-  onMounted(async () => {
-    listCategories(categoryGateway());
-    listDeliveryMethods(deliveryGateway);
-    listLaboratories(laboratoryGateway());
-    listPromotions(useProductGateway());
-    listBanner(bannerGateway());
-    listBestSales(useProductGateway());
+  // Vérification de l'état Keycloak
+  if (keycloak) {
+    isAuthenticated.value = keycloak.authenticated || false;
+    console.log('[Search] État d\'authentification à l\'initialisation:', isAuthenticated.value);
+  }
+
+  // Chargement des données initiales
+  listCategories(categoryGateway());
+  listDeliveryMethods(deliveryGateway);
+  listLaboratories(laboratoryGateway());
+  listPromotions(useProductGateway());
+  listBanner(bannerGateway());
+  listBestSales(useProductGateway());
+
+  // Vérifier si nous venons juste de nous authentifier (après une redirection)
+  const justAuthenticated = localStorage.getItem('justAuthenticated');
+  console.log('[Search] Indicateur justAuthenticated:', justAuthenticated);
+
+  if (justAuthenticated === 'true') {
+    console.log('[Search] Détection de retour après authentification');
+    localStorage.removeItem('justAuthenticated');
     
+    // Restaurer les paramètres de recherche sauvegardés
+    const savedParams = localStorage.getItem('searchParams');
+    console.log('[Search] Paramètres de recherche sauvegardés:', savedParams);
+    
+    if (savedParams) {
+      // Extraire le paramètre q des searchParams
+      const params = new URLSearchParams(savedParams);
+      const savedQuery = params.get('q');
+      
+      if (savedQuery) {
+        console.log('[Search] Restauration de la requête:', savedQuery);
+        searchInput.value = savedQuery;
+        query.value = savedQuery;
+        // Exécuter la recherche 
+        setTimeout(() => {
+          executeSearch();
+        }, 300);
+      }
+      
+      localStorage.removeItem('searchParams');
+    }
+  } else {
+    // Comportement normal: récupérer la recherche depuis l'URL
     const searchQuery = route.query.q as string;
     if (searchQuery) {
+      console.log('[Search] Récupération de la requête depuis l\'URL:', searchQuery);
       query.value = searchQuery;
       searchInput.value = searchQuery;
       executeSearch();
     }
-    
-    // Mettre le focus sur l'input de recherche après le rendu du DOM
-    await nextTick();
-    if (searchInputElement.value) {
-      searchInputElement.value.focus();
-    }
-  });
-  
-  // Fonction de recherche avec mise à jour de l'URL
-  const executeSearch = async () => {
-    query.value = searchInput.value;
-    
-    // Utiliser router.push avec option replace pour éviter des problèmes 
-    // d'historique pendant la redirection Keycloak
-    if (query.value) {
-      router.replace({ 
-        path: '/search',
-        query: { 
-          ...route.query,
-          q: query.value
-        }
-      });
-      
-      await searchProduct(query.value, searchGateway());
-    } else {
-      // Si pas de requête, supprimer les paramètres
-      router.replace({ 
-        path: '/search',
-        query: {}
-      });
-    }
-    
-    searchDone.value = true;
-  };
-  
-  // Fonction de recherche avec debounce
-  let debounceTimeout: ReturnType<typeof setTimeout> | null = null;
-  const debouncedSearch = () => {
-    if (debounceTimeout) {
-      clearTimeout(debounceTimeout);
-    }
-    
-    debounceTimeout = setTimeout(() => {
-      executeSearch();
-    }, 500);
-  };
-  
-  // Toggle dropdown
-  const toggleDropdown = () => {
-    dropdownOpen.value = !dropdownOpen.value;
-  };
-  
-  // Ouvrir/fermer le filtre
-  const openFilter = () => {
-    filterOpened.value = true;
-  };
-  
-  const closeFilter = () => {
-    filterOpened.value = false;
-  };
-  
-  // Fonctions de filtrage
-  const sortBy = (st: number) => {
-    if (sortType.value === st) {
-      sortType.value = SortType.None;
-    } else {
-      sortType.value = st;
-    }
-    dropdownOpen.value = false;
-  };
-  
-  const searchLaboratory = (labo: string | null) => {
-    if (!labo) {
-      laboratoryFilter.value = [];
-    } else if (!laboratoryFilter.value.includes(labo)) {
-      laboratoryFilter.value.push(labo);
-    } else {
-      laboratoryFilter.value = laboratoryFilter.value.filter((item) => item !== labo);
-    }
-  };
-  
-  const searchPrice = (price: any) => {
-    priceFilter.value = price;
-  };
-  
-  // Données calculées
-  const categoriesVM = computed(() => {
-    return getRootCategoriesVM();
-  });
-  
-  const searchVM = computed(() => {
-    return getSearchResultVM(sortType.value);
-  });
-  
-  const facetsVM = computed(() => getFacetsVM());
-  
-  // Produits filtrés avec application des filtres
-  const filteredProducts = computed(() => {
-    getLaboratoryByName(laboratoryFilter.value, query.value, searchGateway());
-    let res = searchVM.value.items || [];
-    
-    if (priceFilter.value) {
-      const parsePrice = (priceString: string) => {
-        const cleanedString = priceString.replace(/[^0-9,]/g, '').replace(',', '.');
-        return Math.round(parseFloat(cleanedString) * 100);
-      };
-      
-      res = res.filter(
-        (product) =>
-          parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1]
-      );
-    }
-    
-    return res;
-  });
-  
-  // SEO
-  useHead({
-    title: query.value 
-      ? `Recherche: ${query.value} | Pharmacie Agnès Praden` 
-      : 'Recherche | Pharmacie Agnès Praden',
-    meta: [
-      {
-        name: 'description',
-        content: query.value 
-          ? `Résultats de recherche pour "${query.value}" sur la pharmacie en ligne Agnès Praden à Alès.` 
-          : 'Recherchez parmi notre vaste gamme de produits pharmaceutiques et parapharmaceutiques.'
-      },
-      {
-        name: 'og:title',
-        content: query.value 
-          ? `Recherche: ${query.value} | Pharmacie Agnès Praden` 
-          : 'Recherche | Pharmacie Agnès Praden'
-      },
-      {
-        name: 'og:description',
-        content: query.value 
-          ? `Découvrez nos produits correspondant à "${query.value}" sur la pharmacie en ligne Agnès Praden.` 
-          : 'Recherchez parmi notre vaste gamme de produits pharmaceutiques et parapharmaceutiques.'
-      }
-    ],
-    link: [
-      {
-        rel: 'canonical',
-        href: `https://pharmacieagnespraden.com/search${query.value ? `?q=${encodeURIComponent(query.value)}` : ''}`,
-      }
-    ]
-  });
-  </script>
-  
-  <style scoped>
-  /* Styles spécifiques à la page de recherche */
-  .icon-6xl {
-    width: 6rem;
-    height: 6rem;
   }
-  </style>
+
+  // Mettre le focus sur l'input de recherche après le rendu du DOM
+  await nextTick();
+  if (searchInputElement.value) {
+    searchInputElement.value.focus();
+  }
+});
+
+// Fonction de recherche avec mise à jour de l'URL
+const executeSearch = async () => {
+  console.log('[Search] Exécution de la recherche:', searchInput.value);
+  query.value = searchInput.value;
+  
+  if (query.value) {
+    // Mettre à jour l'URL sans recharger la page
+    router.replace({ 
+      path: '/search',
+      query: { 
+        q: query.value
+      }
+    });
+    
+    // Effectuer la recherche
+    await searchProduct(query.value, searchGateway());
+  } else {
+    // Si pas de requête, supprimer les paramètres
+    router.replace({ 
+      path: '/search',
+      query: {}
+    });
+  }
+  
+  searchDone.value = true;
+};
+
+// Fonction de recherche avec debounce
+let debounceTimeout: ReturnType<typeof setTimeout> | null = null;
+const debouncedSearch = () => {
+  if (debounceTimeout) {
+    clearTimeout(debounceTimeout);
+  }
+  
+  debounceTimeout = setTimeout(() => {
+    executeSearch();
+  }, 500);
+};
+
+// Toggle dropdown
+const toggleDropdown = () => {
+  dropdownOpen.value = !dropdownOpen.value;
+};
+
+// Ouvrir/fermer le filtre
+const openFilter = () => {
+  filterOpened.value = true;
+};
+
+const closeFilter = () => {
+  filterOpened.value = false;
+};
+
+// Fonctions de filtrage
+const sortBy = (st: number) => {
+  if (sortType.value === st) {
+    sortType.value = SortType.None;
+  } else {
+    sortType.value = st;
+  }
+  dropdownOpen.value = false;
+};
+
+const searchLaboratory = (labo: string | null) => {
+  if (!labo) {
+    laboratoryFilter.value = [];
+  } else if (!laboratoryFilter.value.includes(labo)) {
+    laboratoryFilter.value.push(labo);
+  } else {
+    laboratoryFilter.value = laboratoryFilter.value.filter((item) => item !== labo);
+  }
+};
+
+const searchPrice = (price: any) => {
+  priceFilter.value = price;
+};
+
+// Données calculées
+const categoriesVM = computed(() => {
+  return getRootCategoriesVM();
+});
+
+const searchVM = computed(() => {
+  return getSearchResultVM(sortType.value);
+});
+
+const facetsVM = computed(() => getFacetsVM());
+
+// Produits filtrés avec application des filtres
+const filteredProducts = computed(() => {
+  getLaboratoryByName(laboratoryFilter.value, query.value, searchGateway());
+  let res = searchVM.value.items || [];
+  
+  if (priceFilter.value) {
+    const parsePrice = (priceString: string) => {
+      const cleanedString = priceString.replace(/[^0-9,]/g, '').replace(',', '.');
+      return Math.round(parseFloat(cleanedString) * 100);
+    };
+    
+    res = res.filter(
+      (product) =>
+        parsePrice(product.price) >= priceFilter.value[0] && parsePrice(product.price) <= priceFilter.value[1]
+    );
+  }
+  
+  return res;
+});
+
+// SEO
+useHead({
+  title: query.value 
+    ? `Recherche: ${query.value} | Pharmacie Agnès Praden` 
+    : 'Recherche | Pharmacie Agnès Praden',
+  meta: [
+    {
+      name: 'description',
+      content: query.value 
+        ? `Résultats de recherche pour "${query.value}" sur la pharmacie en ligne Agnès Praden à Alès.` 
+        : 'Recherchez parmi notre vaste gamme de produits pharmaceutiques et parapharmaceutiques.'
+    },
+    {
+      name: 'og:title',
+      content: query.value 
+        ? `Recherche: ${query.value} | Pharmacie Agnès Praden` 
+        : 'Recherche | Pharmacie Agnès Praden'
+    },
+    {
+      name: 'og:description',
+      content: query.value 
+        ? `Découvrez nos produits correspondant à "${query.value}" sur la pharmacie en ligne Agnès Praden.` 
+        : 'Recherchez parmi notre vaste gamme de produits pharmaceutiques et parapharmaceutiques.'
+    }
+  ],
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://pharmacieagnespraden.com/search${query.value ? `?q=${encodeURIComponent(query.value)}` : ''}`,
+    }
+  ]
+});
+</script>
+
+<style scoped>
+/* Styles spécifiques à la page de recherche */
+.icon-6xl {
+  width: 6rem;
+  height: 6rem;
+}
+</style>

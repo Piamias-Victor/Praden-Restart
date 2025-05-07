@@ -133,8 +133,8 @@ export const createOrder = async (
     // await emailGateway.sendOrderConfirmation(sendOrderConfirmationDTO);
 
     // Rediriger vers l'URL de la session Stripe
-    clearCart();
     if (order.payment && order.payment.sessionUrl) {
+      clearCart();
       window.location.href = order.payment.sessionUrl;
     }
   } catch (error) {
