@@ -8,7 +8,7 @@ TransitionRoot(appear='' :show='true' as='template')
                 TransitionChild(as='template' class="w-full")
                     DialogPanel.flex.h-full.flex-col.overflow-y-scroll.bg-background.shadow-xl.animate-slideright
                         div.w-full.bg-main.text-center.p-2.text-white.font-semibold.flex.items-center.justify-center.gap-2
-                            span Livraison offerte pour 69 € d'achat
+                            span Avec le code WEEKENDMAI, du 8 au 11 mai, la livraison est OFFERTE
                         div.py-4.px-4.flex.items-center.gap-4
                             div.bg-white.rounded-full.px-2.grow.flex.items-center.gap-4.bg-contrast
                                 icon.icon-md(name="lucide:search")
