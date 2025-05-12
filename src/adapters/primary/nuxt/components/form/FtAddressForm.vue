@@ -21,7 +21,7 @@
       ) 
           span.font-semibold.text-sm Nom
       ft-select(
-          :value="props.user.address?.country || 'France métropolitaine'"
+          :value="props.user.address?.country || ''"
           for="country"
           require
           name='country'

@@ -67,6 +67,7 @@
               @zip-changed="zipChanged"
           )
           p.text-red-500.text-sm.mt-1(v-if="zipError") {{ zipError }}
+          p.text-red-500.text-sm.mt-1(v-if="countryError") {{ countryError }}
 
   div.mt-2.border-t.py-6.px-4(class="sm:px-6")
       div.flex.items-center.gap-2.text-left.px-3
@@ -90,6 +91,7 @@ const keycloak = nuxtApp.$keycloak;
 
 const newsletter = ref(false);
 const zipError = ref<string | null>(null);
+const countryError = ref<string | null>(null);
 const isZipValid = ref(true);
 
 const emit = defineEmits<{
@@ -107,7 +109,15 @@ const mailChanged = (e: any) => user.value.email = e.target.value;
 const phoneChanged = (e: any) => user.value.phone = e.target.value;
 const firstnameChanged = (value: string) => user.value.firstname = value;
 const lastnameChanged = (value: string) => user.value.lastname = value;
-const countryChanged = (value: string) => user.value.address.country = value;
+// Ligne 56
+const countryChanged = (value: string) => {
+  user.value.address.country = value;
+  if (!value) {
+    countryError.value = "Veuillez sélectionner un pays";
+  } else {
+    countryError.value = null;
+  }
+};
 const addressChanged = (value: string) => user.value.address.address = value;
 const appartementChanged = (value: string) => user.value.address.appartement = value;
 const cityChanged = (value: string) => user.value.address.city = value;
@@ -136,10 +146,11 @@ const isFormValid = computed(() => {
     user.value.phone &&
     user.value.email &&
     user.value.address &&
-    user.value.address.country &&
+    user.value.address.country && // Cette vérification existe déjà
+    !countryError.value && // Ajoutez cette ligne
     user.value.address.zip &&
     user.value.address.city &&
-    isZipValid.value // Vérification du code postal
+    isZipValid.value
   );
 });
 
