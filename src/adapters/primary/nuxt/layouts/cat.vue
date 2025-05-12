@@ -2,7 +2,7 @@
 div.flex.flex-col.h-screen
     ft-sticky
         div.w-full.bg-main.text-center.p-2.text-white.font-semibold.flex.items-center.justify-center.gap-2
-            span Avec le code WEEKENDMAI, du 8 au 11 mai, la livraison est OFFERTE
+            span Livraison offerte pour 69 € d'achat
         div.h-4
         ft-header
         div.h-2
