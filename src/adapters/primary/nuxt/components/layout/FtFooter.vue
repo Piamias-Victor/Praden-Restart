@@ -3,7 +3,7 @@ footer.bg-main.text-white.py-8
     .container.mx-auto.px-4
     .flex.flex-col.gap-12(class='lg:flex-row lg:justify-between lg:items-start').px-20
         .mb-6.flex.flex-col(class='lg:mb-0')
-            h3.text-xl.font-semibold.mb-4 Suivez-nous
+            h3.text-xl.font-semibold.mb-4 Suivez-nous 
             .flex.space-x-4
                 a(href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fpharmacieagnespraden%2F" target="_blank" aria-label="Facebook" class="hover:text-white")
                     icon.icon-xl(name="ic:outline-facebook")
