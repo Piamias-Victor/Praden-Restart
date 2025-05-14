@@ -19,6 +19,7 @@ TransitionRoot(appear='' :show='true' as='template')
                                     type='search'
                                     autocomplete='off'
                                     @input="searchChanged"
+                                    ref="searchInput"
                                 )
                             ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
                                 icon.icon-md(name="ph:x-bold")
@@ -90,6 +91,18 @@ import { useRouter } from 'nuxt/app';
 const props = defineProps<{
   categoriesVM: any;
 }>();
+
+const searchInput = ref(null);
+
+onMounted(() => {
+  // Focus sur l'input de recherche dès que le composant est monté
+  setTimeout(() => {
+    if (searchInput.value) {
+      searchInput.value.focus();
+    }
+  }, 50); // Un petit délai pour s'assurer que le DOM est complètement rendu
+});
+
 
 const router = useRouter();
 

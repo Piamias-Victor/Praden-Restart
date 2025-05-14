@@ -9,6 +9,12 @@
       template(v-if="!categoriesLoaded")
         div(v-for="n in 12" :key="n" class="bg-gray-200 rounded-xl px-6 w-24 h-10 animate-pulse")
       template(v-else)
+        ft-button-animate(
+          @click="goToPromo()"
+          class="bg-white rounded-xl px-6"
+        )
+          img(class="icon-md" src="https://i.postimg.cc/HkthTcR1/promo.png")
+          span(class="whitespace-nowrap") Promotions
         // Boutons pour chaque catégorie principale
         div(
           v-for='category in sortedCategories' 
@@ -26,12 +32,7 @@
             span(class="whitespace-nowrap") {{ category.name }}
         
         // Bouton Promotions
-        ft-button-animate(
-          @click="goToPromo()"
-          class="bg-white rounded-xl px-6"
-        )
-          img(class="icon-md" src="https://i.postimg.cc/HkthTcR1/promo.png")
-          span(class="whitespace-nowrap") Promotions
+        
     
     // Mega menu pour les sous-catégories (conditionnel)
     transition(
@@ -174,10 +175,6 @@
   // Catégories triées selon l'ordre souhaité
   const sortedCategories = computed(() => {
     return props.categoriesVM.items
-      .filter((category) => category.name !== 'Promotions') // Exclure "Promotions"
-      .sort((a, b) => {
-        return desiredOrder.indexOf(a.name) - desiredOrder.indexOf(b.name);
-      });
   });
   
   // Vérifier si les catégories sont chargées
