@@ -95,12 +95,26 @@ const props = defineProps<{
 const searchInput = ref(null);
 
 onMounted(() => {
-  // Focus sur l'input de recherche dès que le composant est monté
+  // Petit délai pour s'assurer que la transition est terminée
   setTimeout(() => {
     if (searchInput.value) {
+      // Focus sur l'input
       searchInput.value.focus();
+      
+      // Pour les appareils mobiles, simuler un clic peut aider à faire apparaître le clavier
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        // Simuler un clic sur l'input
+        searchInput.value.click();
+        
+        // Alternative: on peut aussi essayer de simuler un tap plus direct
+        const event = new TouchEvent('touchstart', {
+          bubbles: true,
+          cancelable: true,
+        });
+        searchInput.value.dispatchEvent(event);
+      }
     }
-  }, 50); // Un petit délai pour s'assurer que le DOM est complètement rendu
+  }, 100); // Délai légèrement plus long pour s'assurer que l'animation de transition est terminée
 });
 
 
