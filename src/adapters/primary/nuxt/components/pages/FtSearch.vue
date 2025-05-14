@@ -20,6 +20,7 @@ TransitionRoot(appear='' :show='true' as='template')
                                     autocomplete='off'
                                     @input="searchChanged"
                                     ref="searchInput"
+                                    autofocus
                                 )
                             ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(@click="close")
                                 icon.icon-md(name="ph:x-bold")
