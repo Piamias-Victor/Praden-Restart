@@ -57,12 +57,34 @@ const closeProfil = () => {
   
 // Modification ici: rediriger vers la page de recherche au lieu d'ouvrir la modal
 const startSearch = () => {
-  // Redirection vers la nouvelle page de recherche
-  router.push('/search');
+  // Vérifier si l'utilisateur est déjà sur la page de recherche
+  const isSearchPage = window.location.pathname === '/search';
   
-  // Pour conserver la compatibilité, on peut toujours permettre l'ouverture
-  // de la fenêtre de recherche pendant la transition
-  // searchOpened.value = true;
+  if (isSearchPage) {
+    // Déjà sur la page de recherche, faire défiler vers le haut
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    
+    // Après le défilement, attendre un peu puis mettre le focus sur l'input
+    setTimeout(() => {
+      // Trouver l'élément input de recherche
+      const searchInputElement = document.getElementById('search');
+      if (searchInputElement) {
+        searchInputElement.focus();
+        
+        // Spécifiquement pour les appareils mobiles
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          // Simuler un clic pour faire apparaître le clavier
+          searchInputElement.click();
+        }
+      }
+    }, 300); // Délai suffisant pour le défilement
+  } else {
+    // Redirection vers la page de recherche
+    router.push('/search');
+  }
 };
   
 const closeSearch = () => {

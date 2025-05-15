@@ -82,7 +82,6 @@
               @click="navigateToCategory(hoveredCategory.uuid, hoveredCategory.name)"
               class="text-white bg-main px-6 py-3 rounded-lg font-medium inline-flex items-center gap-2 mx-auto transition-colors hover:bg-opacity-90"
             )
-              span Accéder à la catégorie
               icon(name="ph:arrow-right-bold" class="w-4 h-4")
           
           // Grille de sous-catégories si disponibles

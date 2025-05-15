@@ -96,26 +96,31 @@ const props = defineProps<{
 const searchInput = ref(null);
 
 onMounted(() => {
-  // Petit délai pour s'assurer que la transition est terminée
+  // Utiliser un léger délai pour s'assurer que les transitions sont terminées
   setTimeout(() => {
     if (searchInput.value) {
       // Focus sur l'input
       searchInput.value.focus();
       
-      // Pour les appareils mobiles, simuler un clic peut aider à faire apparaître le clavier
+      // Pour les appareils mobiles, forcer l'affichage du clavier
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         // Simuler un clic sur l'input
         searchInput.value.click();
         
-        // Alternative: on peut aussi essayer de simuler un tap plus direct
-        const event = new TouchEvent('touchstart', {
-          bubbles: true,
-          cancelable: true,
-        });
-        searchInput.value.dispatchEvent(event);
+        // Pour iOS spécifiquement
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+          // iOS nécessite parfois un peu plus pour afficher le clavier
+          // Brièvement mettre en lecture seule puis retirer cette propriété
+          searchInput.value.readOnly = true;
+          setTimeout(() => {
+            searchInput.value.readOnly = false;
+            searchInput.value.focus();
+            searchInput.value.click();
+          }, 50);
+        }
       }
     }
-  }, 100); // Délai légèrement plus long pour s'assurer que l'animation de transition est terminée
+  }, 200);
 });
 
 
