@@ -30,6 +30,8 @@
 </template>
   
 <script lang="ts" setup>
+import { ref, computed, watchEffect } from 'vue';
+import { useRouter } from 'nuxt/app';
 import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/getRootCategoriesVM';
 import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
 import { useProductGateway } from '../../../../../../gateways/productGateway';
@@ -54,8 +56,18 @@ const closeProfil = () => {
   profilOpened.value = false;
   cartOpened.value = false;
 };
-  
-// Modification ici: rediriger vers la page de recherche au lieu d'ouvrir la modal
+
+// Fonction pour vérifier si on est sur mobile
+const isMobile = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+};
+
+// Fonction pour vérifier si on est sur iOS
+const isIOS = () => {
+  return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+};
+
+// Modification avec l'approche de l'input masqué
 const startSearch = () => {
   // Vérifier si l'utilisateur est déjà sur la page de recherche
   const isSearchPage = window.location.pathname === '/search';
@@ -69,15 +81,44 @@ const startSearch = () => {
     
     // Après le défilement, attendre un peu puis mettre le focus sur l'input
     setTimeout(() => {
-      // Trouver l'élément input de recherche
-      const searchInputElement = document.getElementById('search');
-      if (searchInputElement) {
-        searchInputElement.focus();
+      // D'abord créer un input masqué temporaire et l'insérer dans le DOM
+      if (isMobile()) {
+        const tempInput = document.createElement('input');
+        tempInput.setAttribute('type', 'text');
+        tempInput.style.position = 'absolute';
+        tempInput.style.opacity = '0';
+        tempInput.style.height = '0';
+        tempInput.style.width = '0';
         
-        // Spécifiquement pour les appareils mobiles
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-          // Simuler un clic pour faire apparaître le clavier
-          searchInputElement.click();
+        // Ajouter l'input au body
+        document.body.appendChild(tempInput);
+        
+        // Mettre le focus sur l'input temporaire et simuler une interaction
+        tempInput.focus();
+        
+        if (isIOS()) {
+          // Simuler une saisie sur iOS
+          tempInput.value = "a";
+          tempInput.dispatchEvent(new Event('input', { bubbles: true }));
+          tempInput.value = "";
+        }
+        
+        // Attendre un instant puis transférer le focus à l'input de recherche
+        setTimeout(() => {
+          const searchInputElement = document.getElementById('search');
+          if (searchInputElement) {
+            searchInputElement.focus();
+            searchInputElement.click();
+          }
+          
+          // Supprimer l'input temporaire
+          document.body.removeChild(tempInput);
+        }, 50);
+      } else {
+        // Sur desktop, simplement mettre le focus
+        const searchInputElement = document.getElementById('search');
+        if (searchInputElement) {
+          searchInputElement.focus();
         }
       }
     }, 300); // Délai suffisant pour le défilement
@@ -97,6 +138,10 @@ const openCart = () => {
   
 const closeCart = () => {
   cartOpened.value = false;
+};
+
+const clicked = () => {
+  // Fonction vide pour gérer l'événement click sur le logo
 };
   
 const user = computed(() => {
