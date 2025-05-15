@@ -16,7 +16,9 @@
                   name='search'
                   class='focus:text-default focus:outline-none sm:text-sm focus:ring-0 w-[62vw]'
                   placeholder='Recherche'
-                  type='search'
+                  type='text'
+                  inputmode="text"
+                  enterkeyhint="search"
                   autocomplete='off'
                   v-model="searchInput"
                   @input="debouncedSearch"
@@ -121,7 +123,6 @@ const searchRetryCount = ref(0);
 const MAX_RETRIES = 3;
 
 // État pour le débogage
-const showDebug = ref(false); // Mettre à false en production
 const isAuthenticated = ref(false);
 const currentUrl = ref('');
 
@@ -130,24 +131,80 @@ const nuxtApp = useNuxtApp();
 const keycloak = nuxtApp.$keycloak;
 const keycloakDebugger = nuxtApp.$debugKeycloak;
 
-// Fonction pour déboguer Keycloak
-const triggerDebugKeycloak = () => {
-  console.log('[Search] Débogage Keycloak');
-  if (keycloakDebugger) {
-    keycloakDebugger();
-  } else {
-    console.log('[Search] Fonction de débogage Keycloak non disponible');
-  }
-};
-
 // Détection si appareil mobile
 const isMobile = () => {
   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 };
 
+// Détection si iOS
+const isIOS = () => {
+  return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+};
+
+// Fonction pour forcer l'affichage du clavier sur mobile
+const forceKeyboardDisplay = () => {
+  if (!searchInputElement.value) return;
+  
+  console.log('Tentative de forcer l\'affichage du clavier');
+  
+  if (isMobile()) {
+    console.log('Appareil mobile détecté');
+
+    // 1. Créer un élément visible temporaire
+    const tempInput = document.createElement('input');
+    tempInput.type = 'text';
+    tempInput.style.position = 'fixed';
+    tempInput.style.top = '30%';
+    tempInput.style.left = '50%';
+    tempInput.style.transform = 'translate(-50%, -50%)';
+    tempInput.style.width = '80%';
+    tempInput.style.padding = '12px';
+    tempInput.style.fontSize = '16px';
+    tempInput.style.zIndex = '9999';
+    tempInput.style.backgroundColor = 'white';
+    tempInput.style.border = '1px solid #ccc';
+    tempInput.style.borderRadius = '8px';
+    tempInput.placeholder = 'Recherche...';
+    tempInput.autofocus = true;
+    
+    // Pour iOS
+    tempInput.setAttribute('inputmode', 'text');
+    tempInput.setAttribute('enterkeyhint', 'search');
+    
+    document.body.appendChild(tempInput);
+    
+    // 2. Donner le focus et simuler une interaction
+    console.log('Focus sur l\'input temporaire');
+    tempInput.focus();
+    
+    if (isIOS()) {
+      console.log('iOS détecté, simulation d\'interaction');
+      tempInput.click();
+      tempInput.value = " ";
+      tempInput.dispatchEvent(new Event('input', { bubbles: true }));
+      
+      // Empêcher le défilement automatique sur iOS
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    
+    // 3. Transférer le focus à l'input réel après un court délai
+    setTimeout(() => {
+      console.log('Transfert du focus à l\'input de recherche');
+      document.body.removeChild(tempInput);
+      
+      searchInputElement.value?.focus();
+      searchInputElement.value?.click();
+    }, 800);
+  } else {
+    // Sur desktop, simplement donner le focus
+    searchInputElement.value.focus();
+  }
+};
+
 // Fonction pour gérer les erreurs API de manière générique
 const handleApiError = (error: any, context: string) => {
-  console.error(`[Search] Erreur ${context}:`, error);
+  console.error(`Erreur ${context}:`, error);
   
   // Déterminer un message d'erreur adapté
   let errorMessage = 'Une erreur est survenue';
@@ -194,19 +251,19 @@ const initializeData = async () => {
       listBestSales(useProductGateway())
     ]);
   } catch (error) {
-    console.error('[Search] Erreur lors de l\'initialisation des données:', error);
+    console.error('Erreur lors de l\'initialisation des données:', error);
   }
 };
 
 // Chargement des données principales
 onMounted(async () => {
-  console.log('[Search] Page de recherche chargée');
+  console.log('Page de recherche chargée');
   currentUrl.value = window.location.href;
   
   // Vérification de l'état Keycloak
   if (keycloak) {
     isAuthenticated.value = keycloak.authenticated || false;
-    console.log('[Search] État d\'authentification à l\'initialisation:', isAuthenticated.value);
+    console.log('État d\'authentification à l\'initialisation:', isAuthenticated.value);
   }
 
   // Chargement des données initiales
@@ -214,15 +271,15 @@ onMounted(async () => {
 
   // Vérifier si nous venons juste de nous authentifier (après une redirection)
   const justAuthenticated = localStorage.getItem('justAuthenticated');
-  console.log('[Search] Indicateur justAuthenticated:', justAuthenticated);
+  console.log('Indicateur justAuthenticated:', justAuthenticated);
 
   if (justAuthenticated === 'true') {
-    console.log('[Search] Détection de retour après authentification');
+    console.log('Détection de retour après authentification');
     localStorage.removeItem('justAuthenticated');
     
     // Restaurer les paramètres de recherche sauvegardés
     const savedParams = localStorage.getItem('searchParams');
-    console.log('[Search] Paramètres de recherche sauvegardés:', savedParams);
+    console.log('Paramètres de recherche sauvegardés:', savedParams);
     
     if (savedParams) {
       // Extraire le paramètre q des searchParams
@@ -230,7 +287,7 @@ onMounted(async () => {
       const savedQuery = params.get('q');
       
       if (savedQuery) {
-        console.log('[Search] Restauration de la requête:', savedQuery);
+        console.log('Restauration de la requête:', savedQuery);
         searchInput.value = savedQuery;
         query.value = savedQuery;
         // Exécuter la recherche 
@@ -245,22 +302,25 @@ onMounted(async () => {
     // Comportement normal: récupérer la recherche depuis l'URL
     const searchQuery = route.query.q as string;
     if (searchQuery) {
-      console.log('[Search] Récupération de la requête depuis l\'URL:', searchQuery);
+      console.log('Récupération de la requête depuis l\'URL:', searchQuery);
       query.value = searchQuery;
       searchInput.value = searchQuery;
       executeSearch();
     }
   }
 
-  // Mettre le focus sur l'input de recherche après le rendu du DOM
-  await nextTick();
-  if (searchInputElement.value) {
-    searchInputElement.value.focus();
-  }
+  // Exécuter la fonction pour forcer l'affichage du clavier
+  nextTick(() => {
+    console.log('Attente du rendu du DOM avant de forcer le clavier');
+    // Petit délai pour s'assurer que le DOM est complètement rendu
+    setTimeout(() => {
+      forceKeyboardDisplay();
+    }, 300);
+  });
 
   const pendingSearchQuery = localStorage.getItem('pendingSearchQuery');
   if (pendingSearchQuery) {
-    console.log('[Search] Requête en attente trouvée:', pendingSearchQuery);
+    console.log('Requête en attente trouvée:', pendingSearchQuery);
     localStorage.removeItem('pendingSearchQuery');
     
     // Appliquer la requête
@@ -278,7 +338,7 @@ onMounted(async () => {
 const executeSearch = async () => {
   if (isSearching.value) return;
   
-  console.log('[Search] Exécution de la recherche:', searchInput.value);
+  console.log('Exécution de la recherche:', searchInput.value);
   query.value = searchInput.value;
   isSearching.value = true;
   searchError.value = false;
@@ -305,7 +365,7 @@ const executeSearch = async () => {
     
     searchDone.value = true;
   } catch (error) {
-    console.error('[Search] Erreur lors de la recherche:', error);
+    console.error('Erreur lors de la recherche:', error);
     searchError.value = true;
     searchErrorMessage.value = handleApiError(error, 'lors de la recherche');
   } finally {
@@ -398,7 +458,7 @@ const filteredProducts = computed(() => {
     
     return res;
   } catch (error) {
-    console.error('[Search] Erreur lors du filtrage des produits:', error);
+    console.error('Erreur lors du filtrage des produits:', error);
     searchError.value = true;
     searchErrorMessage.value = handleApiError(error, 'lors du filtrage');
     return [];
