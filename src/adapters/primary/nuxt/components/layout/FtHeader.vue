@@ -27,6 +27,9 @@
   ft-search(v-if="searchOpened" @close="closeSearch")
   ft-cart-panel(v-if="cartOpened && user.uuid" @close="closeCart")
   ft-profil(v-if="cartOpened && !user.uuid" @close="closeProfil")
+  
+  // Nouveau modal spécifique pour la recherche mobile
+  search-modal(v-if="searchModalOpen" @close="closeSearchModal" @search="handleSearch")
 </template>
   
 <script lang="ts" setup>
@@ -36,10 +39,12 @@ import { getRootCategoriesVM } from '@adapters/primary/viewModels/get-category/g
 import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-cart/getQuantityInCartVm';
 import { useProductGateway } from '../../../../../../gateways/productGateway';
 import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
+import SearchModal from './SearchModal.vue'; // Assurez-vous de créer ce composant
   
 const profilOpened = ref(false);
 const searchOpened = ref(false);
 const cartOpened = ref(false);
+const searchModalOpen = ref(false); // État pour le nouveau modal de recherche
   
 const categoriesVM = computed(() => {
   return getRootCategoriesVM();
@@ -62,70 +67,58 @@ const isMobile = () => {
   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 };
 
-// Fonction pour vérifier si on est sur iOS
-const isIOS = () => {
-  return /iPhone|iPad|iPod/i.test(navigator.userAgent);
-};
-
-// Modification avec l'approche de l'input masqué
+// Modification ici: utilisation du modal de recherche sur mobile
 const startSearch = () => {
   // Vérifier si l'utilisateur est déjà sur la page de recherche
   const isSearchPage = window.location.pathname === '/search';
   
   if (isSearchPage) {
-    // Déjà sur la page de recherche, faire défiler vers le haut
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-    
-    // Après le défilement, attendre un peu puis mettre le focus sur l'input
-    setTimeout(() => {
-      // D'abord créer un input masqué temporaire et l'insérer dans le DOM
-      if (isMobile()) {
-        const tempInput = document.createElement('input');
-        tempInput.setAttribute('type', 'text');
-        tempInput.style.position = 'absolute';
-        tempInput.style.opacity = '0';
-        tempInput.style.height = '0';
-        tempInput.style.width = '0';
-        
-        // Ajouter l'input au body
-        document.body.appendChild(tempInput);
-        
-        // Mettre le focus sur l'input temporaire et simuler une interaction
-        tempInput.focus();
-        
-        if (isIOS()) {
-          // Simuler une saisie sur iOS
-          tempInput.value = "a";
-          tempInput.dispatchEvent(new Event('input', { bubbles: true }));
-          tempInput.value = "";
-        }
-        
-        // Attendre un instant puis transférer le focus à l'input de recherche
-        setTimeout(() => {
-          const searchInputElement = document.getElementById('search');
-          if (searchInputElement) {
-            searchInputElement.focus();
-            searchInputElement.click();
-          }
-          
-          // Supprimer l'input temporaire
-          document.body.removeChild(tempInput);
-        }, 50);
-      } else {
-        // Sur desktop, simplement mettre le focus
+    // Sur mobile, ouvrir le modal dédié
+    if (isMobile()) {
+      searchModalOpen.value = true;
+    } else {
+      // Sur desktop, scroll vers le haut et focus sur l'input
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      
+      setTimeout(() => {
         const searchInputElement = document.getElementById('search');
         if (searchInputElement) {
           searchInputElement.focus();
         }
-      }
-    }, 300); // Délai suffisant pour le défilement
+      }, 300);
+    }
   } else {
     // Redirection vers la page de recherche
     router.push('/search');
   }
+};
+
+// Gérer la recherche depuis le modal
+const handleSearch = (searchText) => {
+  // Redirection vers la page de recherche avec la requête
+  if (window.location.pathname !== '/search') {
+    router.push('/search');
+  }
+  
+  // Attendre que la page soit chargée avant d'appliquer la recherche
+  setTimeout(() => {
+    const searchInputElement = document.getElementById('search');
+    if (searchInputElement) {
+      // Mettre la valeur et déclencher l'événement input
+      searchInputElement.value = searchText;
+      searchInputElement.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+  }, 500);
+  
+  // Fermer le modal
+  closeSearchModal();
+};
+  
+const closeSearchModal = () => {
+  searchModalOpen.value = false;
 };
   
 const closeSearch = () => {
@@ -141,7 +134,7 @@ const closeCart = () => {
 };
 
 const clicked = () => {
-  // Fonction vide pour gérer l'événement click sur le logo
+  // Fonction vide pour l'événement click sur le logo
 };
   
 const user = computed(() => {
