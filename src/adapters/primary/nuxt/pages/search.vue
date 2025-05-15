@@ -22,7 +22,9 @@
                   autocomplete='off'
                   v-model="searchInput"
                   @input="debouncedSearch"
+                  @click="manualKeyboardFocus"
                   ref="searchInputElement"
+                  autofocus
               )
           ft-button.flex-shrink-0.bg-main.p-2.rounded-xl.text-white(
             @click="executeSearch"
@@ -141,47 +143,24 @@ const isIOS = () => {
   return /iPhone|iPad|iPod/i.test(navigator.userAgent);
 };
 
-// Fonction simplifiée pour forcer l'affichage du clavier
-const focusSearchInput = () => {
-  if (!searchInputElement.value) return;
-  
-  console.log('Tentative de focus sur l\'input de recherche');
-  
-  if (isMobile()) {
-    console.log('Appareil mobile détecté');
-    
-    // Approche discrète: input invisible hors écran
-    const tempInput = document.createElement('input');
-    tempInput.type = 'text';
-    tempInput.style.position = 'absolute';
-    tempInput.style.opacity = '0';
-    tempInput.style.pointerEvents = 'none';
-    tempInput.style.left = '-9999px';
-    tempInput.style.top = '-9999px';
-    tempInput.setAttribute('inputmode', 'text');
-    
-    document.body.appendChild(tempInput);
-    tempInput.focus();
-    
-    setTimeout(() => {
-      document.body.removeChild(tempInput);
-      
-      // Focus sur l'input réel avec un délai
-      setTimeout(() => {
-        if (searchInputElement.value) {
-          searchInputElement.value.focus();
-          
-          // Pour iOS, simuler un clic peut aider
-          if (isIOS()) {
-            searchInputElement.value.click();
-          }
-        }
-      }, 100);
-    }, 300);
-  } else {
-    // Sur desktop, c'est plus simple
+// Fonction pour forcer l'affichage du clavier via un clic
+const manualKeyboardFocus = () => {
+  // Cette fonction est appelée quand l'utilisateur clique sur l'input
+  // Ce qui aide à forcer le clavier sur certains appareils
+  if (searchInputElement.value) {
     searchInputElement.value.focus();
   }
+};
+
+// Vérifier si c'est une première visite ou un rechargement
+const isFirstVisit = () => {
+  const visitState = sessionStorage.getItem('searchPageVisited');
+  return visitState !== 'true';
+};
+
+// Marquer la page comme visitée
+const markAsVisited = () => {
+  sessionStorage.setItem('searchPageVisited', 'true');
 };
 
 // Fonction pour gérer les erreurs API de manière générique
@@ -251,6 +230,36 @@ onMounted(async () => {
   // Chargement des données initiales
   await initializeData();
 
+  // Nouvelle approche : recharger la page une seule fois sur mobile
+  if (isMobile() && isFirstVisit()) {
+    console.log('Premier accès à la page sur mobile, préparation du rechargement');
+    
+    // Récupérer d'abord la recherche depuis l'URL si disponible
+    const searchQuery = route.query.q as string;
+    if (searchQuery) {
+      sessionStorage.setItem('pendingSearch', searchQuery);
+    }
+    
+    // Sauvegarder l'état de recherche actuel si disponible dans l'input
+    if (searchInput.value && !searchQuery) {
+      sessionStorage.setItem('pendingSearch', searchInput.value);
+    }
+    
+    // Marquer comme visitée pour éviter une boucle infinie
+    markAsVisited();
+    
+    // Rechargement de la page (cela aidera à forcer le focus sur certains appareils)
+    setTimeout(() => {
+      console.log('Rechargement de la page pour faciliter le focus mobile');
+      window.location.reload();
+    }, 300);
+    
+    return; // Arrêter l'exécution pour ce cycle de rendu
+  }
+  
+  // Exécution normale (après rechargement ou sur desktop)
+  console.log('Exécution normale après rechargement ou sur desktop');
+  
   // Vérifier si nous venons juste de nous authentifier (après une redirection)
   const justAuthenticated = localStorage.getItem('justAuthenticated');
   console.log('Indicateur justAuthenticated:', justAuthenticated);
@@ -281,21 +290,42 @@ onMounted(async () => {
       localStorage.removeItem('searchParams');
     }
   } else {
-    // Comportement normal: récupérer la recherche depuis l'URL
-    const searchQuery = route.query.q as string;
-    if (searchQuery) {
-      console.log('Récupération de la requête depuis l\'URL:', searchQuery);
-      query.value = searchQuery;
-      searchInput.value = searchQuery;
-      executeSearch();
+    // Restaurer la recherche en cours après le rechargement si applicable
+    const pendingSearch = sessionStorage.getItem('pendingSearch');
+    if (pendingSearch) {
+      console.log('Restauration de la recherche en attente:', pendingSearch);
+      searchInput.value = pendingSearch;
+      query.value = pendingSearch;
+      sessionStorage.removeItem('pendingSearch');
+      
+      // Exécuter la recherche
+      setTimeout(() => {
+        executeSearch();
+      }, 100);
+    } else {
+      // Comportement normal: récupérer la recherche depuis l'URL
+      const searchQuery = route.query.q as string;
+      if (searchQuery) {
+        console.log('Récupération de la requête depuis l\'URL:', searchQuery);
+        query.value = searchQuery;
+        searchInput.value = searchQuery;
+        executeSearch();
+      }
     }
   }
-
-  // Attendre que le DOM soit complètement rendu puis tenter de mettre le focus
+  
+  // Focus sur l'input après un court délai (plus efficace après rechargement)
   nextTick(() => {
-    console.log('Attente du rendu du DOM avant de forcer le focus');
     setTimeout(() => {
-      focusSearchInput();
+      if (searchInputElement.value) {
+        console.log('Focus sur l\'input de recherche après rechargement');
+        searchInputElement.value.focus();
+        
+        // Sur iOS, simuler un clic peut aider
+        if (isIOS()) {
+          searchInputElement.value.click();
+        }
+      }
     }, 300);
   });
 
