@@ -141,63 +141,45 @@ const isIOS = () => {
   return /iPhone|iPad|iPod/i.test(navigator.userAgent);
 };
 
-// Fonction pour forcer l'affichage du clavier sur mobile
-const forceKeyboardDisplay = () => {
+// Fonction simplifiée pour forcer l'affichage du clavier
+const focusSearchInput = () => {
   if (!searchInputElement.value) return;
   
-  console.log('Tentative de forcer l\'affichage du clavier');
+  console.log('Tentative de focus sur l\'input de recherche');
   
   if (isMobile()) {
     console.log('Appareil mobile détecté');
-
-    // 1. Créer un élément visible temporaire
+    
+    // Approche discrète: input invisible hors écran
     const tempInput = document.createElement('input');
     tempInput.type = 'text';
-    tempInput.style.position = 'fixed';
-    tempInput.style.top = '30%';
-    tempInput.style.left = '50%';
-    tempInput.style.transform = 'translate(-50%, -50%)';
-    tempInput.style.width = '80%';
-    tempInput.style.padding = '12px';
-    tempInput.style.fontSize = '16px';
-    tempInput.style.zIndex = '9999';
-    tempInput.style.backgroundColor = 'white';
-    tempInput.style.border = '1px solid #ccc';
-    tempInput.style.borderRadius = '8px';
-    tempInput.placeholder = 'Recherche...';
-    tempInput.autofocus = true;
-    
-    // Pour iOS
+    tempInput.style.position = 'absolute';
+    tempInput.style.opacity = '0';
+    tempInput.style.pointerEvents = 'none';
+    tempInput.style.left = '-9999px';
+    tempInput.style.top = '-9999px';
     tempInput.setAttribute('inputmode', 'text');
-    tempInput.setAttribute('enterkeyhint', 'search');
     
     document.body.appendChild(tempInput);
-    
-    // 2. Donner le focus et simuler une interaction
-    console.log('Focus sur l\'input temporaire');
     tempInput.focus();
     
-    if (isIOS()) {
-      console.log('iOS détecté, simulation d\'interaction');
-      tempInput.click();
-      tempInput.value = " ";
-      tempInput.dispatchEvent(new Event('input', { bubbles: true }));
-      
-      // Empêcher le défilement automatique sur iOS
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-    
-    // 3. Transférer le focus à l'input réel après un court délai
     setTimeout(() => {
-      console.log('Transfert du focus à l\'input de recherche');
       document.body.removeChild(tempInput);
       
-      searchInputElement.value?.focus();
-      searchInputElement.value?.click();
-    }, 800);
+      // Focus sur l'input réel avec un délai
+      setTimeout(() => {
+        if (searchInputElement.value) {
+          searchInputElement.value.focus();
+          
+          // Pour iOS, simuler un clic peut aider
+          if (isIOS()) {
+            searchInputElement.value.click();
+          }
+        }
+      }, 100);
+    }, 300);
   } else {
-    // Sur desktop, simplement donner le focus
+    // Sur desktop, c'est plus simple
     searchInputElement.value.focus();
   }
 };
@@ -309,12 +291,11 @@ onMounted(async () => {
     }
   }
 
-  // Exécuter la fonction pour forcer l'affichage du clavier
+  // Attendre que le DOM soit complètement rendu puis tenter de mettre le focus
   nextTick(() => {
-    console.log('Attente du rendu du DOM avant de forcer le clavier');
-    // Petit délai pour s'assurer que le DOM est complètement rendu
+    console.log('Attente du rendu du DOM avant de forcer le focus');
     setTimeout(() => {
-      forceKeyboardDisplay();
+      focusSearchInput();
     }, 300);
   });
 
