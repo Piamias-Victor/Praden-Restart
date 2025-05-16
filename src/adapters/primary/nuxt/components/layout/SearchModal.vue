@@ -15,7 +15,7 @@
                       ref="mobileSearchInput"
                       type="search"
                       v-model="searchQuery"
-                      placeholder="Recherche par produit / marques / categories"
+                      placeholder="Recherche par produits / marques / categories"
                       @keyup.enter="search"
                       autofocus
                     )

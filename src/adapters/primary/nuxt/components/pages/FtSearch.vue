@@ -21,7 +21,7 @@
                                   input#search.block.border-0.placeholder-text-light.text.bg-transparent.outline-none.appearance-none(
                                       name='search'
                                       class='focus:text-default focus:outline-none sm:text-sm focus:ring-0 w-[62vw]'
-                                      placeholder='Recherche par produit / marques / categoriesrche'
+                                      placeholder='Recherche par produits / marques / categoriesrche'
                                       type='search'
                                       autocomplete='off'
                                       @input="searchChanged"
