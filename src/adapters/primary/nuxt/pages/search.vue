@@ -15,7 +15,7 @@
               input#search.block.border-0.placeholder-text-light.text.bg-transparent.outline-none.appearance-none(
                   name='search'
                   class='focus:text-default focus:outline-none sm:text-sm focus:ring-0 w-[62vw]'
-                  placeholder='Recherche'
+                  placeholder='Recherche par produit / marques / categories'
                   type='text'
                   inputmode="text"
                   enterkeyhint="search"
@@ -79,6 +79,9 @@
       
       ft-navigation
       ft-panel2(v-if="filterOpened" @close="closeFilter" @sortBy="sortBy" @searchLaboratory="searchLaboratory" @searchPrice="searchPrice" :facetsVM="facetsVM" :sortType="sortType" :laboratoryFilter="laboratoryFilter")
+      
+      // Modal de recherche pour mobile
+      search-modal(v-if="searchModalOpen" @close="closeSearchModal" @search="handleSearch")
   </template>
   
 <script lang="ts" setup>
@@ -102,6 +105,7 @@ import { useProductGateway } from '../../../../../gateways/productGateway';
 import { listBanner } from '@core/usecases/list-banner/listBanner';
 import deliveryGateway from '../../../../../gateways/deliveryGateway';
 import { useNuxtApp } from '#app';
+import SearchModal from '../../../primary/nuxt/components/layout/SearchModal.vue'; // Import du composant SearchModal
 
 definePageMeta({ layout: 'main' });
 
@@ -123,6 +127,7 @@ const searchError = ref(false);
 const searchErrorMessage = ref('Une erreur est survenue lors de la recherche');
 const searchRetryCount = ref(0);
 const MAX_RETRIES = 3;
+const searchModalOpen = ref(false); // État pour le modal de recherche mobile
 
 // État pour le débogage
 const isAuthenticated = ref(false);
@@ -230,104 +235,96 @@ onMounted(async () => {
   // Chargement des données initiales
   await initializeData();
 
-  // Nouvelle approche : recharger la page une seule fois sur mobile
-  if (isMobile() && isFirstVisit()) {
-    console.log('Premier accès à la page sur mobile, préparation du rechargement');
+  // Vérifier si on est sur mobile
+  if (isMobile()) {
+    console.log('Appareil mobile détecté, ouverture du modal de recherche');
     
-    // Récupérer d'abord la recherche depuis l'URL si disponible
-    const searchQuery = route.query.q as string;
-    if (searchQuery) {
-      sessionStorage.setItem('pendingSearch', searchQuery);
-    }
+    // Ouvrir automatiquement le modal de recherche sur mobile
+    searchModalOpen.value = true;
     
-    // Sauvegarder l'état de recherche actuel si disponible dans l'input
-    if (searchInput.value && !searchQuery) {
-      sessionStorage.setItem('pendingSearch', searchInput.value);
-    }
-    
-    // Marquer comme visitée pour éviter une boucle infinie
+    // Marquer comme visitée
     markAsVisited();
     
-    // Rechargement de la page (cela aidera à forcer le focus sur certains appareils)
-    setTimeout(() => {
-      console.log('Rechargement de la page pour faciliter le focus mobile');
-      window.location.reload();
-    }, 300);
-    
-    return; // Arrêter l'exécution pour ce cycle de rendu
-  }
-  
-  // Exécution normale (après rechargement ou sur desktop)
-  console.log('Exécution normale après rechargement ou sur desktop');
-  
-  // Vérifier si nous venons juste de nous authentifier (après une redirection)
-  const justAuthenticated = localStorage.getItem('justAuthenticated');
-  console.log('Indicateur justAuthenticated:', justAuthenticated);
-
-  if (justAuthenticated === 'true') {
-    console.log('Détection de retour après authentification');
-    localStorage.removeItem('justAuthenticated');
-    
-    // Restaurer les paramètres de recherche sauvegardés
-    const savedParams = localStorage.getItem('searchParams');
-    console.log('Paramètres de recherche sauvegardés:', savedParams);
-    
-    if (savedParams) {
-      // Extraire le paramètre q des searchParams
-      const params = new URLSearchParams(savedParams);
-      const savedQuery = params.get('q');
-      
-      if (savedQuery) {
-        console.log('Restauration de la requête:', savedQuery);
-        searchInput.value = savedQuery;
-        query.value = savedQuery;
-        // Exécuter la recherche 
-        setTimeout(() => {
-          executeSearch();
-        }, 300);
-      }
-      
-      localStorage.removeItem('searchParams');
+    // Récupérer la recherche depuis l'URL si disponible
+    const searchQuery = route.query.q as string;
+    if (searchQuery) {
+      console.log('Requête de recherche trouvée dans l\'URL:', searchQuery);
+      searchInput.value = searchQuery;
+      query.value = searchQuery;
     }
   } else {
-    // Restaurer la recherche en cours après le rechargement si applicable
-    const pendingSearch = sessionStorage.getItem('pendingSearch');
-    if (pendingSearch) {
-      console.log('Restauration de la recherche en attente:', pendingSearch);
-      searchInput.value = pendingSearch;
-      query.value = pendingSearch;
-      sessionStorage.removeItem('pendingSearch');
-      
-      // Exécuter la recherche
-      setTimeout(() => {
-        executeSearch();
-      }, 100);
-    } else {
-      // Comportement normal: récupérer la recherche depuis l'URL
-      const searchQuery = route.query.q as string;
-      if (searchQuery) {
-        console.log('Récupération de la requête depuis l\'URL:', searchQuery);
-        query.value = searchQuery;
-        searchInput.value = searchQuery;
-        executeSearch();
-      }
-    }
-  }
+    // Exécution normale (sur desktop)
+    console.log('Desktop détecté, comportement normal');
   
-  // Focus sur l'input après un court délai (plus efficace après rechargement)
-  nextTick(() => {
-    setTimeout(() => {
-      if (searchInputElement.value) {
-        console.log('Focus sur l\'input de recherche après rechargement');
-        searchInputElement.value.focus();
+    // Vérifier si nous venons juste de nous authentifier (après une redirection)
+    const justAuthenticated = localStorage.getItem('justAuthenticated');
+    console.log('Indicateur justAuthenticated:', justAuthenticated);
+
+    if (justAuthenticated === 'true') {
+      console.log('Détection de retour après authentification');
+      localStorage.removeItem('justAuthenticated');
+      
+      // Restaurer les paramètres de recherche sauvegardés
+      const savedParams = localStorage.getItem('searchParams');
+      console.log('Paramètres de recherche sauvegardés:', savedParams);
+      
+      if (savedParams) {
+        // Extraire le paramètre q des searchParams
+        const params = new URLSearchParams(savedParams);
+        const savedQuery = params.get('q');
         
-        // Sur iOS, simuler un clic peut aider
-        if (isIOS()) {
-          searchInputElement.value.click();
+        if (savedQuery) {
+          console.log('Restauration de la requête:', savedQuery);
+          searchInput.value = savedQuery;
+          query.value = savedQuery;
+          // Exécuter la recherche 
+          setTimeout(() => {
+            executeSearch();
+          }, 300);
+        }
+        
+        localStorage.removeItem('searchParams');
+      }
+    } else {
+      // Restaurer la recherche en cours après le rechargement si applicable
+      const pendingSearch = sessionStorage.getItem('pendingSearch');
+      if (pendingSearch) {
+        console.log('Restauration de la recherche en attente:', pendingSearch);
+        searchInput.value = pendingSearch;
+        query.value = pendingSearch;
+        sessionStorage.removeItem('pendingSearch');
+        
+        // Exécuter la recherche
+        setTimeout(() => {
+          executeSearch();
+        }, 100);
+      } else {
+        // Comportement normal: récupérer la recherche depuis l'URL
+        const searchQuery = route.query.q as string;
+        if (searchQuery) {
+          console.log('Récupération de la requête depuis l\'URL:', searchQuery);
+          query.value = searchQuery;
+          searchInput.value = searchQuery;
+          executeSearch();
         }
       }
-    }, 300);
-  });
+    }
+    
+    // Focus sur l'input après un court délai (plus efficace après rechargement)
+    nextTick(() => {
+      setTimeout(() => {
+        if (searchInputElement.value) {
+          console.log('Focus sur l\'input de recherche après rechargement');
+          searchInputElement.value.focus();
+          
+          // Sur iOS, simuler un clic peut aider
+          if (isIOS()) {
+            searchInputElement.value.click();
+          }
+        }
+      }, 300);
+    });
+  }
 
   const pendingSearchQuery = localStorage.getItem('pendingSearchQuery');
   if (pendingSearchQuery) {
@@ -432,6 +429,23 @@ const searchLaboratory = (labo: string | null) => {
 
 const searchPrice = (price: any) => {
   priceFilter.value = price;
+};
+
+// Fonctions pour le modal de recherche mobile
+const closeSearchModal = () => {
+  searchModalOpen.value = false;
+};
+
+const handleSearch = (searchText: string) => {
+  // Appliquer la requête
+  searchInput.value = searchText;
+  query.value = searchText;
+  
+  // Exécuter la recherche
+  executeSearch();
+  
+  // Fermer le modal
+  closeSearchModal();
 };
 
 // Données calculées

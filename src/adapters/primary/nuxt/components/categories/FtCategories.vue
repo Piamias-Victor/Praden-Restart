@@ -10,6 +10,12 @@
         div(v-for="n in 12" :key="n" class="bg-gray-200 rounded-xl px-6 w-24 h-10 animate-pulse")
       template(v-else)
         ft-button-animate(
+          @click="goToLabo()"
+          class="bg-main text-white rounded-xl px-6"
+        )
+          icon.icon-md(name="mynaui:cart")
+          span(class="whitespace-nowrap") Nos Marques
+        ft-button-animate(
           @click="goToPromo()"
           class="bg-white rounded-xl px-6"
         )
@@ -180,6 +186,10 @@
   const categoriesLoaded = computed(() => {
     return props.categoriesVM?.items?.length > 0;
   });
+
+  const goToLabo = async () => {
+  router.push('/laboratory');
+};
   
   // Formater l'URL pour le référencement et la lisibilité
   const formatUrl = (basePath, name, uuid) => {
