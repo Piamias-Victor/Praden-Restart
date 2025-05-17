@@ -35,13 +35,21 @@
           span(:class="product.promotion?.price ? 'line-through' : 'font-bold text-main'") {{ product.price }}
           span.font-bold.text-main(v-if="product.promotion?.price") {{ product.promotion.price }}
     div.w-full.text-center.mt-auto
-        ft-add-to-cart-button(:product-uuid="product.uuid" :isMedicine="product.isMedecine" :availableStock="product.availableStock - 3" class='mt-auto' v-if="product.availableStock > 0")
+        ft-add-to-cart-button(
+          :product-uuid="product.uuid" 
+          :isMedicine="product.isMedecine" 
+          :availableStock="product.availableStock - 3"
+          :maxQuantity="product.maxQuantity"
+          class='mt-auto' 
+          v-if="product.availableStock > 0"
+        )
         div.bg-main.rounded-b-xl.mt-1(class='p-0.5' v-else)
           ft-button.w-full.text-white.flex.items-center.justify-center.font-semibold
             span Bientôt disponible
 </template>
 
 <script lang="ts" setup>
+import { ref, watchEffect } from 'vue';
 import { addToFavorite, removeFromFavorite } from '@core/usecases/add-to-favorite/addToFavorite';
 import { useProductGateway } from '../../../../../../gateways/productGateway';
 import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm';
@@ -51,7 +59,6 @@ import { sendNotifLike } from '@core/usecases/add-notif/cartNotif';
 defineProps({
   product: { type: Object, required: true },
 });
-
 
 const emit = defineEmits<{
   (e: 'close'): void;

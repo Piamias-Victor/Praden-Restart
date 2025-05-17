@@ -4,6 +4,7 @@ import { useProductStore } from '@store/productStore';
 
 export const getProduct = async (productUuid: UUID, productGateway: ProductGateway) => {
   const product = await productGateway.getByUuid(productUuid);
+  console.log('getProduct', product);
   const productStore = useProductStore();
   productStore.setCurrent(product);
 };

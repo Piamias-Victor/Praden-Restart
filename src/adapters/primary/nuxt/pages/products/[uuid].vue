@@ -1,6 +1,5 @@
 <template lang="pug">
-  ft-categories(:categoriesVM="categoriesVM")
-  
+  ft-categories(:categoriesVM="categoriesVM")  
   // Fil d'Ariane amélioré avec des microdonnées Schema.org
   nav.breadcrumbs.flex.items-center.text-sm.text-gray-600.m-2(v-if="productVM" itemscope itemtype="https://schema.org/BreadcrumbList")
         div(itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem")
@@ -46,7 +45,7 @@
             )
               icon.icon-lg.text-main(name="ph:heart-bold")
   
-          ft-add-to-cart-button(:product-uuid="productVM.uuid" :isMedicine="productVM.isMedicine" :availableStock="productVM.availableStock - 3" v-if="productVM && productVM.availableStock && productVM.availableStock > 0")
+          ft-add-to-cart-button(:maxQuantity="productVM.maxQuantity" :product-uuid="productVM.uuid" :isMedicine="productVM.isMedicine" :availableStock="productVM.availableStock - 3" v-if="productVM && productVM.availableStock && productVM.availableStock > 0")
           div.bg-main.rounded-b-xl.mt-1(class='p-0.5' v-else)
             ft-button.w-full.text-white.flex.items-center.justify-center.font-semibold
               span Bientôt disponible

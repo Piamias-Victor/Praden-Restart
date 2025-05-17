@@ -18,6 +18,7 @@ export class RealProductGateway implements ProductGateway {
     const url = `${this.productUrl}/${uuid}`;
     try {
       const response = await axios.get<ItemProductDetail>(url);
+      console.log('response', response);
       return response.data.item;
     } catch (error) {
       throw error;

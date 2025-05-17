@@ -85,6 +85,7 @@ export const getProductVM = (): ProductDetailVM => {
   const images: Array<Image> =
     product && product.images.length > 0 ? product.images.map((url) => url) : [DEFAULT_IMAGE_URL];
 
+
   const res: ProductDetailVM = {
     uuid: product?.uuid || '',
     name: product?.name || '',
@@ -96,6 +97,7 @@ export const getProductVM = (): ProductDetailVM => {
     isMedicine: product?.isMedicine,
     availableStock: product?.availableStock,
     noticeUrl: product?.noticeUrl,
+    maxQuantity: product?.maxQuantityForOrder,
     details,
     promotion,
   };
@@ -122,6 +124,7 @@ export const getProductInPromotionVM = () => {
         isMedecine: p.isMedicine,
         noticeUrl: p?.noticeUrl,
         href: `/products/${p.uuid}`,
+        maxQuantity: p?.maxQuantityForOrder,
       };
       if (promotion) {
         res.promotion = promotion;
@@ -151,6 +154,7 @@ export const getBestSales = () => {
         isMedicine: p.isMedicine,
         noticeUrl: p?.noticeUrl,
         href: `/products/${p.uuid}`,
+        maxQuantity: p?.maxQuantityForOrder,
       };
       if (promotion) {
         res.promotion = promotion;

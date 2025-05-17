@@ -16,6 +16,8 @@ export const getSearchResultVM = (sortType: SortType = SortType.None): GetSearch
     return { items: [] };
   }
 
+  console.log('getSearchResultVM', products);
+
   // Au lieu de `products.sort(...)`, on crée une copie avec le spread operator
   // - products.sort(sortByPrice(sortType));
   const sortedProducts = [...products].sort(sortByPrice(sortType));
@@ -33,6 +35,7 @@ export const getSearchResultVM = (sortType: SortType = SortType.None): GetSearch
         availableStock: p.availableStock,
         isMedecine: p.isMedicine,
         href: `/products/${p.uuid}`,
+        maxQuantity: p?.maxQuantityForOrder,
       };
       if (promotion) {
         res.promotion = promotion;
