@@ -1,4 +1,5 @@
 <template lang="pug">
+ft-categories(:categoriesVM="categoriesVM")
 div.flex.px-2.flex.items-center.justify-between.gap-4.mt-4
     span.text-xl.text-main.font-semibold.capitalize(v-if='laboratoryInfo && laboratoryInfo.item' class='lg:text-3xl') {{ laboratoryInfo.item.name }}
     div.flex.items-center.gap-4
@@ -58,6 +59,8 @@ import { useHead, useRoute } from 'nuxt/app';
 import { listDeliveryMethods } from '@core/usecases/delivery-methods-listing/listDeliveryMethods';
 import { listBanner } from '@core/usecases/list-banner/listBanner';
 import { listPromotions, listBestSales } from '@core/usecases/list-promotions/listPromotions';
+import { getRootCategoriesVM } from '../../../../primary/viewModels/get-category/getRootCategoriesVM.js';
+
 
 definePageMeta({ layout: 'main' });
 
@@ -77,6 +80,10 @@ onMounted(async () => {
   } catch (error) {
     console.error('Erreur lors de la récupération des infos laboratoire :', error);
   }
+});
+
+const categoriesVM = computed(() => {
+  return getRootCategoriesVM();
 });
 
 

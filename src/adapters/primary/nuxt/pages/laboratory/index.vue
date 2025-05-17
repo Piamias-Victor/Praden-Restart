@@ -1,4 +1,5 @@
 <template lang="pug">
+ft-categories(:categoriesVM="categoriesVM")
 div.px-8.my-4.flex.flex-col.gap-4
     span.text-xl.text-main.font-semibold.capitalize(class='lg:text-3xl') Marques
     div.flex.items-center.gap-2.py-4.flex.gap-4.overflow-hidden.overflow-x-auto.custom-scrollbar(class='max-w-[200vw]')
@@ -30,6 +31,7 @@ import { getSearchLaboratoriesVM } from '@adapters/primary/viewModels/get-catego
 import { listLaboratories } from '@core/usecases/list-laboratories/listLaboratories';
 import { laboratoryGateway } from '../../../../../../gateways/laboratoryGateway';
 import { useHead } from 'nuxt/app';
+import { getRootCategoriesVM } from '../../../../primary/viewModels/get-category/getRootCategoriesVM.js';
 
 definePageMeta({ layout: 'main' });
 
@@ -48,6 +50,10 @@ const formatBrandHref = (laboratory: { name: string; uuid: string }): string => 
   // Construit l'URL avec le nom et l'UUID
   return `/laboratory/${formattedName}?${laboratory.uuid}`;
 };
+
+const categoriesVM = computed(() => {
+  return getRootCategoriesVM();
+});
 
 useHead({
   title: 'Marques - Découvrez nos laboratoires partenaires - Pharmacie Agnès Praden',

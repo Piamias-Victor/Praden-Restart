@@ -9,6 +9,9 @@
       template(v-if="!categoriesLoaded")
         div(v-for="n in 12" :key="n" class="bg-gray-200 rounded-xl px-6 w-24 h-10 animate-pulse")
       template(v-else)
+        ft-button-animate.bg-white.rounded-xl.px-6(v-if="router.currentRoute.value.path !== '/'" @click="goBack")
+          icon.icon-md(name="mdi:arrow-left")
+          span.whitespace-nowrap Retour
         ft-button-animate(
           @click="goToLabo()"
           class="bg-main text-white rounded-xl px-6"
@@ -181,6 +184,11 @@
   const sortedCategories = computed(() => {
     return props.categoriesVM.items
   });
+
+  const goBack = () => {
+    console.log('goBack');
+  router.back();
+};
   
   // Vérifier si les catégories sont chargées
   const categoriesLoaded = computed(() => {
