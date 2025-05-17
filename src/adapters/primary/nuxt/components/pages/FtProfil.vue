@@ -8,7 +8,7 @@
                   TransitionChild(as='template' class="w-full")
                       DialogPanel.flex.h-full.flex-col.overflow-y-scroll.bg-background.shadow-xl.animate-slideleft
                           div.w-full.bg-main.text-center.p-2.text-white.font-semibold.flex.items-center.justify-center.gap-2(class="md:hidden")
-                              span Livraison offerte pour 69 € d'achat
+                              span Livraison offerte avec le code FETEDESMAMANS
                           div.flex-1.overflow-y-auto.py-6.px-4(class="sm:px-6")
                               div.flex.items-start.justify-between
                                   h2.text-lg.font-semibold Mon profil

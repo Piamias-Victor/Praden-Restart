@@ -2,10 +2,10 @@
 div(v-if="isLoading" class="h-7 w-[33vw] sm:w-[33vw] inline-block rounded-md bg-main")
 Vue3Marquee(v-else)
     div(class='sm:w-[50vw]')
-      span Livraison offerte pour 69 € d'achat
+      span Livraison offerte avec le code FETEDESMAMANS
       span.text-xs * en point relais - de 5 kg
     div.hidden(class='sm:w-[50vw]')
-      span Livraison offerte pour 69 € d'achat 
+      span Livraison offerte avec le code FETEDESMAMANS 
       span.text-xs * en point relais - de 5 kg
 </template>
 
