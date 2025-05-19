@@ -13,7 +13,7 @@
       ft-stepper(:step=2)
       div.mt-4
   
-      div(v-if="!user.uuid").flex.flex-col.items-center
+      div(v-if="!isAuthenticated").flex.flex-col.items-center
         div.mt-4
         img.block.h-48.w-auto(
             src="https://www.pharma365.fr/wp-content/uploads/2023/11/logo_Pharmabest.png"
@@ -40,7 +40,7 @@
                   name='email-address'
                   autocomplete='email'
                   @input="mailChanged"
-                  :value="user.email"
+                  :value="userData.email"
               )
                   span.font-semibold.text-sm E-mail
               div.h-2
@@ -51,13 +51,14 @@
                   name='phone'
                   autocomplete='tel'
                   @input="phoneChanged"
+                  :value="userData.phone"
               )
                   span.font-semibold.text-sm Téléphone
   
           div.h-4
           h2.font-medium.text-gray-900 2 - Informations de livraison
           ft-address-form(
-              :user='user'
+              :user='userData'
               @firstname-changed="firstnameChanged"
               @lastname-changed="lastnameChanged"
               @country-changed="countryChanged"
@@ -80,14 +81,120 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue';
+import { ref, reactive, computed, onMounted, watch } from 'vue';
 import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 import { updateUser } from '@core/usecases/user/updateUser';
 import { useNuxtApp } from '#app';
+import { useCartStore } from '@store/cartStore';
+import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
 
-const user = computed(() => getUserVM());
+// Accès à Keycloak via nuxtApp
 const nuxtApp = useNuxtApp();
 const keycloak = nuxtApp.$keycloak;
+const keycloakReady = nuxtApp.$keycloakReady;
+
+// État d'authentification basé sur Keycloak
+const isAuthenticated = ref(false);
+
+// Créer un objet utilisateur réactif que nous allons maintenir nous-mêmes
+const userData = reactive({
+  uuid: '',
+  email: '',
+  firstname: '',
+  lastname: '',
+  phone: '',
+  address: {
+    address: '',
+    appartement: '',
+    city: '',
+    firstname: '',
+    lastname: '',
+    zip: '',
+    country: 'France'
+  }
+});
+
+// Observer les changements de Keycloak
+watch(() => keycloak?.authenticated, (newValue) => {
+  if (newValue !== undefined) {
+    console.log('[FtAccount] État Keycloak changé:', newValue);
+    isAuthenticated.value = newValue;
+    
+    // Recharger les données utilisateur quand Keycloak change
+    loadUserData();
+  }
+});
+
+// Fonction pour charger les données utilisateur complètes
+const loadUserData = () => {
+  console.log('[FtAccount] Chargement des données utilisateur...');
+  
+  try {
+    // Obtenir les données de l'utilisateur depuis getUserVM
+    const vmUser = getUserVM();
+    console.log('[FtAccount] Données getUserVM récupérées:', vmUser);
+    
+    // Transférer les données de base
+    if (vmUser.uuid) userData.uuid = vmUser.uuid;
+    if (vmUser.email) userData.email = vmUser.email;
+    if (vmUser.firstname) userData.firstname = vmUser.firstname;
+    if (vmUser.lastname) userData.lastname = vmUser.lastname;
+    if (vmUser.phone) userData.phone = vmUser.phone;
+    
+    // Transférer les données d'adresse si disponibles
+    if (vmUser.address) {
+      if (vmUser.address.address) userData.address.address = vmUser.address.address;
+      if (vmUser.address.appartement) userData.address.appartement = vmUser.address.appartement;
+      if (vmUser.address.city) userData.address.city = vmUser.address.city;
+      if (vmUser.address.firstname) userData.address.firstname = vmUser.address.firstname;
+      if (vmUser.address.lastname) userData.address.lastname = vmUser.address.lastname;
+      if (vmUser.address.zip) userData.address.zip = vmUser.address.zip;
+      if (vmUser.address.country) userData.address.country = vmUser.address.country;
+    }
+    
+    // Compléter avec les données de Keycloak si nécessaire
+    if (keycloak?.authenticated && keycloak?.tokenParsed) {
+      console.log('[FtAccount] Complément avec données Keycloak');
+      
+      // Utiliser l'ID de Keycloak si on n'a pas d'UUID
+      if (!userData.uuid && keycloak.tokenParsed.sub) {
+        userData.uuid = keycloak.tokenParsed.sub;
+      }
+      
+      // Compléter l'email si manquant
+      if (!userData.email && keycloak.tokenParsed.email) {
+        userData.email = keycloak.tokenParsed.email;
+      }
+      
+      // Compléter le prénom si manquant
+      if (!userData.firstname && keycloak.tokenParsed.given_name) {
+        userData.firstname = keycloak.tokenParsed.given_name;
+        // Mettre à jour également dans l'adresse
+        if (!userData.address.firstname) {
+          userData.address.firstname = keycloak.tokenParsed.given_name;
+        }
+      }
+      
+      // Compléter le nom si manquant
+      if (!userData.lastname && keycloak.tokenParsed.family_name) {
+        userData.lastname = keycloak.tokenParsed.family_name;
+        // Mettre à jour également dans l'adresse
+        if (!userData.address.lastname) {
+          userData.address.lastname = keycloak.tokenParsed.family_name;
+        }
+      }
+      
+      // Téléphone (si disponible via Keycloak - dépend de votre configuration)
+      if (!userData.phone && keycloak.tokenParsed.phone_number) {
+        userData.phone = keycloak.tokenParsed.phone_number;
+      }
+    }
+    
+    console.log('[FtAccount] Données utilisateur complètes après chargement:', userData);
+  } catch (error) {
+    console.error('[FtAccount] Erreur lors du chargement des données utilisateur:', error);
+  }
+};
 
 const newsletter = ref(false);
 const zipError = ref<string | null>(null);
@@ -105,23 +212,87 @@ const switchNewsletter = () => {
   newsletter.value = !newsletter.value;
 };
 
-const mailChanged = (e: any) => user.value.email = e.target.value;
-const phoneChanged = (e: any) => user.value.phone = e.target.value;
-const firstnameChanged = (value: string) => user.value.firstname = value;
-const lastnameChanged = (value: string) => user.value.lastname = value;
-// Ligne 56
+// Fonctions pour la connexion et l'inscription utilisant Keycloak
+const login = async () => {
+  console.log('[FtAccount] Tentative de connexion...');
+  
+  try {
+    // Sauvegarder le panier actuel
+    const cartVM = getCartVM();
+    if (cartVM && cartVM.items) {
+      localStorage.setItem('cart', JSON.stringify(cartVM.items));
+      console.log('[FtAccount] Panier sauvegardé avant connexion:', Object.keys(cartVM.items).length, 'articles');
+    }
+    
+    // Sauvegarder l'URL actuelle pour redirection post-connexion
+    const currentUrl = window.location.href;
+    localStorage.setItem('redirectAfterLogin', currentUrl);
+    
+    if (keycloak) {
+      keycloak.login({
+        redirectUri: window.location.origin + '/callback'
+      }).catch((error) => {
+        console.error('[FtAccount] Erreur lors de la connexion:', error);
+      });
+    } else {
+      console.error('[FtAccount] Keycloak n\'est pas initialisé');
+    }
+  } catch (error) {
+    console.error('[FtAccount] Erreur lors de la préparation de la connexion:', error);
+  }
+};
+
+const register = () => {
+  try {
+    // Sauvegarder le panier actuel
+    const cartVM = getCartVM();
+    if (cartVM && cartVM.items) {
+      localStorage.setItem('cart', JSON.stringify(cartVM.items));
+      console.log('[FtAccount] Panier sauvegardé avant inscription:', Object.keys(cartVM.items).length, 'articles');
+    }
+    
+    // Sauvegarder l'URL actuelle pour redirection post-inscription
+    const currentUrl = window.location.href;
+    localStorage.setItem('redirectAfterLogin', currentUrl);
+    
+    if (keycloak) {
+      keycloak.register({
+        redirectUri: window.location.origin + '/callback'
+      }).catch((error) => {
+        console.error('[FtAccount] Erreur lors de l\'inscription:', error);
+      });
+    } else {
+      console.error('[FtAccount] Keycloak n\'est pas initialisé');
+    }
+  } catch (error) {
+    console.error('[FtAccount] Erreur lors de la préparation de l\'inscription:', error);
+  }
+};
+
+// Fonctions d'édition des champs utilisateur
+const mailChanged = (e: any) => userData.email = e.target.value;
+const phoneChanged = (e: any) => userData.phone = e.target.value;
+const firstnameChanged = (value: string) => {
+  userData.firstname = value;
+  userData.address.firstname = value; // Synchroniser avec l'adresse
+};
+const lastnameChanged = (value: string) => {
+  userData.lastname = value;
+  userData.address.lastname = value; // Synchroniser avec l'adresse
+};
 const countryChanged = (value: string) => {
-  user.value.address.country = value;
+  userData.address.country = value;
   if (!value) {
     countryError.value = "Veuillez sélectionner un pays";
   } else {
     countryError.value = null;
   }
 };
-const addressChanged = (value: string) => user.value.address.address = value;
-const appartementChanged = (value: string) => user.value.address.appartement = value;
-const cityChanged = (value: string) => user.value.address.city = value;
+const addressChanged = (value: string) => userData.address.address = value;
+const appartementChanged = (value: string) => userData.address.appartement = value;
+const cityChanged = (value: string) => userData.address.city = value;
 
+// Validation du code postal
 const validateFrenchZip = (zip: string) => {
   const regexFranceMetropole = /^(0[1-9]|[1-8]\d|9[0-5])\d{3}$/;
 
@@ -135,27 +306,68 @@ const validateFrenchZip = (zip: string) => {
 };
 
 const zipChanged = (value: string) => {
-  user.value.address.zip = value;
+  userData.address.zip = value;
   validateFrenchZip(value);
 };
 
+// Vérification si le formulaire est valide
 const isFormValid = computed(() => {
   return (
-    user.value.firstname &&
-    user.value.lastname &&
-    user.value.phone &&
-    user.value.email &&
-    user.value.address &&
-    user.value.address.country && // Cette vérification existe déjà
-    !countryError.value && // Ajoutez cette ligne
-    user.value.address.zip &&
-    user.value.address.city &&
+    userData.firstname &&
+    userData.lastname &&
+    userData.phone &&
+    userData.email &&
+    userData.address &&
+    userData.address.country &&
+    !countryError.value &&
+    userData.address.zip &&
+    userData.address.city &&
     isZipValid.value
   );
 });
 
+// Fonction de validation et envoi du formulaire
 const validateUser = () => {
-  updateUser(user.value);
+  // Préparer l'objet utilisateur au format attendu par updateUser
+  const userToUpdate = {
+    uuid: userData.uuid,
+    email: userData.email,
+    firstname: userData.firstname,
+    lastname: userData.lastname,
+    phone: userData.phone,
+    address: {
+      address: userData.address.address,
+      appartement: userData.address.appartement,
+      city: userData.address.city,
+      firstname: userData.address.firstname,
+      lastname: userData.address.lastname,
+      zip: userData.address.zip,
+      country: userData.address.country
+    }
+  };
+  
+  console.log('[FtAccount] Mise à jour des informations utilisateur:', userToUpdate);
+  updateUser(userToUpdate);
   emit('move-stepper');
 };
+
+// Vérification de l'authentification au chargement du composant
+onMounted(async () => {
+  console.log('[FtAccount] Composant monté, vérification de l\'authentification...');
+  
+  try {
+    // Attendre que Keycloak soit prêt
+    await keycloakReady;
+    
+    // Vérifier l'état d'authentification
+    isAuthenticated.value = keycloak?.authenticated || false;
+    console.log('[FtAccount] État d\'authentification initial:', isAuthenticated.value);
+    
+    // Charger les données utilisateur (qu'il soit authentifié ou non)
+    loadUserData();
+  } catch (error) {
+    console.error('[FtAccount] Erreur lors de l\'initialisation:', error);
+    isAuthenticated.value = false;
+  }
+});
 </script>
