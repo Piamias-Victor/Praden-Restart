@@ -24,7 +24,6 @@
                               div.mt-4
                               ul.space-y-4
                                   li(v-for='order in sortedOrders' :key="order.uuid")
-                                    pre {{order}}
                                       div(class="p-4 border rounded-lg shadow-sm bg-white hover:bg-gray-50 transition-colors duration-200 cursor-pointer" @click="toggleOrder(order.uuid)").flex.justify-between
                                           div.flex.flex-col.items-start.w-full.gap-2
                                               div.flex.items-center.gap-2.w-full.justify-between
