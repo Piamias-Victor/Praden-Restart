@@ -8,7 +8,7 @@
                   TransitionChild(as='template' class="w-full")
                       DialogPanel.flex.h-full.flex-col.overflow-y-scroll.bg-background.shadow-xl.animate-slideright
                           div.w-full.bg-main.text-center.p-2.text-white.font-semibold.flex.items-center.justify-center.gap-2
-                              span Livraison offerte avec le code FETEDESMAMANS
+                              span Livraison offerte pour 69 € d'achat
                           div.py-4.px-4.flex.items-center.gap-4
                               // Input masqué pour forcer l'affichage du clavier
                               input#hiddenInput.opacity-0.h-0.w-0.absolute(

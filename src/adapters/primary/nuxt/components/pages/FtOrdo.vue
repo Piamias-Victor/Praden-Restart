@@ -8,7 +8,7 @@ TransitionRoot(appear='' :show='true' as='template')
                 TransitionChild(as='template' class="w-full")
                     DialogPanel.flex.h-full.flex-col.bg-background.shadow-xl.animate-slidetop
                         div.w-full.bg-main.text-center.p-2.text-white.font-semibold.flex.items-center.justify-center.gap-2(class="md:hidden")
-                            span Livraison offerte avec le code FETEDESMAMANS
+                            span Livraison offerte pour 69 € d'achat
                         div.flex-1.overflow-y-auto.py-6.px-4.flex-grow(class="sm:px-6")
                             input(ref="fileInput" type="file" accept=".pdf, .png, .jpg, .jpeg").hidden
                             div.flex.items-start.justify-between
