@@ -1,5 +1,5 @@
 <template lang="pug">
-  ft-categories(:categoriesVM="categoriesVM")  
+  ft-categories(:categoriesVM="categoriesVM") 
   // Fil d'Ariane amélioré avec des microdonnées Schema.org
   nav.breadcrumbs.flex.items-center.text-sm.text-gray-600.m-2(v-if="productVM" itemscope itemtype="https://schema.org/BreadcrumbList")
         div(itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem")
@@ -79,6 +79,17 @@
               div.text-base.text-contrast(v-if="detail.name !== 'Notice'" style="white-space: pre-line")
                 div.text-xs(v-html="detail.value")
               iframe.w-full.h-screen(v-else :src="detail.value")
+          
+          // Bouton Voir la notice - s'affiche uniquement si noticeUrl existe
+          a.mt-4.bg-main.rounded-xl.text-white.flex.items-center.justify-center.gap-2.py-2.px-4.font-semibold(
+            v-if="productVM.noticeUrl"
+            :href="productVM.noticeUrl" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Voir la notice du produit"
+          )
+            span Voir la notice
+            icon.icon-md(name="akar-icons:send")
   
       ft-navigation
       ft-product-list.mt-4(:products="searchVM") Ces produits peuvent vous plaire
