@@ -1,0 +1,12864 @@
+import { defineEventHandler } from 'h3';
+
+export default defineEventHandler((event) => {
+  event.node.res.setHeader('Content-Type', 'application/xml; charset=utf-8');
+  
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+<channel>
+<title><![CDATA[ Pharmacie Agnès Praden - Produits santé et bien-être - Partie 12 ]]></title>
+<description><![CDATA[ Produits de pharmacie, parapharmacie et matériel médical disponibles à la Pharmacie Agnès Praden à Alès. ]]></description>
+<link>https://pharmacieagnespraden.com</link>
+<item>
+<title><![CDATA[ Nutergia Ergystress Sommeil  40 gélules ]]></title>
+<g:id>ffa7cf2a-2381-425d-91f7-80d51d094ee6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-ergystress sommeil  40 gélules?ffa7cf2a-2381-425d-91f7-80d51d094ee6 ]]></link>
+<g:price><![CDATA[ 1090.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="i4c-draggable-container" style="width:0px;height:0px;">
+<div class="resolved"></div>
+</div>
+<p><span>Nutergia Ergystress Sommeil de Nutergia est un complément alimentaire pour un sommeil naturel</span><span>¹.</span><br /> </p>
+<ul><li>Qualité du sommeil²</li>
+<li>Endormissement¹</li>
+<li>Mélatonine et Eschscholtzia</li>
+</ul><p></p>
+<div id="i4c-dialogs-container"></div>
+<div></div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401560256239</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/129b599f812fd331d8aa264341048f1c9a8835fed9dfb9428bbece89b225e372 ]]></g:image_link>
+<g:product_type><![CDATA[ STRESS ET SOMMEIL ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutergia Ergytol 30 gélules ]]></title>
+<g:id>b7be8e42-3aa0-41be-9fed-2f4904b3d046</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-ergytol 30 gélules?b7be8e42-3aa0-41be-9fed-2f4904b3d046 ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <div>
+<p>Complément alimentaire à base d’extraits de plantes, vitamines, minéraux et curcuma.</p>
+</div>
+<ul><li>Adapté pour :</li>
+<li>sensibilités gênantes</li>
+<li>confort des articulations, du système digestif, des voies respiratoires</li>
+<li>bien-être pendant les cycles menstruels</li>
+</ul> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3664524000389</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d345ecfa7a7a46cf3dfbe17b46eb55879437a59cc40a7d0d2e63a9e381ce8eb6 ]]></g:image_link>
+<g:product_type><![CDATA[ SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutergia Ergytonyl 250 ml ]]></title>
+<g:id>f249cd9a-7301-467d-bb79-780ed617da2d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-ergytonyl 250 ml?f249cd9a-7301-467d-bb79-780ed617da2d ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>ERGYTONYL est composé d’un trio de plantes toniques. L’éleuthérocoque contribue à une activité adaptogène et à <span>optimiser les capacités mentales et physiques en cas de fatigue passagère</span>. Le ginseng soutient la vigilance et la mémoire, aide au maintien de bonnes performances cognitives et <span>favorise la vitalité</span>. Le maté a des propriétés stimulantes qui participent à la résistance de l’organisme contre la fatigue physique et mentale.<br />Des oligoéléments complètent la f ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3664524000853</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/58d746d436d0a452a560027e668dffc1602b7ab8e7c3e19f6465aff82e12815c ]]></g:image_link>
+<g:product_type><![CDATA[ FORME - VITALITÉ ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutergia Ergytransit Flash 30 Gélules ]]></title>
+<g:id>14d28ae9-6ddb-4900-9378-d7947868cc33</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-ergytransit flash 30 gélules?14d28ae9-6ddb-4900-9378-d7947868cc33 ]]></link>
+<g:price><![CDATA[ 999.00 EUR ]]></g:price>
+<description><![CDATA[ <p>ERGYTRANSIT flash est un <span>complexe végétal</span> contenant du tamarin, de l’artichaut, de la guimauve et de la menthe poivrée.<br />Le tamarin favorise un <span>bon transit intestinal</span>. La formule est complétée par l’ajout de vitamines B2 et B3 qui contribuent au <span>maintien des muqueuses saines,</span> ainsi que de <span>glutamine.</span></p>
+<p><span>Nouvelle formule.</span></p>
+<div class="accordion-item border-bottom-0 top-dotted mt-3">
+<div id="description" class="accordio ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3664524000754</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a9ba19417853f81813b6204cbb0472520e2e9098e1ec0ed8080ed0bd0d995a10 ]]></g:image_link>
+<g:product_type><![CDATA[ DIGESTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutergia Ergyveine 250 ml ]]></title>
+<g:id>d20486cd-9d7b-4c27-8319-b73ac161fe41</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-ergyveine 250 ml?d20486cd-9d7b-4c27-8319-b73ac161fe41 ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>ERGYVEINE contient marron d’Inde, vigne rouge et mélilot qui contribuent à <strong>diminuer les sensations de jambes lourdes</strong> et à la <strong>bonne circulation du sang dans les microvaisseaux</strong>.<br>Le sélénium, le cuivre et le manganèse participent à la protection des cellules contre le stress oxydatif.<br>Des polyphénols (OPC de raisin) complètent cette formule.</p><p><strong>Formule optimisée et nouveau goût<br>Sans alcool, sans sucre ajouté, sans édulcorant, sans arôme artif ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3664524000761</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c18f46c642467f956a29b59dfbae442fc55b5cbed68f69a2dfd275e5651a08a0 ]]></g:image_link>
+<g:product_type><![CDATA[ SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutergia Ergyzym 40 gélules ]]></title>
+<g:id>eeb895dd-d5c5-4468-84bf-3a1082ef05a4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-ergyzym 40 gélules?eeb895dd-d5c5-4468-84bf-3a1082ef05a4 ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <div>
+<p>Complément alimentaire à base de 6 enzymes, de bétaïne, de calcium et de vitamines B.</p>
+</div>
+<ul><li>Adapté pour :</li>
+<li>digestion perturbée, sensibilité digestive</li>
+<li>repas copieux, mastication insuffisante</li>
+<li>bon fonctionnement des enzymes digestives</li>
+</ul> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3664524000440</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/82b2c38ad954353f699477164622be6fc91ff98a54e57c98be7f04ed66f3a87e ]]></g:image_link>
+<g:product_type><![CDATA[ DIGESTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutergia Green'Flor 90 gélules ]]></title>
+<g:id>9cd332c1-57e8-44ec-b98e-82742fc26598</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-green'flor 90 gélules?9cd332c1-57e8-44ec-b98e-82742fc26598 ]]></link>
+<g:price><![CDATA[ 2290.00 EUR ]]></g:price>
+<description><![CDATA[ <div>
+<p>mplément alimentaire à base de Chlorella, Spiruline, Pissenlit.</p>
+</div>
+<ul><li>En cas de :</li>
+<li>besoin de détoxication (métaux lourds, pollutions, etc.)</li>
+<li>confort intestinal</li>
+</ul> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401542904721</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0fa629ebe2267ec727d5fe550d5adf8a3c5f2412daa7f3912069780972384c1e ]]></g:image_link>
+<g:product_type><![CDATA[ DIGESTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutergia My'cokyl 90 comprimés ]]></title>
+<g:id>5864ff0b-d5be-4b8a-81d9-2b79085bf4cf</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-my'cokyl 90 comprimés?5864ff0b-d5be-4b8a-81d9-2b79085bf4cf ]]></link>
+<g:price><![CDATA[ 2290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Complément alimentaire à base d’ail, pamplemousse, romarin et huiles essentielles.</p>
+<p>My’cokyl est un complément alimentaire agissant sur un intestin fragilisé par une flore pathogène.</p>
+<p>My’cokyl est un complément nutritionnel élaboré à partir de plantes aromatiques présentant des propriétés synergiques pour l’équilibre intestinal.</p>
+<p>My’cokyl est particulièrement intéressant pour assainir la flore intestinale et limiter le développement d’espèces pathogènes.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401542907043</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b95a0f0537bd257cbf47e2f4bca71427fab01fc281e115a00f755e35736246a9 ]]></g:image_link>
+<g:product_type><![CDATA[ DIGESTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutergia Oligomax Chrome 150ml ]]></title>
+<g:id>2c8b1f2e-b1c0-4fdf-ab54-b8c697108c81</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-oligomax chrome 150ml?2c8b1f2e-b1c0-4fdf-ab54-b8c697108c81 ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Oligomax chrome est une synergie de minéraux et oligoéléments d’origine naturelle : association d’eau de mer concentrée et de lithothamne, algue rouge source d’oligoéléments. Y sont ajoutés des oligoéléments sélectionnés pour leurs bienfaits, dont le chrome.</p>
+<p><br />Le chrome contribue au maintien d'une glycémie normale et au métabolisme des macronutriments dont les sucres et les graisses.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401560008586</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b2b674a21ea67cb49a412cee02ed481fffd3560f61dd2c6504f8433117543df1 ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutergia Oligomax Iode 150 ml ]]></title>
+<g:id>816fa556-9782-4394-99a5-6508e367b7ec</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-oligomax iode 150 ml?816fa556-9782-4394-99a5-6508e367b7ec ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Oligomax iode est une synergie de minéraux et oligoéléments d’origine naturelle : association d’eau de mer concentrée et de lithothamne, algue rouge source d’oligoéléments. Y sont ajoutés des oligoéléments sélectionnés pour leurs bienfaits, dont l’iode.</p>
+<p><br />L'iode participe à la production normale des hormones thyroïdiennes, et le sélénium contribue à une bonne fonction de la thyroïde.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401560008609</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/39e411594e32e0618eeae0de7ed39aab5d00657199b2028c3458a7588e4c32b3 ]]></g:image_link>
+<g:product_type><![CDATA[ SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutergia Oligomax Magnésium 150ml ]]></title>
+<g:id>b8eaeb2f-3d2f-401e-8dae-a7cea7ca1ee0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-oligomax magnésium 150ml?b8eaeb2f-3d2f-401e-8dae-a7cea7ca1ee0 ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Oligomax magnésium est une synergie de minéraux et oligoéléments d’origine naturelle : association d’eau de mer concentrée et de lithothamne, algue rouge source d’oligoéléments. Y sont ajoutés des oligoéléments sélectionnés pour leurs bienfaits, dont le magnésium.</p>
+<p><br />Le magnésium contribue à la réduction de fatigue et au bon fonctionnement du système nerveux.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401560008616</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8f7f31dadbfbda09c12d048b766dc07fa26dbd7f5c2f83d9a9057c58d99d2294 ]]></g:image_link>
+<g:product_type><![CDATA[ STRESS ET SOMMEIL ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutergia Oligomax Sélénium Antioxydant 150ml ]]></title>
+<g:id>907a75c4-91da-4deb-ac4d-8b6669cdb619</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-oligomax sélénium antioxydant 150ml?907a75c4-91da-4deb-ac4d-8b6669cdb619 ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Oligomax sélénium est une synergie de minéraux et oligoéléments d’origine naturelle : association d’eau de mer concentrée et de lithothamne, algue rouge source d’oligoéléments. Y sont ajoutés des oligoéléments sélectionnés pour leurs bienfaits, dont le sélénium.</p>
+<p><br />Le sélénium, antioxydant, contribue à la protection des cellules contre le stress oxydatif.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401560008654</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/153c60ec10cc85a01bb23863de80765c4d43a5ba1d95a2d60f629f008d468224 ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutergia Oligomax Zinc - Silicium 150ml ]]></title>
+<g:id>71221227-0386-490a-904f-cf8c341a996b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-oligomax zinc - silicium 150ml?71221227-0386-490a-904f-cf8c341a996b ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Oligomax zinc-silicium est une synergie de minéraux et oligoéléments d’origine naturelle : association d’eau de mer concentrée et de lithothamne, algue rouge source d’oligoéléments. Y sont ajoutés des oligoéléments sélectionnés pour leurs bienfaits, dont le zinc et le silicium.</p>
+<p><br />Le zinc contribue à un métabolisme acido-basique normal et au maintien d’une bonne ossature. Le bambou, bon pour les articulations, contient de la silice qui participe au confort articulaire.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401560008661</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a7556203e28384fae79501f9a0cc918a672216725cc619a27f4adb59bfffc71c ]]></g:image_link>
+<g:product_type><![CDATA[ SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutergia Oligomax multiminéral 150 ml ]]></title>
+<g:id>a8d2f887-9ae4-4a95-add9-32f36b284205</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-oligomax multiminéral 150 ml?a8d2f887-9ae4-4a95-add9-32f36b284205 ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>OLiGOMAX multiminéral est l'OLiGOMAX généraliste pour toute la famille.</span> Il associe tous les oligoéléments, contribuant ainsi à la vitalité générale de l’organisme et à l’ensemble de nos réactions cellulaires.</p>
+<p><span>OLiGOMAX multiminéral </span>est une <span>association complète d’oligoéléments</span>, d’eau de mer désodée et d’extrait de lithothamne qui contribuent au bien-être général de l’organisme. <span>Le magnésium </span>contribue à réduire la fatigue ainsi qu’au fon ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3664524000716</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/83d574e93b7ba8f728848c44f41b7269010e44d69a60832394b308eed999ede8 ]]></g:image_link>
+<g:product_type><![CDATA[ FORME - VITALITÉ ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutergia Synerbiol 60 capsules ]]></title>
+<g:id>3b68cc1f-c34b-4701-9760-1dcd59c80d48</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-synerbiol 60 capsules?3b68cc1f-c34b-4701-9760-1dcd59c80d48 ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[ <div>
+<p>Complément alimentaire à base d’huile vierge de bourrache et d’huiles de poissons sauvages EPAX<span>®</span> de qualité certifiée.</p>
+</div>
+<ul><li>Adapté pour :</li>
+<li>apport complet en acides gras essentiels oméga-3 marins et oméga-6 végétaux</li>
+<li>bonne mobilité articulaire <span>1</span></li>
+</ul> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3664524000273</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c28f724e63fd61e4433d7756463f95dbe5ab249fe6e0681d98a2f1bfd1e58a0d ]]></g:image_link>
+<g:product_type><![CDATA[ SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutergia Vecti Pass 60 gélules ]]></title>
+<g:id>dea30339-99d1-4577-8337-5eba348b263c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutergia-vecti pass 60 gélules?dea30339-99d1-4577-8337-5eba348b263c ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Complément Alimentaire VECTI-PASS des Laboratoires NUTERGIA, contient une source de minéraux et de vitamines qui contribuent aux fonctions thyroïdiennes, ainsi qu'au maintien d'une bonne ossature, tout en diminuant la fatigue.</p>
+<p>C'est l'alimentation qui est la source première de notre apport en vitamines et en minéraux et le mode de cuisson est extrêmement important afin de préserver au mieux ces substances fondamentales.</p>
+<p>Effectivement, si vos aliments sont mal conservés, prépa ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401548036419</g:gtin>
+<g:brand><![CDATA[ NUTERGIA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cd7db4c9becda712931d5bef6dffbf88f73e062acfb764ac29b3cc0622965cd8 ]]></g:image_link>
+<g:product_type><![CDATA[ FORME - VITALITÉ ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutramigen 1 Lgg 1er Age 400 g ]]></title>
+<g:id>22b99024-2909-4bb5-8f1a-8053d3404c96</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutramigen-1 lgg 1er age 400 g?22b99024-2909-4bb5-8f1a-8053d3404c96 ]]></link>
+<g:price><![CDATA[ 2046.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="short_description_block">
+<div id="short_description_content" class="rte align_justify">
+<p>Nutramigen Lgg 1 est un lait avec une formule hypoallergénique pour la prise en charge de l'allergie aux protéines de lait de vache.</p>
+</div>
+</div>
+<div class="product-price-block row">
+<div class="col-md-6"></div>
+</div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8712045025772</g:gtin>
+<g:brand><![CDATA[ BRISTOL MYERS ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ed0d2e40c59eca97754321e21d5643b8dca19d7f9c13199352da38962239afd9 ]]></g:image_link>
+<g:product_type><![CDATA[ LAIT DE CROISSANCE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutramigen 2 LGG  formule hypoallergénique dès 6 mois lait en poudre 400g ]]></title>
+<g:id>24a4ff16-9d3e-4480-8f2b-9ce4533babea</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutramigen-2 lgg  formule hypoallergénique dès 6 mois lait en poudre 400g?24a4ff16-9d3e-4480-8f2b-9ce4533babea ]]></link>
+<g:price><![CDATA[ 2046.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">Les nouveau-nés ont besoin de nutriments adaptés à leurs organismes pour se développer correctement. </p>
+<p class="p1">Les laits en poudre sont souvent employés comme un supplément ou un substitut du liquide maternel. Toutefois, ils contiennent des allergènes qui peuvent provoquer diverses affections. <br /><br />Pour éviter ces désagréments, les laboratoires Bristol myers squibb ont élaboré le Nutramigen 2 lgg +4m poudre 400g. Ce soin est conçu pour apporter aux cellules des peti ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8712045030905</g:gtin>
+<g:brand><![CDATA[ BRISTOL MYERS ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/76e6d4cb650181d210d7d35f6b2f2f3f312de5a91cd3034684cbd103f716023d ]]></g:image_link>
+<g:product_type><![CDATA[ LAITS INFANTILES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutreov Calori Track Capteur 3en1 30 Comprimés ]]></title>
+<g:id>299cd5b7-bf8f-4928-920e-08df00decd76</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutreov-calori track capteur 3en1 30 comprimés?299cd5b7-bf8f-4928-920e-08df00decd76 ]]></link>
+<g:price><![CDATA[ 750.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Issu de la recherche des laboratoires Nutreov, Calori-Track® permet de capter une partie des graisses, des sucres et des calories provenant de l’alimentation.</p>
+<p>Calori-Track® est le compagnon idéal des petits écarts comme des repas copieux et trop riches. Vous pouvez continuer à savourer vos repas avec plaisir tout en prenant soin de votre ligne.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401541417208</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/65fbe7f627bb9401905cb5ab79d6d96eab31f36d35e263ca84dab99ac11a3544 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutreov Capileov Cheveux Antichute 3x30 Gélules ]]></title>
+<g:id>daf11f5e-14f3-4df3-acf6-b85ef0511b5e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutreov-capileov cheveux antichute 3x30 gélules?daf11f5e-14f3-4df3-acf6-b85ef0511b5e ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le complément alimentaire antichute de la gamme Capileov bénéfice d'une formule double action : sur la genèse capillaire et le bulbe capillaire. Ce complément alimentaire élaboré par le laboratoire Nutreov Physcience puise dans la propriété stimulante du Serenoa Repens pour soutenir la croissance naturelle de la chevelure. La cystine, composant essentiel de la kératine, est synthétisée par la vitamine B6 présente dans ce complément alimentaire. La vitamine B8 et le Zinc permettent au compléme ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401597531781</g:gtin>
+<g:brand><![CDATA[ NUTREOV ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1820e7d073b564a282585694644fa8755fa8c8df3abc5914c230c5a2c122bab8 ]]></g:image_link>
+<g:product_type><![CDATA[ Médicament > Dermatologie, cheveux, ongles > Chute de cheveux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutreov Magne Contol Extra Fort 360 30 Comprimés ]]></title>
+<g:id>80a60d96-94a5-4f5b-bcd5-c68d03eb60bc</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutreov-magne contol extra fort 360 30 comprimés?80a60d96-94a5-4f5b-bcd5-c68d03eb60bc ]]></link>
+<g:price><![CDATA[ 660.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La fatigue générale, la nervosité et la fatigue physique peuvent constituer des signes de carence en magnésium. La marque Nutreov a formulé un complément alimentaire particulièrement concentré le Magné Control Extra Fort 360.</p>
+<p>La fatigue générale, la nervosité et la fatigue physique peuvent constituer des signes de carence en magnésium. La marque Nutreov a formulé un complément alimentaire particulièrement concentré le Magné Control Extra Fort 360.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701132601741</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/85c4f382384564c18351f60e7b3f6bdcfdca6428c533e51d989fd3701782e3eb ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutreov Magné Control Format Eco 60 comprimés ]]></title>
+<g:id>3f9d766a-5723-48aa-bf10-6e4a5d0497e6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutreov-magné control format eco 60 comprimés?3f9d766a-5723-48aa-bf10-6e4a5d0497e6 ]]></link>
+<g:price><![CDATA[ 699.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Pour vous accompagner à tout moment de l’année, dans les moments de fatigue généralisée et de nervosité, Magné®control Comprimés, issu de la recherche des laboratoires Nutreov, vous apporte dans une formule innovante 300 mg de magnésium et des vitamines pour un action synergique optimale.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401546582970</g:gtin>
+<g:brand><![CDATA[ NUTREOV ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4f2d5ecc4d070baf9e37cabc23e96fb0abfbad7f442dcf18334de36a4bd47099 ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutreov Magné Control Vitalité 20 Sticks ]]></title>
+<g:id>ddeafc78-b107-42be-9d19-1ea0a325deaa</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutreov-magné control vitalité 20 sticks?ddeafc78-b107-42be-9d19-1ea0a325deaa ]]></link>
+<g:price><![CDATA[ 790.01 EUR ]]></g:price>
+<description><![CDATA[ <p>Le manque de magnésium peut entraîner des fatigues phytiques et nerveuses. La marque <span>Nutreov</span> a formulé un complément alimentaire pour ce faire .</p>
+<p>Ces sticks offrent une une synergie d'actifs pour la <span>vitalité intellectuelle</span> :</p>
+<p>- le <span>magnésium,</span> aide à <span>réduire la fatigue</span> et contribue au fonctionnement normal des <span>muscles</span>, du <span>système nerveux</span> et des <span>fonctions psychologiques</span>,</p>
+<p>- les <span>vita ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701132601758</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7a5494564438b9d719b86c8edd191736bcee5cdc10ce079254ff44ea5c75a7af ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutreov Menophytea Bouffées De Chaleur Action 24h 40 Comprimés ]]></title>
+<g:id>65d63783-f6d6-4f59-a142-d439dffa6528</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutreov-menophytea bouffées de chaleur action 24h 40 comprimés?65d63783-f6d6-4f59-a142-d439dffa6528 ]]></link>
+<g:price><![CDATA[ 799.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Face aux bouffées de chaleur diurnes et suées nocturnes liées à la préménopause et ménopause chez les femmes de 45 ans et plus, Nutreov vous recommande son complément alimentaire Ménophytéa Équilibre Bouffées de Chaleur.<br><br>Sa formulation végétale contient des extraits de lin et de houblon, reconnus pour leurs propriétés apaisantes efficaces contre les symptômes révélateurs de la ménopause comme les bouffées de chaleur, la nervosité et la sudation pour un sommeil apaisé.<br><br>La vitamin ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401598894984</g:gtin>
+<g:brand><![CDATA[ NUTREOV ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/930e6984e5069c797d539d95adf97bc9f6a6a377d35f9bc271ff990403844d7f ]]></g:image_link>
+<g:product_type><![CDATA[ Médicament ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutreov Speed Detox Détoxifiant Global 500 ml ]]></title>
+<g:id>be360cda-71dd-4f23-b789-92e36f4b3695</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutreov-speed detox détoxifiant global 500 ml?be360cda-71dd-4f23-b789-92e36f4b3695 ]]></link>
+<g:price><![CDATA[ 599.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Speed Détox® Détoxifiant Global</span><span>, issu de la recherche des Laboratoires Nutreov, réunit dans une formule innovante inspirée par la nature des actifs qui activent les fonctions d’élimination de l’organisme pour drainer et détoxifier.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701132601512</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6febf388c54d90408336b90be71eacf9af940a83e7f4faaf26d1e255d2bd799a ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutreov Speed Draineur Fruits  Rouges 500ml ]]></title>
+<g:id>80ddbcda-3a7e-449e-9565-ad7b4bf8e288</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutreov-speed draineur fruits  rouges 500ml?80ddbcda-3a7e-449e-9565-ad7b4bf8e288 ]]></link>
+<g:price><![CDATA[ 599.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Issue de la recherche des laboratoires Nutreov, la formule de Speed draineur® est innovante et complète. Elle associe des actifs d’origine végétale dont l’extraction préserve leurs propriétés :</span><br /><span>- le frêne, la piloselle, les queues de cerises et le thé vert facilitent l’élimination urinaire,</span><br /><span>- le thé vert aide à contrôler le poids dans le cadre d’un régime amincissant,</span><br /><span>- la caféine naturelle qui est bien connue pour ses vertus.</span> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401598289308</g:gtin>
+<g:brand><![CDATA[ NUTREOV ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/db386f96044de32d04e815f8caf143ae2c30220bba71c1b7a9960589ecb49382 ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutreov Speed Draineur Fruits d'été 500ml ]]></title>
+<g:id>9c1cbd5c-f938-44ce-85f8-95a8e45ef3c3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutreov-speed draineur fruits d'été 500ml?9c1cbd5c-f938-44ce-85f8-95a8e45ef3c3 ]]></link>
+<g:price><![CDATA[ 599.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Issue de la recherche des laboratoires Nutreov, la formule de Speed draineur® est innovante et complète. Elle associe des actifs d’origine végétale dont l’extraction préserve leurs propriétés :</span><br /><span>- le frêne, la piloselle, les queues de cerises et le thé vert facilitent l’élimination urinaire,</span><br /><span>- le thé vert aide à contrôler le poids dans le cadre d’un régime amincissant,</span><br /><span>- la caféine naturelle qui est bien connue pour ses vertus.</span> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401545271875</g:gtin>
+<g:brand><![CDATA[ NUTREOV ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d07f40f8be3f204771d41337ba579c4594b29d8ca0f483c0bec656b6e87d5f1f ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutreov Sunsublim Autobronzant Lot de 3 x 28 Capsules ]]></title>
+<g:id>84f855a3-ff60-4f08-8780-46970179bdd7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutreov-sunsublim autobronzant lot de 3 x 28 capsules?84f855a3-ff60-4f08-8780-46970179bdd7 ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Obtenir un teint hâlé et éclatant sans risque de subir les agressions du soleil est désormais possible avec le Sunsublim Sans Soleil Autobronzant de Nutreov. C’est un complément alimentaire sous forme de capsule conçu pour ceux qui souhaitent afficher un bronzage et un effet bonne mine sans soleil.<br><br>Sunsublim Sans Soleil Autobronzant possède une formule unique faisant de lui la supplémentation idéale pour un hâle uniforme. D’abord, il contient 6 pigments naturels très concentrés pour un ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401551598287</g:gtin>
+<g:brand><![CDATA[ NUTREOV ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f17170fa8ad76b4ff3a174f682c7076afb63a6844e5287581440353b5035c6ed ]]></g:image_link>
+<g:product_type><![CDATA[ Médicament > COMPLEMENTS ALIMENTAIRES > SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutreov Sunsublim Bronzage Intégral 3x30 capsules ]]></title>
+<g:id>9ee3afe6-78d8-4c15-981c-49f1d4a7b354</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutreov-sunsublim bronzage intégral 3x30 capsules?9ee3afe6-78d8-4c15-981c-49f1d4a7b354 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Issu de la recherche des laboratoires Nutreov, Sunsublim® Solaire Bronzage Intégral est un préparateur solaire nouvelle génération, qui procure un bronzage éclatant.<br />Pour un bronzage de meilleure qualité et une peau plus douce, Sunsublim Bronzage Intégral s’enrichit d’une des huiles les plus rares de la planète : l’huile d’Argan.<br />Provenant de l’arganier, elle est uniquement produite dans l’arrière-pays marocain.</p>
+<p>Connu pour ses propriétés hydratantes, cet élixir de beauté est  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401598269607</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c56270a9eb065fbdaf7f6763ebb4bf05b8489541b7fe0f360df367edee1bb164 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutreov pectiligne pomme 15 carrés ]]></title>
+<g:id>352e6fe6-fdd0-421c-84a5-f27f9d268387</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutreov-pectiligne pomme 15 carrés?352e6fe6-fdd0-421c-84a5-f27f9d268387 ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Physcience Pectiligne Carré Coupe Faim est un modérateur d'appétit naturel au bon gout de pomme.</p>
+<p>Principal ennemi de la balance : le grignotage ! Pour mettre fin aux rondeurs superflues il faut manger moins et résister aux fringales.</p>
+<p>Pour la 1ère fois les Laboratoires Physcience proposent toute l'efficacité de la pectine de pomme dans un délicieux carré coupe faim. Véritable concentré de pectine de pomme (1 carré l'équivalent en pectine de 5 pommes, pour moins de 30 kcal).</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401545278102</g:gtin>
+<g:brand><![CDATA[ NUTREOV ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cc9cb05fd4ee9ddd5791908e877e8041d5f6cfaf57d66e29b34a2d82e93d5564 ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutreov stim royal gelée royale 2000mg 20 ampoules ]]></title>
+<g:id>5ddde280-053e-4fb9-8246-6db56ce40ab0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutreov-stim royal gelée royale 2000mg 20 ampoules?5ddde280-053e-4fb9-8246-6db56ce40ab0 ]]></link>
+<g:price><![CDATA[ 1090.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Un concentré de naturalité !</strong><br />Fatigue ? Baisse de forme ? Baisse d’énergie ?<br />Notre système immunitaire est normalement capable de faire face aux agressions extérieures pour défendre notre organisme. Il peut être amoindri par de nombreux facteurs : le stress, des déficits nutritionnels, l’âge… Lorsqu’en plus la fatigue s’en mêle, en particulier en hiver, il faut une solution adaptée.</p>
+<p>StimRoyal GELÉE ROYALE BIO 2000 mg issu de la recherche des Laboratoires Nutre ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000671100</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f40560109d31867178254a92a29dc63f6aac4b183ba0abd766dbf46c426507d3 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutri 03 Cheveux 60 cprs ]]></title>
+<g:id>e7f3f6fa-5128-4cc8-b72f-01bfbd6bd509</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutri-03 cheveux 60 cprs?e7f3f6fa-5128-4cc8-b72f-01bfbd6bd509 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Synergie d'oligo-éléments en minidilutions. Chaque <span>nutri </span>correspond à un <span>méridien</span>. La nutripuncture <span>active les échanges cellulaires et nourri les courants vitaux.</span></p>
+<p>Nutri® 03 (méridiens Shou Jue Yin et Shou Shao Yang)<br />Saison : Printemps</p>
+<p>Oligométaux : <span>Chlorure de zinc, sulfate de zinc, acétate de zinc, carbone de calcium, phosphate tri-magnésien.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401577789614</g:gtin>
+<g:brand><![CDATA[ PRONUTRI ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/711e63dd81c73cf5db42b13646cc95e4858504c669ad5b5d18f11757805bd027 ]]></g:image_link>
+<g:product_type><![CDATA[ FORME - VITALITÉ ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutri 10 Estomac 60 cprs ]]></title>
+<g:id>b27755dd-8ff1-45f8-a8b5-f251c3d70ea3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutri-10 estomac 60 cprs?b27755dd-8ff1-45f8-a8b5-f251c3d70ea3 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Synergie d'oligo-éléments en minidilutions. Chaque <span>nutri </span>correspond à un <span>méridien</span>. La nutripuncture <span>active les échanges cellulaires et nourri les courants vitaux.</span></p>
+<p>Nutri® 10 (méridien Zu Yang Ming)<br />Saison : Intersaisons</p>
+<p>Oligométaux : Gluconate de manganèse, sulfate de cuivre, sulfate ferreux, carbonate de calcium, gluconate de cuivre.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401577790382</g:gtin>
+<g:brand><![CDATA[ PRONUTRI ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/25e9c871232595d8f77dbc1543d8d355c831765bd569dcfcb603c531a981bb4e ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutri 18 Rate Pancreas 60 cprs ]]></title>
+<g:id>ed4f56d4-4062-4461-92ff-965cdac4609c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutri-18 rate pancreas 60 cprs?ed4f56d4-4062-4461-92ff-965cdac4609c ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span><span><span><span>Le pancréas joue un rôle de transformation métabolique. </span></span></span><span><span><span>Par ses sécrétions exocrines, enzymatiques et endocrines, elle participe à la gestion des apports nutritionnels nécessaires à la vie de l'organisme, à son action et à son mouvement, ainsi qu'à sa construction et sa croissance. </span></span></span></span></p>
+<p><span><span><span><span>Elle est liée au sens du goût : le désir de se nourrir, d'agir, de se réaliser, de se réali ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401577791273</g:gtin>
+<g:brand><![CDATA[ PRONUTRI ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3570466314d4394b2c7fcb2b742ad30ba555b90db86191eb804453616c0ecba4 ]]></g:image_link>
+<g:product_type><![CDATA[ FORME - VITALITÉ ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutri 23 Retine 60 cprs ]]></title>
+<g:id>901d0eba-58df-4d4d-a195-61d2baa3ee87</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutri-23 retine 60 cprs?901d0eba-58df-4d4d-a195-61d2baa3ee87 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Synergie d'oligo-éléments en minidilutions. Chaque <span>nutri </span>correspond à un <span>méridien</span>. La nutripuncture <span>active les échanges cellulaires et nourri les courants vitaux.</span></p>
+<p>Nutri® 23 (méridien Zu Tai Yang)<br />Saison : Hiver</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401577791853</g:gtin>
+<g:brand><![CDATA[ PRONUTRI ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5f797ffda47438ba232cc16b064979797c061591e42a7f7406999a986c17cbc4 ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutri 25 Sinus 60 cprs ]]></title>
+<g:id>7b2c3979-2357-40d0-bb00-a0f2e7c05d15</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutri-25 sinus 60 cprs?7b2c3979-2357-40d0-bb00-a0f2e7c05d15 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Synergie d'oligo-éléments en minidilutions. Chaque <span>nutri </span>correspond à un <span>méridien</span>. La nutripuncture <span>active les échanges cellulaires et nourri les courants vitaux.</span></p>
+<p>Nutri® 25 (meridien Shou Tai Yin)<br />Saison : Automne </p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401577792164</g:gtin>
+<g:brand><![CDATA[ PRONUTRI ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/971f3a8081cd72493d696d04d2a945ee5861fe97fb60485bbc73d6e348673c84 ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutri 26 Terre Noyaux Gris 60 cprs ]]></title>
+<g:id>ee2150a8-c344-485d-b163-61ff3cae8404</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutri-26 terre noyaux gris 60 cprs?ee2150a8-c344-485d-b163-61ff3cae8404 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Synergie d'oligo-éléments en minidilutions. Chaque <span>nutri </span>correspond à un <span>méridien</span>. La nutripuncture <span>active les échanges cellulaires et nourri les courants vitaux.</span></p>
+<p>Nutri® 26 (méridien Zu Tai Yin)<br />Saison : Intersaisons</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401577792225</g:gtin>
+<g:brand><![CDATA[ PRONUTRI ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/03032a9f3ba9591a53e474eb5732cff8b6c26cfbc026da154ac53eb6137dccc7 ]]></g:image_link>
+<g:product_type><![CDATA[ FORME - VITALITÉ ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutri 33 Conception 60 cprs ]]></title>
+<g:id>44962489-0ecd-4290-818d-382588c00612</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutri-33 conception 60 cprs?44962489-0ecd-4290-818d-382588c00612 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Synergie d'oligo-éléments en minidilutions. Chaque <span>nutri </span>correspond à un <span>méridien</span>. La nutripuncture <span>active les échanges cellulaires et nourri les courants vitaux.</span></p>
+<p>Nutri® 33 (méridien Ren Mai)<br />Saison : Printemps</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401577792973</g:gtin>
+<g:brand><![CDATA[ PRONUTRI ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d454d9c839a7dedf8c06f2cbaec3e45c7c485294226aa5dcc35d6fad73c81e42 ]]></g:image_link>
+<g:product_type><![CDATA[ FORME - VITALITÉ ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisante Infusion Bio Articulation 20 sachets ]]></title>
+<g:id>660ba1b6-3484-4d01-84d9-e610772b6455</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisante-infusion bio articulation 20 sachets?660ba1b6-3484-4d01-84d9-e610772b6455 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Cette infusion est idéale pour aider à retrouver un bien-être articulaire et favoriser la souplesse des mouvements.</p>
+<p>Le cassis et le pissenlit contribuent à éliminer les déchets et toxines qui, accumulés dans l’organisme, peuvent causer des raideurs articulaires.</p>
+<p>L’ortie, grâce à la silice qu’elle contient, participe à la consolidation des cartilages.</p>
+<p>Le genièvre aide à soulager les douleurs articulaires.</p>
+<p>La cannelle est reconnue pour ses propriétés purifiantes.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451101581</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/51b26bd4a89769437740202c1392815a05e8b8fd3e4607bd672aa3ad27197c10 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisante Infusion Bio Circulation 20 sachets ]]></title>
+<g:id>2a2e0152-e672-4ec3-9689-c2aab2cb0836</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisante-infusion bio circulation 20 sachets?2a2e0152-e672-4ec3-9689-c2aab2cb0836 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Préparation pour infusion qui exerce un effet bénéfique sur la circulation sanguine.</p>
+<p>Cette infusion, grâce aux plantes qu'elle renferme, exerce un effet bénéfique sur la circulation sanguine, souvent altérée par une alimentation trop riche, une vie sédentaire et un manque d'exercice physique.</p>
+<p>L'ortie et l'orange amère, reconnues pour leurs propriétés drainantes, favorisent le retour à des jambes légères. </p>
+<p>La cannelle aide à stimuler le système circulatoire.</p>
+<p>La vign ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451061199</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d1d423e4326f40997ed3aa18276490342208e69d5d50a9bf90eafc9424b9178b ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisante Infusion Bio Digestion 20 sachets ]]></title>
+<g:id>e88e005c-d56d-427b-ac4a-a954dff11c90</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisante-infusion bio digestion 20 sachets?e88e005c-d56d-427b-ac4a-a954dff11c90 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Préparation pour infusion pour aider à la digestion, notamment après un repas trop lourd.</p>
+<p>Les plantes qu'elle renferme participent en effet à diminuer les sensations de somnolence et d'inconfort liées aux ballonnements ou aux gaz intestinaux.</p>
+<p>Le fenouil, tonique digestif, et la réglisse, facilitent le travail intestinal et aident à réduire les fermentations génératrices de ballonnements.</p>
+<p>La camomille et la coriandre contribuent à réduire les gaz intestinaux, aidant ainsi  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451060499</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e82145ba004e9846434d3368df182a6a7bcf072340e6031dac954f98432c0872 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisante Infusion Bio Défenses naturelles 20 sachets ]]></title>
+<g:id>0ed0525b-4e61-464f-96d4-85d7813cb8b7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisante-infusion bio défenses naturelles 20 sachets?0ed0525b-4e61-464f-96d4-85d7813cb8b7 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Cette infusion est idéale pour affronter sereinement l'hiver.</p>
+<p>Les plantes qu'elle renferme aident en effet à limiter les désagréments hivernaux : nez encombré, fatigue... en participant à renforcer les défenses naturelles de l'organisme.</p>
+<p>La cannelle, est reconnue pour ses propriétés purifiantes.</p>
+<p>Le thym et le bourgeon de pin, aident à stimuler les voies respiratoires, favorisant leur décongestion.</p>
+<p>La réglisse, reconnue pour son effet calmant, aide à stimuler les dé ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451061007</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/409870fa0ef29c3ee37b8307a1d4d99fba6fa2a74f6105c46990cf9ee7ed5581 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisante Infusion Bio Respiratoire 20 sachets ]]></title>
+<g:id>6113be58-aed8-4a00-b001-92ec56dfce25</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisante-infusion bio respiratoire 20 sachets?6113be58-aed8-4a00-b001-92ec56dfce25 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L'infusion Bio Nutrisanté Respiratoire aide à calmer les voies respiratoires et à adoucir les gorges irritées.</p>
+<p>L'infusion contient un extrait d'Eucalyptus qui possède des propriétés apaisantes, qui soulagent les voies respiratoires encombrées et favorisent l'expéctoration.</p>
+<p>Elle contient également de la Menthe Poivrée qui renforce les défenses naturelles de l'organisme et procure une fraîcheur intense à l'infusion.</p>
+<p>Cette infusion intensément rafraîchissante, apaise rapidem ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515450009642</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/91fea22b896a7a57b5b250b491f1466ff420ebf999f530e642dac37b60c29733 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisante Infusion Bio Romarin 20 sachets ]]></title>
+<g:id>f28a63f8-5698-4f2a-b962-9a1e172c0a5e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisante-infusion bio romarin 20 sachets?f28a63f8-5698-4f2a-b962-9a1e172c0a5e ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Mettre un sachet dans une tasse et verser de l'eau frémissante. Laisser infuser 3 minutes pour permettre aux plantes de libérer pleinement leurs saveurs, jusqu'à 5 minutes selon l'intensité désirée.</p>
+<p>1 à 2 tasses par jour.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451061373</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/59eaad4e7205e0c52466ccdbf4697d332a518b38ce69aa957599c45324e7b673 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisante Infusion Bio Thym 20 sachets ]]></title>
+<g:id>8ec5c4b7-6885-4173-805e-4d4c84cd6a89</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisante-infusion bio thym 20 sachets?8ec5c4b7-6885-4173-805e-4d4c84cd6a89 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nutrisanté Infusion Bio Thym 20 Sachets est une préparation pour infusion à base de thym, idéale pour calmer les premiers désagréments durant les périodes hivernales.</p>
+<p>Le thym est une plante qui facilite le bon fonctionnement du système respiratoire et permet d'apaiser les gorges irritées.</p>
+<p>Le thym agit également sur le système des défenses naturelles de l'organisme en les renforçant activement.</p>
+<p>Les infusions Bio Nutrisanté sont 100% d'origine naturelle et sont produites da ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451061465</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f8026ebac587ec0cea05f11262745f618c4ebbc568748eaa0edb5b13b18d856f ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisante Infusion Bio Verveine 20 sachets ]]></title>
+<g:id>cc2e7f99-e78b-4822-9c96-f9f8c57a4b87</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisante-infusion bio verveine 20 sachets?cc2e7f99-e78b-4822-9c96-f9f8c57a4b87 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nutrisanté Infusion Bio Verveine 20 Sachets est une préparation pour infusion à base de verveine, conseillée à toutes les personnes qui souhaitent une détente optimale et qui ont des difficultés à trouver le sommeil rapidement.</p>
+<p>La verveine est une plante qui contribue à augmenter efficacement la résistance de l'organisme lorsque celui-ci est sollicité.<br />Elle participe également au fonctionnement intestinal lors de la digestion. Une bonne digestion facilite à trouver le sommeil.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451061557</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8f2ff7890bfcacb377a7a31478c0f0aa3ae4598ae77b8774ea9095bed41c3847 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisante Infusion Foie et Intestin Bio 20 Sachets ]]></title>
+<g:id>c07c4ee8-c2c2-48a0-b836-ac69416e5159</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisante-infusion foie et intestin bio 20 sachets?c07c4ee8-c2c2-48a0-b836-ac69416e5159 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="div_table_informations">
+<div id="composition" class="tab_content active">
+<div class="longcompo">
+<p>Vitavea Infusion Foie et Intestin Bio 20 Sachets est une préparation pour infusion qui associe le romarin, l'anis vert, la menthe poivrée, la réglisse et la chicorée.</p>
+<ul><li>Le romarin et la chicorée soutiennent la fonction hépatique et protègent le foie.</li>
+<li>La menthe poivrée contribue au fonctionnement normal de l'intestin.</li>
+<li>L'anis vert aide à limiter les fermenta ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451060673</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/16bef10dac57532ceee6cdc27674586c47e73e4d2a15259431a09737ae7c26ea ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Infusion Bio Anti-Stress 20 Sachets ]]></title>
+<g:id>3fd47dca-5c22-4b9a-b258-8a0f2088d094</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-infusion bio anti-stress 20 sachets?3fd47dca-5c22-4b9a-b258-8a0f2088d094 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nutrisanté Infusion Bio Anti-Stress 20 Sachets est une préparation pour infusion à base de plantes, préconisée pour vous aider à retrouver bien-être et sérénité et lutter contre le stress.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515450015964</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d8d7952ac360ffaa223d244b9977ce51c031ce3077d097f9f0436af6205a2275 ]]></g:image_link>
+<g:product_type><![CDATA[ STRESS ET SOMMEIL ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Infusion Bio Après-Repas 20 Sachets ]]></title>
+<g:id>b8750a0e-7f1d-4659-968c-37412fb9b66f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-infusion bio après-repas 20 sachets?b8750a0e-7f1d-4659-968c-37412fb9b66f ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nutrisanté Infusion Bio Après-Repas 20 Sachets est une préparation pour infusion à base de menthe marocaine, menthe poivrée et feuille d'oranger.</p>
+<ul><li>La menthe nanah et la menthe poivrée soutiennent la digestion. Leurs feuilles aromatiques apportent fraîcheur et gourmandise pour un moment de bien-être.</li>
+<li>Les feuilles d'oranger viennent adoucir cette infusion.</li>
+</ul><p>Papier non blanchi au chlore.<br />Sachet filtre sans agrafe.</p>
+<p>100% des ingrédients sont issus de l'A ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515450074770</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0dae39ea8e016b6eb97f08b51e2370b051b62d987fa66b768771f61e73da9ef6 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Infusion Bio Brûle-Graisses 20 Sachets ]]></title>
+<g:id>52847f68-c5bf-47de-ab7b-b368fdf2a514</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-infusion bio brûle-graisses 20 sachets?52847f68-c5bf-47de-ab7b-b368fdf2a514 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nutrisanté Infusion Bio Brûle-Graisses 20 Sachets est une préparation pour infusion à base de plantes, idéale dans le cadre d'une action minceur globale, permettant de brûler les graisses, éliminer l'eau et les toxines et favoriser la digestion.</p>
+<p>- Le thé Oolong et l'écorce d'orange favorisent la combustion et le déstockage des graisses.</p>
+<p>- Le thé vert aide à éliminer l'eau et les toxines présentes dans l'organisme.</p>
+<p>- La menthe marocaine favorise le confort digestif.</p>
+<p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451060123</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0ccb6f24183f182e7cac725b4407ba527e9831c201c0e1ea68f77a4ad3499b0d ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Infusion Bio Camomille 20 Sachets ]]></title>
+<g:id>849cd9d7-3695-4fa1-bf66-26443a9fae64</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-infusion bio camomille 20 sachets?849cd9d7-3695-4fa1-bf66-26443a9fae64 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Les Infusions Bio des laboratoires Nutrisanté 100% d’origine naturelle et sans arome artificiel, aux sachets-filtres fabriqués à base de papier non blanchi au chlore et sans agrafe pour éviter les phénomènes d’oxydation, sont élaborées à base de plantes cultivées dans le respect des exigences de l’agriculture biologique, aux multiples bienfaits pour le corps et l’esprit.</p>
+<p>L’infusion Sommeil qui favorise la relaxation et contribue à retrouver un sommeil de qualité, est composée de vervei ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451061649</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9b6c6c2bc7f7eef2bf6d10ce1dc99c6b8e51929c9a18a28363a4c2bd71250ae1 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Infusion Bio Confort de la Gorge 20 Sachets ]]></title>
+<g:id>ad18cbab-8348-4560-8552-e269fc30efde</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-infusion bio confort de la gorge 20 sachets?ad18cbab-8348-4560-8552-e269fc30efde ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nutrisanté Infusion Bio Confort de la Gorge 20 Sachets est une préparation pour infusion à base de plantes et arôme miel idéale pour apaiser la gorge au moment de l'hiver. - Le thym participe au bien-être des voies respiratoires supérieures. - La guimauve aide à adoucir la gorge grâce à son effet apaisant. Ces deux actifs sont complétés par les feuilles de marjolaine qui offrent un goût plaisant à l'infusion. Les infusions Bio Nutrisanté sont 100% d'origine naturelle et sont produites dans le ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515450024836</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4634bb81e37ce8ad9ca0611cb7daca8a6a7e8ba1d78c246bdad5451e90619fdc ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Infusion Bio Cranberry 20 Sachets ]]></title>
+<g:id>e70470ac-f957-4261-ba75-a94d5e700f19</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-infusion bio cranberry 20 sachets?e70470ac-f957-4261-ba75-a94d5e700f19 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nutrisanté Infusion Bio Cranberry 20 Sachets est une préparation pour infusion à base de cranberry, d'ortie, de bardane, et de pissenlit.<br /><br />Le cranberry est une plante se rapprochant de la famille des myrtilles, elle est reconnue pour ses qualités gustatives.<br />Nutrisanté associe le cranberry à l'ortie, la bardane et le pissenlit pour en faire une infusion d'exception.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3286010026170</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b238509aeba5201e438b2fa6e741f18e8a81807ad5451fcd9c13c68e60da8ce3 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Infusion Bio Détox 20 Sachets ]]></title>
+<g:id>ff109e70-31b3-45cb-8311-123093c52bf4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-infusion bio détox 20 sachets?ff109e70-31b3-45cb-8311-123093c52bf4 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nutrisanté Infusion Bio Détox 20 Sachets est une infusion à base de plantes indiquée pour une démarche bien-être ou minceur. Elle aide ainsi l'organisme à éliminer les toxines et favorise le bien-être total de celui-ci. Elle associe :</p>
+<p>- Le frêne qui contribue au processus d'élimination rénale de l'eau facilitant ainsi les fonctions d'élimination de l'organisme,</p>
+<p>- Le romarin qui aide le foie à accomplir ses fonctions de purification,</p>
+<p>- La menthe poivrée qui contribue au bo ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515450056714</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/56c5aa17e3f5629958d98727134eb99a3ce16297b18042e4346e4e9a926d12b6 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Infusion Bio Fenouil 20 Sachets ]]></title>
+<g:id>ab0a333f-7073-4406-993e-5d78c5ec8962</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-infusion bio fenouil 20 sachets?ab0a333f-7073-4406-993e-5d78c5ec8962 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nutrisanté Infusion Bio Fenouil 20 Sachets est une préparation pour infusion à base de fenouil, reconnu pour ses propriétés digestives. Il facilite la digestion et aide à réduire les sensations de lourdeur après le repas.<br />Il favorise le transit intestinal et contribue également à limiter les inconforts digestifs tels que les ballonnements, brûlures d'estomac, gaz intestinaux et autres maux d'estomac.</p>
+<p>Papier non blanchi au chlore.<br />Sachet filtre sans agrafe.</p>
+<p>100% des ing ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515450044988</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/195e08a40de0d51783e9755d831150f30978ff796474c9cccd3424f3af1295d4 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Infusion Bio Minceur Chaï 20 Sachets ]]></title>
+<g:id>182129c8-cfed-434d-97e4-9b447ef7b65a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-infusion bio minceur chaï 20 sachets?182129c8-cfed-434d-97e4-9b447ef7b65a ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nutrisanté Infusion Bio Minceur 20 Sachets est une préparation pour infusion à base de thé vert, thé noir, gingembre, cannelle, cardamome, clou de girofle, poivre noir.</p>
+<ul><li>Le thé vert aide à combattre les excès de poids. Il est un soutien précieux dans le cadre d'un régime amincissant.</li>
+<li>La cannelle, la cardamome, le gingembre et le poivre noir favorisent le processus de digestion.</li>
+<li>Le thé noir et le clou de girofle donnent de l'intensité à ce mélange épicé pour un mom ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515450074763</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7c46ad19605df1efcf3a5b1d0c6543d151378e226c374a138458b177bd9636bb ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Infusion Bio Pure Détox 20 Sachets ]]></title>
+<g:id>5aacfd2d-db55-4fd1-9dea-79ddfd9c67d1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-infusion bio pure détox 20 sachets?5aacfd2d-db55-4fd1-9dea-79ddfd9c67d1 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Que ce soit dans une démarche bien-être ou minceur, il est possible d’aider l’organisme à éliminer les toxines pour favoriser le bien-être total de l’organisme.</p>
+<p>L’infusion Bio Nutrisanté Détox associe :</p>
+<p>Le frêne qui contribue au processus d’élimination rénale de l’eau facilitant ainsi les fonctions d’élimination de l’organisme.<br />Le romarin qui aide le foie à accomplir ses fonctions de purification.<br />La menthe poivrée qui contribue au bon fonctionnement des intestins. Ell ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515450065976</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/56e7b8253ef42bd18ab00a43497523262a59169a15e15293b91a74cdcb52754c ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Infusion Bio Régulation des Sucres 20 Sachets ]]></title>
+<g:id>fdb51006-eba8-4719-be7a-df42b015fefa</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-infusion bio régulation des sucres 20 sachets?fdb51006-eba8-4719-be7a-df42b015fefa ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nutrisanté Infusion Bio Régulation des Sucres 20 Sachets est une préparation pour infusion à base de plantes à prendre en simultané avec un régime adapté, pour maintenir un taux normal de glucose sanguin et un bon équilibre lipidique.</p>
+<p>L'olivier, la bardane, l'eucalyptus aident à maintenir le métabolisme normal du glucose, participant à réguler le taux de sucre dans le sang.</p>
+<p>Le fenugrec aide au maintien du métabolisme normal des lipides et du glucose.</p>
+<p>La myrtille antioxyda ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451061281</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a96281a1d9fef4345027e38dfbe50e508a7cf3d52c0663410ae4a730201fb643 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Infusion Bio Thé Vert à la Menthe 20 Sachets ]]></title>
+<g:id>2107aa40-01a5-4511-96c6-860cb79278f2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-infusion bio thé vert à la menthe 20 sachets?2107aa40-01a5-4511-96c6-860cb79278f2 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L'infusion bio Thé vert à la Menthe utilise des plantes (thé vert, menthe poivrée et cardamome) naturellement riche en fibres favorisant le transit intestinal.</p>
+<p>Ainsi L'infusion Bio Thé vert à la Menthe aide à retrouver le confort de la flore intestinale. <br /><br />L'infusion Bio Thé vert à la Menthe contribue à diminuer les balonnements et les gaz intestinaux, et aide à stimuler la sécrétion des sucs digestifs pour une digestion plus rapide.</p>
+<p>L'infusion Bio Thé vert à la Menthe ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451061823</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4c3a7a28c834173c598398dd132d960749ecf8d55bb36d135d89c45efc60797b ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Infusion Bio Transit 20 Sachets ]]></title>
+<g:id>28b662a6-f382-405f-9bc6-71bf9e6daeef</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-infusion bio transit 20 sachets?28b662a6-f382-405f-9bc6-71bf9e6daeef ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nutrisanté Infusion Bio Transit 20 Sachets est une préparation pour infusion à base de plantes idéale pour aider à conserver un véritable confort intestinal et réguler le transit de façon naturelle sans agresser les intestins.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451060581</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bf4de8e7c329522ef2209647e79119d647fa52f8d2498d6c40dbe60eef975934 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Infusion bio détente 20 sachets ]]></title>
+<g:id>305b59c0-afa4-4335-ab90-ab89c6599dd0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-infusion bio détente 20 sachets?305b59c0-afa4-4335-ab90-ab89c6599dd0 ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Les infusions Bio Nutrisanté sont 100% naturelles et respectent les exigences de l'Agriculture Biologique. Toutes les plantes qui entrent dans leur composition sont cultivées de manière naturelle avec des méthodes respectueuses de l'environnement et sans utilisation d'organisme génétiquement modifié, conformément au mode de production biologique.</p>
+<p>Sans arôme artificiel, nos infusions conservent toute la pureté des plantes pour un plaisir au naturel. <br />Toujours dans cette démarche en ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451060765</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3c1b9d33a043eb818f2506f59cae1999019153f55fd5becc9d3a7ecc631f47e6 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Nutricap croissance 90 gelules ]]></title>
+<g:id>29feb5f0-f1ff-4aef-a214-ffb79d3e3391</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-nutricap croissance 90 gelules?29feb5f0-f1ff-4aef-a214-ffb79d3e3391 ]]></link>
+<g:price><![CDATA[ 1570.00 EUR ]]></g:price>
+<description><![CDATA[ <ul class="a-unordered-list a-vertical a-spacing-mini"><li><span class="a-list-item">COMPLEMENT ALIMENTAIRE CROISSANCE ET SANTE CHEVEUX : Le complément alimentaire soin cheveux Vitavea contient des actifs reconnus et plébiscités pour favoriser la santé, la croissance et la beauté des cheveux. Sa formule unique est composée de 12 nutriments et vitamines dont le zinc, la vitamine B8 (ou biotine), le cuivre, la prêle et des acides aminés. Une concentré d'actifs efficaces pour préserver la vitalité  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451099673</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f31886352da9331f00f4c5c6cbd0c3fa388e54e0de709fc65d6d3dbc99546031 ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté Relax tisane BIO 20 sachets ]]></title>
+<g:id>16cc5822-4f1f-495c-be29-ea7cf16e1dcc</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-relax tisane bio 20 sachets?16cc5822-4f1f-495c-be29-ea7cf16e1dcc ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L’<span>infusion Relax </span>de la marque Bio Nutrisanté permet aux personnes anxieuses de se détendre et de se relaxer. En effet, ces infusions sont exclusivement composées de <span>plantes apaisantes et relaxantes</span> dans une double association de phytothérapie et d’aromathérapie : verveine, mélisse, oranger et camomille, ainsi que de l’huile essentielle d’orange.</p>
+<p> </p>
+<p><span>Indication :</span> La <span>tisane Bio Nutrisanté Relax</span> est indiqué en cas d’anxiété et de st ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515450065969</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/18184cb17a89f35c5e0133721b45cf59e98d2d88a4bbf3849e636a4c5d1bc70f ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté infusion bio sommeil 20 sachets ]]></title>
+<g:id>0d925f7b-80c3-4618-9ce6-7d9fa4f40b9a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-infusion bio sommeil 20 sachets?0d925f7b-80c3-4618-9ce6-7d9fa4f40b9a ]]></link>
+<g:price><![CDATA[ 320.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L'infusion Bio Sommeil de Nutrisante est une alliée idéale pour aider à retrouver un sommeil de qualité, favorisant ainsi des nuits paisibles et réparatrices. Elle facilite la</p>
+<p>relaxation et le retour à des nuits calmes grâce aux bienfaits de la verveine, de l'anis vert, de la marjolaine, de l'aubépine et de la passiflore.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451060949</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/69dc9c7dcdec798ee7725e5e7d97fe75a6d2d58c5297f2cd10654cd58ce12895 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté nutricap kératine vitalité 3 mois 90 capsules ]]></title>
+<g:id>7ab28f7b-05d4-4dd9-8a04-8ee939d64d61</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-nutricap kératine vitalité 3 mois 90 capsules?7ab28f7b-05d4-4dd9-8a04-8ee939d64d61 ]]></link>
+<g:price><![CDATA[ 1465.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Issu de la recherche biologique des laboratoires Nutrisanté, Nutricap aide à améliorer la résistance, le volume et la brillance de la chevelure ainsi que la pousse et la dureté des ongles, notamment grâce à l’action combinée de la cystine et de la méthionine.</p>
+<p>Ces 2 acides aminés favorisent la formation d’une Kératine de bonne qualité, protéine essentielle du cheveu.</p>
+<p>Sa formule exclusive permet d’offrir une réponse complète en agissant également sur la perte de cheveux, notamment ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515451141549</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4de0109fbe4e8877433ec4c9373be4d2ec7da4b9c333aa259e7f94ccfcb8fe8f ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrisanté pépin pamplemousse 50ml ]]></title>
+<g:id>8d3cc108-562b-4790-83bb-d9f74a22a135</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrisant-pépin pamplemousse 50ml?8d3cc108-562b-4790-83bb-d9f74a22a135 ]]></link>
+<g:price><![CDATA[ 630.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nutrisanté Extrait de Pépins de Pamplemousse 50 ml est un complément alimentaire à base d'extrait de pépins de pamplemousse.<br /><br />Utilisé aussi bien en usage interne qu'externe, il aide à renforcer les défenses naturelles de l'organisme et favorise ainsi le retour à un bien-être général.<br /><br />La vitamine C présente dans ce complément possède une action antioxydante et contribue au bon fonctionnement des défenses naturelles de l'organisme.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3515450015599</g:gtin>
+<g:brand><![CDATA[ Vitavéa ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/05f279924d1c0d229e9bfb1a144f475a8fcfc07217145a2278082d2e05064e10 ]]></g:image_link>
+<g:product_type><![CDATA[ FORME - VITALITÉ ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrof Total 180 capsules ]]></title>
+<g:id>60f061be-f1d5-4bcb-bb52-2a3ab785f586</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrof-total 180 capsules?60f061be-f1d5-4bcb-bb52-2a3ab785f586 ]]></link>
+<g:price><![CDATA[ 5590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La vitamine E est présente dans les huiles d'origine végétale.</span><br /><span>La vitamine C est présente dans différents fruits et légumes.</span><br /><span>Le zinc contribue au maintien d'une vision normale. Il est présent dans la viande et le poisson.</span><br /><span>Le cuivre est présent dans les abats, les coquillages et les fruits secs.</span><br /><br /><span>La vitamine E, la vitamine C, le zinc et le cuivre contribuent à protéger les cellules contre le stress oxydatif.</sp ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3662042006074</g:gtin>
+<g:brand><![CDATA[ THEA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/da97eef78e177556f11e2c1e253c1cf648d541513c0c624c2f4cf2dfb48c5579 ]]></g:image_link>
+<g:product_type><![CDATA[ SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nutrof Total 60 Capsules ]]></title>
+<g:id>780e3e5d-11cf-4dc8-8149-77c9c92e5bd0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nutrof-total 60 capsules?780e3e5d-11cf-4dc8-8149-77c9c92e5bd0 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Théa Nutrof Total 60 Capsules est un complément alimentaire sous forme de capsules à visée oculaire, riche en vitamines et oligo-éléments antioxydants, en acides gras essentiels, en lutéine et zéaxanthine, en extrait de vitis vinifera (resvératrol) et en vitamine D.</p>
+<p>Le Zinc et le DHA contribuent au maintien d'une vision normale.</p>
+<p>Les huiles de poissons contenues dans ce complément sont soumises à une technologie spécifique pour limiter l'éventuel goût et odeur résiduelle de poiss ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3662042006067</g:gtin>
+<g:brand><![CDATA[ THEA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/16cb45741a4e97bd66f15015cb34798f89c4b7038e74f6a1804965143046d2f2 ]]></g:image_link>
+<g:product_type><![CDATA[ SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nux vomica 9CH Homéopack 3  tubes granules ]]></title>
+<g:id>c00b0ee5-87f6-4e86-ba04-4bae7c8f5c43</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nux-vomica 9ch homéopack 3  tubes granules?c00b0ee5-87f6-4e86-ba04-4bae7c8f5c43 ]]></link>
+<g:price><![CDATA[ 690.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Nux Vomica 9 CH</span><span> du laboratoire </span><span>Boiron</span><span> est un médicament homéopathique.</span></p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3400305279069</g:gtin>
+<g:brand><![CDATA[ BOIRON ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4d5d507087be6175100fc4cc40a4f5dfe6ea974089d4ea582375589c41a0105a ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Bio Crème Fraîche de Beauté Crème Riche Éclat Hydratante 50 ml ]]></title>
+<g:id>cf8883d1-332e-40c1-aa64-c3cb144065a8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-bio crème fraîche de beauté crème riche Éclat hydratante 50 ml?cf8883d1-332e-40c1-aa64-c3cb144065a8 ]]></link>
+<g:price><![CDATA[ 2580.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Fondez pour l'hydratation gourmande certifiée BIO. Une texture veloutée qui enveloppe la peau d'une incroyable sensation de douceur et révèle son éclat naturel. <br />Enrichie en Cellules Natives d'Agrumes et en Huile d'Argan, cette crème riche Bio* est idéale pour les peaux normales à sèches. <br />Elle booste l'hydratation pendant 48h** et apporte de la nutrition à la peau sans effet gras. <br />Dès l'application, la peau retrouve son confort, son éclat naturel est ravivé, elle est lumineus ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680037375</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ea3fa51421d4329add2b5f3e850588d85d43cf2e0812427a31b60b39d6b97a4d ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Bio Crème faîche de beauté eye flash 15 ml ]]></title>
+<g:id>b9ae4eb9-eeb6-4767-98b0-fe33757b40e5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-bio crème faîche de beauté eye flash 15 ml?b9ae4eb9-eeb6-4767-98b0-fe33757b40e5 ]]></link>
+<g:price><![CDATA[ 1670.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Fondez pour l'hydratation gourmande certifiée BIO. Ce soin yeux effet "flash" BIO* infusé à la caféine végétale est idéal pour toutes les peaux. Hydratant et défatigant, il réveille instantanément le regard : le contour des yeux est reposé comme après une bonne nuit de sommeil pour 95% des femmes ! ** </span><br /><span>Immédiatement, les cernes et les poches semblent atténués et les ridules lissées. </span><br /><span>Jour après jour, les signes de fatigue sont réduits et le contour de ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680037412</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4272c8f6a99ef165a23a44d26d516958cff07aa225a23234e7ffa52a8e3a717e ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Body Déodorant Bio Peaux Sensibes 50g ]]></title>
+<g:id>c649baa0-3708-4eda-9db5-79691f36c61f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-body déodorant bio peaux sensibes 50g?c649baa0-3708-4eda-9db5-79691f36c61f ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Avec ce déodorant solide bio*, découvrez un geste intuitif alliant efficacité déodorante 24h** et action soin. Il associe une poudre végétale absorbante et une huile végétale bio. Sa texture baume poudrée au fini sec s‘applique facilement au doigt, comme une crème, enveloppant la peau d‘une agréable sensation de nutrition.</p>
+<p>Formulé spécialement pour les peaux sensibles. Son parfum réconfortant diffuse la douceur enveloppante de la Fleur d‘Oranger. Ne laisse pas de traces sur les vêtemen ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680037429</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ed9d7e1014e4ece914b3ee05f263b128176059622bcbbe06c13f9e0e1967b5ba ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Body Eau Délassante Parfumante 100 ml ]]></title>
+<g:id>6ad1d923-fd8f-43c8-a272-e6d4ca2f67b8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-body eau délassante parfumante 100 ml?6ad1d923-fd8f-43c8-a272-e6d4ca2f67b8 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">L’Eau Délassante Parfumante NUXE BODY, au parfum discrètement séduisant laisse la peau douce et soyeuse. <span class="s1">Elle est le point d’orgue d’une routine de soins du corps dont elle prolonge le plaisir addictif.</span></p>
+<p class="p1">Cette eau parfumante propose un art du sentir bon au naturel très différent. Elle ne s’impose pas, elle charme avec mesure et sobriété.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680006920</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/45a6459a1982470ce4718ab66558e18726a431c48658095d415e3299bb325b36 ]]></g:image_link>
+<g:product_type><![CDATA[ Idées Cadeaux > PARFUM ET EAU DE TOILETTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Body Rêve de Thé Gel douche Ressourçant 200ml ]]></title>
+<g:id>938ef335-25b7-4dfe-9616-03a7f77d3748</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-body rêve de thé gel douche ressourçant 200ml?938ef335-25b7-4dfe-9616-03a7f77d3748 ]]></link>
+<g:price><![CDATA[ 450.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Cette gelée de douche ultra-sensorielle, harmonie de rêve entre une base lavante végétale et un extrait de Thé vert, nettoie la peau en délicatesse pour la laisser douce et confortable. Sa texture fondante à l’irrésistible parfum de Thé vert se transforme en une fine mousse rinçable facilement. Un moment hors du temps pour le corps et l’esprit.</p>
+<p></p>
+<p>95 % des femmes trouvent leur peau nettoyée en douceur*.</p>
+<p>Pour 100% des femmes, la gelée de douche respecte et adoucit la peau ** ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680022012</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/452834de749324eb8378423779c7575c524c81368030716fba7692d4e3c9d10c ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Coffret La Routine Anti-Age Glow ]]></title>
+<g:id>d4012ba0-25ed-4656-8643-78cb7e1a8097</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-coffret la routine anti-age glow?d4012ba0-25ed-4656-8643-78cb7e1a8097 ]]></link>
+<g:price><![CDATA[ 6350.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Vos alliés anti-âge pour une peau lissée et éclatante associés à l'iconique Huile Prodigieuse®.</p>
+<p> </p>
+<p><span>Le Super Sérum [10] de Nuxe</span> est un soin concentré anti-âge innovant et universel enrichi en acide hyaluronique naturel infusé de milliers de micro-billes d'Huiles Végétales fractionnées.<br />Cette formule permet de stimuler les mécanismes de jeunesse de la peau pour une efficacité anti-âge optimale et visible.<br />Sa texture fondante à l'expérience sensorielle unique, ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680039737</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5681fbe1209ddbd750440df5932f7587053fe4b187c8c2f21744ed0fbcc637b3 ]]></g:image_link>
+<g:product_type><![CDATA[ Idées Cadeaux > Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Cracker Huile Prodigieuse Florale Or 8 ml ]]></title>
+<g:id>8c1b37a2-ab0c-4e1f-b1ad-16ace07aa8cd</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-cracker huile prodigieuse florale or 8 ml?8c1b37a2-ab0c-4e1f-b1ad-16ace07aa8cd ]]></link>
+<g:price><![CDATA[ 1275.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Brillez pendant les fêtes de fin d'année avec l'emblématique huile éclat rose pour le visage et le décolleté, l'Huile Prodigieuse® Or Florale en format roll-on, idéale comme cadeau de Noël.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680041099</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/01b79c0ad1a845f03883127b8bf1afdd425f84762e3b0ac35e58250feaf874a1 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Cracker Huile Prodigieuse Or 8ml ]]></title>
+<g:id>1b764499-7e7b-435e-bc4f-9d540cf5b1cd</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-cracker huile prodigieuse or 8ml?1b764499-7e7b-435e-bc4f-9d540cf5b1cd ]]></link>
+<g:price><![CDATA[ 1275.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="product-information">
+<div id="product-description-short-29806" class="product-description">
+<p>Brillez pendant les fêtes avec l'huile pailletée iconique pour le visage et le décolleté, l'Huile Prodigieuse® Or en format roll-on, idéale comme cadeau de Noël.</p>
+</div>
+</div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680041716</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/57749426a36f5453b728ed334ae5ea5fc67431a2a22daf7b47572b870d884f1d ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Crème Fraiche De Beauté Crème Riche 30ml ]]></title>
+<g:id>66180f6c-4609-42f8-9514-b7718e7160e4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-crème fraiche de beauté crème riche 30ml?66180f6c-4609-42f8-9514-b7718e7160e4 ]]></link>
+<g:price><![CDATA[ 1580.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La Crème Fraîche de Beauté Hydratante 48h de Nuxe</span><span> possède une texture beurre extraordinaire qui fond instantanément avec la chaleur de la peau pour l'envelopper de ses vertus nutritives. Enrichie en Lait Végétal, Huile d'Amande Douce et en Beurres Végétaux (Karité et Moringa), cette crème riche est idéale pour les peaux sèches. Elle booste l'hydratation pendant 48h* et apporte nutrition à la peau sans effet gras. La peau est plus belle, immédiatement nourrie et réconfortée  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680028854</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f351ccedf709684a9dd8c47d30a115709d96a964d96ef52a7398dbc32de7b163 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Crème Fraiche de Beauté Crème Riche Peaux Sèches à très Sèches 50ml ]]></title>
+<g:id>3300c636-1be9-4312-acad-8144e883e31c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-crème fraiche de beauté crème riche peaux sèches à très sèches 50ml?3300c636-1be9-4312-acad-8144e883e31c ]]></link>
+<g:price><![CDATA[ 2530.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La Crème Fraîche de Beauté Riche Hydratante 48h de Nuxe</span><span> possède une texture beurre extraordinaire qui fond instantanément avec la chaleur de la peau pour l'envelopper de ses vertus nutritives. Enrichie en Lait Végétal, Huile d'Amande Douce et en Beurres Végétaux (Karité et Moringa), cette crème riche est idéale pour les peaux sèches. Elle booste l'hydratation pendant 48h* et apporte nutrition à la peau sans effet gras. La peau est plus belle, immédiatement nourrie et réconf ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680029028</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8e328e1c9046bd8fd2fc617d06602fb265c08a183a553644655fb8039353903e ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Crème Fraiche de Beauté Peaux Normales 50ml ]]></title>
+<g:id>5b53083f-b969-4653-84a2-4744f076bce2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-crème fraiche de beauté peaux normales 50ml?5b53083f-b969-4653-84a2-4744f076bce2 ]]></link>
+<g:price><![CDATA[ 2530.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La Crème Fraîche de Beauté Repulpante et Hydratante 48h de Nuxe</span><span> possède une texture délicieusement veloutée et addictive qui infuse la peau de ses vertus désaltérantes. Enrichie en Lait Végétal et Huile d'Amande Douce, cette crème booste l'hydratation pendant 48h* et repulpe la peau instantanément, une efficacité visible pour 95%** des femmes. La peau est plus lisse, plus rebondie. Les sensations d'inconforts et de tiraillements sont réduites pour un apaisement immédiat. La ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680028007</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7307aa7405ec4d607123bd691541c7ecfcfa96ab9bc6c9105d84c992853f110c ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Crème Fraîche de Beauté 3en1 100 ml ]]></title>
+<g:id>5442c438-ffd2-4c84-9943-c933549a377a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-crème fraîche de beauté 3en1 100 ml?5442c438-ffd2-4c84-9943-c933549a377a ]]></link>
+<g:price><![CDATA[ 2530.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Crème Fraîche de Beauté 3en1 100 ml est un soin 3 en 1 pour le visage et les yeux. Il convient à tous les types de peau.</p>
+<p>Formulé à base de lait végétal et d'huile d'amande douce, il combine 3 actions : une crème hydratante 48 heures, un lait démaquillant et un masque repulpant express.</p>
+<p>Vegan.<br />98% des ingrédients sont d'origine naturelle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680028014</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/36f46fec7d56f6b46062f420f36aee65d9c2b0e3c7e10fe667074d7527db1d94 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Crème Fraîche de Beauté Crème Hydratante 48H 30 ml ]]></title>
+<g:id>8d46ee19-fc7f-459d-aafe-e9612bc04917</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-crème fraîche de beauté crème hydratante 48h 30 ml?8d46ee19-fc7f-459d-aafe-e9612bc04917 ]]></link>
+<g:price><![CDATA[ 1580.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Crème Fraîche de Beauté Crème Hydratante 48H 30 ml est une crème hydratante active pendant 48 heures, indiquée pour les peaux normales.</p>
+<p>Sa formule au lait végétal et huile d'amande douce respecte le microbiome cutané, pour une peau saine et pleine de vitalité. Cette crème booste l'hydratation de la peau qui est instantanément repulpée et lumineuse.</p>
+<p>Vegan.</p>
+<p>97% du total des ingrédients sont d'origine naturelle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680027994</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/361fbbb3af320eb7409ff7ba9e4900ae6e526c90fe3824dc1b2ae7fbb55b9b2a ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Crème Prodigieuse Boost Base Lissante Multi-Perfection 5-en-1 30 ml ]]></title>
+<g:id>9c8b44a5-31ee-40d5-8304-384d5ea72f15</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-crème prodigieuse boost base lissante multi-perfection 5-en-1 30 ml?9c8b44a5-31ee-40d5-8304-384d5ea72f15 ]]></link>
+<g:price><![CDATA[ 2190.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="value">
+<div>La base lissante multi-perfection 5 actions Prodigieuse Boost est formulée par Nuxe afin d'améliorer la régénération de la peau fatiguée, qui se reconnaît généralement par les cernes, les premières rides ou encore le teint terne. Les laboratoires s'appuient sur les bienfaits d'ingrédients d'origine naturelle pour formuler la crème Prodigieuse Boost. Les extraits de fleurs de jasmin et de calendula sont réputés pour leurs vertus apaisantes accrues. Afin de nourrir intensé ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680015960</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/35775e0ce49d71e0c6834b411672ce31acd982b488066873c9ae9b89c732f0a3 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Crème Prodigieuse Boost Baume-Huile Récupérateur Nuit 50 ml ]]></title>
+<g:id>97141f39-52d4-4a91-bbe1-782885f77d00</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-crème prodigieuse boost baume-huile récupérateur nuit 50 ml?97141f39-52d4-4a91-bbe1-782885f77d00 ]]></link>
+<g:price><![CDATA[ 3130.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le Baume-Huile Récupérateur Nuit Prodigieuse Boost de Nuxe</span> est destiné à prendre soin de la peau durant le sommeil. La nuit est la période la plus favorable au renouvellement cellulaire. Ce soin de nuit permet ainsi à ses actifs d’agir en profondeur pour révéler un teint éclatant et une peau tonique au réveil. Enrichi en huile de macadamia, en jasmin, en nopal et en calendula, ce soin est un délice d’onctuosité et de douceur pour les peaux les plus sèches. Appliqué chaque nuit, i ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680015854</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ad3d9a57f457ce500536ac04b23afc298c4291db1b91b23bd89542a699f0d8c7 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Crème Prodigieuse Boost Crème Soyeuse Multi-Correction 40 ml ]]></title>
+<g:id>295d6110-52c6-4772-84be-5369c54277a5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-crème prodigieuse boost crème soyeuse multi-correction 40 ml?295d6110-52c6-4772-84be-5369c54277a5 ]]></link>
+<g:price><![CDATA[ 2850.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Cette crème soyeuse multi-correction au complexe antioxydant à la fleur de jasmin, lutte contre les effets néfastes de votre vie quotidienne (stress, fatigue, pollution...), tout en respectant l'équilibre naturel de votre peau. Jour après jour, elle est plus fraîche et éclatante et les premiers signes de l'âge sont estompés (la peau est lissée, défroissée, plus rebondie).</p>
+<p>Sa texture veloutée apporte de la douceur et du confort aux peaux normales à sèches.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680029981</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f1164e67b516948c44a7db5f497e306ac8f46a7a6751d357ffb46d847830b2d1 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Crème Prodigieuse Boost Crème-Gel Multi-Correction 40 ml ]]></title>
+<g:id>6a451e11-f459-47e1-bdde-2e55977b9f69</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-crème prodigieuse boost crème-gel multi-correction 40 ml?6a451e11-f459-47e1-bdde-2e55977b9f69 ]]></link>
+<g:price><![CDATA[ 2850.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Crème gel correctrice 1ers signes de l'âge</strong><br /><strong>Peaux normales à mixtes.</strong></p>
+<p>Cette crème gel multi-correction au complexe antioxydant à la fleur de jasmin, lutte contre les effets néfastes de votre vie quotidienne (stress, fatigue, pollution...), tout en respectant l'équilibre naturel de votre peau. Jour après jour, elle est plus fraîche et éclatante, et les premiers signes de l'âge sont estompés (la peau est lissée, défroissée, plus rebondie).<br />Sa tex ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680015830</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/46d3d980ed677a3430b9b4b52cb962238ab94b4cee1e2adf91118531d0a93d23 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Crème Prodigieuse Boost Gel Baume Yeux Multi-Correction 15 ml ]]></title>
+<g:id>7b6b7446-2d2b-422f-af0a-3d82e0dbf580</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-crème prodigieuse boost gel baume yeux multi-correction 15 ml?7b6b7446-2d2b-422f-af0a-3d82e0dbf580 ]]></link>
+<g:price><![CDATA[ 2230.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Gel baume yeux multi-correction</strong><br /><strong>Toutes peaux.</strong></p>
+<p>Ce gel baume contour des yeux à la caféine végétale et au complexe antioxydant à la fleur de jasmin, corrige les principaux marqueurs qui altèrent la jeunesse de votre regard (poches, cernes) et aide à protéger cette zone fragile des agressions extérieures. D'une texture délicate et rafraîchissante, il lisse le contour de l’œil et estompe les cernes et les poches.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680015861</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c545efd9468af41dd0a3f74e489a57812d6bdccbd9188a6b9720ce1a5947a765 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Crème Prodigieuse Boost Soyeuse Tube 40ml ]]></title>
+<g:id>5bcc2b28-463b-4ae7-8776-b489f77e435a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-crème prodigieuse boost soyeuse tube 40ml?5bcc2b28-463b-4ae7-8776-b489f77e435a ]]></link>
+<g:price><![CDATA[ 2850.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Crème correctrice 1ers signes de l'âge</strong><br /><strong>Peaux normales à sèches.</strong></p>
+<p>Cette crème soyeuse multi-correction au complexe antioxydant à la fleur de jasmin, lutte contre les effets néfastes de votre vie quotidienne (stress, fatigue, pollution...), tout en respectant l'équilibre naturel de votre peau. Jour après jour, elle est plus fraîche et éclatante et les premiers signes de l'âge sont estompés (la peau est lissée, défroissée, plus rebondie).<br />Sa text ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680015847</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fbc39234b87738008c86875f561f65a3bbd6972095cf0eb1fa47e89b76aca1bb ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Crème de Beauté Fluide Matifiant Peaux Normales à Mixtes 50ml ]]></title>
+<g:id>96fb53fd-d4c4-4819-a050-13dfab6681d3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-crème de beauté fluide matifiant peaux normales à mixtes 50ml?96fb53fd-d4c4-4819-a050-13dfab6681d3 ]]></link>
+<g:price><![CDATA[ 2530.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680027932</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3c3f9d5449181b7536ef28e8efef653ea68bd9be683e042d1c53b69d913cf533 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Crème prodigieuse Boost Crème Gel Multi-Correction 40 ml ]]></title>
+<g:id>a15d49c6-f4f8-4800-974e-3e632b5ea545</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-crème prodigieuse boost crème gel multi-correction 40 ml?a15d49c6-f4f8-4800-974e-3e632b5ea545 ]]></link>
+<g:price><![CDATA[ 2850.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Cette <span>crème gel multi-correction </span>au complexe antioxydant à la fleur de jasmin, lutte contre les effets néfastes de votre vie quotidienne (stress, fatigue, pollution...), tout en respectant l'équilibre naturel de votre peau. Jour après jour, elle est plus fraîche et éclatante, et les premiers signes de l'âge sont estompés (la peau est lissée, défroissée, plus rebondie).</p>
+<p>Sa texture légère avec un fini mat est idéale pour les peaux normales à mixtes.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680029974</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/76406ffb6720725da970437ccccff7e1f1e2154b5fdddb243d7960241ad38d5a ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Hair Prodigieux Le Démêlant Brillance Miroir 200 ml ]]></title>
+<g:id>e69d7402-1786-4fbb-a125-a640cf657e9f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-hair prodigieux le démêlant brillance miroir 200 ml?e69d7402-1786-4fbb-a125-a640cf657e9f ]]></link>
+<g:price><![CDATA[ 2090.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Hair Prodigieux Le Démêlant Brillance Miroir 200 ml est un soin qui démêle instantanément, nourrit intensément et parfume délicatement les cheveux pour les laisser sublimés.<br />Sa formule associe :</p>
+<ul><li>L'huile fermentée de Camélia Rose : grâce à son processus de fermentation, elle présente des propriétés de réparation et de nutrition augmentées.</li>
+<li>Le Panthénol (Provitamine B5).</li>
+</ul><p>Sa texture baume à la fragrance mythique de l'Huile Prodigieuse® enveloppe les ch ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034664</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/06203272ede7b323440bbfc26290b6aba113c75bc8fe1e94eae7365461262334 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Hair Prodigieux Le Masque Nutrition 125 ml ]]></title>
+<g:id>85b86407-49a4-4023-9329-d72e642f39dc</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-hair prodigieux le masque nutrition 125 ml?85b86407-49a4-4023-9329-d72e642f39dc ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Hair Prodigieux Le Masque Nutrition Avant Shampoing 125 ml est un soin qui nourrit et répare intensément la fibre capillaire, pour laisser les cheveux sublimés. <br />Sa formule associe :</p>
+<ul><li>L'huile fermentée de Camélia Rose : grâce à son processus de fermentation, elle présente des propriétés de réparation et de nutrition augmentées.</li>
+<li>L'huile de Ricin Bio.</li>
+<li>L'huile de Jojoba Bio.</li>
+</ul><p>Ce soin huile à la fragrance mythique de l'Huile Prodigieuse® envelopp ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034688</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5f68bc208dff2ecd4b1018dbb8a54cbabaf4bb3fc57fc817348860ce773867a3 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Hair Prodigieux Le Rituel d'Exception ]]></title>
+<g:id>bd6abab8-cbdd-4d17-abca-13434f3d61c2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-hair prodigieux le rituel d'exception?bd6abab8-cbdd-4d17-abca-13434f3d61c2 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Hair Prodigieux Le Rituel d'Exception est une trousse de soins capillaire constituant une routine : masque, shampoing et démêlant. Ces produits sont :</p>
+<ul><li>enrichis d'huile fermentée de camélia rose, qui, grâce à son processus de fermentation, présente des propriétés de réparation et de nutrition augmentées.</li>
+<li>dotés de la fragrance mythique de l'Huile Prodigieuse, qui enveloppe les cheveux pour un rituel sensoriel inouï.</li>
+</ul><p>- Nuxe Hair Prodigieux Le Masque Nutriti ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680039645</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/63f18c8eb986a8689dab34ac946b82363b1908809110d424b96d831dcd6a9822 ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Hair Prodigieux Le Shampoing Brillance Miroir 200 ml ]]></title>
+<g:id>5c5dde31-86a1-46d2-8210-015883e7d1e0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-hair prodigieux le shampoing brillance miroir 200 ml?5c5dde31-86a1-46d2-8210-015883e7d1e0 ]]></link>
+<g:price><![CDATA[ 1590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Hair Prodigieux Le Shampoing Brillance Miroir 200 ml est un soin qui lave en douceur, nourrit sans alourdir, et parfume délicatement les cheveux pour les laisser sublimés.<br />Sa formule associe :</p>
+<ul><li>L'huile fermentée de Camélia Rose : grâce à son processus de fermentation, elle présente des propriétés de réparation et de nutrition augmentées.</li>
+<li>Une base lavante d'origine naturelle : elle contient 4 tensioactifs d'origine naturelle et de types différents afin de combiner ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034695</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6ca188f42727534c20069c0b9ed91566b51eba4594f2c947d0d44ba3ed7fc652 ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Hair Prodigieux Shampoing 50ml ]]></title>
+<g:id>88f00c9e-aa1c-4b16-bb03-a05398b1c251</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-hair prodigieux shampoing 50ml?88f00c9e-aa1c-4b16-bb03-a05398b1c251 ]]></link>
+<g:price><![CDATA[ 599.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <span>shampooing Prodigieux</span> de la gamme <span>Nuxe Hair</span> a été formulé dans le but de nettoyer en douceur toutes les natures de cheveux. Bien plus qu'un shampooing, il constitue un véritable soin capillaire grâce à sa formule à l'huile fermentée de camélia rose. Cette huile végétale est 2 fois plus nutritive qu'une huile non fermentée et apporte ses vertus nourrissantes, réparatrices et antioxydantes. Elle contribue à resserrer et lisser les écailles pour faire briller les che ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680039416</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7e270b45857539af12e4848057d8601630ab0c4e7151909068d4795b22178dfb ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Hair Prodigieux Soin Capillaire Nutrition Intense Sans Rinçage100ml ]]></title>
+<g:id>2e25a24a-c36e-4201-9208-12633db6ecb9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-hair prodigieux soin capillaire nutrition intense sans rinçage100ml?2e25a24a-c36e-4201-9208-12633db6ecb9 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Hair Prodigieux - Captez la lumière</span><br /><span>Transformez vos cheveux grâce à la puissance sublimatrice de l'huile fermentée de Camélia rose ! </span><br /><br /><span>Né de l'expertise du Laboratoire Nuxe sur les huiles végétales, le Soin Capillaire Nutrition Intense nourrit et répare les cheveux sans les alourdir. À la fragrance mythique de l'Huile Prodigieuse®, cette crème thermo-protectrice facilite le coiffage et protège les cheveux de la chaleur des appareils chauffants ju ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680039881</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0df1618c805dab326a37ba805d3a84e5f73615952fc0419a7cf8b2cfe1ab42ac ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Hair Prodigieux® Shampooing Brillance Miroir 400ml ]]></title>
+<g:id>28d55134-84d8-4d0f-afd3-0dee5e290757</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-hair prodigieux® shampooing brillance miroir 400ml?28d55134-84d8-4d0f-afd3-0dee5e290757 ]]></link>
+<g:price><![CDATA[ 2190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Hair Prodigieux - Captez la lumière</p>
+<p>Transformez vos cheveux grâce à la puissance sublimatrice de l'huile fermentée de Camélia rose !</p>
+<p>Né de l'expertise du Laboratoire Nuxe sur les huiles végétales, le Shampooing Brillance Miroir lave et parfume délicatement les cheveux. Formulé sans silicone et sans sulfate*, ce shampooing, à l'huile fermentée de camélia rose, nourrit sans alourdir la fibre capillaire. Sa texture lait à la fragrance mythique de l'Huile Prodigieuse® enveloppe les  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680041129</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ba7b45970984ef34a1314abe363c41265478b2d453be94924c920723190cd793 ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Homme Baume Après-Rasage Multi-fonctions 50ml ]]></title>
+<g:id>f197c9db-7d12-490f-ade5-1d1bf83722bf</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-homme baume après-rasage multi-fonctions 50ml?f197c9db-7d12-490f-ade5-1d1bf83722bf ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Les extraits de bourgeons de chêne ssociés à ceux du Charme permettent de réparer la fonction barrière de la peau, de la régénérer et de la réconforter.</p>
+<p>L’extrait de Baobab utilisé assure d’excellentes propriétés hydratantes et apaisantes.</p>
+<p>Il forme un film protecteur sur la surface de la peau, renforçant ainsi la barrière cutanée, et apporte souplesse et douceur.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680003592</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/021d8ebfa0d602aa6ab749664cbb741663f7f65e67f87cbed6efa46b9ed23a99 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HOMME ET RASAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Homme Rasage de Rêve Gel Anti-Irritations 150ml ]]></title>
+<g:id>cc5ad1c8-2840-4948-8fda-2aee74e602db</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-homme rasage de rêve gel anti-irritations 150ml?cc5ad1c8-2840-4948-8fda-2aee74e602db ]]></link>
+<g:price><![CDATA[ 1090.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">La gamme Nuxe Men est constituée de soins formulés à base d’extraits d’arbres indiqués pour les peaux masculines même les plus sensibles.</p>
+<p class="p1">Le gel Rasage de Rêve, à la texture mousse dense et onctueuse, hypoallergénique, est un soin destiné à faciliter le rasage en favorisant la glisse du rasoir et en faisant gonfler les poils pour une prise plus efficace par la lame.</p>
+<p class="p1">Il restaure le film hydrolipidique de la peau et offre une action anti-irritation ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680003585</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b7805eb650867cbc3a70c41a41996d1929ec47cd796cacf8e87042f8d470fbd4 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HOMME ET RASAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Huile Prodigieuse 100 ml + Shampoing offert 30ml ]]></title>
+<g:id>03ea8f21-bfa4-409b-88ff-35bf8137999d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-huile prodigieuse 100 ml + shampoing offert 30ml?03ea8f21-bfa4-409b-88ff-35bf8137999d ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Succombez au cocktail mythique de 7 huiles précieuses 100% végétales de l'Huile Prodigieuse®.<br><br>En un seul geste, nourrissez, réparez et sublimez la peau de votre visage, de votre corps et vos cheveux.<br><br>L'Huile Prodigieuse® habille tous les types de peaux et toutes les carnations d‘un irrésistible éclat satiné.<br><br>Elle offre une action protectrice anti-pollution à la peau, atténue l'apparence des vergetures, apporte une hydratation longue durée et renforce la fonction barrière  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680039379</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4c02ecd854fc1cf3b3e835b66a2318c4d95530d2a0e744271a04e1559cc46598 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Huile Prodigieuse 100ml + Huile Prodigieuse Or roll-on 8ml ]]></title>
+<g:id>fa7e4233-c52b-478f-af47-92c936906a73</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-huile prodigieuse 100ml + huile prodigieuse or roll-on 8ml?fa7e4233-c52b-478f-af47-92c936906a73 ]]></link>
+<g:price><![CDATA[ 2589.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Huile Prodigieuse® Or format roll-on 8ml :</p>
+<p>Retrouvez l'Huile Prodigieuse® accompagnée de l'Huile Prodigieuse® Or dans un nouveau format roll-on nomade ! Nouveau format, même formule.</p>
+<p>Ce format roll-on illumine les zones du visage et du décolleté de subtils reflets dorés. A appliquer en toutes occasions pour un glow** irrésistible et sans fini gras.</p>
+<p>Soin formulé et fabriqué en France.</p>
+<p>*Appliquer pour rayonner</p>
+<p>**Eclat</p>
+<p>Huile Prodigieuse® 100ml :</p>
+<p>L ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680036637</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7c8ed180b0c044fbb7bf8af3830e491fc5724d2f62a31c212fc2da25da2d047a ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Huile Prodigieuse Florale 100 ml + Shampooing Nuxe Hair 30 ml Offert ]]></title>
+<g:id>790d01ce-357b-4e32-a9a3-b72e0703c982</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-huile prodigieuse florale 100 ml + shampooing nuxe hair 30 ml offert?790d01ce-357b-4e32-a9a3-b72e0703c982 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Huile Prodigieuse Florale :<br>Succombez au cocktail mythique de 7 huiles précieuses 100% végétales de l'Huile Prodigieuse Florale, pour nourrir, réparer et sublimer en un seul geste visage, corps et cheveux.<br>L'Huile Prodigieuse Florale vous fait rayonner d‘un irrésistible éclat satiné sans fini gras grâce à sa texture au toucher sec inimitable. Elle sublime tous les types de peaux. Son parfum aux notes florales et joyeuses ravira vos sens d'ondes pétillantes et lumineuses.<br>Son efficaci ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680039362</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b9bdd4d571c9de71b72594a23457fb40286867129bb300a565467e17fa8fd7bf ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Huile Prodigieuse Florale 50 ml ]]></title>
+<g:id>5836ee94-6fdd-49f3-99a9-9d34ae3decb9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-huile prodigieuse florale 50 ml?5836ee94-6fdd-49f3-99a9-9d34ae3decb9 ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Huile Prodigieuse Florale 50 ml est une huile sèche multi-fonctions qui peut s'utiliser aussi bien pour le soin du visage, du corps et des cheveux.<br />Elle nourrit, répare et sublime. Elle s'inspire du parfum mythique de l'huile Prodigieuse et se décline dans un nouveau parfum floral et délicat.</p>
+<p>Cette huile sèche est formulée à base de principaux actifs d'origine naturelle avec 7 huiles précieuses 100% végétales :</p>
+<ul><li>l'huile de tsubaki hydratante,</li>
+<li>l'huile d'arg ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680024382</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/11fe977d54ae10860c1cad358cf5a1ef567c0e10e40c142a86a9c7b5777a5b09 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Huile Prodigieuse Néroli 100 ml ]]></title>
+<g:id>a9493075-a4fd-4e3b-89b2-8907577654f1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-huile prodigieuse néroli 100 ml?a9493075-a4fd-4e3b-89b2-8907577654f1 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Succombez au plaisir d‘une huile sèche bio* multi-fonctions, qui nourrit en un seul geste visage, corps et cheveux.</span><br /><span>Un soin de peau et d‘esprit, qui répare la peau tout en vous connectant à vos sens.</span><br /><br /><span>Sa délicate alchimie d‘huiles précieuses bio (Huile de Prunes d‘Ente bio et Huile de Sésame bio) vous fait rayonner d‘un irrésistible éclat satiné sans fini gras grâce à sa texture au toucher sec sensoriel.</span><br /><span>Son parfum aux notes apa ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680031571</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/20e390912cfbcc93fa54c594d1a489958dd30d3d0e4ceaedf5947eb16fc509f1 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Huile Prodigieuse Néroli Bio 100ml ]]></title>
+<g:id>3a1c26b8-8698-430a-89d3-2f80cf37de49</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-huile prodigieuse néroli bio 100ml?3a1c26b8-8698-430a-89d3-2f80cf37de49 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Huile Prodigieuse Néroli Bio,</span> huile sèche multi-fonctions pour le visage, le corps et les cheveux qui nourri, répare et sublime en un seul geste.</p>
+<p>Ce soin Prodigieux associe des huiles précieuses de Prunes d'Ente bio et de Sésame bio pour un véritable moment ultra-sensoriel dans votre routine beauté.</p>
+<p>En plus de laisser une sensation de douceur au toucher une fois appliquée, sa texture non grasse dévoile un parfum aux notes de Néroli pour un sensation de sérénité abso ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680024993</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5c27c33025ecfa05470540c46b75cddac5402b39cb9eec636aebbeeb44513a19 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Huile Prodigieuse Or Florale 50 ml ]]></title>
+<g:id>29b74c31-c156-4b01-af0f-9196eb426eb5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-huile prodigieuse or florale 50 ml?29b74c31-c156-4b01-af0f-9196eb426eb5 ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Huile Prodigieuse Or Florale 50 ml est une huile sèche pailletée multi-fonctions enrichi en nacres dorées et rosées. En un seul geste, elle hydrate, satine et illumine visage, corps et cheveux.</p>
+<p>Cette huile sèche est formulée à base de principaux actifs d'origine naturelle avec 7 huiles précieuses 100% végétales :</p>
+<ul><li>l'huile de tsubaki hydratante,</li>
+<li>l'huile d'argan réparatrice,</li>
+<li>l'huile de macadamia nourrissante,</li>
+<li>l'huile de bourrache lissante,</li>
+ ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680038334</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/649d4d17a60e1913e4e6b76f8dbcac6c5fb6fc5393d18e3481bc88bd17328f19 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Huile Prodigieuse Riche 100ml ]]></title>
+<g:id>f81849a7-2bb6-4d30-afe5-dbb6b5544a00</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-huile prodigieuse riche 100ml?f81849a7-2bb6-4d30-afe5-dbb6b5544a00 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Nourrit, répare et satine</strong><br /><strong>Visage, Corps, Cheveux</strong></p>
+<p>Pionnière des huiles sèches avec l'Huile Prodigieuse, Nuxe exauce aujourd'hui le souhait des femmes à la peau très sèche, en quête de confort et crée l'Huile Prodigieuse Riche. Cette huile riche nourrit, répare et satine en alliant nutrition intense et plaisir d’utilisation. Sans fini gras, ni collant, la peau est nourrie intensément, plus confortable et plus douce. Cette huile hydratante et nourris ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680009808</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/88070d83cd653ec4fe42d6dd30f2bad2857af3865f04aff74bf6200d69fc85c7 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Huile Prodigieuse Visage-Corps-Cheveux 50 ml ]]></title>
+<g:id>4d7db8ad-4534-4705-ab49-2b758017949d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-huile prodigieuse visage-corps-cheveux 50 ml?4d7db8ad-4534-4705-ab49-2b758017949d ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Huile Prodigieuse Visage-Corps-Cheveux 50 ml est une huile sèche multi-fonctions qui peut s'utiliser aussi bien pour le soin du visage, du corps et des cheveux.</p>
+<p>Cette huile prodigieuse contient une concentration de 6 Huiles Précieuses et également de la Vitamine E.</p>
+<p>Cette huile est un véritable soin complet car elle nourrit et hydrate. Dès son application, elle pénètre dans la peau pour la laisser douce et satinée en un instant.</p>
+<p>Elle rendra également vos cheveux soupl ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680009761</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a8bd9d9b40bd6f73adac2eeb6552e6c56de6bc7f87a5e37a8accd8274c3b851d ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Huile Sèche Prodigieuse Or 100ml ]]></title>
+<g:id>71559be3-1678-417b-8151-acdfd5ddf545</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-huile sèche prodigieuse or 100ml?71559be3-1678-417b-8151-acdfd5ddf545 ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Huile sèche pailletée - nourrit, adoucit et illumine</strong><br /><strong>Visage, Corps, Cheveux</strong></p>
+<p>La version pailletée de l'Huile Prodigieuse, nourrit, adoucit et illumine la peau et les cheveux, grâce à ses nacres très fines d'origine minérale. La texture de l'huile sèche est unique et son parfum envoûtant.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680009778</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/127f4fce051a4d2f1066c829d19e99b284d332acff8e4faca7f44bea6155e7fd ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Huile Sèche Prodigieuse Or 50ml ]]></title>
+<g:id>f57c119b-007b-4002-8e25-4b73fa30ce59</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-huile sèche prodigieuse or 50ml?f57c119b-007b-4002-8e25-4b73fa30ce59 ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Huile sèche pailletée - nourrit, adoucit et illumine</strong><br /><strong>Visage, Corps, Cheveux</strong></p>
+<p>La version pailletée de l'Huile Prodigieuse, nourrit, adoucit et illumine la peau et les cheveux, grâce à ses nacres très fines d'origine minérale. La texture de l'huile sèche est unique et son parfum envoûtant.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680009785</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/91865ee3e83a5ab90333fad648ca00ed2a60cb46a3a1af8ff6b00e0097f7ac1a ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Men Contour des Yeux Multi-fonctions 15ml ]]></title>
+<g:id>95d8efae-3e38-44ff-9e28-23b75f2217d9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-men contour des yeux multi-fonctions 15ml?95d8efae-3e38-44ff-9e28-23b75f2217d9 ]]></link>
+<g:price><![CDATA[ 1630.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">La gamme Nuxe Men est constituée de soins formulés à base d’extraits d’arbres indiqués pour les peaux masculines même les plus sensibles.</p>
+<p class="p1">Le contour des yeux multi-fonctions est un soin destiné à réduire l’apparence des poches, diminuer les cernes, lisser et défatiguer le contour de l’œil grâce à sa formule composée de caféine végétale, d’acide hyaluronique d’origine végétale, d’extrait d’araucaria et de vitamine E.</p>
+<p class="p1">Le regard est réveillé, visibl ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680003561</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3fbaec5ebb0f9328bde565707a56fcc9d7ed8d6532e669f25598b276fb1ac2e9 ]]></g:image_link>
+<g:product_type><![CDATA[ HOMME ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Men Déodorant Protection 24H 50 ml ]]></title>
+<g:id>c867badb-c799-4ed2-8a86-53d51a06895f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-men déodorant protection 24h 50 ml?c867badb-c799-4ed2-8a86-53d51a06895f ]]></link>
+<g:price><![CDATA[ 599.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La gamme Nuxe Men est constituée de soins formulés à base d’extraits d’arbres indiqués pour les peaux masculines même les plus sensibles.</p>
+<p>Le déodorant protection 24H, sans alcool et sans sel s’aluminium, offre une action protectrice de 24h sans laisser de trace sur la peau ou de tache sur les vêtements grâce à sa formule composée de sauge et de poudre de maïs.</p>
+<p>Efficace par nature : Ce déodorant homme, sans sels d´aluminium et sans alcool, assure une protection 24H.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680003578</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/61421fd9ccd8a551375570b7c78c403d1ba4236f4105104056f10f810d45630d ]]></g:image_link>
+<g:product_type><![CDATA[ HOMME ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Men Gel Multi-Fonctions Hydratant 50ml ]]></title>
+<g:id>320d8cc2-9e05-4660-8b07-498cf142b6da</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-men gel multi-fonctions hydratant 50ml?320d8cc2-9e05-4660-8b07-498cf142b6da ]]></link>
+<g:price><![CDATA[ 2050.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">Nuxe Men Gel Multi Fonctions Hydratant est composé d'Acide Hyaluronique et de mucillages de feuilles de Baobab aux vertus hydratantes, d'extrait d'Araucaria pour énergiser et tonifier la peau, d'Enanthia Chlorantha pour matifier la peau brillante (peau grasse).</p>
+<p class="p1">Cette crème contient également du bois de Santal, de Phellodendron, de Chêne et de Charme aux propriétés apaisantes pour le soin de la peau sensible. </p>
+<p class="p1">Sans paraben, ce soin Nuxe Men est co ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680004957</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/086d0c15ac3298d1815d5e33dab825ee27f68c6787641783571ad32a1122a5ec ]]></g:image_link>
+<g:product_type><![CDATA[ HOMME ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Men Gel douche Multi-usages 200ml ]]></title>
+<g:id>8c2fd6f6-4a2c-4068-b2d5-5cb1e8c175c4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-men gel douche multi-usages 200ml?8c2fd6f6-4a2c-4068-b2d5-5cb1e8c175c4 ]]></link>
+<g:price><![CDATA[ 599.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le gel douche multi-usages Nuxe Men est un soin lavant 3 en 1 formulé avec une base lavante d'origine végétale et un pH physiologique.</p>
+<p>Ce Gel Douche homme nettoie en douceur à la fois le visage, le corps et les cheveux tout en laissant une sensation énergisante.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680004964</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c87f0031f1f33408ba86e934da999d851d908bf5026e0326a7a0608b594e9ab8 ]]></g:image_link>
+<g:product_type><![CDATA[ HOMME ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Men Nuxellence Fluide Anti-Âge  50ml ]]></title>
+<g:id>a79578c9-b221-47ca-9c5a-9c57a67130b8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-men nuxellence fluide anti-Âge  50ml?a79578c9-b221-47ca-9c5a-9c57a67130b8 ]]></link>
+<g:price><![CDATA[ 3390.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">Ce soin anti-âge nouvelle génération, aux extraits de Chêne, Charme, Passiflore et Acide hyaluronique, recharge la peau en énergie* : jour après jour elle parait plus jeune. <br /><br />Revitalisée, elle est plus ferme, les rides sont lissées, le teint dégrisé.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680008719</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4e995618748c85bc8a7ee7f2f932e1ff160bb607c3be3e018dbca4cd3684bcf5 ]]></g:image_link>
+<g:product_type><![CDATA[ HOMME ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Merveillance Lift Crème Concentré de Nuit 50ml ]]></title>
+<g:id>96af4b28-5099-4bee-a040-57e77d3f01e2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-merveillance lift crème concentré de nuit 50ml?96af4b28-5099-4bee-a040-57e77d3f01e2 ]]></link>
+<g:price><![CDATA[ 4290.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">rème de nuit lissante pour la correction des rides et une fermeté cutanée renforcée.</p>
+<p class="p1"><span class="s1">Dès la 1ère application, la peau est lissée.</span></p>
+<p class="p1"><span class="s1">Jour après jour, elle est tonifiée et sa fermeté est renforcée.</span></p>
+<p>Contient de l'huile de Micro-algue est obtenue grâce à une technologie verte de pointe, qui permet d’extraire des molécules actives de la membrane, difficiles à atteindre autrement.</p>
+<p>Une goutte d ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680024818</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bf7ca4dfd86f77a957dac18d46525d9689c0ea4d7a08309f92dbd2bca146a33b ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Merveillance Lift Crème Poudrée 50ml ]]></title>
+<g:id>efacfb93-63de-4af6-9849-0c7d988a7604</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-merveillance lift crème poudrée 50ml?efacfb93-63de-4af6-9849-0c7d988a7604 ]]></link>
+<g:price><![CDATA[ 4290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Merveillance LIFT - La Crème Poudrée Effet Liftant : révélez une peau aussi forte que vous !</p>
+<p>Expérimentez un résultat anti-âge instantané grâce à une texture comblante inédite.</p>
+<p>9 femmes sur 10 sont convaincues (3).</p>
+<p>Cette crème lissante est infusée d’Huile de Micro-Algue ultra-corrective, un actif green (4) qui concentre en une seule goutte la puissance de 4 milliards de cellules actives pour renforcer votre peau au quotidien.</p>
+<p>Dès l'application, la peau est comme li ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680026089</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3dd9dd5cf689343980402f452493f54b05a60eb6c2de8664768df1c6e2db27b9 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Merveillance Lift Glow Crème 50ml ]]></title>
+<g:id>bfbb3efb-6dcc-4b98-8b85-0137c7793b3b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-merveillance lift glow crème 50ml?bfbb3efb-6dcc-4b98-8b85-0137c7793b3b ]]></link>
+<g:price><![CDATA[ 4130.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Pour qui :</span> Tous les types de peaux.</li>
+<li><span>Résultats beauté : </span>La peau est lissée, lumineuse et plus ferme.</li>
+<li><span>Actifs :</span> Huile de Micro-Algue, Extrait Végétal de Tomate, Beurre de Karité, Huile de Graines de Tournesol, Extrait de Racine de Guimauve Officinale.</li>
+<li><span>On aime :</span> Son parfum aux délicats accords floraux et musqués.</li>
+</ul><p> </p>
+<p><span>Merveillance Lift Glow de Nuxe</span> est une crème bonne mine à l'effet t ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680035234</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c6cb5e54e29bad6c4e4897e460fcfbe655436809f881884746cf743b63a15d53 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Merveillance Lift La Crème Velours Effet Liftant 50 ml ]]></title>
+<g:id>465840e5-8b2d-4af1-9eef-9a21770d3acc</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-merveillance lift la crème velours effet liftant 50 ml?465840e5-8b2d-4af1-9eef-9a21770d3acc ]]></link>
+<g:price><![CDATA[ 4290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Merveillance LIFT La Crème Velours Effet Liftant 50 ml est une crème visage à l'huile de micro-algue, spécialement destinée aux peaux normales à sèches.<br />Cette crème lissante est infusée d'huile de micro-algue corrective, un actif green qui concentre en une seule goutte la puissance de 4 milliards de cellules actives pour renforcer la peau au quotidien.</p>
+<p>Sa texture enveloppante apporte souplesse et tonicité instantanément.<br />Les rides sont lissées, la peau est plus ferme. Pl ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680024795</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ece80345d4087bf1f467e16317c759fbffb984e7aea5cad51c902d70e1ce6875 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Merveillance Lift Regard 15ml ]]></title>
+<g:id>9fc71542-bab8-430b-aa5f-ea077e6aeb3f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-merveillance lift regard 15ml?9fc71542-bab8-430b-aa5f-ea077e6aeb3f ]]></link>
+<g:price><![CDATA[ 3390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Merveillance LIFT - La Crème Liftante Regard : révélez une peau aussi forte que vous !</p>
+<p>Pour un contour des yeux comme transformé : poches réduites, rides comblées, paupières rehaussées.<br />100% des femmes sont convaincues (1).<br />Ce contour des yeux raffermissant est infusé d’Huile de Micro-Algue ultra-corrective, un actif green (2) qui concentre la puissance de 4 milliards de cellules actives (en une seule goutte) pour renforcer votre peau au quotidien.<br />Grâce à son incroyable ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680024757</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c32b85ddac441da8e418344757a45a38d65e143ea16221bd422f38ab9064436c ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Merveillance Lift Sérum en Huile 30ml ]]></title>
+<g:id>5789ee20-8669-4e6b-8b99-b4e19dbd86d5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-merveillance lift sérum en huile 30ml?5789ee20-8669-4e6b-8b99-b4e19dbd86d5 ]]></link>
+<g:price><![CDATA[ 4490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Merveillance LIFT - Le Sérum-en-Huile Activateur de Fermeté : révélez une peau aussi forte que vous !</p>
+<p>Expérimentez la force à l'état pur avec une texture 100% active.<br />Ce sérum anti-âge est infusé d’Huile de Micro-Algue ultra-corrective, un actif green (2) qui concentre en une seule goutte la puissance de 4 milliards de cellules actives pour renforcer votre peau au quotidien.</p>
+<p>3 gouttes suffisent pour une peau lissée, souple et tonifiée instantanément.<br />+32% de fermeté dè ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680024771</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e60f84d458ea2fa57a296dec7347ee7b5fb84085419d2e57290a5b4e4fddd750 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Nuxuriance Coffret Ultra Crème Anti Age 50ml+ Crème Nuit 15ml Offerte ]]></title>
+<g:id>88c2e903-d5f7-44b2-b2e8-1165b102cfa7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-nuxuriance coffret ultra crème anti age 50ml+ crème nuit 15ml offerte?88c2e903-d5f7-44b2-b2e8-1165b102cfa7 ]]></link>
+<g:price><![CDATA[ 5295.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Contenu du kit : </span>Nuxuriance Ultra La Crème Anti-Âge Global 50ml, Nuxuriance Ultra La Crème Nuit Anti-Âge Global 15ml Offerte.</li>
+<li><span>Pour qui :</span> Tous les types de peaux.</li>
+<li><span>Résultats beauté :</span> Corrigent visiblement les principaux signes de l'âge.</li>
+<li><span>On aime :</span> Leur parfum féminin moderne et élégant.</li>
+</ul><p> </p>
+<p>La <span>Crème Anti-Âge Global Nuxuriance Ultra</span> corrige visiblement les principaux signes de l'âge. ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680039751</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d3d4b510759220b11988bffe8e7e86c912038667402f2d83bd353ac77b397249 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique > Idées Cadeaux > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Nuxuriance Crème Nuit Anti Age Global 50ml ]]></title>
+<g:id>9a53a17e-51b7-47ca-a280-25088b919a21</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-nuxuriance crème nuit anti age global 50ml?9a53a17e-51b7-47ca-a280-25088b919a21 ]]></link>
+<g:price><![CDATA[ 5295.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L'ANTI-ÂGE GLOBAL PLUS EFFICACE QUE LE RETINOL ⁽¹⁾</span></p>
+<p>Cette crème nuit anti-âge global corrige visiblement les principaux signes de l'âge pendant la nuit.</p>
+<p><span>La TECHNOLOGIE ALFA [3R]⁽²⁾ permet de [R]evitaliser, [R]égénérer et [R]esurfacer la peau.</span></p>
+<p>Instantanément, la peau est intensément nourrie et plus confortable pour 100% des femmes*. Nuit après nuit, la peau regagne en fermeté (+38%**).</p>
+<p>Au réveil :</p>
+<p>- La peau est comme réparée pour 75%  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034480</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/87f905abf11f2472458f0a43b284f19410d97fec45272c2b0e0c3af514fcad5a ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Nuxuriance Gold Baume Nuit Nutri-Fortifiant 50 ml ]]></title>
+<g:id>751ca4dc-3adb-4739-85db-07a47c22fb4a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-nuxuriance gold baume nuit nutri-fortifiant 50 ml?751ca4dc-3adb-4739-85db-07a47c22fb4a ]]></link>
+<g:price><![CDATA[ 5795.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Baume nuit anti-âge absolu - Redensifie, nourrit, revitalise</strong><br /><strong>Peaux sèches, fragilisées par l'âge.</strong></p>
+<p>Ce Baume Nuit Nutri-Fortifiant associe le pouvoir des Cellules Bi-Florales de Safran et Bougainvillier, l'Oléactif de Rose de Porcelaine et un complexe d'origine naturelle nutri-reconstituant pour un pouvoir anti-âge absolu. Sa formule enrichie en beurre de Karité comble la peau en nutrition et la revitalise pendant la nuit. Au réveil, les marques de  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680015915</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cae2cb3e07d4870f35722b4ebc0bb71f86ccc7191799f93c8ba93ad12c0a7eed ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Nuxuriance Gold Baume Regard Lumière 15 ml ]]></title>
+<g:id>819fda4e-bf69-41c6-b690-7fa5190a0db8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-nuxuriance gold baume regard lumière 15 ml?819fda4e-bf69-41c6-b690-7fa5190a0db8 ]]></link>
+<g:price><![CDATA[ 4330.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Baume contour des yeux anti-âge absolu - Illumine, lisse, revitalise</strong><br /><strong>Peaux sèches, fragilisées par l'âge.</strong></p>
+<p>Ce Baume Regard Lumière associe le pouvoir des Cellules Bi-Florales de Safran et Bougainvillier, l'Oléactif de Rose de Porcelaine et un complexe d'origine naturelle nutri-reconstituant pour un pouvoir anti-âge absolu. Sa texture biomimétique infusée de Micro-Réflecteurs dorés redonne vie à votre regard. Instantanément la peau est lissée.<br /> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680015922</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9e59d1a82059c3349d7ec2527c8c3261695bdb2d7e7c0b8fc8c4c6218cae1a80 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Nuxuriance Gold Crème-Huile Nutri-Fortifiante 50 ml ]]></title>
+<g:id>426bb7cc-4522-4a02-a2c2-cd43905575b9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-nuxuriance gold crème-huile nutri-fortifiante 50 ml?426bb7cc-4522-4a02-a2c2-cd43905575b9 ]]></link>
+<g:price><![CDATA[ 5730.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Crème anti-âge absolu- Redensifie, nourrit, ravive l'éclat</strong><br /><strong>Peaux sèches, fragilisées par l'âge.</strong></p>
+<p>Cette Crème-Huile Nutri-Fortifiante associe le pouvoir des Cellules Bi-Florales de Safran et Bougainvillier, l'Oléactif de Rose de Porcelaine et un complexe d'origine naturelle nutri-reconstituant pour un pouvoir anti-âge absolu.</p>
+<p>Jour après jour, la peau se fortifie et devient plus ferme. Les rides sont lissées, la peau intensément repulpée.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680015908</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/06d2e0643d1305b3f824bf14c05fd8209e37697744bad2b9bf45fd91658d732f ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Nuxuriance Gold L'Huile-en-Sérum Nutri-Régénérant Bio 30 ml ]]></title>
+<g:id>86082fc9-410c-45ef-8170-9e9f8c03e687</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-nuxuriance gold l'huile-en-sérum nutri-régénérant bio 30 ml?86082fc9-410c-45ef-8170-9e9f8c03e687 ]]></link>
+<g:price><![CDATA[ 5630.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Nuxuriance Gold L'Huile-en-Sérum Nutri-Régénérant Bio 30 ml est un soin anti-âge à destination des peaux sèches. Ce sérum aux notes apaisantes de Néroli et à l'Oléo-Extrait de Riz aide à fortifier la peau : elle est comme régénérée et enveloppée de confort.</p>
+<p>Jour après jour, la peau parait plus forte, elle est plus lisse, rebondie comme repulpée. Nourrie, elle retrouve confort, souplesse et douceur, son éclat est ravivé.</p>
+<p>Vegan.</p>
+<p>100% du total est d'origine naturelle.<b ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680037252</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8bbedcf1703274cc6fb781b7a76c5fd443919b835a6e35d1cb6f64948bb46c71 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Nuxuriance Gold Sérum Nutri-Revitalisant 30 ml ]]></title>
+<g:id>5b16d147-1de2-4e94-8b0c-8569725d2a8e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-nuxuriance gold sérum nutri-revitalisant 30 ml?5b16d147-1de2-4e94-8b0c-8569725d2a8e ]]></link>
+<g:price><![CDATA[ 6190.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Sérum anti-âge absolu - Régénère, fortifie et ravive l'éclat</strong><br /><strong>Peaux sèches, fragilisées par l'âge.</strong></p>
+<p>Ce Sérum Nutri-Revitalisant au "toucher" velours associe le pouvoir des Cellules Bi-Florales de Safran et Bougainvillier, l'Oléactif de Rose de Porcelaine et un complexe d'origine naturelle nutri-reconstituant pour un pouvoir anti-âge absolu.<br />Jour après jour, la peau est comme régénérée : plus lisse, plus ferme, elle semble moins fine.<br />Comme ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680015939</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a2364a941b0b2588200babc47dbb2946bab4ee7ffb0e30564e1663e94fa2c06f ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Nuxuriance Soin Ciblé Regard et Lévres 15ml ]]></title>
+<g:id>f502b495-09ad-4a96-89f7-052932371140</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-nuxuriance soin ciblé regard et lévres 15ml?f502b495-09ad-4a96-89f7-052932371140 ]]></link>
+<g:price><![CDATA[ 3730.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L'ANTI-ÂGE GLOBAL PLUS EFFICACE QUE LE RETINOL ⁽¹⁾</span></p>
+<p>Ce soin regard et lèvres corrige les principaux signes de l'âge en ciblant les rides d'expression du regard et du sourire pour une peau visiblement plus jeune.</p>
+<p><span>La TECHNOLOGIE ALFA [3R]* permet de [R]evitaliser, [R]égénérer et [R]esurfacer la peau.</span> Jour après jour, ce soin réduit l'apparence des cernes (-36%**) et le volume des poches (-22%**). Le contour des lèvres est comme redessiné, défroissé. Les ri ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034510</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a50e6e9bfee623bdb67a96565caf7acfe3fc13567986cbddcf69ebce12ae525b ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Nuxuriance Ultra La Crème Anti-Âge Global SPF30 50 ml ]]></title>
+<g:id>e7781b9e-6207-4946-99b4-1510f316f803</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-nuxuriance ultra la crème anti-Âge global spf30 50 ml?e7781b9e-6207-4946-99b4-1510f316f803 ]]></link>
+<g:price><![CDATA[ 5295.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Nuxuriance Ultra La Crème Anti-Âge Global SPF30 50 ml est une crème à la double action anti-âge et protection UV pour tous types de peaux.<br />Ce soin SPF30 cible les principaux signes de l'âge et prévient le vieillissement cutané prématuré induit par les UVA/UVB. La peau est repulpée, tonifiée et revitalisée. Les traits du visage sont comme retendus.</p>
+<p>Cette crème renferme la technologie Alfa [3R] qui permet de [R]esurfacer la peau en la lissant, de la [R]égénérer en activant son  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034503</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/646bc549d81278afc21c39ca91864a11bd50df08ba8744022a33f5cca01c6bc4 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Nuxuriance Ultra La Crème Riche Anti-Âge Global 50 ml + La Crème Nuit Anti-Âge Global 15 ml Offerte ]]></title>
+<g:id>bafc8590-87cd-4703-b756-e2f5370a1d6c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-nuxuriance ultra la crème riche anti-Âge global 50 ml + la crème nuit anti-Âge global 15 ml offerte?bafc8590-87cd-4703-b756-e2f5370a1d6c ]]></link>
+<g:price><![CDATA[ 5295.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Nuxuriance Ultra La Crème Anti-Âge Global 50 ml + La Crème Nuit Anti-Âge Global 15 ml Offerte est un coffret offrant une solution complète aux peaux sèches à très sèches pour lutter contre les signes du vieillissement cutané.</p>
+<p>La crème de jour et la crème de nuit renferment la technologie Alfa [3R] qui permet de [R]esurfacer la peau en la lissant, de la [R]égénérer en activant son renouvellement et de la [R]evitaliser en lui redonnant jeunesse.Composée d'un extrait d'alfalfa, d'aci ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680040122</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/61955e95050033dc85a59e38ce472389e1db183160cb5fc84496a5f0a3416997 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Nuxuriance Ultra Le Lait Corps Fermeté 400 ml ]]></title>
+<g:id>edc0a0c3-3ba3-44a3-b27a-02b08eec0019</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-nuxuriance ultra le lait corps fermeté 400 ml?edc0a0c3-3ba3-44a3-b27a-02b08eec0019 ]]></link>
+<g:price><![CDATA[ 3240.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Nuxuriance Ultra Le Lait Corps Fermeté 400 ml est un lait pour le corps qui nourrit la peau et cible les principales zones de relâchement : bras, décolleté, jambes, ventre, fesse. Il offre un effet liftant et gainant pour une peau visiblement plus ferme et une silhouette remodelée.</p>
+<p>Texture fondante, non collante, pénètre rapidement.</p>
+<p>96% d'ingrédients d'origine naturelle.</p>
+<p>Vegan.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034527</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2871ffa3899c09f89b662b26f6ea4b2b6129817806e8eb622aa6f4afebcd4048 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Nuxuriance Ultra Le Soin Mains Correcteur de Taches 75 ml ]]></title>
+<g:id>066e3c93-fca2-4d2e-86e3-33d0cbd92bac</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-nuxuriance ultra le soin mains correcteur de taches 75 ml?066e3c93-fca2-4d2e-86e3-33d0cbd92bac ]]></link>
+<g:price><![CDATA[ 2230.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Nuxuriance Ultra Le Soin Mains Correcteur de Taches 75 ml est un soin pour les mains qui aide à réduire l'apparence des taches, et à agir sur la sécheresse cutanée en nourrissant la peau. Il est enrichi en vitamine C, actif ciblant les taches afin de réduire leur taille, leur apparence et leur nombre.</p>
+<p>La peau est immédiatement hydratée, plus douce et plus lisse. Jour après jour, elle paraît plus uniforme et plus jeune.</p>
+<p>96% d'ingrédients d'origine naturelle.</p>
+<p>Vegan.</p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034534</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f137a738a2833c3e93c6d4d8eac081e621e5d7db3c0cc5a5e1719517061a77ae ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Nuxuriance Ultra Le Sérum Correcteur de Taches 30 ml ]]></title>
+<g:id>c9e9f99a-5564-4b72-a1a5-67999ebae3a7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-nuxuriance ultra le sérum correcteur de taches 30 ml?c9e9f99a-5564-4b72-a1a5-67999ebae3a7 ]]></link>
+<g:price><![CDATA[ 5390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Nuxuriance Ultra Le Sérum Correcteur de Taches 30 ml est un soin qui aide à réduire l'apparence des taches, pour une peau plus homogène et un teint ravivé. Il est enrichi en vitamine C, actif ciblant les taches afin de réduire leur taille, leur apparence et leur nombre.</p>
+<p>Ce sérum renferme la technologie Alfa [3R] qui permet de [R]esurfacer la peau en la lissant, de la [R]égénérer en activant son renouvellement et de la [R]evitaliser en lui redonnant jeunesse.<br />Composée d'un ext ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034497</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a0c292ad46cedc7d0aa2b9743cc9cf9ae40a748e2126124d3051bca986b78286 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Nuxuriance Ultra Soin d'Exception Jour & Nuit 75 ml  ]]></title>
+<g:id>c62fa435-8bca-4c83-96ef-816ea107368b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-nuxuriance ultra soin d'exception jour & nuit 75 ml ?c62fa435-8bca-4c83-96ef-816ea107368b ]]></link>
+<g:price><![CDATA[ 6530.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Dans un format de luxe, ce soin anti-âge global d'exception allie la double efficacité d'un soin Jour et Nuit pour corriger visiblement les principaux signes de l'âge avec la&nbsp;TECHNOLOGIE ALFA [3R]* exclusive de NUXE.</p><p>Infusé en&nbsp;NIACINAMIDE, un actif hautement efficace et aux multiples propriétés.&nbsp; Ce soin sublime l'éclat de la peau, unifie le teint ; révélant une peau éclatante de jeunesse.</p><p>Immédiatement : La peau semble lissée pour 88% des femmes ⁽²⁾.&nbsp;&nbsp;</p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680044311</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/282c5eb48989ba60a866fceae1a8e1a54af87004118f87d986311f3f11d7b1b5 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Parfum Prodigieux Floral 50ml ]]></title>
+<g:id>260d444e-f010-479d-8316-6ebfbe1c3435</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-parfum prodigieux floral 50ml?260d444e-f010-479d-8316-6ebfbe1c3435 ]]></link>
+<g:price><![CDATA[ 4390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Avec le parfum Floral, retrouvez avec bonheur les notes fraîches et délicates de l'Huile Prodigieuse Florale®. Quelques pschitts de ce sillage pétillant et les sens s’évadent, transportés par son accord Pamplemousse en tête, exaltés par son cœur floral de Magnolia, envoutés par la subtilité du Musc blanc. Une invitation à l’insouciance et à la légèreté.</p>
+<p></p>
+<p>Parfum formulé et fabriqué en France.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680022524</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9df55e1f5112768cf4ff383bf6fc4ac0d026ddcbb538cf6f12fd0ab20304f5b1 ]]></g:image_link>
+<g:product_type><![CDATA[ PARFUM ET EAU DE TOILETTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Poudre Éclat Prodigieux 25g ]]></title>
+<g:id>ba0b79ff-10f3-416c-a855-4c8efded60ba</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-poudre Éclat prodigieux 25g?ba0b79ff-10f3-416c-a855-4c8efded60ba ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Poudre compacte bronzante multi-usages. Protectrice et longue durée. A la vitamine E et céramide.</p>
+<p>Petit prodige cosmétique, cette poudre de lumière embellit toutes les peaux, tous les teints. Elle met en beauté le visage et le corps.</p>
+<p>Puissants capteurs de lumière, les Pigments Correcteurs Optiques donnent une bonne mine immédiate.<br /><br />Les Nacres Micronisées illuminent immédiatement le teint. Sous son effet, la peau sublimée rayonne d'un nouvel éclat.</p>
+<p>Le bronzage es ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680001239</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/23abcae63623080a2c4edcb46d3dcd37a33fcd13d9692c2b0d86000b2a67f92f ]]></g:image_link>
+<g:product_type><![CDATA[ MAQUILLAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieuse Boost Sérum Autobronzant 30 ml ]]></title>
+<g:id>06792cee-fee9-4522-93ac-e3d0758911d3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieuse boost sérum autobronzant 30 ml?06792cee-fee9-4522-93ac-e3d0758911d3 ]]></link>
+<g:price><![CDATA[ 3140.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Prodigieuse Boost Sérum Autobronzant 30 ml est un produit qui hydrate et repulpe la peau.</p><p>Enrichi en acide hyaluronique, ce sérum offre une hydratation intense tout en repulpant la peau pour un teint frais et éclatant.</p><p>Sa formule à base de DHA 100 % naturelle procure un hâle progressif, uniforme et naturel, pour un effet retour de vacances toute l'année.<br>Sa texture légère pénètre instantanément, laissant la peau douce, confortable et parfaitement nourrie.</p><p>Son parfum  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680043604</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/441fa87309fe6ce8fb44ee4275dd8c2cd339d280f13f1039d89b03c173cf5023 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN TEINTE > SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieuse boost Sérum éclat vitaminé 30 ml ]]></title>
+<g:id>75f93a04-7bad-46cb-ae54-2add6766e414</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieuse boost sérum éclat vitaminé 30 ml?75f93a04-7bad-46cb-ae54-2add6766e414 ]]></link>
+<g:price><![CDATA[ 3090.00 EUR ]]></g:price>
+<description><![CDATA[ <p>PRODIGIEUSE® BOOST - Le Sérum Eclat Vitaminé à la Vitamine C</p>
+<p>3 gouttes pour booster l'éclat de votre peau!</p>
+<p>Ce sérum certifié BIO lisse et illumine la peau instantanément. Jour après jour, il agit sur les 1ers signes de l'âge pour une peau repulpée et éclatante. Elle est plus fraîche pour 90% des femmes*.</p>
+<p>Son + : une efficacité anti-oxydante 8H** pour réduire les effets des radicaux libres et protéger la peau.</p>
+<p>Idéal pour toutes les peaux grâce à sa texture ultra-lég ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680037023</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fc0ab439426ded7665c9da27bacf4cd857a09ab1c484053ec219f6b9c9411d27 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieuse boost mask detox 75 ml ]]></title>
+<g:id>170133c2-1a81-43cd-94f7-1790db63d7ec</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieuse boost mask detox 75 ml?170133c2-1a81-43cd-94f7-1790db63d7ec ]]></link>
+<g:price><![CDATA[ 1730.00 EUR ]]></g:price>
+<description><![CDATA[ <p>PRODIGIEUSE® BOOST - Le Masque Détox Eclat Vitaminé</p>
+<p>5 minutes top chrono pour booster l'éclat de votre peau!</p>
+<p>Ce masque visage certifié BIO libère la peau des impuretés et affine le grain de peau. La peau est purifiée, détoxifiée et comme lissée. Son éclat est ravivé pour 90% des femmes*.</p>
+<p>Son + : une texture transformative ultra-sensorielle en 3 temps. D'une gelée fraîche à l’application, elle se transforme en huile au massage puis fond en lait au rinçage. Un pur moment de ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680037801</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e12d3c9dae74273cbfbdd5c69e0f36a3474a77cae74e8888e2e5cb50d60792e2 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieux Absolu de Parfum 30ml ]]></title>
+<g:id>e0315b29-9b35-46dc-8ceb-20275cffa1bc</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieux absolu de parfum 30ml?e0315b29-9b35-46dc-8ceb-20275cffa1bc ]]></link>
+<g:price><![CDATA[ 5890.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Concentré de parfum</strong></p>
+<p>La réinterprétation de Prodigieux le parfum encore plus intense et sensuelle, avec un nouvel accord Vanille Gourmande,<br />Fève Tonka et Fleur de Tiaré.<br />Succombez à cette nouvelle expérience parfum absolue, avec 25% de concentré parfum (2 fois plus qu’une Eau de Parfum) et une galénique huile inédite pour une tenue des notes prolongée.<br />Avec ce nouveau parfum, redécouvrez l’art de se parfumer avec un système d’application inéditqui dépose  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680015885</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3cf560ad3c9eb61966d92a709b9d43546d3af3800ece694ba951025dc7040f0d ]]></g:image_link>
+<g:product_type><![CDATA[ Idées Cadeaux > PARFUM ET EAU DE TOILETTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieux BB Crème Teintée Hydratante  Claire ]]></title>
+<g:id>aca5f763-9862-4c0f-b8db-efb7aac5e847</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieux bb crème teintée hydratante  claire?aca5f763-9862-4c0f-b8db-efb7aac5e847 ]]></link>
+<g:price><![CDATA[ 2190.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Ce soin perfecteur de teint unifie la peau en un seul geste tout en l'hydratant pendant 24h*. Grâce à l'huile précieuse d'amande douce lactée, sa texture légère est irrésistiblement fondante. Cette BB crème procure un effet bonne mine immédiat pour une peau lissée, douce et lumineuse. Son + : sa texture biomimétique fusionne avec la peau grâce à une association précise de pigments d'origine naturelle, offrant ainsi une couvrance modulable selon l'intensité désirée Non comédogène. Hydrat ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680029820</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d9f5e0a57226f0d2fdae0f45bf95e1c650c2dab76514e15d3dc798498c225ecc ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieux BB Crème Teintée Hydratante  Foncée ]]></title>
+<g:id>127f6656-e688-49e6-81fc-8bf25c7a2d2b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieux bb crème teintée hydratante  foncée?127f6656-e688-49e6-81fc-8bf25c7a2d2b ]]></link>
+<g:price><![CDATA[ 2190.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Ce soin perfecteur de teint unifie la peau en un seul geste tout en l'hydratant pendant 24h*. Grâce à l'huile précieuse d'amande douce lactée, sa texture légère est irrésistiblement fondante. Cette BB crème procure un effet bonne mine immédiat pour une peau lissée, douce et lumineuse. Son + : sa texture biomimétique fusionne avec la peau grâce à une association précise de pigments d'origine naturelle, offrant ainsi une couvrance modulable selon l'intensité désirée Non comédogène. Hydrat ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680029844</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/575455927e2678a491e154d577ff1ebf019b6a166ef919f6b39ae811763ab6ab ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieux BB Crème Teintée Hydratante Medium ]]></title>
+<g:id>f62df973-3c26-49f3-8aa4-ee41f80322b6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieux bb crème teintée hydratante medium?f62df973-3c26-49f3-8aa4-ee41f80322b6 ]]></link>
+<g:price><![CDATA[ 2190.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Ce soin perfecteur de teint unifie la peau en un seul geste tout en l'hydratant pendant 24h*. Grâce à l'huile précieuse d'amande douce lactée, sa texture légère est irrésistiblement fondante. Cette BB crème procure un effet bonne mine immédiat pour une peau lissée, douce et lumineuse. Son + : sa texture biomimétique fusionne avec la peau grâce à une association précise de pigments d'origine naturelle, offrant ainsi une couvrance modulable selon l'intensité désirée Non comédogène. Hydrat ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680029837</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2dee418532120d1569541a45009aff42f2bdc08fec3366be8f7af7d567b273cc ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieux Bougie 140 g ]]></title>
+<g:id>5843ad00-41d7-47fb-b243-a4abb4e39c10</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieux bougie 140 g?5843ad00-41d7-47fb-b243-a4abb4e39c10 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Retrouvez l'atmosphère d'un intense moment Prodigieux®, avec cette bougie d'intérieur 140G au parfum solaire et sensuel de l'Huile Prodigieuse®.</span><br /><span>Une expérience sensorielle unique d'environ 50 heures.</span><br /><span>Produit formulé et fabriqué en France.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680039935</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ba458e33dcd6ef19e667c5f7eb9950e6463e7ddfbc317992990ecc6ae0867a2a ]]></g:image_link>
+<g:product_type><![CDATA[ BOUGIE PARFUMEE > PARFUMERIE > AMBIANCE ET BOUGIES PARFUMEES  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieux Floral - Le Parfum, 30ml ]]></title>
+<g:id>2fe81aa8-2754-4f3a-8f46-89f9b3da35d4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieux floral - le parfum, 30ml?2fe81aa8-2754-4f3a-8f46-89f9b3da35d4 ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Avec le <span>parfum Floral</span>, retrouvez avec bonheur les notes fraîches et délicates de l'Huile Prodigieuse Florale®.</p>
+<p>Quelques pschitts de ce sillage pétillant et les sens s’évadent, transportés par son accord<span> Pamplemousse</span> en tête, exaltés par son cœur floral de <span>Magnolia</span>, envoutés par la subtilité du <span>Musc blanc</span>.</p>
+<p>Une invitation à l’<span>insouciance</span> et à la <span>légèreté</span>.</p>
+<p>Parfum formulé et fabriqué en <span>France ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680040115</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fd0abbf5ed9a1fbfada872801fe11387d3539f019499a849d78436ffdf048cd1 ]]></g:image_link>
+<g:product_type><![CDATA[ PARFUM ET EAU DE TOILETTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieux Floral Gelée de Douche 200ml ]]></title>
+<g:id>8ecda907-c417-441f-8bd1-e6fa78855e3a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieux floral gelée de douche 200ml?8ecda907-c417-441f-8bd1-e6fa78855e3a ]]></link>
+<g:price><![CDATA[ 790.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Ce gel douche parfumé procure une douceur addictive grâce à sa délicate base lavante d’origine végétale infusée d'huile d’Amande douce. Il nettoie la peau tout en finesse et la laisse douce et souple. Sa texture onctueuse au subtil parfum floral, aux notes fraîches de Pamplemousse, Magnolia et Musc, transforme la douche en une expérience ultra-sensorielle au quotidien.</span><br /><br /><span>Soin formulé et fabriqué en France.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680026133</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/38c6ef4cddfa13674bba31c05830727704ce193e60b422c0e2284505a3726350 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieux Floral Trousse Mes Indispensables ]]></title>
+<g:id>354d7c1d-6dfd-401c-947c-0c5a2820024d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieux floral trousse mes indispensables?354d7c1d-6dfd-401c-947c-0c5a2820024d ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Prodigieuse Florale<br />Contient : Prodigieux® Floral Gelée de Douche Parfumée 30 ml<br />- Huile Prodigieuse® Florale 10 ml<br />- Prodigieux® Floral le parfum 15ml<br />- Prodigieuse® Boost , le gel-crème éclat multi-correction 15 ml</p>
+<p>Rien de tel pour voir la vie en rose que la Trousse Prodigieuse® Florale et sa déclinaison de plaisirs délicatement parfumés :</p>
+<p>- Prodigieux® Floral Gelée de Douche Parfumée 30 ml<br />- Huile Prodigieuse® Florale 10 ml<br />- Prodigieux® Floral l ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680042898</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/393035eb136584a7766997ab5a3271121f5c0b364336cb11f23299b397b9a994 ]]></g:image_link>
+<g:product_type><![CDATA[ ACCESSOIRES ET COUTELLERIE  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieux Huile Prodigieuse Néroli Bio 100 ml + Douche Relaxante Parfumée Bio 30 ml Offerte ]]></title>
+<g:id>7a18bce2-afc1-4485-a763-d68537cea2bc</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieux huile prodigieuse néroli bio 100 ml + douche relaxante parfumée bio 30 ml offerte?7a18bce2-afc1-4485-a763-d68537cea2bc ]]></link>
+<g:price><![CDATA[ 2589.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Prodigieux Huile Prodigieuse Néroli Bio 100 ml + Douche Relaxante Parfumée Bio 30 ml Offerte est un duo de soin parfumé pour toutes les peaux.</p>
+<p>- Nuxe Prodigieux Huile Prodigieuse Néroli Bio 100 ml est une huile sèche qui laisse la peau nourrie, lissée et sublimée, et les cheveux nourris et brillants. Son parfum apaisant aux notes de néroli apporte calme et sérénité. De plus, elle offre une efficacité anti-oxydante et une efficacité sur la réduction de l'apparence des vergetures.</ ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680037016</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1b659c7c23cf0a30caee938da9ca1680e5f108d140d99d14970f737c69a70810 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieux Huile de Douche 200ml ]]></title>
+<g:id>193962d6-78bc-4fb5-a2f6-bea12753464d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieux huile de douche 200ml?193962d6-78bc-4fb5-a2f6-bea12753464d ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">L'huile de douche Nuxe est indiquée pour tous les types de peaux, sa base lavante douce et sa composition à base d'ingrédients d'origine naturelle, font de ce gel douche un soin nettoyant qui n'agresse pas la peau.</p>
+<p class="p1">Inspiré du mythique parfum prodigieux, cette huile de douche Nuxe transformera vos douche en véritable moment de plaisir. Ses nacres dorées, sa mousse fine et son parfum éveilleront tous vos sens.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680008313</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f5745890fc5109c2892493fc6408c1867c5749b9cf7b197636aea89d761aaf7a ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieux Lait 200ml ]]></title>
+<g:id>ee44523e-dc37-439d-8857-24a7f7cc1e4b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieux lait 200ml?ee44523e-dc37-439d-8857-24a7f7cc1e4b ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Lait corps sublimateur</strong><br /><strong>Pour toutes les peaux - Corps</strong></p>
+<p>Ce Lait Corps Sublimateur, aux Huiles Végétales Précieuses, hydrate, satine et illumine la peau.A la fragrance mythique et envoûtante de l'Huile Prodigieuse.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680009488</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f6b87d709457fdd0ff119b22779dd4f3c5ef1969728906e1046337ae8818833f ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieux Le Parfum 30ml ]]></title>
+<g:id>61525f32-3032-4023-bc20-f159582ff963</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieux le parfum 30ml?61525f32-3032-4023-bc20-f159582ff963 ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Prodigieux Le Parfum 30 ml est un présent idéal pour toutes les femmes.<br /><br />Le parfumeur et nez Serge Majoullier, qui avait créé le parfum de l'huile prodigieuse, parfum reconnaissable entre mille, a retranscrit cette fragrance douce et sensuelle dans Prodigieux Le Parfum.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680008320</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c9a0fac88d93e0165a6fd17722ab2ff14aab1e8c5f2452846596bdfad19c1dba ]]></g:image_link>
+<g:product_type><![CDATA[ Idées Cadeaux > PARFUM ET EAU DE TOILETTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieux Le Parfum 50 ml ]]></title>
+<g:id>7058ba5a-c07e-40a0-8164-0da904f04b62</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieux le parfum 50 ml?7058ba5a-c07e-40a0-8164-0da904f04b62 ]]></link>
+<g:price><![CDATA[ 4390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Une fragrance hommage à l’Huile Prodigieuse, le produit culte de la marque.</p>
+<p>Bergamote, mandarine et fleur d’oranger en tête, rose, gardénia et magnolia en notes de coeur, le tout sur un fond de vanille et de lait de coco, voici la composition olfactive imaginée par le nez Serge Majoullier.</p>
+<p>Prodigieux le parfum est non photo-sensibilisant et peut se porter au soleil.</p>
+<p>Attention cependant de ne pas le vaporiser lorsque vous vous exposez en plein soleil.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680005305</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2b1472e3b81aede9b811b04323dc706049fc72d1dfda153fad7c8264653990a1 ]]></g:image_link>
+<g:product_type><![CDATA[ Idées Cadeaux > PARFUM ET EAU DE TOILETTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieux Neroli- Le Parfum, 50ml ]]></title>
+<g:id>80a4b4b8-803c-40fd-8272-7da5f94bdfab</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieux neroli- le parfum, 50ml?80a4b4b8-803c-40fd-8272-7da5f94bdfab ]]></link>
+<g:price><![CDATA[ 4390.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li>Parfum féminin.</li>
+<li><span>Notes :</span> Petit Grain, Bergamote, Lavandin, Fleur d'Oranger, Musc.</li>
+<li><span>Le + :</span> Il est formulé et fabriqué en France.</li>
+</ul><p> </p>
+<p>Respirez en plein cœur avec cette fragrance<span> inspirée de l'Huile Prodigieuse Néroli.</span></p>
+<p>Cette fragrance s'ouvre en tête avec des <span>notes d'agrumes </span>(Petit Grain et Bergamote) à la fraîcheur aromatique de la verveine exotique.</p>
+<p>Son cœur floral de <span>Lavandin </span> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034275</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6d0ca90e82b5faa4d6a1ad83f7de425ea49a79ab75b294dff19b09ed14821029 ]]></g:image_link>
+<g:product_type><![CDATA[ PARFUMERIE > Dermocosmétique > Idées Cadeaux > PARFUM ET EAU DE TOILETTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Prodigieux Néroli Gelée de Douche 200ml ]]></title>
+<g:id>3b99ac93-6fca-41c0-a6ea-3dbb3a5e57ec</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-prodigieux néroli gelée de douche 200ml?3b99ac93-6fca-41c0-a6ea-3dbb3a5e57ec ]]></link>
+<g:price><![CDATA[ 790.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Pour qui :</span> Tous les types de peaux.</li>
+<li><span>Résultats beauté :</span> La peau est nettoyée et ressourcée.</li>
+<li><span>Actifs :</span> Base Lavante Douce d'Origine Végétale, Eau de Fleur d'Oranger Amer, Aloe Vera.</li>
+<li><span>On aime :</span> Son parfum aux notes apaisantes de Néroli.</li>
+</ul><p> </p>
+<p>Au parfum de l'<span>Huile Prodigieuse Néroli</span>, ce gel douche certifié bio transforme la douche en un moment de<span> relaxation</span> et de sérénité au ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034268</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8bb6b469aead41f5ddcc20c082e32093114bb4fdb18128812303eaebf5317196 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve De Thé Eau Exaltante Parfumante 100ml ]]></title>
+<g:id>1e926b7a-578a-4969-b147-b49b0c9bfbfa</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de thé eau exaltante parfumante 100ml?1e926b7a-578a-4969-b147-b49b0c9bfbfa ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Cette eau parfumante, condensé de bonne humeur aux vertus <span>vivifiantes </span>et ressourçantes, booste les sens grâce à sa fragrance addictive mariant des notes de Rhubarbe, Thé Vert et Herbes fraîches. Son sillage pétillant procure une sensation de fraîcheur, enveloppant la peau tel un halo de bien-être.</p>
+<p> </p>
+<p>91%* des femmes ressentent la sensation de fraîcheur et  trouvent leur peau douce. </p>
+<p> </p>
+<p>*Test consommateurs  – 63 volontaires. % de satisfaction immédiatemen ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680021985</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/07a9cf757d6e64c3d9e3ae1dc82193047745718a9e6928fbbc814d0e7e87c072 ]]></g:image_link>
+<g:product_type><![CDATA[ PARFUM ET EAU DE TOILETTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Baume Huile Corps 200ml ]]></title>
+<g:id>c10a85fb-070a-42b4-9b1e-e62a2402f6c9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel baume huile corps 200ml?c10a85fb-070a-42b4-9b1e-e62a2402f6c9 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Crème corps pour peaux très sèches - Nourrit intensément, répare, soulage les sensations d'irritations.</strong><br /><strong>Peaux très sèches et sensibles.</strong></p>
+<p>Ce baume corps fondant, au miel et huiles végétales précieuses, nourrit intensément, répare et soulage les sensations d'irritation. Sa texture fondante se transforme en une huile délicate au massage pour envelopper la peau et la réconforter, sans effet collant. Jour après jour, les peaux très sèches et sensibles r ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680015816</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e59fe993c3e2f16d1ecfdac59416eb13fd2917a27525f9c55c9db806b7851093 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Baume Lèvres Pot 15g ]]></title>
+<g:id>f46a822f-18ae-40ea-84da-7d016e8f9b4b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel baume lèvres pot 15g?f46a822f-18ae-40ea-84da-7d016e8f9b4b ]]></link>
+<g:price><![CDATA[ 799.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Butinez avec plaisir la formule mythique de ce Baume à Lèvres nourrissant aux trésors de la ruche (Miel de Lavande de Provence, Propolis, Cire d'abeille) pour réparer et adoucir les lèvres très sèches et abîmées. La générosité de sa texture fondante et son inimitable parfum naturel aux notes de pamplemousse et de citron en font un geste totalement addictif.</p>
+<p>100%* des femmes trouvent leurs lèvres nourries</p>
+<p>91%* des femmes trouvent que le baume a un ""effet pansement"" et que leurs ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680015809</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e188894857440624bd73b1a24080ac6bea27f6e9eb969e4ea45b57b1cc86618b ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Baume Visage Ultra-Reconfortant pot 50ml ]]></title>
+<g:id>f403136c-cf98-49cd-afe0-321eed50cbf1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel baume visage ultra-reconfortant pot 50ml?f403136c-cf98-49cd-afe0-321eed50cbf1 ]]></link>
+<g:price><![CDATA[ 2660.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Creme nourrissante visage - Nourrit, apaise, répare</strong><br /><strong>Peaux sèches et sensibles.</strong></p>
+<p>Cette crème visage onctueuse au Miel, Propolis et Huiles Précieuses nourrit intensément, apaise et répare la peau tout en la protégeant des agressions extérieures (vent, foid, ...). La peau retrouve souplesse et confort infini. Rugosités, rougeurs et sensations d'irritations et de tiraillement diminuent.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680019159</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/009edb6810e2dc54fc171d45f3fa15878a5716cdb48702e49332c105fd924401 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Crème Corps Ultra-Réconfortante 400ml ]]></title>
+<g:id>1436982b-5fdc-4a3b-bd8c-cbc00cbd5355</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel crème corps ultra-réconfortante 400ml?1436982b-5fdc-4a3b-bd8c-cbc00cbd5355 ]]></link>
+<g:price><![CDATA[ 2190.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Creme ultra-réconfortante pour le corps - Relipide, apaise, protège</strong><br /><strong>Peaux sèches et sensibles.</strong></p>
+<p>Cette crème pour le corps ultra-réconfortante nourrissante au Miel et Huiles végétales, relipide, apaise et protège des agressions extérieures (vent, froid, ...) les peaux sèches et sensibles. Sa texture veloutée pénètre rapidement sans effet gras et offre un confort longue durée 48h*. Immédiatement nourrie, la peau est plus douce et plus souple.</p>
+<p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680021770</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/49d50caac4fd114566a91536afcdfd28e64b096ce0afb1f8b127bdaba5908ff6 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Crème Mains Riche Cica 50 ml ]]></title>
+<g:id>46402847-873e-43fd-8446-803b9e47f301</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel crème mains riche cica 50 ml?46402847-873e-43fd-8446-803b9e47f301 ]]></link>
+<g:price><![CDATA[ 699.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Chouchoutez vos mains desséchées et abîmées grâce à cette CICA Crème, au Miel de Lavande de Provence et Centella Asiatica. Sa formule riche nourrit, apaise et répare tout en renforcant la barrière cutanée. Sa texture fondante, non grasse et non collante, glisse sur la peau pour un "effet pansement".</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680026171</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3dfc2f749148b9c496660327ed84cf740bf537b0c808f5722b7274162264cad7 ]]></g:image_link>
+<g:product_type><![CDATA[ CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Crème Mains et Ongles 30 ml + Stick Lèvres Hydratant 4 g ]]></title>
+<g:id>c5dd6278-682a-4851-8bcf-96ffecd314a0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel crème mains et ongles 30 ml + stick lèvres hydratant 4 g?c5dd6278-682a-4851-8bcf-96ffecd314a0 ]]></link>
+<g:price><![CDATA[ 490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Rêve de Miel Crème Mains et Ongles 30 ml + Stick Lèvres Hydratant 4 g est une offre découverte composée de 2 produits de soin de la gamme Rêve de Miel, pour les mains et les lèvres desséchées.</p>
+<p>- Nuxe Rêve de Miel Crème Mains et Ongles 30 ml est une crème qui répare, nourrit et protège la peau des mains desséchées. Sa texture soyeuse au doux parfum de miel enveloppe les mains de douceur sans effet gras.Sa composition contient :</p>
+<ul><li>du miel, nourrissant, qui prend soin de vo ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680029608</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2021cfdf595579abf3e3b2d693d02131e53b7478a22ecff8c50cb8296c57b676 ]]></g:image_link>
+<g:product_type><![CDATA[ CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Crème Mains et Ongles 50 ml ]]></title>
+<g:id>d68a30f8-cfdc-4392-af1e-d430bbb07c6e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel crème mains et ongles 50 ml?d68a30f8-cfdc-4392-af1e-d430bbb07c6e ]]></link>
+<g:price><![CDATA[ 630.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Rêve de Miel Crème Mains et Ongles 50 ml est une crème qui répare, nourrit et protège la peau des mains desséchées. Sa texture soyeuse au doux parfum de miel enveloppe les mains de douceur sans effet gras.<br />Sa composition contient :</p>
+<ul><li>du miel, nourrissant, qui prend soin de vos mains desséchées,</li>
+<li>des huiles végétales précieuses (avocat, amande douce, argan), relipidantes, qui préviennent le dessèchement cutané,</li>
+<li>de la vitamine E qui prévient le vieillissemen ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680010446</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/90e648c6213bd332a5a8eb70369a00637f0305deb24d0761367cdfc30968be54 ]]></g:image_link>
+<g:product_type><![CDATA[ CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Crème Mains et Ongles Lot de 2 x 50 ml ]]></title>
+<g:id>9f969d63-d00b-43fb-afd7-422c4e46ae3d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel crème mains et ongles lot de 2 x 50 ml?9f969d63-d00b-43fb-afd7-422c4e46ae3d ]]></link>
+<g:price><![CDATA[ 890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Réparez, nourrissez et protégez vos mains desséchées avec la Crème Mains et Ongles Rêve de Miel de NUXE. Soyeuse et non grasse, cette crème mains est enrichie en</p>
+<p>Miel, Tournesol, Huiles précieuses et Vitamine E. Elle permet de chouchouter les mains sèches et abîmées tout en les protégeant du vieillissement cutané prématuré. Jour</p>
+<p>après jour, les mains redeviennent douces et les ongles sont fortifiés. Cette Crème Mains et Ongles Rêve de Miel de NUXE un parfum miellé, doux et sucré ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680010798</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/521ea8ff314ec309cd01d673e47db0342443227df904b3ba570eb95b03b2774b ]]></g:image_link>
+<g:product_type><![CDATA[ CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Eau Savoureuse Parfumante 100ml ]]></title>
+<g:id>1f4fbda1-d114-4a50-98bf-9ec99687b78d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel eau savoureuse parfumante 100ml?1f4fbda1-d114-4a50-98bf-9ec99687b78d ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Nuxe Rêve de Miel Eau Savoureuse Parfumante 100ml est un délice parfumé aux notes de miel qui ne vous laissera pas indifférente.</span></p>
+<p>Ce parfum miellé est magnifié par la Fleur d’Oranger et un fond doux boisé de Santal et Fève Tonka.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680026263</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/30f87ca1aafa0302a21e86c85e28e9ebb63ed3235a199f294a946136fe97d175 ]]></g:image_link>
+<g:product_type><![CDATA[ PARFUM ET EAU DE TOILETTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Gel Lavant Surgras Éco-Recharge 400 ml ]]></title>
+<g:id>07734119-1188-4151-9f24-0912b4876820</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel gel lavant surgras Éco-recharge 400 ml?07734119-1188-4151-9f24-0912b4876820 ]]></link>
+<g:price><![CDATA[ 890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Rêve de Miel Gel Lavant Surgras Éco-Recharge 400 ml est un gel douche visage et corps qui nettoie, apaise et adoucit les peaux sèches et sensibles sans les dessécher. Au miel et au tournesol, onctueux et délicieusement miellé, il prend quotidiennement soin des peaux sèches et sensibles en respectant le film hydrolipidique.</p>
+<p>91% des ingrédients d'origine naturelle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680035371</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/be3382149c696aa90b319b1ab26ddf08c37661a3e3d2560d26c05e47d63746ba ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Gel Nettoyant Démaquillant Visage 200ml ]]></title>
+<g:id>591d5f35-e1ca-4f47-9c4b-1ddfcda43e71</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel gel nettoyant démaquillant visage 200ml?591d5f35-e1ca-4f47-9c4b-1ddfcda43e71 ]]></link>
+<g:price><![CDATA[ 1260.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">Apaise et Adoucit. Au Miel et Tournesol.</p>
+<p class="p1">Ce gel ambré et gourmand nettoie et démaquille en un seul geste, tout en respectant la peau grâce à ses tensio-actifs ultra-doux.</p>
+<p class="p1">Un régal des sens pour faire peau nette. </p>
+<p class="p1">Formulé sans savon, ce gel nettoyant démaquille tout en douceur.</p>
+<p class="p1">Des tensio-actifs ultra-doux dérivés du Tournesol nettoient et démaquillent tout en préservant l’équilibre de la peau.</p>
+<p class="p1" ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680004070</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ffcc7a1d7acba10ab01775b79c980eccd0bd2e164796e280f5c6c16578ec1dec ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Gel lavant Surgras Visage et Corps 400ml ]]></title>
+<g:id>937ebbb8-2104-4f47-97dc-73fef4432af0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel gel lavant surgras visage et corps 400ml?937ebbb8-2104-4f47-97dc-73fef4432af0 ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">Ce gel lavant visage et corps surgras, au Miel et Tournesol, onctueux et délicieusement miellé, prend soin quotidiennement des peaux sèches et sensibles en respectant le film hydro-lipidique.</p>
+<p class="p1">Il nettoie le visage et le corps sans dessécher. Une véritable parenthèse cocooning sous la douche.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680004063</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cd16020e5cf671e1add08f373f83525f4efea8700b1aec1486bf819d35e30521 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Gommage Nourrissant Corps 175ml ]]></title>
+<g:id>65635b40-5213-41b8-b960-22bee504caa1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel gommage nourrissant corps 175ml?65635b40-5213-41b8-b960-22bee504caa1 ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Soin gommant - nourrit et exfolie la peau</strong></p>
+<p>Ce gommage corps, au Miel, Cristaux de Sucre et Huiles Précieuses est un véritable soin 2 en 1 : il exfolie et nourrit la peau. Le grain de peau est affiné et la peau est nourrie, visiblement plus belle. Réel moment de plaisir, ce gommage séduit par son parfum miellé floral et sa texture baume en huile unique qui enveloppe la peau d'un voile protecteur nourrissant.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680010941</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bfea9037dad2e095508dc42dfd6371139b26c4d6648f3aa6adeda4ce5c7c23da ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Shampooing Solide 65g ]]></title>
+<g:id>34fac954-1684-4fe2-963a-23144ddc4c76</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel shampooing solide 65g?34fac954-1684-4fe2-963a-23144ddc4c76 ]]></link>
+<g:price><![CDATA[ 1090.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="panel panel-prod">
+<div id="prod-collapse1" class="panel-collapse collapse in">
+<div class="panel-body">
+<p>Retrouvez tout le confort de Rêve de Miel dans un shampooing solide qui enveloppe les cheveux de douceur grâce au miel de Provence et à l'huile précieuse de Cameline bio. Sa mousse généreuse se rince facilement et permet un démêlage facile. Un produit chouchou sans sulfate qui rendra vos cheveux souples et soyeux, tout en respectant votre cuir chevelu. Un geste pour vos cheveux ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680026270</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6ed04685c3fc3e54a7af53693f578f7fe95be3d3fbc88d152b6ad599c967270e ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Soin Lèvres au Miel 10ml ]]></title>
+<g:id>c6ea254f-6cb0-474b-9698-a514955185c5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel soin lèvres au miel 10ml?c6ea254f-6cb0-474b-9698-a514955185c5 ]]></link>
+<g:price><![CDATA[ 1189.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>oin lèvres au miel</span><br /><span>Effet glossy </span><br /><span>Embout mousse</span><br /><span>10 ml </span><br /><br /><span>Un soin au miel à l'effet glossy pour une hydratation maximale de vos lèvres. </span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680027901</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/50c7ee435e5c962396123e32f98077c8dea5c8e0063f41caec7f33c46f901a21 ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Stick Lèvres Hydratant Lot de 2 x 4 g ]]></title>
+<g:id>5e960275-8597-4112-8668-e6e758ab5fbf</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel stick lèvres hydratant lot de 2 x 4 g?5e960275-8597-4112-8668-e6e758ab5fbf ]]></link>
+<g:price><![CDATA[ 599.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Stick lèvres hydratant - hydrate, répare et protège</strong><br /><strong>Lèvres desséchées ou abîmées</strong></p>
+<p>Ce stick lèvres hydratant, au Miel et Tournesol, adoucit et assouplit les lèvres abimées ou desséchées à tout moment de la journée. Elles ne ressentent plus de tiraillements. De quoi avoir le sourire aux lèvres ! Format ultra-pratique.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680026225</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8a47056c84d0ff68f85de4a65e90c1b7893db6b23b5a93a13a01fbeefb5b1eff ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Miel Surgras Nettoyant 750ml ]]></title>
+<g:id>c56284a6-d880-497d-95c2-1b329d5c2864</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de miel surgras nettoyant 750ml?c56284a6-d880-497d-95c2-1b329d5c2864 ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Nuxe Rêve de Miel Surgras Nettoyant,</span> ce gel lavant visage et corps surgras, au Miel et Tournesol, onctueux et délicieusement miellé, prend soin</p>
+<p>quotidiennement des peaux sèches et sensibles en respectant le film hydro-lipidique.</p>
+<p>Il nettoie le visage et le corps sans dessécher.</p>
+<p>Une véritable parenthèse cocooning sous la douche.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680025891</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0a7ba046f728608b0747f392a4fefde34c3bae59a036b5a4b9d60e3ce14be855 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Thé Crème Raffermissante 200ml ]]></title>
+<g:id>c1e27137-24c1-4e75-a3c1-cad3b6633850</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de thé crème raffermissante 200ml?c1e27137-24c1-4e75-a3c1-cad3b6633850 ]]></link>
+<g:price><![CDATA[ 3290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Cette crème délicatement parfumée, aussi ferme avec la peau que tendre avec l’esprit, contient un duo raffermissant associant le Thé vert et un extrait de Seigle. Sa texture « effet glaçon » pénètre rapidement au contact de la peau, procurant un délicieux frisson et une sensation tonifiante immédiate.</p>
+<p> </p>
+<p>90%* des femmes considèrent leur peau hydratée.</p>
+<p>Au fil des jours, la peau retrouve visiblement son élasticité et sa fermeté. Après un mois d'utilisation, elle est lissée,  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680021992</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fdf87e10cd41c91ff96005484b270623a966adb6205a137954a7908abb29699a ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Thé Déodorant Roll-on 50ml ]]></title>
+<g:id>1f452b3e-0b0b-4b69-8ad7-8d9c52147fa6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de thé déodorant roll-on 50ml?1f452b3e-0b0b-4b69-8ad7-8d9c52147fa6 ]]></link>
+<g:price><![CDATA[ 550.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce déodorant roll-on est doté d’une technologie « intelligente » : un trio d'ingrédients actifs s'adaptant aux besoins de la peau pour prévenir efficacement des odeurs pendant 24H*.</p>
+<p>Sa texture fluide au parfum ressourçant de Thé vert pénètre rapidement sans fini collant et laisse sur la peau une sensation de fraîcheur, sans traces sur les vêtements.  <span> </span></p>
+<p>Sa formule contient :</p>
+<p>- Extrait de Thé vert : ingrédient millénaire pour adoucir et prendre soin de la peau. ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680021978</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d9d54ea5c43aac2596959a6c02d12b96f403f27713b7a2af1e21437106313a05 ]]></g:image_link>
+<g:product_type><![CDATA[ DEODORANT  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Thé Eau Exaltante Parfumante 30ml ]]></title>
+<g:id>696dc489-115a-41f8-8ff7-9bd290669751</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de thé eau exaltante parfumante 30ml?696dc489-115a-41f8-8ff7-9bd290669751 ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Cette eau parfumante, condensé de bonne humeur aux vertus <span>vivifiantes</span> et ressourçantes, booste les sens grâce à sa fragrance addictive mariant des notes de Rhubarbe, Thé Vert et Herbes fraîches. Son sillage pétillant procure une sensation de fraîcheur, enveloppant la peau tel un halo de bien-être.</p>
+<p> </p>
+<p>91%* des femmes ressentent la sensation de fraîcheur et  trouvent leur peau douce. </p>
+<p> </p>
+<p>*Test consommateurs  – 63 volontaires. % de satisfaction immédiatemen ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680022159</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b69d66711b1dcf6815430573c49b80575b4a32797865c74432d92dc4a5c902d6 ]]></g:image_link>
+<g:product_type><![CDATA[ Idées Cadeaux > PARFUM ET EAU DE TOILETTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Thé Gelée de Douche Ressourçante 750 ml ]]></title>
+<g:id>7ececd02-9753-45ad-b78b-eb913238159a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de thé gelée de douche ressourçante 750 ml?7ececd02-9753-45ad-b78b-eb913238159a ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Découvrez la gelée de douche ressourçante Rêve de Thé en édition limitée grand format ultra-généreux.<br />Ce gel douche Nuxe ultra-sensoriel délicieusement parfumé aux notes fraiches de thé vert nettoie la peau en délicatesse pour la laisser douce et confortable.<br />Sa texture fondante se transforme en une fine mousse rinçable facilement. Un moment hors du temps pour le corps et l’esprit.<br />Un geste pour votre peau avec 95% d'ingrédients d'origine naturelle.<br />Flacon en plastique 100 ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680038884</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/12104f8df3a9f4ffc29020685c81200613220cbe5668e0aee6cff2e2b03899c6 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Thé Gommage Revitalisant 150ml ]]></title>
+<g:id>ce9c97d2-96cd-4ca2-ba3f-cffed32b4e79</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de thé gommage revitalisant 150ml?ce9c97d2-96cd-4ca2-ba3f-cffed32b4e79 ]]></link>
+<g:price><![CDATA[ 1590.00 EUR ]]></g:price>
+<description><![CDATA[ <div>Ce surprenant gommage exfoliant, cocktail ultra-frais d’extrait de Thé vert et de grains de Bambou, libère la peau des cellules mortes pour la laisser ressourcée et vivifiée, comme neuve. Sa texture granité et son irrésistible parfum aux notes de thé vert; rhubarbe et d'herbes fraiches réjouissent les sens, pour vous procurer une ressourçante sensation de fraîcheur.</div>
+<div> </div>
+<div>91%* des femmes trouvent leur peau lissée et vivifiée. Pour 86%** d'entre elles, elle est "comme neuve ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680022005</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/aa31d4f8393f8f70b40534e212e4e3d898277c01173257ea3221245751309f67 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Rêve de Thé Lait Hydratant corps 400ml ]]></title>
+<g:id>4dcbcfe9-d63e-4b43-b32d-8e9c41100bbd</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-rêve de thé lait hydratant corps 400ml?4dcbcfe9-d63e-4b43-b32d-8e9c41100bbd ]]></link>
+<g:price><![CDATA[ 1650.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce lait soyeux va vous faire fondre par sa douceur irrésistible : le Thé vert s’associe à un complexe de sucres 100% d’origine naturelle pour diffuser une hydratation 24H*. Sa texture fraîche et fondante pénètre rapidement, pour pouvoir s’habiller tout de suite. Son subtil parfum apporte à vos sens le kick de vitalité dont ils ont besoin au quotidien.</p>
+<p> </p>
+<p>97%** des femmes trouvent leur peau douce et confortable et 89%** remarquent qu’il permet de s’habiller rapidement après l’appl ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680025105</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/edf61de9e5004c923933a586c3d9351be203f746fe1882cd95b129edc417800f ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe SUN - Lait Fondant Haute Protection SPF50 150ml + Shampooing Douche Après-Soleil 100ml Offert ]]></title>
+<g:id>bc18d0d8-ba9e-4d77-8c34-0f4f6e4e6390</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun - lait fondant haute protection spf50 150ml + shampooing douche après-soleil 100ml offert?bc18d0d8-ba9e-4d77-8c34-0f4f6e4e6390 ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <span>Lait Fondant Haute Protection SPF50 Sun de Nuxe</span> est un soin formulé pour protéger la peau des rayons du soleil, l'hydrater profondément, et prévenir le photo-vieillissement cutané prématuré ainsi que l'apparition des taches. Ce lait contient des extraits naturels de Riz, Romarin et de la vitamine E : dont leur pouvoir antioxydant offre une protection cellulaire anti-âge à la peau, de l'extrait de Jacinthe d’Eau (brevet FR) pour prévenir la déshydratation et de l'extrait de Car ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680031496</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/20883ec8519143036bbe66dc5f523dfbe3c99f2b52c1d8b3f10baf31327797be ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun - Huile Solaire Bronzante SPF50 150ml + Lait Fraîcheur Après-Soleil 100ml Offert ]]></title>
+<g:id>9893231b-056c-4c21-95c6-caa330c54bb0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun - huile solaire bronzante spf50 150ml + lait fraîcheur après-soleil 100ml offert?9893231b-056c-4c21-95c6-caa330c54bb0 ]]></link>
+<g:price><![CDATA[ 1590.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Contenu du duo : </span>Huile Solaire Bronzante SPF50 150ml, Lait Fraîcheur Après-Soleil 100ml.</li>
+<li><span>Pour qui :</span> Tous les types de peaux.</li>
+<li><span>Résultats beauté :</span> La peau est protégée des rayons UVA/UVB et le bronzage prolongé.</li>
+<li><span>On aime : </span>Leur parfum aux notes d'Orange douce, de Fleur de Tiaré et de Vanille.</li>
+</ul><p> </p>
+<p>L'<span>Huile Solaire Bronzante SPF50 Nuxe Sun</span> protège visage et corps des rayons du soleil to ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034961</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/72e55cfe253e3e613d081c82f56a3e79c7ee36e26b5409bc9ff5524ad506bfff ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun - Spray Solaire Délicieux SPF50 150ml + Shampooing Douche Après-Soleil 100ml Offert ]]></title>
+<g:id>8f22c22b-e72a-4630-9c7b-dacc0676a350</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun - spray solaire délicieux spf50 150ml + shampooing douche après-soleil 100ml offert?8f22c22b-e72a-4630-9c7b-dacc0676a350 ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Contenu du duo :</span> Spray Solaire Délicieux SPF50 150ml, Shampooing Douche Après-Soleil 100ml Offert.</li>
+<li><span>Pour qui :</span> Tous les types de peaux.</li>
+<li><span>Résultats beauté :</span> La peau est protégée des rayons UVA/UVB et le bronzage prolongé.</li>
+<li><span>On aime :</span> Leur parfum aux notes d'Orange douce, de Fleur de Tiaré et de Vanille.</li>
+</ul><p> </p>
+<p>Le <span>Spray Solaire Délicieux SPF50 Nuxe Sun</span> vous aide à protéger visage et corps ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034992</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e0ecf15a849591cb2f540c4526083169a1fa637ee2db442fcdd746549b67d0a6 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Crème Délicieuse Visage Haute Protection SPF30 50ml ]]></title>
+<g:id>a5140b82-9422-442d-ac25-4e5b5b508e00</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun crème délicieuse visage haute protection spf30 50ml?a5140b82-9422-442d-ac25-4e5b5b508e00 ]]></link>
+<g:price><![CDATA[ 1250.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Sun Crème Délicieuse Visage Haute Protection SPF 30 50 ml est un soin solaire glamour qui protège la peau contre les UVA et UVB.<br /><br />En effet, grâce à sa formule aux fleurs d'eau et de soleil, cette crème délicieuse au parfum de vacances protège les cellules de la peau contre les rayons nocifs du soleil, responsables du vieillissement cellulaire et active l'apparition du bronzage naturel tout en hydratant et en apaisant la peau.<br /><br />Hydratée et protégée, la peau se pare d'u ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680005848</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/54b8f575f0d3e5aa822d285adb99b9d90a6fa17e79dbb3d2428280e71b7ad0a2 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Crème Fondante Visage SPF 50 50ml ]]></title>
+<g:id>9a300c40-91dc-405b-be32-2e3cc26af19a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun crème fondante visage spf 50 50ml?9a300c40-91dc-405b-be32-2e3cc26af19a ]]></link>
+<g:price><![CDATA[ 1330.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Sun Crème Fondante Visage SPF 50 50 ml est une haute protection solaire au parfum de vacances qui garantit un bronzage 100% naturel et glamour.<br /><br />Elle protège des UVA et UVB, du photovieillissement cutané prématuré, limite l'apparition des taches, hydrate grâce à la Jacinthe d'Eau et apaise grâce à la Fleur de Soleil de Kau Pe. La peau est protégée, et le hâle sublimé durablement.<br /><br />Photostable. Sans alcool. Non comédogène. Sans paraben.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680006999</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f2639bf83feac8c1b3927544796a7cdfe1fe755f543c68deb6014f14ca4a4882 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Eau Délicieuse 30ml ]]></title>
+<g:id>2f0cdba1-6c07-477d-8b96-b7e6c0ec7f3b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun eau délicieuse 30ml?2f0cdba1-6c07-477d-8b96-b7e6c0ec7f3b ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Eau de toilette fraîche aux notes solaires</strong><br /><strong>Toutes les peaux</strong></p>
+<p>Inspirée du parfum addictif des soins NUXE Sun, l'Eau Délicieuse Parfumante ravive l'esprit de l'été.<br />Ses harmonies pétillantes d’orange douce et de petit grain éblouissent. On s’envole vers les tropiques dès que se révèlent les nuances caressantes de coco et de fleurs de Tiaré, couronnées par les accords lascifs de vanille et de muscs.<br />La nouvelle Eau Délicieuse Parfumante va e ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680015342</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e0d0d13a2bfa3e6f4993291fd68208506a3a2507399924a060372f0d5eef2cc2 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Eau Délicieuse Parfumante Vaporisateur 100 ml ]]></title>
+<g:id>b8fbac67-753a-44c9-ad5b-a4452a8e67e0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun eau délicieuse parfumante vaporisateur 100 ml?b8fbac67-753a-44c9-ad5b-a4452a8e67e0 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Sun Eau Délicieuse Parfumante Vaporisateur 100 ml est une eau parfumante qui s'inspire des douces notes des soins Nuxe Sun.<br /><br />Cette eau parfumante contient des notes fraîches d'orange douce, de noix de coco et tiaré associées au parfum de vanille et de muscs. Laissez vous transporter par cette délicieuse fragrance qui vous habillera d'un parfum frais et envoûtant.<br /><br />Son subtil parfum vous permet de le porter en été comme en hiver pour ensoleiller chaque saison !<br /><b ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680010125</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/329c2d94616e45c19f0023b24b72a9c8677af1471a98c8bfd82c2245ba56cd8a ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Eau Délicieuse Parfumante Vaporisateur 100 ml + Shampoing Douche Après-Soleil 200 ml Offert ]]></title>
+<g:id>bb87c829-a713-4c18-b0eb-01377bd1061e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun eau délicieuse parfumante vaporisateur 100 ml + shampoing douche après-soleil 200 ml offert?bb87c829-a713-4c18-b0eb-01377bd1061e ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Sun Eau Délicieuse Parfumante Vaporisateur 100 ml + Shampoing Douche Après-Soleil Corps et Cheveux 100 ml Offert est un duo de produits ensoleillé pour respirer l'été.</p><p>- Nuxe Sun Eau Délicieuse Parfumante Vaporisateur 100 ml est une eau parfumante qui s'inspire des douces notes des soins Nuxe Sun. Elle contient des notes fraîches d'orange douce, de noix de coco et tiaré associées au parfum de vanille et de muscs, un parfum frais et envoûtant.<br>91% des ingrédients sont d'origine n ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680039638</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/90929beaa9e407ba114e1f0cf35b254caebfd289eb8421ad4a498524d379616f ]]></g:image_link>
+<g:product_type><![CDATA[ PARFUMERIE > SHAMPOOING ET SOINS CAPILLAIRES > PARFUM ET EAU DE TOILETTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Fluide Léger Haute Protection SPF50 50 ml ]]></title>
+<g:id>f7454a01-ce63-42d6-96bf-68907929ff31</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun fluide léger haute protection spf50 50 ml?f7454a01-ce63-42d6-96bf-68907929ff31 ]]></link>
+<g:price><![CDATA[ 1330.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Sun Fluide Léger Haute Protection SPF50 50 ml est un fluide visage au parfum de vacances, qui garantit un bronzage 100% glamour en toute sérénité. Il hydrate, protège des UVA/UVB et du photo-vieillissement cutané prématuré et limite l'apparition des taches. Sa texture légère et non collante pénètre rapidement pour un effet peau nue. Idéalement protégée, la peau est sublimée.</p>
+<p>Photostable.</p>
+<p>Non comédogène. Sans ingrédient d'origine animale.</p>
+<p>Fabriqué en France.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680022166</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d591df3bb877bd118ac664e04bcc369f817f39668f9f7b86d0ab0ce43e574974 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Huile Bronzante Visage et Corps SPF 30 150ml ]]></title>
+<g:id>06ded9b4-5a41-4698-9901-3b94649daacf</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun huile bronzante visage et corps spf 30 150ml?06ded9b4-5a41-4698-9901-3b94649daacf ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Sun Huile Bronzante Visage et Corps SPF 30 150 ml est une haute protection solaire aux fleurs d'eau et de soleil. Délicieusement parfumée, cette huile protège la peau des UVA et UVB, offrant aussi une protection cellulaire anti-âge. Elle hydrate la peau sans laisser de film gras : la peau est protégée et confortable et le bronzage est sublimé.<br /><br />Résiste à l'eau. Photostable. Sans alcool. Sans paraben. Non comédogène. Sans adjonction de conservateur.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680007019</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/66ad55c0d98fff6b6d40a80d70869c325e6b33f29eacf4d86acb6258139bf995 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Huile Bronzante Visage et Corps SPF10 Spray 150ml ]]></title>
+<g:id>d6565794-295e-4a21-a290-2b2ee76f1b7c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun huile bronzante visage et corps spf10 spray 150ml?d6565794-295e-4a21-a290-2b2ee76f1b7c ]]></link>
+<g:price><![CDATA[ 1590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L'huile bronzante pour le visage et le corps de Nuxe protège faiblement et offre un bronzage sublime.</p>
+<p>Délicatement parfumée aux fleurs d'eau et de soleil, cette huile résiste à l'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680005862</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ec56277d3760a0f6808312a3a0e5780a0f725d17f3f81081ab494e03573d0bc9 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Huile Lactée Capillaire 100 ml ]]></title>
+<g:id>6c9f8db0-9741-4310-90f9-27376574d88f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun huile lactée capillaire 100 ml?6c9f8db0-9741-4310-90f9-27376574d88f ]]></link>
+<g:price><![CDATA[ 1130.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Sun Huile Lactée Capillaire 100 ml est un soin multi protection UV, sel et chlore, destiné aux cheveux exposés au soleil.<br />Cette huile hydrate et répare les cheveux, protège leur couleur et offre un fini naturel sublime.</p>
+<p>87% des ingrédients sont d'origine naturelle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680025341</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2a41f43fee19fa56f705e5f4640406a087287be79dfb302943184efc6ac152e7 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Huile Solaire  SPF30 150 ml + Lait Fraîcheur Après-Soleil 100 ml Offert ]]></title>
+<g:id>9561b8be-c292-4a3e-8e80-84c47b82b294</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun huile solaire  spf30 150 ml + lait fraîcheur après-soleil 100 ml offert?9561b8be-c292-4a3e-8e80-84c47b82b294 ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <p></p>
+<div id="kurato_extension_modal"></div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034954</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4fcb11f8c01256b8b277e7de4d2213b35b1c2e747d0b08ed17ab4e57e7a1d9a1 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Huile Solaire Or Visage et Corps Gold SPF50 150 ml ]]></title>
+<g:id>cfc62e4b-e159-4495-854a-6a493c5b51da</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun huile solaire or visage et corps gold spf50 150 ml?cfc62e4b-e159-4495-854a-6a493c5b51da ]]></link>
+<g:price><![CDATA[ 2550.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Sun Huile Solaire Or Visage et Corps Gold SPF50 150 ml est une très haute protection solaire irisée, qui vient&nbsp;protéger votre peau des rayons du soleil tout en la sublimant d'un irrésistible éclat doré.</p><p>Cette formule offre une protection large spectre contre les UVA/UVB et la lumière bleue grâce à un système filtrant breveté exclusif. Elle assure une protection cellulaire anti-âge renforcée et prévient l'apparition des taches.<br>Cette huile convient à toutes les peaux, et hyd ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680042003</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1cca9321f9b37baa4addccc9a25e4368f3cca793ba3c869cddf4013afb5fd38e ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Lait Après-Soleil Visage Corps 400ml ]]></title>
+<g:id>59b77061-0d4a-4116-97fc-ad440154497e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun lait après-soleil visage corps 400ml?59b77061-0d4a-4116-97fc-ad440154497e ]]></link>
+<g:price><![CDATA[ 1590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Lait après-soleil visage et corps - prolonge le bronzage.</strong><br /><strong>Toutes peaux.</strong></p>
+<p>Ce soin Après-Soleil Visage et Corps, aux Fleurs d’Eau et de Soleil, répare, hydrate, satine et prolonge le bronzage de 2 semaines*. Sa texture fraiche procure une sensation immédiate de confort et d'apaisement. Parfum renversant aux notes d'Orange Douce, Fleurs de Tiaré et Vanille.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680018961</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4eaaa32042a562166c5cc9c1806d810a655567391432e2a53048a05506fa4e5b ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Lait Délicieux Visage et Corps SPF 30 150ml ]]></title>
+<g:id>db1ae840-5531-42d2-a52e-f55392948ee2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun lait délicieux visage et corps spf 30 150ml?db1ae840-5531-42d2-a52e-f55392948ee2 ]]></link>
+<g:price><![CDATA[ 1599.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Sun Lait Délicieux Visage et Corps SPF 30 150 ml est une haute protection solaire aux fleurs d'eau et de soleil. Délicieusement parfumé, ce lait protège la peau des UVA et UVB, offrant aussi une protection cellulaire anti-âge. Il hydrate la peau sans laisser de film blanc : la peau est protégée et confortable et le bronzage est sublimé.<br /><br />Résiste à l'eau. Photostable. Sans alcool. Sans paraben. Non comédogène.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680007002</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/36c20437fce826b62fa53badcfdafa520ea3770049dad5362c618eb6de2eefbb ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Mousse Autobronzante Hydratante 150 ml ]]></title>
+<g:id>26e7ae26-2dd7-45f2-8a65-30044ad53f36</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun mousse autobronzante hydratante 150 ml?26e7ae26-2dd7-45f2-8a65-30044ad53f36 ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Sun Mousse Autobronzante Hydratante 150 ml est une mousse qui procure un hâle doré progressif sans laisser de traces. Il est idéal pour ceux et celles qui souhaitent sublimer leur teint sans risque de dommages causés par le soleil.</p>
+<p>Enrichie en DHA à l'action auto-bronzante et en acide hyaluronique hydratant, cette mousse prend soin de la peau tout en permettant d'obtenir un bronzage progressif et naturel dès la première application.</p>
+<p>Cette mousse légère et aérienne glisse fa ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680038914</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/daee28287085e56196bad3972f43fd9ea7ece7b18364080bebcf06908efd16fd ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Shampoing Douche Après-Soleil 200 ml ]]></title>
+<g:id>4e17c272-ea58-41d9-8d86-198169a8eb12</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun shampoing douche après-soleil 200 ml?4e17c272-ea58-41d9-8d86-198169a8eb12 ]]></link>
+<g:price><![CDATA[ 790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le shampoing douche après soleil Nuxe est un produit complet, qui propose de s’occuper de vos cheveux et de votre corps en un seul geste. Ce shampoing gel douche Nuxe sun est destiné à éliminer le sable, le chlore et le sel accumulés pendant votre journée de vacances. Il permet d’obtenir des cheveux doux et une peau soyeuse en un clin d’oeil. Un 2 en 1 riche en fleurs d’eau et de soleil qui hydrate et laisse un doux parfum après la douche. Cet après soleil Nuxe apaise les sensations d’inconfo ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680008726</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b10be1677a534029f740c38cc57a200e6e5f73bf02427e33e101c3456ef89288 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Shampoing Douche Après-Soleil Corps et Cheveux 750 ml ]]></title>
+<g:id>d348c2fb-2339-417b-996e-8710d986e39f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun shampoing douche après-soleil corps et cheveux 750 ml?d348c2fb-2339-417b-996e-8710d986e39f ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Sun Shampoing Douche Après-Soleil Corps et Cheveux 750 ml est un shampoing douche après-soleil aux fleurs d'eau et de soleil qui rafraîchit et élimine les filtres UV, le sel, le chlore et le sable.<br>Il nettoie sans dessécher, pour laisser la peau douce, les cheveux légers et brillants.</p><p>Format en édition limitée.</p><p>Formule facilement biodégradable. Sans ingrédient d'origine animale.<br>95% des ingrédients sont d'origine naturelle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680038723</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2fb09d72f3a812e99101d1793b419155906324a21417b628887aaabd2115bebe ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Spray Solaire Délicieux SPF30 Visage et Corps 150ml ]]></title>
+<g:id>dc77f500-9a87-4924-8d8f-60ebbe988002</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun spray solaire délicieux spf30 visage et corps 150ml?dc77f500-9a87-4924-8d8f-60ebbe988002 ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Pour qui :</span> Tous les types de peaux.</li>
+<li><span>Résultats beauté :</span> La peau est protégée des rayons UVA/UVB, hydratée et le bronzage sublimé.</li>
+<li><span>Actifs :</span> 3 Filtres Organiques, Extrait de Riz, Extrait de Romarin, Extrait de Caroube.</li>
+<li><span>Le + :</span> Le système innovant de pompe ON/OFF du flacon a permis de retirer les capuchons en plastique afin d'être plus respectueux de l'environnement.</li>
+</ul><p> </p>
+<p>Le <span>Spray Solaire Dél ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680032646</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b2d4ae3b2319faf2d47f6e3982598b6492e82c9f067618956e0f2daf1c73ac3c ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Spray Solaire Visage et Corps Haute Protection SPF50 150ml ]]></title>
+<g:id>990308ab-c386-44f7-bea9-6da4df93a8a2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun spray solaire visage et corps haute protection spf50 150ml?990308ab-c386-44f7-bea9-6da4df93a8a2 ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce spray solaire SPF50 vous aide à protéger visage et corps des rayons du soleil et du photo-vieillissement prématuré de la peau, pour prévenir l'apparition des taches.</p><p>Résistante à l'eau et à la transpiration, sa formule est idéale pour vos activités sportives.</p><p>Vaporisez en un clin d'oeil sa texture fluide qui fond avec sensorialité sur votre peau sans laisser de film blanc.</p><p>Son parfum d'évasion aux notes d'Orange douce, de Tiaré et de Vanille est une irrésistible invitatio ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680012525</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4f6131116d13713b402ae9f5407511e8b61a18cc7209fd35fa66e5141ab8ff6f ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sun Trousse Mes Indispensables Haute Protection Solaire ]]></title>
+<g:id>e3013e34-e3a1-4cab-8f61-d5dce126c97a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sun trousse mes indispensables haute protection solaire?e3013e34-e3a1-4cab-8f61-d5dce126c97a ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Sun Trousse Mes Indispensables Haute Protection Solaire est une trousse de voyage rassemblant deux produits solaires haute protection essentiels et un après-soleil rafraîchissant. Compacte et pratique, cette trousse vous permet de profiter pleinement du soleil en toute tranquillité, en assurant une protection efficace et un apaisement après l'exposition. Tous trois sont parfumés de notes d'orange douce, de fleur de tiaré et de vanille.</p>
+<p>- Nuxe Sun Crème Solaire Fondante Visage SPF5 ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680039676</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dcc8b57183c8c815a7a1036a3bf19ac1eeab6a5a2ec8c40a3ce56d14caf3ae37 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Super Sérum [10] 30 ml ]]></title>
+<g:id>f7b49a80-cf31-4837-9e7c-8d3301db38b0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-super sérum [10] 30 ml?f7b49a80-cf31-4837-9e7c-8d3301db38b0 ]]></link>
+<g:price><![CDATA[ 6350.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Super Sérum [10] 30 ml est un sérum à l'acide hyaluronique qui agit sur la correction des rides, la fermeté, les taches.</p>
+<p>Ce sérum à l'acide hyaluronique naturel est infusé de milliers de micro-billes d'huiles végétales fractionnées. Il stimule les mécanismes de jeunesse de la peau pour une extraordinaire efficacité anti-âge.<br />Dès les premières gouttes, la peau est lissée, repulpée, lumineuse. En quelques semaines, les rides et ridules sont estompées, la peau est progressivemen ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680023323</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8e7d8674b2c71ba17f74a03481d32d42635f124a39c32118a3157e5c683040d9 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Super serum 10 yeux 15 ml ]]></title>
+<g:id>c9577400-9014-4459-bc47-bc038f19c473</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-super serum 10 yeux 15 ml?c9577400-9014-4459-bc47-bc038f19c473 ]]></link>
+<g:price><![CDATA[ 4790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Super Serum [10] Yeux : le regard parait 10 ans plus jeune (1).</p>
+<p>NUXE décline la puissance anti-âge de Super Sérum [10] aux besoins spécifiques du contour de l'oeil. Sa formule à l'Acide Hyaluronique et à la Caféine Végétale est infusée de milliers de micro-billes d'Huiles Végétales fractionnées. Un sérum concentré d'éfficacité anti-âge extraordinaire pour une correction 360° du regard : rides, cernes, poches.</p>
+<p>Une efficacité anti-âge :</p>
+<p>-Les rides du lion et de la patte d'o ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680032578</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9adb824482a3ff6168f36fc8deb864c215d40c38a4bcaf46f8644c8ab90b4dc7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Super sérum le concentré anti âge 50 ml ]]></title>
+<g:id>ec75636a-9d00-4fb7-ad91-00a555ff2741</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-super sérum le concentré anti âge 50 ml?ec75636a-9d00-4fb7-ad91-00a555ff2741 ]]></link>
+<g:price><![CDATA[ 8250.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Super Serum [10] : la peau fonctionne comme si elle avait 10 ans de moins(1).</p>
+<p>Retrouvez notre sérum N°1 en format Deluxe 50ml : un format plus généreux et plus avantageux.</p>
+<p>Fusion des expertises du Laboratoire NUXE sur les huiles végétales et les soins anti-âge, Super Serum [10] est le soin essentiel de toutes les routines anti-âge, pour toutes les peaux. NUXE utilise pour la première fois dans ce concentré anti-âge universel une encapsulation micro-fluidique : sa formule à l'Aci ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680035104</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a0c345b0ad04ab4449a1b14dc43b954f6ece43601ec045a66008c52e19ce6929 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sweet Lemon  Crème Mains 50ml ]]></title>
+<g:id>ff145f39-2586-49cf-a328-a8ba1dc366e4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sweet lemon  crème mains 50ml?ff145f39-2586-49cf-a328-a8ba1dc366e4 ]]></link>
+<g:price><![CDATA[ 630.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Enveloppez vos mains d’une douceur gourmande grâce à cette Crème Mains hydratante BIO** &amp; Vegan à l’irrésistible parfum citron meringué.</p>
+<p>Sa texture fondante au parfum gourmand adoucit et protège les mains sèches des agressions extérieures (vent, froid, frottements, lavages excessifs…) sans effet gras ni collant. </p>
+<p>Les mains sont immédiatement hydratées, apaisées et confortables pour 100% des volontaires***. </p>
+<p>La peau est plus souple, plus lisse, les zones de sécheresse  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034725</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/da1592c6f767af79c123fb8a0cd2c79cb4d08ab7d644d711f686764beb7a3e73 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique > CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sweet Lemon Baume Lèvres Bio 15g ]]></title>
+<g:id>25e535d3-3359-43dd-91cc-602f3c9d0655</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sweet lemon baume lèvres bio 15g?25e535d3-3359-43dd-91cc-602f3c9d0655 ]]></link>
+<g:price><![CDATA[ 799.00 EUR ]]></g:price>
+<description><![CDATA[ <ul>
+<li><span>Pour qui :</span> Les lèvres sèches ou fragilisées.</li>
+<li><span>Résultats beauté :</span><span> Les lèvres sont hydratées et protégées.</span></li>
+<li><span>Actif phare :</span><span> Huile de Tournesol Bio.</span></li>
+<li><span>On aime :</span><span> Sa texture fondante au parfum citron meringué !</span></li>
+</ul>
+<p> </p>
+<p>Le <span>Baume Lèvres Sweet Lemon de Nuxe</span> hydrate, adoucit et protège vos lèvres au quotidien.</p>
+<p>Craquez pour ce baume lèvres hydratant <s ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034718</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4ee25ef7301f4d99fcf1ebd21d8905d4d429197a9cbe80badc36c15d2b260920 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > STICK LEVRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sweet Lemon Duo Gourmand Mains et Lèvres  ]]></title>
+<g:id>0899c59e-c5a6-46ab-868c-b45c54d6b91a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sweet lemon duo gourmand mains et lèvres ?0899c59e-c5a6-46ab-868c-b45c54d6b91a ]]></link>
+<g:price><![CDATA[ 490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Sweet Lemon <br />Duo gourmand<br />crème mains 30ml<br />+ stick lèvres 4g</p>
+<p>Craquez pour la gourmandise de ce duo Sweet lemon hydratant BIO* et VEGAN au parfum citron meringué, dans son étui 100% carton :</p>
+<p>- Crème mains et ongles Hydratante, Sweet lemon, 30ml<br />Cette Crème Mains hydratante au parfum gourmand adoucit et protège des agressions extérieures (vent, froid, frottements, lavages excessifs…). Sa texture fondante non grasse et non collante sublime les mains jusqu'au bou ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680039508</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9af11b7d1961fd95d42b3b8fb961ed191e5fd825158de4b4988cec07ed3cb624 ]]></g:image_link>
+<g:product_type><![CDATA[ CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sweet Lemon Gelée de Douche Gourmande 750 ml ]]></title>
+<g:id>dabae4c0-87ca-4df8-8c8b-b9016bf15bfa</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sweet lemon gelée de douche gourmande 750 ml?dabae4c0-87ca-4df8-8c8b-b9016bf15bfa ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nuxe Sweet Lemon Gelée de Douche Gourmande 750 ml est une base lavante végétale ultra-douce.</p>
+<p>Sa texture gel fondante se métamorphose en une fine mousse qui se rince facilement, offrant un moment de plaisir ultime à chaque utilisation. Enrichie en agents hydratants, elle nettoie la peau en douceur, la laissant souple, douce, et confortable.</p>
+<p>La gelée de douche est bien plus qu'un simple soin, c'est une véritable expérience sensorielle qui éveillera vos sens dès la première applica ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680040108</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/815c0ea2360b74bd78cb8bcee627a25a281c2af01ea3af0e25d3dafd8e6ac817 ]]></g:image_link>
+<g:product_type><![CDATA[ GEL DOUCHE > HYGIÈNE ET SOINS INTIMES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Sweet Lemon Stick Lèvres Hydratant Bio 4 g ]]></title>
+<g:id>76dd361f-5627-413a-ac9f-d0e98f4e1243</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-sweet lemon stick lèvres hydratant bio 4 g?76dd361f-5627-413a-ac9f-d0e98f4e1243 ]]></link>
+<g:price><![CDATA[ 460.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laissez-vous séduire par ce stick lèvres Nuxe Sweet Lemon hydratant Bio et Vegan !</p>
+<p>Au doux parfum de citron meringué, ce stick à lèvres offre une texture incroyablement douce et non collante.</p>
+<p>A chaque application, vos lèvres retrouvent confort et douceur.</p>
+<p>Dès la première utilisation, vos lèvres s'adoucissent et retrouvent toute leur beauté ! Elles sont non seulement embellies, mais également plus douces et mieux protégées contre les éléments extérieurs tels que le vent et ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680034732</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ce2d97539f59177c5a316b8b6a103127d723f6c36be7b7897eee750c5f6e06da ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > STICK LEVRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Trousse Mes Essentiels Pink ]]></title>
+<g:id>735adbe1-7252-41f4-b941-9996b8711748</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-trousse mes essentiels pink?735adbe1-7252-41f4-b941-9996b8711748 ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Plongez dans l'univers gourmand de la trousse My Pink Crush*, une sélection de nos indispensables Nuxe pour voir la vie en rose !<br><br>*Mes Essentiels rose&nbsp;<br><br><strong>Nettoyez, illuminez et sublimez votre peau avec :<br></strong>- <strong>VERY ROSE - EAU MICELLAIRE DÉMAQUILLANTE APAISANTE 100ML</strong><br>- <strong>CRÈME PRODIGIEUSE® BOOST - GEL-CRÈME MULTI-CORRECTION</strong> 15ML<br>- <strong>PRODIGIEUSE BOOST® - LE MASQUE DETOX ECLAT VITAMINÉ 75ML</strong><br>- <strong>HUILE P ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680047619</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fd64e128849a3fcd2f79c89b5f0af3a30d8480b5e1e215a17f5bdc817425ac9a ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Trousse Mes Indispensables Prodigieux ]]></title>
+<g:id>ae4e9968-06d1-4e9f-9560-9e3786ed5816</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-trousse mes indispensables prodigieux?ae4e9968-06d1-4e9f-9560-9e3786ed5816 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Découvrez la gamme Prodigieuse au parfum légendaire de Fleur d'Oranger, Magnolia et Vanille pour une expérience sensorielle inoubliable. La trousse Prodigieuse Nuxe comprend le Shampooing Brillance Miroir Hair Prodigieux (50ml), l'Huile Prodigieuse (30ml), l'Huile Prodigieuse Or (10ml), et l'Huile de Douche Prodigieuse (30ml).</p>
+<p>Tous ces soins sont formulés et fabriqués en France. Le corps de la trousse est conçu avec 17 % de lin et 75 % de plastique 100 % recyclé, tandis que la cale est ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680042881</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c187623c6e941865f521d0402c0f947854c4cfc012d3243bfd083641c02f4b4c ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Trousse Mes Indispensables Solaires ]]></title>
+<g:id>76c7e1cf-a260-4c1d-8328-ddc0b3906096</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-trousse mes indispensables solaires?76c7e1cf-a260-4c1d-8328-ddc0b3906096 ]]></link>
+<g:price><![CDATA[ 2190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Protégez et hydratez votre peau pendant l'été avec les incontournables Nuxe Sun !<br><br>Craquez pour nos formats voyage haute protection solaire à la texture irrésistible et au parfum envoutant :<br><br>- <strong>NUXE SUN Crème Solaire Fondante Très Haute Protection SPF50+</strong> 50ml – VISAGE. Résistante à l'eau.<br>- <strong>NUXE SUN Spray Solaire Délicieux Haute Protection SPF50</strong> 50ml – VISAGE &amp; CORPS. Résistant à l'eau.<br>- <strong>NUXE SUN Lait Fraîcheur Après-Soleil</str ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680042966</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bff50ac8115aa912ecdc8f6dd982e5f997e3a0804aa0a126e395087d46c0ac1f ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Trousse Mes indispensables voyage ]]></title>
+<g:id>b3ffbe01-9f63-4c0f-98bc-95eecb0b7286</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-trousse mes indispensables voyage?b3ffbe01-9f63-4c0f-98bc-95eecb0b7286 ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Evadez-vous en beauté et vivez des expériences sensorielles inoubliables avec cette trousse de voyage Nuxe :<br>- <strong>Very Rose Eau Micellaire Démaquillante Apaisante</strong> 50ml<br>- <strong>Crème Fraîche de beauté® 3-en-1, Crème Hydratante 48H*, Lait Démaquillant, Masque Repulpant</strong>&nbsp; 15ml<br>- <strong>Huile Prodigieuse®</strong> 10ml<br>- <strong>Gel lavant surgras visage et corps Rêve de Miel</strong> 15ml<br><br>*Hydratation 48h : Test instrumental - 10 volontaires<br><b ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680042959</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2734fcd11d21bcc269c5587907df871f7f9318073d45761cd9712b35d61b3d3f ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Eau Micellaire Apaisante 100 ml ]]></title>
+<g:id>67a6e7cf-11fe-44c5-8cf7-49433e348f68</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very eau micellaire apaisante 100 ml?67a6e7cf-11fe-44c5-8cf7-49433e348f68 ]]></link>
+<g:price><![CDATA[ 720.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Démaquillez et nettoyez en douceur votre visage et vos yeux avec l'Eau Micellaire Démaquillante Apaisante.<br><br>Formulée pour toutes les peaux, cette eau micellaire à l'extrait de rose est composée de 99% d'ingrédients d'origine naturelle. Sa formule fraiche démaquille et nettoie efficacement le visage, laissant la peau parfaitement douce, hydratée instantanément et apaisée.<br><br>La peau est démaquillée en douceur pour 100% des volontaires.⁽¹⁾</p><p>La peau est nettoyée en douceur et le m ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680043437</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bff5d43694556ed6aa334247ed4b2ff4fe51ba813b11629d82af2f4caffcab69 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Gelée Nettoyante 150 ml ]]></title>
+<g:id>a545c3a9-8aa0-4a1c-a4e5-963b06a79a1b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very gelée nettoyante 150 ml?a545c3a9-8aa0-4a1c-a4e5-963b06a79a1b ]]></link>
+<g:price><![CDATA[ 1430.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nettoyez tout en douceur votre visage avec la Gelée Nettoyante Apaisante !<br><br>Cette gelée douce nettoie et apaise, éliminant efficacement les impuretés sans sensation de dessèchement. Formulée pour toutes les peaux, elle laisse la peau irrésistiblement douce, confortable et apaisée.<br>La peau est parfaitement nettoyée, fraîche et douce pour 100% des volontaires.⁽¹⁾<br><br>La peau est apaisée et les sensations de tiraillement réduites pour 95% des volontaires.⁽¹⁾<br><br>Infusée d'un extra ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680043413</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/043c116f17f48651d32f67c1ce10dc1be4162d5856fd3b3801164f0b362688f7 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Rose Baume Levres 15g ]]></title>
+<g:id>57dd4539-6f76-40f9-8be0-337b2dbc8615</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose baume levres 15g?57dd4539-6f76-40f9-8be0-337b2dbc8615 ]]></link>
+<g:price><![CDATA[ 999.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Fondez de plaisir pour ce baume hydratant lèvres à l'extrait huileux de Rose, formulé avec 100% d'ingrédients d'origine naturelle.</p>
+<p>Sa texture fondante et son délicieux parfum aux notes vanillées addictives offrent un moment de plaisir gourmand.</p>
+<p>Incroyablement douces et illuminées d'un délicat éclat rosé, les lèvres sont sublimées, à croquer !</p>
+<p>Fini non collant - Idéal avant votre rouge à lèvres pour améliorer sa tenue et maintenir des lèvres lissées.</p>
+<p>100% des volont ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680027178</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f02d7decaf9250f4271340857169f28d14bbb7503da54d65e70f1f326fead8c8 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Rose Crème Mians 50ml ]]></title>
+<g:id>650d056a-a86f-4e7f-ba7a-002cae91aea4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose crème mians 50ml?650d056a-a86f-4e7f-ba7a-002cae91aea4 ]]></link>
+<g:price><![CDATA[ 599.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="primary" class="content-area">
+<div id="product-178851" class="product type-product post-178851 status-publish first instock product_cat-categ_powersante_177 has-post-thumbnail taxable shipping-taxable purchasable product-type-simple">
+<div class="aboutandtab">
+<div class="blocongletproduit">
+<div class="tabsdescription-content">
+<div id="tabsolo" class="active">La Crème Mains et Ongles Very Rose de Nuxe hydrate, apaise et protège les mains, même les plus sensibles.</div>
+<p></p>
+</div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680038860</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/219821a864a4bc09f461c7430712b772ceeddd082deb6af1a7cad7db483eb84a ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique > CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Rose Eau Micellaire Apaisante 200 ml ]]></title>
+<g:id>7d59637a-3f5d-4a7d-bba6-e63049f3c19e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose eau micellaire apaisante 200 ml?7d59637a-3f5d-4a7d-bba6-e63049f3c19e ]]></link>
+<g:price><![CDATA[ 1430.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Démaquillez et nettoyez en douceur votre visage et vos yeux avec l'Eau Micellaire Démaquillante Apaisante.<br><br>Formulée pour toutes les peaux, cette eau micellaire à l'extrait de rose est composée de 99% d'ingrédients d'origine naturelle. Sa formule fraiche démaquille et nettoie efficacement le visage, laissant la peau parfaitement douce, hydratée instantanément et apaisée.<br><br>La peau est démaquillée en douceur pour 100% des volontaires.⁽¹⁾</p><p>La peau est nettoyée en douceur et le m ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680043444</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/67ded4e144415b81b5928d84648605505cff5c7904b144bc3065b675fb707b63 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Rose Eau Micellaire Apaisante 3-en-1 200 ml ]]></title>
+<g:id>af06b37f-bb20-42fc-a861-f44013c6b1da</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose eau micellaire apaisante 3-en-1 200 ml?af06b37f-bb20-42fc-a861-f44013c6b1da ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Démaquille, nettoie et adoucit - Visage et yeux</strong><br /><strong>Toutes peaux, même sensibles.</strong></p>
+<p>Cette eau micellaire à l'Eau Florale de Rose démaquille et nettoie la peau du visage et les yeux, éliminant make-up et impuretés.<br />Enrichie d'un Complexe Skin-Respect 100% d'origine végétale, elle apaise la peau et respecte son équilibre.<br />Elle laisse la peau fraîche et douce et les sens enchantés par son délicat parfum de rose.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680022043</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7bce0c75fc38bcfaecf6bd00dee4324fc6005a5ed95fde2e5dad2cfecc7e0e8b ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Rose Eau Micellaire Apaisante 3-en-1 400 ml ]]></title>
+<g:id>422d2ab2-d243-46e8-b4e4-7f4e603bbe63</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose eau micellaire apaisante 3-en-1 400 ml?422d2ab2-d243-46e8-b4e4-7f4e603bbe63 ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Démaquille, nettoie et adoucit - Visage et yeux</strong><br /><strong>Toutes peaux, même sensibles.</strong></p>
+<p>Cette eau micellaire à l'Eau Florale de Rose démaquille et nettoie la peau du visage et les yeux, éliminant make-up et impuretés.<br />Enrichie d'un Complexe Skin-Respect 100% d'origine végétale, elle apaise la peau et respecte son équilibre.<br />Elle laisse la peau fraîche et douce et les sens enchantés par son délicat parfum de rose.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680022050</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ddc4477a8dcc68aba44e7096fa497212fbdf95f901f735dc3c7e72d0861cea17 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Rose Eau Micellaire Apaisante 400ml ]]></title>
+<g:id>a15235b5-3a47-4dc5-a7d7-92c584aa866c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose eau micellaire apaisante 400ml?a15235b5-3a47-4dc5-a7d7-92c584aa866c ]]></link>
+<g:price><![CDATA[ 1980.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Démaquillez et nettoyez en douceur votre visage et vos yeux avec l'Eau Micellaire Démaquillante Apaisante.<br><br>Formulée pour toutes les peaux, cette eau micellaire à l'extrait de rose est composée de 99% d'ingrédients d'origine naturelle. Sa formule fraiche démaquille et nettoie efficacement le visage, laissant la peau parfaitement douce, hydratée instantanément et apaisée.<br><br>La peau est démaquillée en douceur pour 100% des volontaires.⁽¹⁾<br><br>La peau est nettoyée en douceur et le  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680043451</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c1646e671219a1bbcd0f3cff18cd602f66a36fdde3838c3560ab8aff2a324762 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Rose Eau Micellaire Hydratante 3-en-1 200 ml ]]></title>
+<g:id>237834d8-d328-46a2-b388-580bba8da537</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose eau micellaire hydratante 3-en-1 200 ml?237834d8-d328-46a2-b388-580bba8da537 ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Démaquille, nettoie et adoucit - Visage et yeux</strong><br /><strong>Peaux sensibles, sèches à très sèches.</strong></p>
+<p>Cette eau micellaire à l'Eau Florale de Rose démaquille et nettoie la peau du visage et les yeux, éliminant make-up et impuretés. Enrichie d'un Complexe Skin-Respect 100% d'origine végétale, elle apaise les peaux sèches à très sèches et leur apporte encore plus de confort tout en respectant leur équilibre. Elle laisse la peau fraîche et douce et les sens enchant ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680022036</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b3d7a4680212c19b71007cad02a4b5d28c986dad32d0e97e589d8ac12fd5dd25 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Rose Eau Voluptueuse Parfumante 100ml ]]></title>
+<g:id>989aedb7-c124-41b3-b1e4-240369ad9135</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose eau voluptueuse parfumante 100ml?989aedb7-c124-41b3-b1e4-240369ad9135 ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laissez-vous envelopper par la fragrance pétillante et audacieuse de l'Eau Voluptueuse Parfumante. Ce parfum à la rose offre une immersion olfactive dans l'univers de Very Rose.</p>
+<p>Son sillage voluptueux enveloppe la peau d'un voile de douceur et de sensualité avec son accord de roses fraîche et délicate, sublimé de notes acidulées de fruits rouges.</p>
+<p> </p>
+<p>Eau de Parfum formulée et fabriquée en France.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680038846</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8722bf988ab49726a2636adc02b0f0b3eb607d8d47991a0e56ab15ffaeba6251 ]]></g:image_link>
+<g:product_type><![CDATA[ PARFUMERIE > Dermocosmétique > Idées Cadeaux > PARFUM ET EAU DE TOILETTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Rose Gel-Masque Nettoyant Ultra-Frais 150 ml ]]></title>
+<g:id>3aa4643f-ba81-46c3-8b89-37f338933e85</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose gel-masque nettoyant ultra-frais 150 ml?3aa4643f-ba81-46c3-8b89-37f338933e85 ]]></link>
+<g:price><![CDATA[ 1950.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Nettoie en profondeur, élimine les particules de pollution - Visage</strong><br /><strong>Toutes peaux, même sensibles</strong></p>
+<p>Ce gel-masque ultra-frais au délicat parfum de rose nettoie en profondeur et élimine les particules de pollution. Enrichie d'Eau Florale de Rose, sa gelée fondante ultra-sensorielle apporte une efficacité anti-pollution ainsi qu'une incroyable sensation de fraîcheur à la peau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680022081</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/57be7cde737574f50173e827f0fbea6328ccdfb3fc954fae103ad06b3728dad2 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Rose Gommage Visage 75 ml  ]]></title>
+<g:id>2441f38b-39c9-49f5-b884-453c1b3fcfb0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose gommage visage 75 ml ?2441f38b-39c9-49f5-b884-453c1b3fcfb0 ]]></link>
+<g:price><![CDATA[ 1760.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Exfoliez votre peau en douceur avec le Gommage Eclat Visage à l'extrait de rose et poudre de noyaux d'abricot.<br><br>Ce gommage en crème exfolie en douceur, éliminant les impuretés sans sensation de dessèchement ni de tiraillement. Développé pour tous les types de peau, même sensibles, il est composé de 98 % d’ingrédients d’origine naturelle. Sa formule douce révèle une peau nette, éclatante et sublimée, tout en affinant le grain de peau.<br>La peau est douce, nette et prête à recevoir des s ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680043406</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/23f24eb113cf5ab8c0acc56594b06a5656e60dc6c9045f88cc75218d0b9a2a62 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Rose Huile Délicate Démaquillante 150 ml  ]]></title>
+<g:id>5e5563ad-c340-4eee-9f0b-63e2a179bc47</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose huile délicate démaquillante 150 ml ?5e5563ad-c340-4eee-9f0b-63e2a179bc47 ]]></link>
+<g:price><![CDATA[ 1680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Éliminez le maquillage tenace et waterproof avec l'Huile Délicate Démaquillante.<br><br>Cette huile douce nettoie et démaquille parfaitement le visage, les yeux et les lèvres. Formulée pour tous les types de peaux, même sensibles, sa formule délicate révèle une peau irrésistiblement douce, souple et confortable après chaque utilisation.<br><br>La peau est démaquillée et nettoyée en douceur pour 100% des volontaires.⁽¹⁾<br>Le maquillage tenace, waterproof est éliminé pour 95%.⁽¹⁾<br>La peau es ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680043475</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/48ed92e837d26d5cd6c44888cbfdd778e5f2b0f0c3ca56a62146277ccfbe7192 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Rose Lait Corps Hydratant 400ml ]]></title>
+<g:id>1404fb21-1c5b-4243-8df9-81e1a409923b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose lait corps hydratant 400ml?1404fb21-1c5b-4243-8df9-81e1a409923b ]]></link>
+<g:price><![CDATA[ 1650.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Toute la délicatesse de la rose pour un moment apaisant !</p>
+<p>Ce lait soyeux pour le corps infusé à l'extrait huileux de rose offre un moment de délicatesse et de bien-être au quotidien. Sa texture fondante pénètre rapidement et permet de s'habiller immédiatement après l'application. En plus d'une hydratation 24h*, ce lait aux délicates notes de rose laisse un voile parfumé sur le corps tout au long de la journée.<br /><br />- La peau est apaisée, hydratée et confortable pour 100 %** des f ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680038891</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/87dee601b13f5b3f309d9f5fc5196ba7cb8423b0942aef4884c36b63007015a1 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Rose Lait Demaquillant Onctueux 200ml ]]></title>
+<g:id>b50b7f14-7e27-483f-8dfb-29dc35ea755b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose lait demaquillant onctueux 200ml?b50b7f14-7e27-483f-8dfb-29dc35ea755b ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Démaquillez délicatement votre visage avec le Lait Démaquillant Onctueux pour une peau hydratée et apaisée.<br><br>Ce lait irrésistible démaquille le visage et les yeux en douceur, élimine les impuretés et hydrate. Sa formule onctueuse laisse la peau douce, confortable et apaisée.&nbsp;<br>La peau est démaquillée en douceur et les impuretés éliminées pour 96% des volontaires.⁽¹⁾<br><br>La peau est hydratée pour 100% des volontaires.⁽¹⁾<br><br>Ce lait est composé de 95% d'ingrédients d'origine ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680043390</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8748f33e35eb5592b781ca7ccbd879dca9037b218fcd21fce3deb3692f5dba03 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Rose Mousse Nettoyante 150 ml  ]]></title>
+<g:id>bcef9a80-116a-4177-9854-82513a1580f1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose mousse nettoyante 150 ml ?bcef9a80-116a-4177-9854-82513a1580f1 ]]></link>
+<g:price><![CDATA[ 1430.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laissez-vous séduire par la <strong>Mousse Aérienne Nettoyante Very Rose de Nuxe</strong>, pour une peau parfaitement nettoyée et apaisée en toute douceur.</p><p>Sa texture onctueuse élimine les impuretés<strong> sans dessécher</strong>, offrant une sensation de confort immédiat.</p><p>Adaptée à toutes les peaux, même sensibles, elle laisse la peau<strong> douce, fraîche et éclatante</strong>.</p><p>100% des volontaires constatent une peau <strong>nettoyée tout en douceur et confortable</stro ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680043383</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ef1ef56fbbeaa9210b8cddf870be90aa7bc494edb4c9e125ec124358676f1823 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very Rose Sérum Lèvres Repulpant 8ml  ]]></title>
+<g:id>d7acbd54-b710-49b3-aac6-f63ba12fee13</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose sérum lèvres repulpant 8ml ?d7acbd54-b710-49b3-aac6-f63ba12fee13 ]]></link>
+<g:price><![CDATA[ 1560.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Craquez pour l'effet volume instantané et le fini gloss naturel du Sérum Lèvres Repulpant à l'acide hyaluronique.</span><br /><br /><span>Formulé avec 98% d'ingrédients d'origine naturelle et enrichi en acide hyaluronique naturel, ce sérum repulpe instantanément et hydrate les lèvres pendant 24h</span><span class="font6"><sup>(1)</sup></span><span class="font5">. Sa formule irrésistible et respectueuse des lèvres procure une addictive sensation de chaud/froid grâce à un extrait de pimen ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680043529</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6a514b52e2b0e472a44fa45810b583dfc38f5d1d2c726632438a91ee6d5c04e3 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > STICK LEVRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very rose Gelée de douche apaisante 750 ml ]]></title>
+<g:id>2bae7a42-f46c-4d2d-bade-a1298b5fed9d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose gelée de douche apaisante 750 ml?2bae7a42-f46c-4d2d-bade-a1298b5fed9d ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Toute la délicatesse de la rose pour un moment apaisant !</span><br /><br /><span>Infusée à l'eau florale de rose, cette gelée de douche ultra-douce nettoie la peau en délicatesse pour la laisser apaisée et confortable. Sa texture gel fondante à la fragrance délicate de Rose se transforme en une fine mousse rinçable facilement. Un moment apaisant pour le corps.</span><br /><br /><span>- 100 % des femmes trouvent leur peau nettoyée en douceur et apaisée*.</span><br /><span>- Pour 100 % d ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680038907</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7e1bfe3efa269b1beb0dc843e618b53fc7a600f729126ec44db2598aba153196 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very rose Huile Délicate Démaquillante 150 ml ]]></title>
+<g:id>d2305133-f09a-40b9-9d8e-168a3ff16d60</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose huile délicate démaquillante 150 ml?d2305133-f09a-40b9-9d8e-168a3ff16d60 ]]></link>
+<g:price><![CDATA[ 1590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Nettoie en douceur et apaise - Visage</strong><br /><strong>Toutes peaux, même sensibles.</strong></p>
+<p>Cette mousse fondante au doux parfum de rose nettoie en douceur et apaise, tout en respectant la peau.<br />Formulée à base d'Eau Florale de Rose, elle permet d'éliminer efficacement les impuretés sans dessécher la peau.<br />Sous l'effet de sa mousse aérienne onctueuse, la peau est fraîche et purifiée.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680022067</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f6975b0ca120b2c9bafa99be040029ba1ae3a537b94f2052c478e2c6b6e935f8 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Very rose Lotion Peeling Eclat Nuit 150 ml ]]></title>
+<g:id>c55f8c19-25c6-4c09-8cb5-8b0ad383acbe</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-very rose lotion peeling eclat nuit 150 ml?c55f8c19-25c6-4c09-8cb5-8b0ad383acbe ]]></link>
+<g:price><![CDATA[ 2195.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Micro-exfoliation quotidienne - Visage<br />Toutes peaux - Nuit.</p>
+<p>Inspirée des gestes experts, cette lotion peeling offre une exfoliation douce quotidienne, pour un effet peau neuve jour après jour.</p>
+<p>Composée d'Eau Florale de Rose et d'Acides de fruits, sa formule délicatement parfumée à la rose permet d'éliminer progressivement les cellules mortes de la peau.</p>
+<p>La peau est comme renouvelée, plus lisse, le teint éclatant et uniforme.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680022104</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/55257a2f36387a6559da35e56a7106c3c9c64f41714f67ce55b5c3614e62bc3a ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Zinc Power Gelée Nettoyante 150ml ]]></title>
+<g:id>e65b4ba2-5077-4928-83de-8982c8684929</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-zinc power gelée nettoyante 150ml?e65b4ba2-5077-4928-83de-8982c8684929 ]]></link>
+<g:price><![CDATA[ 1630.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="ewa-rteLine">Découvrez les vertus du Zinc [PCA] et à l'Extrait de Litchi avec cette gelée offrant un nettoyage doux et efficace.</div>
+<div class="ewa-rteLine"></div>
+<div class="ewa-rteLine">Pensé pour les peaux mixtes à grasses à tendance acnéique, ce soin non-comédogène est le premier geste essentiel de votre routine de soins anti-imperfections. Il nettoie en profondeur, matifie et resserre les pores sans dessécher la peau. Les imperfections (boutons, points noirs) sont visiblemen ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680039980</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2c758df0c30748f78bd18baabe794c70d3cda504c7076aafffc4abcecdc346ca ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nuxe Zinc Power Sérum 30ml ]]></title>
+<g:id>b074ac27-cf31-48ec-860d-d49d098c2558</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nuxe-zinc power sérum 30ml?b074ac27-cf31-48ec-860d-d49d098c2558 ]]></link>
+<g:price><![CDATA[ 3170.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="ewa-rteLine">Réduisez visiblement les imperfections grâce à l'action ciblée de ce sérum au Zinc [PCA] et à l'Extrait de Litchi.</div>
+<div class="ewa-rteLine"></div>
+<div class="ewa-rteLine">Votre peau à tendance acnéique a trouvé son nouvel allié. Ce soin non-comédogène, efficace sur toutes les carnations, réduit les imperfections (boutons, points noirs), atténue leurs marques et resserre les pores. Immédiatement, votre peau est hydratée, matifiée et paraît plus homogène. Dès 7 jour ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3264680039942</g:gtin>
+<g:brand><![CDATA[ NUXE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/33ca0f6e9250b23e3d836f585e330ccdc3716fe687e4296cd3449f2b172a9aa3 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nym Crème Absolue Fondamentale 50 ml ]]></title>
+<g:id>d9083e71-d09a-4f18-97a3-ff2feac2cf50</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nym-crème absolue fondamentale 50 ml?d9083e71-d09a-4f18-97a3-ff2feac2cf50 ]]></link>
+<g:price><![CDATA[ 3450.00 EUR ]]></g:price>
+<description><![CDATA[ <p>100% d’origine Naturelle, cette crème onctueuse très concentrée associe les bienfaits du Neem à un mélange d’extraits de plantes rares (Lotus, figue de Barbarie, Paracress) et d’huiles végétales 100% BIO (Karité, Argan, Abricot…). Les rides sont lissées, la peau est plus ferme, le teint est lumineux, unifié et éclatant.</p>
+<p>Cette crème onctueuse et fraîche pénètre immédiatement et laisse un fini peau de pêche ou procure un confort immédiat. Elle nourrit la peau et l’hydrate en profondeur * ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770009415156</g:gtin>
+<g:brand><![CDATA[ NYM ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7d6c77848c02cdf4412ce6db7f77b36e7192b8253e50c959fb1707f151a22d0a ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nym Crème Fondamentale Contour des Yeux 20ml ]]></title>
+<g:id>6632bd3c-03c4-47fa-929b-740ee6f583da</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nym-crème fondamentale contour des yeux 20ml?6632bd3c-03c4-47fa-929b-740ee6f583da ]]></link>
+<g:price><![CDATA[ 2350.00 EUR ]]></g:price>
+<description><![CDATA[ <p>100% d’origine Naturelle, ce soin très concentré associe les bienfaits du Neem à un mélange d’extraits de plantes reconnues pour leurs actions décongestionnantes, revitalisantes et lissantes (Passiflore, Figue de Barbarie, Lindera, Marron d’Inde, Fleur d’Arbre à Soie, Café vert BIO). La recherche NYM a également intégré de l’huile de Cartame BIO, connue pour ses propriétés restructurantes sur la peau. Sa texture fraîche et veloutée pénètre instantanément. Les poches, rides et cernes sont rédu ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770009415163</g:gtin>
+<g:brand><![CDATA[ NYM ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2dbccbeee053956ccc94781f2780acd22c49d2fed43086810ccdcae18fd5aef7 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nym Crème réconfort total fondamental 50 ml ]]></title>
+<g:id>8c638496-44f0-4f7b-96b0-ade20fc6cb26</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nym-crème réconfort total fondamental 50 ml?8c638496-44f0-4f7b-96b0-ade20fc6cb26 ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La formule de cette crème, unique, permet d’apaiser la peau, de la nourrir en profondeur, de l’<a href="https://www.nym.fr/fr/hydrater-sa-peau/">hydrater</a> et de la protéger.</p>
+<p>Onctueuse et enveloppante, la crème <strong>Réconfort Total</strong> laisse un fini velouté et cocooning.</p>
+<p>A appliquer matin et soir.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770009415187</g:gtin>
+<g:brand><![CDATA[ NYM ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3a709e121959cbbbe6855698af71665665f3e9a414c7ee0271553a6b3ce8bda7 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nym Fluide Matifiant Hydratant fondamental 50 ml ]]></title>
+<g:id>191d2251-2ed9-48ea-bb16-dd43381ca12e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nym-fluide matifiant hydratant fondamental 50 ml?191d2251-2ed9-48ea-bb16-dd43381ca12e ]]></link>
+<g:price><![CDATA[ 1650.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Ce fluide non gras et tout en légèreté</strong></p>
+<p>Associe les propriétés émollientes, adoucissantes et protectrices du <a href="https://www.nym.fr/fr/le-neem/">Neem</a> à un complexe de plantes connues pour leurs propriétés hydratantes (Aloé Vera Bio et huile de Jojoba Bio) ainsi qu’à de l’acide hyaluronique qui augmente l’hydratation de la peau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770009415194</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/85254a9715d6c45ac74fb2ddd74d0a0699fe4b91cdd5656947e4324f29c87dab ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nym Sérum absolu fondamental 30 ml ]]></title>
+<g:id>fc71e395-eb49-4433-aa39-96b16946ef53</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nym-sérum absolu fondamental 30 ml?fc71e395-eb49-4433-aa39-96b16946ef53 ]]></link>
+<g:price><![CDATA[ 3350.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>100% d’origine Naturelle,</strong> ce soin très concentré associe les bienfaits du Neem à une espèce végétale rare en cosmétique, le narcisse des poètes et l’<a href="https://www.nym.fr/fr/huile-argan-nouvelle-alliee-beaute/">Huile d’Argan</a> BIO, permettant de neutraliser les radicaux libres et de lutter contre les signes du vieillissement cutané, pour redonner élasticité et souplesse à la peau.</p>
+<p>Le <strong>sérum absolu</strong> hydratant et frais pénètre immédiatement et proc ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770009415170</g:gtin>
+<g:brand><![CDATA[ NYM ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/05a1d4ce0e26605ca8944081758046b5c29286c9fc1879530b7b8d740116d1e1 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nym baume démaquillant 100ml ]]></title>
+<g:id>b5452140-4dd5-4bda-b38e-ef61bb6096f7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nym-baume démaquillant 100ml?b5452140-4dd5-4bda-b38e-ef61bb6096f7 ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Il enrobe et fait fondre soigneusement les impuretés et les maquillages les plus tenaces ainsi que les traces de pollution. En surface : il débarrasse la peau des polluants extérieurs, poussières et dissout le maquillage. En profondeur : il retire les excès de sueur et de sébum et aide à éliminer les cellules mortes. Il laisse la peau propre, souple, lisse, radieuse et apaisée, prête à recevoir les soins de jour ou de nuit.</p>
+<p></p>
+<p></p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770009415125</g:gtin>
+<g:brand><![CDATA[ NYM ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/48fbbf8c757ca3fbb9834715d65f160f40d72dbcbec01c42387bb58250f4e892 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nym crème de jour fondamentale 50ml ]]></title>
+<g:id>f0d7d8e0-f1df-4f86-9322-9e8de4c3c90c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nym-crème de jour fondamentale 50ml?f0d7d8e0-f1df-4f86-9322-9e8de4c3c90c ]]></link>
+<g:price><![CDATA[ 2850.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Une crème toute en légèreté à la fois protectrice, déstressante et réconfortante qui exploite les vertus exceptionnelles du Neem.<br /><br />Apaisée, protégée et dynamisée, la peau rayonne d’une nouvelle jeunesse et d’un nouvel éclat.<br />Ce soin transforme l’apparence du visage, aide à prévenir les signes de l’âge et à éclaircir le teint.<br /><br />Convient aux peaux mixtes à sèches. Efficace sur les peaux déshydratées et réactives.<br />Ridules et rides, perte de densité, irrégularités du ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770009415033</g:gtin>
+<g:brand><![CDATA[ NYM ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f3feed31c010aa1c8eef47b657e59cc326f06cb4261f6b0e6fcf4e9d4a97088b ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nym crème de nuit 50ml ]]></title>
+<g:id>cdeef81b-4f2e-4a09-ac30-0b2aa0d0430a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nym-crème de nuit 50ml?cdeef81b-4f2e-4a09-ac30-0b2aa0d0430a ]]></link>
+<g:price><![CDATA[ 3150.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le soin de nuit idéal pour résister aux stress de la journée et ralentir les effets de l’âge.<br />Son parfum de fleurs blanches est un instant de tendresse pour chouchouter la peau.<br />Le soin de nuit idéal pour résister aux stress de la journée et ralentir les effets de l’âge.<br />Une galénique exceptionnelle : une texture généreuse et douce qui défatigue la peau.<br />Son parfum de fleurs blanches est un instant de tendresse pour chouchouter la peau.<br /><br /><br /><br /><br /><br />< ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770009415095</g:gtin>
+<g:brand><![CDATA[ NYM ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/84f5e6d04cad8817f3c378223373102da00ef737e83f2724547f2a550830d822 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nym huile de soin fondamentale 2% 50ml ]]></title>
+<g:id>880a1565-75ba-4baa-93e5-8424016672a5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nym-huile de soin fondamentale 2% 50ml?880a1565-75ba-4baa-93e5-8424016672a5 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nym huile soin fondamentale 2% 50ml</p>
+<p>Un soin d’exception qui exploite tout le pouvoir du Neem hautement concentré pour être bien dans sa peau et résister aux agressions quotidiennes.</p>
+<p>Une activité biologique intense qui lui confère un incroyable pouvoir régénérant, apaisant et anti âge.</p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p><br /><br /></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770009415149</g:gtin>
+<g:brand><![CDATA[ NYM ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e5f26136e108459f3d6cdd311ccf484200a8b68d8be114509bcb7de918da3a1b ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nym huile de soin fondamentale 4% 50ml ]]></title>
+<g:id>ff6ad524-8f71-4dca-ae2b-a14a64a6c7aa</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nym-huile de soin fondamentale 4% 50ml?ff6ad524-8f71-4dca-ae2b-a14a64a6c7aa ]]></link>
+<g:price><![CDATA[ 2850.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Une solution globale au quotidien – VISAGE, CORPS, CUIR CHEVELU – qui participe au maintien d’une peau saine et à la lutte contre le vieillissement cutané<br /><br />Tout le pouvoir du Neem hautement concentré capable dans le temps d’intervenir sur les désordres cutanés et de les réguler pour être bien dans sa peau.<br /><br />Pour toutes les peaux mixtes à sèches, irritées, fatiguées ou surmenées et pour les peaux sujettes aux démangeaisons, aux rougeurs et à l’inconfort.<br /><br />En parfa ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770009415019</g:gtin>
+<g:brand><![CDATA[ NYM ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/65ab158d2f5dde850bb165f6b3bd680d4fa3af36ed55c5fa9776b4ffcbeeaf92 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nym lotion pré soin 50ml ]]></title>
+<g:id>73e989b3-86d6-4dcf-acda-df08adffa713</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nym-lotion pré soin 50ml?73e989b3-86d6-4dcf-acda-df08adffa713 ]]></link>
+<g:price><![CDATA[ 2290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Une source de douceur et d’apaisement qui exploite les vertus exceptionnelles du Neem.<br /><br />Première étape fondamentale de soin, la Lotion pré-soin fondamentale réveille les peaux d’un coup d’éclat relaxant et laisse la peau comblée d’une douceur infinie au toucher peau de pêche.<br /><br />Première étape de soin, la Lotion pré-soin fondamentale hydrate et stimule la jeunesse de la peau tout en améliorant sa texture et en procurant un effet éclat immédiat.<br /><br />La peau est apaisée ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770009415026</g:gtin>
+<g:brand><![CDATA[ NYM ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/49b845982dfa7e7acd7f73071c2c14a4e413436d299bc713da408ab17734d401 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nym masque exfoliant 50ml ]]></title>
+<g:id>a57ad1c1-aec5-4f9c-8ead-1f1f2abd7049</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/nym-masque exfoliant 50ml?a57ad1c1-aec5-4f9c-8ead-1f1f2abd7049 ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Soin double action masque et gommage du visage, du décolleté et des mains, de texture ultra confortable. Une formule 100% Naturelle conçue pour révéler l’éclat et l’uniformité du teint : effet « peau neuve » garanti grâce aux bienfaits du Neem associés aux Acides de fleurs issus de l’Hibiscus et à un mélange d’huiles végétales exclusif. Ce soin élimine les cellules mortes, purifie la peau, resserre les pores et stimule le renouvellement cellulaire. Il lutte contre les premiers signes de vieil ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770009415132</g:gtin>
+<g:brand><![CDATA[ NYM ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4946180b2fe8fcfc63dac11b802b409dca4f0d6a3eb3729893dcfbdf4db7b633 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Nécyrane Spray Nasal Rhume 10 ml ]]></title>
+<g:id>d7c26aab-66e9-445b-b768-0133acc8b9a0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/n-cyrane spray nasal rhume 10 ml?d7c26aab-66e9-445b-b768-0133acc8b9a0 ]]></link>
+<g:price><![CDATA[ 410.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Pierre Fabre Health Care Nécyrane Spray Nasal Rhume 10 ml est un spray nasal hypertonique destiné à soulager les symptômes du rhume chez l'adulte et l'enfant à partir de 12 ans.</span><br /><span>Il traite le rhume en décongestionnant le nez et en diminuant efficacement et naturellement les écoulements nasaux pendant les périodes hivernales et de rhinite allergique. La présence d'huile essentielle d'eucalyptus procure une sensation de fraîcheur pour un soulagement immédiat.</span><br /> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3573994005636</g:gtin>
+<g:brand><![CDATA[ PIERRE FABRE ORAL CARE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/56ff3cdaadd6e539e8f6ef1dc30dc2291c95b3896f125ea28fbe10d6ca1a145e ]]></g:image_link>
+<g:product_type><![CDATA[ SANTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ ODM 5 solution ophtalmique 10ml ]]></title>
+<g:id>76d5d04f-e831-48a8-abfd-fc6d24743cef</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/odm-5 solution ophtalmique 10ml?76d5d04f-e831-48a8-abfd-fc6d24743cef ]]></link>
+<g:price><![CDATA[ 1090.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>ODM 5</span><span> est une </span><span>solution ophtalmique</span><span> conçue pour réduire les </span><span>oedèmes cornéens</span><span>. Ces gouttes oculaires sont sans conservateur. Elles fonctionnent par hyperosmolarité.</span><br /><br /><span>L'oedème cornéen est une situation caractérisée par une </span><span>accumulation de liquide dans la cornée</span><span>. Cette partie transparente de l'oeil gonfle et s'opacifie, engendrant une baisse d'acuité visuelle. La personne attein ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401520128170</g:gtin>
+<g:brand><![CDATA[ HORUS PHARMA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/71ad5d080de3cf021948d675f6ae56d5e36965eba66dd075f7e591f1cf8db62f ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ OLIGORHINE CU AG                    /ERPI ]]></title>
+<g:id>35930705-e3f7-49bd-ba4f-3e1948387ff3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oligorhine-cu ag                    /erpi?35930705-e3f7-49bd-ba4f-3e1948387ff3 ]]></link>
+<g:price><![CDATA[ 940.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401572489731</g:gtin>
+<g:brand><![CDATA[ MONIN CHANTEAUD ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9daf197889103921d21766272cf3ede6b26bd19f6914cfebb38ad6bfa1e201e2 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIÈNE NASALE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ OM3 Équilibre Émotionnel 60 Capsules ]]></title>
+<g:id>6e479609-a2d4-4e30-9657-b58c6952e9a4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/om3-quilibre Émotionnel 60 capsules?6e479609-a2d4-4e30-9657-b58c6952e9a4 ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>OM3 Équilibre Émotionnel 60 Capsules est un complément alimentaire aux huiles de poissons sauvages contenant 90% d'Oméga 3 dont 1050 mg EPA par jour.</p>
+<p>OM3 Équilibre Émotionnel 60 Capsules est un complément alimentaire aux huiles de poissons sauvages contenant 90% d'Oméga 3 dont 1050 mg EPA par jour.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5425013130011</g:gtin>
+<g:brand><![CDATA[ SUPER DIET ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ec11c6a29551a0ae28f51ff98887dcb780d90cea14f0a52deec3e1d23b204bae ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Objectif ZeroVerrue Freeze Stylo 7,5 g ]]></title>
+<g:id>44483e5a-1d21-4ba4-808a-9f79128fb87c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/objectif-zeroverrue freeze stylo 7,5 g?44483e5a-1d21-4ba4-808a-9f79128fb87c ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Mylan Objectif ZeroVerrue Freeze Stylo 7,5 g est un traitement à domicile rapide qui permet d'éliminer efficacement les verrues récentes sur les mains, les bras et les pieds. Il s'agit du premier traitement à domicile à base de protoxyde d'azote, un gaz très froid. Grâce à sa technologie Ultra Freeze Technology. Il gèle la verrue à -80°C et permet d'atteindre la couche la plus profonde de la verrue.</p>
+<p>Ce produit est un dispositif avec une technologie de pointe qui est d'utilisation rapid ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700343900919</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/17be3712d65a5ee149c9d2ec0ce3f95c44627856510ed448da4e6339a2ecd50c ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Aquadrainant Plus 45 comprimés ]]></title>
+<g:id>fe7716d5-9a03-4814-be9b-a09e283d8df3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-aquadrainant plus 45 comprimés?fe7716d5-9a03-4814-be9b-a09e283d8df3 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Oenobiol Aquadrainant Plus contient un extrait de pépins de raisin, de la vitamine C et de la vigne rouge, qui aide à réduire la sensation de jambes lourdes.</span><br /><span>Oenobiol Aquadrainant Plus est récompensé par les Victoires de la Beauté 2014-2015*.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3663998000079</g:gtin>
+<g:brand><![CDATA[ OENOBIOL ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5a89908b39b505b0265f86f66cfca2e1a1a2baab538d7f3854c19ede327aa15b ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Derma Expert Contour des Yeux 60 Comprimés ]]></title>
+<g:id>6d76138a-8532-4aac-b065-ca337c382e78</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-derma expert contour des yeux 60 comprimés?6d76138a-8532-4aac-b065-ca337c382e78 ]]></link>
+<g:price><![CDATA[ 2399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Oenobiol Derma Expert Contour des Yeux 60 Comprimés est un complément alimentaire qui agit pour réduire les poches sous les yeux.</p><p>Sa formule innovante est spécialement conçue pour offrir une action ciblée grâce à des actifs puissants aux propriétés antioxydantes.</p><p>Elle associe du zinc, de la vitamine B2, du marc de raisin et de la myrtille pour un soin complet.</p><p>L'extrait de pépins de raisin, riche en antioxydants, et la vitamine C agissent en synergie pour réduire visiblement ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614810006144</g:gtin>
+<g:brand><![CDATA[ COOPER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dfb304f8340316a987c49bb29949cd8d6135d8a04b41d517e07730138438266c ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Femme 45+ Ventre Plat Lot de 2 x 60 Capsules ]]></title>
+<g:id>bc7d65d3-bcc3-4d68-b87c-fbd8906c7895</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-femme 45+ ventre plat lot de 2 x 60 capsules?bc7d65d3-bcc3-4d68-b87c-fbd8906c7895 ]]></link>
+<g:price><![CDATA[ 1599.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Oenobiol Femme 45+ Ventre Plat Lot de 2 x 60 Capsules est un complément alimentaire sous forme de capsules à base de CLA (acide linoléique conjugué), de chrome et d'extrait de menthe poivrée, il aide à réduire les gonflements et ballonnements indésirables pour un ventre plus plat.</p>
+<ul><li>L'acide linoléique conjugué (CLA) est issu d'une source naturelle et végétale. Extrait de la fleur de carthame des teinturiers (Carthamus tinctorius L.), le CLA est très concentré en isomères et pur.</li ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3663998000116</g:gtin>
+<g:brand><![CDATA[ COOPER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/81f47cb8ab2631e4076f2b33b1d009b380164c662c7ffff7c9ec545928fffd4c ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Gummies Minceur 60 gummies ]]></title>
+<g:id>5882d319-e74e-410c-94e1-1a496b0d860f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-gummies minceur 60 gummies?5882d319-e74e-410c-94e1-1a496b0d860f ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Bienfaits :</span> Aide à brûler les graisses et réguler l'appétit. </li>
+<li><span>Indications : </span>Diminue les sensations de faim.</li>
+<li><span>Actifs phares :</span> Rhodiola, Vitamine B6, Picolinate de Chrome, Caroube, Fucus, extrait de feuille de Cassis. </li>
+<li><span>Durée de la cure : </span>1 mois.</li>
+<li><span>On aime :</span> Son arôme naturel de mûre cassis. Le "+" : Les gummies sont vegan et sans sucre ! </li>
+</ul><p> </p>
+<p><span>Les Gummies Minceur de OENO ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304955021</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ea5bf42e80758b35b7586d687523833372f405727be76f31cb89d613025ab8dc ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Gummies Solaire 2 en 1 Préparateur & Autobronzant, 60 gummies ]]></title>
+<g:id>2aa12a4e-d1c8-48a0-8149-d2efd7408a9f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-gummies solaire 2 en 1 préparateur & autobronzant, 60 gummies?2aa12a4e-d1c8-48a0-8149-d2efd7408a9f ]]></link>
+<g:price><![CDATA[ 2299.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Bienfait :</span> Prépare et prolonge le bronzage.</li>
+<li><span>Indication(s) :</span> Pour avoir une peau préparée et dorée toute l'année.</li>
+<li><span>Actifs Phares :</span> Lycopène, Lutéine, Sélénium, L-Tyrosine, Cuivre, Vitamine E.</li>
+<li><span>Durée de la cure : </span>Cure de 1 mois.</li>
+<li><span>On aime :</span> Son arôme naturel de fraise-citron sans sucre. Le "+" : Les gummies sont vegan et made in France.</li>
+</ul><p><br /> Les<span> Gummies Solaire 2 en 1 </spa ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304955007</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9eed6b9523b967890b952ba37d87bd34953f1bbc319b8af11c1aa959f15b7a90 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Hair Expert  Fortifiant Anti-Âge - Cheveux Dévitalisés - 30 Capsules ]]></title>
+<g:id>ebfb33fd-f21d-4c8c-8024-440e9f075eb4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-hair expert  fortifiant anti-Âge - cheveux dévitalisés - 30 capsules?ebfb33fd-f21d-4c8c-8024-440e9f075eb4 ]]></link>
+<g:price><![CDATA[ 1499.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Hair Expert Fortifiant Anti-Âge </span>de <span>OENOBIOL</span> permet de fortifier les cheveux en cas de perte de densité. </p>
+<p>Il est particulièrement recommandé pour les <span>adultes </span>ayant des cheveux dévitalisés. </p>
+<p>Pendant la cure, ce complément alimentaire vient régénérer la <span>fibre capillaire </span>en fortifiant l'intérieur des cheveux. </p>
+<p>Ainsi, les cheveux retrouvent <span>volume </span>et brillance. </p>
+<p>Il possède une efficacité <span>antioxydante ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304955595</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f62b73ed84e4c62b30c9999ba78991f101150fe4e11312c0c8c691200242dbf8 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Hair Expert Chute de Cheveux, 30 Capsules ]]></title>
+<g:id>329d36c9-2477-4527-8cb1-eec4eb9f3b02</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-hair expert chute de cheveux, 30 capsules?329d36c9-2477-4527-8cb1-eec4eb9f3b02 ]]></link>
+<g:price><![CDATA[ 1299.00 EUR ]]></g:price>
+<description><![CDATA[ <p id="CE60TFM"><span>Hair Expert Chute de Cheveux </span>de <span>OENOBIOL </span>est un complément alimentaire qui permet de lutter contre la chute des <span>cheveux</span>. </p>
+<p>Il aide à garder une chevelure saine et fournie en agissant au quotidien sur la <span>revitalisation des cheveux</span>, la densité capillaire et la croissance. </p>
+<p>Ce produit contient 30 capsules soit une <span>cure de 1 mois</span>.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304955632</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fb5a6096bedbb1fb444eaf1e655391eacffddfc75be7d93e2eb74036e4d2c6ca ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Hair Expert Fortifiant Anti-Âge Cheveux Dévitalisés 2x30 Capsules ]]></title>
+<g:id>6d6f47ec-bd4b-499c-82fc-66236e3a82ad</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-hair expert fortifiant anti-Âge cheveux dévitalisés 2x30 capsules?6d6f47ec-bd4b-499c-82fc-66236e3a82ad ]]></link>
+<g:price><![CDATA[ 2899.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Hair Expert Fortifiant Anti-Âge </span>de <span>OENOBIOL</span> est un complément alimentaire pour adultes ayant les <span>cheveux dévitalisés</span> et en perte de densité. </p>
+<p>Il vient régénérer la fibre capillaire en fortifiant l'intérieur des cheveux afin qu'ils retrouvent du <span>volume </span>et de la <span>brillance</span>.</p>
+<p>Il possède une efficacité <span>antioxydante </span>prouvé* pour des cheveux en meilleure santé !</p>
+<p> </p>
+<p id="YCHKAX7">*Zinc et Sélénium : ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304955601</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8f228f186f2d5b544d34561f9ede6de08dfe6ca25bfc56e8be2e843479a10674 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Hair expert Fortifiant intégral 2 x 60 capsules ]]></title>
+<g:id>a4ab42f9-5df1-4d8f-92d5-5b29ac291536</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-hair expert fortifiant intégral 2 x 60 capsules?a4ab42f9-5df1-4d8f-92d5-5b29ac291536 ]]></link>
+<g:price><![CDATA[ 2399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Sécheresses liées à un abus de coloration, stress,  pollution… Vos cheveux ont tendance à être fragiles, ternes, fatigués ces derniers temps ? HAIR EXPERT Fortifiant intégral est la <span>réponse globale pour renforcer¹ vos cheveux de l’intérieur</span>.</p>
+<p> </p>
+<p>Véritable <span>cocktail de bienfaits</span>, le fortifiant intégral concentre un cocktail de 6 vitamines et la <span>kératine</span>, issue d’un procédé breveté lui offrant une biodisponibilité augmentée²</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304955625</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c6736de78109ec51451e3bb8d4e901b852eae3fa308474fcc08024b895e361d4 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Hair expert Fortifiant intégral 60 capsules ]]></title>
+<g:id>2898901f-a475-45c0-9932-5c317e153fea</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-hair expert fortifiant intégral 60 capsules?2898901f-a475-45c0-9932-5c317e153fea ]]></link>
+<g:price><![CDATA[ 1260.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Sécheresses liées à un abus de coloration, stress,  pollution… Vos cheveux ont tendance à être fragiles, ternes, fatigués ces derniers temps ? HAIR EXPERT Fortifiant intégral est la <span>réponse globale pour renforcer¹ vos cheveux de l’intérieur</span>.</p>
+<p> </p>
+<p>Véritable <span>cocktail de bienfaits</span>, le fortifiant intégral concentre un cocktail de 6 vitamines et la <span>kératine</span>, issue d’un procédé breveté lui offrant une biodisponibilité augmentée²</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304955618</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/19af6e86d420f80a712d85d1470236928483aa9ed115593ddc16934af72df983 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Microbio Slim Brûleur Multi actions 60 gélules ]]></title>
+<g:id>d8205f8c-1e16-43a2-896d-baf455f8e20d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-microbio slim brûleur multi actions 60 gélules?d8205f8c-1e16-43a2-896d-baf455f8e20d ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Oenobiol Microbio Slim</strong> propose une <strong>nouvelle approche de la minceur</strong>, plus positive pour votre corps.</p>
+<div class="product-text">
+<p>Cette nouvelle formule, concentré d’extraits végétaux et souches microbiotiques encapsulés dans une capsule végétale, associe ainsi <strong>une action ciblée sur les graisses</strong><sup>(1-2)</sup> grâce au Citrus Aurantium et à l’Ascophyllum, et une action pour <strong>rééquilibrer l’intestin</strong><sup>(3) </sup>grâce au  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304954376</g:gtin>
+<g:brand><![CDATA[ OENOBIOL ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/39d52ac442a342e881d600caaef08af9461528be99b55c18f74c47d7eba66784 ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Minceur Tout en 1 30 sticks + 60 comprimés ]]></title>
+<g:id>4db9cbb7-cfa5-4911-af17-adcccfeac360</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-minceur tout en 1 30 sticks + 60 comprimés?4db9cbb7-cfa5-4911-af17-adcccfeac360 ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span> </span>Concentré d’ingrédients naturels parmi lesquels le guarana, la noix de cola, l’ascophylle, les pépins de raisin ou encore le curcuma, Oenobiol Minceur Tout en 1 contribue à brûler les graisses<sup>(1,8)</sup>, à limiter leur absorption<sup>(2)</sup> et leur accumulation<sup>(3)</sup>, à drainer<sup>(4)</sup> et à éliminer les toxines<sup>(5)</sup>. Oenobiol Minceur Tout en 1 permet également de retrouver un ventre plat<sup>(6)</sup> et aide à combattre la fatigue<sup>(7)</sup></ ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304952242</g:gtin>
+<g:brand><![CDATA[ OENOBIOL ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/314ab22ce02b4b376f099aa313af8a1748080b46d437d3116c345a2b6479da08 ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Perfect Bronz  30 Capsules ]]></title>
+<g:id>34676b24-0047-45f9-bb45-3cb06c858c87</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-perfect bronz  30 capsules?34676b24-0047-45f9-bb45-3cb06c858c87 ]]></link>
+<g:price><![CDATA[ 1499.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pour toutes les peaux claires en quête d’un effet bonne mine durable et d’un éclat doré, PERFECT BRONZE Autobronzant leur dédie sa formule concentrée pour un résultat visible dès le 1er mois1.</p>
+<p>Produit le plus riche en pigments2, 100% d’origine végétale, il offre un dosage optimal entre les couleurs rouge-orangé, jaune et rose. Il contient du cuivre pour une pigmentation normale de la peau.</p>
+<p>Résultat : Dès 28 jours, le teint révèle une bonne mine naturelle, la peau est hâlée et éc ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614810004515</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a49d8a12159cc38f9feb20c941658626aea708c8cfb6637f106ecdf14a4600ca ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Perfect Bronz Autobronzant 2*30 Capsules ]]></title>
+<g:id>a928cfb1-9768-4068-b28e-8c5c0f1edc11</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-perfect bronz autobronzant 2*30 capsules?a928cfb1-9768-4068-b28e-8c5c0f1edc11 ]]></link>
+<g:price><![CDATA[ 2799.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="container">
+<div id="content-wrapper" class="js-content-wrapper">
+<div class="tabs">
+<div class="tab-content" id="tab-content">
+<div class="tab-pane active" id="description">
+<div class="panel panel-default">
+<div id="collapseIndication" class="panel-collapse collapse in">
+<div class="panel-body">
+<div class="product-description">
+<p>Une peau et un teint dorés toute l’année, telle est la promesse de PERFECT BRONZE Autobronzant grâce à sa formule exclusive OENOBIOL à l’efficacité prou ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614810004522</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7e8b9b07291a5a40567bab173dbddd3678336da7aa4d2e05f60304274c5a26c7 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Perfect Bronze Autobronzant Peaux Claires 2x30 Capsules ]]></title>
+<g:id>8606b294-36de-4fd5-9b2a-9587cb36c1b8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-perfect bronze autobronzant peaux claires 2x30 capsules?8606b294-36de-4fd5-9b2a-9587cb36c1b8 ]]></link>
+<g:price><![CDATA[ 2999.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pour toutes les peaux claires en quête d’un effet bonne mine durable et d’un éclat doré, PERFECT BRONZE Autobronzant leur dédie sa formule concentrée pour un résultat visible dès le 1er mois1.</p>
+<p>Produit le plus riche en pigments2, 100% d’origine végétale, il offre un dosage optimal entre les couleurs rouge-orangé, jaune et rose. Il contient du cuivre pour une pigmentation normale de la peau.</p>
+<p>Résultat : Dès 28 jours, le teint révèle une bonne mine naturelle, la peau est hâlée et éc ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614810004546</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a9e95e6d4aa432b9b0533c99ee57f0beaebacc4c0ba10fa1d20ceeb2ab52a1e1 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Perfect Bronze Solaire 2en1 Lot de 2 x 30 Capsules ]]></title>
+<g:id>ab674282-7c4c-4632-a52d-4fe99dff97c1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-perfect bronze solaire 2en1 lot de 2 x 30 capsules?ab674282-7c4c-4632-a52d-4fe99dff97c1 ]]></link>
+<g:price><![CDATA[ 3099.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Oenobiol Perfect Bronze Solaire 2en1 Lot de 2 x 30 Capsules est un complément alimentaire autobronzant et préparateur solaire à base de plantes, vitamines, minéraux, lutéine et zéaxanthine.</p>
+<ul><li>Le lycopène est un pigment naturel de couleur vive rouge-orangé.</li>
+<li>La lutéine et la zéaxanthine sont des pigments naturels de couleur jaune-orangé issus des pétales de rose d'Inde.</li>
+<li>L'asthaxanthine est un pigment de couleur rose-rouge issu des microalgues unicellulaires (Haematoc ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614810006779</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9aebdce11e355876a65835ae19169378cb0c55e18b0a4e72090e2b6eda15d19b ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Perfect Bronze auto-bronzant peau claire 30 capsules ]]></title>
+<g:id>0a860a4c-d2e2-4f21-a299-68571056620c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-perfect bronze auto-bronzant peau claire 30 capsules?0a860a4c-d2e2-4f21-a299-68571056620c ]]></link>
+<g:price><![CDATA[ 1599.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="i4c-draggable-container" style="width:0px;height:0px;">
+<div class="resolved"></div>
+</div>
+<p><b>Les capsules Oenobiol Perfect Bronz Autobronzant Peau Claire</b> sont <b>un complément alimentaire solaire</b> conçu pour aider les personnes à peau claire à obtenir un bronzage naturel et uniforme. <b>Ces capsules</b> contiennent un mélange exclusif d'ingrédients tels que la L-tyrosine, la vitamine B6, la vitamine C et la vitamine E, qui sont tous connus pour leur rôle dans la production d ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614810004492</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1c26368b1c500a5c04b02810cd8e506ba89d627137db7a662aa32014a1b7cd03 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Pure Glow Anti-Imperfections & Eclat, 60 gummies ]]></title>
+<g:id>268ef00e-de1c-46f1-8df7-827e2f55b315</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-pure glow anti-imperfections & eclat, 60 gummies?268ef00e-de1c-46f1-8df7-827e2f55b315 ]]></link>
+<g:price><![CDATA[ 2190.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Bienfait :</span> Les gummies contribuent à avoir une action de peau nette, anti-imperfections en surface et une action repulpante. </li>
+<li><span>Indication(s) :</span> Pour avoir une peau plus saine, éclatante et un teint lissé. </li>
+<li><span>Actifs Phares : </span>Zinc, Vitamine C, Acide Hyaluronique, extrait d'Ortie, extrait d'Ascophyllum.</li>
+<li><span>Durée de la cure :</span> Cure de 1 mois. </li>
+<li><span>On aime :</span> Son arôme naturel de passion, ananas et mangue  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304954994</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d10611cd6ce5a8b650a50cb39c1685e188c22ef2d7181fd5c8c0045f9fde1c86 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Sublime Hair Volume et Croissance, 60 gummies ]]></title>
+<g:id>0e12be03-ddad-4ccb-a3db-f61dbd6079aa</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-sublime hair volume et croissance, 60 gummies?0e12be03-ddad-4ccb-a3db-f61dbd6079aa ]]></link>
+<g:price><![CDATA[ 2099.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Bienfaits :</span> Renforce et fortifie les cheveux et protège contre les agressions extérieures. </li>
+<li id="XB5T5SL"><span>Indications : </span>Personnes souhaitant retrouver des cheveux pleins de vitalités.  </li>
+<li><span>Actifs phares :</span> Roquette, Myrtille, Sève de bambou, Vitamine B6, B8 (biotine), Zinc, Sélénium</li>
+<li><span>Durée de la cure :</span> 1 mois.</li>
+<li id="TXA3GAP"><span>On aime : </span>Son arôme naturel de cerise. Le "+" : Sans sucre et vegan !</l ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304954987</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/02c825abc5b2d3e3a0cc2be333257230bca5b29b7c728715ed461a492a926ef8 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Sun Expert  Accélérée 2x15 Capsules ]]></title>
+<g:id>eec8a175-77e9-44d0-b74b-cae07f3d0710</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-sun expert  accélérée 2x15 capsules?eec8a175-77e9-44d0-b74b-cae07f3d0710 ]]></link>
+<g:price><![CDATA[ 2999.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li>Oenobiol Sun Expert Préparateur Express : ce programme de 15 jours pour une préparation solaire accélérée repose sur une formule concentrée intégrant le complexe végétal innovant Nutroxsun, riche en polyphénols naturels et testé cliniquement ;</li>
+</ul> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614810004539</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/62830b92f8a02e7e946bfcbc360d511515c5d3ee3a7b1101f58147e77b96cda1 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Sun Expert Peaux Sensibles 2x30 Capsules ]]></title>
+<g:id>9d69d192-d1be-40f5-9198-9d39c4a520d8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-sun expert peaux sensibles 2x30 capsules?9d69d192-d1be-40f5-9198-9d39c4a520d8 ]]></link>
+<g:price><![CDATA[ 2999.00 EUR ]]></g:price>
+<description><![CDATA[ <p>N°1 des préparateurs solaires - Formule suractivée (1). </p>
+<ul><li>SUN EXPERT Préparateur Solaire décline son offre à toutes les peaux sensibles au soleil avec une protection cellulaire anti-oxydante adaptée (2), pour une préparation avant l' exposition optimale et favoriser un hâle intense et éclatant (3). </li>
+<li>A coeur de sa formule suractivé (1), Oenobiol innove avec le Marc de raisin, actif exclusif, riche en polyphénols naturels, testé cliniquement, associé à des caroténoïdes d' or ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304953553</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1ee927b2f576d76358ff0b7e6b2051d7455fd538a408c96f4c71762b7622ad27 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Sun Expert Préparateur Solaire Anti-âge 2X30 Capsules ]]></title>
+<g:id>e637579c-1090-41fb-a50a-77b9d0b95d22</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-sun expert préparateur solaire anti-âge 2x30 capsules?e637579c-1090-41fb-a50a-77b9d0b95d22 ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="description" id="description">
+<p><span>Oenobiol Sun Expert Préparateur Solaire Anti-âge</span> a été spécifiquement développée pour les peaux présentant les premiers signes visibles de l’âge. </p>
+ 
+<p>Ce complément alimentaire contribue à la fois à préparer la peau avant l'exposition solaire grâce à une protection antioxydante renforcée, un hâle éclatant, tout en redonnant fermeté et souplesse. L'efficacité a été prouvée dès 28 jours d'utilisation. </p>
+ 
+<p>La formule de ces capul ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304953515</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5c658a08949fabc0059d57617823021c9222a98d3954bc762d9b705c1348d2ad ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Sun Expert Préparateur Solaire Peau Sensible 30 Capsules ]]></title>
+<g:id>a26c9d38-a44c-4b56-ad69-23625b18803a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-sun expert préparateur solaire peau sensible 30 capsules?a26c9d38-a44c-4b56-ad69-23625b18803a ]]></link>
+<g:price><![CDATA[ 1499.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="description" id="description">
+<p><span>Oenobiol Sun Expert Préparateur Solaire Peau Sensible </span>est une préparation solaire dédiée aux peaux sensibles. En effet, ce complément alimentaire est dosée en actifs protecteur des peaux aux besoins spécifiques. Ainsi, il permet à ce type de peau de bénéficier d'un hâle intense et éclatant. </p>
+ 
+<p>La formule contient, notamment, du marc de raisin à la concentration en polyphénols naturels, des caroténoïdes d'origine végétale et du sél ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304953546</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7a27cdc735c6cd01028d787ea6b39dd9f69680e05384efa78efc56ca57af20f2 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Sun Expert Préparation Solaire 2x30 Capsules ]]></title>
+<g:id>2d9865a1-a6e0-4d86-ace8-cef81c8508d8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-sun expert préparation solaire 2x30 capsules?2d9865a1-a6e0-4d86-ace8-cef81c8508d8 ]]></link>
+<g:price><![CDATA[ 2699.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Oenobiol </span></p>
+<p><span>Sun Expert</span> est un <span>complément alimentaire pour le bronzage</span> sous forme de capsules. Plus précisément, il s'agit d'un <span>préparateur solaire</span> conçu, comme son nom l'indique, pour préparer la peau au soleil.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304953539</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a456b08add2d03a9096aa736a40b330358cb2c044b3b1641ee63c27e172ba11b ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Sun Expert Préparation Solaire 30 Capsules Oenobiol Sun Expert ]]></title>
+<g:id>cd1e8f20-cd4b-4a0c-979e-957f89bfc2af</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-sun expert préparation solaire 30 capsules oenobiol sun expert?cd1e8f20-cd4b-4a0c-979e-957f89bfc2af ]]></link>
+<g:price><![CDATA[ 1399.00 EUR ]]></g:price>
+<description><![CDATA[ <ul class="a-unordered-list a-vertical a-spacing-mini"><li><span class="a-list-item">Sun Expert Préparateur Solaire délivre une protection cellulaire antioxydante renforcée* pour préparer la peau avant l’exposition au soleil et favoriser un hâle intense et éclatant**. *Ajout de 30% de sélénium par capsule **Test d’usage sur la formule précédente</span></li>
+<li><span class="a-list-item">RESULTATS : Supplémentée en antioxydants bienfaiteurs, la peau est idéalement préparée au soleil pour révéler  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304953522</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b8a25bdc88d753f762881f35e156dcc17ac9dc8897d2887dab3f02f49de6d7f7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oenobiol Sun Expert Préparation Solaire Accélérée 15 Capsules ]]></title>
+<g:id>15e364bd-47aa-4a0a-802a-3f6f2d697ad0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oenobiol-sun expert préparation solaire accélérée 15 capsules?15e364bd-47aa-4a0a-802a-3f6f2d697ad0 ]]></link>
+<g:price><![CDATA[ 1599.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="pb-center-column col-xs-12 col-sm-6 col-md-7">
+<div id="more_info_block" class="clear">
+<div id="more_info_sheets" class="sheets align_justify">
+<div class="rte">
+<ul><li>Oenobiol Sun Expert Préparateur Express : ce programme de 15 jours pour une préparation solaire accélérée repose sur une formule concentrée intégrant le complexe végétal innovant Nutroxsun, riche en polyphénols naturels et testé cliniquement ;</li>
+</ul></div>
+</div>
+</div>
+</div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614810004508</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/171165d52c410760dec2ea525914a167fb1884c6205a47d7f1d86838336cafa6 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ogakiddy Chaussons hygiéniques XS 27-31 ]]></title>
+<g:id>758a3c66-cfe9-4d5e-9e50-1d038d4e2034</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ogakiddy-chaussons hygiéniques xs 27-31?758a3c66-cfe9-4d5e-9e50-1d038d4e2034 ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Orgakiddy Chaussons Hygiéniques 1 Paire sont des chaussons qui permettent de protéger efficacement les pieds contre les verrues et autres infections du pied.</p>
+<p>Ces chaussons sont idéals pour la piscine, les vestiaires, les douches, etc. Ils évitent le contact direct avec le sol et favorisent l'hygiène.</p>
+<p>Pour enfiler plus facilement les chaussons, vous pouvez mettre un léger voile de talc.</p>
+<p>Ils protègent même les pieds des blessures et permettent de se baigner même avec des pa ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700769900524</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/acd711de4eee3395ba489c8433a7dd1bb4375346063b737aea4cb56515abc905 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Olaplex N°0 Intensive Bond building treatment 155 ml ]]></title>
+<g:id>768c99d1-cea1-4ede-bc2c-9093c3474f78</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/olaplex-n°0 intensive bond building treatment 155 ml?768c99d1-cea1-4ede-bc2c-9093c3474f78 ]]></link>
+<g:price><![CDATA[ 2750.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le Nº.0 Intensive Bond Building Hair Treatment, enrichi avec la technologie brevetée OLAPLEX Bond Building est un soin intense qui renforce l’efficacité d’OLAPLEX Nº.3 Hair Perfector pour une réparation plus profonde tout en fortifiant et en protégeant l’intégrité du cheveu.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0850018802833</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c11a6831c4c6313f862cf167b71aba9394087d41ba26dc4b4458ddcaf74eab6b ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oligobs Procréa F+ Fertilité Féminine 30 Sachets ]]></title>
+<g:id>6c32337a-6c72-4e70-a145-72aa4fb3812c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oligobs-procréa f+ fertilité féminine 30 sachets?6c32337a-6c72-4e70-a145-72aa4fb3812c ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>OLIGOBS® Procréa.F+ est un Complément alimentaire aidant à une fertilité et reproduction normales1, protégeant les cellules contre le stress oxydatif1,2 et contribuant à la croissance des tissus maternels3 à base de myo-inositol, d’ubiquinol, de 1zinc, de 2sélénium, de vitamines (dont de la 3vitamine B9 sous forme Quatrefolic®) et d’iode.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700111400559</g:gtin>
+<g:brand><![CDATA[ CCD ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6c13adf47aa233b0c955615758c5a9bcd93bb350d241e6df40867693c2d3d4b6 ]]></g:image_link>
+<g:product_type><![CDATA[ COMPLEMENTS ALIMENTAIRES > FEMME  > SANTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Olioseptil Gel Labial Bouton De Lèvres 10ml ]]></title>
+<g:id>7a9c082b-a8fd-4871-8710-f36e7dfe96d7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/olioseptil-gel labial bouton de lèvres 10ml?7a9c082b-a8fd-4871-8710-f36e7dfe96d7 ]]></link>
+<g:price><![CDATA[ 960.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Gel Labial Olioseptil® est à appliquer dès l’apparition des premiers signes d’inconfort. Il aura un effet apaisant et rafraîchissant dès la première application.<br>Sa formule est enrichie en huiles essentielles de Ravintsara, Niaouli, Tea Tree et de Menthe Poivrée, aux propriétés astringentes et régénérantes.<br>L’huile essentielle de Lavande ainsi que l’Aloe Vera apportent une action apaisante et réparatrice.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700225603501</g:gtin>
+<g:brand><![CDATA[ INELDEA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9f2f99f95232aa4aa9195d9ceeee10ac9f4f427df441bee67adfa8985f29c025 ]]></g:image_link>
+<g:product_type><![CDATA[ Bien être ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Olioseptil Roll’on Apaisant Après-Piqûre 5ml ]]></title>
+<g:id>4ca9d3fb-7b64-47c0-a557-c375ac764413</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/olioseptil-roll’on apaisant après-piqûre 5ml?4ca9d3fb-7b64-47c0-a557-c375ac764413 ]]></link>
+<g:price><![CDATA[ 820.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Olioseptil® Roll’on Apaisant après-piqûre associe 6 huiles essentielles de Lavande aspic, Menthe poivrée, Tea Tree, Citronnelle de Java et Lemongrass pour leurs vertus calmantes et d’Eucalyptus citronné aux propriétés rafraîchissantes alliées à l’action de la bille en métal pour apporter une sensation de fraicheur et un effet apaisant immédiat. Pratique et facile d’utilisation, il s’emporte partout et permet une action ciblée à tout moment de la journée.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700225603709</g:gtin>
+<g:brand><![CDATA[ INELDEA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f8257c96531fe2f34054a958c6bc7d0bfde42358b5a830979ff5f3acfb1bce2f ]]></g:image_link>
+<g:product_type><![CDATA[ Bien être > PROTECTION MOUSTIQUES ET AUTRES INSECTES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Olioseptil Sirop gorge et larynx - 125ml ]]></title>
+<g:id>25512bb9-80fa-4523-92ce-a217ad8c57b5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/olioseptil-sirop gorge et larynx - 125ml?25512bb9-80fa-4523-92ce-a217ad8c57b5 ]]></link>
+<g:price><![CDATA[ 830.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Olioseptil&nbsp;Sirop gorge et larynx&nbsp;Ineldea</strong>,&nbsp;à base d’extraits de plantes, huiles essentielles, Propolis et miel de Manuka qui aide à adoucir la gorge et à dégager les voies respiratoires.</p><ul><li><p>Les extraits de&nbsp;<strong>Thym, Mauve, Sauge et Menthe</strong>&nbsp;apaisent la gorge et ont un effet bénéfique sur le pharynx et les cordes vocales (larynx). L’extrait de Mauve soulage également les chatouillements dans la gorge, tandis que l’extrait de Sauge  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700225600357</g:gtin>
+<g:brand><![CDATA[ INELDEA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/72559789bb67fbab0f59e81a73fcb1ece98a50d9079061c347b7a4ab4fe8cc72 ]]></g:image_link>
+<g:product_type><![CDATA[ Médicament > Nez, gorge, oreilles et yeux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Olioseptil Sérénité 15 Gélules Sèches + 15 Gélules Liquides ]]></title>
+<g:id>859a9fce-2ae6-4f91-9592-dfd00b0e60a9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/olioseptil-sérénité 15 gélules sèches + 15 gélules liquides?859a9fce-2ae6-4f91-9592-dfd00b0e60a9 ]]></link>
+<g:price><![CDATA[ 1539.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Association d'huiles essentielles, tryptophane et extraits de plantes (safran pour l'équilibre émotionnel et la bonne humeur, ashwagandha pour la résistance au stress)<br>Complément Alimentaire<br>15 gélules sèches + 15 gélules liquides<br>Poids net : 16.65g</p><p>Personne souhaitant une solution naturelle pour améliorer sa stabilité émotionnelle, son stress ou son humeur. Balance émotionnelle &amp; relaxation, humeur positive, amélioration de la résistance au stress et maintien de la stabili ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700225603778</g:gtin>
+<g:brand><![CDATA[ INELDEA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/143956834a9591200e55719996818461d2d165a5afe34df3c2f0048210b84499 ]]></g:image_link>
+<g:product_type><![CDATA[ COMPLEMENTS ALIMENTAIRES > SANTE > STRESS ET SOMMEIL ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Olioseptil Voies Urinaires 15 Gélules ]]></title>
+<g:id>332a0a09-c380-4ace-a935-c0d3dcf2c182</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/olioseptil-voies urinaires 15 gélules?332a0a09-c380-4ace-a935-c0d3dcf2c182 ]]></link>
+<g:price><![CDATA[ 750.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Olioseptil Voies Urinaires</strong> est un pur produit d'<strong>aromathérapie</strong> formulé avec 7 <strong>huiles essentielles</strong> pures, naturelles et chémotypées qui forment un complexe naturel qui joue un rôle dans le <strong>bon fonctionnement des voies urinaires</strong>.</p><p><br></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700225600326</g:gtin>
+<g:brand><![CDATA[ INELDEA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f5e43fdc522577e75e84238f5ec8300faf33462c57a8d6aa5cc190a7dcac340a ]]></g:image_link>
+<g:product_type><![CDATA[ COMPLEMENTS ALIMENTAIRES > SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Omron M3 Comfort Tensiomètre Électronique ]]></title>
+<g:id>5e547e53-cd35-4b84-9f5a-4aad2ea112d7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/omron-m3 comfort tensiomètre Électronique?5e547e53-cd35-4b84-9f5a-4aad2ea112d7 ]]></link>
+<g:price><![CDATA[ 4990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Omron M3 Comfort HEM-7155-E Tensiomètre Électronique est un moniteur de tension artérielle qui permet de suivre facilement l'hypertension à domicile.</p>
+<p>Il permet ainsi de détecter les pulsations cardiaques irrégulières. Il donne une mesure de tension artérielle précise dans n'importe quelle position autour du haut du bras. Il est également doté d'un indicateur d'installation correcte du brassard et de détection de mouvement qui aident à éviter les erreurs courantes pouvant entraîner des  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4015672113480</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1fe6975794c664bc5286884feb164a18e787f81d9c43375f7aaa930e4abc9f5d ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Omron RS7 tensiomètre électronique poignet Intelli IT ]]></title>
+<g:id>362ae951-e2a5-4211-b7f1-d7214e999f82</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/omron-rs7 tensiomètre électronique poignet intelli it?362ae951-e2a5-4211-b7f1-d7214e999f82 ]]></link>
+<g:price><![CDATA[ 5690.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le tensiomètre poignet RS7</span><span> de la marque</span><span> Omron</span><span> permet aux professionnels de santé ou aux particuliers de mesurer la tension artérielle au </span></p>
+<p><span> niveau du </span><span>poignet</span><span> afin de détecter une éventuelle anomalie cardiaque.</span></p>
+<p><span><span>Doté d'un </span><span>capteur de positionnement avancé,</span><span> il vous sera très simple de positionner correctement le tensiomètre électronique RS7 afin d'obtenir d ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4015672111172</g:gtin>
+<g:brand><![CDATA[ OMRON ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f3b05f474e69d800abc7452553c24929da22a3cdefdd3595c4d1b0d01ca0983f ]]></g:image_link>
+<g:product_type><![CDATA[ TENSIOMETRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Omron Tensiomètre Brassard M2 Basic ]]></title>
+<g:id>56eb223e-6ec5-4934-ab22-21eadda34c5d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/omron-tensiomètre brassard m2 basic?56eb223e-6ec5-4934-ab22-21eadda34c5d ]]></link>
+<g:price><![CDATA[ 3290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Il s'agit d'un tensiomètre oscillométrique livré avec brassard standard. Ce produit est doté de la technologie Intellisense qui peut réguler et gérer automatiquement le gonflage et le dégonflage pour un meilleur <span>confort d'utilisation</span>.</p>
+<p>Il affiche sur son écran les valeurs des pouls, systole et diastole. Il est également doté d'un <span>indicateur d'hypertension</span> en comparant les résultats systoliques et diastoliques avec les valeurs admises par l'OMS.</p>
+<p>Ce <span> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4015672112230</g:gtin>
+<g:brand><![CDATA[ OMRON ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0f151cf05b1b8673832d76e3a5e2723c67f78b0a3afe9e2eec6656ad8de8f362 ]]></g:image_link>
+<g:product_type><![CDATA[ TENSIOMETRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Omron tensiomètre poignet RS2 ]]></title>
+<g:id>810f4512-8a34-4a8e-801f-03f3ab4b0fe4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/omron-tensiomètre poignet rs2?810f4512-8a34-4a8e-801f-03f3ab4b0fe4 ]]></link>
+<g:price><![CDATA[ 2390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le tensiomètre au poignet OMRON RS2 est entièrement automatique et constitue un moyen facile et pratique de contrôler votre pression artérielle. Il intègre la technologie Intellisense d’OMRON qui détermine la vitesse et pression idéales en vue d’un plus grand confort par un léger gonflage ou dégonflage.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4015672111110</g:gtin>
+<g:brand><![CDATA[ OMRON ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b21e4437c398692e49ac221c1644d0190e1d770b4d27df5815e9cbac2c8fa650 ]]></g:image_link>
+<g:product_type><![CDATA[ TENSIOMETRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ OneTouch Delica Plus Lancettes Fines Autocontrôle de la Glycémie 30G (0.32mm) - Boîte de 200 -  ]]></title>
+<g:id>c28748d1-6271-4cd8-89c4-8ca1eee3f2f2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/onetouch-delica plus lancettes fines autocontrôle de la glycémie 30g (0.32mm) - boîte de 200 - ?c28748d1-6271-4cd8-89c4-8ca1eee3f2f2 ]]></link>
+<g:price><![CDATA[ 1281.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Les lancettes OneTouch Delica Plus sont spécialement conçues pour offrir un prélèvement capillaire confortable et précis, idéal pour le suivi de la glycémie chez les personnes diabétiques.</p><p>Compatibles avec les stylos autopiqueurs OneTouch Delica Plus et OneTouch Delica, ces lancettes stériles de calibre fin (30 g - 0,32 mm) possèdent un revêtement en silicone qui réduit les vibrations, assurant ainsi une expérience plus douce et moins douloureuse. Grâce à 13 réglages de profondeur de pi ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4580505780059</g:gtin>
+<g:brand><![CDATA[ ONE TOUCH ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f2fac8c727a458c86147bdf62d31bf92f8b6684a9a715cc2d8ac91cf9a95f914 ]]></g:image_link>
+<g:product_type><![CDATA[ Médicament ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oneobiol Hair Expert Chute de Cheveux 2x30 Capsules ]]></title>
+<g:id>4f0fe073-8f28-4957-aecf-db2fc52045cd</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oneobiol-hair expert chute de cheveux 2x30 capsules?4f0fe073-8f28-4957-aecf-db2fc52045cd ]]></link>
+<g:price><![CDATA[ 2499.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Hair Expert Chute de Cheveux</span> de <span>OENOBIOL </span>est un complément alimentaire pour traiter la chute des cheveux. </p>
+<p>C'est une solution qui permet de garder une <span>chevelure saine</span> et fournie. </p>
+<p>Ce complément alimentaire agit sur la <span>croissance</span>, la densité capillaire et la revitalisation des cheveux. </p>
+<p>Ce programme est un programme complet qui dure <span>2 mois.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8713304955649</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/87b78d10bd8973c64b1fd15da05b0a202849ccfd37c28138cf91fc9a8efbc6ef ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Onykoleïne Solution Assainissante Ongles Mains Pieds 10 ml ]]></title>
+<g:id>7b655c7a-b8f4-49dd-a0e8-bd6ecf01ea4f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/onykole-ne solution assainissante ongles mains pieds 10 ml?7b655c7a-b8f4-49dd-a0e8-bd6ecf01ea4f ]]></link>
+<g:price><![CDATA[ 710.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Les ongles déficients nécessitent un apport en éléments nutritifs et fortifiants. Onykoleïne Solution Assainissante Ongles Mains Pieds 10 ml renferme de l'A.P.N. (Activateur Naturel des Phanères) qui stimule la production de Kératine, associé à un complexe d'huile essentielle d'arbre à thé et de lipesters (actif breveté) qui créent un milieu défavorable au développement des champignons microscopiques. Peut être utilisé en complément d'un traitement anti-mycosique pour optimiser son activité,  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3323039623024</g:gtin>
+<g:brand><![CDATA[ ASEPTA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5af5f3592d69b8d2af2f484e5ee4aecd298f55a8defa69e27c73fda72f4628f3 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS ET CONFORT DES PIEDS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ophtakit Allergie 3en1 ]]></title>
+<g:id>e2e23fe9-2119-4cac-a63e-13fabeafe482</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ophtakit-allergie 3en1?e2e23fe9-2119-4cac-a63e-13fabeafe482 ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Ophtakit Allergie kit de prise en charge des symptômes 3 en 1</span><span> contient un médicament, le </span><span>collyre anti-allergique Naabak </span><span>en unidoses, le dispositif médical </span><span>Theawash </span><span>en unidoses pour lavage oculaire et </span><span>deux sachets de compresses</span><span>.</span><br /><br /><span>Il est indiqué en cas de </span><span>démangeaisons</span><span> des yeux associées à des </span><span>sensations de brûlure, rougeur, gonflement et ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3662042010187</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c096f108b1810d7721c7c73c94f4119c6e854dd57e1629f04dc7bbaef3458fd8 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ophtal Expert Prescription Nature 60 Capsules ]]></title>
+<g:id>f9213c0c-fc9a-428f-b019-83799ccbf4c2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ophtal-expert prescription nature 60 capsules?f9213c0c-fc9a-428f-b019-83799ccbf4c2 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="product-description-short-275" class="rte-content">
+<p><span>OPHTAL EXPERT</span><span> est un complément alimentaire à visée oculaire. Il associe des vitamines et sels minéraux antioxydants, des caroténoïdes (lutéine et zéaxanthine) et contient des acides gras oméga 3. Les antioxydants (vitamines C et E) aident à protéger les cellules du stress oxydatif. Le DHA et le zinc contribuent au maintien d’une fonction visuelle normale.</span></p>
+</div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760293913162</g:gtin>
+<g:brand><![CDATA[ PRESCRIPTION NATURE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9aae88f23dce4e4061d242af463e6329da7c4737aabc89841130545795b91a3e ]]></g:image_link>
+<g:product_type><![CDATA[ SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ophtaxia 100 ml ]]></title>
+<g:id>8859b6c4-2310-4c0d-ae59-735c1b62abbd</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ophtaxia-100 ml?8859b6c4-2310-4c0d-ae59-735c1b62abbd ]]></link>
+<g:price><![CDATA[ 555.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Bausch + Lomb Ophtaxia 100 ml est une solution de lavage oculaire, indiquée pour :</p>
+<ul><li>le lavage des yeux des adultes et des enfants de plus de 3 ans,</li>
+<li>les yeux rouges, irrités et fatigués,</li>
+<li>le soulagement en cas d'exposition à des facteurs environnementaux comme une exposition excessive au vent, à la poussière, climatisation, air sec et pollué, pièces fermées et enfumées, utilisation prolongée de l'ordinateur, conditions d'éclairage ou de conduite de nuit,</li>
+<li>le ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614790000620</g:gtin>
+<g:brand><![CDATA[ BAUSCH & LOMB ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/db83367e2536edab2cd8be8c6f91f0f25b6f0a6135d3c15c403a8d8433fb1c88 ]]></g:image_link>
+<g:product_type><![CDATA[ CONTACTOLOGIE ET SOINS DES YEUX ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ophtaxia unidose 10 x 5 ml ]]></title>
+<g:id>c0dd4787-e19c-40b8-9f0c-aad71a55eae5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ophtaxia-unidose 10 x 5 ml?c0dd4787-e19c-40b8-9f0c-aad71a55eae5 ]]></link>
+<g:price><![CDATA[ 299.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Bausch &amp; Lomb ophtaxia unidose 10 x 5 ml sont recommandées pour l'hygiène oculaire chez les bébés, les enfants et les adultes.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401053843182</g:gtin>
+<g:brand><![CDATA[ BAUSCH & LOMB ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0ec91eb27f9930a22bbfd2feefbe112a7308e07d9bf510a656a97de599700a96 ]]></g:image_link>
+<g:product_type><![CDATA[ CONTACTOLOGIE ET SOINS DES YEUX ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Optinuit Sommeil 60 Gummies ]]></title>
+<g:id>165a6ef6-88fb-425f-8e3f-4361dc277e99</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/optinuit-sommeil 60 gummies?165a6ef6-88fb-425f-8e3f-4361dc277e99 ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nutreov Optinuit Sommeil 60 Gummies est un complément alimentaire permettant de réduire le temps d'endormissement. Il associe :</p><ul><li><p>de la mélatonine qui contribue à réduire le temps d'endormissement (l'effet bénéfique est obtenu par la consommation de 1 mg de mélatonine avant le coucher),</p></li><li><p>de l'aubépine qui, par son effet apaisant, contribue à maintenir un sommeil naturel,</p></li><li><p>de la mélisse qui favroise un sommeil sain,</p></li><li><p>de l'eschscholtzia qui  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000671230</g:gtin>
+<g:brand><![CDATA[ NUTREOV ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7e12905079449063bbdcef9211e06c0ca561daf95a0e1ca1b48e9104944af193 ]]></g:image_link>
+<g:product_type><![CDATA[ COMPLEMENTS ALIMENTAIRES > SANTE > STRESS ET SOMMEIL ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Optinuit Sommeil Bio, 30 Comprimés ]]></title>
+<g:id>b91dd1c2-96e2-441a-8478-08cca673a897</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/optinuit-sommeil bio, 30 comprimés?b91dd1c2-96e2-441a-8478-08cca673a897 ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le sommeil est essentiel pour <strong>garder un rythme</strong> et pour être en <strong>bonne santé</strong>.</p><p>Ce complément alimentaire est conçu pour retrouver un <strong>sommeil réparateur et de qualité</strong>.</p><p>La <strong>Valériane</strong>, l’<strong>Aubépine</strong> et l’<strong>Eschscholtzia</strong> sont des plantes qui favorisent l’endormissement par la relaxation du corps et de l’esprit.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000671186</g:gtin>
+<g:brand><![CDATA[ NUTREOV ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/424545fd8f2a585f9ffebf4e9bb1b6b5c0fa781086fe3bc7a5af7722a57a5e52 ]]></g:image_link>
+<g:product_type><![CDATA[ COMPLEMENTS ALIMENTAIRES > SANTE > STRESS ET SOMMEIL ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Optive solution oculaire de confort 10ml ]]></title>
+<g:id>0280c6c4-8be6-4b61-8484-dc4f3c22c611</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/optive-solution oculaire de confort 10ml?0280c6c4-8be6-4b61-8484-dc4f3c22c611 ]]></link>
+<g:price><![CDATA[ 976.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="i4c-draggable-container" style="width:0px;height:0px;">
+<div class="resolved"></div>
+</div>
+<p>La nouvelle technologie des gouttes Optive permet un confort de longue durée chez les patients souffrant du syndrome des yeux secs (brûlure, sensation de sable dans les yeux, sensation de pression et de sécheresse oculaire). Cette inconvénience aujourd?hui très répandue est provoquée par l´altération du film lacrymal qui agit comme une couche lubrifiante protectrice à la surface de l?oeil. Les ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401042329192</g:gtin>
+<g:brand><![CDATA[ ALLERGAN ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d8011c96209c5e67d12d1cfb054dd4b7a1a4fdb03229394114c014ca4ecaebab ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Optone Double Action Yeux Secs 10 ml ]]></title>
+<g:id>13ff92e2-92e7-4e4a-8749-cfef92dacb45</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/optone-double action yeux secs 10 ml?13ff92e2-92e7-4e4a-8749-cfef92dacb45 ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le syndrome de l'oeil sec peut être causé par de nombreux aspects de la vie moderne.</span><br /><br /><span>Nos gouttes Optone ont une formule Double Action spécialement conçue sans conservateur. Elles hydratent pour un soulagement instantané et lubrifient pour un confort durable.</span></p>
+<p><span>Caractéristique du produit :</span></p>
+<ul><li>Hydrate et Lubrifie</li>
+<li>Soulagement instantané et longue durée</li>
+<li>Sans conservateur</li>
+<li>Peut être utilisé avec des lentilles ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3528280063661</g:gtin>
+<g:brand><![CDATA[ RECKITT BENCKISER HEALTHCARE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ba00199c1947ad1424cacc995c983d11018ecd2a782d3c22a7ac9026b2ca4f20 ]]></g:image_link>
+<g:product_type><![CDATA[ CONTACTOLOGIE ET SOINS DES YEUX ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oral B Brosse à Dents Electrique Pro Kids Cars ]]></title>
+<g:id>41023fa0-be9d-43a1-84c9-a49956d6d8b1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oral-b brosse à dents electrique pro kids cars?41023fa0-be9d-43a1-84c9-a49956d6d8b1 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La brosse à dents électrique pro kids de Oral-B est spécialement conçue pour les enfants de 3 ans et plus.</span><br /><span>Grâce au mode sensitive, les gencives et les dents des enfants sont protégées et nettoyées en douceur.</span><br /><span>Elle a deux modes de brossage : doux et approfondi.</span><br /><span>Le design de la brosse à dents et l'application Disney Magic Timer d'Oral-B pour aider les enfants à respecter le temps de brossage, rend le brossage de dents plus ludique pou ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8006540773031</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e6a108a148fa420ac5dc8e20fea21c029fd77cd51dd68964ddd62bef4f1bffc9 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oral B Brosse à Dents Electrique Pro Kids Spider Man ]]></title>
+<g:id>2315acd3-d30c-4c5f-ae4f-03c353329e36</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oral-b brosse à dents electrique pro kids spider man?2315acd3-d30c-4c5f-ae4f-03c353329e36 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La brosse à dents électrique pro kids de Oral-B est spécialement conçue pour les enfants de 3 ans et plus.</span><br /><span>Grâce au mode sensitive, les gencives et les dents des enfants sont protégées et nettoyées en douceur.</span><br /><span>Elle a deux modes de brossage : doux et approfondi.</span><br /><span>Le design de la brosse à dents et l'application Disney Magic Timer d'Oral-B pour aider les enfants à respecter le temps de brossage, rend le brossage de dents plus ludique pou ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8006540772768</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/aad502f3b6b3b88e1c7b52bdbb74ec6c5cc517a4513f1122ad722f687d9a6383 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oral B Brosse à dents Kids Le Roi Lion ]]></title>
+<g:id>82d39991-fcc4-4f5d-841b-8565f9ba5ec0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oral-b brosse à dents kids le roi lion?82d39991-fcc4-4f5d-841b-8565f9ba5ec0 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La brosse à dents électrique Oral-B Pro Kids est désormais disponible dans l'édition «The Lion King» !</span></p>
+<ul><li>Brosse à dents électrique pour un nettoyage meilleur et plus doux pour les enfants à partir de 3 ans</li>
+<li>Tête de brosse ronde, spécialement pour les petites bouches</li>
+<li>Doux pour les gencives avec des poils extra doux</li>
+<li>2 modes : Nettoyage quotidien et mode Super Sensitive unique pour une expérience incroyablement douce</li>
+<li>Rendez la poignée enc ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8700216423410</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/841df5f8ec1f6871c090d2e2fb800d14fc8d55a5dfb1e4661db05bb6cb51851d ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oral B Brossette dentaire Ultra thin x3 X-filaments ]]></title>
+<g:id>a099a816-0cf4-4ccf-ad68-62ccd59e8c34</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oral-b brossette dentaire ultra thin x3 x-filaments?a099a816-0cf4-4ccf-ad68-62ccd59e8c34 ]]></link>
+<g:price><![CDATA[ 1399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Oral-B Pro Sensitive Clean 3 Brossettes de Rechange sont des têtes de rechange conçues avec des filaments ultra doux pour les gencives, associés à des filaments classiques intransigeants avec la plaque dentaire.<br>Elles permettent de retirer jusqu'à 100 % de plaque dentaire supplémentaire et de réduire les inflammations des gencives jusqu'à 100 % par rapport à une brosse à dents manuelle. De plus, ces brossettes sont équipées de nouveaux filaments en forme de X qui ciblent efficacement les z ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8006540896068</g:gtin>
+<g:brand><![CDATA[ PROCTER & GAMBLE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ef78cad2f531bf2aa7bcdc122b9561e4af2339a26292b2346646cb4779a38b60 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIÈNE BUCCO-DENTAIRE > BROSSE A DENTS ELECTRIQUE - BROSSETTE BAD ELECTRIQUE > BROSSES À DENTS ET ACCESSOIRES DENTAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oral B OxyJet 4 Canules ]]></title>
+<g:id>9efb1f49-8c24-4eb3-922f-556b05f3fa6b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oral-b oxyjet 4 canules?9efb1f49-8c24-4eb3-922f-556b05f3fa6b ]]></link>
+<g:price><![CDATA[ 960.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="tabzone" id="description">
+<div class="tabcontent">
+<div>Les canules de rechange Oral-B Oxyjet s'adaptent aux hydropulseurs Oral-B Professional Care OxyJet.</div>
+</div>
+</div>
+<div class="tabzone" id="conseil-utilisation"></div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4210201850304</g:gtin>
+<g:brand><![CDATA[ ORAL B ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4b438297862cc2ec728f2bafe65a46b34567eb83cbbcea2e51148f214814eade ]]></g:image_link>
+<g:product_type><![CDATA[ BROSSES À DENTS ET ACCESSOIRES DENTAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oral B pro Kids 3+ Brosse à Dents Electrique Princesse ]]></title>
+<g:id>81c8d76f-c8cc-4887-8820-dc96b6281243</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oral-b pro kids 3+ brosse à dents electrique princesse?81c8d76f-c8cc-4887-8820-dc96b6281243 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La brosse à dents électrique pro kids de Oral-B </span>est spécialement conçue pour les <span>enfants de 3 ans et plus</span>.</p>
+<p>Grâce au<span> mode sensitive</span>, les gencives et les dents des enfants sont protégées et nettoyées en douceur.</p>
+<p>Elle a <span>deux modes de brossage</span> : doux et approfondi.</p>
+<p id="E33UMAN">Le <span>design</span> de princesse et l'<span>application</span> Disney Magic Timer d'Oral-B pour aider les enfants à respecter le temps de brossage ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8006540772669</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/15dab78f09984412aafa389203dc9fc5e268d82d5d365cdd324b0aec67b72be5 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oral-B Aquacare Séries 4 Hydropulseur Portable Avec Technologie Oxyjet ]]></title>
+<g:id>26c68f09-92d6-4a78-91b1-a577ca906001</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oral-b aquacare séries 4 hydropulseur portable avec technologie oxyjet?26c68f09-92d6-4a78-91b1-a577ca906001 ]]></link>
+<g:price><![CDATA[ 8790.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4210201436409</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0093445cfc5a0ee1546bd1f7000de44617c4b5628aedcedea635f07f5e791a5a ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oral-B Interspace 2 Brossettes ]]></title>
+<g:id>9a21c7b1-c059-4396-b4b8-cca9722390ed</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oral-b interspace 2 brossettes?9a21c7b1-c059-4396-b4b8-cca9722390ed ]]></link>
+<g:price><![CDATA[ 599.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Oral-B Interspace 2 Brossettes est une brossette conçue pour un nettoyage efficace et adapté des zones difficiles et nécessitant une attention particulière telles que les espaces interdentaires et bridges.<br />Elle offre un nettoyage en profondeur dans les endroits difficiles d'accès, pour des gencives plus saines.</p>
+<p>Elle est conçue exclusivement pour convenir aux manches de brosses à dents Oral-B, sauf Pulsonic &amp; IO.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4210201853893</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7afb6fa038194d65b05b6436a153bcba6a016a4a5b614648e2a4d28809a774a2 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oral-B Water Jet 4 Canules de Remplacement ]]></title>
+<g:id>eb7d3633-922b-4de7-b790-554a9b910848</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oral-b water jet 4 canules de remplacement?eb7d3633-922b-4de7-b790-554a9b910848 ]]></link>
+<g:price><![CDATA[ 960.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="short_description_content" class="rte align_justify">
+<p>Oral-B Water Jet 4 Canules de Remplacement sont des canules pour l'hydropulseur Oral-B Waterjet.</p>
+<p>La technologie Waterjet permet d'éliminer rapidement mais en douceur les résidus alimentaires entre les dents, tout en stimulant et massant les gencives.</p>
+<p>La position Mono-jet de l'embout permet de nettoyer les dents et les espaces inter-dentaires et éliminer les résidus alimentaires restants. La position Multi-jet de l'em ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4210201850267</g:gtin>
+<g:brand><![CDATA[ PROCTER & GAMBLE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0a2131ecd350aae4890b080b9f1b8a2b496d6754fdea28cb7d8b9c43425cc052 ]]></g:image_link>
+<g:product_type><![CDATA[ BROSSES À DENTS ET ACCESSOIRES DENTAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Orgakiddy Bavoir Jetable 12 Bavoirs ]]></title>
+<g:id>6710ea73-ec61-45ef-bf38-598033c0f1e6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/orgakiddy-bavoir jetable 12 bavoirs?6710ea73-ec61-45ef-bf38-598033c0f1e6 ]]></link>
+<g:price><![CDATA[ 390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Bavoir Jetable triple épaisseur des laboratoires Orgakiddy offre l'association parfaite d'une douceur, d'une grande résistance et d'une parfaite absorption. Idéal pour les enfants à partir de 4 mois, il est ultra pratique lorsque vous n'êtes pas à la maison : en voyage, en weekend ou en balade.</p>
+<div></div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700769900050</g:gtin>
+<g:brand><![CDATA[ DENSMORE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/db5b12544aaacea492984440bcc669336180cc81e052ca587ce316efe6feae1b ]]></g:image_link>
+<g:product_type><![CDATA[ ACCESSOIRES BEBE - ENFANT ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Orgakiddy Carrés de Soin 100 Unités ]]></title>
+<g:id>e62a00c2-4462-4f77-b635-dbb2debaae13</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/orgakiddy-carrés de soin 100 unités?e62a00c2-4462-4f77-b635-dbb2debaae13 ]]></link>
+<g:price><![CDATA[ 290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Orgakiddy Carrés de Soin 100 Unités en non tissé sont très pratiques pour nettoyer le visage (démaquillage) et le corps (siège de bébé).</p>
+<p>Doux et résistant, le carré de soin de 15 cm x 15 cm (déplié) ne peluche pas et ne s'étire pas.</p>
+<p>Spécialement conçus pour un nettoyage en douceur, ces carrés sont idéaux pour : la toilette ou les soins dermatologiques de bébé comme le nettoyage des yeux, des oreilles, du nez,...</p>
+<p>La peau est propre et nette, non irritée.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700769900371</g:gtin>
+<g:brand><![CDATA[ DENSMORE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0288f720082594361c10e24d98d0a22ab5ddecc6e2a9236748fcd06ba104d41c ]]></g:image_link>
+<g:product_type><![CDATA[ CARRES COTON ET MOUCHOIRS PAPIER ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Orgakiddy Chaussons hygiéniques M 32-35 ]]></title>
+<g:id>47cd9890-7236-4504-a2e5-13307e132fca</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/orgakiddy-chaussons hygiéniques m 32-35?47cd9890-7236-4504-a2e5-13307e132fca ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Orgakiddy Chaussons Hygiéniques 1 Paire sont des chaussons qui permettent de protéger efficacement les pieds contre les verrues et autres infections du pied.</p>
+<p>Ces chaussons sont idéals pour la piscine, les vestiaires, les douches, etc. Ils évitent le contact direct avec le sol et favorisent l'hygiène.</p>
+<p>Pour enfiler plus facilement les chaussons, vous pouvez mettre un léger voile de talc.</p>
+<p>Ils protègent même les pieds des blessures et permettent de se baigner même avec des pa ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700769900548</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b11763ef24414a1d51a511ac1fc250a77c2d1bc78f4c2712057097881a02efee ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Orgakiddy Chaussons hygiéniques S 32-35 ]]></title>
+<g:id>805ba627-e166-4d1b-982b-021ffbd6092a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/orgakiddy-chaussons hygiéniques s 32-35?805ba627-e166-4d1b-982b-021ffbd6092a ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Orgakiddy Chaussons Hygiéniques 1 Paire sont des chaussons qui permettent de protéger efficacement les pieds contre les verrues et autres infections du pied.</p>
+<p>Ces chaussons sont idéals pour la piscine, les vestiaires, les douches, etc. Ils évitent le contact direct avec le sol et favorisent l'hygiène.</p>
+<p>Pour enfiler plus facilement les chaussons, vous pouvez mettre un léger voile de talc.</p>
+<p>Ils protègent même les pieds des blessures et permettent de se baigner même avec des pa ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700769900531</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4a09f8fbed2d253a4d76bb1d2fbfb8f30d7662686cb59a30205a8c53776de2a9 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Orgakiddy Culotte Filet Lavable 5 Unités ]]></title>
+<g:id>ea6138fd-8fa3-4431-ae01-eb7383539b6f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/orgakiddy-culotte filet lavable 5 unités?ea6138fd-8fa3-4431-ae01-eb7383539b6f ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Orgakiddy Culotte Filet Lavable 5 Unités en 100% nylon aéré sont idéales pour votre séjour en maternité, pour maintenir les protections périodiques sans risquer de tâcher vos sous-vêtements.</p>
+<p>En tissu doux et aux coutures extensibles, ces culottes extensibles sont confortables et non comprimantes, très agréables à porter.</p>
+<p>Taille unique, convient à toutes les morphologies.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700769900319</g:gtin>
+<g:brand><![CDATA[ DENSMORE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/691a03b4a52da799f460e8da26c5b02a95b6b453df59796a1ae7676006beac49 ]]></g:image_link>
+<g:product_type><![CDATA[ PROTECTIONS FEMININES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Orgakiddy Culottes Jetables 4 Unités - Taille : S ]]></title>
+<g:id>4b55bf69-c0d8-4e9e-8679-4380c9c70115</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/orgakiddy-culottes jetables 4 unités - taille : s?4b55bf69-c0d8-4e9e-8679-4380c9c70115 ]]></link>
+<g:price><![CDATA[ 390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Recommandées lors de votre séjour à la maternité pour maintenir les protections périodiques sans risquer de tâcher vos sous-vêtements habituels. <br />Confortables et non comprimantes grâce au tissu doux et aux coutures extensibles. <br />Prenez la même taille qu'avant votre grossesse. <br />Elles tiennent compte du vos nouvelles formes. <br /><br /></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700769900326</g:gtin>
+<g:brand><![CDATA[ DENSMORE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b8b952b8eea449367b9b47cf17f18fc5b02fa050e86b3ca8d1635ead606fb8ed ]]></g:image_link>
+<g:product_type><![CDATA[ PROTECTIONS FEMININES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Orgakiddy Protège Cuvette Jetable x 10 ]]></title>
+<g:id>bc45c787-7453-47b3-8d81-2b1acea62124</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/orgakiddy-protège cuvette jetable x 10?bc45c787-7453-47b3-8d81-2b1acea62124 ]]></link>
+<g:price><![CDATA[ 200.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Partout, je garde une hygiène parfaite! Stop aux germes pour toute la famille avec ce protège cuvette de toilettes jetable 100% biodégradable d'Orgakiddy </p>
+<div></div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700769900012</g:gtin>
+<g:brand><![CDATA[ DENSMORE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bab3b70f7b7fe9d7faec60f07d0096411b40ff0788f675fd00870282d78c9799 ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Orgakiddy Protège Matelas à Langer Jetables x 5 ]]></title>
+<g:id>50c8c850-6f93-4b00-8ac8-f45e9d3978f1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/orgakiddy-protège matelas à langer jetables x 5?50c8c850-6f93-4b00-8ac8-f45e9d3978f1 ]]></link>
+<g:price><![CDATA[ 315.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ces protèges matelas sont ultra pratique et hygiénique pour changer bébé où que vous soyez. </p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700769900098</g:gtin>
+<g:brand><![CDATA[ ORGAKIDDY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/875966498306780ac41d913b2f74573cea462cb2df895f87bc157afd3adce408 ]]></g:image_link>
+<g:product_type><![CDATA[ ACCESSOIRES BEBE - ENFANT ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Orgakiddy Sac à Couches Parfumé Fraise  50 Sacs ]]></title>
+<g:id>1171e999-0a97-4e0b-b4df-6f646adfdec2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/orgakiddy-sac à couches parfumé fraise  50 sacs?1171e999-0a97-4e0b-b4df-6f646adfdec2 ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Orgakiddy Sac à Couches Parfumé 50 Sacs sont des sacs ultra pratiques et hygiéniques à emporter partout avec vous pour pouvoir jeter les couches de votre enfant.<br />Ces sacs sont délicatement parfumés à la fraise et se ferment en un tour de noeud et neutralisent ainsi les mauvaises odeurs.<br /><br /></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700769900111</g:gtin>
+<g:brand><![CDATA[ DENSMORE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c222c4a9c7eb5dbeeca4199861efc74cb9fe79662a4ee628b5b5e4fdbe8c96f5 ]]></g:image_link>
+<g:product_type><![CDATA[ ACCESSOIRES BEBE - ENFANT ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Organyc Serviette maternité premiers jours x 12 ]]></title>
+<g:id>a350a7ca-5826-4677-9195-b65416bc9524</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/organyc-serviette maternité premiers jours x 12?a350a7ca-5826-4677-9195-b65416bc9524 ]]></link>
+<g:price><![CDATA[ 635.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="product-detail-title test txt-product nopadding col-lg-12 col-xs-12 col-sm-12 col-md-12">Serviettes maternité premiers jours</p>
+<div class="product-detail-desc txt-product nopadding col-lg-12 col-xs-12 col-sm-12 col-md-12">
+<p>Fabriquées en 100 % coton bio, avec une couche supérieure en coton bio et un cœur absorbant. Ultra douces, épaisses et molletonnées pour l’environnement vaginal délicat après l’accouchement. Hautement absorbantes. Hypoallergéniques et respirantes.</p>
+<p>Modèle  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8016867001694</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/44d7190f35d6daf352901ae071c7b05345256a9ccb007addf20938c764b0f4e3 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Organyc Serviettes à ailettes coton bio normal x 10 ]]></title>
+<g:id>80c9b8b8-b6b2-45c6-ac8e-f44c7f620a83</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/organyc-serviettes à ailettes coton bio normal x 10?80c9b8b8-b6b2-45c6-ac8e-f44c7f620a83 ]]></link>
+<g:price><![CDATA[ 414.99 EUR ]]></g:price>
+<description><![CDATA[ <p class="product-detail-title test txt-product nopadding col-lg-12 col-xs-12 col-sm-12 col-md-12">Organyc serviettes coton bio Normal, ailettes pliées</p>
+<div class="product-detail-desc txt-product nopadding col-lg-12 col-xs-12 col-sm-12 col-md-12">
+<p>Cliniquement prouvées et adaptées aux peaux sensibles. Réalisées en 100 % coton bio, avec une couche supérieure et un cœur absorbant en coton bio. Hautement absorbantes. Hypoallergéniques et respirantes. Modèle anatomique. Ailettes de protection ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8016867009942</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4c9c163b40753949456677453bbfbb4884ec160a0e3386bc0a55a89410167f75 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Organyc protège slips coton bio x 24 ]]></title>
+<g:id>8270cacf-6adc-434b-ac65-21e4648473c0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/organyc-protège slips coton bio x 24?8270cacf-6adc-434b-ac65-21e4648473c0 ]]></link>
+<g:price><![CDATA[ 365.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="product-detail-title test txt-product nopadding col-lg-12 col-xs-12 col-sm-12 col-md-12">Organyc protège slips coton bio, 24</p>
+<div class="product-detail-desc txt-product nopadding col-lg-12 col-xs-12 col-sm-12 col-md-12">
+<p>Cliniquement prouvées et adaptées aux peaux sensibles. Réalisés en 100 % coton bio, avec une couche supérieure en coton bio et un cœur absorbant en coton bio. Hautement absorbants. Hypoallergéniques et respirants. Modèle anatomique et ultra-fin.</p>
+<p>Boîte en  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8016867008945</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5c4aa11a3ab4b1c14b5f897308b2ec90a94dc01c3f9f614a3dd015068fdfc2c5 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Organyc protège slips coton bio x 24 pochettes ]]></title>
+<g:id>707006ab-a9dd-4b74-a2fb-9732c6be1164</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/organyc-protège slips coton bio x 24 pochettes?707006ab-a9dd-4b74-a2fb-9732c6be1164 ]]></link>
+<g:price><![CDATA[ 405.00 EUR ]]></g:price>
+<description><![CDATA[ <p></p>
+<p class="product-detail-title test txt-product nopadding col-lg-12 col-xs-12 col-sm-12 col-md-12">Organyc protège slips coton bio, plieés ou en pochette,</p>
+<div class="product-detail-desc txt-product nopadding col-lg-12 col-xs-12 col-sm-12 col-md-12">
+<p>Cliniquement prouvées et adaptées aux peaux sensibles. Réalisés en 100 % coton bio, avec une couche supérieure en coton bio et un cœur absorbant en coton bio. Hautement absorbants. Hypoallergéniques et respirants. Modèle anatomique et ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8016867009959</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c1ed153f1a8937c85f72eb6c641448474b1a2a807cbab380d31528895d1b4861 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Organyc protège slips extra long coton bio x 20 ]]></title>
+<g:id>9ae0f0b7-536e-4848-bbb7-857af6802833</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/organyc-protège slips extra long coton bio x 20?9ae0f0b7-536e-4848-bbb7-857af6802833 ]]></link>
+<g:price><![CDATA[ 385.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Cliniquement prouvées et adaptées aux peaux sensibles. Réalisés en 100 % coton bio, avec une couche supérieure en coton bio et un cœur absorbant en coton bio. Extra longs pour une protection maximale. Hautement absorbants. Hypoallergéniques et respirants. Modèle anatomique et ultra-fin. Boîte en carton recyclé.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8016867002646</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ee25be70413670f5e7074f063ab58375ce7fd032af9fcb56b28bc8931dfe7337 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Organyc serviettes coton bio extra nuit x7 ]]></title>
+<g:id>436bf9d4-4c83-44d0-ac08-e56831611500</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/organyc-serviettes coton bio extra nuit x7?436bf9d4-4c83-44d0-ac08-e56831611500 ]]></link>
+<g:price><![CDATA[ 430.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Avec 100% de coton Bio en contact direct avec votre peau et dans leur coeur absorbant : Serviettes, Protège-slips et tampons ORGANYC vous offrent une absorption optimale en toute sécurité.</span><br /><span>Organyc est la seule marque de protections féminines à l'efficacité cliniquement prouvée, adaptée aux peaux sensibles.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8016867017176</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3ea9ec32868d56150d9263b4c102ff9b1dc584bfe80af21b64f30033e68b792e ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Organyc tampons compact avec applicateur 16 tampons régulier ]]></title>
+<g:id>7c8cb4db-e5d5-483f-b162-afd84f9001e7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/organyc-tampons compact avec applicateur 16 tampons régulier?7c8cb4db-e5d5-483f-b162-afd84f9001e7 ]]></link>
+<g:price><![CDATA[ 535.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="product-detail-title test txt-product nopadding col-lg-12 col-xs-12 col-sm-12 col-md-12">Organyc tampons Compact 100% coton bio avec applicateur d’origine végétale Régulier</p>
+<p>Protection complète adaptées aux peaux sensibles. Les tampons Organyc sont fabriqués uniquement avec du coton biologique certifié qui offre une absorption et une protection contre les fuites optimales et sont doux pour qu’ils respectent votre peau sensible. Sans blanchiment au chlore, parfum, soie artificiell ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8016867007375</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2585cb4103e6f1c1b55a8b557e5ce4ef29f7139b11fad2dee6374c7e75d856ae ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Organyc tampons compact avec applicateur 16 tampons super ]]></title>
+<g:id>645298a1-028d-43e0-a90e-b713b73d006d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/organyc-tampons compact avec applicateur 16 tampons super?645298a1-028d-43e0-a90e-b713b73d006d ]]></link>
+<g:price><![CDATA[ 535.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="product-detail-title test txt-product nopadding col-lg-12 col-xs-12 col-sm-12 col-md-12">Organyc tampons Compact 100% coton bio avec applicateur d’origine végétale Super</p>
+<div class="product-detail-desc txt-product nopadding col-lg-12 col-xs-12 col-sm-12 col-md-12">
+<p>Protection complète adaptées aux peaux sensibles. Les tampons Organyc sont fabriqués uniquement avec du coton biologique certifié qui offre une absorption et une protection contre les fuites optimales et sont doux pou ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8016867007382</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fc150fa14b10d7719e1f4c3fe508da8bbb6d00b6ddd72ee5808c8116663f4b8a ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Organyc tampons compact sans applicateur 16 tampons super ]]></title>
+<g:id>2dbfc7f7-82cb-475c-9860-26349151cfa3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/organyc-tampons compact sans applicateur 16 tampons super?2dbfc7f7-82cb-475c-9860-26349151cfa3 ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="product-detail-title test txt-product nopadding col-lg-12 col-xs-12 col-sm-12 col-md-12">Organyc tampons 100% coton bio avec applicateur Super, 14 tampons</p>
+<div class="product-detail-desc txt-product nopadding col-lg-12 col-xs-12 col-sm-12 col-md-12">
+<p>Protection complète adaptées aux peaux sensibles. Les tampons Organyc sont fabriqués uniquement avec du coton biologique certifié qui offre une absorption et une protection contre les fuites optimales et sont doux pour qu’ils respec ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8016867009911</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/667c1a552c44b2759b83f8d5678a6d541f5a416b3af45fd7d1f01bc7c5896292 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Orilyse  Gouttes Auriculaires, 20ml ]]></title>
+<g:id>4caa557b-4604-487c-96bd-452b872dcc2a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/orilyse-gouttes auriculaires, 20ml?4caa557b-4604-487c-96bd-452b872dcc2a ]]></link>
+<g:price><![CDATA[ 490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Les <strong>Gouttes Auriculaires Orilyse du Laboratoire Genévrier</strong>, est un<strong> dispositif médica</strong>l formulé pour l'élimination es bouchons de cérumen.</p><p>Le cérumen est une substance produite de manière naturelle dans le conduit auditif. Il permet de lubrifier et de protéger contre les agents pathogènes qui peuvent causer des désagréments. Si elle s’accumule dans l’oreille, cette substance forme un bouchon et provoque des troubles.</p><p>L'huile d'amande douce n'<strong> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700640501314</g:gtin>
+<g:brand><![CDATA[ IBSA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0492b580c9585667b0376276b97dde6c70f1c19cabf4b23203b3363e7b1cbefa ]]></g:image_link>
+<g:product_type><![CDATA[ Bien être > HYGIÈNE ET PROTECTIONS AUDITIVES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Orilyse Spray Auriculaire Fast 100ml ]]></title>
+<g:id>b575aed1-71ef-4f48-91f9-fb2d36147109</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/orilyse-spray auriculaire fast 100ml?b575aed1-71ef-4f48-91f9-fb2d36147109 ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Elimination mécanique de l'excès de cerumen et des liquides accumulés.&nbsp;<br>Prévient et atténue les perturbations dérivant d'une production excessive de cérumen provoquée par la stagnation de liquides au fond du conduit auditif.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700640501307</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f229c89f41410c84e94211b35af1711bf1298e6d9c6865e317c8d291a69bff29 ]]></g:image_link>
+<g:product_type><![CDATA[ Bien être > HYGIÈNE ET PROTECTIONS AUDITIVES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oropolis  Adoucit la Gorge Propolis & Gelée Royale Coeur liquide 16 pastilles adoucissantes sans sucres ]]></title>
+<g:id>8a12227b-ceef-4c4e-9cec-ae0fe70a4b57</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oropolis-adoucit la gorge propolis & gelée royale coeur liquide 16 pastilles adoucissantes sans sucres?8a12227b-ceef-4c4e-9cec-ae0fe70a4b57 ]]></link>
+<g:price><![CDATA[ 660.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Les pastilles adoucissantes pour la gorge <strong>OROPOLIS®</strong> Coeur Liquide Propolis &amp; Gelée royale contiennent un cœur liquide entouré d’une coque adoucissante. La coque rigide fond lentement pour augmenter la salivation et maintenir l'hydratation de la gorge.</p><p>Issue de la sécrétion des jeunes abeilles nourricières,&nbsp;la gelée royale est considérée comme un précieux&nbsp;nectar de la ruche. Cette substance nutritive&nbsp;exclusive sert à l’alimentation de la ruche et plus& ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401521524933</g:gtin>
+<g:brand><![CDATA[ PROCTER & GAMBLE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/13712c35f8dd5b7af30d7e0fe786c63852755fb86e1beda68606b7671dce715b ]]></g:image_link>
+<g:product_type><![CDATA[  VOIES RESPIRATOIRES  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oropolis  Adoucit la Gorge Propolis Coeur Liquide 16 pastilles adoucissantes sans sucres ]]></title>
+<g:id>af1089dc-535c-4dd6-8037-154621d54047</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oropolis-adoucit la gorge propolis coeur liquide 16 pastilles adoucissantes sans sucres?af1089dc-535c-4dd6-8037-154621d54047 ]]></link>
+<g:price><![CDATA[ 630.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Les pastilles adoucissantes pour la gorge&nbsp;<strong>OROPOLIS®</strong>&nbsp;Coeur Liquide Propolis contiennent un cœur liquide entouré d’une coque adoucissante. La coque rigide fond lentement pour augmenter la salivation et maintenir l'hydratation de la gorge.</p><p>La propolis est un actif naturel issu de fragments végétaux que les abeilles ont récolté et modifié grâce à leur salive.&nbsp;Plus de 300 éléments la composent, parmi lesquels de la résine, de la cire, des huiles essentielles…& ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401551728233</g:gtin>
+<g:brand><![CDATA[ PROCTER & GAMBLE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ac65ac5450c020906129dbadb09f5724552e1fb2357a239660e387131c88a4f0 ]]></g:image_link>
+<g:product_type><![CDATA[  VOIES RESPIRATOIRES  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oropolis Adoucit la Gorge Propolis Miel Citron 20 pastilles adoucissantes sans sucres ]]></title>
+<g:id>4a063025-c7ec-4de7-a041-e4747df550f3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oropolis-adoucit la gorge propolis miel citron 20 pastilles adoucissantes sans sucres?4a063025-c7ec-4de7-a041-e4747df550f3 ]]></link>
+<g:price><![CDATA[ 640.01 EUR ]]></g:price>
+<description><![CDATA[ <p>Les Pastilles adoucissantes <strong>OROPOLIS®</strong> pour la gorge&nbsp;sont formulées à base d'extraits de propolis.&nbsp;Elles permettent d’adoucir les gorges sensibles, exposées aux agressions telles que la pollution, le froid ou le surmenage vocal.</p><p>La propolis est un actif naturel issu de fragments végétaux que les abeilles ont récolté et modifié grâce à leur salive.&nbsp;Plus de 300 éléments la composent, parmi lesquels de la résine, de la cire, des huiles essentielles…&nbsp;Dans ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8700216470131</g:gtin>
+<g:brand><![CDATA[ PROCTER & GAMBLE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cd23f2f275ea96b05aedee8030c3bcc5efb0a0beae5ac05aac63a34eac3cc08e ]]></g:image_link>
+<g:product_type><![CDATA[  VOIES RESPIRATOIRES  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oropolis Adoucit la Gorge Spray 20ml ]]></title>
+<g:id>9de2aa70-cb89-456e-ae1b-0918fa59d596</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oropolis-adoucit la gorge spray 20ml?9de2aa70-cb89-456e-ae1b-0918fa59d596 ]]></link>
+<g:price><![CDATA[ 675.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le spray <strong>OROPOLIS®</strong> est formulé à base de propolis.   La propolis est un actif naturel issu de fragments végétaux que les abeilles ont récolté et modifié grâce à leur salive. Plus de 300 éléments la composent, parmi lesquels de la résine, de la cire, des huiles essentielles... Dans la ruche, la propolis a pour but d'assainir I'ensemble de l'habitat et de le protéger des agressions extérieures.   <strong>OROPOLIS®</strong> Spray est recommandé pour les gorges sensibles, exposée ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401597220029</g:gtin>
+<g:brand><![CDATA[ PROCTER & GAMBLE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6377ebac4404bc16e384e0f24d6d7e47258ae7a6d5cb12670acf911b457c9679 ]]></g:image_link>
+<g:product_type><![CDATA[  VOIES RESPIRATOIRES  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oropolis Pastilles adoucissantes pour la gorge Miel Citron x 20 ]]></title>
+<g:id>c5e681f7-569e-4136-b942-6483ab55f852</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oropolis-pastilles adoucissantes pour la gorge miel citron x 20?c5e681f7-569e-4136-b942-6483ab55f852 ]]></link>
+<g:price><![CDATA[ 630.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="i4c-draggable-container" style="width:0px;height:0px;">
+<div class="resolved"></div>
+</div>
+<p>Les pastilles adoucissantes OROPOLIS® pour la gorge sont formulées à base d'extraits de propolis 100% française. Elles permettent d’adoucir les gorges sensibles, exposées aux agressions telles que la pollution, le froid ou le surmenage vocal.</p>
+<p>La propolis est un actif naturel issu de fragments végétaux que les abeilles ont récolté et modifié grâce à leur salive. Plus de 300 éléments la c ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401546697346</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5e7bfb8bb7eefc6d8593c45da2b6218f8c84d8952e2c34c3384360004e085449 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Orosantis 20 pastilles à sucer ]]></title>
+<g:id>578c42bf-57e3-4a51-8fd6-7f4a8ab66c89</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/orosantis-20 pastilles à sucer?578c42bf-57e3-4a51-8fd6-7f4a8ab66c89 ]]></link>
+<g:price><![CDATA[ 895.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="hp__pb__desc">VOIES AÉRIENNES IRRITÉES<br />L'efficacité et la puissance associées des Plantes, des Bourgeons, des Huiles Essentielles, des produits de la ruche, et des Oligo-éléments.</p>
+<ul class="hp__pb__list"><li class="hp__pb__li"> Angine</li>
+<li class="hp__pb__li"> Rhume</li>
+<li class="hp__pb__li"> Grippe</li>
+<li class="hp__pb__li"> Aphte</li>
+</ul><p>orosantis®Pastilles contient :</p>
+<p><span>Propolis Bio </span>traditionnellement utilisé en cas d’angine, mal de gorge, phar ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770008824089</g:gtin>
+<g:brand><![CDATA[ SANTIS ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/30d63357f7917499ddbff66d1c9926e036eccec3f64a57a78848eb3c0e975c38 ]]></g:image_link>
+<g:product_type><![CDATA[ SANTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Orosantis TG sirop 150 ml ]]></title>
+<g:id>e52ec512-130f-47f2-9b52-7f0d7282040f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/orosantis-tg sirop 150 ml?e52ec512-130f-47f2-9b52-7f0d7282040f ]]></link>
+<g:price><![CDATA[ 1095.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="hp__pb__desc">VOIES RESPIRATOIRES ENCOMBRÉES<br />L’efficacité et la puissance associées des Plantes, des Bourgeons, des Huiles Essentielles, et des produits de la ruche.</p>
+<ul class="hp__pb__list"><li class="hp__pb__li"> Toux grasse</li>
+<li class="hp__pb__li"> Bronchite</li>
+<li class="hp__pb__li"> Sinusite</li>
+</ul><div class="produit-quand editor voies-respiratoires">
+<p>orosantis®TG contient :</p>
+<p><span>Miel</span> traditionnellement utilisé pour ses bienfaits antiseptique,  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770008824058</g:gtin>
+<g:brand><![CDATA[ SANTIS ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2b34e609c236069bfb87cb53a6831bd9e1b761ec2bd5f7089f23a862d0995cbe ]]></g:image_link>
+<g:product_type><![CDATA[ SANTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Orosantis TS sirop 150 ml ]]></title>
+<g:id>6760b880-772f-4087-8117-45fe0dd5b1a7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/orosantis-ts sirop 150 ml?6760b880-772f-4087-8117-45fe0dd5b1a7 ]]></link>
+<g:price><![CDATA[ 1095.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>VOIES AÉRIENNES IRRITÉES</span><br /><span>L'efficacité et la puissance associées des Plantes, des Bourgeons, des Huiles Essentielles, et des produits de la ruche.</span></p>
+<ul class="hp__pb__list"><li class="hp__pb__li"> Toux sèche</li>
+<li class="hp__pb__li"> Trachéite</li>
+<li class="hp__pb__li"> Aphonie</li>
+<li class="hp__pb__li"> Voix cassée</li>
+<li class="hp__pb__li"> Avec ou sans fièvre, d'origine allergique ou non</li>
+</ul><div class="produit-quand editor voies-respiratoire ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770008824065</g:gtin>
+<g:brand><![CDATA[ SANTIS ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ebaf5a1c724be48246ea0e7d9022578375485aaac024c8a4d9a7bc9954e6b9eb ]]></g:image_link>
+<g:product_type><![CDATA[ SANTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ortis Benetransit 54 comprimés ]]></title>
+<g:id>1ca6a65f-8b25-402f-80da-d7438b6451a6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ortis-benetransit 54 comprimés?1ca6a65f-8b25-402f-80da-d7438b6451a6 ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ortis Bénétransit Transit Intestinal 54 Comprimés est un complément alimentaire qui stimule et soutient le bon fonctionnement du transit intestinal tout en réduisant les ballonnements.<br />Il aide à l'élimination efficace et régulière des toxines grâce à ses ingrédients naturels :</p>
+<ul><li>Le séné favorise le transit intestinal.</li>
+<li>L'artichaut facilite le transit en stimulant les secrétions biliaires.</li>
+<li>Le fenouil aide à réduire les ballonnements.</li>
+</ul><p>100% des ingréd ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5411386889991</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bb1dc8303fab12a0787782588c95b2c7587508948a50a1a3ae03b98eab5fc9bd ]]></g:image_link>
+<g:product_type><![CDATA[ DIGESTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ortis Bénétransit Transit Intestinal - 54+18 Comprimés ]]></title>
+<g:id>cb8749c5-8e2c-4f8a-9236-4224b80e865c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ortis-bénétransit transit intestinal - 54+18 comprimés?cb8749c5-8e2c-4f8a-9236-4224b80e865c ]]></link>
+<g:price><![CDATA[ 1199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ortis Bénétransit Transit Intestinal 54 Comprimés + 18 Comprimés Offerts est un complément alimentaire qui stimule et soutient le bon fonctionnement du transit intestinal tout en réduisant les ballonnements.<br>Il aide à l'élimination efficace et régulière des toxines grâce à ses ingrédients naturels :</p><ul><li><p>Le séné favorise le transit intestinal.</p></li><li><p>L'artichaut facilite le transit en stimulant les secrétions biliaires.</p></li><li><p>Le fenouil aide à réduire les ballonne ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5411386890010</g:gtin>
+<g:brand><![CDATA[ D&S ORTIS ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/58443ad590ba5ff3a1a585c6f6b4ce5c059f461f38c422989b2d7b8c63ff5835 ]]></g:image_link>
+<g:product_type><![CDATA[ COMPLEMENTS ALIMENTAIRES > DIGESTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ortis Fruits & Fibres Forte Transit Intestinal 12 Comprimés ]]></title>
+<g:id>dea1a61b-8823-43fe-9764-ca3823b9821b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ortis-fruits & fibres forte transit intestinal 12 comprimés?dea1a61b-8823-43fe-9764-ca3823b9821b ]]></link>
+<g:price><![CDATA[ 690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ortis Fruits &amp; Fibres Forte Transit Intestinal 12 Comprimés est un complément alimentaire à l'action rapide qui contient de la rhubarbe, du carvi, de la figue et du tamarin.</p>
+<ul><li>La rhubarbe aide à faciliter le transit intestinal.</li>
+<li>Le carvi aide en cas de ballonnements.</li>
+</ul><p>Convient aux végétariens.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5411386890669</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0e1dff06c2610ea0904ff4cff295fbdaab883e39c52ef0802fbe8c072d5cc0b9 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ortis Fruits & Fibres Regular Transit intestinal 24 cubes ]]></title>
+<g:id>70ff5854-1033-4ed8-9b3b-3c6b1795cbeb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ortis-fruits & fibres regular transit intestinal 24 cubes?70ff5854-1033-4ed8-9b3b-3c6b1795cbeb ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li>L'extrait standardisé de <span>rhubarbe du Tibet régularise le transit intestinal durablement </span>grâce à un équilibre optimal entre <span>hydratation</span> et <span>stimulation</span></li>
+<li>Le <span>tamarin</span> favorise le transit par <span>effet de lest</span></li>
+<li>la <span>figue</span> contribue à une bonne santé intestinale par un <span>effet de lest</span> qui déclenche le réflexe intestinal</li>
+<li>+ dattes</li>
+<li>Riche en fibres</li>
+<li>Sans effet indésirable</li ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5411386890614</g:gtin>
+<g:brand><![CDATA[ D&S ORTIS ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/61bc62e5e5adb00e52c6ac4a795af8c01afc7a31a5d4b230fad6f1aedd3c47a5 ]]></g:image_link>
+<g:product_type><![CDATA[ DIGESTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ortis Fruits & Fibres Regular Transit intestinal 30 comprimés ]]></title>
+<g:id>3fcb185b-3f11-421b-9b5b-4ec6517fd41c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ortis-fruits & fibres regular transit intestinal 30 comprimés?3fcb185b-3f11-421b-9b5b-4ec6517fd41c ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li>L'extrait standardisé de <span>rhubarbe du Tibet régularise durablement le transit intestinal</span> grâce à l'équilibre optimal entre <span>hydratation</span> et <span>stimulation</span></li>
+<li>+ figues, tamarin et fibres d'acacia</li>
+<li>Riche en fibres</li>
+<li>Sans effet indésirable</li>
+<li>Sans accoutumance</li>
+</ul> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5411386890621</g:gtin>
+<g:brand><![CDATA[ D&S ORTIS ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4314fc2fe4b31a892653c3d4fe6c92131f152d8a1bf7c2a3997c59c633f44c5a ]]></g:image_link>
+<g:product_type><![CDATA[ DIGESTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ortis Fruits & Fibres Regular Transit intestinal 45 comprimés ]]></title>
+<g:id>2804bcf5-17c7-43d0-bd92-462d207ea9fa</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ortis-fruits & fibres regular transit intestinal 45 comprimés?2804bcf5-17c7-43d0-bd92-462d207ea9fa ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li>L'extrait standardisé de rhubarbe du Tibet régularise durablement le transit intestinal grâce à l'équilibre optimal entre hydratation et stimulation</li>
+<li>+ figues, tamarin et fibres d'acacia</li>
+<li>Riche en fibres</li>
+<li>Sans effet indésirable</li>
+<li>Sans accoutumance</li>
+</ul> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5411386889335</g:gtin>
+<g:brand><![CDATA[ D&S ORTIS ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/268004712a9b8053341be45054673481e5d43cc4c9a70012aa26354745dc6c7d ]]></g:image_link>
+<g:product_type><![CDATA[ DIGESTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ortis Fruits & Fibres Regular Transit intestinal 45 cubes ]]></title>
+<g:id>c6f750ff-cfe9-4ec1-a5bc-8a067efd00a7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ortis-fruits & fibres regular transit intestinal 45 cubes?c6f750ff-cfe9-4ec1-a5bc-8a067efd00a7 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li>L'extrait standardisé de rhubarbe du Tibet régularise le transit intestinal durablement grâce à un équilibre optimal entre hydratation et stimulation</li>
+<li>Le tamarin favorise le transit par effet de lest</li>
+<li>la figue contribue à une bonne santé intestinale par un effet de lest qui déclenche le réflexe intestinal</li>
+<li>+ dattes</li>
+<li>Riche en fibres</li>
+<li>Sans effet indésirable</li>
+<li>Sans accoutumance</li>
+</ul> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5411386891710</g:gtin>
+<g:brand><![CDATA[ D&S ORTIS ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1313941800621f69ee87357e4206eac73853d27a4ed1ce7014663d2aed74de2a ]]></g:image_link>
+<g:product_type><![CDATA[ DIGESTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Osmodrop Solution Ophtalmique 10 ml ]]></title>
+<g:id>2bfaf86f-a706-4bf0-b40e-2f67738d4700</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/osmodrop-solution ophtalmique 10 ml?2bfaf86f-a706-4bf0-b40e-2f67738d4700 ]]></link>
+<g:price><![CDATA[ 999.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Densmore Osmodrop Solution Ophtalmique 10 ml est une solution indiquée pour le traitement osmotique de l'œdème et du sous-œdème de la cornée. C'est également un adjuvant au traitement des symptômes œdémateux du glaucome.</p>
+<p>Sans conservateur.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770008240193</g:gtin>
+<g:brand><![CDATA[ DENSMORE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ca2780554754bd517270e06e0f1995cfa9472bd9fdbdd377d8fd060a6016dad4 ]]></g:image_link>
+<g:product_type><![CDATA[ CONTACTOLOGIE ET SOINS DES YEUX ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Osmosoft Brume Réparatrice Aérosol, 150ml ]]></title>
+<g:id>4703e8fa-7d29-4ef8-94af-d62fa1b863ef</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/osmosoft-brume réparatrice aérosol, 150ml?4703e8fa-7d29-4ef8-94af-d62fa1b863ef ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Pour qui :</span> Peaux abîmées, peaux irritées. </li>
+<li><span>On adore : </span>Son effet froid immédiat. </li>
+<li><span>Résultats : </span>La peau est nourrie, apaisée et réparée. </li>
+</ul><p> </p>
+<p id="JEDJIN1">La<span> Brume Réparatrice Aérosol</span> de <span>OSMOSOFT </span>est un soin réparateur cutanée. </p>
+<p>Elle permet d'apaiser et d'<span>hydrater</span> la peau, tout en la protégeant des<span> agressions externes</span>. </p>
+<p>Elle convient parfaitement aux < ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614810004669</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3492f3fa259dfd8e4942e8e8d4f22be946a0a66be8a5c319a815f0c37a9874a2 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Osmosoft Gel Brûlures & Coups de soleil 150g ]]></title>
+<g:id>cac5679c-bcc1-4509-ac9e-0571ca3332e9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/osmosoft-gel brûlures & coups de soleil 150g?cac5679c-bcc1-4509-ac9e-0571ca3332e9 ]]></link>
+<g:price><![CDATA[ 490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce produit est un hydrogel osmotique préconisé pour les brûlures et coups de soleil. </p>
+<p>4 actions pour traiter les brûlures et coups de soleil : <br />- Apaise<span>1</span><br />- Réhydrate<span>2</span><br />- Réduit la rougeur cutanée<span>3</span><br />- Favorise la cicatrisation des brûlures<span>1</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401543144805</g:gtin>
+<g:brand><![CDATA[ COOPER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0eeeea89688714e1330dcacdef378667e565a863325978bfad8fe74aa4efe1f8 ]]></g:image_link>
+<g:product_type><![CDATA[ Premiers Soins ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Otosan Cône pour l'Hygiène de l'Oreille 2 Cônes ]]></title>
+<g:id>aec7f4a0-3d30-4ae3-9025-0569c6684ef3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/otosan-cône pour l'hygiène de l'oreille 2 cônes?aec7f4a0-3d30-4ae3-9025-0569c6684ef3 ]]></link>
+<g:price><![CDATA[ 890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Otosan Cône pour l'Hygiène de l'Oreille 2 Cônes favorise l'hygiène de l'oreille de façon simple, efficace et en toute sécurité, par la thermothérapie auriculaire.<br />Perfectionné par des dispositifs de sécurité et de confort innovants, ce système naturel pratique, sûr et efficace favorise l'élimination des impuretés et de l'excès de cérumen de l'oreille par le biais de la chaleur bénéfique et de l'effet cheminée.<br />Grâce à son action purificatrice, il permet de résoudre les problèmes tel ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8016887001070</g:gtin>
+<g:brand><![CDATA[ COSMEDIET BIOTECHNIE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0490907568856b75a2615ac690cd9a4a87fb9c4ee7ebfded31509cb8c354fe22 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIÈNE ET PROTECTIONS AUDITIVES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Owari Brûle-Graisses  60 Gélules  ]]></title>
+<g:id>74426bd8-960b-4016-b0d1-678fce449424</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/owari-brûle-graisses  60 gélules ?74426bd8-960b-4016-b0d1-678fce449424 ]]></link>
+<g:price><![CDATA[ 2790.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Le secret minceur est révélé : Notre brûleur de graisses végan est naturellement bon!</strong></p><p>Vous rêvez d’éliminer la graisse et de sculpter votre silhouette ? On sait qu’il faut brûler plus de calories que celles que vous consommez. Mais comment y parvenir efficacement ?</p><p>Avec OWARI Brûleur de Graisses, bénéficiez d’un effet <strong>coupe-faim naturel</strong> pour réduire l’appétit. Ce <strong>complément minceur</strong> stimule le <strong>métabolisme</strong> et favori ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0786365298428</g:gtin>
+<g:brand><![CDATA[ OWARI ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d21449d05f7af7c5735bd02b539589124deeea1d61ad1ea5e7e5c5f91ef235d7 ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Owari Diurtea 50 grs ]]></title>
+<g:id>57f4f38b-3438-4180-a0cc-40fccc32d025</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/owari-diurtea 50 grs?57f4f38b-3438-4180-a0cc-40fccc32d025 ]]></link>
+<g:price><![CDATA[ 1280.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Vous vous sentez lourd, en manque de légèreté et à l’étroit dans vos vêtements ?</strong></p><p>Pour retrouver <strong>légèreté</strong> et <strong>confort</strong>, <strong>DIURETEA</strong> de chez OWARI vous accompagne grâce à un complexe de <strong>plantes soigneusement sélectionnées</strong>. Chaque ingrédient a été choisi pour son efficacité à favoriser l'<strong>élimination naturelle des fluides</strong> et offrir un équilibre global. Conçue avec soin, notre <strong>tisane diur ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0748322148481</g:gtin>
+<g:brand><![CDATA[ OWARI ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5e7e3a28fc9971d41f16cefe24c461f0f54b7dd75ca68d182dfe2700aedd9e0e ]]></g:image_link>
+<g:product_type><![CDATA[ TISANERIE > THE ET TISANE MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Owari Mummy Détox 50 grs ]]></title>
+<g:id>aa44ffc2-4eee-44d9-a648-fe88842cc461</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/owari-mummy détox 50 grs?aa44ffc2-4eee-44d9-a648-fe88842cc461 ]]></link>
+<g:price><![CDATA[ 1280.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Qui a dit que les produits Détox n’étaient pas compatibles avec l’allaitement ? Bonne nouvelle : c’est tout à fait possible !</strong></p><p><strong>Allaiter son enfant</strong> est un moment unique et précieux, mais il peut parfois être accompagné de petits défis quotidiens : fatigue, <strong>digestion difficile</strong> ou montées de lait irrégulières. Il est tout à fait normal de chercher un <strong>coup de boost</strong> pour retrouver bien-être et énergie, tout en préservant ce l ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0748322148542</g:gtin>
+<g:brand><![CDATA[ OWARI ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c2c333d2a2f8656daded8f5e86e65a788401314dd7c70c9d8780c97ae819376b ]]></g:image_link>
+<g:product_type><![CDATA[ SANTE > TISANERIE > TISANES  ET  NUTRITION MATERNITE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Owari Queues de Cerises 50 grs  ]]></title>
+<g:id>1eadface-83b9-4453-a22f-0050e55933f7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/owari-queues de cerises 50 grs ?1eadface-83b9-4453-a22f-0050e55933f7 ]]></link>
+<g:price><![CDATA[ 790.01 EUR ]]></g:price>
+<description><![CDATA[ <p>Les Queues de Cerises: <strong>La Solution Naturelle pour Éliminer Ballonnements et Rétention d'Eau.</strong></p><p><strong>Marre des ballonnements </strong>et de la<strong> rétention d'eau ?</strong> Les <strong>Queues de Cerises</strong> offrent une <strong>solution naturelle</strong> et <strong>efficace</strong> pour retrouver confort et légèreté. Grâce à leurs puissantes<strong> propriétés diurétiques</strong>, elles aident à éliminer l'excès d'eau, réduisent les ballonnements et facilite ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0748322148498</g:gtin>
+<g:brand><![CDATA[ OWARI ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3b35114356bf126a4c4b4c42d9d1b95d84284e79990dddca191d0f68f6ac40f9 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Owari Slim Tea 50 grs ]]></title>
+<g:id>317f491f-b0ed-4775-9867-d310f51e7cc4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/owari-slim tea 50 grs?317f491f-b0ed-4775-9867-d310f51e7cc4 ]]></link>
+<g:price><![CDATA[ 1280.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Découvrez le pouvoir de notre Slim'Tea !</strong></p><p>Transformez votre quotidien avec <strong>une tisane aux plantes</strong> aux vertus uniques, conçue pour <strong>soutenir votre métabolisme</strong> et accompagner vos objectifs de <strong>gestion du poids</strong> de manière naturelle.</p><p>Slim'Tea est une infusion de <strong>plantes naturelles</strong> spécialement formulée pour favoriser un métabolisme actif, soutenir une <strong>digestion saine</strong> et maintenir un équi ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0748322148474</g:gtin>
+<g:brand><![CDATA[ OWARI ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/642bd8c77b6c49dc4b6cd2cfef9543a66199eaea65761a2e7b88318383bd7e7e ]]></g:image_link>
+<g:product_type><![CDATA[ TISANERIE > THE ET TISANE MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Oxelio Protect Solaire Peaux Claires et Sensibles 60 Capsules ]]></title>
+<g:id>7ce94ce9-9d78-45d1-a312-6d598186f843</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/oxelio-protect solaire peaux claires et sensibles 60 capsules?7ce94ce9-9d78-45d1-a312-6d598186f843 ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Jaldes Oxelio Protect Solaire Peaux Claires et Sensibles 60 Capsules est un complément alimentaire élaboré pour les peaux sensibles. Il associe une combinaison unique de 4 antioxydants à des caroténoïdes d'origine végétale. Le lycopène de tomate et le bêta-carotène appartiennent à la famille des caroténoïdes, des pigments naturels donnant leur couleur rayonnante aux végétaux.</p>
+<p>Les 4 antioxydants (sélénium, zinc, vitamines C et E) contribuent à protéger les cellules contre le stress oxyd ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770008157101</g:gtin>
+<g:brand><![CDATA[ JALDES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e08404b9adadfcea38b2f2eb76b05a9f5eb14cdf58d1b92077c0cf56c46e4def ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PAALM LE PINCEAU KABUKI ]]></title>
+<g:id>052cef72-e499-49b1-a413-31cc1523782a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/paalm-le pinceau kabuki?052cef72-e499-49b1-a413-31cc1523782a ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p> <span>Application simple et rapide</span> de la mousse autobronzante</p>
+<p>- Convient pour le <span>visage</span> et les <span>zones difficiles d’accès</span></p>
+<p>- Compact, pratique et <span>facile à utiliser</span></p>
+<p>- Assure une <span>application uniforme</span> et <span>sans trace</span></p>
+<p>- Lavable et réutilisable</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770032468044</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9b06af44937856b76654cbeeb665a1c2aa056946f149d62544c7a6eef5a051b2 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PANAURETTE SPRAY AURICULAIRE 30ml ]]></title>
+<g:id>7c53bcf1-9e2a-457a-bfa5-aae02833a11f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/panaurette-spray auriculaire 30ml?7c53bcf1-9e2a-457a-bfa5-aae02833a11f ]]></link>
+<g:price><![CDATA[ 599.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Panaurette associe un lavage mécanique à l'action du Phytosqualan, un produit dérivé de l'huile d'olive naturelle qui aide à dissoudre les bouchons de cérumen. Grâce à Panaurette, le cérumen est dissous et progressivement extrait de l'oreille par le biais d'un mécanisme de nettoyage naturel.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401051373018</g:gtin>
+<g:brand><![CDATA[ ZAMBON FRANCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b663b5565624ce6a52c6c2e21eb90bd34e5c487041d47fe09355ca272b563155 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIÈNE ET PROTECTIONS AUDITIVES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PARODIUM GEL TB50ML ]]></title>
+<g:id>9b4e756c-4901-4ac9-bb6b-75497ef0a3b0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodium-gel tb50ml?9b4e756c-4901-4ac9-bb6b-75497ef0a3b0 ]]></link>
+<g:price><![CDATA[ 690.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3577056024429</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/de93ed1a836325cb71555cee2d98848104968ac068f7a0662c146ed1a19e1a16 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PHARMA SOUPLES S lent souples multifonction Fl/360ml ]]></title>
+<g:id>eaca769a-2bd3-4982-a950-af684e4d4e54</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharma-souples s lent souples multifonction fl/360ml?eaca769a-2bd3-4982-a950-af684e4d4e54 ]]></link>
+<g:price><![CDATA[ 690.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532669990738</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c6b8f54ea882c307302843a165c9092ee27e9f1f1b1d3c16807350be1bf730e6 ]]></g:image_link>
+<g:product_type><![CDATA[ CONTACTOLOGIE ET SOINS DES YEUX ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PHARMASCIENCE HE BIO EUCALYPTUS MENTHOL ]]></title>
+<g:id>17b10234-6058-4568-8453-0b3099eeb4e8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-he bio eucalyptus menthol?17b10234-6058-4568-8453-0b3099eeb4e8 ]]></link>
+<g:price><![CDATA[ 390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Huile essentielle eucalyptus mentholé 100% bio naturelle et pure .</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500589</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5fc22bc90cd256238c69ad4227f3f7211bfad59d61d9f45853aa63d0dc6ddbb8 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PHARMASCIENCE HE BIO GAULTHERIE COUCHEE ]]></title>
+<g:id>ef6e2f03-eb8e-4907-a720-37ece7f1ee91</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-he bio gaultherie couchee?ef6e2f03-eb8e-4907-a720-37ece7f1ee91 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Cette huile essentielle de Gaulthérie Couchée 100% bio, pure et naturelle est obtenue par distillation à la vapeur d'eau des feuilles fraiches de Gaultheria procumbens L.</span><br /><span>Flacon de 10ml.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500572</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c51c580e8010cae01229606a16af5f7eb69758dac67d508384ea80d8cff4789d ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PHARMASCIENCE HUILE DE COCO 50ML ]]></title>
+<g:id>89290be8-b2f2-4476-99fa-be1daf5f4d93</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-huile de coco 50ml?89290be8-b2f2-4476-99fa-be1daf5f4d93 ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Elle est adaptée à tous types de peaux. Grâce à ses propriétés, elle hydrate en profondeur le visage, le corps et les cheveux secs et abîmés.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500657</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9f3c12e12e020132082c70f804778c5cda6dcf14612b42ee4549bddf083451c1 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PHARMASCIENCE HUILE DE JOJOBA 50ML ]]></title>
+<g:id>838aa8f4-203c-43a7-919a-34c296bd4990</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-huile de jojoba 50ml?838aa8f4-203c-43a7-919a-34c296bd4990 ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Grâce à ses propriétés, elle diminue les imperfections cutanées et protège la peau et les cheveux à tendances grasses.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500688</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/01142e3eb48f462b32242bca3e858fafe1e87989f40e1747f866152950b5aff7 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PHARMASCIENCE HUILE DE RICIN 50ML ]]></title>
+<g:id>6b268bf4-a0aa-49df-909d-8214807a7222</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-huile de ricin 50ml?6b268bf4-a0aa-49df-909d-8214807a7222 ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L'Huile de Ricin</span><span> peut aussi être utilisée pour soigner l'eczéma, l'herpès, les vergetures et les brûlures. Mais également les douleurs articulaires, de règles et migraines grâce à sa propriété anti-inflammatoire.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500664</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bb7fa22de4051f3f0b3111aec4fcb06d5ba37f832669de8793e7aab0cbb71d48 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PHARMASCIENCE SPRAY ASSAINISSANT 200 ML ]]></title>
+<g:id>969172e7-1bbb-414f-bafc-599570259910</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-spray assainissant 200 ml?969172e7-1bbb-414f-bafc-599570259910 ]]></link>
+<g:price><![CDATA[ 999.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Ce spray assainissant air et surfaces est une formule purifiante et désinfectante aux 24 huiles essentielles Bio. Ce spray peut également être vaporisé sur la literie et les moquettes en ayant réalisé un essai au préalable sur une petite surface. Ne pas utiliser le produit en présence d’enfant. Il est conseillé d’aérer régulièrement les pièces à vivre pour améliorer la qualité de l’air intérieur.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158203417</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/17767520b92e0790985ef6f2f3f569a4c1896c9e5e680bf357e5da75860567cf ]]></g:image_link>
+<g:product_type><![CDATA[ GELS HYDRO ALCOOLIQUES ET ASSAINISSANT ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PHYTOSUN AROMS SIROP ENFANT TOUX SECHE ET GRASSE 200ML ]]></title>
+<g:id>126e6c73-295a-404b-b649-3083938dc901</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/phytosun-aroms sirop enfant toux seche et grasse 200ml?126e6c73-295a-404b-b649-3083938dc901 ]]></link>
+<g:price><![CDATA[ 890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Phytosun Arôms Sirop Toux Enfant soulage tous les types de toux (toux sèche et toux grasse) associées à un rhume.</p><p>Le Sirop Enfant Toux Sèche et Grasse contient notamment de l’extrait sec de guimauve, et du miel naturels qui agissent comme un baume qui tapisse et apaise la muqueuse pharyngée inflammée.</p><p>Formulé sans :</p><ul><li><p>Alcool,</p></li><li><p>Lactose,</p></li><li><p>Gluten,</p></li><li><p>Colorant artificiel,</p></li><li><p>OGM (Organisme Génétiquement Modifié).</p></li> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5400951004174</g:gtin>
+<g:brand><![CDATA[ PHYTOSUN ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2b9f1efc098e0f36e6e9c6e0cf23890121342c7366b83879833078ca95be607e ]]></g:image_link>
+<g:product_type><![CDATA[ Médicament > Nez, gorge, oreilles et yeux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PHYTOSUNAROMS SIROP TOUX SECHE ET GRASSE 200ML ]]></title>
+<g:id>f10bf6e0-9a5f-4753-9140-07ba6c8343ca</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/phytosunaroms-sirop toux seche et grasse 200ml?f10bf6e0-9a5f-4753-9140-07ba6c8343ca ]]></link>
+<g:price><![CDATA[ 890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Phytosun Arôms Sirop&nbsp;Toux agit rapidement et soulage tous les types de toux (toux sèche et toux grasse) associées à un rhume.</p><p>Le Sirop Toux Sèche et Grasse contient notamment de l’extrait sec de guimauve, et du miel naturels qui agissent comme un baume qui tapisse et apaise la muqueuse pharyngée inflammée.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5400951004150</g:gtin>
+<g:brand><![CDATA[ PHYTOSUN ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6fe390624544b994c67d1aa04d2d89a79e994f85caaa44611e3538240c54de4b ]]></g:image_link>
+<g:product_type><![CDATA[ Médicament > Nez, gorge, oreilles et yeux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PIERRE FABRE Dexeryl Crème Hydratante Sécheresses Cutanées Peaux très sèches ou atopiques 50 g ]]></title>
+<g:id>2bd5ebd5-0291-47f9-b714-395ef6923517</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pierre-fabre dexeryl crème hydratante sécheresses cutanées peaux très sèches ou atopiques 50 g?2bd5ebd5-0291-47f9-b714-395ef6923517 ]]></link>
+<g:price><![CDATA[ 360.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Dexeryl répare et hydrate durablement les peaux sèches ou atopiques, notamment dans le cas de certaines dermatoses (dermatite atopique, ichtyoses...) ou d'érythèmes induits par radiothérapie. Sa formule traite les symptômes de la peau sèche et crée un film protecteur qui évite la déshydratation et aide à protéger la peau des agressions extérieures.</p><p>Sans parfum, elle permet de limiter et de prévenir les irritations.</p><p>Dès la naissance.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3573994006541</g:gtin>
+<g:brand><![CDATA[ PIERRE FABRE HYGIENE SOIN ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1f526293808f1cb934df3a5d969a431006e373fa03f3fce04679e9ce4b39d757 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PIN UP SECRET PEELING VISAGE PEARL 50ML ]]></title>
+<g:id>917e0a98-621f-4d61-b528-d05305c19ecd</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pin-up secret peeling visage pearl 50ml?917e0a98-621f-4d61-b528-d05305c19ecd ]]></link>
+<g:price><![CDATA[ 2890.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="rte">
+<p>Gel gommant sans grains. Formule unique et innovante. Idéale pour une peau sensible acnéique et à problème. Ce gel gommant doux, nouvelle génération sans grains, permet de gommer la peau de votre visage sans l'agresser, élimine les cellules mortes qui ternissent le teint, pour révéler une peau lumineuse, douce, saine et pleine de vitalité. En un seul geste votre peau est purifiée, hydratée et mieux préparée pour l'application et l'absorption des traitements et soins. Contena ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760300550304</g:gtin>
+<g:brand><![CDATA[ PIN'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c8d7a5d4b010b55684b3fc996ffa130584866c84cae35217a9148e0ebbd39705 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PRANAROM DIFFUSEUR CERA LINIO ]]></title>
+<g:id>ab8085b7-9a2d-40f8-9349-d96c092fa3df</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pranarom-diffuseur cera linio?ab8085b7-9a2d-40f8-9349-d96c092fa3df ]]></link>
+<g:price><![CDATA[ 4990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>En matériau noble bois et céramique, le diffuseur ultrasonique Cera Linio vous séduira par son élégance d’inspiration italienne : le bois d’hévéa révèle une belle couleur brune chaleureuse et le dôme en céramique dévoile une subtile lumière d’ambiance tout en transparence au travers des dessins qui nous rappellent les lignes architecturales des édifices italiens.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5420008543234</g:gtin>
+<g:brand><![CDATA[ PRANAROM ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e984cc82f663fde53f77b21241290fa29d571f6e2fc4c0bbff064f80c693948f ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PRANAROM DIFFUSEUR POP ]]></title>
+<g:id>33a20c3a-0593-4577-a684-f042cb381c07</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pranarom-diffuseur pop?33a20c3a-0593-4577-a684-f042cb381c07 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Avec son design simple et cet effet de lignes parallèles, POP est un diffuseur d'huiles essentielles qui s'accorde avec tous les espaces de vie, pour apporter une note de jeunesse et légèreté à votre intérieur.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5420008549885</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0d54007ff9cf3c2ba57e5cc442961d2da12098418028ec38da3226c80c9a4f89 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PRANARÔM  Chlorella 500 mg - 150 comprimés ]]></title>
+<g:id>4e5e42f0-8daf-4182-b694-2f4bb92cdddd</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pranar-m  chlorella 500 mg - 150 comprimés?4e5e42f0-8daf-4182-b694-2f4bb92cdddd ]]></link>
+<g:price><![CDATA[ 1280.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le principal intérêt de la Chlorella pyrenoidosa réside dans son formidable apport nutritif sous forme alimentaire et non chimique. Cette micro algue possède une gamme unique de composants, qui comprend tous les acides aminés essentiels, des acides gras saturés et insaturés, une grande quantité de vitamines, minéraux et oligo-éléments, ainsi que des composants précieux, dont la chlorophylle, en forte concentration.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5420008542572</g:gtin>
+<g:brand><![CDATA[ PRANAROM ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/86e8d256a0e5b33e21d20d9e76c02943fb3278f0b122989f7b365197ec2cf35b ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE COMPLEXE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PURESSENTIEL Anti-Pique Spray Répulsif + Apaisant 2x75ml ]]></title>
+<g:id>1f47474e-e1bd-4a0e-a553-a380a794c627</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/puressentiel-anti-pique spray répulsif + apaisant 2x75ml?1f47474e-e1bd-4a0e-a553-a380a794c627 ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Grâce à son actif d'origine végétale, cet anti-moustique repousse efficacement les moustiques en zones tempérées et tropicales jusqu'à 7 heures(1).&nbsp;<br>Il est l'un des gestes possibles de protection contre les moustiques vecteurs du paludisme, de la dengue, de la fièvre jaune et du chikungunya.<br>Grâce à son cocktail de 5 huiles essentielles, ce&nbsp;spray anti-moustique&nbsp;sera également idéal pour &nbsp;apaiser en cas de piqûre.<br>Avec sa double action apaisante et répulsive anti-m ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701056804808</g:gtin>
+<g:brand><![CDATA[ PURESSENTIEL ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ecb45bf7f4118766080058ab9c9f409b5a2a842ecf11f98bdf5c4169f499de68 ]]></g:image_link>
+<g:product_type><![CDATA[ MOUSTIQUES > PROTECTION MOUSTIQUES ET AUTRES INSECTES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PURESSENTIEL BAUM PCHAUF ARTIC/MUSCL 20ML ]]></title>
+<g:id>c3fbef4b-0f2a-42d2-8357-b69e04dfdfa6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/puressentiel-baum pchauf artic/muscl 20ml?c3fbef4b-0f2a-42d2-8357-b69e04dfdfa6 ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Vous avez couru et ressentez une raideur au mollet ? Vous avez très mal au cou et avez du mal à bouger la tête d'un côté ?<br>Vous avez fait un faux mouvement et vous vous êtes coincé le bas du dos ?<br>Les contractures et raideurs peuvent vite devenir un véritable handicap au quotidien. Il est donc essentiel de trouver une solution rapide et efficace pour décontracter les muscles en profondeur.</p><p>Le <strong>Baume Chauffant Pure Heat®</strong> est un soin naturel conçu pour <strong>apaise ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701056804778</g:gtin>
+<g:brand><![CDATA[ PURESSENTIEL ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/77a4aff1142b6929bf663e163382c404bd8e8777c54dc7166532e393d4524d11 ]]></g:image_link>
+<g:product_type><![CDATA[ DOULEURS ARTICULAIRES ET MUSCULAIRES > DOULEURS ARTICULAIRES ET MUSCULAIRES - SOIN ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Paalm Gant D'Application ]]></title>
+<g:id>1433fec6-f0db-49e3-b863-d16124a82cd5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/paalm-gant d'application?1433fec6-f0db-49e3-b863-d16124a82cd5 ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>- <span>Application simple et rapide</span> de la mousse autobronzante</p>
+<p>- Convient pour une utilisation sur <span>tout le corps</span></p>
+<p>- Matière très douce, en velours</p>
+<p>- Garantit une application <span>uniforme et sans trace</span></p>
+<p>- Lavable et <span>réutilisable</span></p>
+<p>- Protège les mains des tâches</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770032468037</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c287842e38cce3344f5b08356123c37c6da31aeda76c18650bf46f071f1d662b ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Paalm Gant Exfoliant ]]></title>
+<g:id>258fd8b8-f677-446f-805c-05a2bf2b1f51</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/paalm-gant exfoliant?258fd8b8-f677-446f-805c-05a2bf2b1f51 ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>- Préparation de la peau pour un <span>meilleur résultat</span> lors de l'application des produits autobronzants</p>
+<p>- <span>Retire les résidus</span> des produits autobronzants</p>
+<p>- Garantit une application <span>uniforme et sans trace</span></p>
+<p>- Lavable et <span>réutilisable</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770032468051</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7dd16efd1ea09891aa8f048af9e4566882eb4447cc9733bb4394afbe92b15365 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Paalm Hydraglow Brume Autobronzante 100ml ]]></title>
+<g:id>86a13007-f9b6-4afd-835b-7a5b3395cd65</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/paalm-hydraglow brume autobronzante 100ml?86a13007-f9b6-4afd-835b-7a5b3395cd65 ]]></link>
+<g:price><![CDATA[ 2890.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>- Effet bonne mine </span>:<span> </span>un teint glowy au quotidien</p>
+<p><span>- Bronzage progressif et naturel</span></p>
+<p><span>- Résultats visibles en 4 à 6h</span></p>
+<p><span>- Hydrate en profondeur et lisse la peau</span></p>
+<p><span>- Résultats uniformes </span>:<span> </span>pas de traces ni de tâches</p>
+<p><span>- Convient à tous les types de peaux</span></p>
+<p><span>- Sèche rapidement</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770032468020</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1ff2489b3745e65385d0e9b4ec4a5e3069bd8ecf76cab3aba20b526c9a4b88be ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Paalm La Mousse Autbornzante Dark 150ml ]]></title>
+<g:id>45b2f037-4fd5-4588-819c-b5cb6132a474</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/paalm-la mousse autbornzante dark 150ml?45b2f037-4fd5-4588-819c-b5cb6132a474 ]]></link>
+<g:price><![CDATA[ 3190.00 EUR ]]></g:price>
+<description><![CDATA[ <p> <span>Bronzer sans soleil</span> : obtenir un teint hâlé sans avoir besoin de s’exposer aux rayons UV</p>
+<p>- <span>Effet immédiat </span>: idéal pour les occasions spéciales ou les évènements de dernière minutes</p>
+<p>- <span>Résultats Uniformes</span> : pas de traces ni de tâches</p>
+<p>- <span>DHA 100% naturelle</span> : respecte parfaitement la sensibilité de la peau</p>
+<p>- <span>Durable</span> : le bronzage peut durer jusqu’à 8 jours grâce à notre formule premium</p>
+<p>- <span>Faci ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770032468013</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b0edac5deb4748b67c1676186c528ed9e55777884b8dca99fd1e194695752cc7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Paalm Mousse Auto Bornzante Medium 150ml ]]></title>
+<g:id>c9ecf251-f8d7-4554-87ac-0de8b1bfc5f2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/paalm-mousse auto bornzante medium 150ml?c9ecf251-f8d7-4554-87ac-0de8b1bfc5f2 ]]></link>
+<g:price><![CDATA[ 3190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>- <span>Bronzer sans soleil</span> : obtenir un teint doré sans avoir besoin de s’exposer aux rayons UV</p>
+<p>- <span>Effet immédiat </span>: idéal pour les occasions spéciales ou les évènements de dernière minutes</p>
+<p>- <span>Résultats Uniformes</span> : pas de traces ni de tâches</p>
+<p>- <span>DHA 100% naturelle</span> : respecte parfaitement la sensibilité de la peau</p>
+<p>- <span>Durable</span> : le bronzage peut durer jusqu’à 8 jours grâce à notre formule premium</p>
+<p>- <span>Fac ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770032468006</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fea4a4d08af9f4458a88cad0837680ab7c836bee2024b117054972b3b80a5ffe ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Paalm Serum 30ml ]]></title>
+<g:id>c19843ab-f6f3-4586-9462-53cd4d6e07b7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/paalm-serum 30ml?c19843ab-f6f3-4586-9462-53cd4d6e07b7 ]]></link>
+<g:price><![CDATA[ 2890.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span> Effet bonne mine </span>:<span> </span>un teint glowy au quotidien</p>
+<p><span>- Bronzage progressif et sur mesure</span></p>
+<p><span>- Illumine le teint instantanément</span></p>
+<p><span>- Hydrate </span>en profondeur<span> </span>et<span> lisse la peau</span></p>
+<p><span>- Résultats uniformes </span>:<span> </span>pas de traces ni de tâches</p>
+<p><span>- </span>Convient à<span> tous les types de peaux</span></p>
+<p><span>- Sèche rapidement</span></p>
+<p><span>- </span>Formule <s ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770032468068</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fc1eb2ab2b3b248bdcffb3499b72cb68f3bfa4c753dae47958e14fd98463e59a ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Palomacare Gel Vagjnal Bte 6 ]]></title>
+<g:id>f6592372-9aa9-49cd-bea6-c27c9fcde902</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/palomacare-gel vagjnal bte 6?f6592372-9aa9-49cd-bea6-c27c9fcde902 ]]></link>
+<g:price><![CDATA[ 1590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce gel vaginal Palomacare de la marque Procare Health affiche de nombreuses <span>propriétés </span>: il offre une hydratation vaginale optimale, il rééquilibre le microbiote vaginal, il améliore la santé vaginale et il répare efficacement la muqueuse cervico-vaginale. </p>
+<p>Le <span>gel vaginal hydratant et réparateur Palomacare</span> est indiqué pour <span>traiter </span>la <span>sécheresse vaginale</span> chez les femmes en période de périménopause ou de ménopause, après l'utilisation d ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8470001837820</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fe4caf95ea1dea511319efb3c0db212510b54f176b130deeb5ac35f02f69b4f5 ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pampers Splashers T3/4 x 12 ]]></title>
+<g:id>ee6899f0-282f-41a9-96cf-2f4a96819c55</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pampers-splashers t3/4 x 12?ee6899f0-282f-41a9-96cf-2f4a96819c55 ]]></link>
+<g:price><![CDATA[ 690.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="title"><br />Ne gonflent pas dans l’eau contrairement aux couches classiques, pour offrir confort et ajustement, même dans l’eau<br />Avec des motifs aquatiques amusants, elles ressemblent à de vrais maillots de bain<br />Facile à retirer, des côtés qui se déchirent facilement pour simplifier le moment du change</div>
+<div class="title"><span>Ceinture ultra-extensible 360° pour offrir à votre bébé le confort d’un maillot de bain</span></div>
+<div class="title"><span><span>Les doubles ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8001090698346</g:gtin>
+<g:brand><![CDATA[ Pampers ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/79a45bc8a8144b35bbdaec5191dbdb76701845201c8db610eabbb383646c369f ]]></g:image_link>
+<g:product_type><![CDATA[ COUCHES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pampers Splashers T4/5 x 11 couches - 9/15Kg  ]]></title>
+<g:id>8706ca33-40d7-40c1-ad5d-2d831138734a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pampers-splashers t4/5 x 11 couches - 9/15kg ?8706ca33-40d7-40c1-ad5d-2d831138734a ]]></link>
+<g:price><![CDATA[ 690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>11 Couches pour baignade </p>
+<p>taille 4 - 5  soit 9 - 15 kg</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8001090698384</g:gtin>
+<g:brand><![CDATA[ Pampers ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/602ae8521a98cd4dabe5e491f23aaea2d689b93feff4c3d3df75b86406fe0c29 ]]></g:image_link>
+<g:product_type><![CDATA[ COUCHES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pampers Splashers taille 5-6 +14kg 10 couches ]]></title>
+<g:id>2888f8c5-b247-4c31-8a09-c58459ce4c1a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pampers-splashers taille 5-6 +14kg 10 couches?2888f8c5-b247-4c31-8a09-c58459ce4c1a ]]></link>
+<g:price><![CDATA[ 690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>10 Couches pour baignade </p>
+<p>Taille 5 - 6 soit +14kg</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8001090728951</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e08cae5b8e1162bf894553f7d0c0b12576275df65d4494ddc1c2724eb847312c ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Panarôm calendula huile végétale 50ml ]]></title>
+<g:id>b338dceb-b81c-4887-bd3f-a7611f28cbb9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/panar-m calendula huile végétale 50ml?b338dceb-b81c-4887-bd3f-a7611f28cbb9 ]]></link>
+<g:price><![CDATA[ 695.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Huile végétale calendula est a plus douce des huiles végétales, aux vertus anti-inflammatoires, antiallergiques et antiprurigineuses.  Ce sont surtout les insaponifiables et phytostérols contenus dans cet extrait lipidique qui en font une huile calmante. Le calendula est un très bon ami de bébé et des peaux sensibles, pour apaiser le feu, ou calmer la peau qui gratouille. Une huile facile à utiliser et sûre, qui agit toute seule ou, pour les bobos des adultes, en synergie avec une faible dose ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5420008596759</g:gtin>
+<g:brand><![CDATA[ PRANAROM ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c055c6ce36c999aca33b51e0a70a54f9ced548ede605343c237e76e25478a104 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Papermints 18 cool caps ]]></title>
+<g:id>af6b8ed0-b628-4c7f-b154-31566b88aaa8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/papermints-18 cool caps?af6b8ed0-b628-4c7f-b154-31566b88aaa8 ]]></link>
+<g:price><![CDATA[ 290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>PaperMints 18 Gélules Rafraîchissantes sont des micro-gélules sans sucre, à glisser sur la langue, qui permettent de rafraîchir l'haleine immédiatement.</p>
+<p>Ces micro-confiseries goût menthe sont avec édulcorants.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5425010092251</g:gtin>
+<g:brand><![CDATA[ IDES PHARMA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/97416ee24e44bae5b8277b5705ab457839a3dc9b35c2549c283602e1c144b1a4 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Papier d'Arménie Rose 12 feuillets ]]></title>
+<g:id>83db35f4-d440-4a62-a34a-bce9bc75a5ff</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/papier-d'arménie rose 12 feuillets?83db35f4-d440-4a62-a34a-bce9bc75a5ff ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Papier d'Arménie Triple Carnet La Rose, assainissant naturel et efficace, purifie et parfume l'air ambiant. Il enlève toute mauvaise odeur de cuisine, de tabac, d'animaux, .... Particulièrement employé au moment des épidémies de grippe ou par temps humide, il est utile tout au long de l'année pour assainir la maison et la rendre plus agréable. Le parfum de La Rose a été conçue avec le parfumeur Francis Kurdjian, qui a composé ce diptyque olfactif porté par une rose gourmande et fruitée, co ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401596152529</g:gtin>
+<g:brand><![CDATA[ Pharma up ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7468fd5bfd1242359c7b274429c5efe90e4388508a0f7e3eec858d83920d92fd ]]></g:image_link>
+<g:product_type><![CDATA[ VÉTÉRINAIRE > AMBIANCE ET BOUGIES PARFUMEES  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Papier d'Arménie Tradition carnet 12 feuillets ]]></title>
+<g:id>3c41df92-2cd2-4ef3-a671-97d24684f9e6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/papier-d'arménie tradition carnet 12 feuillets?3c41df92-2cd2-4ef3-a671-97d24684f9e6 ]]></link>
+<g:price><![CDATA[ 330.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Un parfum mythique</strong><br />Le Papier d’Arménie<span>®</span> triple est le plus ancien parfum d’intérieur.</p>
+<p>Sa formule de 1885 reste inchangée, mais sa couleur est désormais «blanc cassé», en harmonie avec celle des carnets “Arménie” et “La Rose”.</p>
+<p>Notes sucrées, vanillées et balsamiques rappelant les senteurs de l’Orient, il enlève toute mauvaise odeur de cuisine, de tabac, d’animaux, etc…</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3292030000113</g:gtin>
+<g:brand><![CDATA[ Pharma up ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/651136ab827f8040d81f16c2127d0d503b8baf25418cc54d9f6834d7170340c3 ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Papier d'Arménie bleu 12 feuillets ]]></title>
+<g:id>c90e0951-9cae-4636-b638-c6a4289da675</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/papier-d'arménie bleu 12 feuillets?c90e0951-9cae-4636-b638-c6a4289da675 ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Papier d'Arménie® propose cet élégant coffret Vintage inspiré du style graphique de 1885. Le visuel historique témoigne de l’ancienneté du Papier d'Arménie® et rappelle les médailles et diplômes remportés par la marque depuis 1885. Un voyage dans le temps, le cadeau idéal pour tous les amateurs de nos célèbres carnets.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401546397277</g:gtin>
+<g:brand><![CDATA[ Pharma up ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a6f8930f49a6b07ccacf6e16da1d8dabf4d632adae793ecbd95c9b697589ae9c ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito 2 Recharges Bracelet Anti-Moustiques ]]></title>
+<g:id>e02d201e-695e-45dd-a5e0-26cdabedad92</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-2 recharges bracelet anti-moustiques?e02d201e-695e-45dd-a5e0-26cdabedad92 ]]></link>
+<g:price><![CDATA[ 599.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito 2 Recharges Bracelet Anti-Moustiques sont des plaquettes de recharge pour le bracelet anti-moustique Parakito.</p>
+<p>Cet équipement est un biocide anti-moustiques aux huiles essentielles et géraniol.</p>
+<p>Il contient 2 plaquettes conférant une protection de 1 mois (2 x 15 jours).</p>
+<p>Convient à toute la famille, y compris les femmes enceintes (en extérieur) et aux personnes sensibles dès 3 ans.</p>
+<p>Résistant à l'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678600475</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6cafe56e7e6fc876634352e97ab6f9778092e7bca1368c860ddd8e91846b35d9 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Adulte Vert Never Give Up ]]></title>
+<g:id>3bd45c78-4d4f-4f18-9e9b-38f4c9a3ea48</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet adulte vert never give up?3bd45c78-4d4f-4f18-9e9b-38f4c9a3ea48 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Bracelet Para' kito est à visée répulsive anti-moustique. Ce kit contient 2 pastilles recharges à durée d'action de 15 jours chacune après ouverture du sachet protecteur. Il se fixe au poignet ou à la cheville à l'aide d'un velcro. Waterproof, il est très tendance dans des coloris différents.</p>
+<p>Le bracelet anti-moustiques aux huiles essentielles Para kito est un produit très efficace pour éloigner les moustiques. Il s'agit d'un bracelet en néoprène, disponible en plusieurs couleurs et ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678605210</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c4434e87e36cc6969ce109a56a77b2feb01015462ee1983b9604d7a12c20b1f3 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-Moustique Enjoy Adulte ]]></title>
+<g:id>bc62d0d7-17ea-4810-ac12-770ed317e801</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustique enjoy adulte?bc62d0d7-17ea-4810-ac12-770ed317e801 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le Bracelet Para' kito</span> est à visée répulsive antimoustique. Ce kit contient 2 pastilles recharges à durée d'action de 15 jours chacune après ouverture du sachet protecteur. Il se fixe au poignet ou à la cheville à l'aide d'un velcro. Waterproof, il est très tendance dans des coloris différents.</p>
+<p>Le bracelet anti-moustiques aux huiles essentielles Para kito est un produit très efficace pour éloigner les moustiques. Il s'agit d'un bracelet en néoprène, disponible en plusieurs ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678604695</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1dea8d9ca952b035b06da622f46cc35af74c21feec96fdfe37bf99bfa43501ab ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-Moustique Junior Sport ]]></title>
+<g:id>6274fe51-74f2-4c14-94df-b0a7b0c18e81</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustique junior sport?6274fe51-74f2-4c14-94df-b0a7b0c18e81 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Bracelet Anti-Moustiques Rechargeable Junior est un équipement biocide anti-moustiques aux huiles essentielles et géraniol.<br />Rechargeable, il contient 2 plaquettes conférant une protection de 1 mois (2 x 15 jours).</p>
+<p>Sa taille est spécialement conçue pour les poignets des enfants de plus de 3 ans (tour de poignet : 16 à 19,5 cm).</p>
+<p>Il se présente sous forme d'un bracelet de tissu rechargeable, disposant de deux plaquettes actives destinées à être placées sous le filet d ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678605678</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d8b9aa73b95fe81284c55d4f984e7774cb95846d79aaf51b852d9aa0400f3adb ]]></g:image_link>
+<g:product_type><![CDATA[ MOUSTIQUES > Bien être ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-Moustiques  Adulte  Good Vibes Fuschia ]]></title>
+<g:id>3ea0c999-0baf-455d-9991-1e30c43851b5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustiques  adulte  good vibes fuschia?3ea0c999-0baf-455d-9991-1e30c43851b5 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Bracelet Anti-Moustiques Rechargeable Adulte - Modèle : Good Vibes Fuschia est un équipement biocide anti-moustiques aux huiles essentielles et géraniol.<br />Rechargeable, il contient 2 plaquettes conférant une protection de 1 mois (2 x 15 jours).</p>
+<p>Sa taille est adaptée pour les poignets des adultes (tour de poignet : 18 à 24 cm).</p>
+<p>Il se présente sous forme d'un bracelet de tissu rechargeable, disposant de deux plaquettes actives destinées à être placées sous le filet de ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678600536</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c5dda613416d6aa006ec8a93127b6f78c7036aa8e73bbca5e9b24f1835f46742 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-Moustiques  Adulte - Bleu ]]></title>
+<g:id>b0a32765-eccc-4622-ba54-9d519e182a32</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustiques  adulte - bleu?b0a32765-eccc-4622-ba54-9d519e182a32 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Bracelet Anti-Moustiques Rechargeable Adulte - Modèle : Color Bleu est un équipement biocide anti-moustiques aux huiles essentielles et géraniol.<br />Rechargeable, il contient 2 plaquettes conférant une protection de 1 mois (2 x 15 jours).</p>
+<p>Sa taille est adaptée pour les poignets des adultes (tour de poignet : 18 à 24 cm).</p>
+<p>Il se présente sous forme d'un bracelet de tissu rechargeable, disposant de deux plaquettes actives destinées à être placées sous le filet de protect ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678599946</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f0c8105ea8b7b9926a02dfbc34dffc39c28059b541370c79e6fb2658fc08a186 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-Moustiques  Junior Baskets ]]></title>
+<g:id>96cc1cf4-41c3-4dc2-91dd-dcaaeda09981</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustiques  junior baskets?96cc1cf4-41c3-4dc2-91dd-dcaaeda09981 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Bracelet Anti-Moustiques Rechargeable Junior - Modèle : Baskets est un équipement biocide anti-moustiques aux huiles essentielles et géraniol.<br />Rechargeable, il contient 2 plaquettes conférant une protection de 1 mois (2 x 15 jours).</p>
+<p>Sa taille est spécialement conçue pour les poignets des enfants de plus de 3 ans (tour de poignet : 16 à 19,5 cm).</p>
+<p>Il se présente sous forme d'un bracelet de tissu rechargeable, disposant de deux plaquettes actives destinées à être plac ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678600598</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5d939ef3f49819f85585842da64cb03799846e1526576b88f026f336c4b29f1c ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-Moustiques  Junior Caméléon ]]></title>
+<g:id>24ccc4ca-e9fd-4b21-8f6c-aad49919292a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustiques  junior caméléon?24ccc4ca-e9fd-4b21-8f6c-aad49919292a ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Bracelet Anti-Moustiques Rechargeable Junior - Modèle : Caméléon est un équipement biocide anti-moustiques aux huiles essentielles et géraniol.<br />Rechargeable, il contient 2 plaquettes conférant une protection de 1 mois (2 x 15 jours).</p>
+<p>Sa taille est spécialement conçue pour les poignets des enfants de plus de 3 ans (tour de poignet : 16 à 19,5 cm).</p>
+<p>Il se présente sous forme d'un bracelet de tissu rechargeable, disposant de deux plaquettes actives destinées à être pla ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678605753</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/953406cb26d57f637928d4af0b2789e21200c32f6168c2885e2f1831e4fa9c7b ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-Moustiques  Junior Monstres ]]></title>
+<g:id>1d34fcda-e3d9-4034-9e77-58aa59db132e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustiques  junior monstres?1d34fcda-e3d9-4034-9e77-58aa59db132e ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Bracelet Anti-Moustiques Rechargeable Junior - Modèle : Monstres est un équipement biocide anti-moustiques aux huiles essentielles et géraniol.<br />Rechargeable, il contient 2 plaquettes conférant une protection de 1 mois (2 x 15 jours).</p>
+<p>Sa taille est spécialement conçue pour les poignets des enfants de plus de 3 ans (tour de poignet : 16 à 19,5 cm).</p>
+<p>Il se présente sous forme d'un bracelet de tissu rechargeable, disposant de deux plaquettes actives destinées à être pla ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678600321</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5679992d31e8432f496d0a7707b3b59fa9adb8822f16699f9533fddbed7fe969 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-Moustiques  Junior Pirates ]]></title>
+<g:id>552246a4-e68b-4e2d-aa1b-7e400958acf3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustiques  junior pirates?552246a4-e68b-4e2d-aa1b-7e400958acf3 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Bracelet Anti-Moustiques Rechargeable Junior - Modèle : Pirates est un équipement biocide anti-moustiques aux huiles essentielles et géraniol.<br />Rechargeable, il contient 2 plaquettes conférant une protection de 1 mois (2 x 15 jours).</p>
+<p>Sa taille est spécialement conçue pour les poignets des enfants de plus de 3 ans (tour de poignet : 16 à 19,5 cm).</p>
+<p>Il se présente sous forme d'un bracelet de tissu rechargeable, disposant de deux plaquettes actives destinées à être plac ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678600581</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/973287bfce1a04333787b7367a817de2ed9816b4ea98e309b63aee977af10570 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-Moustiques  Junior Plumes ]]></title>
+<g:id>9bcf960a-4aa7-4af1-87ee-c6580bfe45ad</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustiques  junior plumes?9bcf960a-4aa7-4af1-87ee-c6580bfe45ad ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Bracelet Anti-Moustiques Rechargeable Junior - Modèle : Plumes est un équipement biocide anti-moustiques aux huiles essentielles et géraniol.<br />Rechargeable, il contient 2 plaquettes conférant une protection de 1 mois (2 x 15 jours).</p>
+<p>Sa taille est spécialement conçue pour les poignets des enfants de plus de 3 ans (tour de poignet : 16 à 19,5 cm).</p>
+<p>Il se présente sous forme d'un bracelet de tissu rechargeable, disposant de deux plaquettes actives destinées à être placé ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678600345</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dc2acf7255f2c53e89d9f9103a31ad02ee2e4a8e30e92e1aecb1e9d489a3ec6d ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-Moustiques Adulte Fun Etoiles ]]></title>
+<g:id>052232de-e2c4-4e66-a9da-e4e3aa6f5bcc</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustiques adulte fun etoiles?052232de-e2c4-4e66-a9da-e4e3aa6f5bcc ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Découvrez le Bracelet Anti-Moustiques Adulte Fun Etoiles de Parakito, une solution stylée et efficace pour éloigner les moustiques lors de vos activités en extérieur. Ce bracelet rechargeable est conçu pour les adultes et offre une protection durable grâce à ses 2 plaquettes actives fournies, garantissant un mois de tranquillité (2 x 15 jours).</p>
+<p>Fabriqué à partir d'un tissu rechargeable, ce bracelet dispose d'un filet de protection où les plaquettes actives sont placées, assurant une di ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678600567</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d84cc06ddde0ad1c8b0a9f0a9e80a74128288dd2b66428d3908037c397598651 ]]></g:image_link>
+<g:product_type><![CDATA[ MOUSTIQUES > Bien être ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-Moustiques Adultes - Kaki, ]]></title>
+<g:id>cb590c31-199b-4a24-aa85-7d686481c56f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustiques adultes - kaki,?cb590c31-199b-4a24-aa85-7d686481c56f ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <span>Bracelet Anti-Moustiques Adultes Kaki</span> de PARAKITO vous offre une très large protection contre les moustiques. </p>
+<p id="SY6RWL2">Ce bracelet anti-moustiques de couleur kaki est <span>rechargeable</span>.</p>
+<p>Il contient 2 plaquettes imprégnées d'une formule unique aux <span>huiles essentielles</span> pour assurer votre protection  contre les piqûres de moustiques. </p>
+<p>Le bracelet et les plaquettes offrent une libération en continue et une <span>diffusion prolongée</sp ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678604596</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a83125420fb3dc67420ca7e19334899154dd4f1eefeab79046667acd93af4690 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-Moustiques Camouflage ]]></title>
+<g:id>0575658e-62a2-43bf-99aa-ae2acb5a7a93</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustiques camouflage?0575658e-62a2-43bf-99aa-ae2acb5a7a93 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Découvrez le Bracelet Anti-Moustiques Camouflage Parakito : Notre Bracelet Para'kito allie style et efficacité pour repousser les moustiques. Chaque kit comprend deux pastilles rechargeables, offrant une protection de 15 jours chacune après ouverture du sachet protecteur. Fixez-le facilement à votre poignet ou à votre cheville grâce à sa fermeture velcro. Étanche, ce bracelet tendance est disponible dans une variété de coloris.</p>
+<p>Le bracelet anti-moustiques Para'kito imprégné d'huiles es ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678605111</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/df8c8b78bffed2400506b76fe8b7cb6488b521e1e23a52cc930a965b01d27f53 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-Moustiques Junior -Sirènes ]]></title>
+<g:id>119009e4-7f24-40f0-9279-228b22bdce68</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustiques junior -sirènes?119009e4-7f24-40f0-9279-228b22bdce68 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Bracelet Anti-Moustiques Rechargeable Junior - Modèle : Sirènes est un équipement biocide anti-moustiques aux huiles essentielles et géraniol.<br />Rechargeable, il contient 2 plaquettes conférant une protection de 1 mois (2 x 15 jours).</p>
+<p>Sa taille est spécialement conçue pour les poignets des enfants de plus de 3 ans (tour de poignet : 16 à 19,5 cm).</p>
+<p>Il se présente sous forme d'un bracelet de tissu rechargeable, disposant de deux plaquettes actives destinées à être plac ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678600574</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2697ebb736c009e027a9c3f642909af66d2ede887819533b4d0590b3d97340a0 ]]></g:image_link>
+<g:product_type><![CDATA[ MOUSTIQUES > Bien être > PROTECTION MOUSTIQUES ET AUTRES INSECTES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-Moustiques Junior Camouflage ]]></title>
+<g:id>cab32eec-537e-4659-92e7-49642eca0a85</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustiques junior camouflage?cab32eec-537e-4659-92e7-49642eca0a85 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Bracelet Anti-Moustiques Rechargeable Junior - Modèle : Camouflage est un équipement biocide anti-moustiques aux huiles essentielles et géraniol.<br />Rechargeable, il contient 2 plaquettes conférant une protection de 1 mois (2 x 15 jours).</p>
+<p>Sa taille est spécialement conçue pour les poignets des enfants de plus de 3 ans (tour de poignet : 16 à 19,5 cm).</p>
+<p>Il se présente sous forme d'un bracelet de tissu rechargeable, disposant de deux plaquettes actives destinées à être p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678600338</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/05b96dbda8bf1dc227b1860db4f11b37501a1652b07c6c3889b6783180a7dd38 ]]></g:image_link>
+<g:product_type><![CDATA[ MOUSTIQUES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-Moustiques Junior Licornes ]]></title>
+<g:id>44ff2b6b-bc01-4e7d-befe-a649e6d64c54</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustiques junior licornes?44ff2b6b-bc01-4e7d-befe-a649e6d64c54 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Bracelet Anti-Moustiques Rechargeable Junior - Modèle : Licornes est un équipement biocide anti-moustiques aux huiles essentielles et géraniol.<br />Rechargeable, il contient 2 plaquettes conférant une protection de 1 mois (2 x 15 jours).</p>
+<p>Sa taille est spécialement conçue pour les poignets des enfants de plus de 3 ans (tour de poignet : 16 à 19,5 cm).</p>
+<p>Il se présente sous forme d'un bracelet de tissu rechargeable, disposant de deux plaquettes actives destinées à être pla ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678600314</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2c0ab15c05c630823f0307d0919a8fbf9451d5ad3cc2401c1762c88317154aa9 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Bracelet Anti-moustiques Graffic Rose ]]></title>
+<g:id>b6b43928-9484-4f0d-8211-19dd368986f6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-bracelet anti-moustiques graffic rose?b6b43928-9484-4f0d-8211-19dd368986f6 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Bracelet Anti-Moustiques Rechargeable Adulte est un équipement biocide anti-moustiques aux huiles essentielles et géraniol.<br />Rechargeable, il contient 2 plaquettes conférant une protection de 1 mois (2 x 15 jours).</p>
+<p>Sa taille est adaptée pour les poignets des adultes (tour de poignet : 18 à 24 cm).</p>
+<p>Il se présente sous forme d'un bracelet de tissu rechargeable, disposant de deux plaquettes actives destinées à être placées sous le filet de protection du bracelet.</p>
+< ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678600499</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/30b52ed6b3e2329fc71c872b4287185cacd2de61d5a82fdf535128819707e00f ]]></g:image_link>
+<g:product_type><![CDATA[ Bien être > PROTECTION MOUSTIQUES ET AUTRES INSECTES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Clip Anti-Moustiques Rechargeable  Noir ]]></title>
+<g:id>b17313ee-5ed4-4f0f-8e92-e9fbbfdc5859</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-clip anti-moustiques rechargeable  noir?b17313ee-5ed4-4f0f-8e92-e9fbbfdc5859 ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Clip Anti-Moustiques Rechargeable - Couleur : Noir est un accessoire aux huiles essentielles, lavandin et géraniol, pratique pour se protéger des piqûres de moustiques tout en profitant pleinement de ses activités en extérieur. Grâce à sa technologie de diffusion brevetée, ce clip offre une protection efficace jusqu'à 15 jours, en toutes conditions. Léger, il se fixe facilement sur les vêtements, le sac à dos ou tout autre support, pour une protection optimale.</p>
+<p>En plus de sa f ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678604930</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1342d67c86daba4af2dda2789d8c03aa29102a40287bcc3ed08e141118ee8c5d ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Clip Anti-Moustiques Rechargeable Kaki ]]></title>
+<g:id>6e162051-c886-4792-a446-1dc90f160bfb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-clip anti-moustiques rechargeable kaki?6e162051-c886-4792-a446-1dc90f160bfb ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Clip Anti-Moustiques Rechargeable - Couleur : Kaki est un accessoire aux huiles essentielles, lavandin et géraniol, pratique pour se protéger des piqûres de moustiques tout en profitant pleinement de ses activités en extérieur. Grâce à sa technologie de diffusion brevetée, ce clip offre une protection efficace jusqu'à 15 jours, en toutes conditions. Léger, il se fixe facilement sur les vêtements, le sac à dos ou tout autre support, pour une protection optimale.</p>
+<p>En plus de sa f ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678604947</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1381ebe5ac11783df60c1e5cba689e494d4aa8ac2b815b7447f4a1e1144a77ca ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Crème Après-Piqûres 40 ml ]]></title>
+<g:id>1d03214e-12ec-49fd-ae84-99725fe03d1a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-crème après-piqûres 40 ml?1d03214e-12ec-49fd-ae84-99725fe03d1a ]]></link>
+<g:price><![CDATA[ 770.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Crème Après-Piqûres 40 ml est un soin spécialement formulé pour soulager les effets des piqûres de moustiques et autres insectes.<br />L'application de cette crème à la formule renforcée en camomille et zinc, offre un effet apaisant immédiat.</p>
+<p>Convient à partir de 36 mois.<br />Testé sous contrôle dermatologique.</p>
+<p>98% des ingrédients sont d'origine naturelle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8595700700869</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f7fb980b1873982d88297a3a8b23f82741de4454e86de162f6a81697ca2cd2d2 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Party Edition Bracelet Anti-Moustiques ]]></title>
+<g:id>e414c7b5-65f0-4d35-b9dc-68642e82cc67</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-party edition bracelet anti-moustiques?e414c7b5-65f0-4d35-b9dc-68642e82cc67 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Party Edition Bracelet Anti-Moustiques est un bracelet anti-moustiques rechargeable à taille unique, pour toute la famille.<br />Léger et confortable, ce bracelet néoprène est fourni avec deux plaquettes imprégnées de notre formule d'huiles essentielles. Les bracelets se portent aux poignets ou à la cheville et s'ajustent facilement grâce à une attache velcro.<br />Grâce notamment à l'utilisation de vanilline, la technologie brevetée DiffuControl-System™ régule la volatilité des huil ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678603841</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/16652f680daac783d897fab0eee31d3b2ad2fb90f6f4688e481dc35526c3c500 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Party Edition Bracelet Anti-Moustiques Tubes ]]></title>
+<g:id>168348eb-31a2-4081-a57d-c525647e1e1c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-party edition bracelet anti-moustiques tubes?168348eb-31a2-4081-a57d-c525647e1e1c ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Party Edition Bracelet Anti-Moustiques - Modèle : Tubes est un bracelet anti-moustiques rechargeable à taille unique, pour toute la famille.<br />Léger et confortable, ce bracelet néoprène est fourni avec deux plaquettes imprégnées de notre formule d'huiles essentielles. Les bracelets se portent aux poignets ou à la cheville et s'ajustent facilement grâce à une attache velcro.<br />Grâce notamment à l'utilisation de vanilline, la technologie brevetée DiffuControl-System™ régule la vo ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678603858</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/487f0d758d1f79acdfc8bb97a82343c7a88d000a5c3a1c63577d568f58ec07dc ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parakito Spray Anti Moustiques Tropic 75 ml ]]></title>
+<g:id>c3d30c2d-2728-4e26-9511-1cab7832da03</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parakito-spray anti moustiques tropic 75 ml?c3d30c2d-2728-4e26-9511-1cab7832da03 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parakito Spray Anti Moustiques Tropic 75 ml est un répulsif anti-moustiques (dont Anopheles gambiae, Aedes albopictus (moustique tigre) et moustiques Culex) et anti-tiques adapté aux zones tropicales et infestées.</p>
+<p>Résistant à l'eau et à la transpiration.</p>
+<p>Actif d'origine végétale.<br />Sans DEET. Sans alcool.</p>
+<p>Biocide Type 19.</p>
+<p>Testé sous contrôle dermatologique.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3532678600369</g:gtin>
+<g:brand><![CDATA[ PARAKITO  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bad2aa1240c625637a00b98ba4d40d14029c5b6043a59632d08e0476b922ce70 ]]></g:image_link>
+<g:product_type><![CDATA[ PROTECTION MOUSTIQUES ET AUTRES INSECTES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Paranix Extra Fort Anti-Poux Spécial Environnement 150 ml ]]></title>
+<g:id>186582c6-a489-48c1-bb3b-86d80d4a609c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/paranix-extra fort anti-poux spécial environnement 150 ml?186582c6-a489-48c1-bb3b-86d80d4a609c ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Paranix Extra Fort Anti-Poux Spécial Environnement 150 ml est une solution recommandée pour traiter les objets non lavables infestés par les poux : canapés, literies, siège auto, poussettes, casque vélo, moto...</p>
+<p>Cette solution est le complément indispensable dans le traitement des pédiculoses car elle tue les poux sur tout type de textile et contribue ainsi à éviter les phénomènes de ré-infestation.</p>
+<p>Sa formule concentrée en substance active permet de traiter tous les textiles, é ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3595890231780</g:gtin>
+<g:brand><![CDATA[ OMEGA PHARMA ESSENTIEL ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1d11b06e1546047d7c7b8ca747347b19f551bf036390c8c5077d8a61371b2b5f ]]></g:image_link>
+<g:product_type><![CDATA[ ANTI POUX ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Paranix Shampoing Express Action Rapide 5min 300ml ]]></title>
+<g:id>c9789393-6018-44ae-9b9f-df437df864d4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/paranix-shampoing express action rapide 5min 300ml?c9789393-6018-44ae-9b9f-df437df864d4 ]]></link>
+<g:price><![CDATA[ 1699.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="product-characteristics-description" class="product-content">
+<div class="product-content__content c-text c-text--size-s c-text--style-p">
+<div>Le Shampooing Paranix Express est 100% efficace contre les poux de tête en 5 minutes et protège d'éventuelles réinfestations. • Action rapide : Traite les poux de tête en 5 min. Pour traiter plus efficacement les lentes, laisser poser jusqu'à 10 min. • Protection : La technologie LPF® rend la surface du cheveu désagréable pour les poux, ce qui p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5400951004198</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d2bf9c30f28537809c296345cbbe1328d45d1b2dd517dc9e79d101403088815f ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Paranix extra fort anti-poux Environnement 225ml ]]></title>
+<g:id>d163fba3-782f-4497-8c2a-722e69422377</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/paranix-extra fort anti-poux environnement 225ml?d163fba3-782f-4497-8c2a-722e69422377 ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Paranix Extra Fort Spray Anti-poux Environnement 225ml est un spray que vous pouvez vaporiser sur tous les objets qui ne sont pas lavables et sur lesquels des poux ont pu s'installer. Il peut s'agir de canapés, literie, sièges auto, poussettes, casques ...</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3595890231797</g:gtin>
+<g:brand><![CDATA[ PARANIX ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e63c3ce48dcbffb2755d1fee847ef0f97e1f4dd689a0f869546fcf32a8566a08 ]]></g:image_link>
+<g:product_type><![CDATA[ ANTI POUX ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parasidose Moustique Zones tropicales et à risques ]]></title>
+<g:id>96d26f26-23a6-4311-b42f-a120abe1f837</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parasidose-moustique zones tropicales et à risques?96d26f26-23a6-4311-b42f-a120abe1f837 ]]></link>
+<g:price><![CDATA[ 999.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Spray anti-moustique pour les zones tropicales, moustiques Tigres, efficace pendant 6heures.</p>
+<p>Pour toute la famille. Enfant à partir de 24 mois.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3518646042775</g:gtin>
+<g:brand><![CDATA[ GILBERT ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/10921ecfae8f8e9989de664348ebb71512732176fd45177cb2a531de5ce6c284 ]]></g:image_link>
+<g:product_type><![CDATA[ MOUSTIQUES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parazap bracelet anti-moustique bleu ]]></title>
+<g:id>3b759aad-0169-48db-82e5-b926343793f0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parazap-bracelet anti-moustique bleu?3b759aad-0169-48db-82e5-b926343793f0 ]]></link>
+<g:price><![CDATA[ 699.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le bracelet PARAZAP répulsif anti-moustiques aux huiles essentielles, conçu en silicone double couche et imprégnée d'huiles essentielles, vous offrira une couvrance anti-moustique longue durée, même dans les zones tropicales. Il convient à tous grâce à sa fonction ajustable. Peut être porté de jours comme de nuit pour une <strong>protection</strong> efficace et vous accompagne pour vos activités au quotidiens.La <strong>surf</strong>ace blanche est neutre et la curface colorée est imprégnée d ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5404029300809</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2cecae09670d2d5106728a7c59b324ca575bb861bba666ad65df4244fd600947 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parazap bracelet anti-moustique rouge ]]></title>
+<g:id>121ff3f4-3228-4fdb-8223-5b7c130af2ec</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parazap-bracelet anti-moustique rouge?121ff3f4-3228-4fdb-8223-5b7c130af2ec ]]></link>
+<g:price><![CDATA[ 699.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le bracelet PARAZAP répulsif anti-moustiques aux huiles essentielles, conçu en silicone double couche et imprégnée d'huiles essentielles, vous offrira une couvrance anti-moustique longue durée, même dans les zones tropicales. Il convient à tous grâce à sa fonction ajustable. Peut être porté de jours comme de nuit pour une <strong>protection</strong> efficace et vous accompagne pour vos activités au quotidiens.La <strong>surf</strong>ace blanche est neutre et la curface colorée est imprégnée d ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5404029300823</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b71e8b1852be6f8e6c93406073eb9b9e8dfce8146a1c3c7d55017da639f1bae3 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Bain de Bouche Complète Protection 500ml 0% Alcool Menthe Fraîche ]]></title>
+<g:id>a7feafee-bb2f-471f-9509-538eb9a14991</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-bain de bouche complète protection 500ml 0% alcool menthe fraîche?a7feafee-bb2f-471f-9509-538eb9a14991 ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5054563948724</g:gtin>
+<g:brand><![CDATA[ GSK SANTE FAMILIALE  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/029ecaf651b911050bd2f1b011ac7c195a6c5a872c66e4cf938329ee506bf89c ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Brosse à Dents Complète Protection Extra Souple ]]></title>
+<g:id>875a0639-a039-401f-9e30-e6112c2c3c6e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-brosse à dents complète protection extra souple?875a0639-a039-401f-9e30-e6112c2c3c6e ]]></link>
+<g:price><![CDATA[ 360.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Parodontax Brosse à Dents Complète Protection Extra Souple - Couleur : Blanc est une brosse à dents conçue pour éliminer la plaque dentaire et nettoyer le long de la ligne gingivale. Sa brosse est douce pour les gencives et l'émail. Elle est idéale pour un nettoyage interdentaire et aide à restaurer la blancheur naturelle des dents avec sa tête compacte pour les zones difficiles d'accès. Son manche est ergonomique et assure une bonne prise en main.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5054563080981</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/398849b1b0842b3a750aee3b8acf88d27e96d65ffc538c021d95db316960acf0 ]]></g:image_link>
+<g:product_type><![CDATA[ BROSSES À DENTS ET ACCESSOIRES DENTAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Brosse à Dents Douceur Extra Souple ]]></title>
+<g:id>a84567a9-b3cb-4336-b10d-355d314ca23f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-brosse à dents douceur extra souple?a84567a9-b3cb-4336-b10d-355d314ca23f ]]></link>
+<g:price><![CDATA[ 299.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Parodontax Brosse à Dents Douceur Extra Souple - Couleur : Rose est une brosse à dents spécialement développée pour les personnes qui saignent occasionnellement des gencives. Ses brins extra fins éliminent la plaque dentaire, tout en respectant les gencives. Sa petite tête est avec des brins extra-souples pour un nettoyage efficace et doux pour l'émail. Son manche est ergonomique pour une bonne prise en main.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5054563052681</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/98f235c853d81551e133a70a36d60953af10c095d45a63d49601ccd5049e3a79 ]]></g:image_link>
+<g:product_type><![CDATA[ BROSSES À DENTS ET ACCESSOIRES DENTAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Brosse à Dents Nettoyage Souple ]]></title>
+<g:id>b9bbc216-1b0a-4bce-9a5e-73fd46f31376</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-brosse à dents nettoyage souple?b9bbc216-1b0a-4bce-9a5e-73fd46f31376 ]]></link>
+<g:price><![CDATA[ 299.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="description">
+<div class="content_zone_desc tabcontent">
+<div id="type_info_prio_11_1">
+<p>Parodontax Brosse à Dents Nettoyage Souple est une brosse à dents spécialement développée pour les personnes qui saignent occasionnellement des gencives. Ses brins extra fins éliminent la plaque dentaire, tout en respectant les gencives. Sa petite tête est avec une association de brins souples effilés et arrondis, pour un meilleur nettoyage des dents et des gencives. Son manche est ergonomique pou ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5054563050519</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7427c80ab0f3e0db062aa7623a6c397c5937629587e9b9c5813ee2f4e23629ff ]]></g:image_link>
+<g:product_type><![CDATA[ BROSSES À DENTS ET ACCESSOIRES DENTAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Brosse à Dents Souple Interdentaire ]]></title>
+<g:id>dff2328b-44b5-4742-9380-e5ec48d3b3cb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-brosse à dents souple interdentaire?dff2328b-44b5-4742-9380-e5ec48d3b3cb ]]></link>
+<g:price><![CDATA[ 299.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parodontax Brosse à Dents Souple Interdentaire - Couleur : Rose est une brosse à dents spécialement développées pour les personnes qui saignent occasionnellement des gencives. Ses brins extra fins éliminent la plaque dentaire, tout en respectant les gencives.</p>
+<p>Il se compose d'une petite tête avec des brins souples éfillés spécialement conçus pour un nettoyage efficace dans les zones difficiles d'accès et, d'un manche ergonomique pour une bonne prise en main.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5054563050465</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/687c6e860aabad163a508cf70b1d9e2a787ca48dfc6f9fe80fae543733674a9b ]]></g:image_link>
+<g:product_type><![CDATA[ BROSSES À DENTS ET ACCESSOIRES DENTAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Brossette Interdentaire 0.5mm, 6 Unités ]]></title>
+<g:id>befac2eb-8cf7-45b1-ba65-60b4b1f94e77</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-brossette interdentaire 0.5mm, 6 unités?befac2eb-8cf7-45b1-ba65-60b4b1f94e77 ]]></link>
+<g:price><![CDATA[ 430.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Contenu du pack : </span>6 brossettes intendaires 0.5mm</li>
+<li><span>Pour qui : </span>Pour les adultes et les enfants de plus de 12 ans</li>
+<li><span>Résultats : </span>Les espaces interdentaires sont débérassés de la plaque dentaire</li>
+<li><span>Le + : </span>Leur filament fin et leur tête flexible</li>
+</ul><p> </p>
+<p><span>Les Brossettes Interndatires Taille 2 0.5mm Parodontax </span>permettent de nettoyer jusqu'à 40% de surface en plus qu'un brossage classique des dents. ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5054563181596</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9cce292adb4a5eb4e0d876b0b3554ad68606840c3e90bf847e9d6eb20c547915 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Dentifirce  Gencives+Sensibilité&Haleine-  Fraîcheur Intense 75ml ]]></title>
+<g:id>56f7dd81-e1e3-486a-a899-204cfc6b110e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dentifirce  gencives+sensibilité&haleine-  fraîcheur intense 75ml?56f7dd81-e1e3-486a-a899-204cfc6b110e ]]></link>
+<g:price><![CDATA[ 530.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le </span><span>Dentifrice Gencives Sensibilité Haleine Dentifrice Fraîcheur de la marque Parodontax</span><span> nettoie vos dents tout en vous permettant d'avoir des gencives plus saines et plus fortes. Ce dentifrice possède une action quotidienne sur la sensibilité dentaire à raison de 2 brossages par jour. Il lutte contre la plaque dentaire en éliminant efficacement la plaque dentaire qui se loge rapidement dans les espaces interdentaires étroits. Il vient former une barrière protec ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5054563117885</g:gtin>
+<g:brand><![CDATA[ GSK SANTE FAMILIALE  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6a88d0556615faa2b98b7348b8dd3b4e05e41c3b3fc668622b59c7ae942ea0d0 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Dentifrice Blancheur 2 x 75 ml ]]></title>
+<g:id>5d0d4c46-8d23-4cc5-baa7-17824f59c8f4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dentifrice blancheur 2 x 75 ml?5d0d4c46-8d23-4cc5-baa7-17824f59c8f4 ]]></link>
+<g:price><![CDATA[ 799.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parodontax Dentifrice Blancheur Lot de 2 x 75 ml est un dentifrice quotidien au bicarbonate de sodium et au fluor spécialement formulé pour aider à éliminer les causes du saignement des gencives : il contribue à agir sur l'accumulation de bactéries de la plaque dentaire le long de la limite gingivale, permettant de maintenir une barrière protectrice entre les dents et les gencives, il est adapté à un usage quotidien : il renforce les dents et rafraîchit l'haleine. Il aide à restaurer la blanc ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3094904501173</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1d9ed9873b0ea48a1f2505421a2996db3fa237416087354b7768019d130e4552 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Dentifrice Fraîcheur Intense 75 ml ]]></title>
+<g:id>b0c04bdd-4803-4e32-83c2-7cb9bc0c9de7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dentifrice fraîcheur intense 75 ml?b0c04bdd-4803-4e32-83c2-7cb9bc0c9de7 ]]></link>
+<g:price><![CDATA[ 449.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le dentifrice fraicheur intense de Parodontax est spécialement conçu pour les gencives qui saignent occasionnellement.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3094904501166</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/849cd3b22c67fac9081ca11abbd2a229a360e180e561892a1afc6ad5444aa1d3 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Dentifrice Fraîcheur Intense Lot de 2 x 75 ml ]]></title>
+<g:id>da71b1b4-1308-448a-b115-a734f1d57a93</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dentifrice fraîcheur intense lot de 2 x 75 ml?da71b1b4-1308-448a-b115-a734f1d57a93 ]]></link>
+<g:price><![CDATA[ 799.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parodontax Dentifrice Fraîcheur Intense Lot de 2 x 75 ml est un dentifrice qui contient du sel minéral. Il est cliniquement prouvé que parodontax aide à arrêter et prévenir le saignement des gencives en utilisation continue, 2 fois par jour. Il aide à éliminer les bactéries, la cause principale des problèmes de gencives, pour des gencives plus saines et des dents plus fortes. Grâce à sa nouvelle formule améliorée au goût eucalyptus et menthe, le dentifrice est recommandé pour un usage quotidi ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5054563015648</g:gtin>
+<g:brand><![CDATA[ GSK MEDICAMENT ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bc307d964592b07cda99ae68a46f477aa852d106c2bd9137ec175fd3ed32c8bd ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Dentifrice Gel Fluor 75 ml ]]></title>
+<g:id>fc170622-b527-419f-943c-b9c2da220cdb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dentifrice gel fluor 75 ml?fc170622-b527-419f-943c-b9c2da220cdb ]]></link>
+<g:price><![CDATA[ 449.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Gel Crème Dentifrice Parodontax réduit les saignements et les irritations des gencives. Vos dents deviennt alors plus nettes et plus lisses.</p>
+<p>La fraîcheur mentholée intense de longue durée fait du Gel Crème Dentifrice Parodontax le soin idéal pour combattre les soucis gingivaux et avoir une haleine fraîche.</p>
+<p>Le Gel Crème Dentifrice Parodontax contient du Fluor pour renforcer l'émail des dents.</p>
+<p>Des extraits de plantes (Echinacée. Myrrhe. Sauge. Ratanhia) permettent de ton ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3094907614986</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4b3b1872b03aefeb5e3a8ad5f7f898cd50469a4364846725cee6aaef6adef4d6 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Dentifrice Original 75 ml ]]></title>
+<g:id>8edb1ae6-018a-4b73-b5eb-a5b59a72b05c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dentifrice original 75 ml?8edb1ae6-018a-4b73-b5eb-a5b59a72b05c ]]></link>
+<g:price><![CDATA[ 449.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parodontax Dentifrice Original 75 ml est un dentifrice au bicarbonate de sodium et au fluor pour des gencives saines et des dents fortes. Il aide à arrêter et à prévenir le saignement des gencives.  Il est cliniquement prouvé que parodontax aide à arrêter et prévenir le saignement des gencives en utilisation continue, 2 fois par jour. Il aide à éliminer les bactéries, la cause principale des problèmes de gencives, pour des gencives plus saines et des dents plus fortes. Grâce à sa nouvelle for ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3094907248952</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/64ce6262f7fa65362f2409785c54280deb5fe07af5683325b79f9350688a4960 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Dentifrice Protection Fluor Lot de 2 x 75 ml ]]></title>
+<g:id>56932b17-a802-4802-9b53-62bda080ca7e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dentifrice protection fluor lot de 2 x 75 ml?56932b17-a802-4802-9b53-62bda080ca7e ]]></link>
+<g:price><![CDATA[ 799.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parodontax Dentifrice Protection Fluor Lot de 2 x 75 ml est un dentifrice au fluor spécialement formulé pour aider à éliminer les causes du saignements des gencives. Il contribue à agir sur l'accumulation de bactéries de la plaque dentaire le long de la limite gingivale, permettant de maintenir une barrière protectrice entre les dents et les gencives. Le dentifrice est adapté à un usage quotidien : il renforce les dents et rafraîchit l'haleine.</p>
+<p>Contient du fluorure de sodium à 0,315% p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3094904500909</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/53f28aa71218655a0b1c000ca0c5d9d9e92b196c154999d1725ae639b749d628 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Dentifrice Pâte Gingivale Lot de 2 x 75ml ]]></title>
+<g:id>79600579-3583-445f-9eec-1764b04096ce</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dentifrice pâte gingivale lot de 2 x 75ml?79600579-3583-445f-9eec-1764b04096ce ]]></link>
+<g:price><![CDATA[ 750.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parodontax Dentifrice Original Lot de 2 x 75 ml est un dentifrice au bicarbonate de sodium et au fluor pour des gencives saines et des dents fortes. Il aide à arrêter et à prévenir le saignement des gencives.  Il est cliniquement prouvé que parodontax aide à arrêter et prévenir le saignement des gencives en utilisation continu, 2 fois par jour. Il aide à éliminer les bactéries, la cause principale des problèmes de gencives, pour des gencives plus saines et des dents plus fortes. Grâce à sa no ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401347938594</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3d2d100727f7c41f598a116b1a1845fbff1455e1db1685547eab8ca299bcbced ]]></g:image_link>
+<g:product_type><![CDATA[ Bien être > DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Dentifrice Quotidien Renforce et Protège les Gencives à l'Acide Hyaluronique, 2x75ml ]]></title>
+<g:id>d79a8d3b-ea0b-49dc-8839-5f40af6f62f3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dentifrice quotidien renforce et protège les gencives à l'acide hyaluronique, 2x75ml?d79a8d3b-ea0b-49dc-8839-5f40af6f62f3 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Découvrez le <strong>Dentifrice Renforce et Protège Parodontax à l'Acide Hyaluronique</strong>&nbsp;qui offre une solution complète pour des gencives et des dents plus fortes.</p><p>L'<strong>Acide Hyaluronique</strong> présent dans ce dentifrice, contribue à <strong>renforcer les gencives</strong> et à les <strong>protéger des agressions quotidiennes</strong>, grâce à ses propriétés fortifiantes.</p><p>Ce dentifrice apporte une<strong> sensation de fraîcheur</strong> durable et une <strong>h ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5054563240316</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7d6c853cbd0283c6ca2f832dacd881b77b7355ca800ab18d8ba73318ee998871 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE > DENTIFRICE GENCIVES IRRITÉES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Dentifrice Réparation Active Gencives Menthe Fraiche ]]></title>
+<g:id>701fb850-f090-4c70-a0fb-1d6c7d852c63</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dentifrice réparation active gencives menthe fraiche?701fb850-f090-4c70-a0fb-1d6c7d852c63 ]]></link>
+<g:price><![CDATA[ 530.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="prod-desc mb-default">
+<p>Nouveau dentifrice quotidien au fluor parodontax Réparation Active Gencives aide à prévenir et à inverser les problèmes de gencives naissants en ciblant leur cause principale, la plaque. Il élimine activement les bactéries.</p>
+</div>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5054563157041</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d31ce8a712f0044a2e7c1669f23a50deb862299a61882baeb68c304ca4ad6fb9 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Dentifrice Réparation Active Gencives Menthe Fraiche lot 2 ]]></title>
+<g:id>7c3d41b4-7327-40f1-bbc9-62f088c3d7b1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dentifrice réparation active gencives menthe fraiche lot 2?7c3d41b4-7327-40f1-bbc9-62f088c3d7b1 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="prod-desc mb-default">
+<p>Nouveau dentifrice quotidien au fluor parodontax Réparation Active Gencives aide à prévenir et à inverser les problèmes de gencives naissants en ciblant leur cause principale, la plaque. Il élimine activement les bactéries.</p>
+</div>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3094905565228</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7cbf5b5e27affe9d1bf1e750d1bb506dd0705f3977edbe423c9ecc0332bd8d37 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax Dentifrice gencives + sensibilité & haleine 75 ml lot de 2 ]]></title>
+<g:id>3abb1940-411a-4774-af7c-b6295b46267c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dentifrice gencives + sensibilité & haleine 75 ml lot de 2?3abb1940-411a-4774-af7c-b6295b46267c ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3094905556882</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a1a2ffe371c21ef509b2495fd104fa384b7c4921940a8b4c6245e8394c089017 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax bain de bouche quotidien 500ml ]]></title>
+<g:id>176bad4a-99c5-4912-92a9-07677a25afb8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-bain de bouche quotidien 500ml?176bad4a-99c5-4912-92a9-07677a25afb8 ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parodontax Bain de Bouche Quotidien 500ml.</p>
+<p>Elimine 3,5 fois plus de plaque qu'un brossage seul.</p>
+<p>Parodontax bain de bouche aide à réduire le saignement occasionnel des gencives. </p>
+<p>Protège les gencives.</p>
+<p>Utilisé quotidiennement, il élimine plus de plaque qu'un brossage.</p>
+<div></div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3094904242144</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d5eef75e1e83fd9b9a57afd9fef2a0e1520a2e774c7530e1f7173aa200e6c70d ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax complete protection tb75mlx2 ]]></title>
+<g:id>e90ec9d8-5df9-496b-b57d-05bb3f5bf16c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-complete protection tb75mlx2?e90ec9d8-5df9-496b-b57d-05bb3f5bf16c ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="std new-std">
+<p>PARODONTAX<br />Dentifrice protection complète<br />Quotidien au fluor<br />8 bénéfices spécifiques<br />Pour des gencives saines et des dents fortes<br />Haleine, fraîche, émail renforcé, nettoyage en profondeur, blancheur<br />Evite le saignement des gencives, l'inflammation, la plaque dentaire, les douleurs<br />2x75ml</p>
+<p>Doté de 8 bénéfices spécifiques, il vous permet de venir à bout des <strong>saignements des gencives,</strong> de l'inflammation de vos genc ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5054563042675</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7931942fd25d28a1127defb16c7983561849d9fd07caa34e98153812f2726b7c ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax dent herbal x 2 ]]></title>
+<g:id>161314f9-98a8-4847-a2d7-9ec9335ad9ca</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dent herbal x 2?161314f9-98a8-4847-a2d7-9ec9335ad9ca ]]></link>
+<g:price><![CDATA[ 799.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Dentifrice quotidien au bicarbonate de sodium et fluor pour des gencives saines et des dents fortes</span><br /><span>Parodontax est spécialement formulé pour éliminer physiquement la plaque dentaire bactérienne. Parodontax est 4 fois plus efficace pour éliminer la plaque dentaire qu’un dentifrice ordinaire*.</span><br /><span>Parodontax Herbal Twist a un goût unique, combinaison d’extraits de gingembre et de menthe pour un goût frais et une sensation herbale.</span><br /><span>Il est c ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5054563073693</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5946ac26e85172656f96fe9f20ed16c39642b87a9c09ba5979b6db81a006e28f ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax dentifrice blancheur 75 ml ]]></title>
+<g:id>93e8c3a0-2c61-43db-8659-9ce9f29bdd0e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dentifrice blancheur 75 ml?93e8c3a0-2c61-43db-8659-9ce9f29bdd0e ]]></link>
+<g:price><![CDATA[ 449.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pour gencives qui saignent occasionnellement. Blancheur.<br /><br />Dentifrice au Fluor, Menthe, Myrrhe, Camomille, Sauge, Ratanhia, Sels minéraux, Echinacée.<br /><br />Le saignement des gencives peut être par la formation de la plaque bactérienne.<br />Grâce à sa formule notamment à base de Bicarbonate de Sodium, le dentifrice Parodontax, en complément d'un brossage quotidien, nettoie les dents en favorisant la réduction de la plaque et aide à réduire les saignements occasionnels des genciv ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3094904500893</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5126e3144a71aed5bcdcd51001b5d6bca4564fa81a78f3a08c44b0c30cff172d ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax dentifrice herbal sensation 75ml ]]></title>
+<g:id>9f48e7a1-f459-45ee-a72f-076663053960</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dentifrice herbal sensation 75ml?9f48e7a1-f459-45ee-a72f-076663053960 ]]></link>
+<g:price><![CDATA[ 449.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="desc-longue">
+<p>Parodontax Sensation aux herbes 75 ml  est un dentifrice à usage quotidien qui, grâce à sa formulation au fluor et au bicarbonate de sodium, arrête les saignements des gencives et prévient leur récidive. </p>
+<p>Avec une agréable saveur de menthe et de mélisse, il élimine toute accumulation de plaque bactérienne, qui est une cause majeure de saignement des gencives, en plus d'aider à garder des dents fortes et saines. </p>
+<p>La sensation végétale de Parodontax assoc ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5054563070753</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e76241de70d5c485191b8305001ce8a6c70a0871e603bdd3de6e15e0c4f1d681 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parodontax dentifrice quotidien 75ml ]]></title>
+<g:id>228002fb-e102-4672-bc41-1474329fd5fc</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parodontax-dentifrice quotidien 75ml?228002fb-e102-4672-bc41-1474329fd5fc ]]></link>
+<g:price><![CDATA[ 530.00 EUR ]]></g:price>
+<description><![CDATA[ <p>PROTÉGEZ VOS GENCIVES GRÂCE À PARODONTAX<br />Les gencives saines ne saignent pas. Si vous voyez des traces de sang lors du brossage ou lors du passage du fil dentaire, cela peut indiquer une maladie des gencives. S'il n'est pas traité, ce problème peut s'aggraver et être à l'origine d'une mauvaise haleine, de gencives rouges et gonflées, d'un déchaussement des dents et même, au stade final, d'une chute des dents.<br />En éliminant les bactéries de la plaque dentaire qui s'accumulent le long  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5054563041555</g:gtin>
+<g:brand><![CDATA[ GSK SANTE GRAND PUBLIC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9f31688922997f4c789a19bae020e6f482baab7d218bad5d81b0874b6102efe9 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parogencyl Dentifrice Prévention Gencives 2x75ml ]]></title>
+<g:id>2de7f607-99da-40e8-9648-9ea11b8b9de4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parogencyl-dentifrice prévention gencives 2x75ml?2de7f607-99da-40e8-9648-9ea11b8b9de4 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <strong>dentifrice Parogencyl Prévention gencives</strong> est spécialement conçu pour prévenir l'inflammation gingivale, réduire les saignements occasionnels des gencives et lutter contre la plaque dentaire.<br /><br />Cette dernière est constituée notamment de bactéries. Elle peut être la cause de problèmes bucco-dentaires importants. En effet, les bactéries, en se nourrissant, vont émettre des substances nocives pour l'émail, donnant lieu à des <strong>caries</strong>. Au contact d'élém ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8710604763356</g:gtin>
+<g:brand><![CDATA[ FLUOCARIL ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6fb1a8b1a0a0f732dd621f5cc1531f6b14a0d6d8c943ece31276a5672f833480 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parogencyl Dentifrice Soin Intensif Gencives 75 ml ]]></title>
+<g:id>d9128f00-c535-4b04-b128-8225397d2f70</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parogencyl-dentifrice soin intensif gencives 75 ml?d9128f00-c535-4b04-b128-8225397d2f70 ]]></link>
+<g:price><![CDATA[ 450.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parogencyl Dentifrice Soin Intensif Gencives 75 ml est un dentifrice pour brossage quotidien qui aide à réduire les signes d'inflammation gingivale occasionnelle, y compris les saignements.<br />La formule, qui contient du digluconate de chlorhexidine à 0,125% et de la vitamine B3 :</p>
+<ul><li>aide à lutter contre l'accumulation de la plaque bactérienne à l'origine des problèmes de gencives,</li>
+<li>aide à prévenir et à réduire l'inflammation gingivale occasionnelle.</li>
+</ul><p>Le fluor e ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8720181397233</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1fa708fe2a6a616a36f37548872d8ff69ce06e8b5be67ed9078495a4252622f6 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parogencyl Dentifrice Soin Intensif Gencives Lot de 2 x 75 ml ]]></title>
+<g:id>07946935-305f-47eb-9ed9-628929957d45</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parogencyl-dentifrice soin intensif gencives lot de 2 x 75 ml?07946935-305f-47eb-9ed9-628929957d45 ]]></link>
+<g:price><![CDATA[ 799.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parogencyl Dentifrice Soin Intensif Gencives Lot de 2 x 75 ml est un dentifrice pour brossage quotidien qui aide à réduire les signes d'inflammation gingivale occasionnelle, y compris les saignements.La formule, qui contient du digluconate de chlorhexidine à 0,125% et de la vitamine B3 :</p>
+<ul><li>aide à lutter contre l'accumulation de la plaque bactérienne à l'origine des problèmes de gencives,</li>
+<li>aide à prévenir et à réduire l'inflammation gingivale occasionnelle.</li>
+</ul><p>Le fl ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8720181369605</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/74ce18eb334c831038c0a758fbe67c5cbf63e631f187d784a9e2b2ccd9274199 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parogencyl Dentifrice prévention gencives 75ml ]]></title>
+<g:id>c4a8b25c-b721-4072-b04c-547c1c960e0a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parogencyl-dentifrice prévention gencives 75ml?c4a8b25c-b721-4072-b04c-547c1c960e0a ]]></link>
+<g:price><![CDATA[ 390.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="std new-std">
+<p>PAROGENCYL<br />Prévention Gencives<br />Dentifrice <br />Favorise la prévention de l'inflammation gingivale<br />Aide à limiter les saignements gingivaux occasionnels<br />Action antibactérienne sur la plaque dentaire<br />75ml</p>
+<p>Chaque jour, vos gencives sont agressées quand vous mangez ou buvez et inévitablement la plaque dentaire s'installe. L'utilisation bi-quotidienne de Parogencyl® Prévention Gencives est recommandée pour préserver la santé de vos gencive ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8710604763363</g:gtin>
+<g:brand><![CDATA[ FLUOCARIL ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/09a51ef58ad0690f7beb262aa2bddefe5084166eaaa5c0a143a26a4a213ff916 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parogencyl Soin intensif Gencives bain de bouche 300 ml ]]></title>
+<g:id>4d8433ca-c131-4af7-8466-7db93789757d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parogencyl-soin intensif gencives bain de bouche 300 ml?4d8433ca-c131-4af7-8466-7db93789757d ]]></link>
+<g:price><![CDATA[ 420.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Parogencyl Soin intensif Gencives bain de bouche</span><span> est spécialement formulé pour lutter contre les bactéries  responsables des problèmes de gencives et pour renforcer l'émail des dents. </span><br /><br /><span>La </span><span>plaque dentaire</span><span> peut être responsable d'inflammation des gencives. Elle est constituée de bactéries et de résidus alimentaires, et elle est nuisible pour les dents et les gencives. En effet, en se nourrissant de restes de nourriture, ces </ ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8720182039217</g:gtin>
+<g:brand><![CDATA[ FLUOCARIL ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9167675d259b883f843714e6f0628ad3756854a844ad60377f5096d8f6a34185 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Parogencyl bain de bouche gencives 300 ml ]]></title>
+<g:id>b86b9ccc-f1ec-46f0-8fc2-390dfa2aad3a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/parogencyl-bain de bouche gencives 300 ml?b86b9ccc-f1ec-46f0-8fc2-390dfa2aad3a ]]></link>
+<g:price><![CDATA[ 390.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le </span><span>bain de bouche gencives de Parogencyl</span><span> est formulé pour compléter efficacement le brossage des dents. Il aide à prévenir la survenue de </span><span>problèmes aux gencives</span><span> et à protéger les dents des </span><span>caries</span><span>. Ce bain de bouche doit principalement ses capacités à son action antibactérienne. </span><br /><br /><span>En effet, les </span><span>bactéries</span><span> sont à l'origine de ce que l'on appelle la </span><span>pla ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>8710522798164</g:gtin>
+<g:brand><![CDATA[ FLUOCARIL ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ed9d74e9b5b1c06ecb850c4583d417bca5a36e7b5fad0b8388af7fae4fd508ae ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pediakid 22 Vitamines  Oligo-Elements Sirop 250ml ]]></title>
+<g:id>35452c90-44ac-4db3-813c-ba17731d7b84</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pediakid-22 vitamines  oligo-elements sirop 250ml?35452c90-44ac-4db3-813c-ba17731d7b84 ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Dès 4 mois Parfaitement adapté aux enfants et préadolescents, Pediakid® 22 Vitamines &amp; Oligo-éléments associe des plantes, mais aussi des vitamines et des minéraux pour optimiser les apports en micronutriments essentiels, afin de participer au bon fonctionnement de l’organisme et à l’équilibre général. Il est riche en Vitamines et oligo-éléments qui participent au métabolisme énergétique et des nutriments, aux fonctions psychiques, au fonctionnement du système immunitaire : Le métabolisme ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700225602252</g:gtin>
+<g:brand><![CDATA[ INELDEA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dc61c59d43d7b85ad592fe10334540a90c7987e8cb4797d1003357ee360bc9d1 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pediakid Bébé Gaz 12 Sticks - Equilibre Intestinal, Inconfort Digestif ]]></title>
+<g:id>099d1b55-eb1f-471f-a1a8-9d0e8ba4ca77</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pediakid-bébé gaz 12 sticks - equilibre intestinal, inconfort digestif?099d1b55-eb1f-471f-a1a8-9d0e8ba4ca77 ]]></link>
+<g:price><![CDATA[ 790.01 EUR ]]></g:price>
+<description><![CDATA[ <p>Chez le très jeune enfant, l’ inconfort digestif n’ est pas rare, bien au contraire. Le système digestif encore immature et la grande quantité de liquide absorbée dans la journée, font que la gêne occasionnée, bien que passagère et sans gravité, est bien réelle.</p><p>&nbsp;</p><p>PEDIAKID® Bébé Gaz associe des actifs naturels efficaces pour réduire en douceur les gaz et l’ inconfort digestif des bébés.</p><p>Sa formule douce et parfaitement appréciée des bébés apporte des fibres prébiotiques ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700225602306</g:gtin>
+<g:brand><![CDATA[ INELDEA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/70a0f205b24f3959b5fc5c988b771be5b37e2b3a34945abbeafe62775532322e ]]></g:image_link>
+<g:product_type><![CDATA[ TISANES  ET  NUTRITION MATERNITE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pediakid Immuno-Fort 250 ml ]]></title>
+<g:id>e6a32a45-8ab9-446a-ae28-16efa831ea1f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pediakid-immuno-fort 250 ml?e6a32a45-8ab9-446a-ae28-16efa831ea1f ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Complément alimentaire sous forme de sirop à base d’extraits d’Echinacée, Ginseng, baie d’Eglantier, Acérola, Cynorrhodon, Brocoli ; Vitamine C, Manganèse et Cuivre.</strong></p>
+<p><strong>PEDIAKID® Immuno-Fort</strong> réunit des actifs naturels pour<strong> soutenir la résistance de l’organisme</strong>. Idéal aux changements de saison, périodes propices aux refroidissements à répétition, <strong>PEDIAKID® Immuno-Fort</strong> est riche en Cuivre et Vitamine C, qui participent à la ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3700225602221</g:gtin>
+<g:brand><![CDATA[ INELDEA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/84cd1b5dafc77f11fd0fd1806cc72e785eee87908f05e35f5c8f7fbde1b587f9 ]]></g:image_link>
+<g:product_type><![CDATA[ FORME - VITALITÉ ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pedimed crème pieds 100 ml ]]></title>
+<g:id>a398d8cc-b8f0-4014-9672-8138723ff92f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pedimed-crème pieds 100 ml?a398d8cc-b8f0-4014-9672-8138723ff92f ]]></link>
+<g:price><![CDATA[ 750.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La <strong>crème pour les pieds Pedimed</strong> permet de lutter contre les <strong>sécheresses extrêmes de certains pieds </strong>dont les désagréments peuvent conduire à des douleurs et à des dommages importants de la peau. Elle est utilisée dans le but de les soulager et de reconstituer l’épiderme. Elle convient particulièrement aux <strong>personnes diabétiques</strong> car elle joue également un rôle face aux problèmes de micro-circulation, ainsi que face aux infections fongiques qui s ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3577056023989</g:gtin>
+<g:brand><![CDATA[ PIERRE FABRE HYGIENE SOIN ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/14e26607cfd2fe2c3eadd8be8603969ae2268a0f3a30b2f23a24190cc6d1a9ac ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS ET CONFORT DES PIEDS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Perles de Peau Booster d'Éclat Anti-Âge 10 Flaconnettes ]]></title>
+<g:id>e2d614f3-a8c7-45a0-a4da-c33779d5b11b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/perles-de peau booster d'Éclat anti-Âge 10 flaconnettes?e2d614f3-a8c7-45a0-a4da-c33779d5b11b ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Arkopharma Perles de Peau Booster d'Éclat Anti-Âge 10 Flaconnettes est un complément alimentaire buvable saveur pêche-citron avec une formulation spécifique anti-âge et booster d'éclat pour agir de l'intérieur :</p>
+<ul><li>le collagène marin aide à maintenir l'élasticité de la peau et à la lisser,</li>
+<li>l'ascophylle, algue marine, améliore l'hydratation et la fermeté de la peau,</li>
+<li>l'acide hyaluronique, naturellement présent dans la peau, aide à maintenir sa tonicité,</li>
+<li>le zi ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401560202267</g:gtin>
+<g:brand><![CDATA[ ARKOPHARMA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/09a497b77d778e82d4eaba7213a65900f7b199cc669706dc793cc057d9de7ed9 ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Perubore Spray Nez Très Bouché 30 ml ]]></title>
+<g:id>54968447-94ec-4c22-8ac4-38146073e54f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/perubore-spray nez très bouché 30 ml?54968447-94ec-4c22-8ac4-38146073e54f ]]></link>
+<g:price><![CDATA[ 690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce spray nasal soulage la douleur, décongestionne efficacement et aide à éliminer les bactéries ou virus en cas de rhume, rhinite ou sinusite.&nbsp;</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760001043020</g:gtin>
+<g:brand><![CDATA[ MAYOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/15f6be9c2edc8a6e66c0812f8a7989593f1a5e0ea66d70672bcde2992c896e55 ]]></g:image_link>
+<g:product_type><![CDATA[ SANTE > FORME - VITALITÉ ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Petit Drill sirop 125 ml ]]></title>
+<g:id>ac830dd9-0a64-4972-a81f-d5703029337f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/petit-drill sirop 125 ml?ac830dd9-0a64-4972-a81f-d5703029337f ]]></link>
+<g:price><![CDATA[ 460.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Petit Drill sirop toux sèche est un dispositif médical à base de glycérol indiqué pour soulager l’irritation de la gorge causée par une toux sèche. Ce sirop est indiqué pour les nourrissons et enfants à partir de 1 an</strong><span>. </span></p>
+<p><span>Petit Drill toux sèche est un sirop sans sucre, sans colorant et sans parabène, aromatisé à la fraise.</span></p>
+<p>Le sirop Petit Drill, grâce à sa formule basée essentiellement sur le glycérol végétal, possède une double-action :</ ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3577056009730</g:gtin>
+<g:brand><![CDATA[ PIERRE FABRE SANTE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/16c99c699d4f7f555c5bf58754f4cc3f477bd801374d5a22e9c3ed4276a73d9d ]]></g:image_link>
+<g:product_type><![CDATA[  VOIES RESPIRATOIRES  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharm Nature Collagène Marin de Bretagne Confort Articulaire 450 g ]]></title>
+<g:id>c26d2dab-b38d-4cc6-81cd-a863aeaefc39</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharm-nature collagène marin de bretagne confort articulaire 450 g?c26d2dab-b38d-4cc6-81cd-a863aeaefc39 ]]></link>
+<g:price><![CDATA[ 4990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pharm Nature Collagène Marin de Bretagne Confort Articulaire 450 g est un complément alimentaire à la formule hautement concentrée qui contient du collagène, des glycosaminoglycanes, des vitamines et des plantes.</p>
+<ul><li>La vitamine C contribue à la formation naturelle du collagène pour assurer la fonction normale des os et des cartilages.</li>
+<li>Le frêne favorise la souplesse des articulations, muscles et tendons.</li>
+</ul><p>Goût pamplemousse. Sans sucre.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760060287380</g:gtin>
+<g:brand><![CDATA[ NATURE ATTITUDE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2887f861204ab5f912917cb566eb9f71e35866ec2f56dea00c926546cbcd11af ]]></g:image_link>
+<g:product_type><![CDATA[ SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharma Nature Allerfix 15 gélules ]]></title>
+<g:id>db356a21-5889-4be5-915d-f4987b6c35fb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharma-nature allerfix 15 gélules?db356a21-5889-4be5-915d-f4987b6c35fb ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>ALLERFIX est un complément alimentaire à base de plantes qui comporte un actif breveté, le Pantescal H, association d'extrait de câprier, d'olivier, de ginseng et de cassis objectivé par une étude clinique.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401561372723</g:gtin>
+<g:brand><![CDATA[ PRESCRIPTION NATURE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b1477fea77cf2b60a576f61c8b9304ecafd3668859aeffcc1f415143ff896ad9 ]]></g:image_link>
+<g:product_type><![CDATA[ SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharma Nature Seren+  30 Comprimés ]]></title>
+<g:id>81211f1b-0adc-417d-866a-c3e3262f2e51</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharma-nature seren+  30 comprimés?81211f1b-0adc-417d-866a-c3e3262f2e51 ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le complément alimentaire SEREN+ de PHARMA NATURE est formulé à base de plante afin de favoriser la détente, stimuler le sommeil et combattre le stress. Antistress,</p>
+<p>apaisant. Conditionnement : sous blister, étui carton.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401598118233</g:gtin>
+<g:brand><![CDATA[ PRESCRIPTION NATURE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4b225c40c8c82f1d305c0424cb43401d4624b9a40b9e62f5c652ef0b7d0e8f23 ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharma Nature bronchophyt 15 gélules ]]></title>
+<g:id>54eeda44-0134-46cc-9c91-5572c15faa5f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharma-nature bronchophyt 15 gélules?54eeda44-0134-46cc-9c91-5572c15faa5f ]]></link>
+<g:price><![CDATA[ 890.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">Association de 8 plantes pour le traitement des infections respiratoires, soulagement des inflammations des voies respiratoires, expectorant anti spasmodique bronchique.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401299861322</g:gtin>
+<g:brand><![CDATA[ PRESCRIPTION NATURE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/71c7b24761d46a9acb3a2d79041e9ced677e5f5e87b91c6acc4b882ab38db7a8 ]]></g:image_link>
+<g:product_type><![CDATA[  VOIES RESPIRATOIRES  > SANTÉ PREVENTION > SANTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharma Pro Assanis girls gel antibactérien violette 80ml ]]></title>
+<g:id>172b8927-6602-48ed-844b-5bef7e36f613</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharma-pro assanis girls gel antibactérien violette 80ml?172b8927-6602-48ed-844b-5bef7e36f613 ]]></link>
+<g:price><![CDATA[ 190.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">Assanis gel antibactériens pour les mains</p>
+<p class="p1">Efficace et rapide, il permet d'avoir les mains propres en 30 secondes.</p>
+<p class="p1">99.9% des bactéries sont éliminées</p>
+<p class="p1">Indispensable pour se laver les mains avant chaque prestations, ou dans le quotidien.</p>
+<p class="p1">L'ami idéal de votre sac à mains</p>
+<p>Testé sous contrôle dermatologique - pH-neutre</p>
+<p>Gel antibactérien pour l'hygiène et la protection des mains</p>
+<p>Parfum Violette.</ ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760032831061</g:gtin>
+<g:brand><![CDATA[ ASSANIS ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4ef5226176cd9208ca54161a8d049cf427e1c2af583b92c44f22bab02e5e98e9 ]]></g:image_link>
+<g:product_type><![CDATA[ GELS HYDRO ALCOOLIQUES ET ASSAINISSANT ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ PharmaScience Gel Douche neutre 1l ]]></title>
+<g:id>dd4a1f0e-a43d-4afc-94c4-e753fed416bf</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-gel douche neutre 1l?dd4a1f0e-a43d-4afc-94c4-e753fed416bf ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="container">
+<div id="content-wrapper" class="js-content-wrapper">
+<div class="tabs">
+<div class="tab-content" id="tab-content">
+<div class="tab-pane active" id="description">
+<div class="panel panel-default">
+<div id="collapseIndication" class="panel-collapse collapse in">
+<div class="panel-body">
+<div class="product-description">
+<p><span>Le Gel Douche Pharmascience s'utilise quotidiennement pour le nettoyage du visage et du corps.</span><br /><span>Notre gel douche sans parfum est  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162123630</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e0e8c5a32bdf8d77fb4bf3520b330e3d618ea06138c584afe034f563a857fabc ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmababy Couches T1 x 30 2/5KG ]]></title>
+<g:id>c3db856b-8201-475b-9421-e4942f67b146</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmababy-couches t1 x 30 2/5kg?c3db856b-8201-475b-9421-e4942f67b146 ]]></link>
+<g:price><![CDATA[ 699.00 EUR ]]></g:price>
+<description><![CDATA[ <p>nos couches sont <strong>hypoallergéniques, sans parfum, et testées dermatologiquement.</strong><br>Tout est pensé pour éviter les irritations et allergies, afin que vous puissiez avoir l’esprit tranquille.<br>Nous partageons également votre envie d’un monde meilleur pour les enfants. C’est pourquoi nous privilégions des matériaux écologiques et adoptons des méthodes de fabrication responsables pour <strong>réduire notre impact sur l’environnement</strong>. De plus, nos couches sont<strong> f ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760416410080</g:gtin>
+<g:brand><![CDATA[ PHARMABABY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/be69a6848e5e1788a85659113e61b1169050eb14f7cf5efa57b7858eed9c9970 ]]></g:image_link>
+<g:product_type><![CDATA[ Bébé > COUCHES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmababy Couches T2 x 28  3/6KG ]]></title>
+<g:id>579ffc0d-bc5d-4fc5-90da-c04cd9d7c6e2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmababy-couches t2 x 28  3/6kg?579ffc0d-bc5d-4fc5-90da-c04cd9d7c6e2 ]]></link>
+<g:price><![CDATA[ 699.00 EUR ]]></g:price>
+<description><![CDATA[ <p>nos couches sont <strong>hypoallergéniques, sans parfum, et testées dermatologiquement.</strong><br>Tout est pensé pour éviter les irritations et allergies, afin que vous puissiez avoir l’esprit tranquille.<br>Nous partageons également votre envie d’un monde meilleur pour les enfants. C’est pourquoi nous privilégions des matériaux écologiques et adoptons des méthodes de fabrication responsables pour <strong>réduire notre impact sur l’environnement</strong>. De plus, nos couches sont<strong> f ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760416410073</g:gtin>
+<g:brand><![CDATA[ PHARMABABY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/74c4871416250c3ac0e6ad7e40f7a4e30cf2e030811a80e5c3d4d81dc0fae906 ]]></g:image_link>
+<g:product_type><![CDATA[ Bébé > COUCHES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmababy Couches T3 x 54  4/9 KG ]]></title>
+<g:id>ad87a3da-9f8e-466f-b1bb-042619be294e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmababy-couches t3 x 54  4/9 kg?ad87a3da-9f8e-466f-b1bb-042619be294e ]]></link>
+<g:price><![CDATA[ 1699.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nos couches sont <strong>hypoallergéniques, sans parfum, et testées dermatologiquement.</strong><br>Tout est pensé pour éviter les irritations et allergies, afin que vous puissiez avoir l’esprit tranquille.<br>Nous partageons également votre envie d’un monde meilleur pour les enfants. C’est pourquoi nous privilégions des matériaux écologiques et adoptons des méthodes de fabrication responsables pour <strong>réduire notre impact sur l’environnement</strong>. De plus, nos couches sont<strong> f ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760416410066</g:gtin>
+<g:brand><![CDATA[ PHARMABABY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/94d97fb4bbcf060bc1d00d267c1d6d390d6afc2e9e6b80609196c7252f526fc1 ]]></g:image_link>
+<g:product_type><![CDATA[ Bébé > COUCHES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmababy Couches T4 x 48 - 7/18KG ]]></title>
+<g:id>28cc1989-31d3-4858-9627-62cead3946af</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmababy-couches t4 x 48 - 7/18kg?28cc1989-31d3-4858-9627-62cead3946af ]]></link>
+<g:price><![CDATA[ 1699.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parce que nous savons à quel point la peau de votre bébé est précieuse, nos couches sont <strong>hypoallergéniques, sans parfum, et testées dermatologiquement.</strong><br>Tout est pensé pour éviter les irritations et allergies, afin que vous puissiez avoir l’esprit tranquille.<br>Nous partageons également votre envie d’un monde meilleur pour les enfants. C’est pourquoi nous privilégions des matériaux écologiques et adoptons des méthodes de fabrication responsables pour <strong>réduire notre  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760416410059</g:gtin>
+<g:brand><![CDATA[ PHARMABABY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/41a4070e376a7b014f098bbc5f96a2ca9e25526aa025b81dfde2c8931698c935 ]]></g:image_link>
+<g:product_type><![CDATA[ Bébé > COUCHES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmababy Couches T4+ x 44 - 9/20 KG ]]></title>
+<g:id>5c6e1106-4f53-48fe-825e-2cd8817228ca</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmababy-couches t4+ x 44 - 9/20 kg?5c6e1106-4f53-48fe-825e-2cd8817228ca ]]></link>
+<g:price><![CDATA[ 1699.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parce que nous savons à quel point la peau de votre bébé est précieuse, nos couches sont <strong>hypoallergéniques, sans parfum, et testées dermatologiquement.</strong><br>Tout est pensé pour éviter les irritations et allergies, afin que vous puissiez avoir l’esprit tranquille.<br>Nous partageons également votre envie d’un monde meilleur pour les enfants. C’est pourquoi nous privilégions des matériaux écologiques et adoptons des méthodes de fabrication responsables pour <strong>réduire notre  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760416410042</g:gtin>
+<g:brand><![CDATA[ PHARMABABY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/516d307d89843349153c1e469c50a1832c9c9b8078ba420b90af46356405e062 ]]></g:image_link>
+<g:product_type><![CDATA[ Bébé > COUCHES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmababy Couches T5 x 40 - 11/25KG ]]></title>
+<g:id>155d979c-b366-4698-affc-f5575a78c50e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmababy-couches t5 x 40 - 11/25kg?155d979c-b366-4698-affc-f5575a78c50e ]]></link>
+<g:price><![CDATA[ 1699.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Parce que nous savons à quel point la peau de votre bébé est précieuse, nos couches sont <strong>hypoallergéniques, sans parfum, et testées dermatologiquement.</strong><br>Tout est pensé pour éviter les irritations et allergies, afin que vous puissiez avoir l’esprit tranquille.<br>Nous partageons également votre envie d’un monde meilleur pour les enfants. C’est pourquoi nous privilégions des matériaux écologiques et adoptons des méthodes de fabrication responsables pour <strong>réduire notre  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760416410011</g:gtin>
+<g:brand><![CDATA[ PHARMABABY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2b4a39a8ac6aa66c943ac0276eb927e41359a69e1d54f100e3c22f0559e2be2c ]]></g:image_link>
+<g:product_type><![CDATA[ Bébé > COUCHES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmababy Pants T4 x 42 - 7/18KG ]]></title>
+<g:id>a0eb28b4-6eb8-47e0-bee8-02d7a19177bc</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmababy-pants t4 x 42 - 7/18kg?a0eb28b4-6eb8-47e0-bee8-02d7a19177bc ]]></link>
+<g:price><![CDATA[ 1799.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Chez <strong>PharmaBABY</strong>, nous comprenons à quel point la peau de votre bébé est précieuse. C’est pourquoi nos culottes pants sont hypoallergéniques, sans parfum, et testées dermatologiquement. Conçues pour minimiser les risques d’irritations et d’allergies, elles vous permettent de prendre soin de votre enfant en toute sérénité.</p><p>Nos culottes pants sont également idéales pour accompagner votre enfant dans l’apprentissage de la propreté. Grâce à leurs deux bandes larges et extens ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760416410028</g:gtin>
+<g:brand><![CDATA[ PHARMABABY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/235f1ad0cf0c2da8789e6078d0ffc5ef8eb2597b44167469c5c77dd7fc2161e3 ]]></g:image_link>
+<g:product_type><![CDATA[ Bébé > COUCHES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmababy Pants T5 x 40 - 11/25KG ]]></title>
+<g:id>9bbac446-62e6-4265-be86-f2a5edc6ddf9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmababy-pants t5 x 40 - 11/25kg?9bbac446-62e6-4265-be86-f2a5edc6ddf9 ]]></link>
+<g:price><![CDATA[ 1799.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Chez <strong>PharmaBABY</strong>, nous comprenons à quel point la peau de votre bébé est précieuse. C’est pourquoi nos culottes pants sont hypoallergéniques, sans parfum, et testées dermatologiquement. Conçues pour minimiser les risques d’irritations et d’allergies, elles vous permettent de prendre soin de votre enfant en toute sérénité.</p><p>Nos culottes pants sont également idéales pour accompagner votre enfant dans l’apprentissage de la propreté. Grâce à leurs deux bandes larges et extens ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760416410035</g:gtin>
+<g:brand><![CDATA[ PHARMABABY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/35685bc5cf464a728577745164fe1d77108dc11f878c85fbee320928e501cc5c ]]></g:image_link>
+<g:product_type><![CDATA[ Bébé > COUCHES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmababy Pants T6 x 36 - 16Kg et + ]]></title>
+<g:id>1e988b2b-b1d9-4b24-975f-e602771847fa</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmababy-pants t6 x 36 - 16kg et +?1e988b2b-b1d9-4b24-975f-e602771847fa ]]></link>
+<g:price><![CDATA[ 1799.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Chez <strong>PharmaBABY</strong>, nous comprenons à quel point la peau de votre bébé est précieuse. C’est pourquoi nos culottes pants sont hypoallergéniques, sans parfum, et testées dermatologiquement. Conçues pour minimiser les risques d’irritations et d’allergies, elles vous permettent de prendre soin de votre enfant en toute sérénité.</p><p>Nos culottes pants sont également idéales pour accompagner votre enfant dans l’apprentissage de la propreté. Grâce à leurs deux bandes larges et extens ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760416410004</g:gtin>
+<g:brand><![CDATA[ PHARMABABY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5f02cb7936d697b5cf7a122ee7ef6a08b84b79a20d2379e95b90d9a6b7aac9c3 ]]></g:image_link>
+<g:product_type><![CDATA[ COUCHES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience  Gel Hydratant Aloe Vera - 200ml ]]></title>
+<g:id>24416fe5-308d-4ed6-951b-a313e969d57b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-gel hydratant aloe vera - 200ml?24416fe5-308d-4ed6-951b-a313e969d57b ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L'Aloe vera associé à la glycérine végétale font de ce gel un allié puissant qui ravira toute la famille avec sa senteur naturelle.</span><br /><span>Plus de 93% d’ingrédients bio.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158203233</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7ea03aaf31439d7764226761049775a07a74da15e94740f8ec31492a6fa9742e ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE COMPLEXE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Baume Lèvres Karité 4g ]]></title>
+<g:id>1d78e4c8-d057-4d61-be73-24f1161075fb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-baume lèvres karité 4g?1d78e4c8-d057-4d61-be73-24f1161075fb ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>PHARMASCIENCE BIO BAUME À LÈVRES KARITÉ 4G : un soin nourrissant et réparateur en vente en ligne, sur le site de votre parapharmacie à prix pas cher. Offrez à vos lèvres la douceur et la protection qu'elles méritent grâce à ce baume à lèvres bio de Pharmascience.</p><p>Pharmascience est reconnu pour ses formulations naturelles et efficaces, alliant science et nature pour le bien-être de votre peau.&nbsp;</p><p>Le baume à lèvres karité 4g est enrichi en beurre de karité, connu pour ses proprié ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162125337</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ce6b960d55853a35f5844e56474bf04b9ae1e55121172a3decdc7b16ba53ea52 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Baume Pectoral 50g ]]></title>
+<g:id>231f5e29-c52d-46dd-a006-0b943f0fc1f4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-baume pectoral 50g?231f5e29-c52d-46dd-a006-0b943f0fc1f4 ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Baume Pectoral de la gamme Pharmascience permet une action relaxante et calmante. Il agit sur les inconforts au niveau de la poitrine et de la nuque grâce à son agréable sensation de fraîcheur. Sa texture non grasse, fondante et non collante pénètre facilement par massages doux.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158203868</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cb1e0958751f40d049237b451156113184fdcc40369b538f785f9fdec76c0d73 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Baume Pectoral Bébé 50g ]]></title>
+<g:id>0e6bd82b-c9e4-4081-9b2f-d22c79feaa4f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-baume pectoral bébé 50g?0e6bd82b-c9e4-4081-9b2f-d22c79feaa4f ]]></link>
+<g:price><![CDATA[ 490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Baume Pectoral Bébé Pharmascience procure une sensation de bien-être à votre bébé grâce aux massages doux, associés à l'odeur délicate du baume. Il agit au niveau de la poitrine et de la nuque grâce à sa texture souple et fondante.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158204667</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0772eb026ac4f198368617cadd0b8294731648ae719e3cfe816732d6535f511c ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Baume à lèvres 4g ]]></title>
+<g:id>52cb7e24-282a-46f4-a746-1fa1a8334b71</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-baume à lèvres 4g?52cb7e24-282a-46f4-a746-1fa1a8334b71 ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nourrit &amp; protège les lèvres sèches &amp; abimées.</p><p>A partir de 3 ans </p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162125344</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/16db31f746d0e43b7558aae4ea1960170927b2b643138d8c6215fbc2323b5b2c ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Baume à lèvres Cerise 4g ]]></title>
+<g:id>a9ea54d3-357a-4fd0-8ae1-e3418c55f7fa</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-baume à lèvres cerise 4g?a9ea54d3-357a-4fd0-8ae1-e3418c55f7fa ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nourrit &amp; protège les lèvres sèches.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162125313</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bca7cf16c1181c4a08f38085894fef7c463a0d13e1a595ad699c077e9d2fa644 ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Baume à lèvres Coco 4g ]]></title>
+<g:id>0650318d-07be-4699-af2c-0be34f6f6975</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-baume à lèvres coco 4g?0650318d-07be-4699-af2c-0be34f6f6975 ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nourrit &amp; protège les lèvres sèches.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162125320</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1796646b992c7b3bc386c9f8d46c6066114a281da45728afbf83abb15d980a65 ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Crème Mains Bio 50ml ]]></title>
+<g:id>b90668cf-30c5-4857-8e3b-6ebadf27e090</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-crème mains bio 50ml?b90668cf-30c5-4857-8e3b-6ebadf27e090 ]]></link>
+<g:price><![CDATA[ 250.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La&nbsp;<strong>Crème Mains Bio</strong> de Pharmascience est un soin d’exception pour les <strong>mains sèches et abîmées</strong>. Sa formule&nbsp;<strong>99% naturelle</strong>&nbsp;et certifiée&nbsp;<strong>COSMOS ORGANIC</strong> allie beurre de karité bio, glycérine végétale et huiles nourrissantes pour une action hydratante, protectrice et réparatrice intense. Idéale pour un usage quotidien, cette crème non grasse restaure la douceur et le confort des mains sollicitées, tout en respect ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158204971</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bcda84669df2600507a8e412a2f80356c005312fd2599299adfb5d3dee9cf761 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique > CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Crème Mains Bio Amande 50ml ]]></title>
+<g:id>2e224321-f48f-47a3-a974-f18962f40da4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-crème mains bio amande 50ml?2e224321-f48f-47a3-a974-f18962f40da4 ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Crème Mains Bio Amande&nbsp;50ml est spécialement conçue pour hydrater et protéger la peau délicate de vos mains sèches et sensibles. Enrichie en beurre de karité bio, elle pénètre rapidement et laisse une sensation de confort sans effet gras. Ses ingrédients naturels, apportent des propriétés apaisantes et régénérantes, idéales pour les mains sèches et abîmées. Cette crème est parfaite pour une utilisation quotidienne, que ce soit après le lavage des mains ou en soin intensif le soir.&nbs ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158204841</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/28c36a8ebc29d7701b26cf51536918d08e80572e1bd7f8b03a20e895f8b3eab8 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique > CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Crème Mains Bio Karité 50ml ]]></title>
+<g:id>e392a0b1-0e1f-4821-9890-ee1054afde15</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-crème mains bio karité 50ml?e392a0b1-0e1f-4821-9890-ee1054afde15 ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Crème Mains Bio karité est un soin recommandé pour les peaux sèches et sensibles. Elle est formulée à base de beurre de karité bio, qui apaise, nourrit, répare la peau des mains tout en la protégeant des agressions extérieures.</p><p><br></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158204858</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2642dd3ce7c5b5bef270928ee8cec6a65aae32480cb764c6b3d3d6c03b995f18 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique > CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Crème Mains Bio Miel 50ml ]]></title>
+<g:id>c9d7d192-66f0-4931-b971-15d0bcbd6e59</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-crème mains bio miel 50ml?c9d7d192-66f0-4931-b971-15d0bcbd6e59 ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nourrit, protège &amp; hydrate. Mains sèches &amp; sensibles. Testé sous contrôle dermatologique.</p><p><br></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158204865</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f8ecd47c69c237cd83dc3ad03c34998d08b39ea37374ab96e9d40144a9cca259 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique > CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Crème Mains Bio Rose 50ml ]]></title>
+<g:id>e32fdb53-bba8-4f46-8345-644493653fbb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-crème mains bio rose 50ml?e32fdb53-bba8-4f46-8345-644493653fbb ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Nourrit, protège &amp; hydrate. Mains sèches &amp; sensibles. Testé sous contrôle dermatologique.</p><p><br></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158204872</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3f344ba8255c5105d6abe38b34aa6d040d5b0b75be9d1d8a34a8f8689c71d075 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique > CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Gel Douche Aloe Vera 1l ]]></title>
+<g:id>d827327f-5082-4061-8f00-20b76903f950</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-gel douche aloe vera 1l?d827327f-5082-4061-8f00-20b76903f950 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le Gel Douche Pharmascience s'utilise quotidiennement pour le nettoyage du visage et du corps.</span><br /><span>Formulé avec de l'aloe vera bio, il est conçu pour nettoyer votre peau en profondeur et vous offrir une expérience de douche rafraîchissante et réconfortante.</span><br /><span>L'aloe vera bio est enrichi en acides aminés, minéraux et vitamines.</span><br /><span>Il possède des propriétés hydratantes et apaisantes et laissera sur votre peau un parfum délicat qui vous rappelle ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162123739</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/941498824e30eaa7e225882fb2c47529cfc50a0007350841ef94c71998eb1b29 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Gel Douche Amande 1l ]]></title>
+<g:id>90311bfc-9273-472f-8307-f1b2a335a6c8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-gel douche amande 1l?90311bfc-9273-472f-8307-f1b2a335a6c8 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="container">
+<div id="content-wrapper" class="js-content-wrapper">
+<div class="tabs">
+<div class="tab-content" id="tab-content">
+<div class="tab-pane active" id="description">
+<div class="panel panel-default">
+<div id="collapseIndication" class="panel-collapse collapse in">
+<div class="panel-body">
+<div class="product-description">
+<p><span>Le Gel Douche Pharmascience s'utilise quotidiennement pour le nettoyage du visage et du corps.</span><br /><span>Laissez-vous transporter par le p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162123715</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1f205082436808b14de8d1de90e65e0492807c5aa211feef4f70542b99fa0968 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Gel Douche Argan 1L ]]></title>
+<g:id>fc7c6aa7-6a2b-4cf8-8873-dec94aeeb8f5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-gel douche argan 1l?fc7c6aa7-6a2b-4cf8-8873-dec94aeeb8f5 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le Gel Douche Pharmascience s'utilise quotidiennement pour le nettoyage du visage et du corps.</span><br /><span>Découvrez notre gel douche à l'Argan pour profiter d’une expérience de douche réconfortante. En plus de nettoyer votre peau, il vous procure une véritable sensation de douceur.</span><br /><span>Formulé avec de l'extrait d'Argan Bio, riche en vitamine E et antioxydants, il permet de redonner souplesse et confort à votre peau.</span><br /><span>Votre peau sera revitalisée, ave ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162123784</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5c46d360fa16be9301a9c64f6436c97c0a70d815d2ed9953b2b2a600dd20426d ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Gel Douche Fraicheur Marine 1L ]]></title>
+<g:id>d481dc99-9b79-46bf-abb5-06d8f84e3ed0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-gel douche fraicheur marine 1l?d481dc99-9b79-46bf-abb5-06d8f84e3ed0 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le Gel Douche Pharmascience s'utilise quotidiennement pour le nettoyage du visage et du corps.</span><br /><span>Laissez-vous emporter par l'énergie de l'océan avec notre gel douche fraîcheur marine et profitez d'une expérience de douche revitalisante qui vous rapproche de la nature.</span><br /><span>Sa formule respectueuse nettoie votre peau en douceur et lui apporte un parfum frais et vivifiant qui vous transporte sur les côtes de l'océan.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162123760</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/433ce93f16ab8949bc047635b4e804ed1aa15a2450e522d9be7c1165d6fde2b5 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Gel Douche Grenade 1L ]]></title>
+<g:id>85ef552c-4f08-40b5-afe1-f1388ec02da6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-gel douche grenade 1l?85ef552c-4f08-40b5-afe1-f1388ec02da6 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le Gel Douche Pharmascience s'utilise quotidiennement pour le nettoyage du visage et du corps.</span><br /><span>Sentez la fraîcheur et l'énergie de la nature à chaque fois que vous prenez une douche avec notre gel douche au parfum de grenade.</span><br /><span>Sa formule, enrichie en extrait d’Argan Bio, riche en vitamine E et antioxydants, permet d'apporter confort et souplesse à votre peau.</span><br /><span>La senteur grenade, avec ses vertus énergisantes et son parfum frais et frui ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162123722</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/27480f1279d2a2d58c6ed9dcca0e5cc228384ed976cc60af3b1e2914e1e16bde ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Gel Douche Jasmin 1l ]]></title>
+<g:id>99188fa7-1ba0-41ed-ae5b-249cb74e1d47</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-gel douche jasmin 1l?99188fa7-1ba0-41ed-ae5b-249cb74e1d47 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le Gel Douche Pharmascience s'utilise quotidiennement pour le nettoyage du visage et du corps.</span><br /><span>Imprégnez-vous de la fraîcheur florale et sucrée du jasmin avec notre gel douche parfumé.</span><br /><span>Notre formule nettoie efficacement la peau sans la dessécher et en la laissant douce.</span><br /><span>Ce gel douche vous procurera une expérience de douche rafraîchissante et relaxante.</span><br /><span>Votre peau sera revitalisée et votre esprit apaisé gr&amp;agrace ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162123609</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e883a0b78c66dc4dd6a7da250e67b077b3dd57379623ae7668a5db1e15df7c6e ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Gel Douche Monoi 1L ]]></title>
+<g:id>adb7c671-5952-49c7-8c4a-bb0638382dd5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-gel douche monoi 1l?adb7c671-5952-49c7-8c4a-bb0638382dd5 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le Gel Douche Pharmascience s'utilise quotidiennement pour le nettoyage du visage et du corps.</span><br /><span>Laissez-vous tenter par un moment d'évasion intense gràce à la senteur solaire et exotique de notre gel douche au parfum monoï.</span><br /><span>Sa formule douce nettoie efficacement votre peau sans la dessécher, tout en laissant derrière elle un parfum délicat qui rappelle les plages de sable fin et les eaux cristallines des îles tropicales.</span><br /><span>Votre peau ser ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162123616</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/977efd8c860fc50da6b72e41be7f1804d65182e02957b2dda285b425586c3ece ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Gel douche Verveine 1L ]]></title>
+<g:id>ce83125c-9d81-487d-8740-cc1dfd98db10</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-gel douche verveine 1l?ce83125c-9d81-487d-8740-cc1dfd98db10 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le Gel Douche Pharmascience s'utilise quotidiennement pour le nettoyage du visage et du corps.</span><br /><span>Découvrez la fraîcheur et la senteur vivifiante de la verveine à chaque fois que vous prenez une douche.</span><br /><span>Enveloppant la peau d’un parfum acidulé et revitalisant, notre gel douche nettoie et laisse une délicate odeur fraîche et citronnée.</span><br /><span>Votre peau sera propre et rafraîchie, avec une fragrance subtile pour une expérience de douche tonifiant ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162123593</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2c522ee3d0149fdea127dce46bca71e4947d6a7af81a2d0cb21fcdcfd13a9feb ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Huile d'argan 50 ml ]]></title>
+<g:id>685d0df2-4e8f-458d-94ce-1a18f1621407</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-huile d'argan 50 ml?685d0df2-4e8f-458d-94ce-1a18f1621407 ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L'Huile d’Argan</span> Pharmascience est certifiée 100% biologique et naturelle.<br />Elle est reconnue pour ses vertus nourrissante, adoucissante et protectrice. Elle est adaptée aux peaux sèches.</p>
+<p>Grâce à ses propriétés, elle embellie et fortifie la peau, les cheveux secs et les ongles cassants.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500701</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2820905cc17e37ccf530af525e0b2ddbbb190428b838a96091476990c10b552b ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Huile essentielle Cedre de l'Atlas 10ml ]]></title>
+<g:id>83a75ef2-faad-463e-857b-f8ffe0a51774</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-huile essentielle cedre de l'atlas 10ml?83a75ef2-faad-463e-857b-f8ffe0a51774 ]]></link>
+<g:price><![CDATA[ 295.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L'huile essentielle de cèdre de l'atlas Pharmascience est une huile essentielle 100% bio à base de bois de cèdre de l'atlas .</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500077</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/974ebf8f88e78812c91e3f62180b57b0b939e4dfd41782d6277a4d2b166b14dc ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Immunité 30 comprimés ]]></title>
+<g:id>5a04117e-1e79-4c46-943c-250cbcd7432a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-immunité 30 comprimés?5a04117e-1e79-4c46-943c-250cbcd7432a ]]></link>
+<g:price><![CDATA[ 790.01 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760293915548</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/51779093b74e6644f74493ada04099888bc765e398eecb6d6d0e359c84322086 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Immunité 90 comprimés ]]></title>
+<g:id>2698418a-04db-4925-b561-fef670822e47</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-immunité 90 comprimés?2698418a-04db-4925-b561-fef670822e47 ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760293915531</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/51779093b74e6644f74493ada04099888bc765e398eecb6d6d0e359c84322086 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Inhaleur 7 Huiles Essentielles et Camphre 1ml ]]></title>
+<g:id>d3d96066-a39e-4c1c-99e2-10c68e12f961</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-inhaleur 7 huiles essentielles et camphre 1ml?d3d96066-a39e-4c1c-99e2-10c68e12f961 ]]></link>
+<g:price><![CDATA[ 299.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L’Inhaleur Pharmascience aux 7 huiles essentielles et camphre&nbsp;offre&nbsp;un soulagement respiratoire rapide et naturel.&nbsp;Sa formule unique associant 7 huiles essentielles et du camphre en fait un allié précieux contre les troubles respiratoires saisonniers ou occasionnels. Compact et facile à utiliser, cet inhalateur portable vous accompagne au quotidien pour un confort respiratoire optimal et un bien-être général amélioré.&nbsp;Décongestionnant, assainissant, antibactérien, antivira ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158205282</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c0f6413ab9b854eabb2cc18ee86496997efbde2387f1014306f2e2470a74fdaa ]]></g:image_link>
+<g:product_type><![CDATA[  VOIES RESPIRATOIRES  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Lait Anti-Moustiques Tigres Et Tiques Famille 100ml ]]></title>
+<g:id>e9039cec-04b0-458d-a30f-bd1e666ef4f8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-lait anti-moustiques tigres et tiques famille 100ml?e9039cec-04b0-458d-a30f-bd1e666ef4f8 ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le lait anti-moustiques famille Pharmascience est un produit efficace pour protéger toute la famille des piqûres de moustiques (y compris moustiques tigres) et des tiques. Ce produit, élaboré par le laboratoire Pharmascience, est formulé à base d'actifs répulsifs efficaces. Sa texture légère et non grasse permet une application facile et agréable. Ce lait repousse efficacement les moustiques et les tiques jusqu'à 8 heures, tout en laissant une agréable sensation de fraîcheur sur la peau. Sa f ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158204902</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/672d85e27536b2aafa4f221b19628034f1ebc0bd7363de0a1a58c270d696fb59 ]]></g:image_link>
+<g:product_type><![CDATA[ MOUSTIQUES > PROTECTION MOUSTIQUES ET AUTRES INSECTES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Lotion Anti-Moustiques Zones Tropicales 100 ml ]]></title>
+<g:id>f0c40d14-1a7e-44d3-8016-2da7e45bd5e3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-lotion anti-moustiques zones tropicales 100 ml?f0c40d14-1a7e-44d3-8016-2da7e45bd5e3 ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Spray Anti-Moustiques Zones Tropicales offre une protection efficace et naturelle sur une longue durée, formulé à partir d'ingrédients naturels comme la citronnelle et l'eucalyptus. Facile à appliquer et doux pour la peau, il est parfait pour toute la famille et les enfants dès 6 mois.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158204896</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/94ed2becfbd82d31353e4153108a0052bdce375717c3d6c9b6744524cd6f9430 ]]></g:image_link>
+<g:product_type><![CDATA[ MOUSTIQUES > PROTECTION MOUSTIQUES ET AUTRES INSECTES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Masque Anti-Age Grenade  ]]></title>
+<g:id>5282b597-3b31-4a48-82a0-63e0171b631f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-masque anti-age grenade ?5282b597-3b31-4a48-82a0-63e0171b631f ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce masque en tissu est spécialement conçu pour les peaux matures. La grenade, riche en antioxydants, contribue à protéger le visage contre les agressions extérieures, favorisant ainsi un teint plus éclatant et améliorant la fermeté.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4719880178506</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c4dffd78e95671ba4921448e600eecd21dc6c85bd92e82d9092fe6ab785c2004 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Masque Visage Purifiant Papaye ]]></title>
+<g:id>06c16038-0f41-45e8-807c-6763a66a4427</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-masque visage purifiant papaye?06c16038-0f41-45e8-807c-6763a66a4427 ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce masque en tissu est spécialement conçu pour les peaux à tendance acnéique. Enrichi en extraits de papaye, il agit en profondeur pour nettoyer la peau tout en réduisant efficacement la production de sébum et en resserrant les pores.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4719880178520</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4a2b13a45b89aa00771f5015db7c20e036083005f22dbed8d8db74160ad733af ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Masque Visage Ultra Hydratant Noix de Coco ]]></title>
+<g:id>894a9b55-800f-4737-b812-eeaf8ad46440</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-masque visage ultra hydratant noix de coco?894a9b55-800f-4737-b812-eeaf8ad46440 ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce masque en tissu est spécialement conçu pour les peaux sèches et irritées. Sa formule avancée contribue à améliorer le niveau d'hydratation de la peau mais aussi à renforcer la fonction de la barrière cutanée. Les bienfaits nourrissants de la noix de coco apportent souplesse et douceur.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4719880178490</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a65e6b02e677fb6341797cdc6575fb0ed04c4e8a5f9eca302ecb598acbd30390 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Masque Éclat au Kiwi ]]></title>
+<g:id>89ba3fb1-49d5-44e6-8fec-c577b99ab2ce</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-masque Éclat au kiwi?89ba3fb1-49d5-44e6-8fec-c577b99ab2ce ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce masque en tissu est spécialement conçu pour les peaux ternes. Imprégné d'un sérum riche en extraits de kiwi, il aide à revitaliser la peau et son éclat.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4719880178513</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a88b451e428ebc171f1cfc47e4ad881479f5b8d8eee1382d91a9f51e7fc453ee ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Mélatonine 30 gélules ]]></title>
+<g:id>7375b3ac-0722-4003-9033-55ff14600eb8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-mélatonine 30 gélules?7375b3ac-0722-4003-9033-55ff14600eb8 ]]></link>
+<g:price><![CDATA[ 349.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span><span>Pharmascience Mélatonine (30+15 gélules), est un complément alimentaire qui facilite l’endormissement et permet de retrouver un sommeil réparateur apprécié lors de difficulté à s’endormir, réveils nocturnes, et décalage horaire.<br /></span></span>Se présente sous forme de gélules à base de Mélato, qui est une glande située dans le milieu du cerveau produite naturellement par l'épiphyse. Lorsque la lumière s'assombrit, cette petite glande participe à l'endormissement. Elle va perm ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760293911908</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7988c8f726acfcc5c87d6b19745c575b71c1e497b92295bf02e08394a59a25b3 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Octobre Rose Fleur de Sakura Gel Douche 1 Litre ]]></title>
+<g:id>a5c55c0a-2d9f-45a3-b391-811d932b806e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-octobre rose fleur de sakura gel douche 1 litre?a5c55c0a-2d9f-45a3-b391-811d932b806e ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Gel Douche Au parfum de fleur de sakura 1L - EDITION LIMITÉE dans le cadre d'Octobre rose, chaque produit vendu = 1€ versé à L'Institut Marie Curie (<span>L'</span><span>Institut Curie</span><span> lutte contre le </span><span>cancer</span><span> via son centre hospitalier de pointe en cancérologie). </span></span></p>
+<div id="kurato_extension_modal"></div>
+<div></div>
+<div></div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162120998</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/14d99072fef4a5677c54bb4f4752b2431262b2207a5b9cf871251c7dd83ab515 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Savon Solide Lavande 100g  ]]></title>
+<g:id>e3787231-700b-4a19-b2d2-0bba350d3ae8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-savon solide lavande 100g ?e3787231-700b-4a19-b2d2-0bba350d3ae8 ]]></link>
+<g:price><![CDATA[ 249.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce savon surgras, fabriqué artisanalement, allie le savoir-faire traditionnel à des ingrédients naturels soigneusement sélectionnés. A base d'ingrédients naturels, il nettoie en douceur tout en préservant l'hydratation de votre épiderme. Son parfum délicat de lavande procure une sensation de sérénité et de fraîcheur, transformant votre routine de soin en un véritable moment de plaisir. Idéal pour un usage quotidien, ce savon convient à tous les types de peau, même les plus délicates.&nbsp;</p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162125351</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0411223a75e081419e5f2e9c223c27b5f7c01ffaeb8f3ae333272a96864b43ec ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Savon Surgras Argan 100g  ]]></title>
+<g:id>524a3ae9-8944-45f1-bfa9-a7ac069ee17a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-savon surgras argan 100g ?524a3ae9-8944-45f1-bfa9-a7ac069ee17a ]]></link>
+<g:price><![CDATA[ 249.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Savon Surgras Argan est un soin nettoyant et nourrissant, recommandé pour tous les types de peaux, même les plus sensibles. Il est formulé à base d’huile d’argan, de vitamine E qui nourrissent, hydratent et adoucissent la peau de toute la famille au quotidien.</p><p>Ce savon surgras, fabriqué artisanalement, est enrichi en huile d'argan, connue pour ses propriétés nourrissantes et hydratantes. Sa formule douce et respectueuse de l'épiderme convient à tous les types de peau, même les plus s ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162125467</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8da197f8e406f5f82e8653cfd28885137eafed8b7431854586b5c190fee1c524 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Savon Surgras Verveine 100g ]]></title>
+<g:id>1bf8c03b-9136-4292-80ff-1be3793763c3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-savon surgras verveine 100g?1bf8c03b-9136-4292-80ff-1be3793763c3 ]]></link>
+<g:price><![CDATA[ 249.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le savon surgras parfum verveine de 100g est fabriqué de manière artisanale, garantissant une texture riche et crémeuse qui nourrit votre peau en profondeur. Ce savon offre une hydratation optimale tout en préservant le film hydrolipidique de votre épiderme. Son parfum frais et citronné de verveine procure une sensation de bien-être et de légèreté, idéale pour commencer la journée du bon pied. Ce savon est parfait pour tous les types de peau, même les plus sensibles, grâce à sa formule douce  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760162125450</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c208e7c8d932c7aa66533b80b979e827ccd5aee499c245991a019c3bf8a47076 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Sirop Gorge 125ml ]]></title>
+<g:id>f426df9f-6d93-4c4c-bf06-1c1a0d86df97</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-sirop gorge 125ml?f426df9f-6d93-4c4c-bf06-1c1a0d86df97 ]]></link>
+<g:price><![CDATA[ 390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Grâce à l'huile essentielle de menthe arvensis, ce sirop contribue à apaiser la gorge, les cordes vocales et le pharynx.</p>
+<p><span>Réservé aux adultes. Tenir hors de portée des jeunes enfants. Déconseillé aux femmes enceintes et allaitantes et aux personnes allergiques aux produits de la ruche. Ce complément alimentaire doit être utilisé dans le cadre d’une alimentation variée et équilibrée et d’un mode de vie sain. Les personnes sous contrôle médical doivent demander conseil à un professi ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158203851</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/837c5c1dfad0b409faaea006538be1238f67f0d624baba432e1cf86036f64096 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Spray gorge bio 15 ml ]]></title>
+<g:id>6dea5a69-74de-47ef-b63c-d52fa0257502</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-spray gorge bio 15 ml?6dea5a69-74de-47ef-b63c-d52fa0257502 ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le spray gorge contient de l'extrait de racine d'échinacée pourpre BIO aux vertus adoucissantes pour la gorge et les cordes vocales. Associé à l'extrait de pépins de pamplemousse Bio et aux huiles essentielles bio aromatisants d'eucalyptus radié, d'oranges douces, de citron, de romarin à cinéole, de menthe arvensis,et d'origan compact. Ces huiles essentielles sont bien connues en aromathérapie pour leurs propriétés bénéfiques sur la sphère respiratoire supérieure.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158203837</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/942b722a37e8c94bd4013f2043231f0b1348220d093186e27ee05691d9cf320e ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Spray nasal 15 ml ]]></title>
+<g:id>a4658bea-2c2c-40d5-a6e7-31c7c8b6adf4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-spray nasal 15 ml?a4658bea-2c2c-40d5-a6e7-31c7c8b6adf4 ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Ce Spray Nasal est une solution d'eau de mer et d'eau florale de romarin bio qui permet de nettoyer et dégager le nez. Il contient également une synergie d'huiles essentielles bio de ravintsara, d'eucalyptus radiata et de géranium.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158203844</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e6ef764e54545e720fc89dbfbe7617e72830f031d052a345075e93db724571d5 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Spray nasal hygiène quotidienne 100 ml ]]></title>
+<g:id>f0d8a00b-2a42-4089-9890-aa32b09caf17</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-spray nasal hygiène quotidienne 100 ml?f0d8a00b-2a42-4089-9890-aa32b09caf17 ]]></link>
+<g:price><![CDATA[ 299.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Pharmascience</span><span> utilise un procédé de fabrication breveté qui donne à l'eau de mer pure, non modifiée, la valeur du pH physiologique permettant d'optimiser ses propriétés osmotiques décongestionnantes agissant sur les fosses nasales.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158203219</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dfdd48b7c7245c844d6b9526345c592892226b3c222c122a83705aead5c53afa ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIÈNE NASALE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Spray nasal hypertonique nez bouché 100 ml ]]></title>
+<g:id>43c8c4e6-1f3b-48d4-8483-1602e22a6b0a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-spray nasal hypertonique nez bouché 100 ml?43c8c4e6-1f3b-48d4-8483-1602e22a6b0a ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Pharmascience</span><span> utilise un procédé de fabrication breveté qui donne à l'eau de mer pure, non modifiée, la valeur du pH physiologique permettant d'optimiser ses propriétés osmotiques décongestionnantes agissant sur les fosses nasales.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158203202</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/37e7ca6287e7c12c9982ba35f787f588876bbfcc0e60eb3ba2cae486488202a6 ]]></g:image_link>
+<g:product_type><![CDATA[ GELS HYDRO ALCOOLIQUES ET ASSAINISSANT ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Spray nasal nourrissons, enfants 100 ml ]]></title>
+<g:id>9aecc49b-05ac-4ce5-8889-23addc459672</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-spray nasal nourrissons, enfants 100 ml?9aecc49b-05ac-4ce5-8889-23addc459672 ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Pharmascience</span> utilise un procédé de fabrication breveté qui donne à l'eau de mer pure, non modifiée, la valeur du pH physiologique permettant d'optimiser ses propriétés osmotiques décongestionnantes agissant sur les fosses nasales.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701158203226</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/68c70c6617ec22522ceb7c27977e58ab63a611b4cbc8e4a27dd62c8c9f7ad006 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIÈNE NASALE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Vitalité 30 comprimés ]]></title>
+<g:id>cada9932-50a8-4681-8f22-4f7c3689490e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-vitalité 30 comprimés?cada9932-50a8-4681-8f22-4f7c3689490e ]]></link>
+<g:price><![CDATA[ 790.01 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760293915753</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/64e745bf00233c5a1c3e0c577f5534e5136a3f134fa36c14b3e2de49af7e24e7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Vitalité 90 comprimés ]]></title>
+<g:id>0e7bdd8d-5a03-4ca1-afea-65ae02c6ad5c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-vitalité 90 comprimés?0e7bdd8d-5a03-4ca1-afea-65ae02c6ad5c ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760293915760</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d48cbab0de09cdd183cb5efdde255c95034a2971ad51ffd9d6bb9a1ed2f16d95 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Vitalité Sénior 90 comprimés ]]></title>
+<g:id>740c3530-7877-4648-a1cb-c78c3df1f9af</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-vitalité sénior 90 comprimés?740c3530-7877-4648-a1cb-c78c3df1f9af ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760293915517</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d48cbab0de09cdd183cb5efdde255c95034a2971ad51ffd9d6bb9a1ed2f16d95 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience Vitalité sénior 30 comprimés ]]></title>
+<g:id>ab93af9d-c5b2-4c57-b39b-664ecfcef6f7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-vitalité sénior 30 comprimés?ab93af9d-c5b2-4c57-b39b-664ecfcef6f7 ]]></link>
+<g:price><![CDATA[ 790.01 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Avaler 1 gélule par jour avec un verre d'eau. </span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760293915524</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d48cbab0de09cdd183cb5efdde255c95034a2971ad51ffd9d6bb9a1ed2f16d95 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience ail bulbe bio antioxydant 200 gélules ]]></title>
+<g:id>c8591839-e57f-443f-bdcd-e5ebc338151c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-ail bulbe bio antioxydant 200 gélules?c8591839-e57f-443f-bdcd-e5ebc338151c ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Contribue à la santé vasculaire. Favorise des jambes légères. Aide à augmenter la capacité antioxydante de l'organisme. Aide à renforcer les défenses naturelles.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019668</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2d970075cef5102db153aef1af8c15727725bd6f0d10ab17dab54db32ab7c382 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience algue fucus effet de satiété bio 200 ]]></title>
+<g:id>421f1e70-71e0-49eb-91bf-3547cb50ea9f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-algue fucus effet de satiété bio 200?421f1e70-71e0-49eb-91bf-3547cb50ea9f ]]></link>
+<g:price><![CDATA[ 895.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Aide à accroître la sensation de satiété. Reconnu pour faciliter le transit et la digestion.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019675</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/af7814b73e35578afdd24de3455bb8f8771f71941185f5e70beb56097482ba11 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience ananas bromélaïne 200 gélules ]]></title>
+<g:id>5ca6040d-df69-48d1-87ba-5d192639b7a6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-ananas bromélaïne 200 gélules?5ca6040d-df69-48d1-87ba-5d192639b7a6 ]]></link>
+<g:price><![CDATA[ 695.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Contribue au métabolisme des graisses, ce qui aide à contrôler le poids. Favorise l’amincissement.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019682</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/234542d92c41862670afdef58bc0ea9336f6cb4999c3403d7198b305eebd2bb9 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience artichaut bio digestion confort intestinal 200 gélules ]]></title>
+<g:id>5adf2dae-5dc4-422b-a732-bb77d86f5e04</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-artichaut bio digestion confort intestinal 200 gélules?5adf2dae-5dc4-422b-a732-bb77d86f5e04 ]]></link>
+<g:price><![CDATA[ 895.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Contribue au bon fonctionnement du foie. Aide à favoriser la digestion. Contribue au confort intestinal.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019699</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1d536d65dc7b62a3c8d9c0ad2d7909b592af3ca841e6619a1f54af6efef3cb29 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience aubépine bio nervosité 200 gélules ]]></title>
+<g:id>f4e74b87-0ba3-4da5-a6cc-77382e04e4ca</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-aubépine bio nervosité 200 gélules?f4e74b87-0ba3-4da5-a6cc-77382e04e4ca ]]></link>
+<g:price><![CDATA[ 895.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Contribue à diminuer l'agitation. Favorise la relaxation. Aide à diminuer l'irritabilité.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019705</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/59c59f4873676c1d89c6d6941cd830f04adf2f3c1ba16a21fdb655610cf79208 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience bambou confort articulaire 200 gélules ]]></title>
+<g:id>d80fff3c-3575-48b2-b022-8a0e8a53f5f2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-bambou confort articulaire 200 gélules?d80fff3c-3575-48b2-b022-8a0e8a53f5f2 ]]></link>
+<g:price><![CDATA[ 489.99 EUR ]]></g:price>
+<description><![CDATA[ <p>Favorise le confort articulaire. Participe à la reminéralisation osseuse. Aide à maintenir la mobilité des articulations.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019712</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b5fb7831d2a38e22d29ab4e9f09aa30c539cf86e4ed31d4d4373800cae4a67cd ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience bardane bio peau saine 200 gélules ]]></title>
+<g:id>589a7380-48f0-4f4d-9d65-b7ce67638702</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-bardane bio peau saine 200 gélules?589a7380-48f0-4f4d-9d65-b7ce67638702 ]]></link>
+<g:price><![CDATA[ 895.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Participe à la santé de la peau. Utilisé pour le drainage de l’organisme.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019729</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/960eaae819b6eaafde1acba3962d99c233640f581ca1a8d8fd339c2e031e1edd ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience basilic tropical bio huile essentielle 10ml ]]></title>
+<g:id>bef15c05-d35a-4f19-a85d-a8b721296d06</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-basilic tropical bio huile essentielle 10ml?bef15c05-d35a-4f19-a85d-a8b721296d06 ]]></link>
+<g:price><![CDATA[ 350.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Basilic tropical 100% bio huile essentielle , pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500008</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7e7d9e5884644be665f4ec68a89336d2f6e90a8e548c22b490f12ab877ad42c9 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience bergamote bio huile essentielle 10ml ]]></title>
+<g:id>d0be42d3-e1f6-418f-8f79-aab6658236c0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-bergamote bio huile essentielle 10ml?d0be42d3-e1f6-418f-8f79-aab6658236c0 ]]></link>
+<g:price><![CDATA[ 489.99 EUR ]]></g:price>
+<description><![CDATA[ <p>Bergamote 100% bio huile essentielle, pure et naturelle est obtenue pression à froid.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500015</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/30062756c8c3c724b1a260dad1a31674034fca8903e2f5ef86d6ac86131112a2 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience bois de ho bio huile essentielle 5ml ]]></title>
+<g:id>dfa63d2f-40aa-4a82-ba5e-ecef37b242fc</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-bois de ho bio huile essentielle 5ml?dfa63d2f-40aa-4a82-ba5e-ecef37b242fc ]]></link>
+<g:price><![CDATA[ 390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Bois de ho 100% huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau. </p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500022</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e833088bb470dfff14fa027453a019bdbbff77dd02d5db00c52495fd4d51f188 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience bourrache onagre 120 capsules ]]></title>
+<g:id>f008e44a-60cc-4a21-ab6b-cef35ac56abd</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-bourrache onagre 120 capsules?f008e44a-60cc-4a21-ab6b-cef35ac56abd ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Utilisé pour faciliter les fonctions d'élimination de l'organisme. Aide à entretenir une peau en bonne santé. Assure un apport régulier d'acides gras polyinsaturés qui favorise un comportement normal pendant le cycle menstruel.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019736</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ce51646d966948282f6c1d99fdb4632a87786a1e593a8a0e23b5a4cf0e9dc01f ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience cannelle écorce bio huile essentielle 5ml ]]></title>
+<g:id>cb7e59aa-f631-4f40-9074-6ca63c3f4e76</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-cannelle écorce bio huile essentielle 5ml?cb7e59aa-f631-4f40-9074-6ca63c3f4e76 ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Cannelle ecorce 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500053</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2e7df0aa95413a36e9115c97726a0ae794cc6b369a56b67b07d57808d6119d31 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience cartilage de requin 200 gélules ]]></title>
+<g:id>15fefcde-fd6e-441b-a1b5-8862548be742</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-cartilage de requin 200 gélules?15fefcde-fd6e-441b-a1b5-8862548be742 ]]></link>
+<g:price><![CDATA[ 915.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Propriétés anti-inflammatoires. Favorise le confort articulaire.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019750</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cc3123809572af2ad53ee6dbe8d90e8b6b94fe292e7bd4fff9ef167d539bd8b9 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience cassis feuille bio mobilité articulaire 200 gélules ]]></title>
+<g:id>62129902-22a6-4e09-82d8-403ead4e9051</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-cassis feuille bio mobilité articulaire 200 gélules?62129902-22a6-4e09-82d8-403ead4e9051 ]]></link>
+<g:price><![CDATA[ 895.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Contribue au bon fonctionnement des muscles et des articulations. Pour des articulations souples. Favorise la mobilité et le confort articulaire.<span>Effets anti-inflammatoire et antirhumatismal : le </span><b>cassis</b><span> atténue les douleurs articulaires, les rhumatismes, l'arthrite, l'arthrose et la goutte.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019767</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/267f906f44bd7b287e5396734ef6ac43041ea34042845eda0c5361d0bc90d84c ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience charbon végétal ballonnements 200 gélules ]]></title>
+<g:id>dc038c84-1346-4ffb-ae6d-eda12c699464</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-charbon végétal ballonnements 200 gélules?dc038c84-1346-4ffb-ae6d-eda12c699464 ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le charbon actif contribue à réduire l'excès de flatulences après le repas.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019781</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7dafb2bddcb230849e2ae686acab4580cbad6456d8dee1e034e3f6a0a77ca1b7 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience chardon marie bio 200 gélules ]]></title>
+<g:id>4d47b877-8afe-4aaa-b168-072e559aeded</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-chardon marie bio 200 gélules?4d47b877-8afe-4aaa-b168-072e559aeded ]]></link>
+<g:price><![CDATA[ 895.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Contribue au bon fonctionnement du foie. Contribue à la protection du foie. Antioxydant.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019798</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bda243a44590957cad8edb6fdae338d631a63d30c4da428c751f245de9b1c966 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience ciste ladanifère bio huile essentielle 10ml ]]></title>
+<g:id>c6582194-3587-4c12-9ed1-d20d981ce294</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-ciste ladanifère bio huile essentielle 10ml?c6582194-3587-4c12-9ed1-d20d981ce294 ]]></link>
+<g:price><![CDATA[ 950.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ciste Ladanifère 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500084</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/67f5de6258e90ef858e77b685c4cbf4db56cde194e64c43a2204db526cc0269e ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience citron bio huile essentielle 10ml ]]></title>
+<g:id>4d5bd353-8dd6-47bf-aece-09422c0afd49</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-citron bio huile essentielle 10ml?4d5bd353-8dd6-47bf-aece-09422c0afd49 ]]></link>
+<g:price><![CDATA[ 350.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Citron 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500091</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/63a03781be03dfacd05f51310ca75bf567b0870e22b6359e77da27c802028846 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience citronnelle de java bio huile essentielle 10ml ]]></title>
+<g:id>ff2b9fdc-e3dd-49cc-af06-6aef1e1cc57a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-citronnelle de java bio huile essentielle 10ml?ff2b9fdc-e3dd-49cc-af06-6aef1e1cc57a ]]></link>
+<g:price><![CDATA[ 295.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Citronnelle de java 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500107</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cc9ffc54978c0a2c0193a218f711a8897397a1b20f93ccd70af5b49fea214fa4 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience curcuma pipérine confort articulaire 200 gélules ]]></title>
+<g:id>2af4507c-b118-4e4b-a375-8d414b76ec2d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-curcuma pipérine confort articulaire 200 gélules?2af4507c-b118-4e4b-a375-8d414b76ec2d ]]></link>
+<g:price><![CDATA[ 795.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Aide à protéger les articulations. Aide à maintenir la flexibilité des articulations. A des propriétés antioxydantes significatives.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400020367</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ca9da6b13ec85482f3d17b7d1bdae6b6bcbc84f5d3ba09ab52e8e4c884b46445 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience cyprès bio huile essentielle 10ml ]]></title>
+<g:id>e7ff58f9-6d59-4c6f-9c84-dcc31fb0c644</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-cyprès bio huile essentielle 10ml?e7ff58f9-6d59-4c6f-9c84-dcc31fb0c644 ]]></link>
+<g:price><![CDATA[ 390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Cyprès 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500114</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4d7d7bc2b3371fc1f4d5fd5b6269bd4d0fb5b8a9a74284f428d8904eb17cff2b ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience desmodium drainage du foie 200 gélules ]]></title>
+<g:id>a72e55f8-0d99-4751-b923-cf6733206f08</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-desmodium drainage du foie 200 gélules?a72e55f8-0d99-4751-b923-cf6733206f08 ]]></link>
+<g:price><![CDATA[ 795.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Favorise le fonctionnement hépatique. Draineur hépatique.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019804</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4cf0efed834dfceb6d4ee6874cc125a5c719181f8c563f36d0a68cf15f3fefa5 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience eau florale d' hammamelis bio 200ml ]]></title>
+<g:id>7963987d-468b-463c-b959-b57a91c8aff5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-eau florale d' hammamelis bio 200ml?7963987d-468b-463c-b959-b57a91c8aff5 ]]></link>
+<g:price><![CDATA[ 490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L'Hydrolat d'Hamamélis </span><span>Pharmascience est certifiée biologique.</span><br /><span>Il apaise en douceur les peaux délicates. Astringent, tonique et purifiant, il est particulièrement adapté aux peaux mixtes et grasses.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500633</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f96a70a38408acd5438916eea7a7f4b1087a678417ebe2e091518ecb669d022d ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience eau florale de bleuet bio 200 ml ]]></title>
+<g:id>6990de86-5853-4699-9219-59a7ab7b5460</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-eau florale de bleuet bio 200 ml?6990de86-5853-4699-9219-59a7ab7b5460 ]]></link>
+<g:price><![CDATA[ 490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L'Eau florale de Bleuet</span><span> Pharmascience est certifiée biologique.</span><br /><span>C'est une lotion décongestionnante et apaisante pour les yeux fatigués. Elle peut s'utiliser aussi comme lotion tonique pour le visage.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500619</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7ca0e164f5e7e06a20688dfd7c4b9f13783e36560a1528f8c06764acec841476 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience eau florale de fleur d'oranger bio 200ml ]]></title>
+<g:id>d06799b4-dc29-42ac-86d2-638cddb7da47</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-eau florale de fleur d'oranger bio 200ml?d06799b4-dc29-42ac-86d2-638cddb7da47 ]]></link>
+<g:price><![CDATA[ 490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L'Eau florale d'Oranger </span><span>Pharmascience est certifiée biologique.</span><br /><span>Son parfum bien connu, tonifie, rafraichit, régénère et apaise la peau. Elle est particulièrement adaptée aux peaux sèches.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500602</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/348fd76dc727c0d073970611353c37012e9b5048a143de9e6632d3f17bb6923b ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience eau florale de lavande fine bio 200ml ]]></title>
+<g:id>9b07df1a-e2cc-4cc6-b043-1c385019dd5d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-eau florale de lavande fine bio 200ml?9b07df1a-e2cc-4cc6-b043-1c385019dd5d ]]></link>
+<g:price><![CDATA[ 390.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L'Eau florale de Lavande Fine </span><span>Pharmascience est certifiée biologique.</span><br /><span>Elle est rafraichissante, apaisante et adoucissante. Cette eau florale est recommandée en soin apaisant pour les coups de soleil, les irritations ou les piqûres d'insectes. Elle est souvent conseillée pour purifier les zones grasses. Elle est particulièrement adaptée aux peaux mixtes et grasses.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500626</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5a622da8a1c6ecad12ecfe078e8faee6c95d47e15555d4b28f16987b982d8838 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience eau florale de rose de Damas bio 200ml ]]></title>
+<g:id>52b200e4-b7a8-4072-8870-03b1db4979be</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-eau florale de rose de damas bio 200ml?52b200e4-b7a8-4072-8870-03b1db4979be ]]></link>
+<g:price><![CDATA[ 599.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L'Eau florale de Rose de Damas</span><span> Pharmascience est certifiée biologique.</span><br /><span>Elle est astringente avec un effet tenseur, cette eau florale est préconisée pour prévenir et lutter contre le vieillissement cutané. Elle purifie et adoucit la peau et est aussi utilisée pour lutter contre la déshydratation et se rafraichir à tout moment : en été, en voyage, après le sport… Elle est adaptée à tous types de peaux.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500596</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/62499d4a54bddafa90f1a9ecd0c1a052e6f69bc344a689d807fa82d3b8702119 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience encens serrata bio huile essentielle 5ml ]]></title>
+<g:id>a91e69b6-51ab-4595-8ebe-27503321f744</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-encens serrata bio huile essentielle 5ml?a91e69b6-51ab-4595-8ebe-27503321f744 ]]></link>
+<g:price><![CDATA[ 390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Encens serrata 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500121</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/11997eaf738b572db7055b9d43cd4fa1e5f80cf2a0c847b59bd77e90b0b6dac4 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience eschscholtzia relaxation-sommeil 200 gélules ]]></title>
+<g:id>ac0270f3-2146-4c20-b2a1-24753a1388c7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-eschscholtzia relaxation-sommeil 200 gélules?ac0270f3-2146-4c20-b2a1-24753a1388c7 ]]></link>
+<g:price><![CDATA[ 790.01 EUR ]]></g:price>
+<description><![CDATA[ <p>Bon pour le moral. Aide à favoriser la relaxation. Améliore la qualité du sommeil naturel.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019828</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/484a8186f8e073921259be8b4818fe21b795f481930758e8cb7b1b5c32a19803 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience estragon bio huile essentielle 5ml ]]></title>
+<g:id>8b0bde22-65b6-404e-bf13-f065aae028b8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-estragon bio huile essentielle 5ml?8b0bde22-65b6-404e-bf13-f065aae028b8 ]]></link>
+<g:price><![CDATA[ 650.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Estragon 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500145</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cb7f846a856a561777da3af4e10b8d70168d411fd1ad29ab804ad7448399f565 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience eucalyptus citronné bio huile essentielle 10ml ]]></title>
+<g:id>8a3517ca-e53e-41c3-a7fd-755e12c257e4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-eucalyptus citronné bio huile essentielle 10ml?8a3517ca-e53e-41c3-a7fd-755e12c257e4 ]]></link>
+<g:price><![CDATA[ 375.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Eucalyptus citriodora 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500152</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/49c4ed96d533da80276ada975d7a3e2b0e6038fd23cd5859c31ea0f59f015133 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience eucalyptus globulus bio huile essentielle 10ml ]]></title>
+<g:id>f85290f3-640b-4d70-974e-6b97a266755a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-eucalyptus globulus bio huile essentielle 10ml?f85290f3-640b-4d70-974e-6b97a266755a ]]></link>
+<g:price><![CDATA[ 350.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Eucalyptus globulus 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500169</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9d53a8bfad5d8f66582a8d4fac7d5f9ba8ba8e62346f131845abd6321aa92ed8 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience eucalyptus radiata bio huile essentielle 10ml ]]></title>
+<g:id>1740a423-b0a2-4606-b282-8d50478390da</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-eucalyptus radiata bio huile essentielle 10ml?1740a423-b0a2-4606-b282-8d50478390da ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Eucalyptus radiata 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500176</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1558997bbc2f34f7011cfd2630fd54d8874d29e38f9a3465ac18ab9d9ca5d528 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience fenouil digestion 200 gélules ]]></title>
+<g:id>37555ac6-b7db-4c33-a0ed-d8aa1d81d37d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-fenouil digestion 200 gélules?37555ac6-b7db-4c33-a0ed-d8aa1d81d37d ]]></link>
+<g:price><![CDATA[ 695.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Favorise la santé du tube digestif. Activité antioxydante. Favorise la digestion.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019835</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/001c0d09ad6b2d999c1ee9bd5250cbd8538e1b67a725bec44dedab7a06aa5485 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience fenugrec tonifiant 200 gélules ]]></title>
+<g:id>044bcf62-ea01-4066-a4e3-10883c7f0f2d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-fenugrec tonifiant 200 gélules?044bcf62-ea01-4066-a4e3-10883c7f0f2d ]]></link>
+<g:price><![CDATA[ 695.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Tonifiant physique et psychique. Favorise l'appétit.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019842</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a7175b3850e94cb1856a548141e721148d8c5434a50be796f90f0833dce881b9 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience genevrier bio huile essentielle 10ml ]]></title>
+<g:id>d65a4ab4-0208-4020-bc68-66be1b0b0915</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-genevrier bio huile essentielle 10ml?d65a4ab4-0208-4020-bc68-66be1b0b0915 ]]></link>
+<g:price><![CDATA[ 489.99 EUR ]]></g:price>
+<description><![CDATA[ <p>Eucalyptus radiata 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500183</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0ac8aaa5a892f631afa88415777bc12cd4887f73af4527a17817bb141fd22e5f ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience gingembre bio nausées transport 200 gélules ]]></title>
+<g:id>065d54a1-d9f2-4114-8144-c98d9025b1be</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-gingembre bio nausées transport 200 gélules?065d54a1-d9f2-4114-8144-c98d9025b1be ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Aide à favoriser la digestion. Aide à maintenir la sensation de confort. Aide à empêcher les sensations nauséeuses associées à l'utilisation d'un véhicule et/ou au mal de mer.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019859</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d0887377faa362bcc8db97a478943539d3ac6331126b88a8ee1efde326f2edde ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience gingembre frais bio huile essentielle 5ml ]]></title>
+<g:id>e113fb6a-fbf1-41c3-8453-54a4d5baee7d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-gingembre frais bio huile essentielle 5ml?e113fb6a-fbf1-41c3-8453-54a4d5baee7d ]]></link>
+<g:price><![CDATA[ 599.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Gingembre frais 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500206</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2454fe2470bedb55830c8865c3f791933b14ccdedb7ee598c4b2aa0502b5f2be ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience ginkgo biloba bio mémorisation 200 gélules ]]></title>
+<g:id>a650302b-5f5f-4df7-8297-0512dfb1eb90</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-ginkgo biloba bio mémorisation 200 gélules?a650302b-5f5f-4df7-8297-0512dfb1eb90 ]]></link>
+<g:price><![CDATA[ 895.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Aide au maintien d'une bonne fonction cognitive. Accroissement des performances cognitives.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019866</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/58ac2699f70326a1c173bf83b71f74878303f5ccb52dc39bfddbc82cf7dd8bac ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience ginseng rouge défenses naturelles-vitalité 200 gélules ]]></title>
+<g:id>d951fcec-5ec9-47f9-b05c-f5195dfd1d60</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-ginseng rouge défenses naturelles-vitalité 200 gélules?d951fcec-5ec9-47f9-b05c-f5195dfd1d60 ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le ginseng soutient les défenses naturelles. Aide à stimuler la vitalité. Le ginseng aide en cas de fatigue, de stress et de convalescence.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019873</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6366180499d56710153394180033eaff176d2e9259c051519a94e63ad1dd526c ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience girofle bio huile essentielle 5ml ]]></title>
+<g:id>63da0180-7e7f-4ec6-bcfc-24ac7c01a1c6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-girofle bio huile essentielle 5ml?63da0180-7e7f-4ec6-bcfc-24ac7c01a1c6 ]]></link>
+<g:price><![CDATA[ 375.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Girofle 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500213</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/00ca5e1ca08319d2444c02404f922e152008ecbcb916eef65076d71b54f7912d ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience griffonia équilibre nerveux 200 gélules ]]></title>
+<g:id>2589c361-6104-4bc8-88d8-1723446af9a6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-griffonia équilibre nerveux 200 gélules?2589c361-6104-4bc8-88d8-1723446af9a6 ]]></link>
+<g:price><![CDATA[ 695.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pour l'amélioration de l'activité cérébrale.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019880</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d2d502655b55a3e4593c4b1fa318f61ead25fb9ac8d49f30125942d60a1ab6bb ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience guarana bio énergie vitalité 200 gélules ]]></title>
+<g:id>001bf53f-f476-4558-bc80-57bdf23b18b6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-guarana bio énergie vitalité 200 gélules?001bf53f-f476-4558-bc80-57bdf23b18b6 ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Aide à se sentir plus énergique. Aide à combattre les excès de poids. La caféine aide à améliorer la concentration.</p>
+<p>COMPLÉMENT ALIMENTAIRE À BASE DE GUARANA BIO. Paullinia cupana</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019897</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5239dbabaf36c0250c37e34b9ae1d554aeb5203faa7251ed250dac58e40ee26c ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience géranium type bourbon bio huile essentielle 5ml ]]></title>
+<g:id>4d1fff5f-ed05-423c-80d5-80123c43d08f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-géranium type bourbon bio huile essentielle 5ml?4d1fff5f-ed05-423c-80d5-80123c43d08f ]]></link>
+<g:price><![CDATA[ 489.99 EUR ]]></g:price>
+<description><![CDATA[ <p>Géranium bourbon 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500190</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/402be6c1c6369b82831effa0bdbe3d55f347a72e172ac1003eacf24319821dff ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience hamamélis bio jambes légères 200 gélules ]]></title>
+<g:id>016c4b4d-a0ea-4693-b58f-047594570b05</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-hamamélis bio jambes légères 200 gélules?016c4b4d-a0ea-4693-b58f-047594570b05 ]]></link>
+<g:price><![CDATA[ 895.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Jambes fatiguées/jambes légères. Contribue à la circulation dans les jambes.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019903</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d47fe93ac4f88fb0395a9d5afcd0f8ad651ad9c8eae36ec30584381674e017ef ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience harpagophytum bio confort articulaire 200 gélules ]]></title>
+<g:id>6d28b318-a272-4d99-8fee-52f21bb8fb5c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-harpagophytum bio confort articulaire 200 gélules?6d28b318-a272-4d99-8fee-52f21bb8fb5c ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Aide à maintenir une bonne mobilité. Soutient la flexibilité des articulations. Contribue à maintenir la santé articulaire.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019910</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7f03bf790533b3295b95c9216f5c9d2559abfed7cbea3158941011acef6534f8 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience he bio menthe des champs ]]></title>
+<g:id>5ab60850-49f2-4a6d-94ba-3a1215ade6d5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-he bio menthe des champs?5ab60850-49f2-4a6d-94ba-3a1215ade6d5 ]]></link>
+<g:price><![CDATA[ 330.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Huile essentielle menthe des champs 100% bio naturelle et pure </p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500565</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/046fba58a634836a604e822b2956ec137108339ce34b852365c23b80c3bc9924 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience he bio sapin blanc ]]></title>
+<g:id>80d884ac-38c1-4ad9-a4c9-743d0744a2c0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-he bio sapin blanc?80d884ac-38c1-4ad9-a4c9-743d0744a2c0 ]]></link>
+<g:price><![CDATA[ 489.99 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Cette huile essentielle de Sapin Blanc 100% bio, pure et naturelle est obtenue par distillation à la vapeur d'eau des aiguilles d'Abies alba Mill.</span><br /><span>Flacon de 10ml.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500558</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e538c5628fef36d84f5654e88d0ed6f36ca8b54ff6fb8d02b14f813944b25293 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience huile d'amande douche bio 50ml ]]></title>
+<g:id>82721cc1-c41f-4e0c-b9bb-d3a0f54a5d65</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-huile d'amande douche bio 50ml?82721cc1-c41f-4e0c-b9bb-d3a0f54a5d65 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L’Huile d’Amande Douce Pharmascience est certifiée 100% biologique et naturelle.<br />Elle est reconnue pour ses vertus hydratante, apaisante et adoucissante. Elle est adaptée aux peaux irritées, sèches et abîmées.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500718</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/14e920f1969e46329b23d2da4737f64e8ab20d35cb590894ff9841765e281a9d ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience huile d'avocat 50ml ]]></title>
+<g:id>b48a6280-aa71-40aa-8d43-d3f5a8e22653</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-huile d'avocat 50ml?b48a6280-aa71-40aa-8d43-d3f5a8e22653 ]]></link>
+<g:price><![CDATA[ 450.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L'Huile d’Avocat</span><span> peut-être utilisée pour nourrir en profondeur les cheveux secs et les peaux sèches.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500695</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a2ee2b3f22e0d617008cd984d57e0881a0385f48e52bee1761c9d7122430af76 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience huile de bourrache 120 capsules ]]></title>
+<g:id>8cbb167b-819c-447e-bd20-660837450e2c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-huile de bourrache 120 capsules?8cbb167b-819c-447e-bd20-660837450e2c ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Utilisé pour faciliter les fonctions d'élimination de l'organisme. La vitamine E contribue à protéger les cellules contre le stress oxydatif.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400020350</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/04f6451f53f2ec05af0793682acf15047dcaf3ff760dcf4ff6ba7b3f9eaa0be8 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience huile de graines de lin 200 capsules  ]]></title>
+<g:id>71386438-cfd1-4c32-84c6-83a644d910ec</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-huile de graines de lin 200 capsules ?71386438-cfd1-4c32-84c6-83a644d910ec ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L’acide alpha-linolénique (ALA) contribue au maintien d’une cholestérolémie normale.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019941</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f76f44d865ae3c0b391a09dbc08b2d187a9488458baa4e6cd3be8f5b5c058403 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience huile de pépins de courge 200 capsules ]]></title>
+<g:id>8b63cad7-5cdc-4656-81f6-d745e53b40d9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-huile de pépins de courge 200 capsules?8b63cad7-5cdc-4656-81f6-d745e53b40d9 ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Bon pour le fonctionnement normal de la prostate. Maintient le bon fonctionnement de la vessie et un bon débit urinaire.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019958</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5de53a952232cecd6e2de47dee687f0e04652b6dda30ceb0e7bec16dc4d24976 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience huile de rose musque 50ml ]]></title>
+<g:id>3e2f8a0e-5097-45e1-854b-3c274ea198f0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-huile de rose musque 50ml?3e2f8a0e-5097-45e1-854b-3c274ea198f0 ]]></link>
+<g:price><![CDATA[ 890.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Grâce à ses propriétés, elle redonne de l'éclat au teint. Elle permet également de nettoyer en profondeur, de gommer les yeux gonflés et de combattre les rides.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500640</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/21be9cc73ad92c43d35a2162486576751132e0dc90cd56fb4c77a444691a5828 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience huile de saumon 200 capsules ]]></title>
+<g:id>7a902959-c213-4f5e-aed0-47a36a5d4c0e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-huile de saumon 200 capsules?7a902959-c213-4f5e-aed0-47a36a5d4c0e ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L'acide eicosapentaénoique (EPA) et l'acide docosahexaénoique (DHA) contribuent à une fonction cardiaque normale.<br />L'effet bénéfique est obtenu par la consommation journalière de 250 mg d'EPA <br />et de DHA</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019965</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a85dcb0dd71c6b197f2ac74eaa7bea50ccd3e47255fc0be96f0771132681af73 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience immortelle bio huile essentielle 5ml ]]></title>
+<g:id>29fe2309-c57b-4b8d-8df2-0c2efffc682d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-immortelle bio huile essentielle 5ml?29fe2309-c57b-4b8d-8df2-0c2efffc682d ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Immortelle 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500220</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0ce717cc1216945155908a4e453a681859b4bc656166240e8e826abde60f6e1d ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience konjac perte de poids 200 gélules ]]></title>
+<g:id>9bae199c-ef2f-4765-a556-bd9cd6a7ce5d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-konjac perte de poids 200 gélules?9bae199c-ef2f-4765-a556-bd9cd6a7ce5d ]]></link>
+<g:price><![CDATA[ 695.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le glucomannane consommé dans le cadre d'un régime hypocalorique contribue à la perte de poids.</p>
+<p></p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019972</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9da60e2c13110fa59d0d7a4f362bcbf3290a48c9a420a94f4248168cd9d0ce29 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience kudzu ménopause 200 gélules ]]></title>
+<g:id>4a478949-6903-4c44-9a87-25a5f5d936f6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-kudzu ménopause 200 gélules?4a478949-6903-4c44-9a87-25a5f5d936f6 ]]></link>
+<g:price><![CDATA[ 795.00 EUR ]]></g:price>
+<description><![CDATA[ <p>À utiliser en cas de symptômes ménopausiques.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019989</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d72ed24f1437a35ed7a6f93c28bbed3d85a4ecfd6513f02fbcf24bd25a9a4bb7 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience laurier noble bio huile essentielle 5ml ]]></title>
+<g:id>d66f33b2-20cd-4d4a-93c7-05c3360606d8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-laurier noble bio huile essentielle 5ml?d66f33b2-20cd-4d4a-93c7-05c3360606d8 ]]></link>
+<g:price><![CDATA[ 489.99 EUR ]]></g:price>
+<description><![CDATA[ <p>Laurier noble 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500237</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5c525640a54a76d9c98264974435176fd4c56f4154827a902a93d006e8fd0f20 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience lavande aspic bio huile essentielle 10ml ]]></title>
+<g:id>fb70334c-18c2-4514-8e88-2c66e89a3cfb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-lavande aspic bio huile essentielle 10ml?fb70334c-18c2-4514-8e88-2c66e89a3cfb ]]></link>
+<g:price><![CDATA[ 489.99 EUR ]]></g:price>
+<description><![CDATA[ <p>Lavande aspic 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500244</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/976910e4386da08aaa79d4a8ba6f66efd24b96a1b135f1a80e5120ab1a5587cf ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience lavande officinale bio huile essentielle 10ml ]]></title>
+<g:id>22711cdd-ad6f-4681-ae52-265e458f6d98</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-lavande officinale bio huile essentielle 10ml?22711cdd-ad6f-4681-ae52-265e458f6d98 ]]></link>
+<g:price><![CDATA[ 489.99 EUR ]]></g:price>
+<description><![CDATA[ <p>Lavande fine 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500251</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d4f97f2a39a17eb5c6cc91ba06c9bfa8bcd0904ee26307e543349e05b962dc6a ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience lavandin grosso bio huile essentielle 10ml ]]></title>
+<g:id>6b27e00c-592a-4264-a7d3-a034fb5f5a4f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-lavandin grosso bio huile essentielle 10ml?6b27e00c-592a-4264-a7d3-a034fb5f5a4f ]]></link>
+<g:price><![CDATA[ 395.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lavandin grosso 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500268</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/686f914f0865951757d96c803a4b4d6a889c83b43843397adaec2edfc9300d38 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience lemongrass bio huile essentielle 10ml ]]></title>
+<g:id>bebebcf6-09ff-4194-85ed-5bf3b76e97ff</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-lemongrass bio huile essentielle 10ml?bebebcf6-09ff-4194-85ed-5bf3b76e97ff ]]></link>
+<g:price><![CDATA[ 350.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lemongrass 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500275</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d61227d76f93f74b49b8eed5caac8c7d135c265fd0496283fdc14e02214a66f4 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience lentisque pistachier bio huile essentielle 5ml ]]></title>
+<g:id>b4cdde7e-3157-4125-8623-72628eac3223</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-lentisque pistachier bio huile essentielle 5ml?b4cdde7e-3157-4125-8623-72628eac3223 ]]></link>
+<g:price><![CDATA[ 975.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lentisque pistachier 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500282</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/47ec1e58f313fffc9ba1e861ac201c30dde5e3765517a55e86d55d240ca0257b ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience levure de bière & zinc 200 gélules ]]></title>
+<g:id>66d8fdd2-0449-49e4-83e1-cd70cf4a4092</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-levure de bière & zinc 200 gélules?66d8fdd2-0449-49e4-83e1-cd70cf4a4092 ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le zinc contribue au maintien d’une peau normale.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400020305</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c12e209e93aa0f0bf4beac66f0dd0a66691093d7a9fec95a6e8112d9bc4fa397 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience levure de bière bio non revivifiable 200 comprimés ]]></title>
+<g:id>f4d80441-7510-4f5d-a47b-e04e029e28ee</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-levure de bière bio non revivifiable 200 comprimés?f4d80441-7510-4f5d-a47b-e04e029e28ee ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Soutient les défenses naturelles et stimule la vitalité. Aide en cas de stress ou de convalescence.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400019996</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/94ceef353bed39d210507ebdaa149eeb86678e16f79b03ab4123a1c769d972e8 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience levure de bière revivifiable 200 gélules ]]></title>
+<g:id>90fa6fe2-f39e-4bf9-9290-db86f120ce48</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-levure de bière revivifiable 200 gélules?90fa6fe2-f39e-4bf9-9290-db86f120ce48 ]]></link>
+<g:price><![CDATA[ 695.00 EUR ]]></g:price>
+<description><![CDATA[ <p>COMPLÉMENT ALIMENTAIRE À BASE DE LEVURE DE BIÈRE. Saccharomyces cerevisiae</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400020008</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6bd9f5a66530891a5ba85430af094efd809cac110f1ce898cf05c5e0c6e765bc ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience levure de riz rouge cholestérol 120 gélules ]]></title>
+<g:id>39e33437-339e-4505-ad97-60f7ad5673d3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-levure de riz rouge cholestérol 120 gélules?39e33437-339e-4505-ad97-60f7ad5673d3 ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La monacoline K de la levure de riz rouge contribue à une cholestérolémie normale. L'effet bénéfique est obtenu par la consommation journalière de 10 mg de monacoline K provenant de levure de riz rouge fermentée.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400020015</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/481a70fde52b35555d59972d18b212bb33811c885bdcd9e01b95b7982a582970 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience lithothamne source de calcium 200 gélules ]]></title>
+<g:id>35ad5933-ac67-4d95-b052-4e952b209100</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-lithothamne source de calcium 200 gélules?35ad5933-ac67-4d95-b052-4e952b209100 ]]></link>
+<g:price><![CDATA[ 895.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le calcium est nécessaire au maintien d'une ossature normale. Le calcium contribue à une fonction musculaire normale. Le calcium contribue au fonctionnement normal des enzymes digestives.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400020022</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/38ba2193f3e49ecd15508f6cf8dd413b029119eef19957d3b5abd2b3a3ceade9 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience litsée citronnée bio huile essentielle 10ml ]]></title>
+<g:id>110df611-ad17-41cd-91d8-bc91b1e44d11</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-litsée citronnée bio huile essentielle 10ml?110df611-ad17-41cd-91d8-bc91b1e44d11 ]]></link>
+<g:price><![CDATA[ 390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Litsée citronnée 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500299</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1c0050c5e0177fa1a52b657da2fa027f4abb64b91925184063b721ff2ef2dd67 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience maca du pérou vigueur - énergie 200 gélules ]]></title>
+<g:id>f52bf4d5-f0d0-49df-bdeb-94924681074d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-maca du pérou vigueur - énergie 200 gélules?f52bf4d5-f0d0-49df-bdeb-94924681074d ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="i4c-draggable-container" style="width:0px;height:0px;">
+<div class="resolved"></div>
+</div>
+<p>Soutient les performances physiques et intellectuelles. Source d'énergie. Stimule le désir sexuel.</p>
+<div id="i4c-dialogs-container"></div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400020039</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d33880fe747259c40e92c40486cea316f551d80eba5bf41f7196a608ba6ade1b ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience magnesium marin 30 cp ]]></title>
+<g:id>c27353d5-a6f1-43f2-989f-21322fab6638</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-magnesium marin 30 cp?c27353d5-a6f1-43f2-989f-21322fab6638 ]]></link>
+<g:price><![CDATA[ 349.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le magnésium et la vitamine B6 contribuent à réduire la fatigue et contribuent au fonctionnement normal du système nerveux</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760293911526</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7a304293ff4d6c321bf2dbea4a3c5cf3097818baf68347e3ff6f7dba1bdccf49 ]]></g:image_link>
+<g:product_type><![CDATA[ FORME - VITALITÉ ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience magnésium marin vitamine b6 détente 200 gélules ]]></title>
+<g:id>3f7ca91d-13ea-4d90-9578-bf8ccc113256</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-magnésium marin vitamine b6 détente 200 gélules?3f7ca91d-13ea-4d90-9578-bf8ccc113256 ]]></link>
+<g:price><![CDATA[ 690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>A utiliser en cas de problème de sommeil, pour se détendre</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400020046</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/17678e092268a63ebc4d5f544b679e6f8d2a9f81ea2971a7044bd8c1813a429d ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience mandarine verte bio huile essentielle 10ml ]]></title>
+<g:id>8d11e862-9b1f-4df0-901e-b4791bcb670c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-mandarine verte bio huile essentielle 10ml?8d11e862-9b1f-4df0-901e-b4791bcb670c ]]></link>
+<g:price><![CDATA[ 650.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Mandarine verte 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500305</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/83fada3b758fb53e3c88f703b35b2c7da2fe2023445912bc8350439a5a57e28b ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience marjolaine à coquilles bio huile essentielle 10ml ]]></title>
+<g:id>a8b1ad43-a946-4a6c-b10a-d87959ac4255</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-marjolaine à coquilles bio huile essentielle 10ml?a8b1ad43-a946-4a6c-b10a-d87959ac4255 ]]></link>
+<g:price><![CDATA[ 890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Marjolaine à coquilles 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500312</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b130317d69b650cd3d99c6f577ed3b737f80097af7e8dd227cb8e059623a0074 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience marron d'inde bio jambes légères 200 gélules ]]></title>
+<g:id>86b45954-3562-4fb6-bbf1-ba349ba68cb7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-marron d'inde bio jambes légères 200 gélules?86b45954-3562-4fb6-bbf1-ba349ba68cb7 ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Aide à maintenir une bonne circulation veineuse dans les jambes. Utilisé pour la bonne circulation du sang dans les micro-vaisseaux.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400020053</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1797c8cf47984baca7c1b73e63c86b88b5ee2d1b94d50948807bdd5a390e7e29 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience maté vert drainage 200 gélules ]]></title>
+<g:id>71543766-e813-4abf-bc1a-0e833d2aed7a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-maté vert drainage 200 gélules?71543766-e813-4abf-bc1a-0e833d2aed7a ]]></link>
+<g:price><![CDATA[ 695.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Soutient le drainage du corps. Contribue à la dégradation lipidique. Aide à renforcer l'organisme.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400020060</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/eeaaf64e95c49da2aff1716923040cfac591be6319df66c5e6ef09eb8576dc9d ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience menthe poivrée bio huile essentielle 10ml ]]></title>
+<g:id>9e4236f0-4db2-425d-bf16-330cbaeb8bc7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-menthe poivrée bio huile essentielle 10ml?9e4236f0-4db2-425d-bf16-330cbaeb8bc7 ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Menthe poivrée 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500329</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0af3819880c51935c65e7b916c8f7405f8734f040ac57c40f54dee025bfbe8f6 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience millepertuis bio humeur - sommeil 200 gélules ]]></title>
+<g:id>0c77b379-0876-45ed-9edf-32fcc592f8af</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-millepertuis bio humeur - sommeil 200 gélules?0c77b379-0876-45ed-9edf-32fcc592f8af ]]></link>
+<g:price><![CDATA[ 895.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Aide à maintenir une humeur positive. Favorise la qualité du sommeil. Aide à rester calme et à gérer le stress.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400020084</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b9a021f38b54fee3ecb3c469bf0d531f84f8e596c7301eae5916474ebe7539f2 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience myrte rouge bio huile essentielle 5ml ]]></title>
+<g:id>ed730600-31d1-41ae-b5d6-001b9cb22990</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-myrte rouge bio huile essentielle 5ml?ed730600-31d1-41ae-b5d6-001b9cb22990 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Myrte rouge 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500336</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a358898a3ead7e0ab944f43d9b715498c4257f4464a12040044ccb1f7057e226 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience myrtille bio confort visuel 200 gélules ]]></title>
+<g:id>1ac6621b-8cd4-4a9e-b8df-2d8e2e381302</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-myrtille bio confort visuel 200 gélules?1ac6621b-8cd4-4a9e-b8df-2d8e2e381302 ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Complément antioxydant. Fournit un support antioxydant aux yeux. Favorise la clarté visuelle. Favorise l'irrigation sanguine de l’oeil.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400020091</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/384637a9c6c09b6db554ad37c7adf05bd7dfdc620095c8673a0307433709083a ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience mélisse bio digestion 200 gélules ]]></title>
+<g:id>a00e49b2-81c7-4b91-8ae0-bda48635072e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-mélisse bio digestion 200 gélules?a00e49b2-81c7-4b91-8ae0-bda48635072e ]]></link>
+<g:price><![CDATA[ 895.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Aide à favoriser la digestion. Contribue au fonctionnement normal du tube digestif.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3535400020077</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b276d1206c72a89b571e10298b9945174895b8e4d994cfaca8c41e9d464fb236 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Pharmascience niaouli bio huile essentielle 10ml ]]></title>
+<g:id>d0628578-9e48-4337-938a-229565c205b0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/pharmascience-niaouli bio huile essentielle 10ml?d0628578-9e48-4337-938a-229565c205b0 ]]></link>
+<g:price><![CDATA[ 299.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Niaouli 100% bio huile essentielle, pure et naturelle est obtenue par distillation à la vapeur d'eau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701215500350</g:gtin>
+<g:brand><![CDATA[ PHARMASCIENCE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/10cc92669790cfcdf7344f193d734b516a8693be0f98c93ed3c833b0d48748af ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+</channel>
+</rss>`;
+});

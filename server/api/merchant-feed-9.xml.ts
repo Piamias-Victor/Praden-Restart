@@ -1,0 +1,12867 @@
+import { defineEventHandler } from 'h3';
+
+export default defineEventHandler((event) => {
+  event.node.res.setHeader('Content-Type', 'application/xml; charset=utf-8');
+  
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
+<channel>
+<title><![CDATA[ Pharmacie Agnès Praden - Produits santé et bien-être - Partie 9 ]]></title>
+<description><![CDATA[ Produits de pharmacie, parapharmacie et matériel médical disponibles à la Pharmacie Agnès Praden à Alès. ]]></description>
+<link>https://pharmacieagnespraden.com</link>
+<item>
+<title><![CDATA[ Klorane shampoing solide au cédrat cheveux normaux à gras 80 g ]]></title>
+<g:id>c147a799-6841-45d9-9b31-4009e4c0e41d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/klorane-shampoing solide au cédrat cheveux normaux à gras 80 g?c147a799-6841-45d9-9b31-4009e4c0e41d ]]></link>
+<g:price><![CDATA[ 830.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="block-content">
+<p>Avec son format pratique et nomade, le Shampoing Solide au Cédrat a été formulé pour prendre facilement soin des cheveux normaux à gras, dès 12 ans. Sa formule végan*, sans tensioactifs sulfatés ni conservateurs, laisse les cheveux propres et brillants dans un vivifiant parfum d’agrumes, dès la première utilisation. Grâce aux propriétés tonifiantes, et assainissantes du Cédrat, les cheveux normaux qui ont tendance à regraisser trop vite sont à nouveau frais, légers ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3282770150339</g:gtin>
+<g:brand><![CDATA[ KLORANE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cf7547a43fce89862d7d92aa6f93c6a8d276e9752c6371f82af8425d1b7a6f7d ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Klorane shampoing solide à l'avoine 80g ]]></title>
+<g:id>4690ca20-cfcf-4b9d-b56e-bdea6bf53468</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/klorane-shampoing solide à l'avoine 80g?4690ca20-cfcf-4b9d-b56e-bdea6bf53468 ]]></link>
+<g:price><![CDATA[ 830.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Shampoing solide 2-en-1 pour laver et démêler les cheveux de toute la famille.</p>
+<p>Le Shampoing Solide à l’Avoine issue de culture BIO, prend soin des cheveux de toute la famille, dès 3 ans. Son format économique, équivalent à 2 flacons de shampoing 200 ml*** pratique et nomade, réunit l’efficacité d’un shampoing et les bienfaits d’un après-shampoing. Sa formule extra-douce végan*, sans savon ni tensioactifs sultatés, garantit un nettoyage quotidien délicat. Grâce à son extrait d'Avoine cu ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3282770145281</g:gtin>
+<g:brand><![CDATA[ KLORANE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3a3ee5076b7954123319d81c8164f59856f3e9dd47c0d6dced94b84768f4a432 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Klorane shampoing solide à la mangue 80g ]]></title>
+<g:id>194555a1-fe2c-4069-82f1-4e4aee95c478</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/klorane-shampoing solide à la mangue 80g?194555a1-fe2c-4069-82f1-4e4aee95c478 ]]></link>
+<g:price><![CDATA[ 830.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le shampoing solide à la Mangue est le geste éco-responsable par excellence ! Sa mousse agréable lave en douceur et se rince facilement. Les cheveux sont nourris en profondeur dès la 1ère application. Ils sont doux, gainés et éclatant de santé.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3282770139259</g:gtin>
+<g:brand><![CDATA[ KLORANE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0b33b9f1b6b6ac8faf9e3ca1f58e1bf32e1599ce87aa37e5d813d647ea7f00e9 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Klorane shampoing à la grenade 200ml ]]></title>
+<g:id>892b6dd3-4184-4f87-ae9b-0a6a7d66a7df</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/klorane-shampoing à la grenade 200ml?892b6dd3-4184-4f87-ae9b-0a6a7d66a7df ]]></link>
+<g:price><![CDATA[ 650.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Shampoing à la Grenade lave en douceur les cheveux colorés, fixe la couleur et préserve naturellement son éclat.</p>
+<p>Protégée jusqu'à 8 semaines, la couleur est ravivée*.<br />Nettoyant, protecteur, illuminant</p>
+<p>Composé à 85 % d’ingrédients d’origine naturelle, le Shampoing à la Grenade fixe, protège et ravive la couleur pour un éclat prolongé jusqu’à 8 semaines*.<br />Sa formule biodégradable**, sans tensioactifs sulfatés ni silicone est enrichie d’extrait d’écorces de Grenade.<br ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3282770143560</g:gtin>
+<g:brand><![CDATA[ KLORANE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e7b031f607c6b0b6ea82e84419e1240708f878ba06423f2e2a8321e53384e849 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Klorane shampoing à la grenade 400ml ]]></title>
+<g:id>089c848a-a0af-4f70-addd-0eecfb3d73a7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/klorane-shampoing à la grenade 400ml?089c848a-a0af-4f70-addd-0eecfb3d73a7 ]]></link>
+<g:price><![CDATA[ 1069.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Shampoing à la Grenade lave en douceur les cheveux colorés, fixe la couleur et préserve naturellement son éclat.</p>
+<p>Protégée jusqu'à 8 semaines, la couleur est ravivée*.<br />Nettoyant, protecteur, illuminant</p>
+<p>Composé à 85 % d’ingrédients d’origine naturelle, le Shampoing à la Grenade fixe, protège et ravive la couleur pour un éclat prolongé jusqu’à 8 semaines*.<br />Sa formule biodégradable**, sans tensioactifs sulfatés ni silicone est enrichie d’extrait d’écorces de Grenade.<br ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3282770143577</g:gtin>
+<g:brand><![CDATA[ KLORANE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6d3a3242d62b225d93a9a0547bd60593ef10b935466854006073eb08fc29a531 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Klorane shampooing au beurre de cupuaçu bio 400ml ]]></title>
+<g:id>9543f907-0314-41c7-85a9-ed930f631cd6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/klorane-shampooing au beurre de cupuaçu bio 400ml?9543f907-0314-41c7-85a9-ed930f631cd6 ]]></link>
+<g:price><![CDATA[ 1069.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce shampoing au beurre de Cupuaçu BIO* lave, nourrit en profondeur et répare la fibre capillaire. Les cheveux sont renforcés, durablement doux, souples, brillants et plus faciles à coiffer. Idéal pour les cheveux ondulés, bouclés, frisés.</p>
+<p>*1,5 x plus nutritif et 1,4 x plus réparateur que l'actif référent du marché</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3282770144727</g:gtin>
+<g:brand><![CDATA[ KLORANE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bac22685cc191d13cd1c3fcd54a8342d7a4c07600f3ae49239986197e64da93f ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Klorane sérum réveil tonique 50ml ]]></title>
+<g:id>651c6af9-c653-43ad-b0b8-192d120fba78</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/klorane-sérum réveil tonique 50ml?651c6af9-c653-43ad-b0b8-192d120fba78 ]]></link>
+<g:price><![CDATA[ 2190.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Un splash de fraîcheur pour réveiller instantanément les peaux déshydratées et fatiguées.</strong></p>
+<p>Riche en Bleuet BIO et Acide Hyaluronique 100% végétal, le Sérum Réveil Tonique est un véritable coup de boost pour réveiller les peaux déshydratées et fatiguées. Sa texture aqueuse composée à 97% d'ingrédients d'origine naturelle, tonifie, hydrate, lisse et protégé la peau des agressions extérieures.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3282770207552</g:gtin>
+<g:brand><![CDATA[ KLORANE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ec67cc986d6727139a9fba1fb34f6367b6839e01d5c9f9314387a12145902c2c ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Kneipp Arnica Active Galet Effervescent Pour Le Bain Arnica 1 Galet ]]></title>
+<g:id>163c7432-c469-4d9d-a55e-0363ebb2900c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kneipp-arnica active galet effervescent pour le bain arnica 1 galet?163c7432-c469-4d9d-a55e-0363ebb2900c ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Kneipp Arnica Active Galet Effervescent pour le Bain Arnica 1 Galet est un galet à l'extrait d'arnica et aux huiles essentielles de cabreuva, de romarin et de pin, aux vertus bienfaisantes, chauffantes et revitalisantes.<br>Associées aux effets bénéfiques de l'eau chaude, les huiles essentielles dévoilent tout leur parfum.</p><p>Testé sous contrôle dermatologique.</p><p>Sans paraffine, sans silicone, sans huile minérale.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4008233131313</g:gtin>
+<g:brand><![CDATA[ KNEIPP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dc34b6f2daa4968ea131b085b127919372238a991d1aacaf67957a70097e06e8 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Kneipp Bulle d'Harmonie Galet Pour Le Bain 1 Galet ]]></title>
+<g:id>8a1b2fb9-5622-4741-9bd7-f24ac48349c1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kneipp-bulle d'harmonie galet pour le bain 1 galet?8a1b2fb9-5622-4741-9bd7-f24ac48349c1 ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Kneipp Bulle d'Harmonie Galet pour le Bain 1 Galet vous accompagne pour un moment de détente. Il aide à retrouver l'harmonie intérieure grâce à la combinaison de l'huile essentielle d'orange et de l'extrait de fleur de tilleul.</p><p>Sans paraffine, sans silicone, sans huile minérale.</p><p>Testé sous contrôle dermatologique.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4008233132174</g:gtin>
+<g:brand><![CDATA[ KNEIPP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f0d33aa338bb1a55731d5b9b91d9e775f0d377ffa3794157a8faa2196b4cbb61 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Kneipp Galet Bulle De Plaisir Coquelicot ]]></title>
+<g:id>e54298f0-2f1e-402b-8006-9abf2cc3d7df</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kneipp-galet bulle de plaisir coquelicot?e54298f0-2f1e-402b-8006-9abf2cc3d7df ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Galet Effervescent pour le Bain Kneipp Bulle de Plaisir, enrichi en sels thermaux et en huiles végétales de coquelicot et de chanvre, offre tous les bienfaits de l’hydrothérapie et de l’aromathérapie. Son effervescence&nbsp; offre un effet massant délassant.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4008233134260</g:gtin>
+<g:brand><![CDATA[ KNEIPP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/aeecfae0afcfbec155a1f66c1f784e3df2a0295d37c9fdc2a401bb5b4113f98f ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Kneipp Refreshing Galet Effervescent Pour Le Bain Eucalyptus 1 Galet ]]></title>
+<g:id>82c96fa3-77ac-4224-840a-cf488c7224cb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kneipp-refreshing galet effervescent pour le bain eucalyptus 1 galet?82c96fa3-77ac-4224-840a-cf488c7224cb ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Kneipp Refreshing Galet Effervescent pour le Bain Eucalyptus 1 Galet est un galet à l'huile essentielle d'eucalyptus qui offre une expérience de bain unique.</p><p>Associée aux effets bénéfiques de l'eau chaude, l'huile essentielle dévoile tout son parfum.</p><p>Testé sous contrôle dermatologique.</p><p>Sans paraffine, sans silicone, sans huile minérale.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4008233131320</g:gtin>
+<g:brand><![CDATA[ KNEIPP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ec32b3838d22795279c56e341b14801b60602fd0cbb3299e6c99c166b415b008 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Kneipp Relaxing Galet Effervescent Pour Le Bain Lavande 1 Galet ]]></title>
+<g:id>fbb86ea9-46c9-46d5-9ef0-1d85b1ade717</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kneipp-relaxing galet effervescent pour le bain lavande 1 galet?fbb86ea9-46c9-46d5-9ef0-1d85b1ade717 ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Kneipp Relaxing Galet Effervescent pour le Bain Lavande 1 Galet est un galet qui vous permet de profiter pleinement des bienfaits des huiles essentielles et des sels minéraux pour un véritable instant de détente, relaxation et bien-être.<br>L'huile essentielle de lavande apaise profondément et offre à l'esprit détente et évasion.</p><p>Testé sous contrôle dermatologique.<br>Sans huile minérale, silicone ni conservateur.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>4008233131306</g:gtin>
+<g:brand><![CDATA[ KNEIPP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d2448d2e51a565cbcb15ade9ca9e09a3359b03fdfda3af600b1b33803a82de25 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krill pure aragan 30 capsules ]]></title>
+<g:id>2dfd5bb6-e679-4194-acd8-2ab687f50a5e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/krill-pure aragan 30 capsules?2dfd5bb6-e679-4194-acd8-2ab687f50a5e ]]></link>
+<g:price><![CDATA[ 2775.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="i4c-draggable-container" style="width:0px;height:0px;">
+<div class="resolved"></div>
+</div>
+<p>Opaxill Pure est un complément alimentaire des Laboratoires ARAGAN élabré à base d'huile de Krill. L'huile de Krill est l'huile la plus riche en oméga 3 et astaxanthine, puissant antioxydant.</p>
+<p>L'astaxanthine est un puissant anti-oxydant qui exerce dans l'organisme une forte activité anti-inflammatoire. Ce complement agit sur les articulations, le système cardiovasculaire, la peau, le syn ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401551607026</g:gtin>
+<g:brand><![CDATA[ ARAGAN ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/895d61b2023256f99198581e1a5d937b955fd6da43e54a67cbf711f77b4c0ecc ]]></g:image_link>
+<g:product_type><![CDATA[ SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Baume Lèvres Réparateur 10 g ]]></title>
+<g:id>a08dfc4c-77f8-4ed6-8240-3aa1e7e0d095</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me baume lèvres réparateur 10 g?a08dfc4c-77f8-4ed6-8240-3aa1e7e0d095 ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Ce baume à lèvres réparateur BIO est <span>le geste qui sauve vos lèvres abîmées, sèches ou gercées</span>. Sa texture fondante au beurre de noisettes et probiotiques les enveloppe d’un <span>confort réparateur moelleux </span>et lisse leurs stries. Il s'applique aussi sur toutes les petites zones sèches (coudes, arrêtes du nez, etc.)</span></p>
+<p><span>✔  100% d'origine naturelle et certifié BIO<br /></span><span>✔  9 ingrédients, 0% huile minérale, 100/100 Yuka<br />✔  Parfum crème n ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038218</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3a8f0aa2fe536c155fcffb1adf96ce947954b10dfe5557920265cadea3197bc6 ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Crème Collagène Lissante 50 ml ]]></title>
+<g:id>b9638f53-7378-43f0-ae97-72e63d445fe7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me crème collagène lissante 50 ml?b9638f53-7378-43f0-ae97-72e63d445fe7 ]]></link>
+<g:price><![CDATA[ 3490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le saviez-vous ? Après 30 ans, la production naturelle de collagène de votre peau décline d'1% par an.<span> C'est pour cela que la Crème Collagène Lissante concentre du Pro-Collagène Végétal capable de stimuler votre propre collagène.</span> Enrichie en Probiotiques apaisants et en Beurre de Prune, <span>elle lisse l'apparence des rides, booste le rebond, donne du confort et ravive l'éclat rosé.</span></p>
+<p>✔ Texture soyeuse toucher "peau de pêche"<br />✔ 100% d'origine naturelle et certif ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038478</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fc34896e125fc9b8fed22763fb5265882b9e7598e774bc8ce3a3d5624624367a ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Crème Corps Concentrée 200 ml ]]></title>
+<g:id>3df8b214-d6a3-457d-9821-8c0988f7644b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me crème corps concentrée 200 ml?3df8b214-d6a3-457d-9821-8c0988f7644b ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Formulée sous contrôle dermatologique, la Crème Corps Concentrée associe 3 Bio-Céramides à des Probiotiques pour nourrir et apaiser les peaux les plus sèches et sensibles. Inspirée du fonctionnement naturel du ciment lipidique de la peau, elle relance le cercle vertueux d'une peau saine. Sa texture fraîche permet un habillage rapide et redonne à la peau souplesse et confort.&nbsp;<br><br>✔ 48H d'hydratation<br>✔ Texture non collante<br>✔&nbsp; Pour toute la famille, dès 3 ans<br><br>Compatibl ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038560</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/43c25d4f102ea72e03f2ec3eef04b24abc353ee05732032a5a9e752a621f84e0 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Crème Démaquillante Solide 50 g ]]></title>
+<g:id>e11464a0-ecff-483a-b64a-960f6c5b47c8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me crème démaquillante solide 50 g?e11464a0-ecff-483a-b64a-960f6c5b47c8 ]]></link>
+<g:price><![CDATA[ 1590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La Crème Démaquillante Solide démaquille et nettoie le visage et les yeux tout en douceur et sans irritation. Comme un lait démaquillant solide, enrichi en huile d'amande douce et en probiotiques, il élimine maquillage et impuretés tout en laissant la peau pleine de confort.</span></p>
+<p><span>✔ pH neutre, adapté peaux sensibles<br /></span><span>✔ démaquille aussi les yeux<br /></span><span>✔ 100% origine naturelle, certifié BIO, 100/100 Yuka</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038195</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/04aa8622ee4ffbf44d32b3ce040872b48b26a7a05cf77eafb3690e1d3e704531 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > MAQUILLAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Crème Hydratation Intense 50 ml ]]></title>
+<g:id>f73b1e3d-b53a-4ae7-8ecd-4fc1230e2236</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me crème hydratation intense 50 ml?f73b1e3d-b53a-4ae7-8ecd-4fc1230e2236 ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Notre crème hydratante best-seller aux pré + probiotiques et à l'acide hyaluronique pour une peau désaltérée, rééquilibrée, éclatante de santé.<br /></span><span><br /></span><span>✔  </span><span>Texture fraîche et fondante pour toutes les peaux</span><br /><span><span>✔</span>  100% d'origine naturelle et certifié BIO<br />✔  Sans conservateur ni allergène, 100/100 sur Yuka</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038058</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/495c1e1326be073d44f6ef5ae8ebd3267c3afb3b57c1cca613a17041803fbcd3 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Crème Mains concentrée 40 ml ]]></title>
+<g:id>a5605fee-f1cf-48fc-9318-ccb7f0794179</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me crème mains concentrée 40 ml?a5605fee-f1cf-48fc-9318-ccb7f0794179 ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Notre crème mains bio répare, protège et apaise les mains sèches et abîmées grâce à l'alliance de plantes médicinales (Arnica des Montagnes et Calendula français) et de Probiotiques</span>. Elle pénètre en 10 secondes, top chrono, sans fini gras. À vous les mains extra douces !</p>
+<p>✔ Effet mains douces en 10 secondes<br />✔ 100% d'origine naturelle, certifiée BIO, 100/100 Yuka<br />✔ Format plat nomade</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038393</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5da21bea967a2ca3c1c2e0b67343aa6efe84900da99e5b6235b2f0cfa588d396 ]]></g:image_link>
+<g:product_type><![CDATA[ CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Exfoliant Visage Éclat Peau Neuve 60 ml ]]></title>
+<g:id>168b64d6-ba5e-4770-b046-9f17e51ef690</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me exfoliant visage Éclat peau neuve 60 ml?168b64d6-ba5e-4770-b046-9f17e51ef690 ]]></link>
+<g:price><![CDATA[ 2290.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L’Exfoliant Éclat Peau Neuve est le gommage visage universel, convenant à tous les types de peaux.</span><br /><span>• Pour les peaux mixtes à grasses, il désincruste les pores et les resserre, limitant ainsi le retour des imperfections et points noirs.</span><br /><span>• Pour les peaux normales, sensibles et réactives, il exfolie en douceur grâce à ses grains ultra fins.</span><br /><span>• Pour toutes les peaux, il illumine le teint et lisse le grain de peau. Un soin visage doux, eff ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038171</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/371001800341389d1eb22eb47cf23c1850e47f4899d4e31f2bf237f0432db7e8 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Fluide Solaire Anti Taches SPF 50 40 ml ]]></title>
+<g:id>a9d62713-aac0-4aba-affc-982d87c84f0f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me fluide solaire anti taches spf 50 40 ml?a9d62713-aac0-4aba-affc-982d87c84f0f ]]></link>
+<g:price><![CDATA[ 2290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce Fluide Solaire SPF 50 anti-taches allie 4 filtres nouvelle génération pour offrir une haute protection UVB &amp; UVA tout en respectant la peau et les océans. Comme un voile seconde peau léger, sa formule, enrichie d'un actif breveté anti-taches, régule l’hyperpigmentation et lisse les ridules de déshydratation pour préserver la jeunesse de la peau. Protégée, unifiée, hydratée, la peau rayonne d’un hâle durable et lumineux.</p><p>✔&nbsp; Visage, cou et décolleté<br>✔&nbsp; Correction breve ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038584</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/28c746f4b3ed37c000a66807e2f72b6599d6a4339ec8536618065f4d5f09540c ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Gelée Fraîche Nettoyante Démaquillante 150 ml ]]></title>
+<g:id>5f986f8d-f6fa-43f9-a61e-23dddbfbe886</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me gelée fraîche nettoyante démaquillante 150 ml?5f986f8d-f6fa-43f9-a61e-23dddbfbe886 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Découvrez <span>notre gelée démaquillante extra fraîche qui nettoie et démaquille efficacement, sans tirailler la peau</span>. Concentrée en Probiotiques rééquilibrants, en Thym purifiant et en Spiruline détoxifiante, <span>elle laisse la peau parfaitement purifiée, le teint plus net et lumineux</span>.</p>
+<p>✔ Texture 2-en-1 : une gelée qui devient lait au contact de l’eau<br />✔ 100% d'origine naturelle et certifiée BIO<br />✔ Formule sans eau 100% active, 100/100 Yuka</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038072</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ffb85dbff145032fbb75bf99ba112f2dc32dd009f200cfe57982073b3d9002ca ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Huile SOS Equilibrante 30 ml ]]></title>
+<g:id>040e1183-45eb-4779-ab1e-c281414e72c9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me huile sos equilibrante 30 ml?040e1183-45eb-4779-ab1e-c281414e72c9 ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L'Huile SOS Équilibrante Krème 15 ml</span> est un produit de soin de la peau qui permet à rééquilibrer et hydrater la peau. Cette crème à base d’huiles naturelles pénètre facilement la peau, aidant à restaurer l’équilibre naturel de la peau et à améliorer l’apparence générale de la peau.</p>
+<p> </p>
+<p>L'Huile SOS Équilibrante 15 ml est formulée pour tous les types de peau, en particulier les peaux sèches et sensibles, offrant une solution naturelle pour une peau saine et nourrie.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038034</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8f7b62a4398636da130bea69c14abb9836ea29128b06134e00cc8cf91d352265 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Infusion bio Digestion & Peau Saine 60 g ]]></title>
+<g:id>3258ae7b-c564-45b5-b79a-8d7a48224620</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me infusion bio digestion & peau saine 60 g?3258ae7b-c564-45b5-b79a-8d7a48224620 ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L’Infusion Bio Digestion &amp; Peau Saine est un savant mélange de 7 plantes anti-inflammatoires aux extraits gourmands de pomme, de citron et de groseille pour offrir un meilleur confort digestif et une peau rééquilibrée. À utiliser en cure détox de 30 jours ou de manière ponctuelle, juste pour le plaisir !</span></p>
+<p><span>✔  Imaginée avec l'infuseur Kodama, 3 fois primé Gault &amp; Millau.<br /></span><span>✔  Infusion digestion drainante, rééquilibre l’axe intestin-peau.</span><s ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038287</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ca89fbab8b3112fd9e73825066ee90f070727745c742ad330cf034ea2d58c847 ]]></g:image_link>
+<g:product_type><![CDATA[ TISANERIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Kit Découverte Soins Visage ]]></title>
+<g:id>48f334a2-757f-4999-aa22-9fdf2eb6d044</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me kit découverte soins visage?48f334a2-757f-4999-aa22-9fdf2eb6d044 ]]></link>
+<g:price><![CDATA[ 2499.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span><span>Notre Kit Découverte Soins Visage réunit nos 4 produits phares au format voyage, le tout dans une jolie trousse en coton bleue réutilisable.</span> Le kit parfait pour découvrir Krème, faire plaisir ou voyager léger.</span></p>
+<ul><li><span>La </span><strong><a href="https://kreme-paris.com/products/gelee-fraiche-nettoyante-15ml">Gelée Fraîche Démaquillante 15ml</a></strong><span> : démaquille, nettoie et purifie la peau.<br /></span></li>
+<li><span>L’</span><strong><a href="http ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038430</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c2f2e3e6fa455cdb1840338a5274fbaa3307a4b20a13e82471a251c2166aa15b ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Pain Lavant Surgras Corps 100 g ]]></title>
+<g:id>b75e4aaf-9adb-4d68-ada8-7f5a482b0fe9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me pain lavant surgras corps 100 g?b75e4aaf-9adb-4d68-ada8-7f5a482b0fe9 ]]></link>
+<g:price><![CDATA[ 790.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Les peaux sèches et sensibles l'adorent : le Pain Lavant Surgras Krème est le 1er savon au pH neutre certifié BIO infusé d’un surgras végétal !</span> Il revient avec une formule augmentée, associant une base lavante douce sans savon, 5% de surgras végétal et des probiotiques bienfaisants. <span>Il nettoie délicatement le corps et enrobe la peau d'une sensation de confort, évitant tout tiraillement après la douche.</span></p>
+<p>✔ pH neutre testé sur peaux sensibles<br />✔ Parfum agrume ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038188</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bd69859373fadbe23131052a023247f129da4b0798d0676c0d9c0ed6b654d0b8 ]]></g:image_link>
+<g:product_type><![CDATA[ GEL DOUCHE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Soin Regard Défatigant 15 ml ]]></title>
+<g:id>53c5d410-dece-4510-830e-e0eb985ed062</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me soin regard défatigant 15 ml?53c5d410-dece-4510-830e-e0eb985ed062 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span><span>Ce contour des yeux bio cible les 3 grandes marques de fatigue du regard : les cernes, les poches et les ridules de la patte d'oie. </span>Il allie</span><span> 3% de Cernilys® breveté anti cernes, du bleuet français apaisant et de l'acide hyaluronique pour un contour des yeux hydraté, d'apparence plus jeune et réveillée.</span></p>
+<p><span>✔ Efficacité anti cernes brevetée<br />✔ Sans parfum ni conservateur<br />✔ 100% d'origine naturelle, certifié BIO, Excellent Yuka</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038348</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dcb0e5a756dad188b347be0298e27b72362e91f084761c242b2e1ab472312460 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Stick Solaire Invisible SPF 50+ 19 g ]]></title>
+<g:id>c542f54b-9462-4064-9da6-9fc0ac13d15b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me stick solaire invisible spf 50+ 19 g?c542f54b-9462-4064-9da6-9fc0ac13d15b ]]></link>
+<g:price><![CDATA[ 1590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce Stick Solaire Invisible SPF 50+ allie 3 filtres nouvelle génération offrant une très haute protection UVB &amp; UVA tout en respectant la peau et les océans. Concentré en probiotiques et en bisabolol BIO antioxydant, sa texture invisible au délicat parfum de monoï fond sur la peau pour la protéger et l’apaiser.</p><p>✔&nbsp; Visage, lèvres &amp; zones sensibles<br>✔&nbsp; Non comédogène, résistant à l'eau<br>✔&nbsp; Dès 3 ans et compatible grossesse, 100/100 Yuka</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038577</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/34231a17bce587529075c4a16cf75fac862964f7609c606e0d9e962d017f1446 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Krème Sérum Collagène Anti Rides 30 ml ]]></title>
+<g:id>66191b8c-e7a1-48cc-baac-e41a391c9281</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/kr-me sérum collagène anti rides 30 ml?66191b8c-e7a1-48cc-baac-e41a391c9281 ]]></link>
+<g:price><![CDATA[ 3990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le nouveau Sérum Collagène Anti-Rides associe une triple correction anti-rides dans un concentré soyeux </span>:</p>
+<p>✔ Dès 1 heure, des <span>Sucres Tenseurs acide hyaluronique-like liftent</span> <span>les rides superficielles. </span><br />✔ Après 1 semaine, le <span>Phyto-Rétinol lisse les rides plus installées</span>. <br />✔ Après 1 mois, le <span>Pro-Collagène raffermit les traits</span> en relançant sa production naturelle de collagène.</p>
+<p>Formule testée sur peau sensible. ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770016038652</g:gtin>
+<g:brand><![CDATA[ KREME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2a999af1c6a6e73b7690cd874d9d795af66012e84b26ec1a25c8d0a5700b4377 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ L'accent poudre d'éclat rosée 01 ]]></title>
+<g:id>3c707b39-6155-4304-a1e1-3ab4e109ab0f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/l-accent poudre d'éclat rosée 01?3c707b39-6155-4304-a1e1-3ab4e109ab0f ]]></link>
+<g:price><![CDATA[ 4850.00 EUR ]]></g:price>
+<description><![CDATA[ <p>POUDRE DE TEINT</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701282300020</g:gtin>
+<g:brand><![CDATA[ l'accent ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/353b2d7db1697289ae09f74dd803a36fa987773525efdb35ec7ad4b4b6bf0452 ]]></g:image_link>
+<g:product_type><![CDATA[ MAQUILLAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ L'artisan savonnier Savon de marseille paillettes 1 kg ]]></title>
+<g:id>e2b95020-5fa5-4ede-a9a4-43083fb8b474</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/l-artisan savonnier savon de marseille paillettes 1 kg?e2b95020-5fa5-4ede-a9a4-43083fb8b474 ]]></link>
+<g:price><![CDATA[ 1160.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Principalement utilisées pour le linge, les Paillettes de Savon de Marseille sont l’alliées idéales du linge délicat. Elles sont également recommandées pour le lavage du linge des bébés et des personnes aux peaux à tendance allergiques et sensibles. Vous pourrez également l’utiliser dans vos produits d’entretien faits maison.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3489940081633</g:gtin>
+<g:brand><![CDATA[ LABORATOIRE GRAVIER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3bdb12e5688f9d2c9e1f5e31aef8869ce54c20d744915f2604cbbf146b9a29bf ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ L'artisan savonnier carbonate de calcium 500g ]]></title>
+<g:id>3592f867-6d25-4fb5-aee6-5d5cc095b695</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/l-artisan savonnier carbonate de calcium 500g?3592f867-6d25-4fb5-aee6-5d5cc095b695 ]]></link>
+<g:price><![CDATA[ 295.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Carbonate de Calcium ou blanc de Meudon est idéal pour le nettoyage des surfaces délicates.</p>
+<p>Agent abrasif doux, il aide à nettoyer et faire briller les surfaces fragiles marbres, plaque vitrocéramique... Il est également utile pour les produits d’entretien faits maison.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3489940081596</g:gtin>
+<g:brand><![CDATA[ LABORATOIRE GRAVIER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ef5374f635aeb6f88a7ee13b74a1bffe974ebd4b4b2ab070b6ed194dccaae4a4 ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ L2N Brumisateur rechargeable 160 ml ]]></title>
+<g:id>8ada4e6d-915a-4b77-9e34-ab6a6eb29454</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/l2n-brumisateur rechargeable 160 ml?8ada4e6d-915a-4b77-9e34-ab6a6eb29454 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Un brumisateur rechargeable est un dispositif portable qui vaporise de l'eau ou d'autres liquides pour rafraîchir la peau et réduire la sensation de chaleur ou de sécheresse. Il est équipé d'un réservoir qui peut être rempli avec de l'eau ou une solution hydratante de votre choix. Le brumisateur fonctionne en pompant l'eau ou la solution hydratante à travers une buse spéciale qui produit une fine brume. Cette brume est ensuite vaporisée sur le visage ou le corps, offrant une sensation de fraî ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770027513247</g:gtin>
+<g:brand><![CDATA[ L2N PHARMA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/66545023ef05d5d31da0aa98eab4b351687bb2dcae779c672038d28cedbc4305 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ L2N Test de grossesse précoce ]]></title>
+<g:id>9b45924a-72e7-4e55-8a80-fd0832010976</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/l2n-test de grossesse précoce?9b45924a-72e7-4e55-8a80-fd0832010976 ]]></link>
+<g:price><![CDATA[ 130.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le test de grossesse précoce L2N Bébé est précis à plus de 99%. En seulement 3 minutes, vous saurez si la famille s’agrandit ou non.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770027513032</g:gtin>
+<g:brand><![CDATA[ L2N PHARMA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4d61add80365fb0336909090e0a3ac6d2263421f19a2416785be935e8d0b575a ]]></g:image_link>
+<g:product_type><![CDATA[ TESTS DE GROSSESSE ET D'OVULATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ LASHILE Shots cheveux Anti-chute, croissance et fortification  ]]></title>
+<g:id>464ff6e7-4684-47aa-b744-a3df096cbabf</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashile-shots cheveux anti-chute, croissance et fortification ?464ff6e7-4684-47aa-b744-a3df096cbabf ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><p>Les compléments alimentaires doivent être consommés dans le cadre d'un mode de vie sain et ne doivent pas se substituer à un régime alimentaire varié et équilibré.</p></li><li><p>Tenir hors de portée des enfants.</p></li><li><p>Ne pas dépasser la dose journalière recommandée.</p></li><li><p>Conserver à température ambiante dans un endroit propre et sec.</p></li><li><p>Déconseillé chez les femmes enceintes et allaitantes, ainsi que les personnes sous antidiabétiques.</p></li><li><p>Déc ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760302229635</g:gtin>
+<g:brand><![CDATA[ LASHILÉ ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/01f0514c9ba38332fc07d7c05b21cae5a05d66b2375c347a1bdc6bdb1e23dff6 ]]></g:image_link>
+<g:product_type><![CDATA[ COMPLEMENTS ALIMENTAIRES > Dermocosmétique > CAPILLAIRES > SANTE > PHANERES CAPILLAIRES ONGLES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ LI BODY NUTRI BME SOS REPAR 30ML ]]></title>
+<g:id>3356260a-facf-43e5-9059-d7e8e87e2c28</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/li-body nutri bme sos repar 30ml?3356260a-facf-43e5-9059-d7e8e87e2c28 ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436919900</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7c618d2d1ada58306139b1eaa4ac1854bde7150cac77df1a5c9843d83681f71e ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay  Anthelios spf 50 Lait 250ml S/Parfum ]]></title>
+<g:id>b5136304-a7d5-4725-b10c-bebb3f636760</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay  anthelios spf 50 lait 250ml s/parfum?b5136304-a7d5-4725-b10c-bebb3f636760 ]]></link>
+<g:price><![CDATA[ 1720.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Anthelios Lait Hydratant Ultra Protection SPF50+ 250 ml est un lait de très haute protection contre les UVA/UVB qui aide à prévenir le stress oxydatif généré par les infra-rouges et la pollution.<br />Résistant à l'eau et à la transpiration, il ne laisse pas de traces blanches et ne pique pas les yeux.</p>
+<p>Le tube est en papier éco-responsable et fait partie de la première génération de tube réalisée à partir de carton. Il utilise 45% de plastique en moins (comparé à un tube ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875761123</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/89096a9192b8a79e0a35f57d9b1a5e31d60684441a8431665121e1a1b75d8a93 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Anthelios 100 KA+ MED 50ml ]]></title>
+<g:id>42119f7e-67ee-46a6-906b-2d716d13918b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay anthelios 100 ka+ med 50ml?42119f7e-67ee-46a6-906b-2d716d13918b ]]></link>
+<g:price><![CDATA[ 2090.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pour toutes les femmes et les hommes souffrant d'une peau sujette aux kératoses actiniques, La Roche Posay propose son soin Anthelios 100 KA+ MED.</p>
+<p><span>Anthelios 100 KA+ MED</span> est un soin spécifiquement mis au point par le laboratoire La Roche Posay pour les personnes dont la peau est sujette à des <span>kératoses actiniques</span>. La kératose actinique est une <span>dégénérescence cellulaire</span> qui est causée par des expositions trop importantes et / ou trop fréquentes au s ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875798181</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/273b7f3396a871df5d9907d85bb5a91bdb38a7d68aeb15c17dd18b3183dab987 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Anthelios Spray Familial Spf 50 300ml ]]></title>
+<g:id>92d07d36-20e4-4609-b428-d007041d6150</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay anthelios spray familial spf 50 300ml?92d07d36-20e4-4609-b428-d007041d6150 ]]></link>
+<g:price><![CDATA[ 2095.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>ANTHELIOS Spray Famille Corps SPF50+ offre une très haute protection solaire à large spectre contre les UVA/UVB pour les enfants et les adultes. Sa formule convient aux peaux sensibles et les peaux sujettes aux intolérances solaires, communément appelées allergies solaires. Formule testée en conditions marines, plus respectueuse du milieu marin. Grâce à la technologie Netlock, ANTHELIOS Spray Famille Corps SPF50+ offre une très haute protection UVA/UVB et aide à prévenir du stress oxyda ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875799348</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3b8ff9f9c1a6058999e7d232e6c23039c658c02993f9ab04bc44adf5588812f0 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Anthelios UV Mune 400 Fluide Spf 50 50ml ]]></title>
+<g:id>89b9651e-3891-4cff-8a7b-9ceebc37df32</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay anthelios uv mune 400 fluide spf 50 50ml?89b9651e-3891-4cff-8a7b-9ceebc37df32 ]]></link>
+<g:price><![CDATA[ 1360.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Pour qui : </span>Peaux mixtes à Grasses. Convient aussi aux peaux sensibles, réactives et intolérantes au soleil. </li>
+<li><span>Résultat beauté : </span>Une peau apaisée et protégée contre les coups de soleil. Une peau matifiée pendant 12H.</li>
+<li><span>On aime </span>: Sa texture fluide et ultra-légère qui ne laisse aucune trace blanche.</li>
+</ul><p><span>La Crème Solaire ANTHELIOS UVMUNE 400 Fluide Oil Control SPF50+ de La Roche-Posay </span>est une crème solaire Haute Prot ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875847292</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/08884d449c771992cbad5a723555a79ced3999f90f79f0817b863891ba4838e2 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Anthelios UvMune dermo Pediatrics 200ml ]]></title>
+<g:id>51f7b9d1-8ca4-4070-82d0-c3e4ff0c0264</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay anthelios uvmune dermo pediatrics 200ml?51f7b9d1-8ca4-4070-82d0-c3e4ff0c0264 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Une crème solaire très haute protection à large spectre contre les UVA/UVB enrichie en Eau Thermale de La Roche-Posay. Formulée pour la peau sensible de l'enfant et les peaux sujettes aux intolérances solaires, communément appelées allergies solaires.</span><br /><span>Format pratique.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875886055</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8b2184abfa898891e225a53d2603c645894d5beff3e2d0c896406210e054ebf3 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Anthelios gel creme parfumé SPF50+ 50ml ]]></title>
+<g:id>e41a7114-8712-4a93-96d2-42de4dce9351</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay anthelios gel creme parfumé spf50+ 50ml?e41a7114-8712-4a93-96d2-42de4dce9351 ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Peau sensible de l'adulte. Peau mixte à grasse à tendance acnéique.<br /><br />    Protège des UVA/UVB [Système filtrant breveté Mexoplex®]<br />    Efficacité anti-brillance [Technologie Airlicium™].<br />    Parfum agréable et léger pour un respect optimal<br />    Très résistant à l'eau<br />    Flacon-pompe<br />    Sans paraben<br />    Non comédogène, testé sous contrôle dermatologique</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875546409</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a98a5f4a0f82e2be9557e543599b3b0624f936ab9b4e35f282c236669a277820 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Anthelios stick zones sensibles spf 50+ 9g ]]></title>
+<g:id>d17e93cd-2432-43e7-bcd8-3c5eacf10f04</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay anthelios stick zones sensibles spf 50+ 9g?d17e93cd-2432-43e7-bcd8-3c5eacf10f04 ]]></link>
+<g:price><![CDATA[ 999.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Extrêmement bien toléré, il est testé sous contrôle dermatologique et ophtalmologique.</p>
+<p>Il protège les zones les plus sensibles, surexposées ou interdites de soleil.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433422408616</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/745154e0809d10f94fe9c8ca6207042da0dac9d5b57897db7f09484b03f15c05 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Cicaplast B5 Spray 100ml ]]></title>
+<g:id>ba553d06-6ce4-49a5-a561-d903ed8a6b1e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay cicaplast b5 spray 100ml?ba553d06-6ce4-49a5-a561-d903ed8a6b1e ]]></link>
+<g:price><![CDATA[ 1080.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche Posay Cicaplast Spray B5 Réparateur Apaisant Anti-démangeaisons accélère la réparation épidermique.</p>
+<p>Une texture invisible associant un fort pouvoir réparateur de la fonction barrière cutanée (Madecassoside) avec les propriétés apaisantes et anti-démangeaisons du Panthénol (B5) concentré à 5% pour un apaisement immédiat.</p>
+<p>Application brume sans contact pour une hygiène optimale.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875735742</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/030326ec23cf2772478917236e0df8dd019651127310493127e00de6b92f4f30 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Cicaplast B5 baume ultra-réparateur 100 ml ]]></title>
+<g:id>7c8c687b-efee-4bcd-9d9f-662a03667d23</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay cicaplast b5 baume ultra-réparateur 100 ml?7c8c687b-efee-4bcd-9d9f-662a03667d23 ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La nouvelle innovation dermo-cosmétique issue du complexe prébiotique</span><span> Tribioma</span><span> favorise l’équilibre du microbiome cutané pour améliorer la qualité de la réparation et de réduire les marques.</span><br /><br /><span>BÉNÉFICES</span><br /><span>Cicaplast Baume B5+ est une crème réparatrice et apaisante qui s’utilise pour réparer et soulager intensément les </span><a target="_blank" href="https://www.laroche-posay.fr/article/ne-sous-estimez-pas-les-consequences-d- ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875816847</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/80b669b897af7b7b012ed8d8c6aaf17514d44761501d70dd8285c44fd851f341 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Cicaplast B5 baume ultra-réparateur 15 ml ]]></title>
+<g:id>faecec37-f098-4523-8525-657925aea8e8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay cicaplast b5 baume ultra-réparateur 15 ml?faecec37-f098-4523-8525-657925aea8e8 ]]></link>
+<g:price><![CDATA[ 495.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La nouvelle innovation dermo-cosmétique issue du complexe prébiotique Tribioma favorise l’équilibre du microbiome cutané pour améliorer la qualité de la réparation et de réduire les marques.<br /><br />BÉNÉFICES<br />Cicaplast Baume B5+ est une crème réparatrice et apaisante qui s’utilise pour réparer et soulager intensément les <a target="_blank" href="https://www.laroche-posay.fr/article/ne-sous-estimez-pas-les-consequences-d-un-epiderme-fragilise/a11516.aspx">peaux fragiles</a> et irritées ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875816779</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3b8a74a7aa629df6e0d87194af289cb00d5b22c52eff292c45fcb1288bcc12dc ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Cicaplast B5 baume ultra-réparateur 40 ml ]]></title>
+<g:id>83967d81-a647-4fa0-be63-3eaf85494b4d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay cicaplast b5 baume ultra-réparateur 40 ml?83967d81-a647-4fa0-be63-3eaf85494b4d ]]></link>
+<g:price><![CDATA[ 799.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La nouvelle innovation dermo-cosmétique issue du complexe prébiotique Tribioma favorise l’équilibre du microbiome cutané pour améliorer la qualité de la réparation et de réduire les marques.<br /><br />BÉNÉFICES<br />Cicaplast Baume B5+ est une crème réparatrice et apaisante qui s’utilise pour réparer et soulager intensément les <a target="_blank" href="https://www.laroche-posay.fr/article/ne-sous-estimez-pas-les-consequences-d-un-epiderme-fragilise/a11516.aspx">peaux fragiles</a> et irritées ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875816809</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e6883de0c50de7b1947c1625cdf0ffd5df6ffecd07ed5f612c469051c3c92531 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Cicaplast Lèvres 7.5ml - Baume Labial Barrière Réparateur ]]></title>
+<g:id>cabe2e3e-4cc8-4aa7-af9e-439633c6b448</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay cicaplast lèvres 7.5ml - baume labial barrière réparateur?cabe2e3e-4cc8-4aa7-af9e-439633c6b448 ]]></link>
+<g:price><![CDATA[ 580.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><p>CICAPLAST Lèvres - Baume Barrière Réparateur.</p></li><li><p>Ce baume barrière réparateur soulage, protège et reconstruit l' épiderme des lèvres et zones gercées, irritées, fendillées, grâce à sa formule concentrée à 5% de Panthénol apaisant et réparateur, et enrichie en MP-Lipides, actifs relipidant de référence, dans une formule filmogène inédite ultra-confortable et protectrice.</p></li></ul><p>&nbsp;</p><p>Texture-barrière nouvelle génération :</p><ul><li><p>Sa texture barrière is ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0000030106659</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ee749dd48f2de241d20828399d9ad747a0f27eaec64b3ac57a4d5494b9dac484 ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Cicaplast crème mains 50 ml ]]></title>
+<g:id>6e8f035c-3a65-48d2-af40-ed8a61f5655b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay cicaplast crème mains 50 ml?6e8f035c-3a65-48d2-af40-ed8a61f5655b ]]></link>
+<g:price><![CDATA[ 685.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Cette crème barrière réparatrice apaise, protège et restaure la barrière cutanée des mains sur-sollicitées, abîmées par les agressions domestiques et professionnelles, grâce à sa formule associant le Niacinamide à 4% et la Glycérine, concentrée à 30%, dans une texture haute-cosméticité permettant de reprendre son activité immédiatement après application.<br /><br />Une texture-barrière nouvelle génération:<br /><br />Apaisement et réparation de la barrière cutanée.[Niacinamide 4%]<br />Protec ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872414145</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e2b3594cee464befd1193e3d313a649b5d4d0698a49dc3d1e7ebf3c1cbf3ab2b ]]></g:image_link>
+<g:product_type><![CDATA[ CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Coffret Hydraphase Ha Bb Crème Teinte Medium 40ml + Eau Micellaire Peaux Sensibles 50ml Offerte ]]></title>
+<g:id>ef7425aa-46d9-4ea5-8d2a-ee54881739df</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay coffret hydraphase ha bb crème teinte medium 40ml + eau micellaire peaux sensibles 50ml offerte?ef7425aa-46d9-4ea5-8d2a-ee54881739df ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La BB crème Hydraphase HA hydrate pendant 48H* d'hydratation, unifie le teint, repulpe et restaure l'éclat des peaux déshydratées. Elle est concentrée en Acide Hyaluronique d'origine naturelle issu de la technologie verte, en Eau Thermale de La Roche-Posay et en pigments minéraux qui fondent sur la peau et s'adaptent à la carnation. Immédiatement, la peau est hydratée, le teint est unifié, plus lumineux et plus éclatant. Texture lisse, non grasse et non comédogène. Fini homogène et naturel.   ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425464305</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b62f0fa986e941be47b840fb9d2ae870af82603dfa1b219925fa8337b5ace2a0 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN TEINTE > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Duo Effaclar M+ Soin Correcteur Anti-Imperfections 40ml + Gel Nettoyant 50ml Offert ]]></title>
+<g:id>35f6413f-0435-45c3-97c6-a8c5d19388ba</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay duo effaclar m+ soin correcteur anti-imperfections 40ml + gel nettoyant 50ml offert?35f6413f-0435-45c3-97c6-a8c5d19388ba ]]></link>
+<g:price><![CDATA[ 1335.00 EUR ]]></g:price>
+<description><![CDATA[ <p>LA ROCHE POSAY<br>Effaclar<br>Duo+M<br>Effaclar Duo+M, le soin triple correction anti-imperfections 40ml<br>Effaclar Gel Moussant Purifiant 50ml</p><p>Effaclar Duo+M, le soin triple correction anti-imperfections, désormais enrichi par la science du microbiome, pour une efficacité ciblée, même sur les imperfections sévères. Anti-boutons, anti-points noirs et anti-marques post-acné. Anti-rechute. Texture gel-crème frais pour une hydratation 24h et matité longue-durée. Convient dès 10 ans. Testé ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425470771</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2d71f10c52faea2101606f4aa174c06b91fcfa959bb8bfa8c3371a2117ee867f ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN PEAU GRASSE A PROBLEME ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Eau Micellaire Peaux Réactives 400ml ]]></title>
+<g:id>bba235cc-023b-44c1-a272-b64fa534d7b5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay eau micellaire peaux réactives 400ml?bba235cc-023b-44c1-a272-b64fa534d7b5 ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Eau Micellaire Ultra Peaux Réactives 400 ml est une eau micellaire nettoyante démaquillante anti-tiraillements et anti-rougeurs idéalement conseillée pour les peaux réactives.<br /><br />Cette eau micellaire sans rinçage, sans parfum avec eau thermale de La Roche-Posay démaquille en douceur le visage et les yeux sensibles.<br /><br />Sans paraben, savon, colorant, parfum.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875528108</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c0b32d00e86bf4228d0be346b0dc2b6199a6093a52f12b5b3896e6b91498609d ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Eau Thermale 300 ml ]]></title>
+<g:id>73b18de6-acf5-45fc-9206-7b1511e2e716</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay eau thermale 300 ml?73b18de6-acf5-45fc-9206-7b1511e2e716 ]]></link>
+<g:price><![CDATA[ 795.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L'eau thermale de La Roche-Posay dispose de propriétés anti-oxydantes, anti-irritantes apaisantes et adoucissantes.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433422404403</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3ee1bb9cab69802023b4c6d68b8204e2e8772de9f6dec39f925d0e5e84b90e86 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Effaclar Duo + M Soin 40ml + Effaclar Gel Purifiant Micro-Pelling 50ml Offert ]]></title>
+<g:id>9c946da3-4173-4f60-aa90-e3ed90574e3f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay effaclar duo + m soin 40ml + effaclar gel purifiant micro-pelling 50ml offert?9c946da3-4173-4f60-aa90-e3ed90574e3f ]]></link>
+<g:price><![CDATA[ 1335.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><p><strong>Pour qui :</strong>&nbsp;Peaux grasses à tendance acnéique.</p></li><li><p><strong>Résultats beauté :</strong>&nbsp;Corrige les boutons, les points noirs et les marques post-acné. Anti-rechute.</p></li><li><p><strong>Actifs phares :</strong>&nbsp;Nouvel actif Phylobioma, Niacinamide, Acide Salicylique, Zinc PCA.</p></li><li><p><strong>On aime :</strong> La routine visage &amp; corps pour les peaux à tendance acnéique, dès 10 ans.</p></li></ul><p>&nbsp;</p><p>Le duo de soin <st ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425470818</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2d71f10c52faea2101606f4aa174c06b91fcfa959bb8bfa8c3371a2117ee867f ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN PEAU GRASSE A PROBLEME ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Effaclar Eau Micellaire Purifiante 2x400ml ]]></title>
+<g:id>c6369704-1eef-45e6-a60e-49d78def7699</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay effaclar eau micellaire purifiante 2x400ml?c6369704-1eef-45e6-a60e-49d78def7699 ]]></link>
+<g:price><![CDATA[ 2580.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L'<strong>eau micellaire purifiante Effaclar La Roche Posay</strong> purifie et assainit les peaux grasses à tendance acnéique. Elle convient parfaitement aux peaux sensibles car elle est formulée&nbsp;sans savon, sans colorant, sans alcool et sans paraben. Grâce à son pH physiologique, cette eau micellaire respecte parfaitement la sensibilité de la peau puisqu'elle est composée d'Eau Thermale de La Roche Posay.&nbsp;</p><p>Cette eau micellaire associe des micelles à de la glycérine afin de < ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425464381</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1d7d012fe307b0b59141672d5cd111f462b73f8df4351fb6debdb6f6c6517841 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > MAQUILLAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Effaclar Gel Moussant 2*400ml ]]></title>
+<g:id>8dfebc84-c2b4-4c2a-b677-81ab81c37510</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay effaclar gel moussant 2*400ml?8dfebc84-c2b4-4c2a-b677-81ab81c37510 ]]></link>
+<g:price><![CDATA[ 2580.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le Gel Moussant nettoyant visage EFFACLAR purifie la peau en douceur et élimine les impuretés et l’excès de sébum grâce à des agents nettoyant sélectionnés pour respecter les peaux sensibles. Sa formule associée à l’Eau Thermale de La Roche-Posay apaisante limite les risques d’irritations.</span><br /><span>La peau est nettoyée et purifiée en douceur, les imperfections et points noirs sont réduits.</span><br /><span>Efficacité cliniquement prouvée sur 3000 personnes.</span><br /><span>p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425464343</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b2c83d96c71ea7c95d171e853adad18f4a6ac8ed2804bfc350c89c7e2a41ee72 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Effaclar Gel Purifiant Micro-Peeling 400ml ]]></title>
+<g:id>410f5c8a-fbdc-44ed-8923-91f7204ebd7c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay effaclar gel purifiant micro-peeling 400ml?410f5c8a-fbdc-44ed-8923-91f7204ebd7c ]]></link>
+<g:price><![CDATA[ 1335.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Avec des agents exfoliants exclusifs qui lissent le grain de peau, le Gel Purifiant Micro-exfoliant EFFACLAR purifie intensément la peau, réduit l'excès de sébum et désobstrue les pores. Aide à réduire progressivement les imperfections tenaces, y compris les marques de texture et l'hyperpigmentation, et prévient leur réapparition à long terme.</span><br /><span>PROPRIÉTÉS</span><br /><span>Pour les imperfections sévères, texture inégale. Visage et corps.</span><br /><span>En favorisant  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875708289</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6aee9465c189c99a9a6553284613d872332b86b24ac960b653c358e63db6c0d2 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Effaclar Gel moussant 200 ml ]]></title>
+<g:id>ff2a2e6f-ca5f-4b1b-ac96-16de40e46781</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay effaclar gel moussant 200 ml?ff2a2e6f-ca5f-4b1b-ac96-16de40e46781 ]]></link>
+<g:price><![CDATA[ 895.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Ce gel moussant visage est indiqué pour </span><a target="_blank" href="https://www.laroche-posay.fr/article/peaux-grasses/a747.aspx">nettoyer une peau grasse</a><span> ou une peau à tendance acnéique.</span></p>
+<p><span><span>Le gel moussant Effaclar est un </span><a target="_blank" href="https://www.laroche-posay.fr/article/nettoyants-visage/a39736.aspx">nettoyant visage</a><span> pour peaux grasses à tendance acnéique. Ce gel nettoyant purifiant élimine en douceur les impuretés et l ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875549486</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/713fa8275dba9049fbda6c30931589bf6db154051a1f158293471c2a46361f98 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Effaclar H Iso-Biome Crème Lavante 390ml ]]></title>
+<g:id>9797b3f9-4c71-4a6e-8aaa-3aff79511e5b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay effaclar h iso-biome crème lavante 390ml?9797b3f9-4c71-4a6e-8aaa-3aff79511e5b ]]></link>
+<g:price><![CDATA[ 1699.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La <span>Crème Lavante Hydratante Apaisante Anti-Imperfections</span> <span>Effaclar H Iso-Biome de La Roche-Posay</span> est spécialement formulée pour les peaux grasses et acnéiques fragilisées par les traitements desséchants. Sa formule enrichie en Eau Thermale de La Roche-Posay nettoie en douceur la peau, apaise, purifie et rétablit le confort cutané. Sa texture agréable est anti-frottements et facilite l'utilisation pour ne pas irriter le visage et le laisser confortable et propre. </p>
+ ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875777773</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f676eac462c26799ff945c97db5b7c5dc3ea7e44443ed3aa1fe1366ab6a81af5 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Effaclar Serum + Anthelios Oil Control 15ml offert ]]></title>
+<g:id>a4a3eb29-3614-4119-b838-18180db86159</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay effaclar serum + anthelios oil control 15ml offert?a4a3eb29-3614-4119-b838-18180db86159 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <span>Sérum visage Ultra Concentré Effaclar de La Roche-Posay</span> est anti-imperfections, anti-points noirs et anti-marques.</p>
+<p>Il apporte un <span>effet peeling quotidien pour les peaux adultes à tendance acnéique</span> et agit sur les <span>imperfections, les pores dilatés, les points noirs et les marques persistantes</span>.</p>
+<p>Ce sérum visage est efficace grâce à 3 acides complémentaires ultra concentrés :</p>
+<p>- <span>L'Acide Salicylique</span> qui désincruste et resserr ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425463704</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f5194b9fb1f1c815fc36d9e517a716bbe393b69cf5f9daf7a9fb97e07f58b717 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Gel Douche 1L ]]></title>
+<g:id>8b7a28fe-6a0a-49c0-be7b-8b782b61029b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay gel douche 1l?8b7a28fe-6a0a-49c0-be7b-8b782b61029b ]]></link>
+<g:price><![CDATA[ 1199.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le gel lavant Lipikar de La Roche-Posay</span> a été conçu pour les peaux sensibles de toute la famille.</p>
+<p>Sa formule douce n<span>ettoie la peau tout en respectant son pH physiologique</span>. En effet, les peaux sensibles réagissent souvent aux agressions extérieures et peuvent donc s’assécher rapidement. Grâce à sa composition, ce gel lavant redonne de l’hydratation et de la douceur à l’épiderme.</p>
+<p>Le <span>beurre de karité contenu dans ce gel lavant assure une hydratation  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875905480</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/489ba54ee8a3e6971e1a0099461e660a252ed36e0a9faf90f2b156f19f3dae4c ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Hyalu B5 yeux concentré anti-rides 15 ml ]]></title>
+<g:id>37beaa5f-ce46-4fc3-9238-e5711663c777</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay hyalu b5 yeux concentré anti-rides 15 ml?37beaa5f-ce46-4fc3-9238-e5711663c777 ]]></link>
+<g:price><![CDATA[ 2890.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La nouvelle correction anti-rides pour repulper la peau du contour des yeux et réduire les cernes</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875806923</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/71ea1b6a9569afc33257fe5380c894a640330e72b170ea514c7367f27c4bb27b ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Hydraphase HA BB Crème SPF15 40 ml + Eau Micellaire 50 ml Offerte ]]></title>
+<g:id>18a75e7d-31b8-4161-b2cb-ecbe9e18fd4a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay hydraphase ha bb crème spf15 40 ml + eau micellaire 50 ml offerte?18a75e7d-31b8-4161-b2cb-ecbe9e18fd4a ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Hydraphase HA BB Crème SPF15 40 ml + Eau Micellaire 50 ml Offerte contient deux produits essentiels pour sublimer votre routine d'hydratation et révéler un teint lumineux.</p><p>Ce coffret contient :</p><ul><li><p>La Roche-Posay Hydraphase HA BB Crème SPF15 40 ml : La Roche-Posay Hydraphase HA BB Crème SPF15 40 ml est une BB crème formulée pour agir sur le teint terne, spécialement conçue pour les peaux déshydratées.</p></li></ul><ul><li><p>La Roche-Posay Eau Micellaire Ultra P ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425462257</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/755be6ff9f0645a7801cedfa336a68eeffb52f4cb9c070b57f3e86f67173dad3 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN TEINTE > SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > Idées Cadeaux > MAQUILLAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Hydraphase HA BB crème spf 15 teinte claire 40 ml ]]></title>
+<g:id>8470dfc1-d015-4821-89b5-4a4b8a6edb1e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay hydraphase ha bb crème spf 15 teinte claire 40 ml?8470dfc1-d015-4821-89b5-4a4b8a6edb1e ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La BB crème Hydraphase HA apporte 48 d'hydratation aux peaux déshydratées et permet de retrouver un teint éclatant. Sa texture est lisse et non grasse, elle est enrichie en acide hyaluronique issu de la technologie verte et en pigments minéraux qui fondent sur la peau et s'adaptent à la carnation pour un teint unifié.<br /><br />Développé pour les peaux à tendance sèche.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875794091</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a49fb79fb32212a24710883344f210b7216c3b692d51965d729d095d808f5f7c ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN TEINTE > SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Hydraphase HA BB crème spf 15 teinte foncée 40 ml ]]></title>
+<g:id>561ba4ea-d5b9-4423-9505-e3a30bd63288</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay hydraphase ha bb crème spf 15 teinte foncée 40 ml?561ba4ea-d5b9-4423-9505-e3a30bd63288 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La BB crème Hydraphase HA apporte 48 d'hydratation aux peaux déshydratées et permet de retrouver un teint éclatant. Sa texture est lisse et non grasse, elle est enrichie en acide hyaluronique issu de la technologie verte et en pigments minéraux qui fondent sur la peau et s'adaptent à la carnation pour un teint unifié.</span><br /><br /><span>Développé pour les peaux à tendance sèche.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875794114</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a0d388412aea941444a66fb7f4673ee3d5d2e8046923f7190a58de3e719bf9a9 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN TEINTE > SOINS VISAGE ET CORPS > SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Hydraphase HA BB crème spf 15 teinte medium 40 ml ]]></title>
+<g:id>15dd2830-f17a-4d60-9be9-528de5e773b5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay hydraphase ha bb crème spf 15 teinte medium 40 ml?15dd2830-f17a-4d60-9be9-528de5e773b5 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La BB crème Hydraphase HA apporte 48 d'hydratation aux peaux déshydratées et permet de retrouver un teint éclatant. Sa texture est lisse et non grasse, elle est enrichie en acide hyaluronique issu de la technologie verte et en pigments minéraux qui fondent sur la peau et s'adaptent à la carnation pour un teint unifié.</span><br /><br /><span>Développé pour les peaux à tendance sèche.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875794107</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2eb29263aed5fcfb5181a253f04db13c107d1f120a3a3f0762cf5014e3d18b96 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Lipikar Eczema MED Crème 30ml ]]></title>
+<g:id>c63f82d9-687a-4f41-8709-2ea668b39297</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay lipikar eczema med crème 30ml?c63f82d9-687a-4f41-8709-2ea668b39297 ]]></link>
+<g:price><![CDATA[ 1590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La <span>crème Lipikar Eczema MED de La Roche Posay</span> est spécialement formulé afin de soulager de façon rapide les différents symptômes causés par</p>
+<p>l'eczéma.</p>
+<p>Issu de la science du microbiome, la crème Lipikar Eczema MED La Roche Posay permet d'<span>éliminer les bactéries responsables de l'inflammation</span>, pour</p>
+<p>vous aider à apaiser rapidement les irritations, les démangeaisons, les rougeurs, la sécheresse cutanée ou encore les plaques rugueuses et / ou</p>
+<p>squ ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875771214</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6ef27348aa2f4ebe85c2ee2b18c324bfeee29552bbb4ee309e273d6fc5ff93e7 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Lipikar Huile lavante AP+ 400ml & éco recharge 400ml ]]></title>
+<g:id>a3ac0a9b-d83d-4d4c-b9b9-04b8f58b7067</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay lipikar huile lavante ap+ 400ml & éco recharge 400ml?a3ac0a9b-d83d-4d4c-b9b9-04b8f58b7067 ]]></link>
+<g:price><![CDATA[ 2198.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Apaise immédiatement </span><span>les sensations de démangeaisons</span><span> dès la douche, du nourrisson à l'adulte.</span><br /><span>Testé sur peau à </span><span>tendance à l'eczéma atopique</span><span>.</span><br /><span>Convient au cuir chevelu des nourrissons et aux zones intimes.</span><br /><span>Ne pique pas les yeux.</span><br /><br /><span>Cette huile lavante est conditionnée dans un format d'écorecharge produit avec </span><span>77% de plastique en moins</span><span> que ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425375267</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d8399a1d3e7f4bfca6e22d9031bb8e64e8980d7f44d9db55c8ccfa892947a41f ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Lipikar Syndet Crème lavante 400 ml + eco recharge 400 ml ]]></title>
+<g:id>60b1feae-c720-4529-8562-bb3216440329</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay lipikar syndet crème lavante 400 ml + eco recharge 400 ml?60b1feae-c720-4529-8562-bb3216440329 ]]></link>
+<g:price><![CDATA[ 2399.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Apaise immédiatement </span><span>les sensations de démangeaisons </span><span>dès la douche, dès la naissance.</span><br /><span>Testé sur peau </span><span>à tendance à l'eczéma atopique.</span><br /><span>Convient au cuir chevelu des nourrissons, aux croûtes de lait et aux zones intimes. Ne pique pas les yeux.</span></p>
+<p><span><span>LIPIKAR Syndet AP+ est une </span><span>base lavante ultra-douce</span><span> qui agit sur les 2 facteurs déterminants d'</span><span>une peau à tenda ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425375229</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1e5b9a3b93a443d9808593317f9ce2c9c587ddd92b6bf3664f41a28ecc27dbab ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Lipikar Xerand Crème mains Réparatrice DUO 50ML ]]></title>
+<g:id>d1237345-1a1c-4722-a638-b1b6c00a3e1d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay lipikar xerand crème mains réparatrice duo 50ml?d1237345-1a1c-4722-a638-b1b6c00a3e1d ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La crème XERAND LIPIKAR de la Roche Posay est recommandé pour les mains abîmées et desséchées, et les peaux très sèches.</p>
+<p>Elle a une action hydratante permettant de restaurer la barrière cutanée, de protéger la peau contre les agressions extérieures, tout en hydratant les couches supérieures de l'épiderme.</p>
+<p>Les mains retrouvent alors une peau douce et souple.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425003993</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/50573be732712bcf06986cec997b59eb66a85aa81f955f939555bded2250d9c3 ]]></g:image_link>
+<g:product_type><![CDATA[ CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Lipikar surgras Pain physiologique 150G ]]></title>
+<g:id>02f87e3d-6ed5-49c7-905a-67ec72906c5d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay lipikar surgras pain physiologique 150g?02f87e3d-6ed5-49c7-905a-67ec72906c5d ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Pain Surgras LIPIKAR Nettoie la peau sans l'agresser. </p>
+<p>Apporte les lipides nécessaires à la peau.</p>
+<p>Protège la peau contre les effets dessèchants de l'eau.</p>
+<p>Le dérivé de beurre de Karité apporte les lipides nécessaires à la peau, respectant ainsi son film protecteur naturel. Le complexe EDTA, capteur de calcaire, protège la peau des effets desséchants de l'eau.</p>
+<p>Parfaitement nettoyée, nourrie et protégée, la peau retrouve souplesse et douceur. Ce pain nettoie les pe ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433422404533</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6ef7d2f59e802f0cdf4c24ab21e72ce227a5a2c66d6ff782ac75cda3ac891324 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Lot Lipikar Lait 400ml et Gel Lavant 400ml ]]></title>
+<g:id>8b32e54d-6c1e-4fc3-8163-41cbaf940721</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay lot lipikar lait 400ml et gel lavant 400ml?8b32e54d-6c1e-4fc3-8163-41cbaf940721 ]]></link>
+<g:price><![CDATA[ 2248.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Grâce à son Cold Cream, le Lait corps Lipikar de La Roche Posay permet de réparer et de protéger les peaux les plus sensibles. Le Beurre de Karité qui y est contenu a une action nourrissante et relipidante sur la peau. L'Eau Thermale de la Roche-Posay apporte de l'apaisement tout en ayant une action antioxydante. La texture crème enrichie en Cold Cream et en Beurre de Karité du lait corps Lipikar de La Roche-Posay garantit un fini non gras, non collant et un habillage rapide. Le lait corps re ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425474373</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a7204787243a0bbdc523ad5f0998629b3a9bd7ba8d23305848370adcb9138f9c ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > GEL DOUCHE > Dermocosmétique > HYGIÈNE ET SOINS INTIMES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Lotion Apaisante Physiologique 200ml ]]></title>
+<g:id>12ba2d09-2af6-4e13-abca-f9958085753a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay lotion apaisante physiologique 200ml?12ba2d09-2af6-4e13-abca-f9958085753a ]]></link>
+<g:price><![CDATA[ 1370.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Lotion Apaisante Physiologique 200 ml possède un haut pouvoir démaquillant. pH physiologique. Agents nettoyants sélectionnés pour une tolérance optimale. Sans savon. Sans alcool. Sans colorant.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872410321</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9154b9f0d71fae6af44eb935a7a4e11d1da7e3416d20991496d02cf5baaa5f40 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Mela B3  Sérum Concentré Intensif Anti-Taches 30ml ]]></title>
+<g:id>d24eec6b-c417-4ce2-9877-c0e5ea24a19e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay mela b3  sérum concentré intensif anti-taches 30ml?d24eec6b-c417-4ce2-9877-c0e5ea24a19e ]]></link>
+<g:price><![CDATA[ 3990.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Pour qui :</span> Tous les types de peaux.</li>
+<li><span>Résultats beauté :</span> Corrige les taches brunes, même persistantes. </li>
+<li><span>Actifs :</span> Melasyl™, Niacinamide.</li>
+<li><span>Le + : </span>Efficacité anti-récidive.</li>
+</ul><p> </p>
+<p><span>MELA B3 Sérum de La Roche-Posay</span> est le sérum anti-taches formulé à base de <span>Melasyl™ multibreveté et de Niacinamide concentrée à 10%</span>.</p>
+<p>Son efficacité permet de <span>corriger les taches brunes, ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875890021</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8498af1fd4eb29a5f5c576606b9613eed4cf6d86966ab15711a109f74b6f9f52 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Mela B3 Gel Micro-peeling 200ml ]]></title>
+<g:id>f98dd051-905c-4238-97f3-6d0c302efb97</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay mela b3 gel micro-peeling 200ml?f98dd051-905c-4238-97f3-6d0c302efb97 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Pour qui :</span> Tous les types de peaux.</li>
+<li><span>Résultats beauté : </span>Votre teint parait plus uniforme, votre peau est visiblement plus éclatante.</li>
+<li><span>Actifs :</span> Niacinamide, Vitamine B3.</li>
+<li><span>Le + :</span> Adapté à toutes les carnations.</li>
+</ul><p> </p>
+<p><span>MELA B3 Gel micro-peeling unifiant éclat de La Roche-Posay</span> est formulé avec le nouvel <span>actif révolutionnaire breveté Melasyl™ et 10% de Niacinamide pure</span>.</p>
+<p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875890069</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d8a7648e97c463c4f67a05adaa0e90c8be5ece9c128351eefe770e0e4c61461d ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay REDERMIC C YEUX 15ML ]]></title>
+<g:id>620eae52-006c-4fdf-bf0e-333e15e7348b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay redermic c yeux 15ml?620eae52-006c-4fdf-bf0e-333e15e7348b ]]></link>
+<g:price><![CDATA[ 2260.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le soin de comblement anti-âge yeux sensibles redermic C des Laboratoires LA ROCHE-POSAY, atténue et corrige les rides, uniformise le contour des yeux et diminue les rougeurs, afin de sublimer votre regard.</p>
+<p>Expertise dermatologique : Les peaux sensibles se caractérisent par une tendance aux rougeurs plus marquée. Dans le vieillissement, celles-ci viennent accentuer l’altération de l’uniformité du teint et s’ajouter aux rides et au manque de fermeté.</p>
+<p class="p1">Forts de cette exp ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872413735</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/063547a78435768700a6f466897b8700d7ed1d99782cb3ecb13008cda53cd10f ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Serozinc 150ml ]]></title>
+<g:id>afeedebe-3d32-437e-acca-7aa5b72848b3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay serozinc 150ml?afeedebe-3d32-437e-acca-7aa5b72848b3 ]]></link>
+<g:price><![CDATA[ 970.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Solution de sulfate de zinc.</p>
+<p>Légèrement antiseptique, astringente, anti-inflammatoire et cicatrisante.</p>
+<p>Soin de la peau irritée du visage.</p>
+<p>Soin des fesses du nourrisson.</p>
+<p>Lotion astringente pour peaux grasses.</p>
+<p>Apaise le feu du rasoir des peaux à problèmes.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433422406728</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ed45328d03b2d08ec27090c28faa120b3049f552f0744532fb03cd3ef8d50335 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Tolériane Fond de Teint Fluide Correcteur n°10 SPF25 H 30ml ]]></title>
+<g:id>f9e857f6-5498-4ca1-a9b4-9875fd49f304</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay tolériane fond de teint fluide correcteur n°10 spf25 h 30ml?f9e857f6-5498-4ca1-a9b4-9875fd49f304 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Pour qui :</span> Tous types de peaux : sensibles, à tendance acnéique et à tendance atopique.</li>
+<li><span>Résultat beauté : </span>Votre teint est unifié avec une couvrance longue tenue.</li>
+<li><span>Actifs phares : </span>Pigments minéraux.</li>
+<li><span>Le + :</span> Sa protection SPF25.</li>
+</ul><p> </p>
+<p>Le <span>fond de teint Toleriane Fluide Correcteur</span> est un fond de teint ultra haute couvrance, testé sur peaux sensibles avec des marques cutanées et adapté au ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875863940</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5e56401fd1ae3ecf04f6e8bc94e8a8611072f454a6493eb701fae666516369a2 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Tolériane Fond de Teint Fluide Correcteur n°11 SPF2530ml ]]></title>
+<g:id>6ba30715-c8f1-436b-a0ba-291a182e37a2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay tolériane fond de teint fluide correcteur n°11 spf2530ml?6ba30715-c8f1-436b-a0ba-291a182e37a2 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875863926</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1c4f833f9b87ea26782a4b0c6c039c5f3e7ddd9dda679de8ff6d91062f61681c ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Tolériane Fond de Teint Fluide Correcteur n°12  30ml ]]></title>
+<g:id>6436679d-620c-4aa8-bee1-14be0b01e8ba</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay tolériane fond de teint fluide correcteur n°12  30ml?6436679d-620c-4aa8-bee1-14be0b01e8ba ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="value">
+<div>
+<div>
+<div>
+<p><span>Le fond de teint Toleriane Fluide Correcteur n°12 de La Roche-Posay</span> vous offre une couvrance immédiate et totale, avec longue tenue 16h.</p>
+<p></p>
+</div>
+</div>
+</div>
+</div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875836685</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0ac9b8bb7924817864e2158b7d363757d53826cbc5c7f17a81525effc79fd5ff ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Tolériane Fond de Teint Fluide Correcteur n°13 SPF25 30ml ]]></title>
+<g:id>b6dca635-8a97-45fb-90e5-8e223feaf90f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay tolériane fond de teint fluide correcteur n°13 spf25 30ml?b6dca635-8a97-45fb-90e5-8e223feaf90f ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Pour qui : </span>Tous types de peaux : sensibles, à tendance acnéique et à tendance atopique.</li>
+<li><span>Résultat beauté :</span> Votre teint est unifié avec une couvrance longue tenue.</li>
+<li><span>Actifs phares :</span> Pigments minéraux.</li>
+<li><span>Le + : </span>Sa protection SPF25.<br /> </li>
+</ul><p><span>Le fond de teint Toleriane Fluide Correcteur</span> est un fond de teint ultra haute couvrance, testé sur peaux sensibles avec des marques cutanées et adapté aux  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875863964</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/48c7635bbcce86ab5f8340261a242d9c80a8eb7f573eedd677dbc3e433aa8be6 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > MAQUILLAGE > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Tolériane Fond de Teint Fluide Correcteur n°19 SPF25 30ml ]]></title>
+<g:id>5533a8b1-4f90-4bbc-b1f2-b34a62302843</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay tolériane fond de teint fluide correcteur n°19 spf25 30ml?5533a8b1-4f90-4bbc-b1f2-b34a62302843 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Pour qui : </span>Tous types de peaux : sensibles, à tendance acnéique et à tendance atopique.</li>
+<li><span>Résultat beauté :</span> Votre teint est unifié avec une couvrance longue tenue.</li>
+<li><span>Actifs phares :</span> Pigments minéraux.</li>
+<li><span>Le + : </span>Sa protection SPF25.<br /> </li>
+</ul><p><span>Le fond de teint Toleriane Fluide Correcteur</span> est un fond de teint ultra haute couvrance, testé sur peaux sensibles avec des marques cutanées et adapté aux  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875836623</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/eb431d3ab3ed5ccd1de060da8363ec63d9c1bfd0954da166427debdba7368eaa ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > MAQUILLAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Tolériane Gel moussant 400 ml ]]></title>
+<g:id>84fb5539-e534-4f40-a3a4-e7bc421944c4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay tolériane gel moussant 400 ml?84fb5539-e534-4f40-a3a4-e7bc421944c4 ]]></link>
+<g:price><![CDATA[ 1560.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La Roche-Posay Toleriane Gel-Mousse 400ml </span>est un <span>nettoyant quotidien pour le visage </span>destiné aux <span>peaux normales à grasses et sensibles</span>.</p>
+<p></p>
+<p>Formulé avec de l'<span>eau thermale prébiotique de La Roche-Posay</span>, de la<span> niacinamide</span> et des <span>céramides-3</span>, ce <span>nettoyant pour le visage </span>débarrasse en douceur la peau de la saleté, du maquillage et des impuretés, <span>tout en préservant la barrière d'hydratation n ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875545822</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/733c60167ed1035c6b236e854697b417e6e065e09a5cf346a87dd15350714bb7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Trousse Hyalu B5 Serum 30ml+Hyalu B5 Soin 40ml ]]></title>
+<g:id>4a9bed4d-f97c-4f30-a0ab-318a038c1760</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay trousse hyalu b5 serum 30ml+hyalu b5 soin 40ml?4a9bed4d-f97c-4f30-a0ab-318a038c1760 ]]></link>
+<g:price><![CDATA[ 6590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Cette trousse Côtelé La Roche-Posay contient :</p>
+<p>· Hyalu B5 Sérum, 30ml</p>
+<p>· Hyalu B5 Soin, 40ml</p>
+<p>· Hyalu B5 Sérum en format voyage, 10ml</p>
+<p>La correction anti-rides dermatologique pour réparer et repulper la peau. Hyalu B5 Sérum : Une formule régénérante unique, alliant deux types d’acides hyaluroniques purs, vitamine B5 et madécassoside, pour repulper, réparer la barrière cutanée et favoriser la régénération de la peau. Texture gel frais hydratant repulpant.</p>
+<p>Testé  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425473345</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/26c540edb445bc1ce31d313e652fad6131e304b5fa81bc6132ac6445c0c13362 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay Trousse Retinol B3 + Hyalu B5 Soin Riche 40ml ]]></title>
+<g:id>64669c03-01cf-43c8-a446-655584b46a33</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay trousse retinol b3 + hyalu b5 soin riche 40ml?64669c03-01cf-43c8-a446-655584b46a33 ]]></link>
+<g:price><![CDATA[ 6590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Sérum anti-rides régénérant resurfaçant concentré en Rétinol [Pur + à Libération Graduelle] et en Vitamine B3.</p>
+<p><span>BÉNÉFICES</span><br />Rétinol B3 est un sérum anti-rides régénérant resurfaçant, qui allie le pouvoir anti-âge du Rétinol [Pur + à Libération Graduelle] à la fonction réparatrice de la Vitamine B3. Conçu pour tous les types de peaux, ce sérum visage au rétinol corrige les signes visibles de l'âge les plus prononcés (rides, taches pigmentaires, perte de fermeté...).</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425473857</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/00cacf3a2758d77e42662f9b509429b9751f471a6976a5cd43cd0259b0c52753 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche Posay physiologique Déodorant Roll-on 50ml ]]></title>
+<g:id>0fd57900-ee5c-45a3-9da4-44d110ae04a3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay physiologique déodorant roll-on 50ml?0fd57900-ee5c-45a3-9da4-44d110ae04a3 ]]></link>
+<g:price><![CDATA[ 790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Enrichi en Perlite ultra absorbante pour lutter contre l'humidité, Gluconate de Zinc pour neutraliser les odeurs et Allantoïne apaisante.</p>
+<p>Formulation Physiologique: agents sélectionés pour une tolérance optimale.</p>
+<p>Sans sels d'aluminium, sans alcool, sans colorant et sans paraben.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872412158</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ea3ca52fbb85a4b1fb773c85336a42203497e486f0c86284a5363dddbf12f667 ]]></g:image_link>
+<g:product_type><![CDATA[ DEODORANT  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios Age Correct Soin Quotidien SPF 50 50 ml ]]></title>
+<g:id>f71259f9-7662-46a1-a646-aca0046e77e6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios age correct soin quotidien spf 50 50 ml?f71259f9-7662-46a1-a646-aca0046e77e6 ]]></link>
+<g:price><![CDATA[ 2140.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Anthelios Age Correct Soin Quotidien SPF 50 50 ml est un soin visage qui aide à protéger la peau et corriger les signes de l'âge induits par l'exposition quotidienne aux UV, grâce à la photocorrection. Il agit sur la réduction des rides et la correction des taches.</p>
+<p>Grâce au Complexe Cellox-B3 TECH™ Protection Quotidienne (Mexoryl XL + Vitamine B3 &amp; E + Eau Thermale de La Roche-Posay), il offre une triple action :</p>
+<ul><li>Haute protection : UVB / UVA.</li>
+<li>Ant ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875761031</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3ddbd23f37b5059993eb46c2e38eb0a6429de654071e8aaa88404fa8ea3689eb ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios Brume Anti-Brillance Invisible SPF50 75 ml ]]></title>
+<g:id>c88f3083-deea-4ac8-8d79-a26aedb66afe</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios brume anti-brillance invisible spf50 75 ml?c88f3083-deea-4ac8-8d79-a26aedb66afe ]]></link>
+<g:price><![CDATA[ 1525.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Peau sensible ou sujette aux intolérences solaires, communément appelées allergies solaires.<br />Peau mixte à grasse à tendance acnéique. <br />Haute protection uva/uvb [système filtrant breveté mexoplex®]<br />Efficacité anti-brillance [technologie airlicium™]<br />Application sans les mains<br />Appplication 5 secondes<br />Format pocket</p>
+<p>Si vous êtes à la recherche d'une protection solaire pour le corps, découvrez aussi notre brume invisible visage et corps : avec sa texture ultra-f ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875549530</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6aca8ec527c9f5428bfbd9b1e4115e0c89bb4b7fcde848c2d199fb74f9e2b6ec ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios Dermo-Pediatrics Lait Bébé SPF50+ 50 ml ]]></title>
+<g:id>937ce090-b839-491a-8f0f-6023a5e4f577</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios dermo-pediatrics lait bébé spf50+ 50 ml?937ce090-b839-491a-8f0f-6023a5e4f577 ]]></link>
+<g:price><![CDATA[ 1460.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Très haute protection UVA/UVB, large et photostable.Protection optimale SPF 50+ renforcée contre les UVA (niveau plus strict que la recommandation européenne) grâce à un nouveau système filtrant  breveté Mexoplex associé à l’eau thermale de La Roche-Posay, apaisante et antioxydante.Dans une nouvelle formule encore plus minimaliste testée sous contrôle dermatologique : sans parfum, sans paraben, allégée en filtres chimiques, nickel tested (garantie d'un taux de nickel inférieur au seuil déclen ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872419904</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/70fc36a44c93de932d87a08f177bd3d444f9cf2b0923fe71223b5586bddbf6fb ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios Oil Correct SPF50+ 50ml ]]></title>
+<g:id>59efc8df-8a04-4e56-9305-03f41d3fe91d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios oil correct spf50+ 50ml?59efc8df-8a04-4e56-9305-03f41d3fe91d ]]></link>
+<g:price><![CDATA[ 1920.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Photoprotecteur anti-âge développé pour prévenir et réparer les dommages aux cellules de la peau induits par les UVA/UVB, l'IR-A et la pollution grâce à la nouvelle technologie brevetée CELLOX-B3. En outre, sa puissante action anti-âge aide à prévenir le photovieillissement et à corriger les signes du vieillissement. Facile à étaler grâce à sa texture hydratante légère et à absorption rapide.</span><br /><br /><span>Achat Online </span><span>La Roche-Posay Anthelios Oil Correct SPF50+ 5 ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875797467</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6677299bf56311fb23786cfc3ed90cc63faa415c45c1ad227fe5cb7370ff9d5e ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios Post-Uv Exposure Lait Après-Soleil 400 ml ]]></title>
+<g:id>baba9da1-50c7-4679-995b-c911026699fd</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios post-uv exposure lait après-soleil 400 ml?baba9da1-50c7-4679-995b-c911026699fd ]]></link>
+<g:price><![CDATA[ 1660.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Anthelios Post-UV Exposure Lait Après-Soleil 400 ml est un soin après-soleil pour le visage et le corps des peaux sensibles et échauffées.</p><p>Il combine des ingrédients comme le Panthenol, la Glycérine et l'eau thermale de La Roche-Posay offrant une triple-action après l'exposition au soleil : pour apaiser et réduite les sensations d'échauffements et de tiraillements, réparer la sécheresse cutanée et renforcer la fonction barrière de la peau.<br>De plus, ce lait hydrate et n ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875905459</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0089e2942d57eb3bba6025f6588683908b01f048c7175ac17a7b25ca931ef08a ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios Shaka Fluide Invisible SPF 30 50 ml ]]></title>
+<g:id>01f50887-179d-4dd7-bb0b-a981564c8814</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios shaka fluide invisible spf 30 50 ml?01f50887-179d-4dd7-bb0b-a981564c8814 ]]></link>
+<g:price><![CDATA[ 1360.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Anthelios Shaka Fluide Invisible SPF 30 50 ml est un soin formulé pour limiter les picotements oculaires et les allergies solaires. Il offre une haute protection UVA/UVB. Il aide à prévenir le stress oxydatif généré par les infra-rouges et la pollution. Il est résistant à l'eau, à la transpiration et au sable. Il laisse un fini imperceptible et invisible.</p>
+<p>Testé sous contrôles dermatologique et ophtalmologique.</p>
+<p>Formule respectueuse du milieu marin.</p>
+<p>Fabriqué  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875706841</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/73b4ac7cf17dad1616707e011aef904db7baa51d1dd7461112933d2476ac7854 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios Spray Invisible SPF 30 200 ml ]]></title>
+<g:id>d72b5bf3-1382-438b-b9f5-6934d4df931b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios spray invisible spf 30 200 ml?d72b5bf3-1382-438b-b9f5-6934d4df931b ]]></link>
+<g:price><![CDATA[ 1695.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Anthelios Spray Invisible SPF 30 200 ml est un fluide à haute protection UVA/UVB et les allergies solaires. Il aide à prévenir le stress oxydatif généré par les infra-rouges et la pollution. Sa texture non grasse ne laisse pas de traces blanches. Il est très résistant à l'eau, à la transpiration et au sable.</p>
+<p>Testé sous contrôle dermatologique.</p>
+<p>Formule respectueuse du milieu marin.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875696821</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/877ee936cd20fbd377427aefd43514a41b5bade6724daf4b92f2fba29ad6d64a ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios UVMune Dermo-Pediatrics Fluide SPF50+ 50 ml ]]></title>
+<g:id>c8e83289-0ba4-450f-a1aa-74b92aef859f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios uvmune dermo-pediatrics fluide spf50+ 50 ml?c8e83289-0ba4-450f-a1aa-74b92aef859f ]]></link>
+<g:price><![CDATA[ 1525.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Efficacité cliniquement prouvée, formule testée sous contrôle dermatologique et pédiatrique, allégée en filtres chimiques :</p><ul><li><p>Protège des dommages cellulaires profonds</p></li><li><p>Enrichi en Vitamines E aux propriétés antioxydantes pour combattre les radicaux libres</p></li><li><p>Enrichi en beurre de karité pour restaurer le film hydrolipidique de la peau</p></li><li><p>Préserve les défenses naturelles de la peau.</p></li></ul><p>Efficacité immédiate et durable du filtre Mexor ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875886307</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5d1ac53ba03b322ae73d684d41fccf20057593557315ea1186cf9ced64614f54 ]]></g:image_link>
+<g:product_type><![CDATA[ Bébé > SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios UVMune Dermo-Pediatrics Lait SPF50+ 75 ml ]]></title>
+<g:id>69432a21-0ac1-40b3-98cb-c61f0f0274d0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios uvmune dermo-pediatrics lait spf50+ 75 ml?69432a21-0ac1-40b3-98cb-c61f0f0274d0 ]]></link>
+<g:price><![CDATA[ 1450.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Anthelios UVMune Dermo-Pediatrics Lait SPF50+ 75 ml est une très haute protection solaire hydratante visage et corps, destinée aux peaux sensibles ou à tendance atopique des enfants.</p>
+<p>Ce lait possède un filtre "Meroxyl 400'" offrant une protection efficace contre les les rayons UV longs UVA/UVB et les rayons ultra-longs UVA et préservant les défenses naturelles de la peau.<br />Il est enrichi en vitamines E aux propriétés antioxydantes pour combattre les radicaux libres e ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875888899</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/00f545405a356cf74aaf7b0ccdcf21b82f974b4a76a46473b653a12e94061e3d ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios UVMune Dermo-Pediatrics Lait SPF50+ Enfants 250 ml ]]></title>
+<g:id>8987bff6-f745-4c87-8c87-e14df467aec1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios uvmune dermo-pediatrics lait spf50+ enfants 250 ml?8987bff6-f745-4c87-8c87-e14df467aec1 ]]></link>
+<g:price><![CDATA[ 1940.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Anthelios UVMune Dermo-Pediatrics Lait SPF50+ Enfants 250 ml est une très haute protection solaire spécialement formulée pour la peau sensible des enfants.</p>
+<p>Cette crème solaire contient une protection UVB et UVA qui protège efficacement la peau des effets nocifs du soleil. Elle aide à prévenir le stress oxydatif généré par les infra-rouges et la pollution.<br />Sa texture fluide est facile à appliquer et pénètre en un instant au cœur de la peau pour une protection immédia ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875888851</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b949d7d7bcd8768b735626ae21a293320059e4c829595ece846c4245e3363b75 ]]></g:image_link>
+<g:product_type><![CDATA[ Bébé > SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios UVmune 400 Crème Hydratante SPF50+ Teinté 50 ml ]]></title>
+<g:id>4956c3c4-22e3-4bf0-ba63-154c899e6db6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios uvmune 400 crème hydratante spf50+ teinté 50 ml?4956c3c4-22e3-4bf0-ba63-154c899e6db6 ]]></link>
+<g:price><![CDATA[ 1360.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Anthelios UVmune 400 Crème Hydratante SPF50+ Teinté 50 ml est une crème hydratante très haute protection UVA/UVB, qui aide à prévenir le stress oxydatif généré par les infrarouges et la pollution. Elle protège des dommages cellulaires profonds.</p>
+<p>Résistant à l'eau et à la transpiration.<br />Anti-picotement oculaire.</p>
+<p>Sans traces blanches.</p>
+<p>Testé sous contrôle dermatologique sur peaux sensibles et réactives.<br />Testé sous contrôle ophtalmologique sur yeux et  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875797689</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dece9af2c2fb0c69d8ec2f30dad4e96096d9eeea7cc2b6895ef3660a4b067f01 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios UVmune 400 Fluide Invisible SPF50+ 50 ml ]]></title>
+<g:id>15282fc6-5cac-4cbc-a554-f64bdddf194b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios uvmune 400 fluide invisible spf50+ 50 ml?15282fc6-5cac-4cbc-a554-f64bdddf194b ]]></link>
+<g:price><![CDATA[ 1360.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Anthelios UVmune 400 Fluide Invisible SPF50+ 50 ml est un fluide de très haute protection UVA/UVB qui protège des dommages cellulaires profonds. Il est formulé pour limiter les picotements oculaires et les allergies solaires. Il aide à prévenir le stress oxydatif généré par l'infrarouge et la pollution.</p>
+<p>Résistant à l'eau et à la transpiration.</p>
+<p>Testé sur peaux sensibles.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875797580</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/beb8e6d15a1fcafc9b1b1e76203787deb9a10ca8ce59f3b5eafe847359081289 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios UVmune 400 Lait Hydratant SPF50+ 150 ml ]]></title>
+<g:id>19543f40-9560-48cf-b844-4d27875786d2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios uvmune 400 lait hydratant spf50+ 150 ml?19543f40-9560-48cf-b844-4d27875786d2 ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Anthelios UVmune 400 Lait Hydratant SPF50+ 150 ml apporte une très haute protection solaire à large spectre contre les UVA/UVB &amp; UVA ultra-longs grâce à son SPF50+.</p><p>Enrichi en beurre de karité, ce lait solaire protège et hydrate les peaux les plus fragiles, même celles à tendance atopique.<br>Sa formule résistante à l'eau, à la transpiration et au frottement du sable en fait un allié pour les journées ensoleillées.<br>Il convient aux peaux sensibles et à celles sujett ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875917872</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c565859b50d925e3e1aa948227ed6d8a30ec5ec0081c095043355cf3cfdda04f ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios UVmune Fluide Teinté SPF50+ 50 ml ]]></title>
+<g:id>5cb73013-b45f-4a32-b39e-a06d822b556c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios uvmune fluide teinté spf50+ 50 ml?5cb73013-b45f-4a32-b39e-a06d822b556c ]]></link>
+<g:price><![CDATA[ 1360.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Anthelios UVmune 400 Fluide Teinté SPF50+ 50 ml est un fluide teinté de très haute protection UVA/UVB qui protège des dommages cellulaires profonds. Il est formulé pour limiter les picotements oculaires et les allergies solaires. Il aide à prévenir le stress oxydatif généré par l'infrarouge et la pollution.</p>
+<p>Résistant à l'eau et à la transpiration.</p>
+<p>Testé sur peaux sensibles.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875797641</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ac6bca4ba72e3cf14cb6e66df578c7b7267c0ccc892055ab1f5992e30a8b96b8 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios UVmuneFluide Invisible SPF50+ Sans Parfum 50 ml ]]></title>
+<g:id>73620761-1ae0-44bf-a3f0-848feb0b4a51</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios uvmunefluide invisible spf50+ sans parfum 50 ml?73620761-1ae0-44bf-a3f0-848feb0b4a51 ]]></link>
+<g:price><![CDATA[ 1360.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Anthelios UVmune 400 Fluide Invisible SPF50+ Sans Parfum 50 ml est un fluide de très haute protection UVA/UVB qui protège des dommages cellulaires profonds. Il est formulé pour limiter les picotements oculaires et les allergies solaires. Il aide à prévenir le stress oxydatif généré par l'infrarouge et la pollution.</p>
+<p>Résistant à l'eau et à la transpiration.<br />Sans parfum.</p>
+<p>Testé sur peaux sensibles.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875797597</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f2b56800c489d844f66c8a012e27865e33688b990d172d987d49f37f9815264d ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios Uvmune  Crème Solaire SPF50+  50ml ]]></title>
+<g:id>cb25f528-aa19-4fb5-be0f-b58e85c9716d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios uvmune  crème solaire spf50+  50ml?cb25f528-aa19-4fb5-be0f-b58e85c9716d ]]></link>
+<g:price><![CDATA[ 1360.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La Crème Solaire Hydratante avec parfum Très Haute Protection SPF50+ Anthelios de La Roche Posay</span> contient un nouveau filtre UV Mexoryl 400 issu d'une innovation scientifique, qui renforce la protection contre les UV les plus insidieux, aussi appelés UVA ultra-longs. Parce qu'ils sont imperceptibles et dommageables, ces UV impactent la peau toute l'année. </p>
+<p>Cette crème solaire ultra-résistante à l'eau, à la transpiration et au sable, invisible et haute tolérance, vient proté ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875797665</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a39506f078096f30525339421b13b5ceeaf1a00e280ddf19c4545e7e84ef4c09 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios Uvmune SPF50+Sans Parfum, 50ml ]]></title>
+<g:id>dffd1938-670d-47cb-a5a1-e21233ee9bc2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios uvmune spf50+sans parfum, 50ml?dffd1938-670d-47cb-a5a1-e21233ee9bc2 ]]></link>
+<g:price><![CDATA[ 1360.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La Crème Solaire Hydratante sans parfum Très Haute Protection SPF50+ Anthelios de La Roche Posay</span> contient un nouveau filtre UV Mexoryl 400 issu d'une innovation scientifique, qui renforce la protection contre les UV les plus insidieux, aussi appelés UVA ultra-longs. Parce qu'ils sont imperceptibles et dommageables, ces UV impactent la peau toute l'année. </p>
+<p>Cette crème solaire ultra-résistante à l'eau, à la transpiration et au sable, invisible et haute tolérance, vient proté ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875797719</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ba7f485b458befbffdf56f6eb66a5c263cb7d2774b6b2e56c9c12420f326cb6c ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios XL Brume Invisible Ultra-Léger SPF50+ 200 ml ]]></title>
+<g:id>8e77ed05-c01b-4ff4-bfb0-7c770d13a30b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios xl brume invisible ultra-léger spf50+ 200 ml?8e77ed05-c01b-4ff4-bfb0-7c770d13a30b ]]></link>
+<g:price><![CDATA[ 1795.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pour tous ceux qui cherchent une protection efficace, rapide et facile à appliquer. Convient aux sportifs et à toutes les pilosités.<br />Convient aux peaux sensibles ou sujettes aux intolérances solaires, communément appelées allergies solaires.</p>
+<p>Absorption rapide<br />Texture ultra fine<br />Fini invisible et non collant</p>
+<p></p>
+<p><br /><br /></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872420153</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6e6ffca5debc68ba650c9432111604402a12db7e6ca84eb5af9757bd5c6e5dc5 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Anthelios gel crème sans parfum SPF50+ 50ml ]]></title>
+<g:id>37805436-5621-48b1-8276-407e894ffd8b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay anthelios gel crème sans parfum spf50+ 50ml?37805436-5621-48b1-8276-407e894ffd8b ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Peau sujette aux intolérances solaires, communément appelées allergies solaires.<br />Ensoleillement extrême.</p>
+<p>Prévention des taches pigmentaires dues au soleil (grossesses, photosensibilisations,…) et des dommages cellulaires liés aux UV.<br />Protège des dommages cellulaires profonds.</p>
+<p>Filtre UV Mexoryl 400 : la protection jusqu'aux UVA ultra-longs* [380-400NM] UVA ULTRA-LONGS** : Ils sont imperceptibles et dommageables, et représentent 30% des rayons UV impactant notre peau tou ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875546430</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/17aff5b8975a425eed02c0361cb974b60d4b66abc43e7ee00d6e632c9f321b5b ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Cicaplast B5 Sérum 30 ml ]]></title>
+<g:id>ec29a471-dbf2-4c38-b217-c39440217340</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay cicaplast b5 sérum 30 ml?ec29a471-dbf2-4c38-b217-c39440217340 ]]></link>
+<g:price><![CDATA[ 3190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Cicaplast B5 Sérum 30 ml est un sérum pour les peaux déshydratées ou irritées et le teint terne qui associe de la vitamine B5 à forte concentration (10%) à l'Aqua Posae pour un sérum ultra-réparateur quotidien qui améliore la qualité de la peau.<br />Sa formule unique laisse un léger film sur le visage qui aide à protéger la peau des agressions externes et à la récupération optimale de la barrière cutanée.</p>
+<p>Instantanément, la peau est intensément hydratée. Après 1 heure,  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875837804</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2765c1e31ed3199981b110a03a73271c2ef09fda7bb7e47fb91846d0586dbe8a ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Cicaplast Baume B5+ SPF50 40 ml ]]></title>
+<g:id>8762eebd-b216-4954-9f99-22d411033ea3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay cicaplast baume b5+ spf50 40 ml?8762eebd-b216-4954-9f99-22d411033ea3 ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Cicaplast Baume B5+ SPF50 40 ml est un baume destiné aux peaux irritées ou fragilisées des adultes et enfants de plus de 3 ans. Ce baume ultra-réparateur et apaisant offre une solution complète pour favoriser la cicatrisation tout en protégeant la peau des dommages causés par le soleil.</p>
+<p>Sa formule est enrichie en tribioma (complexe prébiotique unique) favorisant l'équilibre du microbiome cutanée, de 5% de panthénol (vitamine B5) qui apaise immédiatement la peau fragilisé ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875876940</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/16f5e76f0fd4e42f2ff1dbfc5fc0f26b0b83b7e5f0247dfeed39a63c62e95e1a ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Cicaplast Gel B5 40 ml ]]></title>
+<g:id>174d12ee-f9d0-418b-b5d1-55d624c1c919</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay cicaplast gel b5 40 ml?174d12ee-f9d0-418b-b5d1-55d624c1c919 ]]></link>
+<g:price><![CDATA[ 795.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Cicaplast Gel B5 Soin Accélérateur de Réparation Épidermique 40 ml à la texture isolante et invisible permet d'accélérer la réparation épidermique (post-points de suture, peeling, laser...).</p>
+<p>Ce gel, indiqué en cas d'altérations épidermiques superficielles :</p>
+<p>- apaise immédiatement grâce à l'eau thermale La Roche-Posay et au Panthénol 5%,</p>
+<p>- permet une réparation épidermique de la barrière cutanée grâce au Madécassoside, Cuivre, Zinc, Manganèse, et à l'Acide H ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875586269</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6eccd0046a46136c7d9098216d101755b1198815523eebb73c486637870f0d0a ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay EFFACLAR H ISO-BIOME - Soin Réparateur Apaisant  40ml ]]></title>
+<g:id>6207fb9f-e813-4e96-b998-bbcc6da9fb03</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay effaclar h iso-biome - soin réparateur apaisant  40ml?6207fb9f-e813-4e96-b998-bbcc6da9fb03 ]]></link>
+<g:price><![CDATA[ 1195.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <span>Soin Réparateur Apaisant Anti-Marques Hydratant Longue Durée Effaclar H Iso-Biome de La Roche-Posay</span> est un soin destiné aux peaux grasses à tendance acnéique fragilisées par les traitements desséchants. Ce soin contient de l'Orellana, un nouveau prébiotique extrait naturel de plante pour aider à réduire les imperfections, les marques et préserver l'hydratation de la peau. Effaclar H Iso-Biome contient également du Niacinamide, de l'Eau Thermale de La Roche-Posay et un complexe ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875777797</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/780c55bed47aa17d31fed394592aab4919f8dadba56f629f59202a2c89ef05e1 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Eau Micellaire Biphasée  400 ml ]]></title>
+<g:id>43d21b78-a24c-4757-8e03-476b9ea09e3a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay eau micellaire biphasée  400 ml?43d21b78-a24c-4757-8e03-476b9ea09e3a ]]></link>
+<g:price><![CDATA[ 1240.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L'Eau Micellaire ULTRA Biphasée élimine même le maquillage waterproof et respecte l'équilibre de la peau sensible.<br />C'est un démaquillant nettoyant qui élimine les impuretés et les particules de pollution. <br />Enrichi en Eau Thermale de La Roche-Posay, il apaise également la peau et respecte l'équilibre physiologique.</p>
+<p><strong>PROPRIÉTÉS</strong></p>
+<p>Les peaux sensibles n'ont plus à choisir entre tolérance et efficacité pour leur démaquillage :</p>
+<p>1. Grâce 90% d'Eau Micella ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875725897</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/82849f049ddbc1b6b824549572c6df2dcf645e4738f47683e3c8fefae22edc5c ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Eau Micellaire Ultra Peaux Réactives 200 ml ]]></title>
+<g:id>bbafb6c2-fd5c-4b61-afe2-36ff74b3c0d7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay eau micellaire ultra peaux réactives 200 ml?bbafb6c2-fd5c-4b61-afe2-36ff74b3c0d7 ]]></link>
+<g:price><![CDATA[ 890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Eau Micellaire Ultra Peaux Réactives 200 ml est une eau micellaire nettoyante démaquillante anti-tiraillements et anti-rougeurs idéalement conseillée pour les peaux réactives.</p>
+<p>Cette eau micellaire sans rinçage, sans parfum avec eau thermale de La Roche-Posay démaquille en douceur le visage et les yeux sensibles.</p>
+<p>Sans paraben, savon, colorant, parfum.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875528092</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/18e2cf7a3cd6e602de95b72bbe23702087ef787ae08b45bbefed1140bf89cdee ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Effaclar - Sérum Ultra Concentré 30ml + Gel Nettoyant 50ml Offert ]]></title>
+<g:id>11d468a0-ca52-40fa-9044-9a6015f27508</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay effaclar - sérum ultra concentré 30ml + gel nettoyant 50ml offert?11d468a0-ca52-40fa-9044-9a6015f27508 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><p><strong>Pour qui :</strong>&nbsp;Peaux grasses à tendance acnéique.</p></li><li><p><strong>Résultats beauté :</strong> Effet peeling quotidien. Corrige les boutons, les points noirs et les marques post-acné.</p></li><li><p><strong>Actifs phares :</strong> Acide Salicylique, LHA, Acide Glycolique.</p></li><li><p><strong>On aime :</strong> La routine pour les peaux à tendance acnéique en un coffret !</p></li></ul><p>&nbsp;</p><p>Le duo de soin&nbsp;<strong>Effaclar de la gamme Effaclar  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425473895</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5ea93b33d51d495406733015037e07a55958e94c31f91c16d3a26e09b4a0952d ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Effaclar A.Z. Gel-Crème Anti-Imperfections 40 ml ]]></title>
+<g:id>dd97d9d9-e693-4af0-aebb-f3d2d4668996</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay effaclar a.z. gel-crème anti-imperfections 40 ml?dd97d9d9-e693-4af0-aebb-f3d2d4668996 ]]></link>
+<g:price><![CDATA[ 2695.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le gel-crème La Roche Posay Effaclar A.Z. est un soin hydratant quotidien anti-imperfections, anti-marques et anti-rides. Sa formule unique, enrichie en acide azélaïque, acide salicylique, acide hyaluronique et zinc, offre une triple correction. En seulement 1 semaine, il corrige les imperfections récurrentes, réduit les marques post-acné persistantes et atténue l'apparition des premières rides. Recommandé par les dermatologues, ce gel-crème léger et à absorption rapide convient à tous les ty ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875920742</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/efd5ab6d33a0c650144b6a2a7bff3bd2d8ae84a440b682479ceaf77414b8d992 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Effaclar Duo (+) SPF 30 40 ml ]]></title>
+<g:id>4040b547-7bca-41dd-8182-0e52741f2962</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay effaclar duo (+) spf 30 40 ml?4040b547-7bca-41dd-8182-0e52741f2962 ]]></link>
+<g:price><![CDATA[ 1530.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Effaclar Duo (+) SPF 30 40 ml à la texture gel-crème frais, hydratant et matifiant, est un soin recommandé pour les peaux à imperfections sévères avec marques, exposées aux UV quotidiens.</p>
+<p>Sa formule associe des actifs anti-imperfections, avec la technologie XL-Protect agissant contre les UVA et UVB, pour protéger des agressions extérieures et réduire les imperfections tout en corrigeant mieux les marques.</p>
+<p>Les imperfections sont réduites, les pores désobstrués et l ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875549493</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/62bf09e7fd33c069bff43d32ac0db73b7c8040a3d8effca540dff3afb8181c99 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Effaclar Duo+M Soin Teinté 40 ml  ]]></title>
+<g:id>f8f06960-d410-437b-96d6-7e2f003f4b8e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay effaclar duo+m soin teinté 40 ml ?f8f06960-d410-437b-96d6-7e2f003f4b8e ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Effaclar Duo+M Soin Teinté 40 ml - Teinte : Foncée offre une triple correction anti-imperfections, ciblant les boutons, les points noirs et les marques.</p><p>Ce soin combine une triple efficacité anti-imperfections à un effet unifiant et matifiant instantané et durable.<br>Sa formule est enrichie avec l'actif Phylobioma, agissant sur le phylotype IA1 pour rééquilibrer le microbiome, elle aide à :</p><ul><li><p>Réduire les points noirs.</p></li><li><p>Réduire les imperfections  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875909273</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4e2f08f1a483097db3224dfc81439771dc25095626f722873fb09f15b44b72d2 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN TEINTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Effaclar Eau Micellaire Purifiante 200 ml ]]></title>
+<g:id>9ec92580-097b-4e0b-b255-c533dace53f7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay effaclar eau micellaire purifiante 200 ml?9ec92580-097b-4e0b-b255-c533dace53f7 ]]></link>
+<g:price><![CDATA[ 895.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Effaclar Eau Micellaire Purifiante nettoie la peau en douceur grâce à des agents nettoyants sélectionnés pour respecter les peaux sensibles.</p>
+<p>Elle élimine les impuretés et l'excès de sébum en laissant la peau nette et fraîche.</p>
+<p>Avec de l'eau thermale de La Roche-Posay apaisante et anti-irritante.</p>
+<p>pH 5.5 - Sans savon - Sans alcool - Sans colorant - Sans paraben.</p>
+<p>La peau est débarrassée des impuretés et de l’excès de sébum pour une sensation de peau nette inédite. </p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433422408357</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1fa4b7d7b06b3edfaa5e40515271f803248841e41d129c5ab9b8ebae931f7b26 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Effaclar Eau Micellaire Purifiante 400ml ]]></title>
+<g:id>2220434f-c683-4b42-a8fc-891c4be7f56e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay effaclar eau micellaire purifiante 400ml?2220434f-c683-4b42-a8fc-891c4be7f56e ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Effaclar Eau Micellaire est une eau purifiante idéal pour laver le visage des peaux grasses et sensibles. Elle élimine les impuretés et l'excès de sébum en laissant la peau nette et fraîche.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872412516</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/37170a37ea961a431c1ca565216c33c69bbe5be5d927d8fe50c8e5a9fe70ed15 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Effaclar Gel Moussant Purifiant Recharge 400 ml ]]></title>
+<g:id>09124c9f-f0b2-4fbf-97af-a894890777c6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay effaclar gel moussant purifiant recharge 400 ml?09124c9f-f0b2-4fbf-97af-a894890777c6 ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Effaclar Gel Moussant Purifiant Recharge 400 ml est un gel nettoyant pour le visage spécifiquement destiné aux peaux grasses à tendance acnéique. Il purifie la peau en douceur et réduit visiblement les imperfections tout en respectant et en équilibrant le pH physiologique de la peau.</p>
+<p>Il associe une technologie d'optimisation du pH avec un actif Phylobioma, contribuant à cibler une souche de la bactérie responsable des imperfections pour réduire visiblement les imperfecti ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875876407</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/41da8047b26ab26c39256a6bc607760b93a00428075ef5bfea3d38a81d1e1351 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Effaclar H Iso-Biome Crème Lavante  200 ml ]]></title>
+<g:id>efc3603e-870e-4ee9-864c-dcafcb4b42a6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay effaclar h iso-biome crème lavante  200 ml?efc3603e-870e-4ee9-864c-dcafcb4b42a6 ]]></link>
+<g:price><![CDATA[ 1199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Effaclar H Iso-Biome Crème Lavante Hydratante Apaisante 200 ml est une crème qui nettoie et purifie la peau en douceur. Elle protège la peau des effets desséchants du nettoyage et hydrate durant 24H.<br />L'innovation appelée Aqua Posae Filiformis, est un prébiotique unique de la Roche-Posay, issu de la biomasse, dans une formule apaisante au pH physiologique.</p>
+<p>Non comédogène.</p>
+<p>Testé sur peaux grasses fragilisées par les traitements desséchants.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875777759</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1832ae193ba30dfb4cc9c749e20f27d0198b9ddee8ee90aa75e3d57d6609ae34 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Effaclar K (+) 40 ml ]]></title>
+<g:id>29157aeb-c4b7-427c-b82d-5813b84073f4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay effaclar k (+) 40 ml?29157aeb-c4b7-427c-b82d-5813b84073f4 ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Effaclar K (+) 40 ml est un soin quotidien spécialement formulé pour les peaux mixtes à grasses, présentant des points noirs récidivants, un grain de peau irrégulier et des brillances.</p>
+<p>Ce soin associe le LHA micro-exfoliant au complexe anti-oxydant anti-sébum 8h qui contient de la vitamine E, de la carnosine et de l'airlicium.</p>
+<p>Sa texture aquagel s'applique facilement et pénètre rapidement tout en procurant un effet ultra-frais et non gras sur votre peau.</p>
+<p>Dè ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875613491</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/87dd7731e209f2584a47b675bf68bd18b1ab40167091afbc8286b9e0eec8a175 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Effaclar Masque Sébo-Régulateur 100 ml ]]></title>
+<g:id>819e97d8-1df9-473b-a6b4-f5f84e95ae81</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay effaclar masque sébo-régulateur 100 ml?819e97d8-1df9-473b-a6b4-f5f84e95ae81 ]]></link>
+<g:price><![CDATA[ 1230.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Effaclar Masque Sébo-Régulateur Purifiant Désincrustant Anti-Brillance 100 ml aux argiles douces est un masque qui s'utilise une à deux fois par semaine pour purifier et désincruster la peau, réguler la production de sébum et réduire les brillances.</p>
+<p>Recommandé pour les peaux sensibles, grasses à tendance acnéique, ce masque élimine l'excès de sébum et les impuretés mêmes invisibles comme les poussières, les particules polluantes, contrôle la brillance et enfin apaise la  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875533317</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/99601c51a151c9b3b9d41feb5b148270479b1ddf7a40fdec617f1ba1e78c1529 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Effaclar Mat Hydratant Sébo-régulateur 40 ml ]]></title>
+<g:id>2edb27c7-dd1b-4756-ac83-98b932f76b15</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay effaclar mat hydratant sébo-régulateur 40 ml?2edb27c7-dd1b-4756-ac83-98b932f76b15 ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Effaclar Mat neutralise la brillance à sa source et matifie durablement les peaux grasses ayant tendance à briller.</p>
+<p>Jour après jour la production de sébum est ralentie avec l'association exclusive de :</p>
+<p>- La technologie Ciblage SébumTM pour cibler et désobstruer le coeur des pores encombrer de sébum.</p>
+<p>- Le Pidolate de zinc pour neutraliser la brillance à sa source.</p>
+<p>- Les vitamines CG et E pour prévenir l'oxydation du sébum qui aggrave les problèmes des peaux grasses. ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872413025</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/25413aeaa4763d7df0df3a91c3fa77cd31476069fcbc3dee4fc6ea1cdb935b11 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Effaclar Pain Dermatologique Anti-Imperfections 65g ]]></title>
+<g:id>1e91e1b8-5ef3-4dc7-9bde-f3c85863fef4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay effaclar pain dermatologique anti-imperfections 65g?1e91e1b8-5ef3-4dc7-9bde-f3c85863fef4 ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Effaclar Pain Dermatologique Anti-Imperfections 65 g est conçu pour nettoyer et purifier en profondeur les peaux grasses et sensibles à tendance acnéique.</p><p>Sa formule enrichie en Niacinamide, Vitamine E et Acide Lactique, combinée à la technologie syndet, offre une action anti-imperfections tout en maintenant la douceur de la peau.<br>Il élimine efficacement l'excès de sébum, désobstrue les pores et matifie la peau, réduisant visiblement les imperfections.<br>Adapté aux pe ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875894333</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9e309429a1492df28cb16ba1c424e6fddf600338660850b19c8436bcf80740a9 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN PEAU GRASSE A PROBLEME ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Effaclar Sérum Ultra Concentré 30 ml ]]></title>
+<g:id>3652f130-2709-436a-b03b-a1e6dfa7aa80</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay effaclar sérum ultra concentré 30 ml?3652f130-2709-436a-b03b-a1e6dfa7aa80 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Effaclar Sérum Ultra Concentré 30 ml est un sérum anti-imperfections et anti-marques, pour un peeling quotidien.<br />Il est formulé avec un complexe de 3 acides complémentaires ultra concentrés, associés au niacinamide apaisant :</p>
+<ul><li>l'acide salicylique désincruste et resserre les pores,</li>
+<li>le LHA lisse la surface de la peau en douceur,</li>
+<li>l'acide glycolique améliore le renouvellement de la peau.</li>
+</ul><p>L'absorption est rapide et le fini est non colla ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875722827</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7cabafdc16a49b280dc4bf339246fcc0dd73a0e785b7af07d6c98674b5871cb7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Hyalu B5 Aquagel SPF30 50 ml ]]></title>
+<g:id>e8651552-a5eb-4dc7-b3f5-409ce89353e4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay hyalu b5 aquagel spf30 50 ml?e8651552-a5eb-4dc7-b3f5-409ce89353e4 ]]></link>
+<g:price><![CDATA[ 3090.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Hyalu B5 Aquagel SPF30 50 ml est un gel crème hydratant anti-photovieillissement à l'acide hyaluronique avec protection solaire SPF30.<br />Il est spécifiquement destiné aux adultes à la peau sensibles.</p>
+<p>Ce soin agit sur les signes de photovieillissement induits par les agressions extérieures (rayons UVB &amp; UVA et pollution), sur la perte de volume et d'élasticité et sur le teint terne et fatigué. Sa combinaison unique d'acide hyaluronique pur et de vitamine B5 agit po ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875760201</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b2ea10efdce6b294f971aed57a07707553d7cbf6aeb32a36dff43c5c162f5848 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Hyalu B5 Soin Anti-Rides Réparateur Repulpant 40 ml ]]></title>
+<g:id>4c3051e0-ee64-438d-b131-e5a02516b0e1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay hyalu b5 soin anti-rides réparateur repulpant 40 ml?4c3051e0-ee64-438d-b131-e5a02516b0e1 ]]></link>
+<g:price><![CDATA[ 2890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Rides, perte de volume et d’élasticité.<br />Une formule unique hydratante et repulpante, alliant deux types d’acides hyaluroniques purs et la vitamine b5. Il repulpe et répare la barrière cutanée.<br />Pour une routine complète, appliquez hyalu b5 sérum avant hyalu b5 soin.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875583589</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9ff8e47f701596a44d61f247a00ab5b3627a31b2bf8e95b7f0b887b150b60f42 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Hydraphase HA UV SPF25 Riche 40 ml ]]></title>
+<g:id>7f91b8ea-17fe-4b0d-a733-6a236e14be02</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay hydraphase ha uv spf25 riche 40 ml?7f91b8ea-17fe-4b0d-a733-6a236e14be02 ]]></link>
+<g:price><![CDATA[ 1899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Hydraphase HA UV SPF 25 Riche 40 ml est une crème non collante qui repulpe et restaure l'éclat des peaux déshydratées et des teints fatigués grâce :</p>
+<ul><li>À l'acide hyaluronique pur d'origine naturelle et issu de la technologie verte : processus de biofermentation utilisant des sucres végétaux.</li>
+<li>À l'eau thermale pure de La Roche-Posay pour un confort optimal.</li>
+<li>Aux filtres UVA + UVB pour protéger la peau des dommages du soleil.</li>
+</ul><p>La texture riche ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875846097</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7e431743e96ea23dd11affa8a74cc1800037eae29532d1c27623c91a451b40df ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Hydraphase Ha Coffret - Crème Hydratante Légère 50ml + Eau Micellaire Peaux Sensibles 50ml Offerte ]]></title>
+<g:id>658ecdab-ce57-4e61-9015-f35be922ea72</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay hydraphase ha coffret - crème hydratante légère 50ml + eau micellaire peaux sensibles 50ml offerte?658ecdab-ce57-4e61-9015-f35be922ea72 ]]></link>
+<g:price><![CDATA[ 1799.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Hydraphase HA Légère de La Roche-Posay</strong> est un soin visage qui hydrate pendant 72H*, repulpe et restaure l'éclat de la peau.</p><p>Sa formule est concentrée en <strong>Acide Hyaluronique, puissant actif hydratant</strong>, d'origine naturelle issu de la technologie verte. Ainsi qu'en <strong>Eau Thermale de La Roche-Posay à haute concentration</strong>, pure et provenant d'une source renouvelable, préservée de toute pollution.</p><p>Son <strong>efficacité et sa tolérance sur p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425473932</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3d9b25ee610f661c07267e6818ec578571f5fcd1fcaeb3e648db371ebcb2fd02 ]]></g:image_link>
+<g:product_type><![CDATA[ Idées Cadeaux > HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Hydraphase Ha Uv Spf25 Légère 40 ml ]]></title>
+<g:id>e3ee3489-37e9-4a9c-82d5-63b4c8ed899f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay hydraphase ha uv spf25 légère 40 ml?e3ee3489-37e9-4a9c-82d5-63b4c8ed899f ]]></link>
+<g:price><![CDATA[ 1899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Hydraphase HA UV SPF 25 Légère 40 ml&nbsp;est une crème non collante qui repulpe et restaure l'éclat des peaux déshydratées et des teints fatigués grâce :</p><ul><li><p>À l'acide hyaluronique pur d'origine naturelle et issu de la technologie verte : processus de biofermentation utilisant des sucres végétaux.</p></li><li><p>À l'eau thermale pure de La Roche-Posay pour un confort optimal.</p></li><li><p>Aux filtres UVA + UVB pour protéger la peau des dommages du soleil.</p></li>< ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875846110</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0cc393b84f753303ea16ac35f0516d93950fc35d05edead30887cd5310b6d077 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Kit Post-Tatouage - Cicaplast Gel Moussant + Baume Ultra-Réparateur - 200+40ml ]]></title>
+<g:id>05cbb377-53bb-42ae-80c0-02711b890982</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay kit post-tatouage - cicaplast gel moussant + baume ultra-réparateur - 200+40ml?05cbb377-53bb-42ae-80c0-02711b890982 ]]></link>
+<g:price><![CDATA[ 2350.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Kit Post Tatouage de La Roche Posay permet d'accélérer la réparation épidermique, de préserver l'aspect du tatouage et d'apaiser immédiatement. Il contient le Gel Lavant Apaisant Cicaplast B5, ainsi que le Baume Ultra-Réparateur Apaisant de la même gamme.&nbsp;</p><p>Le&nbsp;<strong>Gel Lavant Apaisant Cicaplast B5+ de La Roche Posay</strong>&nbsp;nettoie en douceur les peaux irritées et fragilisées. En effet, il apaise instantanément et réduit durablement les sensations d'irritations.&nbs ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425492230</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8696b2c4b83425774d93d1aa81fabfdfc7970cc048ae3d85adbd05636a0d1327 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Lipikar AP+ M Crème Relipidante 200 ml ]]></title>
+<g:id>770c4fe8-dc4a-42d4-8da5-fb815f09e472</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay lipikar ap+ m crème relipidante 200 ml?770c4fe8-dc4a-42d4-8da5-fb815f09e472 ]]></link>
+<g:price><![CDATA[ 1499.00 EUR ]]></g:price>
+<description><![CDATA[ <p>a Roche-Posay Lipikar AP+ M Crème Relipidante 200 ml est une crème relipidante triple-réparation pour agir contre la sécheresse sévère de l'adulte.<br />Sa formule développe la technologie exclusive AP+ M (Aqua Posae + Microrésyl) combinée à l'Eau Thermale anti-irritation à haute concentration.</p>
+<p>Spécialement formulée pour les peaux à tendance à l'eczéma atopique et adaptée aux peaux sensibles, très sèches et sujettes aux démangeaisons, elle apaise immédiatement et évite le grattage. Ell ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875803847</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b04ed6b4d15eac0817832a3893533b68b6ea48fd3432294d7d3b6ed8c53825a2 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Lipikar AP+ M Crème Relipidante 400 ml ]]></title>
+<g:id>76d136f5-3d33-4c64-9695-df54b7991475</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay lipikar ap+ m crème relipidante 400 ml?76d136f5-3d33-4c64-9695-df54b7991475 ]]></link>
+<g:price><![CDATA[ 1999.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875803786</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/359059cdf7fd549559710a3eb6eafcc0ffb918d17946393c7e1cded7b661d8de ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Lipikar Gel Urea 30% 50ml ]]></title>
+<g:id>1730db46-e699-42bd-a1e3-3cb5c36c74a8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay lipikar gel urea 30% 50ml?1730db46-e699-42bd-a1e3-3cb5c36c74a8 ]]></link>
+<g:price><![CDATA[ 1240.00 EUR ]]></g:price>
+<description><![CDATA[ <p>LA ROCHE-POSAY<br>Lipikar<br>Gel Urea 30%<br>Hydratant exfoliant<br>Anti-rugosités, anti-callosités<br>Apaisement immédiat<br>Corps, Mains, Pieds, Cuir chevelu<br>50ml</p><p>La Roche Posay Lipikar Gel hydratant exfoliant Urea 30% anti-rugosité, anti-callosités, apaissement immédiat zones localisées extrêmement sèches. Traitement dermatologique intensif qui transforme visiblement les zones hyperkeratosiques dès le 1er usage. Cible les plaques sèches et les kératoses même sévères sur le corps,  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875909792</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d7c386210604293eacde95e01759d0e45797b61a7cf4cc6351e22b7807cc8d46 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Lipikar Huile Lavante AP+ et Baume Relipidant AP+M 2x400ml ]]></title>
+<g:id>afe68cda-5713-4b60-a89e-57adfbf2598d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay lipikar huile lavante ap+ et baume relipidant ap+m 2x400ml?afe68cda-5713-4b60-a89e-57adfbf2598d ]]></link>
+<g:price><![CDATA[ 3397.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Huile lavante AP+&nbsp;et baume relipidant AP+M&nbsp;Lipikar&nbsp;des Laboratoires&nbsp;La Roche-Posay,</strong>&nbsp;la routine idéale pour les peaux sèches à tendance atopique de toute la famille.</p><p>L'<strong>huile lavante AP+ Lipikar,</strong> elle apaise les sensations de démangeaisons, du bébé à l'adulte. Sa base lavante réduit la sécheresse cutanée jusqu'à 46% et nourrit durablement. Son actif exclusif est breveté. L'Aqua Posae Filiformis agit sur les facteurs déterminants d ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425474014</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/edc897b6a3324125c7c77a13cbfc2d048ee57e8fcfd28e0dcb9e73e702304698 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > GEL DOUCHE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Lipikar Huile Lavante AP+ Éco-Recharge 400 ml ]]></title>
+<g:id>b76a53e0-8703-4304-ad4c-8417e07feae7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay lipikar huile lavante ap+ Éco-recharge 400 ml?b76a53e0-8703-4304-ad4c-8417e07feae7 ]]></link>
+<g:price><![CDATA[ 1198.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Lipikar Huile Lavante AP+ Éco-Recharge 400 ml est une huile qui apaise les sensations de démangeaison, du nourrisson à l'adulte.<br />Cette base lavante douce agit sur les 3 facteurs déterminants des peaux sèches à tendance à l'eczéma atopique :</p>
+<ul><li>elle respecte l'équilibre naturel du microbiome cutané grâce à l'actif Aqua Posae Filiformis ;</li>
+<li>restaure et préserve la barrière cutanée grâce au beurre de karité ;</li>
+<li>protège la peau des effets desséchants du  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875735759</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5c9edede78822c04bc4e7750e0884c7bbd8e9349a1564648c963a8fdcd69f3dd ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Lipikar Lait Relipidant Corps  400 ml ]]></title>
+<g:id>7b7fc995-c44f-488b-9f2c-e92cd0f2304c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay lipikar lait relipidant corps  400 ml?7b7fc995-c44f-488b-9f2c-e92cd0f2304c ]]></link>
+<g:price><![CDATA[ 1498.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce Lait Relipidant Corps Anti-Dessèchement 48H Lipikar de La Roche-Posay apporte des lipides pour imprégner immédiatement la peau sèche, combler ses carences lipidiques et réparer durablement la barrière cutanée. Sa formule enrichie en beurre de Karité (10%) fournit des Acides Gras Essentiels participant à la reconstruction de la barrière cutanée, et des stérols anti-irritants et réparateurs.</p>
+<p>Sans paraben.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875552127</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f43434050ee104990860b325c42f2abeda4a4012f106a59e0cac2ebb607a5ab4 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Lipikar Lait Urea 10% Hydratant 200 ml ]]></title>
+<g:id>e6aeeb5d-8412-4359-86be-35c564967a00</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay lipikar lait urea 10% hydratant 200 ml?e6aeeb5d-8412-4359-86be-35c564967a00 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Lipikar Lait Urea 10% Hydratant 200 ml est un soin hydratant triple-action destiné aux peaux très sèches, rugueuses et squameuses des enfants, adultes et séniors.<br>Sa formule se compose :</p><ul><li><p>de 10% d'urée à l'effet kératolytique naturel pour cibler tous les signes de sécheresse cutanée, améliorer le renouvellement cellulaire et préserver l'hydratation de la peau,</p></li><li><p>d'Allantoïne pour apaiser les sensations d'irritation et hydrater en profondeur la peau  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875852333</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/793f18b70e08605478749f1548cffcfdfa5782d5312701cf65eebe11ce348737 ]]></g:image_link>
+<g:product_type><![CDATA[ PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Lipikar Lait Urea 10% Hydratant 400 ml ]]></title>
+<g:id>daf10a9c-5950-4d27-bd54-67d24996740a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay lipikar lait urea 10% hydratant 400 ml?daf10a9c-5950-4d27-bd54-67d24996740a ]]></link>
+<g:price><![CDATA[ 2390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Lipikar Lait Urea 10% Hydratant 400 ml est un soin hydratant triple-action destiné aux peaux très sèches, rugueuses et squameuses des enfants, adultes et séniors.<br />Sa formule se compose :</p>
+<ul><li>de 10% d'urée à l'effet kératolytique naturel pour cibler tous les signes de sécheresse cutanée, améliorer le renouvellement cellulaire et préserver l'hydratation de la peau,</li>
+<li>d'Allantoïne pour apaiser les sensations d'irritation et hydrater en profondeur la peau en ret ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875852302</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/58338d6057e6a7d2a593084af9f622b964f70eaea6e3cf53f6e7bccd4f7805e5 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Lipikar Surgras Crème Lavante 750 ml ]]></title>
+<g:id>585fd1d4-8b57-4838-ac1c-e83fdc75241a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay lipikar surgras crème lavante 750 ml?585fd1d4-8b57-4838-ac1c-e83fdc75241a ]]></link>
+<g:price><![CDATA[ 1599.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="titre_zone_desc">La Roche-Posay Lipikar Surgras Crème Lavante Anti-Dessèchement 750 ml nettoie la peau en douceur sans agresser. Il préserve l'intégralité du film hydrolipidique cutané et protège des effets desséchants de l'eau.</div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875551250</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/355dbeec872f494356136f87df40942b9366acb2dc7d7a47c55fefabdb189e71 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Lipikar Xerand Crème Mains 50 ml + Nutritic Lèvres 4,7 ml Offre Spéciale ]]></title>
+<g:id>ec0d1cc8-d5f7-401b-a423-e0a73c673f2b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay lipikar xerand crème mains 50 ml + nutritic lèvres 4,7 ml offre spéciale?ec0d1cc8-d5f7-401b-a423-e0a73c673f2b ]]></link>
+<g:price><![CDATA[ 1090.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Lipikar Xerand Crème Mains 50 ml + Nutritic Lèvres 4,7 ml Offre Spéciale offre une solution complète pour préserver la douceur de vos mains et de vos lèvres, en leur apportant hydratation, protection et réparation.</p><p>Ce duo est composé de :</p><p>- Lipikar Xerand Crème Mains 50 ml hydrate et répare les mains très sèches et abîmées.<br>Les mains très sèches et abimées se caractérisent par une altération de la barrière cutanée, engendrée par des agressions répétées (condition ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425471815</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/83c35194c9b6ef9d7b866981b179234cbab193614d5136045301b13b00599742 ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES > CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Mela B3 Soin Correcteur Anti-Taches SPF30 40 ml ]]></title>
+<g:id>c4ad0fdf-81d2-478b-beed-94900fa389c1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay mela b3 soin correcteur anti-taches spf30 40 ml?c4ad0fdf-81d2-478b-beed-94900fa389c1 ]]></link>
+<g:price><![CDATA[ 3090.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Mela B3 Soin Correcteur Anti-Taches SPF30 40 ml est un soin quotidien anti-taches qui cible l'hyperpigmentation et possède une protection SPF30 + UVA. Avec un actif breveté, le Melasyl™, et une concentration de Niacinamide à 5%, cette crème agit pour corriger les taches et aider à prévenir leur apparition.</p>
+<p>En interceptant l'excès de mélanine avant qu'elle ne provoque des taches, le Melasyl™ combat efficacement les problèmes d'hyperpigmentation tels que les taches brunes, ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875890113</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0dd786744004485395e1e28acf65170f04fb94676c3369d13308dc62344855d3 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > MAQUILLAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Redermic C Pure Vitamin C Légère 40 ml ]]></title>
+<g:id>ba4d7009-0af3-49d2-baf2-3dfb311bf10d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay redermic c pure vitamin c légère 40 ml?ba4d7009-0af3-49d2-baf2-3dfb311bf10d ]]></link>
+<g:price><![CDATA[ 3090.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">Raffermit la peau. Corrige les rides même profondes. Uniformise le teint et atténue les rougeurs des peaux sensibles. Repulpe la peau.</p>
+<p class="p3">Soin de comblement, Anti-âge peaux sensibles, Vitamines C pure, Acide Hyaluronique, Mannose, Texture repulpante, Peaux normales à mixtes.</p>
+<p class="p3">Perte de fermeté. Rides profondes. Perte d'uniformité du teint. Peaux sensibles.<br /><br /> Expertise dermatologique : Les peaux sensibles se caractérisent par une tendance aux ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872413704</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b9df5732eb2f19ab8558e6d238534421ee607d9d1272299ea6b7a2c64369a0d9 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Respectissime Crayon Bois Couleur Intense  Noir ]]></title>
+<g:id>4a4da60f-407e-4ac7-9fd5-f3cdfce18386</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay respectissime crayon bois couleur intense  noir?4a4da60f-407e-4ac7-9fd5-f3cdfce18386 ]]></link>
+<g:price><![CDATA[ 1115.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Yeux sensibles et porteurs de lentilles.</p>
+<p>Coloris Noir.</p>
+<p>Avec sa mine ultra émolliente, ce crayon mine dessine sur la paupière un trait doux, intense et modulable. Tenue anti-migration.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872410147</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e7f37fdb6840d5ef71b24ebe5df06644b45b27601aad5643c4c67d7d00a395a5 ]]></g:image_link>
+<g:product_type><![CDATA[ MAQUILLAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Respectissime Crayon Sourcil - Teinte : Brun ]]></title>
+<g:id>38025cc1-47ff-4ff5-a0d7-05c587ced83c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay respectissime crayon sourcil - teinte : brun?38025cc1-47ff-4ff5-a0d7-05c587ced83c ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Sparsed eyebrows, lack of structure. Suitable for women under oncology treatment.<br />Un crayon sourcil qui redéfinit, restructure et remodèle le regard. </p>
+<p>Un crayon ultra-lisse : une mine très fine offrant une texture fondante qui glisse facilement à l'application.<br />Une brosse ultra-douce : spécialement conçue pour les peaux sensibles qui comble les zones clairsemées et recréé la forme parfaite de votre ligne de sourcils.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872420658</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/330b135d967e43ffb94613f8fc2dd202d77233a67c03714cbccccd1a7c31a9ac ]]></g:image_link>
+<g:product_type><![CDATA[ MAQUILLAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Respectissime Crayon Sourcil Blond ]]></title>
+<g:id>f0cba56d-c835-4f46-9ffd-b569e7fc705b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay respectissime crayon sourcil blond?f0cba56d-c835-4f46-9ffd-b569e7fc705b ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Sparsed eyebrows, lack of structure. Suitable for women under oncology treatment.<br />Un crayon sourcil qui redéfinit, restructure et remodèle le regard. </p>
+<p>Un crayon ultra-lisse : une mine très fine offrant une texture fondante qui glisse facilement à l'application.<br />Une brosse ultra-douce : spécialement conçue pour les peaux sensibles qui comble les zones clairsemées et recréé la forme parfaite de votre ligne de sourcils.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872420641</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3f118440d439ded3c58a913affc5bf2de2428ff64281db09f1f302fe6f38bb54 ]]></g:image_link>
+<g:product_type><![CDATA[ MAQUILLAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Respectissime Démaquillant Yeux Waterproof 125 ml ]]></title>
+<g:id>8a377e47-54da-4dae-8141-cead86a3b314</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay respectissime démaquillant yeux waterproof 125 ml?8a377e47-54da-4dae-8141-cead86a3b314 ]]></link>
+<g:price><![CDATA[ 1250.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Yeux sensibles. Maquillage résistant à l'eau.<br />Démaquillant biphasé, démaquille instantanément, efficacement et sans frottement les yeux sensibles. Sans parfum. Charte stricte de formulation pour minimiser les risques d'intolérances.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433422401907</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/466731bd5f4fb91c52ccb8fe085f41ee42fd1cb1dc55fe9d4388804c93970c4b ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Rétinol B3 Sérum 30 ml ]]></title>
+<g:id>fb0d3594-0825-4144-b451-eff1a4560917</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay rétinol b3 sérum 30 ml?fb0d3594-0825-4144-b451-eff1a4560917 ]]></link>
+<g:price><![CDATA[ 3295.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Rétinol B3 Sérum 30 ml est un soin concentré anti-rides régénérant resurfaçant qui agit sur les rides profondes, le teint irrégulier et le photovieillissement.<br />Il conviendra à tous les types de peau, même sensibles et grasses.</p>
+<p>Ce sérum unique est concentré en Rétinol [Pur + à Libération Graduelle], molécule anti-âge de référence pour une action puissante sur les signes visibles de l'âge les plus prononcés, associé à la vitamine B3 pour restaurer la barrière cutanée  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875694469</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ff5138aeb597b92bc9efa8b913a6727f4a8a672739abbe9edcfc8e2176fd4893 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Solution Micellaire 2 x 400 ml ]]></title>
+<g:id>d13a7cba-2bde-49b6-b688-2f862ffb5787</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay solution micellaire 2 x 400 ml?d13a7cba-2bde-49b6-b688-2f862ffb5787 ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Solution Micellaire 2 x 400 ml est idéale pour le visage, les yeux et les lèvres et possède un haut pouvoir démaquillant.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872419799</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/17cc9f844560ed46a0cadb061bf8a2ad4378d06fc397718ac657b18831838e63 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Solution Micellaire Physiologique 400ml ]]></title>
+<g:id>97602a61-aae6-4a50-a1d4-c54e233b3f73</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay solution micellaire physiologique 400ml?97602a61-aae6-4a50-a1d4-c54e233b3f73 ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">Le Solution Micellaire Physiologique démaquille en douceur toutes les peaux sensibles. </p>
+<p class="p1">Charte de Formulation Physiologique:</p>
+<p class="p1">Agents nettoyants sélectionnés pour une tolérance optimale, haut pouvoir démaquillant, agents hydratants et apaisants, eau thermale de La Roche Posay pH physiologique, sans alcool, sans colorant, formulé sans paraben.</p>
+<p class="p1">La peau sensible du visage, les yeux et les lèvres sont ainsi parfaitement démaquillés, d ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872411595</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/af1125d6a3452aa5ecd06cf408b94ebf3509b1bb285f0f23a9e436d901c0d945 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Substiane+ 40 ml ]]></title>
+<g:id>a4a0aa42-e720-43db-945c-21e1e22cba88</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay substiane+ 40 ml?a4a0aa42-e720-43db-945c-21e1e22cba88 ]]></link>
+<g:price><![CDATA[ 3540.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Soin Anti-Âge Reconstituant Fondamental Substiane+ Extra Riche des Laboratoires La Roche-Posay est destiné à redonner aux peaux matures et sèches, fermeté et confort.</p>
+<p class="p1"> La formule de Substiane + est une association d’actifs ultra-efficaces :</p>
+<p class="p1">- Le Linactyl réactive les cellules de soutien de votre peau pour un visage rehaussé,</p>
+<p class="p1">- Le Pro-xylane recrée la substance fondamentale pour une peau rajeunie,</p>
+<p class="p1">- La Neurosensine prot ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872412592</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8bbf5da147d5bfa89ae85bca3c7305d53d81529bebd31d074c3b38f5cba70604 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Substiane+ Yeux 15 ml ]]></title>
+<g:id>50f432cc-a85c-43d1-ba09-bd1ca67c7a22</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay substiane+ yeux 15 ml?50f432cc-a85c-43d1-ba09-bd1ca67c7a22 ]]></link>
+<g:price><![CDATA[ 2870.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">A partir de 50 ans, la zone péri-oculaire souffre particulièrement de la perte de substance cutanée. La peau s’affaisse, des poches se forment. Substitiane Yeux a pour but de retendre les tissus cutanés et de corriger les poches.</p>
+<p class="p1">Soin anti-âge complet, Substiane+ associe Linactyl et Pro−Xylane, un complexe régénérant exclusif, qui cible le derme fondamental pour réactiver les cellules de soutien des tissus.</p>
+<p class="p1">La Neurosensine neutralise les facteurs ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872412677</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/acfcd8cc8d977bed88be1beaafeb81f92cec03477e4ac0fd9f9607b2c5e336a7 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Toleriane Dermo Nettoyant 400ml ]]></title>
+<g:id>3169e641-5ddb-4356-a79d-eee9f355e715</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay toleriane dermo nettoyant 400ml?3169e641-5ddb-4356-a79d-eee9f355e715 ]]></link>
+<g:price><![CDATA[ 1099.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Peaux sensibles et intolérantes à tendance sèche.</p>
+<p>Sa formule très douce est spécialement conçue pour toutes les peaux sensibles, fragilisées et intolérantes à l'eau ou aux produits d'hygiène classiques.</p>
+<p>Nettoie et démaquille le visage et les yeux sans risque d'inconfort ou d'intolérance.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872411830</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a028007d74818168e6827dcbea45280a666c942596b206e67441f041399c50be ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Toleriane Sensitive Crème Hydratant Apaisant 50 ml  Light ]]></title>
+<g:id>504d1c0c-47e2-44b0-92dc-abe778c479df</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay toleriane sensitive crème hydratant apaisant 50 ml  light?504d1c0c-47e2-44b0-92dc-abe778c479df ]]></link>
+<g:price><![CDATA[ 1580.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La roche posay toleriane sensitive teint light crème est un soin hydratant apaisant correcteur de teint.<br />Pour les peaux sensibles à très sensibles. Rougeurs, tiraillements, picotements, sécheresses.<br /><br /></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875678667</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/52d45be67b6779630c26bdcfe0074d4d4c299c725e84697104c009a567ff0f5b ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Toleriane Sensitive Crème Hydratant Apaisant 50 ml Medium ]]></title>
+<g:id>ba66a27b-9dd0-4fca-b52d-cd966a3ec597</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay toleriane sensitive crème hydratant apaisant 50 ml medium?ba66a27b-9dd0-4fca-b52d-cd966a3ec597 ]]></link>
+<g:price><![CDATA[ 1580.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La roche posay toleriane sensitive teint medium crème est un soin hydratant apaisant correcteur de teint<br />pour les peaux sensibles à très sensibles. Rougeurs, tiraillements, picotements, sécheresses.<br /><br /></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875678636</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a972f5a2703a34651d1a9aea3634726aec4b15b169336ce04d8ddd23c7e85572 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Tolériane Dermallergo Crème 40 ml ]]></title>
+<g:id>df810f16-416a-48b8-9cce-a3ff09795890</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay tolériane dermallergo crème 40 ml?df810f16-416a-48b8-9cce-a3ff09795890 ]]></link>
+<g:price><![CDATA[ 1765.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Tolériane Dermallergo Crème 40 ml est un soin hydratant apaisant quotidien qui hydrate et apaise instantanément les irritations de la peau. Il réduit les rougeurs immédiatement, répare et protège la barrière cutanée des peaux allergiques ou sensibles, normales à sèches.</p>
+<p>Sa formule haute tolérance combine la neurosensine à la sphingobioma (un extrait de bactérie issu de l'Eau Thermale de La Roche-Posay) pour aider à compenser le déséquilibre du microbiome.<br />Jour après ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875757614</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/11a4f1ebbea04f1f9b6dc2d6f1b4f1d524fbd1d7b78b5d19a9f845cff10452fd ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Tolériane Dermallergo Fluide 40 ml ]]></title>
+<g:id>81c0f698-b4a1-455d-addd-ebb66fd339ef</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay tolériane dermallergo fluide 40 ml?81c0f698-b4a1-455d-addd-ebb66fd339ef ]]></link>
+<g:price><![CDATA[ 1765.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Tolériane Dermallergo Fluide 40 ml est un soin hydratant apaisant quotidien qui hydrate et apaise instantanément les irritations de la peau. Il réduit les rougeurs immédiatement, répare et protège la barrière cutanée.</p>
+<p>Sa formule haute tolérance combine la neurosensine à la sphingobioma (un extrait de bactérie issu de l'Eau Thermale de La Roche-Posay) pour aider à compenser le déséquilibre du microbiome.<br />Jour après jour, la sensibilité cutanée est réduite. La peau es ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875757669</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cbaaa80a2a0d02ce4307b783e01be512c84ce731394cc0be72ca399404fc6d96 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Tolériane Dermallergo Nuit 40 ml ]]></title>
+<g:id>8ea981eb-94e7-4c9e-a027-4ae0a8972461</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay tolériane dermallergo nuit 40 ml?8ea981eb-94e7-4c9e-a027-4ae0a8972461 ]]></link>
+<g:price><![CDATA[ 2060.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Tolériane Dermallergo Nuit 40 ml est un soin hydratant apaisant et réparateur à la texture gel-crème. Il combine la Neurosensine, le Sphingobioma et la vitamine B6 pour hydrater et apaiser les irritations. Il répare la barrière cutanée et protège la peau.<br />Ainsi, les rougeurs sont réduites, la sensibilité cutanée est réduite et la peau est renforcée.</p>
+<p>Testé sur peaux allergiques.</p>
+<p>Sans parfum ni alcool.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875800853</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c6ec0907d783ed50cba2acfe3129e5de9022a00362461bcbf4f1d10c3b4ef48a ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Tolériane Dermallergo Yeux 20 ml ]]></title>
+<g:id>546e5ca9-90b0-461d-ab1f-04beb9970b58</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay tolériane dermallergo yeux 20 ml?546e5ca9-90b0-461d-ab1f-04beb9970b58 ]]></link>
+<g:price><![CDATA[ 1799.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Tolériane Dermallergo Yeux 40 ml  est un soin contour des yeux réparateur apaisant quotidien qui hydrate, apaise les sensations de démangeaison et réduit les rougeurs instantanément. Il répare et protège la barrière cutanée.</p>
+<p>Sa formule haute tolérance combine la neurosensine, la niacinamide, à la sphingobioma (un extrait de bactérie issu de l'Eau Thermal de La Roche-Posay) pour aider à compenser le déséquilibre du microbiome.<br />Le contour de l'œil est apaisé et renfor ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875757515</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c67a51f0644f3cffccbe912ef8bc8bc1eb8bda064521b4e018a82b7eed3c3086 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Tolériane Dermo-Nettoyant 200 ml ]]></title>
+<g:id>6d73b3f1-ab4d-4172-901c-708f04558ce0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay tolériane dermo-nettoyant 200 ml?6d73b3f1-ab4d-4172-901c-708f04558ce0 ]]></link>
+<g:price><![CDATA[ 980.00 EUR ]]></g:price>
+<description><![CDATA[ <p> </p>
+<p>Démaquillage des peaux sensibles, fragilisées, intolérantes ou irritées. </p>
+<p>La formule très douce de ce Fluide dermo-nettoyant à Eau thermale de la Roche Posay aux propriétés apaisante et à la Glycérine, hydratante est spécialement conçue pour toutes les peaux sensibles, fragilisées ou intolérantes à l'eau ou aux produits d'hygiène classiques. </p>
+<p>Nettoie et démaquille en douceur le visage et les yeux des peaux sensibles ou intolérantes.</p>
+<p> </p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433422406599</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/192b7fb40282570fb22dd425cb48f5b51000ebb01e4811b7899384a20bdac06c ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Tolériane Mascara Multi-Dimensions Noir ]]></title>
+<g:id>1884e5cd-a077-47b4-b801-5843d061f0af</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay tolériane mascara multi-dimensions noir?1884e5cd-a077-47b4-b801-5843d061f0af ]]></link>
+<g:price><![CDATA[ 1899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Yeux sensibles, cils fragilisés.<br />Une formule enrichie en sérum revitalisant s'allie à une brosse souple haute précision pour un maquillage multi-dimensions : chaque cil est gainé, discipliné, renforcé pour déployer une amplitude maximale et mieux protéger les yeux des inconforts et des agressions extérieures.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875632683</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/729b74798a843caecd2b3ef11d2348d80d4f0ce2f490cbc6342dee3b11ffeafc ]]></g:image_link>
+<g:product_type><![CDATA[ MAQUILLAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Tolériane Rosaliac AR Concentré 40 ml ]]></title>
+<g:id>29314853-f6fc-4c72-afcb-da2b4e5e921f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay tolériane rosaliac ar concentré 40 ml?29314853-f6fc-4c72-afcb-da2b4e5e921f ]]></link>
+<g:price><![CDATA[ 2050.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Tolériane Rosaliac AR Concentré 40 ml est une crème anti-rougeurs et un soin correcteur intensif pour visage à tendance couperosique.</p>
+<p>Sa teinte verte est un pigment correcteur pour neutraliser les rougeurs.<br />Le soin correcteur intensif est ultra concentré en Sphingobioma qui apaise la peau et réduit les rougeurs dans une formule enrichie en eau thermale de La Roche-Posay.</p>
+<p>Il agit immédiatement. La peau est hydratée. Les rougeurs, sensations d'échauffements et  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875807043</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a5468898414c4a2375c3e3bb68a489dae0c53db7de4d4d1c2a3b9ee38d218ae8 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Tolériane Rosaliac AR SPF30 50 ml ]]></title>
+<g:id>bb2f176d-a89f-4b2a-9557-d064a1bc2981</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay tolériane rosaliac ar spf30 50 ml?bb2f176d-a89f-4b2a-9557-d064a1bc2981 ]]></link>
+<g:price><![CDATA[ 2175.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Tolériane Rosaliac AR SPF30 50 ml est un soin visage apaisant haute protection anti-UV pour peaux à tendance couperosique.<br />Cette crème protège la peau contre des facteurs majeurs d'aggravation des rougeurs (rayons UVA &amp; UVB). Elle est enrichie en Sphingobioma, qui aide à restaurer la fonction microbiome et en eau thermale de La Roche-Posay.</p>
+<p>Les résultats sont multiples :</p>
+<ul><li>hydratation,</li>
+<li>renforcement de la barrière cutanée contre les agresseurs  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875806961</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e6788ff87fc3d1417c7e67cb1ced41fc4e0083f877f8b8208be2dfe7c75dc0d5 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Tolériane Sensitive Crème 40 ml ]]></title>
+<g:id>14b3ba27-efc0-4b9f-91d6-48c9a426ba61</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay tolériane sensitive crème 40 ml?14b3ba27-efc0-4b9f-91d6-48c9a426ba61 ]]></link>
+<g:price><![CDATA[ 1470.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Tolériane Sensitive Crème 40 ml est une crème sans parfum et sans alcool recommandée pour les peaux ultra-sensibles ou allergiques de toute la famille, même des bébés.</p>
+<p>Sa formule est une véritable prouesse : épurée, sans concession et hautement sécuritaire, elle est réduite à l'essentiel, avec un minimum de composants et ne contient pas de substance potentiellement irritante ou allergisante.</p>
+<p>Sa formule offre un pouvoir apaisant intense grâce à la Neurosensine, un  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875578486</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3864fec16247d2db9b9a3c4facd45940edf3ce6b577ba2082191cfd301e29e9e ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Tolériane Sensitive Fluide 40 ml ]]></title>
+<g:id>3dbd1d49-9175-461d-9b93-e093f59348c3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay tolériane sensitive fluide 40 ml?3dbd1d49-9175-461d-9b93-e093f59348c3 ]]></link>
+<g:price><![CDATA[ 1470.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Tolériane Sensitive Fluide 40 ml est un soin visage hydratant, apaisant et protecteur, conçu pour les peaux sensibles à très sensibles, mixtes à grasses et adapté aux bébés.</p><p>Ce fluide associe la Glycérine pour hydrater 48 heures, les Céramides pour réparer et protéger la barrière cutanée, la Niacinamide (Vitamine B3) pour apaiser intensément les picotements et les sensations d'inconfort, ainsi que l'Eau Thermale de La Roche-Posay, anti-irritante et apaisante.</p><p>Au fil ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875588676</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/aa36a804bcff6568ebeec6666d35067ef1592c2064d8aa89a19b049916212e42 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Tolériane Sensitive Riche 40 ml ]]></title>
+<g:id>5dae3486-833b-4e4b-837b-65cf9b286689</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay tolériane sensitive riche 40 ml?5dae3486-833b-4e4b-837b-65cf9b286689 ]]></link>
+<g:price><![CDATA[ 1470.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Tolériane Sensitive Riche 40 ml est un soin riche sans parfum et sans alcool recommandé pour les peaux ultra-sensibles ou allergiques de toute la famille, même des bébés.</p>
+<p>Sa formule est une véritable prouesse : épurée, sans concession et hautement sécuritaire, elle est réduite à l'essentiel, avec un minimum de composants et ne contient pas de substance potentiellement irritante ou allergisante.</p>
+<p>Sa formule offre un pouvoir apaisant intense grâce à la Neurosensine,  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875588348</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/48237d40847a69835deee9c6b80ae88376b5ec7a8809469045ee8fb22c0f7171 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Tolériane Teint Mineral  14 Beige Rosé ]]></title>
+<g:id>74261f87-fa89-48e9-ab1e-96bb52f76e32</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay tolériane teint mineral  14 beige rosé?74261f87-fa89-48e9-ab1e-96bb52f76e32 ]]></link>
+<g:price><![CDATA[ 1795.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Peaux normales à mixtes Corrige les imperfections des peaux normales à mixtes sensibles à intolérantes. Sa texture poudre minérale couvre comme un fond de teint sans obstruer les pores. Eponge ultra-douce pour les peaux sensibles. Haute tolérance. Sans conservateur. Testé sur peaux sensibles. Non-comédogène. Protection solaire spf 25.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872413698</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e7fcaf503792fc69fe1d6d3658e36832e5c6a5e783535ecd2ae00a52a3cd0910 ]]></g:image_link>
+<g:product_type><![CDATA[ MAQUILLAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Tolériane Teint Mineral  15 Doré ]]></title>
+<g:id>944afae0-bf77-4933-9c04-8bc5b7b752b1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay tolériane teint mineral  15 doré?944afae0-bf77-4933-9c04-8bc5b7b752b1 ]]></link>
+<g:price><![CDATA[ 1795.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Peaux normales à mixtes</p>
+<p>Corrige les imperfections des peaux normales à mixtes sensibles à intolérantes. Sa texture poudre minérale couvre comme un fond de teint sans obstruer les pores. Eponge ultra-douce pour les peaux sensibles.<br />Haute tolérance. Sans conservateur. Testé sur peaux sensibles. Non-comédogène. Protection solaire spf 25.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872412066</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6593d9c8843e9efeaf74ec41606d462f78dc9f7a5502632e52c61efe32ab3673 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Tolériane Teint Mineral 11 Beige Clair ]]></title>
+<g:id>7cec4395-8267-4394-b529-21966e7bfbbb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay tolériane teint mineral 11 beige clair?7cec4395-8267-4394-b529-21966e7bfbbb ]]></link>
+<g:price><![CDATA[ 1795.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Corrige les imperfections des peaux normales à mixtes sensibles à intolérantes.</p>
+<p>Sa texture poudre minérale couvre comme un fond de teint sans obstruer les pores.</p>
+<p>Eponge ultra-douce pour les peaux sensibles.</p>
+<p>Le teint est parfaitement unifié, matifié et naturel. Les imperfections sont réduites jour après jour.</p>
+<p>Haute tolérance. Sans conservateur. Testé sur peaux sensibles. Non-comédogène. Protection solaire SPF 25.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872412042</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/27c11e174d610763231e733470af791ffed78d7b5a541e94b23e4a03dc4accc9 ]]></g:image_link>
+<g:product_type><![CDATA[ MAQUILLAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Tolériane Ultra Dermallergo Sérum 20 ml ]]></title>
+<g:id>fa492350-79e9-4dbe-9130-3a2df13a60d0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay tolériane ultra dermallergo sérum 20 ml?fa492350-79e9-4dbe-9130-3a2df13a60d0 ]]></link>
+<g:price><![CDATA[ 2290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Tolériane Ultra Dermallergo Sérum 20 ml est un sérum pour peaux allergiques ou ultra-sensibles (rougeurs, picotements, sensations d'échauffement). Il hydrate, apaise les peaux sensibles et répare la barrière cutanée de la peau.<br />Ce sérum hydratant réparateur allie haute efficacité grâce à l'association de neurosensine, concentré actif apaisant à 0,1%, d'osmolyte et de glycérine pour réconforter la peau sensible et réparer sa barrière ; et tolérance optimale pour limiter les ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875693820</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/781459b0ed5fbde340f9f6b69ded3b71f61cf56e8de3352eb7bd344e6a9c7521 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay Trousse Mela B3Serum+Mela B3 Spf 30 40ml ]]></title>
+<g:id>3eb34f37-4a29-4c27-9437-899d7f6459a1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay trousse mela b3serum+mela b3 spf 30 40ml?3eb34f37-4a29-4c27-9437-899d7f6459a1 ]]></link>
+<g:price><![CDATA[ 7090.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Mela B3 Sérum : LE nouveau sérum anti-taches à base de Melasyl™ multibreveté et de Niacinamide concentrée à 10% pour corriger les taches brunes, même persistantes. Innovation hyperpigmentation Melasyl™ multibreveté : le nouvel actif pour combattre l'hyperpigmentation de façon inédite*. *Melasyl possède un nouveau mécanisme d'action unique : il intercepte l'excès de mélanine avant qu'elle ne marque la peau.</span><br /><br /><span>Mela B3 SPF30 : LE nouveau soin correcteur et protecteur  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425473307</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a4db0ee39e49415126848c6df179222f4c471b6ce9a628bd43a9e9537e88babc ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-Posay lipikar AP+M baume corps 400ml ]]></title>
+<g:id>e645dc84-3072-4d93-8633-ec9e88314cd6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay lipikar ap+m baume corps 400ml?e645dc84-3072-4d93-8633-ec9e88314cd6 ]]></link>
+<g:price><![CDATA[ 1999.00 EUR ]]></g:price>
+<description><![CDATA[ <p>LIPIKAR BAUME AP+M rééquilibre le microbiome cutané. Le microbiome est l’écosystème invisible de micro-organismes sur la peau, dont l’équilibre assure la bonne santé. Sa texture crème assure confort et protection en une application par jour. Elle pénètre rapidement, ne colle pas et laisse un fini non gras qui permet un habillage facile et rapide. La peau est confortable et apaisée. Convient aux peaux sensibles du bébé, de l'enfant et de l'adulte. Spécialement formulé pour les peaux à tendance ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875696548</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a9d57f0f04185c2390daa8c2f83ad03ae9d6aca0559d53497983d73c4f4d9f40 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Roche-posay Lipikar surgras crème lavante 400ml ]]></title>
+<g:id>18303db1-cc21-49dc-9f9f-408081b2b9f5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay lipikar surgras crème lavante 400ml?18303db1-cc21-49dc-9f9f-408081b2b9f5 ]]></link>
+<g:price><![CDATA[ 1199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Douche-crème concentrée anti-dessèchement.</p>
+<p>Nettoyage doux conçu pour les peaux sèches et inconfortables.<br />Enfant et adulte.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433422408586</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a93ddd1daffa3829bc687f65286cc2c45b8227ee278c0e0e3498ae7415fbc275 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Après-Shampoing Hydratant Démêlant 200 g ]]></title>
+<g:id>363f77ed-0e31-4f98-8bd1-adab9e3de34f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée après-shampoing hydratant démêlant 200 g?363f77ed-0e31-4f98-8bd1-adab9e3de34f ]]></link>
+<g:price><![CDATA[ 1090.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Rosée Après-Shampoing Hydratant Démêlant 200 g est un après-shampoing destiné à tous les types de cheveux. Il démêle, gaine et lisse la fibre pour un coiffage facile. Hydratant et adoucissant, il laisse les cheveux légers, souples et soyeux.</p>
+<p>La kératine végétale apporte les protéines essentielles au cheveu afin de l'hydrater, de le renforcer et le protéger.<br />Le lait d'amande douce hydrate et adoucit, tout en redonnant de l'éclat.<br />Il est également enrichi de fleurs d'hibiscu ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717723</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/aac494980716b038c2faaf1142405e92505214e4ce96709f3e4469da90962b2a ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Après-Shampoing Hydratant Démêlant Recharge 200 g ]]></title>
+<g:id>108e4308-6cb7-414a-a9ae-5868b28bc5f1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée après-shampoing hydratant démêlant recharge 200 g?108e4308-6cb7-414a-a9ae-5868b28bc5f1 ]]></link>
+<g:price><![CDATA[ 890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Rosée Après-Shampoing Hydratant Démêlant Recharge 200 g est un après-shampoing destiné à tous les types de cheveux. Il démêle, gaine et lisse la fibre pour un coiffage facile. Hydratant et adoucissant, il laisse les cheveux légers, souples et soyeux.</p>
+<p>La kératine végétale apporte les protéines essentielles au cheveu afin de l'hydrater, de le renforcer et le protéger.<br />Le lait d'amande douce hydrate et adoucit, tout en redonnant de l'éclat.<br />Il est également enrichi de fleurs  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717730</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/38335677816fba9f2b5af8a1ac6a3295a77c220d6318140f0a939e922b955d15 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Baume SOS Réparateur 20g ]]></title>
+<g:id>299964cf-11f3-4d22-b06d-c5a1e8ce856d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée baume sos réparateur 20g?299964cf-11f3-4d22-b06d-c5a1e8ce856d ]]></link>
+<g:price><![CDATA[ 1250.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Baume SOS</span><span> </span><em><span>multi-usage</span></em><span> 100% d'origine naturelle, aux cires et aux huiles végétales, qui répare, nourrit et apaise les zones fragilisées du visage et du corps.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717198</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/32c246c5deba5643464f4d4293b1950cee1ddd80009b1be375f9b2377ac89b84 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Coffret Gommage Corps  ]]></title>
+<g:id>28fab98f-f17d-44d6-80f1-4af3e9562903</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée coffret gommage corps ?28fab98f-f17d-44d6-80f1-4af3e9562903 ]]></link>
+<g:price><![CDATA[ 3580.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le coffret comprend un Gommage corps nourrissant rechargeable, une recharge Gommage corps nourrissant et une bougie parfumée offerte !</p><p>Riche en sucre et en huiles végétales BIO notre gommage exfolie, nourrit et assouplit votre peau qui retrouve douceur et confort.</p><p>La recharge donne une nouvelle vie à votre soin, une fois terminé.</p><p>Imaginée spécialement pour les 10 ans de la Rosée, notre bougie a l’odeur subtile coco-vanille de notre Gommage corps nourrissant en cire 100 % vég ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717976</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3be2b0bbaee834da3a414a725be8781dbbda6eabdb812cf55706c60f98ffa1e9 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Concentré bonne mine 30 ml ]]></title>
+<g:id>b4420256-eb9c-4fee-80f2-3562a3719652</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée concentré bonne mine 30 ml?b4420256-eb9c-4fee-80f2-3562a3719652 ]]></link>
+<g:price><![CDATA[ 2560.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le concentré bonne mine La rosée, à base de carotte et d'abricot, a 3 actions : colore, illumine et revitalise.</p>
+<p>La carotte bio et l'abricot bio colorent la peau pour un hâle naturel effet bonne mine immédiat !</p>
+<p>Son pouvoir anti-oxydant protège la peau des agressions extérieures.</p>
+<p>100% d'origine naturelle</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717327</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5e51cb61a1582de4c29de0d8a8656821cd1a7e753cc2a578c00547752f941757 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Contour des Yeux Défatiguant Aloe Vera 25ml ]]></title>
+<g:id>2ffc8efc-b916-4b3b-8223-0b8c86beaacd</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée contour des yeux défatiguant aloe vera 25ml?2ffc8efc-b916-4b3b-8223-0b8c86beaacd ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Hydrate, apaise et lisse le contour des yeux. Les poches et les cernes sont visiblement atténués, pour un regard parfaitement reposé !</span></p>
+<p><span>Ce format en stick est très innovant techniquement mais surtout ultra-pratique : l'application est facile et ludique !</span></p>
+<p><span><span>Pour qui ? </span></span>Les peaux normales, les peaux sensibles, les porteurs de lentilles... <span>La formule convient aussi aux futures mamans ????!</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717211</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/70ee7ec2d7f2f9eb834ed81219228bc346e2d8a6caecd609b1fe58da1a43c007 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Crème Corps Hydratante 400 ml ]]></title>
+<g:id>097b0c30-8718-46a5-9120-b4fe25147971</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée crème corps hydratante 400 ml?097b0c30-8718-46a5-9120-b4fe25147971 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La crème corps au beurre de karité BIO est <strong>le soin idéal</strong> pour vous hydrater de façon optimale. Votre peau est <strong>réconfortée</strong>, <strong>nourrie</strong> et <strong>apaisée</strong>, pour toute la journée. Sa texture onctueuse ne colle pas et sa légère odeur de fleur d'oranger et de rose, enveloppe votre corps d'un voile de douceur.</p>
+<p><span><strong>Pour qui ?</strong> <span><strong> </strong></span><span>Tous les types de peaux, même les plus sensibles, grâce  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717532</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/10562033d592ad505ea37350e823ee02bd8b8cddfa174a4e0c3d2625286ceb92 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Crème Hydratante Peaux Sèches 60ml ]]></title>
+<g:id>95d28a6d-d58c-4a50-9452-55e1bfa4dba4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée crème hydratante peaux sèches 60ml?95d28a6d-d58c-4a50-9452-55e1bfa4dba4 ]]></link>
+<g:price><![CDATA[ 1770.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La rosée crème hydratante visage au beurre de karité bio est une crème hydratante très riche en beurre de karité bio nourrit et apaise parfaitement votre peau. Elle retrouve sa souplesse, sa douceur et sa vitalité.<br />La texture est riche, onctueuse et non grasse.<br />L'odeur légèrement vanillée amplifie la perception d’une peau réconfortée et apaisée.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717006</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0f5ea5a1d71e3f85490c85c335d1c7cf31371eaa272ace230bd35eeb25506e65 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Crème Mains Ultra-Réparatrice 50ml ]]></title>
+<g:id>e98a6b68-7ec8-403a-9524-a7066b17c677</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée crème mains ultra-réparatrice 50ml?e98a6b68-7ec8-403a-9524-a7066b17c677 ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Avec sa formule 99% d’origine naturelle, la crème mains ultra-réparatrice aux plantes médicinales BIO nourrit et protège durablement vos mains sèches ou abîmées. L’arnica montana BIO et le calendula BIO réparent et cicatrisent vos gerçures et vos petites blessures. Vos mains n’ont jamais été aussi douces, souples et hydratées, elles retrouvent tout leur confort !</span><br /><span>La formule convient aux futures mamans </span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717112</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5e2e32b904ff57d2038d968f8e782b6a62f103f988f598a6a97deb9b4dc1c731 ]]></g:image_link>
+<g:product_type><![CDATA[ CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Dentifrice Soin Complet 75 ml ]]></title>
+<g:id>dbbdd59e-c2ae-4441-a54f-890183684908</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée dentifrice soin complet 75 ml?dbbdd59e-c2ae-4441-a54f-890183684908 ]]></link>
+<g:price><![CDATA[ 490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Conçu avec une formule qui convient à toute la famille dès l'âge de 6 ans, et même aux femmes enceintes, le <span>Dentifrice soin complet La Rosée</span> contient 99% d'ingrédients d'origine naturelle, dont une synergie d'actifs qui offre une excellente <span>hygiène bucco-dentaire</span> globale :</p>
+<ul><li>le fluor (1450 ppm) protège et <span>prévient l'apparition des caries</span>,</li>
+<li>la silice nettoie les dents et <span>lutte contre la plaque dentaire</span>,</li>
+<li>la glycérine ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717518</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/971ad56602ee47d28da8779cab2033f5e3be5b9deb7b4d86d81a29f97a8f2b8f ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Duo de Dentifrices + Brosse à Dent offerte ]]></title>
+<g:id>1a4dac32-529a-4f94-88b1-98ade1d18bd5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée duo de dentifrices + brosse à dent offerte?1a4dac32-529a-4f94-88b1-98ade1d18bd5 ]]></link>
+<g:price><![CDATA[ 980.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Notre dentifrice au fluor bien dosé (1450 ppm), à la menthe BIO, à la glycérine, à la perlite et à la silice, nettoie en douceur, lutte contre la plaque dentaire, le tartre et élimine les tâches. Les dents sont propres, fortes et saines. L’haleine est fraîche.</p>
+<p>Notre Dentifrice est recommandé par l'Union Française pour la Santé Bucco-Dentaire (UFSBD).</p>
+<p>Ce duo de dentifrices s'accompagne d'une brosse à dents offerte. Fabriquée en France, elle se compose d’un manche en bois issu de  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717778</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/242bbdafad1d9ce7838bae31932274fcdec15114324e61da44cd7ec5ae62d0e0 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Déodorant Fraîcheur Rechargeable 50 ml ]]></title>
+<g:id>15d5f7c4-bb6f-4d06-b697-7693b919a37e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée déodorant fraîcheur rechargeable 50 ml?15d5f7c4-bb6f-4d06-b697-7693b919a37e ]]></link>
+<g:price><![CDATA[ 890.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Notre déodorant fraîcheur devient rechargeable. Côté formule, rien ne change : les probiotiques absorbent la transpiration et neutralisent les odeurs, pour une sensation de fraîcheur toute la journée !</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717662</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/469f338d284f9308ecb720a718c77a5ffa3bd153ba3385da8a018ed97a670253 ]]></g:image_link>
+<g:product_type><![CDATA[ DEODORANT  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Flacon Shampoing Rechargeable Verre 200 ml ]]></title>
+<g:id>c84e19f2-33ab-450f-8d60-817902e73b7d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée flacon shampoing rechargeable verre 200 ml?c84e19f2-33ab-450f-8d60-817902e73b7d ]]></link>
+<g:price><![CDATA[ 390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Rosée Flacon Shampoing Rechargeable Verre 200 ml est un flacon en verre rechargeable à l'infini, robuste et recyclable. (Vendu sans shampoing) </p><p>Il est spécialement conçu pour recevoir les recharges de shampoings de la marque La Rosée : purifiant, nourrissant ou ultra-doux.<br>Les recharges, d'une contenance de 400 ml, permettent de remplir deux fois le flacon et ainsi d'économiser 82% de plastique.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717747</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9fde906f59e98f8a841bddb83cfe480549334e956f2c341594f6e759e3765b66 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Gel Crème Hydratant 60ml ]]></title>
+<g:id>ca87284a-239d-42bf-9bcc-50c08fac409a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée gel crème hydratant 60ml?ca87284a-239d-42bf-9bcc-50c08fac409a ]]></link>
+<g:price><![CDATA[ 1770.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La rosée gel-crème hydratant au concombre bio est une gel-crème pour hydrater de façon optimale les peaux mixtes en leur apportant l’eau dont elles ont besoin grâce au concombre bio. Le zinc, parfaitement dosé, purifie la peau en profondeur et permet d’éradiquer les imperfections. Les algues matifient la zone T, en absorbant l’excès de sébum.<br />La texture entre le gel et la crème est d’une incroyable légèreté, ne colle pas et pénètre instantanément. La légère odeur printanière plaira aux f ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717013</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/34f9c09a6a2d21ff46a42fe0029781fe16b14c0fe225c8c076a4dff15f1c693f ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Gelée Micellaire  Démaquillante 195ml ]]></title>
+<g:id>d3495b68-10f0-4370-a40b-572afc36f9d8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée gelée micellaire  démaquillante 195ml?d3495b68-10f0-4370-a40b-572afc36f9d8 ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La gelée micellaire démaquille efficacement le visage, les yeux et les lèvres. L'aloe vera BIO apaise les peaux les plus sensibles ; l'hydrolat de citron purifie et laisse une peau nette ; les hydrolats floraux BIO de rose et de camomille adoucissent et parfument délicatement d'une note fleurie. La peau est parfaitement propre, tout en étant douce, confortable et hydratée !<br /><span></span></p>
+<p><span>ous les types de peaux, même les plus sensibles, grâce à sa formulation ultra-saine et s ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717051</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2f0fa7383c167d7c66f74af4dccf7ee1102db717329926f1ee132b058edfde15 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Gommage Corps Nourrissant Recharge 200 g ]]></title>
+<g:id>57493501-7ae4-4cc0-81e0-c3fb3771a5b4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée gommage corps nourrissant recharge 200 g?57493501-7ae4-4cc0-81e0-c3fb3771a5b4 ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Rosée Gommage Corps Nourrissant Recharge 200 g est un soin conçu pour améliorer la texture de la peau. Il combine l'efficacité d'un gommage à la richesse d'un soin nourrissant et adoucissant.</p>
+<p>Les grains de sucre exfolient efficacement les cellules mortes, éliminent les impuretés et lissent le grain de peau.<br />Les huiles végétales Bio nourrissent en profondeur l'épiderme, l'assouplissent et y déposent un film protecteur.<br />La peau est douce, lisse et nette.</p>
+<p>À l'odeur sub ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717655</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/12b08a40b34395527ff9e516f6beea4252602ce3a38bb4cf569a673eb1031931 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Gommage Corps Nourrissant Rechargeable 200 g ]]></title>
+<g:id>0358d797-cd22-4bbe-9d45-8220e729e4ba</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée gommage corps nourrissant rechargeable 200 g?0358d797-cd22-4bbe-9d45-8220e729e4ba ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Rosée Gommage Corps Nourrissant 200 g est un soin conçu pour améliorer la texture de la peau. Il combine l'efficacité d'un gommage à la richesse d'un soin nourrissant et adoucissant.</p>
+<p>Les grains de sucre exfolient efficacement les cellules mortes, éliminent les impuretés et lissent le grain de peau.<br />Les huiles végétales Bio nourrissent en profondeur l'épiderme, l'assouplissent et y déposent un film protecteur.<br />La peau est douce, lisse et nette.</p>
+<p>À l'odeur subtile de c ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717389</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9a68dc716dcacf13921e6e568d4cb55d6f352740fd0011af025c31d447944dc7 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Gommage Visage Doux 60ml ]]></title>
+<g:id>1574171f-f020-4043-9d5f-7ffa235ffdf4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée gommage visage doux 60ml?1574171f-f020-4043-9d5f-7ffa235ffdf4 ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La rosée gommage doux visage a l'aloe vera bio prépare idéalement votre peau à recevoir un soin hydratant, en enlevant parfaitement la couche de cellules mortes qui recouvre l’épiderme. La peau est lisse et purifiée. Les pores sont désincrustés et resserrés, et les impuretés éliminées.<br />La texture est une gelée saupoudrée de petites billes de jojoba exfoliantes.<br />Une légère odeur marine procure une sensation de fraîcheur immédiate.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717020</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/069c99559d9f61e995529d9596f62faed8a55b2b1ff8940bee4b6cef6874eb47 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Huile Solaire Spf 50 150 ml ]]></title>
+<g:id>6859cf9c-e6c9-4447-8a4f-db315ccd3d3f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée huile solaire spf 50 150 ml?6859cf9c-e6c9-4447-8a4f-db315ccd3d3f ]]></link>
+<g:price><![CDATA[ 2290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L'huile solaire SPF 50 garantit une haute protection large spectre UVA / UVB, tout en étant plus respectueuse des océans&nbsp;!</p><p>Elle protège efficacement le visage et le corps des effets néfastes du soleil et prévient le vieillissement cutané lié au soleil.</p><p>Formulée pour limiter son impact sur les algues et les coraux, elle est composée d’un complexe de filtres dernière génération et d’une base à l’huile d’abricot BIO qui nourrit votre peau pour un bronzage lumineux et durable. Sa ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717334</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a6ae51b85ff2360ac43e7702e691a8289865c02ced4b05b5cc3b4ee355c69d51 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Huile de Douche 400ml ]]></title>
+<g:id>17762887-7b78-4e39-98c7-46ab993a9440</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée huile de douche 400ml?17762887-7b78-4e39-98c7-46ab993a9440 ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La rosée huile de douche lavante à, l'huile de grain de tournesol bio est un huile de douche, nettoie en douceur le visage et le corps des peaux sensibles. Elle nourrit parfaitement la peau grâce à sa formule unique, composée essentiellement d’huile de graines de tournesol bio. La peau est douce et parfaitement relipidée, pour longtemps. Au contact de l'eau, l'huile se transforme en une fine mousse onctueuse, à l'odeur fraîche et délicate. Se rince facilement.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717044</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0bcd6241665aa51bed44509fbc7eabd01f24d7fa020f3fb3780f97e016f7e4f8 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Huile de Douche Lavante Recharge 800ml ]]></title>
+<g:id>b8f64dde-d981-4728-9eff-dad750b4c18c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée huile de douche lavante recharge 800ml?b8f64dde-d981-4728-9eff-dad750b4c18c ]]></link>
+<g:price><![CDATA[ 2290.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="_3x88v EtEXs">
+<p>Notre écorecharge permet de recharger deux fois votre flacon d’Huile de douche lavante !</p>
+<p></p>
+</div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717594</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/42de7f690bee8162ec37cca963281082bacdf9c906016e2c1e8ac2108afb4db3 ]]></g:image_link>
+<g:product_type><![CDATA[ GEL DOUCHE > HYGIÈNE ET SOINS INTIMES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Huile de Soin Nourrissante 100 ml ]]></title>
+<g:id>672fa0ac-6cce-4dba-82da-5004b5074bab</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée huile de soin nourrissante 100 ml?672fa0ac-6cce-4dba-82da-5004b5074bab ]]></link>
+<g:price><![CDATA[ 2090.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Notre Huile de soin 100 % d’origine naturelle est composée d’huiles végétales BIO. Elle nourrit et sublime le visage, le corps et les cheveux, été comme hiver. L’huile de graines de tournesol, l’huile de bourrache, et l’huile de baie d’argousier apportent souplesse et confort.</p>
+<p>La peau est douce et satinée, les pointes des cheveux sont nourries et réparées. Votre corps et vos cheveux sont subtilement parfumés !</p>
+<p><span>Huile sèche non grasse et non collante.</span></p>
+<p>Odeur dou ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717617</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2f49777f9b4668e16710e63b63efc266e1a308188967f24983f4218ac8d92ea4 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Kit de Voyage Eco Responsable ]]></title>
+<g:id>3a581fe4-4a4a-4b7e-922d-bc96a00a303e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée kit de voyage eco responsable?3a581fe4-4a4a-4b7e-922d-bc96a00a303e ]]></link>
+<g:price><![CDATA[ 799.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pour vos petits et grands voyages, proches ou lointains, nous avons imaginé et créé un kit voyage éco-conçu pour emporter vos produits préférés en vacances, sans impacter la planète ????  !</p>
+<div class="sc-irKDMX cwoGFd pf-3_">
+<div id="shopify-section-product-template" class="shopify-section shopify-section--bordered">
+<div class="Product__Wrapper">
+<div class="Product__InfoWrapper">
+<div class="Product__Info">
+<div class="Container">
+<div class="ProductMeta__Description">
+<div class="Rte ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717266</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/45a4b86c0f95848aade906708e2dc76983409704a1dca9ff96b3d212e94f9472 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Lait Solaire Spf 30 150 ml  ]]></title>
+<g:id>fe87cda2-33b4-4fb7-8635-782eebc8dd3f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée lait solaire spf 30 150 ml ?fe87cda2-33b4-4fb7-8635-782eebc8dd3f ]]></link>
+<g:price><![CDATA[ 2090.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Lait solaire SPF 30 garantit une haute protection large spectre UVA / UVB, tout en étant plus respectueux des océans !</p><p>Il protège efficacement le visage et le corps des effets néfastes du soleil et prévient le vieillissement cutané lié au soleil.</p><p>Composé d’un complexe de filtres dernière génération et d’une base d’origine naturelle (2), notre lait solaire a été formulé pour limiter son impact sur les algues et les coraux. Sa formule est résistante à l’eau et facilement biodégra ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717570</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9333338df30fb0d23b23640a80b3baab98fdd9802c184f09ce7cb09f5a10a8ea ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Lait Solaire Spf 50 150ml ]]></title>
+<g:id>ea855f19-c43f-47c3-ba18-2b7ee15311d5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée lait solaire spf 50 150ml?ea855f19-c43f-47c3-ba18-2b7ee15311d5 ]]></link>
+<g:price><![CDATA[ 2130.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Lait solaire SPF 50+ garantit une très haute protection large spectre UVA / UVB, tout en étant plus respectueux des océans !</p><p>Il protège efficacement le visage et le corps des effets néfastes du soleil et prévient le vieillissement cutané lié au soleil.</p><p>Composé d’un complexe de filtres dernière génération et d’une base d’origine naturelle (2), notre lait solaire a été formulé pour limiter son impact sur les algues et les coraux. Sa formule est résistante à l’eau et testée biodég ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717587</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dc4f24b89510c8182b9494f3f339d8514ec439456c2e2a95a0462915cbb76919 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Lotion Tonique Hydratante 200ml ]]></title>
+<g:id>9d37db1c-be4b-477e-929f-480f8d16e3fb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée lotion tonique hydratante 200ml?9d37db1c-be4b-477e-929f-480f8d16e3fb ]]></link>
+<g:price><![CDATA[ 1430.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La lotion tonique hydratante à la camomille BIO et aux oligo-éléments est un concentré de nature en spray ! La glycérine végétale hydrate parfaitement. Les oligo-éléments et les minéraux revitalisent et donnent de l'éclat à la peau. Les hydrolats floraux BIO de camomille et de rose apaisent. La peau est toute douce, éclatante et parfaitement désaltérée !</span></p>
+<h4><span></span></h4>
+<p><span><span>Pour qui ?</span> Tous les types de peaux, même les plus sensibles, grâce à sa formul ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717068</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1fce79b5ef798c705161c9087441217374ca71dcbe19ce84807677e32ec3db1d ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Masque Capillaire Réparateur Recharge 200 g ]]></title>
+<g:id>e87cf60d-31dd-4c98-ae54-13495873cc26</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée masque capillaire réparateur recharge 200 g?e87cf60d-31dd-4c98-ae54-13495873cc26 ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Rosée Masque Capillaire Réparateur Recharge 200 g est un soin qui nourrit et répare intensément tous les types de cheveux. Parfaitement protégés, ils sont plus résistants, souples et soyeux.</p>
+<p>La kératine végétale apporte les protéines essentielles au cheveu afin de l'hydrater, le renforcer et le protéger.<br />Les huiles végétales de ricin, coco et amande douce Bio redonnent douceur et force aux cheveux les plus fragilisés.<br />Le beurre de karité nourrit en profondeur la fibre capi ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717426</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/51f1a75cfcbe43f910c14e94bb651b70e5145e926f7d276fa4249c2413703783 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Masque Capillaire Réparateur Rechargeable 200 g ]]></title>
+<g:id>6581eb59-5fd0-4e2e-983a-dab8f6305dbb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée masque capillaire réparateur rechargeable 200 g?6581eb59-5fd0-4e2e-983a-dab8f6305dbb ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Rosée Masque Capillaire Réparateur 200 g est un soin qui nourrit et répare intensément tous les types de cheveux. Parfaitement protégés, ils sont plus résistants, souples et soyeux.</p>
+<p>La kératine végétale apporte les protéines essentielles au cheveu afin de l'hydrater, le renforcer et le protéger.<br />Les huiles végétales de ricin, coco et amande douce Bio redonnent douceur et force aux cheveux les plus fragilisés.<br />Le beurre de karité nourrit en profondeur la fibre capillaire.</ ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717716</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3dff00f9b547e0631cf458548e0e22a8b32beda7927fea8151c5010f96e8b2da ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Masque en Stick Nourrissant 50ml ]]></title>
+<g:id>6ad64ff0-dfea-4122-9560-56158687a25b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée masque en stick nourrissant 50ml?6ad64ff0-dfea-4122-9560-56158687a25b ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Nourrissez votre peau en profondeur avec </span><span>le masque en stick à l’huile d’amande douce bio La Rosée</span><span> !</span><br /><br /><span>Grâce à sa formule exceptionnelle 100% d’origine naturelle, ce masque est un véritable concentré d’actifs nourrissants, apaisants et protecteurs ! Il laisse la peau parfaitement douce, lisse, nourrie et confortable.</span><br /><span> </span><br /><span>Son format en stick est économique, écologique et ultra-pratique ! Il permet une applic ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717242</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/50d9c8eff6cbc43b5400ba046ee744a36ec9bda22af0bac351909c97e111922c ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Masque en Stick Régénérant 3 en 1 75 ml ]]></title>
+<g:id>1a05245e-4281-4f1f-8ff9-27fe5a800f1a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée masque en stick régénérant 3 en 1 75 ml?1a05245e-4281-4f1f-8ff9-27fe5a800f1a ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le masque laisse la peau parfaitement nette, lisse et purifiée de toutes ses impuretés et ses toxines. La peau repart de zéro.</span><br /><span>Ce format en stick est très innovant techniquement mais surtout ultra pratique ! Il permet d’étaler l’argile de façon uniforme et ludique, sans s’en mettre plein les doigts. C’est un format également très économique. Fini les imperfections, le teint est éclatant de santé et la peau régénérée !</span><br /><span></span></p>
+<p><span style="font- ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717082</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7b18cd19648ed6c14c6f8ae7e981b35556bedb902713195ebd725eb9ee16a97d ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Mon Petit Baume SOS Réparateur 20 g ]]></title>
+<g:id>c6d4e7c9-e46b-4972-9ee3-1028b53488e1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée mon petit baume sos réparateur 20 g?c6d4e7c9-e46b-4972-9ee3-1028b53488e1 ]]></link>
+<g:price><![CDATA[ 1250.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Sa formule exceptionnelle, 100% d’origine naturelle, fait des miracles. Elle répare, nourrit et apaise les zones fragilisées, les irritations, les petits bobos et les rougeurs du visage et du corps de bébé, dès la naissance.</p>
+<p>Sa texture solide se transforme en une huile douce et agréable à l’application. Elle pénètre en profondeur dans l’épiderme et laisse un léger film protecteur non gras.</p>
+<p>Son format nomade ultra-pratique permet de l’emporter partout !</p>
+<p>C’est la pépite mul ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717303</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0a7d3959f8843b417dac4d04daeb12544a8089f1369d748e269a79a03668503f ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS BEBE - ENFANT ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Mon Petit Crème Hydratante 200ml ]]></title>
+<g:id>6ac3665f-53c8-48ae-a25d-29d714813f7a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée mon petit crème hydratante 200ml?6ac3665f-53c8-48ae-a25d-29d714813f7a ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La&nbsp;rosée crème hydratante bébé au beurre de karité et à l'aloe vera est une crème hydratante visage et corps, nourrit et apaise parfaitement la peau fragile de bébé, grâce à ses actifs tout doux et naturels, comme le beurre de karité, l’aloe vera, la cire d’abeille ou encore la cire végétale de carnauba.</p><p>Le film hydrolipidique immature est réparé et protégé.<br>La peau est plus souple, toute douce et délicatement parfumée : votre bébé est à croquer !<br>La texture est très onctueus ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717136</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/34f1ec6a13e71b728821e5420d6f30a30dd2cb73b4c6a4857f5e4bf07a2573e4 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS BEBE - ENFANT ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Mon Petit Dentifrice à la Fraise 50ml ]]></title>
+<g:id>afbe0775-13da-463f-b9c7-fee9d97c4bea</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée mon petit dentifrice à la fraise 50ml?afbe0775-13da-463f-b9c7-fee9d97c4bea ]]></link>
+<g:price><![CDATA[ 465.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Un dentifrice tout doux au bon goût de fraise qui nettoie en douceur, prévient la formation des caries et protège les gencives sensibles. Action anti-plaque et renforcement de l'email. Pour une hygiène bucco-dentaire parfaite !<br />Fluor 1000 ppm : protège des caries et renforce l'émail des dents (= recommandations UFSBD)</p>
+<p>De 1 à 6 ans.<br />Testé sous contrôle pédiatrique et odontologique.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717631</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c7e1a4bd9d9007e09b9a4a169f7d4d87443b57755a9c047adbd960ccd233b1a4 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIÈNE BUCCO-DENTAIRE > DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Mon Petit Eau Nettoyante 400 ml ]]></title>
+<g:id>81318a2f-ffff-44cb-b75b-052c8eeaa6d9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée mon petit eau nettoyante 400 ml?81318a2f-ffff-44cb-b75b-052c8eeaa6d9 ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Une eau fraîche qui respecte le film hydrolipidique immature des bébés, en apportant des actifs tout doux comme l’aloe vera BIO et la glycérine végétale. Elle nettoie, apaise et hydrate, tout en parfumant délicatement bébé à la fleur d'oranger.</p>
+<p>Dès la naissance pour bébé et enfant.<br />98% d'origine naturelle<br />Vegan<br />Testée sous contrôle pédiatrique et ophtalmologique.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717624</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/15f50c25908c7de0210a5003fb3d195e542ce200fae9b08536b0ea34a5e83ee2 ]]></g:image_link>
+<g:product_type><![CDATA[ Bébé > EAU NETTOYANTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Mon Petit Eco Recharge Gel Lavant Ultra-Doux Bébé Bio  800ml ]]></title>
+<g:id>e81008b0-5043-437b-8e12-86f6a5debf8c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée mon petit eco recharge gel lavant ultra-doux bébé bio  800ml?e81008b0-5043-437b-8e12-86f6a5debf8c ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><p>Pour qui :&nbsp;La peau sensible des bébés.</p></li><li><p>Résultats beauté :&nbsp;La peau, les cheveux et le cuir chevelu sont doux, souples et parfaitement nettoyés.</p></li><li><p>Actifs :&nbsp;Glycérine Végétale Bio, Allantoïne, Huile Végétale d’Olive Vierge.</p></li><li><p>Le + :&nbsp;Le format éco-recharge !</p></li></ul><p>Le&nbsp;Gel Lavant Ultra-Doux Bébé La Rosée&nbsp;à la glycérine végétale bio nettoie délicatement visage, corps et cheveux dans le bain.</p><p>La&nbsp;textur ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717396</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/342c9d1e932f4fb15efe770f24b52275837a9357fcba4acc23c2780bbe6e8e0a ]]></g:image_link>
+<g:product_type><![CDATA[ GEL LAVANT ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Mon Petit Gel Lavant Ultra-Doux 400 ML ]]></title>
+<g:id>bf373a49-ccda-4853-ab82-3bc6deba848e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée mon petit gel lavant ultra-doux 400 ml?bf373a49-ccda-4853-ab82-3bc6deba848e ]]></link>
+<g:price><![CDATA[ 1090.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La rosée gel lavant ultra doux bébé à la glycérine végétale est un gel lavant ultra-doux nettoie délicatement visage, corps et cheveux dans le bain.<br />Il protège la flore cutanée immature de bébé, grâce à ses actifs tout doux comme la glycérine végétale, l’huile d’olive et l’allantoïne.<br />La texture mousse tout en douceur, est facile à rincer et ne pique pas les yeux !<br />La peau et les cheveux sont parfaitement propres, souples et agréablement parfumés.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717129</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7d2aeb9495389d7d05521c71d3894af2df1639fd199c56a2dd34058ab9c037a2 ]]></g:image_link>
+<g:product_type><![CDATA[ GEL LAVANT ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Mon Petit Lait Solaire SPF50 125 ml ]]></title>
+<g:id>96074e71-32be-4700-86f4-9f8ae2ec1668</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée mon petit lait solaire spf50 125 ml?96074e71-32be-4700-86f4-9f8ae2ec1668 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Rosée Mon Petit Lait Solaire SPF50 125 ml est un soin solaire pour le visage et le corps des tout-petits dès la naissance. Ce lait est doté d'un système de filtres solaires organiques de très haute protection SPF50+, assurant une défense efficace pour la peau contre les rayons UVA et UVB et les effets néfastes du soleil.<br />À l'huile d'abricot bio, il hydrate les peaux sensibles qui retrouveront douceur, souplesse et confort.</p>
+<p>Léger parfum ensoleillée de coco-vanille.</p>
+<p>Fini i ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717402</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/08dd3701b6aac7187934e07f51f22ce28f227cedef3864d726468b714beddede ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Mon Petit Lait de Toilette Nettoyant 400 ml ]]></title>
+<g:id>2f55c75f-0f22-478e-824e-beb37c37d8cd</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée mon petit lait de toilette nettoyant 400 ml?2f55c75f-0f22-478e-824e-beb37c37d8cd ]]></link>
+<g:price><![CDATA[ 1090.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Notre Lait de toilette a une action 2 en 1 efficace. Il nettoie le corps et le siège de bébé et débarbouille le visage tout en douceur. Il élimine efficacement les impuretés, à l’aide d’un coton, sans rinçage. Grâce à l’huile d’amande douce BIO, il hydrate et renforce le film hydrolipidique immature de bébé, pour une protection maximale.</p>
+<p>Notre Lait de toilette laisse la peau propre, douce et délicatement parfumée !</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717143</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/48585c3303ccb76fb99c314510b1e608eb13aee266f18f87a73d88f47aa945bc ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS BEBE - ENFANT ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Mon Petit Liniment 400ml ]]></title>
+<g:id>931337ae-09ee-444a-8c22-484515f41d75</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée mon petit liniment 400ml?931337ae-09ee-444a-8c22-484515f41d75 ]]></link>
+<g:price><![CDATA[ 790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La peau de bébé est particulièrement sensible et fine. Pour son soin, il faut toujours opter pour les produits neutres et d'origine naturelle. Notamment sur les zones délicates comme le siège. Sur ces zones il faut impérativement utiliser des soins nourrissants et protecteurs.</p><p>Le&nbsp;liment à l'huile d'olive extra-vierge de chez la Rosée&nbsp;est un produit naturel, sans conservateur et sans parfum qui convient parfaitement à la&nbsp;peau fragile de bébé.</p><p>Ce produit s'applique su ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717150</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7b4e41615139e9f8ba5fefaeabd65498561e39fcc9004bd84b8e61c15569d6a4 ]]></g:image_link>
+<g:product_type><![CDATA[ LINIMENT OLEO CALCAIRE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Recharge Déodorant Fraîcheur 50 ml ]]></title>
+<g:id>34ad148b-0994-4f75-9d01-efdbaea32701</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée recharge déodorant fraîcheur 50 ml?34ad148b-0994-4f75-9d01-efdbaea32701 ]]></link>
+<g:price><![CDATA[ 690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Notre Déodorant apporte une sensation de fraîcheur et de confort.</p><p>Il existe désormais en format rechargeable&nbsp;! Sa formule à 99 % d’origine naturelle ne change pas.</p><p>La peau est douce et fraîche, tout au long de la journée&nbsp;!</p><p>La recharge donne une nouvelle vie à votre Déodorant fraîcheur une fois terminé.</p><p>Ensemble luttons contre le gaspillage ! Une recharge permet d’économiser 62 % de plastique par rapport à l’achat d’un stick complet. Un geste qui compte pour l ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717372</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2bf2901e5adf169308923529649f1573d4d04884a6d3efe34962b4a47d85cb54 ]]></g:image_link>
+<g:product_type><![CDATA[ DEODORANT  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Recharge Stick Correcteur Teinté Anti-Imperfections 5.5 g ]]></title>
+<g:id>ebc39d08-f99d-42d2-a26c-aef1169543aa</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée recharge stick correcteur teinté anti-imperfections 5.5 g?ebc39d08-f99d-42d2-a26c-aef1169543aa ]]></link>
+<g:price><![CDATA[ 840.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Notre Stick correcteur teinté anti-imperfections rechargeable au zinc, camoufle, purifie et corrige les imperfections du visage.</p><p>Livrée dans son carton 100 % recyclé, cette recharge permet de donner une nouvelle vie à votre Stick correcteur teinté anti-imperfections une fois terminé.</p><p>Tirez doucement sur l’embout de votre Stick correcteur teinté anti-imperfections pour retirer la recharge terminée.</p><p>Clipsez la nouvelle recharge dans le tube : votre Stick correcteur est prêt po ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717839</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/670f7ff7951c63a320da3e96653c468b1d5734fd2696009d8354e9c6a30f18a6 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN TEINTE > SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Savon Surgras Ultra Doux et Naturel 100g ]]></title>
+<g:id>62ee5f67-02aa-47d3-bc24-e6d583db2925</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée savon surgras ultra doux et naturel 100g?62ee5f67-02aa-47d3-bc24-e6d583db2925 ]]></link>
+<g:price><![CDATA[ 460.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Formule saine et écologique, format économique, le savon solide possède de nombreux avantages ! Ultra dosé en agents nourrissants et hydratants tels que le beurre de karité BIO et la glycérine végétale, le Savon Surgras La Rosée protège et respecte le film hydrolipidique. La peau est parfaitement nettoyée, douce et délicatement parfumée !</p>
+<p><span><span>Pour qui ?</span> <span><span>Spécialement conçu pour les peaux très sensibles, il peut être utilisé pour nettoyer visage et corps, tout  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717099</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/48cb63d8d57b97a13862c6babb9a24024f9453931fc42ff4d9f104fccf7babc2 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Shampoing Nourrissant Recharge 400 ml ]]></title>
+<g:id>4fb723de-e29f-4036-bad6-406f31e58726</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée shampoing nourrissant recharge 400 ml?4fb723de-e29f-4036-bad6-406f31e58726 ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Rosée Shampoing Nourrissant Recharge 400 ml est un shampoing à usage fréquent particulièrement adapté aux cheveux secs à très secs.</p>
+<p>Il nettoie en douceur, hydrate et nourrit intensément sans alourdir. Fortifiant et protecteur, il lisse la fibre capillaire et la répare efficacement. Les cheveux sont revitalisés, souples et soyeux.</p>
+<p>La kératine végétale apporte les protéines essentielles au cheveu afin de l'hydrater, le renforcer et le protéger.<br />Les protéines de blé pénètre ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717501</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/230930ce1f43b194a745bac1c99306c21bda4c716bace85d219129637f58ca52 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Shampoing Purifiant Recharge 400 ml ]]></title>
+<g:id>ab90afa7-4cac-4cf0-ba35-3279adabf888</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée shampoing purifiant recharge 400 ml?ab90afa7-4cac-4cf0-ba35-3279adabf888 ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Rosée Shampoing Purifiant Recharge 400 ml est un shampoing à usage fréquent particulièrement adapté aux cheveux gras ou regraissant vite.</p>
+<p>Il nettoie efficacement, apaise et rééquilibre le cuir chevelu pour éviter qu'il ne regraisse vite. Il rafraîchit et offre une sensation de pureté et de légèreté à vos cheveux.</p>
+<p>La kératine végétale apporte les protéines essentielles au cheveu afin de l'hydrater, le renforcer et le protéger.<br />L'ortie Bio et le zinc assainissent le cuir c ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717259</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/77419fc36e6317339dab8199d8fb16479a4d6c09466c3017466c5297c1c71f3c ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Shampoing Ultra-Doux Recharge 400 ml ]]></title>
+<g:id>8dfa08bb-9bf1-46ba-b051-5f862acc9a54</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée shampoing ultra-doux recharge 400 ml?8dfa08bb-9bf1-46ba-b051-5f862acc9a54 ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Rosée Shampoing Ultra-Doux Recharge 400 ml est un shampoing à usage fréquent qui convient à tous les types de cheveux, même sensibles.</p>
+<p>Il nettoie en douceur, apaise et prend soin du cuir chevelu, même sensible. Il hydrate sans alourdir pour des cheveux brillants, souples et soyeux.</p>
+<p>La kératine végétale apporte les protéines essentielles au cheveu afin de l'hydrater, le renforcer et le protéger.<br />Les graines de lin Bio et le vinaigre de cidre gainent la fibre capillaire po ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717174</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/060dd9212d8bcbb4da3f461b34096aeeb456cdad24499c10868ad7bab7886336 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Stick Correcteur Teinté Anti-imperfections Rechargeable 5.5 g ]]></title>
+<g:id>2f6b5063-39bc-4d15-a334-1eca77ec1800</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée stick correcteur teinté anti-imperfections rechargeable 5.5 g?2f6b5063-39bc-4d15-a334-1eca77ec1800 ]]></link>
+<g:price><![CDATA[ 1030.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Notre Stick correcteur teinté anti-imperfections camoufle immédiatement les boutons, les marques post acné et neutralise les rougeurs.</p>
+<p>Il assèche et réduit visiblement les boutons, dès la 1ère application. *</p>
+<p>Les imperfections sont corrigées et purifiées. La peau est matifiée toute la journée.</p>
+<p>Le stick s’estompe facilement et ne marque pas les pores, pour un résultat homogène et une couvrance longue tenue.</p>
+<p>Pratique et facile d'utilisation, c'est le véritable allié d ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717822</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4286646b30ca34ecb81984b97325a707e3d0eaaccf85314ec87103e64cb9e91e ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN TEINTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Stick Lèvres Nourrissant Recharge 4.5 g ]]></title>
+<g:id>6a709aca-892a-4112-b6a4-5178a0f448e5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée stick lèvres nourrissant recharge 4.5 g?6a709aca-892a-4112-b6a4-5178a0f448e5 ]]></link>
+<g:price><![CDATA[ 490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Livrée dans son carton <strong>100% recyclé,</strong> cette <strong>recharge </strong>permet de donner une <strong>nouvelle vie</strong> à <a href="https://www.larosee-cosmetiques.com/products/stick-levres-nourrissant-rechargeable"><span style="text-decoration:underline;">votre Stick lèvres nourrissant</span></a> une fois terminé.</p>
+<p>Ensemble <strong>luttons contre le gaspillage</strong> ????????</p>
+<p>Chaque année, plus d’un milliard de sticks et rouges à lèvres sont jetés dans le monde ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717709</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/67b50ad27886a242a1c91ddc08676b21693c02319858a93bf889f73a6c5b99d5 ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Stick Lèvres Nourrissant Teinté Recharge 4.5 G ]]></title>
+<g:id>483e7b78-bac9-4d9a-89f7-c74889429287</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée stick lèvres nourrissant teinté recharge 4.5 g?483e7b78-bac9-4d9a-89f7-c74889429287 ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Notre stick lèvres est un produit hybride à la fois soin et&nbsp;maquillage.</p><p>Fortement dosé en beurre de karité BIO, en huiles et en cires végétales, il nourrit les lèvres sèches ou abîmées, les répare et les protège.</p><p>Sa jolie teinte framboise naturelle&nbsp;apporte aux lèvres une légère coloration qui s’adapte à toutes les carnations.</p><p>Une formule exceptionnelle, 100% d’origine naturelle, indispensable pour ne pas ingérer d’ingrédients nocifs.</p><p>Sa texture onctueuse perm ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717679</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6cd6f4ad037f16d270de3d80a6ff6a4ad536b888a19483c207ca63458b2b8f94 ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Stick Lèvres Nourrissant Teinté Rechargeable 4.5 g ]]></title>
+<g:id>12dd9e3f-1dad-4f45-98c1-eb21ab8180a3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée stick lèvres nourrissant teinté rechargeable 4.5 g?12dd9e3f-1dad-4f45-98c1-eb21ab8180a3 ]]></link>
+<g:price><![CDATA[ 690.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">Innovation : le premier soin des lèvres teinté rechargeable en pharmacie !</p>
+<p class="p1">Notre stick lèvres est un produit hybride à la fois soin et maquillage.</p>
+<p class="p1">Fortement dosé en beurre de karité BIO, en huiles et en cires végétales, il nourrit les lèvres sèches ou abîmées, les répare et les protège.</p>
+<p class="p1">Sa jolie teinte framboise naturelle apporte aux lèvres une légère coloration qui s’adapte à toutes les carnations.</p>
+<p class="p1">Une formule ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717297</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/13b00310c91c7717a2abc1c0e47fd619e7618402415b5030496cfdccc6ebc069 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > STICK LEVRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Stick lèvres nourrissant rechargeable 4.5 g ]]></title>
+<g:id>1f582100-9d80-487b-adbf-b3503f150192</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée stick lèvres nourrissant rechargeable 4.5 g?1f582100-9d80-487b-adbf-b3503f150192 ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Innovation :</strong><span> le 1</span><sup>er</sup><span> soin des lèvres rechargeable en pharmacie.  </span></p>
+<p>Notre Stick lèvres se réinvente dans un <strong>format rechargeable,</strong> avec une <strong>nouvelle formule </strong>plus <strong>nourrissante</strong>, <strong>sans parfum et vegan.</strong></p>
+<p>Fortement dosé en <strong>beurre de karité BIO,</strong> en huiles et cires végétales, ce Stick lèvres à la texture ultra onctueuse, <strong>nourrit</strong> les lèvres ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717693</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/499380e95f9bf27d3b24dd1a43f4a198656df89393f54dd0a93b283aafa58725 ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Stick solaire SPF 50 ]]></title>
+<g:id>0fc30aa5-1b9a-4cba-8bd6-bb6f4c89b109</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée stick solaire spf 50?0fc30aa5-1b9a-4cba-8bd6-bb6f4c89b109 ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Avec son SPF 50, ce <span>stick solaire</span> est parfaitement adapté aux besoins des personnes à la <span>peau claire et sensible</span> au soleil. Il convient aussi pour une utilisation chez l'enfant et la femme enceinte, ou encore pour protéger les tatouages du soleil. En plus de son format ludique, ce produit solaire se distingue par sa formule composée de 4 filtres solaires organiques nouvelle génération présentant 3 avantages majeurs :</p>
+<ul><li>large spectre <span>UVA/UVB</span>,</l ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717549</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/de6363477082b1d0f20136a6aab7ef70ddd43a44986ab96b6032393d033b825b ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Sérum Désaltérant 30 ml ]]></title>
+<g:id>aa85779f-601b-4478-91c9-4d7370c7b684</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée sérum désaltérant 30 ml?aa85779f-601b-4478-91c9-4d7370c7b684 ]]></link>
+<g:price><![CDATA[ 2180.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce sérum contenant de l'acide hyaluronique a 3 actions : Désaltère, lisse et tonifie</p>
+<p>La peau est douce et désaltérée, les ridules sont lissées. </p>
+<p>Le teint retrouve toute sa fraîcheur et son éclat </p>
+<p>99% d'origine naturelle</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717310</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4ebd9b22c8deb2e5faca7ecb188456334ce7399006c7b545ef2c9126877e0b02 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Sérum Purifiant Anti-Imperfections 30ml ]]></title>
+<g:id>83caa913-5d6d-46ea-bc7c-3428cdfc50cb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée sérum purifiant anti-imperfections 30ml?83caa913-5d6d-46ea-bc7c-3428cdfc50cb ]]></link>
+<g:price><![CDATA[ 2380.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Notre Sérum purifiant anti-imperfections au zinc et aux acides de fruits BIO réduit boutons, points noirs et marques post acné. Il purifie et lisse la peau.</p>
+<p>Notre Sérum purifiant anti-imperfections au zinc et acides de fruits BIO diminue l’excès de sébum, désincruste, resserre les pores et exfolie en douceur pour un grain de peau affiné et lissé.</p>
+<p>Dès la première application, les imperfections sont visiblement diminuées*</p>
+<p>Le sérum réduit les boutons, les points noirs et les ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717815</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/18e26ef7b81d60d59a45d4849094a119c7835a2ec184172e82b133592b9b7dae ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La Rosée Sérum Visage Repulpant 30ml ]]></title>
+<g:id>1dd4e9a8-1836-4519-ae9a-b772c2a3877b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée sérum visage repulpant 30ml?1dd4e9a8-1836-4519-ae9a-b772c2a3877b ]]></link>
+<g:price><![CDATA[ 2130.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le sérum visage repulpant est </span><span><span>100 % d’origine naturelle</span></span><span>. Il est composé de 4 huiles végétales BIO nourrissantes possédant chacune des vertus complémentaires pour redonner à la peau toute sa souplesse et son éclat. Sa texture huileuse ultra fondante n’est pas grasse et ne colle pas. L’odeur légèrement sucrée crée un coup de cœur immédiat !</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717075</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8eba2fe242a977783df6864740f7f535efe20eeb1b58919ebc15140f43a3032c ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche Posay Effaclar gel moussant purifiant 400ml ]]></title>
+<g:id>4c23d3b8-3f47-49b7-845d-526730bc0e14</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay effaclar gel moussant purifiant 400ml?4c23d3b8-3f47-49b7-845d-526730bc0e14 ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Effaclar gel moussant purifiant de la roche-posay nettoie et purifie les peaux à la fois grasses et sensibles. </p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872411991</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c8464400ebefe8fa76bd28c820f66bcae27fbd03d5c3617fc7e862cbfd2941a3 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay Cicaplast mains 100ml ]]></title>
+<g:id>bdf79ddd-ae68-4b97-a845-bc28ebee994a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay cicaplast mains 100ml?bdf79ddd-ae68-4b97-a845-bc28ebee994a ]]></link>
+<g:price><![CDATA[ 940.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Cette crème barrière réparatrice apaise, protège et restaure la barrière cutanée des mains sur-sollicitées, abîmées par les agressions domestiques et professionnelles, grâce à sa formule associant le Niacinamide à 4% et la Glycérine, concentrée à 30%, dans une texture haute-cosméticité permettant de reprendre son activité immédiatement après application.</p>
+<p>Mains abîmées, sur-sollicitées.<br />Usage domestique et professionnel.<br />Tolérance testée sur peaux sensibles à tendance atopique ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875766326</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/da71cd32dace642514c6c848589f68e16305664431e071f388023368d5d1e069 ]]></g:image_link>
+<g:product_type><![CDATA[ CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay Déodorant stick 40ml ]]></title>
+<g:id>bbba4193-b16e-4769-9c6c-e3f4586a40e6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay déodorant stick 40ml?bbba4193-b16e-4769-9c6c-e3f4586a40e6 ]]></link>
+<g:price><![CDATA[ 960.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Enrichi en perlite ultra absorbante pour lutter contre l'humidité, pidolate de zinc pour neutraliser les odeurs et allantoïne apaisante.</p>
+<p>Formulation physiologique : agents sélectionés pour une tolérance optimale.</p>
+<p>Sans sels d'aluminium, sans alcool, sans colorant et sans paraben.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872412134</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6d96ad054df587406d5dccc7be0bff717a0dd2d37e3f85755a7814efe2bb0c76 ]]></g:image_link>
+<g:product_type><![CDATA[ DEODORANT  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay Lipikar huile lavante ap+ 400ml ]]></title>
+<g:id>0940b89c-3576-41de-b566-3e9cf3465f5c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay lipikar huile lavante ap+ 400ml?0940b89c-3576-41de-b566-3e9cf3465f5c ]]></link>
+<g:price><![CDATA[ 1398.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Lipikar Huile Lavante AP+ 400 ml est une huile qui apaise les sensations de démangeaison, du nourrisson à l'adulte.<br />Cette base lavante douce agit sur les 3 facteurs déterminants des peaux sèches à tendance à l'eczéma atopique.<br />Sa formule est enrichie en niacinamide apaisant. Elle a été élaborée avec un minimum d'ingrédients, sélectionnés pour leur efficacité, leur tolérance au pH physiologique et pour minimiser les risques d'allergies. Elle convient aux zones intimes, ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875656764</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/630903214c4d9cd34a5a9cf5663429e418eacd2d62ce8d8d7c94890b1078c74c ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay cicaplast lavant b5 gel moussant 200ml ]]></title>
+<g:id>55930966-8354-4adc-ac11-560f35259b99</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay cicaplast lavant b5 gel moussant 200ml?55930966-8354-4adc-ac11-560f35259b99 ]]></link>
+<g:price><![CDATA[ 1060.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Zones cutanées irritées ou fragilisées par un état de sécheresse.<br />Pour contribuer à une réparation cutanée de qualité, cicaplast lavant b5 contient:<br />• des agents antibactériens [cuivre - zinc - manganèse] qui assainissent la peau sans altérer son équilibre naturel.<br />• du [panthénol] concentré à 5%, actif connu pour ses propriétés réparatrices et apaisantes.</p>
+<p>ph physiologique. Ne pique pas les yeux. Sans parfum.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875548519</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/60e25e02ac976516a32978cf5f1ca2d38cbfe58f5083ca38fbe7dade2bc7a878 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay déodorant 48h peaux sensibles 150ml ]]></title>
+<g:id>52c88f8d-5e6f-487d-a415-aa34bc1dcbe3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay déodorant 48h peaux sensibles 150ml?52c88f8d-5e6f-487d-a415-aa34bc1dcbe3 ]]></link>
+<g:price><![CDATA[ 790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Convient même pour les adolescents à partir de 13 ans.<br />Adapté aux aisselles sensibles et pour un usage après rasage.</p>
+<p>Efficacité anti odeur anti humidité 48h*<br />Sans alcool (éthanol).<br />A l’allantoïne apaisante et à l’oxyde de magnésium, un actif d’origine minéral pour une efficacité anti-odeur, comparable aux sels d’aluminium.</p>
+<p>*48h: test sensoriel</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872412141</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5dcfde02355f0553ff5fa65816431a50f868824af2715254e186ff103c93fdd5 ]]></g:image_link>
+<g:product_type><![CDATA[ DEODORANT  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay eau thermale 150ML ]]></title>
+<g:id>2de58ae4-ce19-4faa-9a85-3f36d6462311</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay eau thermale 150ml?2de58ae4-ce19-4faa-9a85-3f36d6462311 ]]></link>
+<g:price><![CDATA[ 599.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L'eau thermale de la Roche Posay apaise, décongestionne et contribue à prévenir le vieillissement cutané.</p>
+<p>Soin essentiel des peaux sensibles, elle apaise les peaux passagèrement irritées par des agressions extérieures (soleil, traitements dermatologiques).</p>
+<p>Charte stricte de formulation pour minimiser les risques d'intolérances.</p>
+<p>L'association unique de sels minéraux et oligo-éléments, dont le Sélénium confère à l'eau thermale de La Roche-Posay des propriétés anti-oxydantes ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433422404397</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/93f8009a26ec96b470b45eea0123e7c1d7905bf29af8e31db750cf93fbbfd745 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay effaclar A.I correcteur imperfections locales 15ml ]]></title>
+<g:id>72cc1f54-2626-4d10-ad7f-1c6c978eb34c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay effaclar a.i correcteur imperfections locales 15ml?72cc1f54-2626-4d10-ad7f-1c6c978eb34c ]]></link>
+<g:price><![CDATA[ 975.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Eruptions cutanées locales des peaux grasses à imperfections.<br />Soin local intensif qui purge en profondeur l'imperfection pour accélérer sa résorption et prévenir les marques résiduelles : <br />- le niacinamide stoppe l’évolution de la poussée,<br />- l’association piroctone olamine / glycacil épure le foyer bactérien pour résorber l’imperfection,<br />- le lha micro-exfoliant et l’eau thermale de la roche-posay, réparatrice, activent le processus de régénération de la peau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875609593</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ea5f41e077ad9aaf560f312df66db8bca2768836c387a28f2f9b6a19f3a3f15c ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay hyalu b5 sérum correction anti-ride 30ml ]]></title>
+<g:id>a7717d9f-cb75-41e7-8b2d-baf0c14eff5b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay hyalu b5 sérum correction anti-ride 30ml?a7717d9f-cb75-41e7-8b2d-baf0c14eff5b ]]></link>
+<g:price><![CDATA[ 3590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Rides, perte de volume et d’élasticité, peau terne et fatiguée.<br />Une formule régénérante unique, alliant deux types d’acides hyaluroniques purs, vitamine b5 et madécassoside, pour repulper, réparer la barrière cutanée et favoriser la régénération de la peau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875583626</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/21b37b5482076a717bb76885128fd8cddf713c49104f4d07b7d438adf9e5b4ce ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay hydraphase intense sérum 30ml ]]></title>
+<g:id>6ec06a16-79f3-4fbc-97f2-7de6bd16fd8b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay hydraphase intense sérum 30ml?6ec06a16-79f3-4fbc-97f2-7de6bd16fd8b ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Hydraphase intense sérum bénéficie d'une formule concentrée en ingrédients hydratants hautement performants.</p>
+<p>Le nouveau serum hydraphase intense des laboratoires la roche posay est destiné aux peaux sensibles déshydratées du visage.</p>
+<p>Avec sa texture gel fondante, fraîche et non grasse et sans paraben, la roche posay hydraphase intense serum rend la peau douce et réhydratée et lisse les stries de déshydratation.</p>
+<p>Hydratation +24% et ridules -81% avec ce soin qui procure une  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872413353</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0f621f6c55c54b945ee45379de70b034b8d695478c8b0989fadc54190f6e6d57 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay hydraphase intense yeux 15ml ]]></title>
+<g:id>09a782ba-aaa7-4b46-9294-f1fb78146469</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay hydraphase intense yeux 15ml?09a782ba-aaa7-4b46-9294-f1fb78146469 ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Réhydratant intensif anti-poches. Contour déshydraté des yeux sensibles. Poches et paupières gonflées.</p>
+<p>Une efficacité hydratante intensive et ciblée, grâce à l'association de hyaluronate de sodium et de glycérine, pour lisser les ridules de déshydratation.</p>
+<p>Une action sur les poches et les paupières gonflées grâce à l'association de caféine drainante et d'eau thermale de la roche-posay décongestionnante, optimisée par une gestuelle d'application originale.</p>
+<p>La peau est réhy ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872412646</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/254d09234d2e97a6b282994665d5ba1e59f2f4509b7410200b3395f2adf27e95 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay kerium shampoing pellicules grasses 200ml ]]></title>
+<g:id>9307127d-8bb5-4f46-829a-66561165646a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay kerium shampoing pellicules grasses 200ml?9307127d-8bb5-4f46-829a-66561165646a ]]></link>
+<g:price><![CDATA[ 1299.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Elimination précise et visible des pellicules grasses.<br />Restaure l'équilibre physiologique du cuir chevelu.</p>
+<p>Le lha™ exerce une micro-exfoliation fine et intense pour éliminer les pellicules et réguler la desquamation.<br />Le complexe assainissant purifie le cuir chevelu et s'oppose à la formation des pellicules.<br />Le zinc pca contrôle la sécrétion de sébum.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433422407299</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6733becd581465aa4509d62a74e6cce80e4ef1583a77b2df6278c595bb7b0738 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay lipikar syndet ap+ crème lavant relipidante 200ml ]]></title>
+<g:id>8ee4e8cd-cf25-46ec-b773-aac8363388cb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay lipikar syndet ap+ crème lavant relipidante 200ml?8ee4e8cd-cf25-46ec-b773-aac8363388cb ]]></link>
+<g:price><![CDATA[ 899.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Peaux sensibles, très sèches, irritées et sujettes aux sensations de démangeaisons, génératrices de grattage. Sécheresses sévères du nourrisson, de l'enfant et de l'adulte. Dès la naissance*.</p>
+<p>Peaux à tendance à l'eczéma atopique ou allergique (allergènes de contact de la batterie de standard européenne). Convient également pour l’hygiène du cuir chevelu et des croûtes de lait. </p>
+<p>Lipikar syndet ap+ est une base lavante ultra-douce qui agit sur les 2 facteurs déterminants d'une pea ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875537308</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/69d6d4d2a191961be1787d46f2a1e77e67f5d5703136a2627b9a86482a6d35e1 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay nutritic intense crème nutri-reconstituante 50ml ]]></title>
+<g:id>bf411d4f-b438-4822-bef5-db4f45e3498f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay nutritic intense crème nutri-reconstituante 50ml?bf411d4f-b438-4822-bef5-db4f45e3498f ]]></link>
+<g:price><![CDATA[ 1785.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">Tiraillements et rigidité permanents, peau très fragile, squames. Texture crème surfine pour imprégner immédiatement la peau. Biolipides 5% pour reconstituer durablement la barrière cutanée.</p>
+<p class="p4">Transforme les 4 signes de la peau très sèche : tiraillements, fragilité, rigidité, rugosité.</p>
+<p class="p4">Protégée des agressions extérieures, la surface cutanée se régénère.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872413629</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/145cd49871ed0c85ff96ec83524ae3a8f1255b5e666b34e033b08d8daa711317 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay nutritic intense riche 50ML ]]></title>
+<g:id>b511f363-b0a3-48fa-88a9-9a232d2ea03e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay nutritic intense riche 50ml?b511f363-b0a3-48fa-88a9-9a232d2ea03e ]]></link>
+<g:price><![CDATA[ 2230.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1">Le soin Nutritic intense Riche est une crème nutri-reconstituante profonde.</p>
+<p class="p1">Elle soulage le ressenti du tiraillement douloureux des peaux très sèches.</p>
+<p class="p1"><span class="s1"> </span>La crème Roche-Posay Nutritic Intense Riche répare les peaux très sèches et sensibles.</p>
+<p class="p1">Elle réconforte, assouplit et apaise la peau.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872413575</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/885215c8053782a1809a0f3ebb3b1d4915cf4f1c3928cd9d2bcbe5c0335742c4 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay nutritic lèvres 4.7ml x2 ]]></title>
+<g:id>a773b814-0df9-4139-84b6-3bae204e777c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay nutritic lèvres 4.7ml x2?a773b814-0df9-4139-84b6-3bae204e777c ]]></link>
+<g:price><![CDATA[ 790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Nutritic lèvres est un soin pour les lèvres desséchées par les agressions extérieures, le froid, le vent.</p>
+<p>Protection et réparation grâce aux Biolipids et à la Céramide 5.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433425003467</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2c74dc188c6ee4c95cd58db6c648bf96670b5de5841224520573a7651b200dff ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay toleriane crayon douceur brun ]]></title>
+<g:id>e9b2ed27-bb07-4add-9abc-c0281f30301e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay toleriane crayon douceur brun?e9b2ed27-bb07-4add-9abc-c0281f30301e ]]></link>
+<g:price><![CDATA[ 1115.00 EUR ]]></g:price>
+<description><![CDATA[ <p>For sensitive eyes and contact lens wearers.<br />Yeux sensibles et porteurs de lentilles.<br />Avec sa mine ultra émolliente, ce crayon mine dessine sur la paupière un trait doux, intense et modulable. Tenue anti-migration.<br />Disponible en 2 teintes.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337872410154</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5ec105cfdc88c24a5b8968d798d0018e8b37c30a3b49ac6bc74f9c724b77e4b0 ]]></g:image_link>
+<g:product_type><![CDATA[ MAQUILLAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay toleriane mascara waterproof noir  ]]></title>
+<g:id>e0c81482-ac3c-4a38-9f89-046c2b5b4c50</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay toleriane mascara waterproof noir ?e0c81482-ac3c-4a38-9f89-046c2b5b4c50 ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Yeux sensibles et porteurs de lentilles.<br />Sa formule exclusive associe une tenue extrême (résiste à la baignade, à la transpiration, aux larmes…) à un démaquillage facile, réduisant les frottements et ainsi les irritations des yeux sensibles. Sa brosse assure un volume intense. Disponible en 1 teinte: noir.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875632676</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/15fb41de25bb56525096842be4fbfa26f40d918fe86c5f77d7bfbbbf0cdd053c ]]></g:image_link>
+<g:product_type><![CDATA[ MAQUILLAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay toleriane ultra démaquillant 30x5ml ]]></title>
+<g:id>ce524af5-4f3b-4cd8-a62b-50b1f55cd7fa</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay toleriane ultra démaquillant 30x5ml?ce524af5-4f3b-4cd8-a62b-50b1f55cd7fa ]]></link>
+<g:price><![CDATA[ 1395.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La roche posay tolériane démaquillant convient aux peaux ultra-sensibles ou allergiques, yeux sensibles ou porteurs de lentilles.</p>
+<p>Sa formule au hyaluronate de sodium, traditionnellement utilisé en chirurgie ophtalmique, solubilise instantanément le maquillage. </p>
+<p>Apaise immédiatement et restaure le confort cutané.</p>
+<p>Sa haute tolérance est assurée par son conditionnement en monodoses stériles et sa formulation ultra-épurée.<br />Sans conservateur, sans paraben, sans parfum, sa ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433422400047</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d9b59ccb4b3548a68c59f56588b6f8a1a13b4d6c206f3b42b0f993432844f2bc ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay tolériane vernis silicium framboise 6ml ]]></title>
+<g:id>9d4d2ea2-4b1b-4889-8682-0509749fc077</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay tolériane vernis silicium framboise 6ml?9d4d2ea2-4b1b-4889-8682-0509749fc077 ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Un vernis à ongles conçu comme un véritable soin pour protéger et renforcer les ongles jour après jour.</p>
+<p>Ongles fragiles<br />Soin fortifiant enrichi en Mexoryl XL et en silice.<br />&gt; Protège les ongles des agressions UV et de la ternissure des couleurs.<br />&gt; Renforce et fortifie l’ongle durablement.<br />Formulé sans formol, sans toluène, sans colophane,.<br />Billes mélangeuses sans nickel.<br />Pigments anti-migration pour respecter la couleur naturelle de l’ongle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0000030076808</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b0e6d3c73d405cabf06b996ffb10c4d2fa88ef66f738071dd5bb55ab22ed98c8 ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche posay Effaclar lotion astringente 200ml ]]></title>
+<g:id>f2b59e92-f20f-480d-b3be-0ac323ba030e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche posay effaclar lotion astringente 200ml?f2b59e92-f20f-480d-b3be-0ac323ba030e ]]></link>
+<g:price><![CDATA[ 1130.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Effaclar lotion astringente convient particulièrement aux peaux grasses à imperfections, ayant des pores dilatés et un grain de peau irrégulier. </p>
+<p>Sa formule, contenant du lha micro-exfoliant associé à des actifs séborégulateurs, aide à réduire immédiatement la taille des pores et à empêcher leur obstruction.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3433422408159</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/271148752143828938064276a94b6cc18bde148b7f5d83107ddd1b7bdd22c53b ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La roche-posay hyalu b5 riche soin anti-rides  riche 40ml ]]></title>
+<g:id>8a63f5c8-d87f-4001-9836-a2e2f30eed26</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-roche-posay hyalu b5 riche soin anti-rides  riche 40ml?8a63f5c8-d87f-4001-9836-a2e2f30eed26 ]]></link>
+<g:price><![CDATA[ 2890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Roche-Posay Hyalu B5 Riche Soin Anti-Rides Réparateur Repulpant 40 ml est une crème riche repulpante indiquée pour les rides, la perte de volume et d'élasticité des peaux sèches à très sèches. Sa formule unique intensément hydratante et nourrissante, allie deux types d'acide hyaluronique pur et de la vitamine B5. Elle repulpe et répare la peau sèche, en renforçant sa barrière cutanée. La peau retrouve sa souplesse et paraît plus lisse et rebondie. Les rides et ridules sont visiblement rédu ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3337875673273</g:gtin>
+<g:brand><![CDATA[ LA ROCHE POSAY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a9918e9b79e0ae259e8a084cd492ad00ec985ac10747027ccc3eccc8fbc214f7 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ La rosée Crème Corps Hydratante 200 ml ]]></title>
+<g:id>ff1d92eb-db35-4e8d-9db1-737f7d11b43f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/la-rosée crème corps hydratante 200 ml?ff1d92eb-db35-4e8d-9db1-737f7d11b43f ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La rosée crème corps hydratante visage au beurre de karité bio est le soin idéal pour vous hydrater de façon optimale. Votre peau est réconfortée, nourrie et apaisée, pour toute la journée.<br />La texture est onctueuse et non grasse. Elle ne colle pas, vous pouvez vous habiller directement après application ! Une légère odeur de fleur d’oranger et de rose enveloppe le corps d’un voile de douceur.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3770000717037</g:gtin>
+<g:brand><![CDATA[ LA ROSEE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/069b2cccc48140e48bffcd4d6c005203f3ef7ace0bbc7aac2a8493b8e9defa94 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ LaDrome Ginseng de Sibérie Extrait de plante fraîche 50 ml ]]></title>
+<g:id>a82e3016-d271-4dce-9987-71359eb7a781</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladrome-ginseng de sibérie extrait de plante fraîche 50 ml?a82e3016-d271-4dce-9987-71359eb7a781 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li>
+<p><span>EXTRAIT DE GINSENG DE SIBERIE BIO 50ML  LADROME </span></p>
+</li>
+<li>
+<p><span>également appelé Eleuthérocoque, contribue à l’énergie mentale et physique, notamment en cas de faiblesse, de fatigue ou de surmenage. Il favorise également une circulation normale, notamment au niveau cérébral.</span></p>
+</li>
+</ul> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330011492</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/866ed55edd066ace732380f9153ff70a1ac8fbf8c365715800c92745e9bea211 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laboratoires DR J.Lefèvre Huile de Haarlem ]]></title>
+<g:id>a58c5afc-9128-4052-97d9-d25660893410</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laboratoires-dr j.lefèvre huile de haarlem?a58c5afc-9128-4052-97d9-d25660893410 ]]></link>
+<g:price><![CDATA[ 1120.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Grâce à sa formulation unique, le complément alimentaire Huile de Haarlem est indiqué en cas de fatigue, de problèmes respiratoires ou de troubles hépatiques.</p><p>&nbsp;</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401541368319</g:gtin>
+<g:brand><![CDATA[ LABORATOIRES DU DR J. LEFEVRE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/24b5c98f4b25fd626e6aafdb48dcf3bec061159315cd4d75d0bd91c213fc4e62 ]]></g:image_link>
+<g:product_type><![CDATA[ Médicament > Nez, gorge, oreilles et yeux > Fatigue / Sommeil / Détente ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laboratoires De Biarritz Solaires Crème Bébé et Enfant SPF50+ Bio 100ml ]]></title>
+<g:id>129be449-3936-4df3-bc99-98cb1aad3af8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laboratoires-de biarritz solaires crème bébé et enfant spf50+ bio 100ml?129be449-3936-4df3-bc99-98cb1aad3af8 ]]></link>
+<g:price><![CDATA[ 2690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Afin de préserver le capital soleil de votre enfant, cette crème solaire SPF50+ vous offre une protection cellulaire optimale.<br><br>Pour éviter les effets néfastes des UVA et UVB, il est important de bien protéger la peau de votre enfant.<br><br>Et c'est avec la crème des Laboratoires de Biarritz que vous allez trouver la solution, cette crème allie efficacité et haute tolérance, avec la présence d'écrans minéraux dans sa formule.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760211483784</g:gtin>
+<g:brand><![CDATA[ LABORATOIRE DE BIARRITZ ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a30ac63979d8dae3a043fda30e06847622e0aa95540d3e3b21c84c0ddde82aff ]]></g:image_link>
+<g:product_type><![CDATA[ Bébé > SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laboratoires de Biarritz Spray Solaire SPF50+ spray 100 ml ]]></title>
+<g:id>760e7286-222e-4972-b4eb-0a17661423f8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laboratoires-de biarritz spray solaire spf50+ spray 100 ml?760e7286-222e-4972-b4eb-0a17661423f8 ]]></link>
+<g:price><![CDATA[ 2180.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le&nbsp;spray solaire SPF50+ des Laboratoires de Biarritz se compose d'actifs puissants permettant d'assurer une protection optimale de la peau du visage et du corps. L'extrait breveté d'Algue Rouge offre ses propriétés antioxydantes à la peau ; les écrans minéraux la protège des UVA et des UVB responsables des coups de soleil et du vieillissement prématuré ; l'huile de noix de coco Bio contribue au confort, à l'hydratation et à la souplesse de la peau tandis que l'huile de tournesol Bio stim ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760211483821</g:gtin>
+<g:brand><![CDATA[ LABORATOIRE DE BIARRITZ ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/477cc7b5fb43c66c7977bbcb7cbfd33aa8698715ee8d59d7a34ddad3458efc49 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lactacyd femina soin intime lavant 400ml ]]></title>
+<g:id>820cce94-74bf-437a-a359-2d43f5544bbe</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lactacyd-femina soin intime lavant 400ml?820cce94-74bf-437a-a359-2d43f5544bbe ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span><span>Cette émulsion lavante douce n</span>ettoie en douceur tout en protégeant contre les petits désagréments de la zone intime (petites irritations, démangeaisons).</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3094904871368</g:gtin>
+<g:brand><![CDATA[ OMEGA PHARMA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4d246a0ea03e768c08b54c3d8849a638c4e10268a99ca0628de2bad3c5d06400 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIÈNE ET SOINS INTIMES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Curcuma extrait de plantes fraîches bio 50 ml ]]></title>
+<g:id>1f690047-22ab-414a-b102-06f22ea6e986</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me curcuma extrait de plantes fraîches bio 50 ml?1f690047-22ab-414a-b102-06f22ea6e986 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="i4c-draggable-container" style="width:0px;height:0px;">
+<div class="resolved"></div>
+</div>
+<p><span>Le Curcuma aide à maintenir la santé des os et des articulations. </span></p>
+<p><span>En tant qu’antioxydant naturel, le Curcuma aide à préserver la bonne santé du foie et contribue au confort digestif. </span></p>
+<p><span>Il soutient également le système immunitaire et favorise la résistance de l’organisme..</span></p>
+<p><span><span>Nom latin : </span><i>Curcuma longa</i></span></p>
+ ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330126622</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/eeb3cbffa1f3fe1a8d98d684593b6e880cb9de5dcb4d2a217c8f1278636d891e ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Bio Alchémille 2 50 ml ]]></title>
+<g:id>f0338dff-7c9f-4970-b267-e7446a4a8b73</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante bio alchémille 2 50 ml?f0338dff-7c9f-4970-b267-e7446a4a8b73 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Bio Alchémille 50 ml est un complément alimentaire qui contribue à l'équilibre féminin. Il favorise le confort avant et pendant le cycle menstruel.</p>
+<p>Partie de la plante : partie aérienne fleurie.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330010570</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dc9bf214a83b2d6fdeb32c551858b512d9101fe42df13d20e64e6a05d14b6307 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Bio Alchémille 50 ml ]]></title>
+<g:id>6aa36b17-9d8b-466c-8e53-60d8173db390</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante bio alchémille 50 ml?6aa36b17-9d8b-466c-8e53-60d8173db390 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="titre_zone_desc">DESCRIPTION</div>
+<div class="content_zone_desc tabcontent">
+<div id="type_info_prio_11_1">
+<p>Ladrôme Extrait de Plante Bio Alchémille 50 ml est un complément alimentaire qui contribue à l'équilibre féminin. Il favorise le confort avant et pendant le cycle menstruel.</p>
+<p>Partie de la plante : partie aérienne fleurie.</p>
+</div>
+</div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330011379</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dc9bf214a83b2d6fdeb32c551858b512d9101fe42df13d20e64e6a05d14b6307 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Bio Chardon Marie 50 ml ]]></title>
+<g:id>8a3e6b34-195a-485a-934a-c7f6f09709e1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante bio chardon marie 50 ml?8a3e6b34-195a-485a-934a-c7f6f09709e1 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Bio Chardon Marie 50 ml est un complément alimentaire qui favorise la digestion et aide à entretenir le bon fonctionnement du foie.</p>
+<p>Partie de la plante : graine.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330011089</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/899b19544601d8da5b6638484e83c750965b998b691302bfc88271ce90236b69 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Bio Fucus 50 ml ]]></title>
+<g:id>0a9d71f5-6920-4969-a334-150090550180</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante bio fucus 50 ml?0a9d71f5-6920-4969-a334-150090550180 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Bio Fucus 50 ml est un complément alimentaire qui est un très bon complément à un régime alimentaire varié et équilibré. Il est traditionnellement utilisé pour son action minceur et pour aider au contrôle et au maintien d'un poids santé.</p>
+<p>Partie de la plante : thalle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330100356</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/97c38521f264d346a18a5860a5b648e3f668c7eb3846e7230c40adbdfd108305 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Bio Gingembre 50 ml ]]></title>
+<g:id>48a55c17-20a9-496c-a8ab-db408bb71ae7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante bio gingembre 50 ml?48a55c17-20a9-496c-a8ab-db408bb71ae7 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Bio Gingembre 50 ml est un complément alimentaire qui contribue à une bonne digestion. Il aide à prévenir les nausées liées au transport. Il contribue également au bien-être mental et aide à conserver sa vitalité, notamment en cas de fatigue.</p>
+<p>Partie de la plante : rhizome.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330026113</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d3a9df3c456f911f4c8b479cdde5e8feee55e344d3cbf663e91d08a39e3e6b88 ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Bio Ginseng 50 ml ]]></title>
+<g:id>7bffa8ab-4bdd-4a56-9354-5fa5af6e4c6a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante bio ginseng 50 ml?7bffa8ab-4bdd-4a56-9354-5fa5af6e4c6a ]]></link>
+<g:price><![CDATA[ 775.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Bio Ginseng 50 ml est un complément alimentaire qui contribue à favoriser la vitalité et au bien-être physique et mental. Il aide à maintenir l'endurance et la résistance de l'organisme face à un stress ou une fatigue temporaire.</p>
+<p>Partie de la plante : racine.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330038499</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/83ee9c2cd12bfc9946444db852f2fa75ca495785e905a753cf3f2360cf71170c ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Bio Griffe du Diable 50 ml ]]></title>
+<g:id>52e8263d-3815-45cd-ad16-9b82669ff72c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante bio griffe du diable 50 ml?52e8263d-3815-45cd-ad16-9b82669ff72c ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Bio Griffe du Diable 50 ml est un complément alimentaire qui contribue à favoriser le bon fonctionnement et la souplesse des articulations.</p>
+<p>Partie de la plante : racine.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330029268</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dd949d05d61f7f33b1703d158ab5e187e6ed56a09dafcc3f8dcf340469dc5af5 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Bio Valériane Officinale 50 ml ]]></title>
+<g:id>2680cbce-b120-4528-9209-31035127154e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante bio valériane officinale 50 ml?2680cbce-b120-4528-9209-31035127154e ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Bio Valériane Officinale 50 ml est un complément alimentaire qui favorise la relaxation et aide à faire face, avec sérénité, au stress de la vie moderne. La Valériane aide généralement à conserver un sommeil naturel et de qualité.</p>
+<p>Partie de la plante : racine.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330014059</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e4168085f80b241ebc052c3d57dedc188869dcc97b6d31d01d864c0f515671a8 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Achillée Millefeuille 50 ml ]]></title>
+<g:id>aa60ccd8-d236-4c77-aa4a-e590df26f96c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio achillée millefeuille 50 ml?aa60ccd8-d236-4c77-aa4a-e590df26f96c ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Achillée Millefeuille 50 ml est un complément alimentaire qui favorise le confort féminin. Il aide également à maintenir une circulation normale.</p>
+<p>Partie de la plante : partie aérienne fleurie.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330010426</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c1e05d1c36f49e8f79c889118fb4031b50c93f41e201d8b5f719a3804d01173e ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Ail des Ours 50 ml ]]></title>
+<g:id>a2e4faeb-972d-45a0-a1f7-de297dd6a754</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio ail des ours 50 ml?a2e4faeb-972d-45a0-a1f7-de297dd6a754 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Ail des Ours 50 ml est un complément alimentaire qui contribue au bon fonctionnement du coeur et des vaisseaux sanguins.</p>
+<p>Partie de la plante : feuille, fleur et bulbe.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330010631</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a297c30c3d7da0a7f6cd0c2471fd05040fd961dc23e0103e900926ca46ae12eb ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Aubépine 50 ml ]]></title>
+<g:id>821f6cc0-c19e-4ef4-a0ba-34cd48a9e683</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio aubépine 50 ml?821f6cc0-c19e-4ef4-a0ba-34cd48a9e683 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Aubépine 50 ml est un complément alimentaire qui contribue à favoriser une bonne circulation et à aider également à se détendre et se calmer.</p>
+<p>Partie de plante : sommité fleurie et fruit.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330011317</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/764c0907e4965a212718611f3c786681658b3df66976da43ff0ffb24d1e12ecb ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Avoine 50 ml ]]></title>
+<g:id>1f2c4d3a-8d3b-47e5-baa5-7dd7741761e8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio avoine 50 ml?1f2c4d3a-8d3b-47e5-baa5-7dd7741761e8 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Avoine 50 ml est un complément alimentaire qui contribue à la détente et favorise un sommeil bon et sain.</p>
+<p>Partie de la plante : partie aérienne.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330018682</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/efae105f31ae30f1bc4cdca3d4fd77111442e86be9362a396cf33b9834def842 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Bourse à Pasteur 50 ml ]]></title>
+<g:id>139666a4-525a-4117-ae46-a11170aa0718</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio bourse à pasteur 50 ml?139666a4-525a-4117-ae46-a11170aa0718 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Bourse à Pasteur 50 ml est un complément alimentaire qui contribue au bien-être féminin au cours du cycle menstruel.</p>
+<p>Partie de la plante : partie aérienne fleurie.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330011027</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b5f1addc3a5ff71792c4b3c806125237cf41d3ae6066e0ec92fa38d7810475de ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Cassis 50 ml ]]></title>
+<g:id>8b9ef343-0eb3-42c1-a940-c3ede85e450f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio cassis 50 ml?8b9ef343-0eb3-42c1-a940-c3ede85e450f ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Cassis 50 ml est un complément alimentaire qui contribue à faciliter l'élimination rénale de l'eau et la mobilité des articulations.</p>
+<p>Partie de la plante : feuille.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330013250</g:gtin>
+<g:brand><![CDATA[ LADROME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cb24561fd2835247a826c23de268f07d1399b4776dfd2a40390b05d5632c28db ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Echinacée Pourpre 50 ml ]]></title>
+<g:id>521aa623-db52-4b2d-9bd8-c3f3dd6ad4b4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio echinacée pourpre 50 ml?521aa623-db52-4b2d-9bd8-c3f3dd6ad4b4 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Echinacée Pourpre 50 ml est un complément alimentaire qui contribue à stimuler les défenses naturelles de l'organisme et aide ainsi à passer l'hiver en bonne forme.</p>
+<p>Partie de la plante : plante entière fleurie.</p>
+<p>Origine : France.</p>
+<p>Principes actifs : dérivés phénoliques.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330011461</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/748c8f3dd069d1e6358b9ab762d5c042b2970bc4be6b3ecc7bc33093a4c4fc3b ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Epilobe 50 ml ]]></title>
+<g:id>2b10738a-cb80-40c8-a2eb-1aadacc59c50</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio epilobe 50 ml?2b10738a-cb80-40c8-a2eb-1aadacc59c50 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Epilobe 50 ml est un complément alimentaire qui contribue au confort urinaire chez l'homme d'âge mûr.</p>
+<p>Partie de la plante : partie aérienne fleurie.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330011522</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ea1afbfcd0de572a1aef4cb77a96fa09fa378fe7ffcff0fd84382bd0d78ff35e ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Ginkgo 50 ml ]]></title>
+<g:id>48bcbc11-4c60-406f-becb-de48a4e752aa</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio ginkgo 50 ml?48bcbc11-4c60-406f-becb-de48a4e752aa ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Ginkgo 50 ml est un complément alimentaire qui est réputé pour ses vertus positives sur la mémoire. Il aide à maintenir de bonnes fonctions intellectuelles et favorise la vivacité d'esprit, notamment chez les personnes âgées.</p>
+<p>Partie de la plante : feuille.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330011911</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5b0b12ec7490dc14e46aeed8b84577aa2150384fb756070827cada5cb84a7735 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Grande Ortie 50 ml ]]></title>
+<g:id>dbe9b85e-48fd-4e5c-acc2-133ce20abb7b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio grande ortie 50 ml?dbe9b85e-48fd-4e5c-acc2-133ce20abb7b ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Grande Ortie 50 ml est un complément alimentaire qui contribue à renforcer les ongles et les cheveux. Il contribue également au maintien d'une peau nette, notamment en cas de peaux à problèmes.</p>
+<p>Partie de la plante : partie aérienne.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330013991</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f4208530c0f384e3ae3c2ffe4a1e845a68cf9175b2ca6be21fac85ab28ef0da5 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Marronnier d'Inde 50 ml ]]></title>
+<g:id>2ca65094-9496-4aff-aa0e-e06c428eebd7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio marronnier d'inde 50 ml?2ca65094-9496-4aff-aa0e-e06c428eebd7 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Marronnier d'Inde 50 ml est un complément alimentaire qui contribue à aider à soutenir la circulation en cas de sensation de jambes lourdes et fatiguées.</p>
+<p>Partie de la plante : graine.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330010488</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4543a6696d837f1213ebb92971ad639010dcef9ebf69f2f5d156d7064236c626 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Millepertuis 50 ml ]]></title>
+<g:id>9199bfe5-9d8f-4f3e-8509-7f81af324443</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio millepertuis 50 ml?9199bfe5-9d8f-4f3e-8509-7f81af324443 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Millepertuis 50 ml est un complément alimentaire qui exerce un effet positif sur l'humeur et le moral et favorise un sommeil de qualité.</p>
+<p>Partie de la plante : sommité fleurie.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330012123</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/277ca95c93400e7807f4719e1bab62d16ef3bef1c258b6dabbc1b9ee90748c20 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Mélisse Officinale 50 ml ]]></title>
+<g:id>1dd9074f-beb4-4fb4-b8d3-edecedae1b57</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio mélisse officinale 50 ml?1dd9074f-beb4-4fb4-b8d3-edecedae1b57 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Mélisse Officinale 50 ml est un complément alimentaire qui contribue à favoriser la relaxation et à aider à conserver un sommeil sain et réparateur grâce aux vertus apaisantes et calmantes de la Mélisse.</p>
+<p>Partie de la plante : partie aérienne.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330012536</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9ac4c0e983e4b1f6c278e042f08128c36d9750a9188fc76d2ec5f963bb24484a ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Passiflore 50 ml ]]></title>
+<g:id>fe83a0ab-eaee-45a7-b578-99a2c3904ecb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio passiflore 50 ml?fe83a0ab-eaee-45a7-b578-99a2c3904ecb ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Passiflore 50 ml est un complément alimentaire qui contribue au bien-être et à la détente. Il aide ainsi à conserver son calme et favoriser un sommeil bon et sain.</p>
+<p>Partie de la plante : partie aérienne fleurie.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330012802</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ba24fdec1b20889d9985466e2ce6ec60a7c362d8ffc66c246ea653318a2f2570 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Pavot Jaune de Californie 50 ml ]]></title>
+<g:id>06d630fb-4ccc-4cea-842b-a3dc7a1f0882</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio pavot jaune de californie 50 ml?06d630fb-4ccc-4cea-842b-a3dc7a1f0882 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Pavot Jaune de Californie 50 ml est un complément alimentaire qui favorise la relaxation et aide à conserver un sommeil naturel de qualité.</p>
+<p>Partie de plante : partie aérienne fleurie.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330011584</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/aa93fd7cd5120c4f1f53e6fb142c9497b60a179adc704f8ef6ac917413362c8b ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Pin Sylvestre 50 ml ]]></title>
+<g:id>962b8d32-4c21-4172-a215-820e6b3de45b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio pin sylvestre 50 ml?962b8d32-4c21-4172-a215-820e6b3de45b ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Pin Sylvestre 50 ml est un complément alimentaire qui contribue à apaiser et à adoucir les voies respiratoires. Il aide à dégager le nez et à respirer plus librement.</p>
+<p>Partie de la plante : bourgeon.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330012895</g:gtin>
+<g:brand><![CDATA[ LADROME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9e23e34ee344ada8b8daa419a829227c4c4ee4c5ffa5e7de268e97f49d935303 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Pissenlit 50 ml ]]></title>
+<g:id>0d4ae750-4492-449e-bf87-c2754964e1c8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio pissenlit 50 ml?0d4ae750-4492-449e-bf87-c2754964e1c8 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Pissenlit 50 ml est un complément alimentaire qui contribue à la purification de l'organisme.</p>
+<p>Partie de la plante : plante entière fleurie.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330013816</g:gtin>
+<g:brand><![CDATA[ LADROME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/70bf383bb4d32668c4fce2829cd0e909f1f6932f487ca16503af2cb1af2f3ce8 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Radis Noir 50 ml ]]></title>
+<g:id>c150f480-97ed-457d-9688-bdc1aab7ddf9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio radis noir 50 ml?c150f480-97ed-457d-9688-bdc1aab7ddf9 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Radis Noir 50 ml est un complément alimentaire qui contribue à la détoxification hépatique.</p>
+<p>Partie de la plante : racine.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330013199</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6885a3d1894a988e2e9ec6b54bb2f21bde7e51162beace9beb9d214dff02daec ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Reine des Prés 50 ml ]]></title>
+<g:id>7d5da9d6-086b-47b6-bff8-c06bf47d7253</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio reine des prés 50 ml?7d5da9d6-086b-47b6-bff8-c06bf47d7253 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Reine des Prés 50 ml est un complément alimentaire qui contribue à favoriser le drainage des articulations. Il aide à maintenir le bon fonctionnement et la souplesse des articulations.</p>
+<p>Partie de la plante : sommité fleurie.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330013649</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1856e769f9cf91ea47c927e2e0fb4763e7c2ef56b697371fdfe1253c4dab9c35 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Sauge 50 ml ]]></title>
+<g:id>83f3bf61-f9c6-4313-a668-09bbecba7e14</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio sauge 50 ml?83f3bf61-f9c6-4313-a668-09bbecba7e14 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Sauge 50 ml est un complément alimentaire qui contribue à maintenir l'équilibre hormonal de la femme, au bien-être du retour d'âge et à renforcer les cheveux lorsque leur chute est liée à un déséquilibre hormonal. Il favorise également une bonne digestion.</p>
+<p>Partie de la plante : partie aérienne fleurie.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330013496</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e8a8907b4e048099604ccca0761588a7cfccecfc1ad135dcb9d51076d8a4f16d ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Extrait de Plante Fraîche Bio Thym 50 ml ]]></title>
+<g:id>3e8c480d-aeff-455a-a50c-f3f49a9d3087</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio thym 50 ml?3e8c480d-aeff-455a-a50c-f3f49a9d3087 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Extrait de Plante Fraîche Bio Sauge 50 ml est un complément alimentaire qui contribue à maintenir l'équilibre hormonal de la femme, au bien-être du retour d'âge et à renforcer les cheveux lorsque leur chute est liée à un déséquilibre hormonal. Il favorise également une bonne digestion.</p>
+<p>Partie de la plante : partie aérienne fleurie.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330013939</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e7a37e62116cdaccf35ee326b62310c166bea61edfb2ab9a94de70b4b147f629 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Propolis 20 pastilles adoucissantes ]]></title>
+<g:id>41dea540-71e0-443a-bce6-ea2c49007ff0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me propolis 20 pastilles adoucissantes?41dea540-71e0-443a-bce6-ea2c49007ff0 ]]></link>
+<g:price><![CDATA[ 550.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Pastilles adoucissantes et rafraichissantes à base d’extraits de propolis, de guimauve, aux effets apaisants pour la gorge, de fleurs d’hibiscus, qui renforce la résistance du corps et d’acérola , source de vitamine C naturelle, qui contribue au fonctionnement normal du système immunitaire.</span></p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330109922</g:gtin>
+<g:brand><![CDATA[ LADROME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8baa0fca143dcd13dcc35b3e8c950cfbcb19692414b477c69892ce43e314937c ]]></g:image_link>
+<g:product_type><![CDATA[ SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Propolis Gommes Eucalyptus Bio 45 g ]]></title>
+<g:id>4649f0cf-5665-403b-b8eb-f8ec52c4e9ce</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me propolis gommes eucalyptus bio 45 g?4649f0cf-5665-403b-b8eb-f8ec52c4e9ce ]]></link>
+<g:price><![CDATA[ 450.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Propolis Gommes Eucalyptus Bio 45 g sont des gommes certifiées biologiques, bienfaisantes et rafraîchissantes, à base de propolis et d'huile essentielle d'eucalyptus radié.</p>
+<p>Sans conservateur. Sans colorant.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330044537</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/91cdcb1c19b373619bbd757a1896e9d5f5986de42156e967a2fb51b1aa07ef2c ]]></g:image_link>
+<g:product_type><![CDATA[ SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Propolis Gommes Orange Bio 45 g ]]></title>
+<g:id>c3b570f7-f6df-4ec0-868f-e2b0bf0b296d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me propolis gommes orange bio 45 g?c3b570f7-f6df-4ec0-868f-e2b0bf0b296d ]]></link>
+<g:price><![CDATA[ 450.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Propolis Gommes Orange Bio 45 g sont des gommes certifiées biologiques, bienfaisantes et rafraîchissantes, à base de propolis et d'huile essentielle d'orange douce.</p>
+<p>Sans conservateur. Sans colorant.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330089804</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4e56b8aabe626609175d3b0d6b36cd70e6419cdedad87a46044f879a45c30b04 ]]></g:image_link>
+<g:product_type><![CDATA[ SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Propolis et Pépins de Pamplemousse Concentré Bio 50 ml ]]></title>
+<g:id>09c25fb0-433d-42b2-8506-caabbb2ad3b9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me propolis et pépins de pamplemousse concentré bio 50 ml?09c25fb0-433d-42b2-8506-caabbb2ad3b9 ]]></link>
+<g:price><![CDATA[ 985.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Propolis et Pépins de Pamplemousse Concentré Bio 50 ml est un complément alimentaire bio qui associe les bienfaits de la propolis et de l'extrait de pépins de pamplemousse.</p>
+<p>Ce complément alimentaire contient de l'extrait de Propolis qui est obtenu par macération à froid de la propolis dans de l'alcool biologique et de l'eau.</p>
+<p>Ce procédé permet ainsi d'obtenir un extrait de qualité, conforme à la Pharmacopée et riche en principes actifs.</p>
+<p>Formulé sans alcool, sans gl ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330103388</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/83fa15097489395772ac57cb20a873b41046b2786345d12ca0d1d8394b312f13 ]]></g:image_link>
+<g:product_type><![CDATA[ FORME - VITALITÉ ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Roll'on Été 10 ml ]]></title>
+<g:id>86b4998a-8ef5-4896-b44c-22d735701f28</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me roll'on Été 10 ml?86b4998a-8ef5-4896-b44c-22d735701f28 ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ladrôme Roll'on Été 10 ml à la citronnelle est un roll-on très pratique pour toute la famille en été.</p>
+<p>Composée de plusieurs huiles essentielles, la formule de ce roll-on est un répulsif pour insectes à l'odeur agréable.</p>
+<p>Très pratique, son petit format vous permet de l'emporter partout, en week-end, ou en vacances.</p>
+<p>Certifié biologique par Ecocert.</p>
+<p>100% du total des ingrédients sont issus de l'agriculture biologique.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330091128</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d8c40b39a741b72e76e1e5888d142544a76f94e96d04798bc833dbb0c6f0cdd9 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme Spray répulsif cutané moustiques et tiques - 50ml ]]></title>
+<g:id>d3e7c832-437d-4453-8aee-a357fddc2add</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me spray répulsif cutané moustiques et tiques - 50ml?d3e7c832-437d-4453-8aee-a357fddc2add ]]></link>
+<g:price><![CDATA[ 995.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Spray répulsif cutané moustiques et tiques</span><span> des Laboratoires Ladrôme, </span>2 en 1, il agit efficacement pour vous protéger contre les moustiques (en zone tempérée, infestée et tropicale) et contre les tiques.</p>
+<p>Également efficace contre les midges (petits moucherons) : Culicoides spp. (3h).</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330127940</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1c4f0627b3460a372469ad7c223d004546e42e649adc35cf629e7e8341049c78 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme diffuseur bambou pour huiles essentielles ]]></title>
+<g:id>8a5b9790-547f-471e-a796-ac8fbab20e72</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me diffuseur bambou pour huiles essentielles?8a5b9790-547f-471e-a796-ac8fbab20e72 ]]></link>
+<g:price><![CDATA[ 3860.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Présentation</strong><br />Le diffuseur ladrôme laboratoire dispose d'une technologie de diffusion par ultrasons à haute fréquence permet une dispersion immédiate des huiles essentielles dans l'air.</p>
+<p><strong>Les Bienfaits duDiffuseur pour huiles essentielles</strong><br />Le diffuseur Bambou ultrasonique ladrôme laboratoire permet une diffusion douce, sans aucun effet thermique et donc sans risque d'altérer les principes actifs des huiles essentielles. Vous pouvez ainsi profiter ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330112915</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/93339eca55becd57f5c5fe6c67aae1b535aaeb517986911a230d5a462bebba14 ]]></g:image_link>
+<g:product_type><![CDATA[ AROMATHÉRAPIE PRODUIT DE BASE ET DIFFUSION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme extrait de Propolis 50ml ]]></title>
+<g:id>8cf50b47-95d0-4188-b1b0-908d0ea98181</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de propolis 50ml?8cf50b47-95d0-4188-b1b0-908d0ea98181 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L’extrait de Propolis ladrôme est un extrait hydro-alcoolique obtenu par macération à froid de la Propolis.</p>
+<p>L’extrait est produit selon les critères de la Pharmacopée et possède une teneur en alcool entre 85 et 95%. Seule une teneur en alcool élevée peut permettre une extraction maximum desprincipes actifs.</p>
+<p>La teneur en principes actifs de l’extrait de Propolis ladrôme est régulièrement analysée.</p>
+<p>L’extrait de Propolis ladrôme possède une teneur moyenne en flavonoïdes tota ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330028995</g:gtin>
+<g:brand><![CDATA[ PHARM'UP ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/504c4c8fb60669d9d506b308e4317d5590f5572979efe72dbf6b89707fb0a40d ]]></g:image_link>
+<g:product_type><![CDATA[ FORME - VITALITÉ ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme extrait de plante bio fenouil 50ml ]]></title>
+<g:id>7e5c1dbb-0e85-4e54-ac46-847f12182705</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante bio fenouil 50ml?7e5c1dbb-0e85-4e54-ac46-847f12182705 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le fenouil favorise la santé du système digestif. Il stimule l'appétit, la digestion et l'élimination.</p>
+<p>Fabrication : extraction hydro-alcoolique<br />Origine : Égypte, Inde<br />Partie utilisée : fruit<br />Principes actifs : Huile essentielle (transanethol), Flavonoïdes</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330011676</g:gtin>
+<g:brand><![CDATA[ LADROME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/351ab7e0150c1ce5e2e454b09a9b9da62e1514677aca3dd0858dc6d405e33d7f ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme extrait de plante bio gattilier 50ml ]]></title>
+<g:id>777cc646-91c3-46a8-b666-cc1dfc302795</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante bio gattilier 50ml?777cc646-91c3-46a8-b666-cc1dfc302795 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le gattilier soutient l’équilibre féminin et contribue au bien-être au cours du cycle menstruel. Il favorise également une ménopause en douceur.</p>
+<p><span>Fabrication : extraction hydro-alcoolique</span><br /><span>Origine : Maroc, Croatie, France, Albanie</span><br /><span>Partie utilisée : fruit</span><br /><span>Principes actifs : iridoïdes (agnuside aucubine), casticine</span></p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330120897</g:gtin>
+<g:brand><![CDATA[ LADROME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/29480404c9081c4d6f7a80ddc4b54bb435e4d2f4e16106908bcb0e8693dda733 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme extrait de plante fraîche bio angélique 50ml ]]></title>
+<g:id>52570056-03ff-4938-8a07-b865100ee7c7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio angélique 50ml?52570056-03ff-4938-8a07-b865100ee7c7 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="hider-elem fhrd">
+<div class="hided-elem-container fhrd">
+<p>L'angélique contribue à la santé du système digestif.<br />Elle favorise l'appétit, la digestion et soutient la fonction hépatique.</p>
+<p>Fabrication : extraction hydro-alcoolique<br />Origine : France<br />Partie utilisée : racine<br />Principes actifs : Principes amers (lactones), Huile essentielle</p>
+<p></p>
+</div>
+</div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330010754</g:gtin>
+<g:brand><![CDATA[ LADROME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/eba426b1d85a106c1a84d1415dd398dcc80e3736e0f3709f490d645106e2eb48 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme extrait de plante fraîche bio cardère sauvage 50ml ]]></title>
+<g:id>22ee324d-6c87-4b86-b107-54934ac3cbee</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio cardère sauvage 50ml?22ee324d-6c87-4b86-b107-54934ac3cbee ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La cardère aide à renforcer les défenses naturelles de l'organisme.</p>
+<p>Fabrication : extraction hydro-alcoolique<br />Origine : France<br />Partie utilisée : racine<br />Principes actifs : iridoïdes et polyphénols</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330120996</g:gtin>
+<g:brand><![CDATA[ LADROME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fd8b2b42c51751962fea245aeae0bac5297bd6aef37b2cbd1f401e89e6524571 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme extrait de plante fraîche bio gentiane jaune 50ml ]]></title>
+<g:id>aa0b2313-0b66-4071-a454-f51f53ec5e2e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio gentiane jaune 50ml?aa0b2313-0b66-4071-a454-f51f53ec5e2e ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La gentiane jaune est traditionnellement utilisée pour faciliter la digestion.</p>
+<p>Fabrication : extraction hydro-alcoolique<br />Origine : France<br />Partie utilisée : racine<br />Principes actifs : principes amers (gentiopicrine, swertiamarine, amarogentine)</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330011881</g:gtin>
+<g:brand><![CDATA[ LADROME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d7cab5bacb31d47c96b4e0fac0394ea1bf5af83421170dec71bb42d490d5b25e ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme extrait de plante fraîche bio grande bardane 50ml ]]></title>
+<g:id>2727c18b-f1f6-4583-a1dd-8b5b4de8f804</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio grande bardane 50ml?2727c18b-f1f6-4583-a1dd-8b5b4de8f804 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La grande bardane stimule les fonctions d'élimination de l'organisme et favorise ainsi le drainage. Elle contribue<br />également au bon fonctionnement des voies urinaires.</p>
+<p>Fabrication : extraction hydro-alcoolique<br />Origine : France<br />Partie utilisée : racine<br />Principes actifs :Acides phénoliques,Poly-acétylènes, Lactones sesquiterpéniques</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330010785</g:gtin>
+<g:brand><![CDATA[ LADROME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c326022fa90045f4babcd93f4442928b335f7010c8b63abd319e194e3465e63a ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme extrait de plante fraîche bio grande camomille 50ml ]]></title>
+<g:id>f8b751e0-4e21-4b67-abb8-42f13711cc95</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio grande camomille 50ml?f8b751e0-4e21-4b67-abb8-42f13711cc95 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La grande camomille aide à se relaxer et à avoir des idées claires.<br />Elle favorise également une bonne circulation.</p>
+<p>Fabrication : extraction hydro-alcoolique<br />Origine : France<br />Partie utilisée : partie aérienne fleurie<br />Principes actifs : Lactones sesquiterpéniques (parthénolide, santomarine), Flavonoïdes</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330013755</g:gtin>
+<g:brand><![CDATA[ LADROME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f51ab13525bc04b6f776e55af861e5970b27ba7c66465b4f3a4421b4c3c1d499 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Ladrôme extrait de plante fraîche bio romarin  50ml ]]></title>
+<g:id>270adb49-b617-483e-85f2-ab70008cd181</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/ladr-me extrait de plante fraîche bio romarin  50ml?270adb49-b617-483e-85f2-ab70008cd181 ]]></link>
+<g:price><![CDATA[ 680.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le romarin est traditionnellement utilisé pour faciliter la digestion et favoriser le bon fonctionnement du foie. Il favorise le drainage hépatobiliaire en soutenant le tractus intestinal et les fonctions physiologiques de purification.</p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3486330013311</g:gtin>
+<g:brand><![CDATA[ LADROME ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/29db55d8df1b02a9a0f21bd08f280f3c0e53e149ac69227022640f4e1f0acf25 ]]></g:image_link>
+<g:product_type><![CDATA[ PHYTOTHERAPIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laina Soin des lèvres Pailleté Cassis 4 g ]]></title>
+<g:id>7dca50be-28f9-47ec-a694-13cefaf2daec</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laina-soin des lèvres pailleté cassis 4 g?7dca50be-28f9-47ec-a694-13cefaf2daec ]]></link>
+<g:price><![CDATA[ 249.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le plaisir résolument féminin pour prendre soin des lèvres fragilisées et desséchées toute l’année. Enrichi en extrait huileux de Calendula : agent adoucissant et</p>
+<p>régénérant. </p>
+<p>Contient des filtres UV Effet pailleté Parfum cassis</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3518646028359</g:gtin>
+<g:brand><![CDATA[ LAINO ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7161720bb5b89e9e2235d07f315bac90fd268eaa067b2f149eeeadec31005702 ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Crème Main Pro Intense 50ml ]]></title>
+<g:id>0624fef9-c3ba-4651-b266-08ec87bf24c9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-crème main pro intense 50ml?0624fef9-c3ba-4651-b266-08ec87bf24c9 ]]></link>
+<g:price><![CDATA[ 199.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Cette crème mains Pro Intense non grasse au <strong>parfum agréable</strong> apaise et nourrit la peau intensément.</p><p>Le complexe phyto-actif de <strong>cire d’abeille et de beurre de karité</strong> assure une hydratation* continue pendant 24h et restaure le film hydrolipidique de la peau.</p><p>Résultats : la peau est <strong>soulagée, réparée et protégée</strong>.</p><ul><li><p>La crème restaure le film hydrolipidique</p></li><li><p>La peau est relipidée, douce et veloutée</p></li><li> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826026086</g:gtin>
+<g:brand><![CDATA[ LAINO ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d5534e17a730f648cc107abe26ecaaab119fd342cf960bd8ef7edbbd2a677a3f ]]></g:image_link>
+<g:product_type><![CDATA[ CREME MAINS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Eau Florale à la Rose 250 ml ]]></title>
+<g:id>e23b5628-2f2c-438d-bbe2-787bfb123d9d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-eau florale à la rose 250 ml?e23b5628-2f2c-438d-bbe2-787bfb123d9d ]]></link>
+<g:price><![CDATA[ 340.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L’Eau de Rose <span>apaise et procure une sensation de fraîcheur</span> sur la peau. Elle réveille ainsi <span>l’éclat du teint</span>.</p>
+<p>Une eau tonique peut s’utiliser tout au long de la journée :</p>
+<ol>
+<li>Le matin pour <span>nettoyer votre visage</span></li>
+<li>En cours de journée pour <span>apporter de la fraîcheur</span> à votre peau</li>
+<li>Après votre démaquillant pour <span>éliminer les dernières traces</span> éventuelles</li>
+</ol> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826020558</g:gtin>
+<g:brand><![CDATA[ GILBERT ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9b34816b31134840a4603a0fa31b0edae4c8aa410e1368b3a0000cbccabc02e0 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Eau de Fleur d'Oranger 250 ml ]]></title>
+<g:id>0fe45f47-a915-4a4e-a675-07cffd7714b1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-eau de fleur d'oranger 250 ml?0fe45f47-a915-4a4e-a675-07cffd7714b1 ]]></link>
+<g:price><![CDATA[ 340.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino Eau de Fleur d'Oranger 250 ml est une eau aromatisée à la fleur d'oranger qui apporte un confort immédiat à la peau en apaisant les sensations de tiraillement. Cette eau phyto-active unifie le teint, adoucit et offre un bain de douceur.<br />La peau est rafraîchie et tonifiée.<br />Idéal pour parfaire son démaquillage.</p>
+<p>99% des ingrédients sont d'origine naturelle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826020497</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f453ab8147ebc64a4aa0088eaf0e2654acc97ccb5bf4f0c965fe40ff67b1dc91 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Eau florale de Bleuet 250 ml ]]></title>
+<g:id>8a3d5087-bd22-4664-afa2-91dbeb27fc0f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-eau florale de bleuet 250 ml?8a3d5087-bd22-4664-afa2-91dbeb27fc0f ]]></link>
+<g:price><![CDATA[ 395.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L’Eau de Bleuet donne de <span>l’éclat au teint</span> et <span>apaise les yeux fatigués et gonflés</span>. La peau est alors <span>tonifiée</span>.</p>
+<p>Une eau tonique peut s’utiliser tout au long de la journée :</p>
+<ol>
+<li>Le matin pour <span>nettoyer votre visage</span></li>
+<li>En cours de journée pour <span>apporter de la fraîcheur</span> à votre peau</li>
+<li>Après votre démaquillant pour <span>éliminer les dernières traces</span> éventuelles</li>
+</ol> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826020565</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/03f3a5223a8c781469d5e718e5815d37c931d4cb791a569599d5524815a6353e ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Gel Douche 3 En 1 Monoï - Escale Paradisiaque Tube 200ml ]]></title>
+<g:id>d6d0934c-14f0-4968-83b8-a8a0542ee3cf</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-gel douche 3 en 1 monoï - escale paradisiaque tube 200ml?d6d0934c-14f0-4968-83b8-a8a0542ee3cf ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="product-description col-12 px-0 ng-star-inserted"><div class="card-zone card-zone-content ng-tns-c130-4 ng-trigger ng-trigger-fadeInFadeOut">
+<p class="description-text ng-tns-c130-4 mb-description-text"><span class="mb-0">Une texture ultra fondante qui nettoie délicatement la peau et les cheveux et les parfume de notes ensoleillées de fleur de tiaré et de jasmin. Le complexe phyto-actif de glycérine et de monoï hydrate* et respecte la peau. Résultats : la peau retrouve tout son conf ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826021203</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/77137d885741ad8328c68a12c24d793d7091ad958f13b82b1b40f9056aed5ae7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Gel Douche 3en1 Hydratant au Citron Vert 200 ml ]]></title>
+<g:id>1b444347-e794-478c-8bdd-2ef3d6027203</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-gel douche 3en1 hydratant au citron vert 200 ml?1b444347-e794-478c-8bdd-2ef3d6027203 ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino Gel Douche 3en1 Hydratant au Citron Vert 200 ml offre une expérience de douche rafraîchissante et revitalisante.</p><p>Sa texture ultra fondante nettoie en douceur la peau et les cheveux tout en les parfumant de notes vivifiantes de citron et d'eucalyptus.<br>Enrichi d'un complexe phyto-actif de glycérine et d'un extrait de citron vert bio, ce gel douche hydrate et respecte la peau, préservant ainsi son hydratation naturelle.<br>En plus de nettoyer efficacement, ce produit préserve l'hy ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826021210</g:gtin>
+<g:brand><![CDATA[ LAINO ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2e06911582ab4367ab8438706a62b46a754066b692ba4ca88b9d047951e70227 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Gel Douche 3en1 Hydratant aux Agrumes 200 ml ]]></title>
+<g:id>92e80141-0e87-412d-8eed-80f82d77222f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-gel douche 3en1 hydratant aux agrumes 200 ml?92e80141-0e87-412d-8eed-80f82d77222f ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino Gel Douche 3en1 Hydratant aux Agrumes 200 ml est un produit 3en1 corps, cheveux et visage.</p>
+<p>Grâce aux extraits de Citron et d'Orange Bio et à l'association glycérine hydratante avec un complexe démêlant, ce gel douche au pH physiologique nettoie délicatement, hydrate et parfume votre peau de notes fruitées et toniques.</p>
+<p>91% des ingrédients sont d'origine naturelle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3273816029771</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1e24c9275a7e22b72c78472577cad84201ad4e9e1474ff1fc2a495335421e4fa ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Gel Douche Hydratant Pulpe de Pêche Blanche 200 ml ]]></title>
+<g:id>1348df5e-eb02-4b4f-ad13-fe7e81695eaf</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-gel douche hydratant pulpe de pêche blanche 200 ml?1348df5e-eb02-4b4f-ad13-fe7e81695eaf ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino Gel Douche Hydratant Pulpe de Pêche Blanche 200 ml est un gel douche hydratant à base de pêche blanche Bio.</p>
+<p>Sa formule au pH neutre nettoie, hydrate et parfume la peau en douceur par ses notes savoureuses de pêche gorgées de soleil.</p>
+<p>95% des ingrédients sont d'origine naturelle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3518646026744</g:gtin>
+<g:brand><![CDATA[ GILBERT ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/212d6f69d323d5de8e97084a48c10de05db730bc86171c8d9d71087514c15a80 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Gel Douche Surgras Hydratant Abricot 200ml ]]></title>
+<g:id>ce0a6cf6-4fb0-4804-9992-9c3ffaa5242f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-gel douche surgras hydratant abricot 200ml?ce0a6cf6-4fb0-4804-9992-9c3ffaa5242f ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="description" id="description">
+<div class="u-margin-bottom">
+<p>Laino a sélectionné le meilleur du bassin méditerranéen pour formuler ce <span>Gel Douche Surgras à l’Aloe Vera BIO Senteur Abricot</span>*.</p>
+ 
+<p>Grâce à la<span> l’Aloe Vera BIO</span> et à la glycérine hydratante*, ce gel douche <span>sans sulfates </span>nettoie, hydrate* et parfume votre peau en douceur par ses notes fruité et gourmand d’Abricot.</p>
+ 
+<p><em>*Hydratation des couches supérieures de l’épiderme.</ ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3518646026980</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/111f26c7c5606fb5ed6929d761206b4ad2ceecf7fb2408efdface4d4364773c7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Hydra Amande Lait Corps Hydratant 400 ml ]]></title>
+<g:id>f6896b27-0395-47d5-a8bc-db770653c40f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-hydra amande lait corps hydratant 400 ml?f6896b27-0395-47d5-a8bc-db770653c40f ]]></link>
+<g:price><![CDATA[ 1050.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino Hydra Amande Lait Corps Hydratant 400 ml est un soin pour le corps à la texture fraîche et légère qui hydrate immédiatement et durablement les peaux sèches. <br />Le complexe phyto-actif d'huile d'amande douce Bio et de glycérine nourrit et protège la peau des agressions extérieure.<br />Résultat : délicatement parfumée aux notes d'amande douce, la peau est apaisée et souple. Le confort naturel de la peau est restauré, la peau est enveloppée dans un cocon de douceur.</p>
+<p>Fini non gra ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826020923</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e45d1a301e0049c4319f3b61b1c327c7fc14fff8332f3cca685817c8713c8819 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino L'Authentique Savon de Marseille 150g ]]></title>
+<g:id>9f0d36ca-3e99-45c3-b10a-4ef288761af9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-l'authentique savon de marseille 150g?9f0d36ca-3e99-45c3-b10a-4ef288761af9 ]]></link>
+<g:price><![CDATA[ 280.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino L'Authentique Savon de Marseille 150 g est un savon au complexe phyto-actif et aux huiles végétales. Il nettoie au quotidien la peau des mains et du corps.</p><p>99% des ingrédients sont d'origine naturelle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826024433</g:gtin>
+<g:brand><![CDATA[ LAINO ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4129a11685af171f130daf000db08bc1e7d5346b9ff63b6fe69df77042b8d8fe ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Lait nutritif confort Nutri Karité 400ml ]]></title>
+<g:id>2d37ae28-cecf-42a8-ba2e-c9a7d7c430cf</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-lait nutritif confort nutri karité 400ml?2d37ae28-cecf-42a8-ba2e-c9a7d7c430cf ]]></link>
+<g:price><![CDATA[ 1050.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La peau sèche se caractérise par des sensations d'inconfort, de picotement et de tiraillement et nécessite donc un soin adapté. </span><span>Laino</span><span> a donc développé spécialement pour les peaux sèches, le </span><span>lait nutritif confort Nutri Karité </span><span>qui apportera une hydratation continue durant 24h et apaisera les sensations de tiraillement tout en renforçant la barrière cutanée. Sa texture fondante pénétrera rapidement sur votre peau sans laisser de film gras ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826020794</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2af5e4606940640836f838cc3715238911b0c81fe62ef06aaa902cfaad8648a7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Masque Apaisant Stick ]]></title>
+<g:id>8231b7a5-fc9c-4e48-bc4a-583d4b42b4e5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-masque apaisant stick?8231b7a5-fc9c-4e48-bc4a-583d4b42b4e5 ]]></link>
+<g:price><![CDATA[ 950.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce masque soin Laino <span>apaise </span>et <span>diminue </span>les sensations d’inconfort des peaux les plus sensibles.</p>
+<p>Le complexe phyto-actif d’<span>argile rose </span>et d’extrait de <span>chanvre </span>et de<span> kakadu</span> réduit les rougeurs, apporte de l’éclat au teint et assouplit la peau.</p>
+<p>Résultats : hydratée et rafraîchie, la peau est nette, douce et confortable. Le grain de peau est affiné, le teint est lumineux.</p>
+<p>100% d’ingrédients d’origine naturelle.< ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826021142</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1ffdef2e634843bdeac259798ac427c0baac09bcd3bb279b46897b7046739461 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Masque Detox Stick ]]></title>
+<g:id>704aec9a-0da8-474f-8e08-3cb04640549c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-masque detox stick?704aec9a-0da8-474f-8e08-3cb04640549c ]]></link>
+<g:price><![CDATA[ 950.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce masque soin Laino <span>purifie </span>et<span> détoxifie</span> la peau, sans la dessécher, tout en absorbant les excès de sébum.</p>
+<p>Le complexe phyto-actif de <span>charbon actif</span> et d’<span>huile essentielle d’arbre à thé BIO</span> désincruste les pores et <span>atténue les imperfections</span>.</p>
+<p>Résultats : débarrassée des impuretés et des particules de pollution, la peau est hydratée, rééquilibrée et nette. Le grain de peau est affiné, le <span>teint est lumineux et f ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826021135</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ecaa36cfe7eadf2fac5fcd32ba90e16df10e1015a342bff0addac79f4d5e6e6d ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Masque Energisant Stick ]]></title>
+<g:id>48e39652-604f-4b86-8d38-11e6b4301b3a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-masque energisant stick?48e39652-604f-4b86-8d38-11e6b4301b3a ]]></link>
+<g:price><![CDATA[ 950.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce masque soin Laino <span>revitalise</span> et <span>ressource</span> la peau, tout en l’hydratant instantanément.</p>
+<p>Le complexe phyto-actif d’<span>argile jaune </span>et d’<span>acérola</span> purifie, adoucit et lisse la peau.</p>
+<p>Résultats : la peau est nette, rechargée en <span>énergie</span> et éclatante de <span>santé</span>. Le <span>teint est lumineux</span>, le grain de peau est affiné. Effet <span>bonne mine</span> garanti.</p>
+<p>99% d’ingrédients d’origine naturelle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826021159</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dbf7b1edeac994f488032667c2ce84ed021957361b6e9acf0a53f5056f541214 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Nutri Argan Lait Nutritif Fermeté 400 ml ]]></title>
+<g:id>f392ce61-7ae1-4f0e-8974-532ecfd8d979</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-nutri argan lait nutritif fermeté 400 ml?f392ce61-7ae1-4f0e-8974-532ecfd8d979 ]]></link>
+<g:price><![CDATA[ 1350.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino Nutri Argan Lait Nutritif Fermeté 400 ml est un soin corps formulé pour tonifier, raffermir et nourrir tous types de peaux.</p>
+<p>Sa texture veloutée hydrate durablement la peau pendant 8H et lui redonne tonus et fermeté. Le complexe phyto-actif d'huile d'argan Bio, de trèfle d'eau et du complexe fermeté (algue rouge &amp; marronnier d'Inde) retend les contours de la peau dès 4 semaines, améliore sa texture et son toucher et prévient du vieillissement cutané.</p>
+<p>Délicatement parfum ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826020817</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/61d89d251df996cb52390b3b66a13cfe774c0fcfb0ffd747c22c7c89027d2fd7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Pierre d'Alun 75 g ]]></title>
+<g:id>a17e6870-682c-4772-adb7-caded6ab30eb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-pierre d'alun 75 g?a17e6870-682c-4772-adb7-caded6ab30eb ]]></link>
+<g:price><![CDATA[ 870.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino Pierre d'Alun 75 g est un déodorant anti-transpirant 100% naturel et hypoallergénique. Il permet de limiter la transpiration et de prévenir l'apparition des mauvaises odeurs et des sensations d'humidité. Il sèche rapidement sans laisser de traces.<br />Ainsi, la peau reste fraîche tout au long de la journée.</p>
+<p>Ce déodorant respecte toutes les peaux même sensibles.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3273816023380</g:gtin>
+<g:brand><![CDATA[ LAINO ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/778984fde279000ef47e12a80a62775bf2962cab0372a1a657c2088f16fd3a8b ]]></g:image_link>
+<g:product_type><![CDATA[ DEODORANT  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Savon Liquide Recette Traditionnelle d'Alep 500 ml ]]></title>
+<g:id>8e29850f-bfd7-479f-b67c-bd1ea201b595</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-savon liquide recette traditionnelle d'alep 500 ml?8e29850f-bfd7-479f-b67c-bd1ea201b595 ]]></link>
+<g:price><![CDATA[ 1040.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino Savon Liquide Recette Traditionnelle d'Alep 500 ml est un savon liquide fabriqué selon la méthode traditionnelle d'Alep à destination des peaux extra sèches à tendance atopique. Il nettoie en douceur sans dessécher et laisse un film protecteur pour protéger la peau.<br />Le complexe phyto-actif d'huile d'olive vierge et d'huile de baies de laurier nourrit et purifie la peau.<br />La peau est souple, douce et apaisée.</p>
+<p>99% des ingrédients sont d'origine naturelle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826023399</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a65831d4482fe675f00539f3a416bb4b0c3a402147806fa9792abc6b9e702731 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Soin Lèvres à l'Amande ]]></title>
+<g:id>241236ae-5ae2-4764-96d7-f6d9afca235e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-soin lèvres à l'amande?241236ae-5ae2-4764-96d7-f6d9afca235e ]]></link>
+<g:price><![CDATA[ 249.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le Soin Hydratant Amande Douce de Laino</span> est un stick enrichi en huile d'Argan Bio, en cire d'abeille et en beurre de Karité. Ce soin conçu pour les lèvres sèches hydrate, lisse, adouci et parfume les lèvres d'un délicat parfum d'Amande Douce. </p>
+<p id="KSQBCUS">Fabriqué en France.<br />96% d'ingrédients d'origine naturelle. </p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826020527</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/68d88b9b7bafc553ee0a89370fca3ff23d519d7a6c8ae6f356b465771534f6ac ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Soin Nettoyant Exfoliant 200 ml ]]></title>
+<g:id>3cf2005e-44b2-47af-ae8b-e5a54ed937e0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-soin nettoyant exfoliant 200 ml?3cf2005e-44b2-47af-ae8b-e5a54ed937e0 ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino Soin Nettoyant Exfoliant 200 ml est un soin nettoyant exfoliant à la grenade Bio. Grâce aux grains de bambou et de grenade, la peau est exfoliée en douceur. Ce soin élimine les cellules mortes et nettoie votre peau efficacement tout en la laissant hydratée*, sublimée, douce et lisse.</p>
+<p>*Hydratation des couches supérieures de l'épiderme.</p>
+<p>96% des ingrédients sont d'origine naturelle.</p>
+<p>Convient à un usage quotidien.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3273816028736</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f583535797b21bc4911fb72ba40c4f6b9097e31c155bbc3f4779f55ee7098b0d ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Soin Nutritif Intense Visage et Corps 400 ml ]]></title>
+<g:id>c8b6ff4b-dfb9-4c8a-a1e0-5f0858b47492</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-soin nutritif intense visage et corps 400 ml?c8b6ff4b-dfb9-4c8a-a1e0-5f0858b47492 ]]></link>
+<g:price><![CDATA[ 1050.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino Soin Nutritif Intense Visage et Corps 400 ml est un soin à la texture onctueuse qui hydrate durablement la peau et la protège des agressions extérieures. Le complexe phyto-actif d'huile d'olive vierge, de vitamine E et d'enoxolone relipide et apaise la peau. Ainsi, les sensations de tiraillement sont diminuées, la peau est réparée, nourrie et souple.</p>
+<p>Pour peaux extra sèches à tendance atopique.</p>
+<p>Hypoallergénique : formulé pour minimiser les risques d'allergies.</p>
+<p>94% d ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826029421</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6ed50357c59f1868c5078cf8f9f0c7abbdeaa7f3f08143a50799b04415594ad4 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Soin des Lèvres Stick 4 g Fraise Pailleté ]]></title>
+<g:id>ecce8eeb-7ece-471b-ae8f-8a3cae73ddfc</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-soin des lèvres stick 4 g fraise pailleté?ecce8eeb-7ece-471b-ae8f-8a3cae73ddfc ]]></link>
+<g:price><![CDATA[ 249.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino Soin des Lèvres Stick 4 g - Senteur : Fraise Pailleté est un soin des lèvres enrichi en extrait huileux de Calendula adoucit et régénère les lèvres abîmées.<br />Il est idéal pour prendre soin de vos lèvres tout au long de l'année.</p>
+<p>Contient des filtres UV.</p>
+<p>Sans paraben, ni phénoxyethanol.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3518646028342</g:gtin>
+<g:brand><![CDATA[ GILBERT ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3cc51ca8038a46308ea4c2a891ff8a84836d7e75a086bb69e7c1b4d9ada6ad01 ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Soin des Lèvres Stick 4 g Pomme ]]></title>
+<g:id>c2043201-aeaa-4649-8f98-e93db04b23d0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-soin des lèvres stick 4 g pomme?c2043201-aeaa-4649-8f98-e93db04b23d0 ]]></link>
+<g:price><![CDATA[ 249.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino Soin des Lèvres Stick 4 g - Senteur : Pomme est un soin des lèvres enrichi en extrait huileux de Calendula adoucit et régénère les lèvres abîmées.<br />Il est idéal pour prendre soin de vos lèvres tout au long de l'année.</p>
+<p>Contient des filtres UV.</p>
+<p>Sans paraben, ni phénoxyethanol.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3518646028373</g:gtin>
+<g:brand><![CDATA[ GILBERT ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/08fcda295d8ec37282ff927778323e14915995e13c3ed6640263dbb988fd4904 ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Soin des Lèvres Stick 4 g Vanille ]]></title>
+<g:id>30bf0319-609a-4ede-a0d2-283cff50aaa5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-soin des lèvres stick 4 g vanille?30bf0319-609a-4ede-a0d2-283cff50aaa5 ]]></link>
+<g:price><![CDATA[ 249.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino Soin des Lèvres Stick 4 g - Senteur : Vanille est un soin des lèvres enrichi en extrait huileux de Calendula adoucit et régénère les lèvres abîmées.<br />Il est idéal pour prendre soin de vos lèvres tout au long de l'année.</p>
+<p>Contient des filtres UV.</p>
+<p>Sans paraben, ni phénoxyethanol.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3518646028366</g:gtin>
+<g:brand><![CDATA[ GILBERT ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/445f06b9c12a0bba1bdb55dc4c0be58bb8d4f6ec592a21a6171126ef5e958f6e ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Soin des Lèvres Stick Cerise ]]></title>
+<g:id>b3eb004b-cb59-425d-99b1-ceb48db28852</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-soin des lèvres stick cerise?b3eb004b-cb59-425d-99b1-ceb48db28852 ]]></link>
+<g:price><![CDATA[ 249.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino Soin des Lèvres Stick 4 g est un soin des lèvres enrichi en extrait huileux de Calendula adoucit et régénère les lèvres abîmées.<br />Il est idéal pour prendre soin de vos lèvres tout au long de l'année.</p>
+<p>Contient des filtres UV.</p>
+<p>Sans paraben, ni phénoxyethanol.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3518646026874</g:gtin>
+<g:brand><![CDATA[ GILBERT ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6aaa62589ee18d66bfd2982c9a4af62eed17cfcc4945dc5ad6b101a6c60a2346 ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Soin des lèvres pro intense 4 g ]]></title>
+<g:id>b38320fc-0058-401c-9aff-bb9552c22038</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-soin des lèvres pro intense 4 g?b38320fc-0058-401c-9aff-bb9552c22038 ]]></link>
+<g:price><![CDATA[ 150.00 EUR ]]></g:price>
+<description><![CDATA[ <p></p>
+<p><span>Alliant </span><span>cire d’abeille</span><span> et </span><span>beurre de karité</span><span> dans la pure tradition méditerranéenne, le </span><span>Soin des Lèvres Pro Intense</span><span> est la réponse quotidienne aux lèvres sèches.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826020077</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/40e4945a40a3a9a3f167d00815521cacba4b67a41980cabe88623ae7c6ee061f ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Soin des lèvres senteur coco 4 g ]]></title>
+<g:id>27e5d8cb-2938-494c-b276-73c092afa647</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-soin des lèvres senteur coco 4 g?27e5d8cb-2938-494c-b276-73c092afa647 ]]></link>
+<g:price><![CDATA[ 249.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Laino a sélectionné le meilleur du bassin méditerranéen pour parer vos lèvres d’un<span> soin à la senteur coco</span>.</p>
+<p>Sa formule à <span>96% d’ingrédients d’origine naturelle</span> peut entraîner un phénomène naturel de givre.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616826028936</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6ec8be76c8bf5a2cd74c5a9b8ef01e95d3786a5f6bbf51af0ea1305454b71977 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Soin des lèvres stick Grenadine 4 g ]]></title>
+<g:id>681d5879-1757-4aed-b39a-f19080738585</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-soin des lèvres stick grenadine 4 g?681d5879-1757-4aed-b39a-f19080738585 ]]></link>
+<g:price><![CDATA[ 249.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Laino Soin des lèvres</span><span> a élaboré </span><span>le stick à lèvres pailleté</span><span> à la senteur </span><span>grenadine</span><span> qui vous transporte dans votre enfance.</span><br /><span>C’est une véritable alliance entre le soin et le plaisir qui réconforte les lèvres fragilisées et desséchées tout au long de l’année.</span><br /><span>Ce stick à lèvres est composé des meilleurs actifs méditerranéens que Laino utilise depuis plus de 60 ans.</span><br /><br /><span>La  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3518646028328</g:gtin>
+<g:brand><![CDATA[ GILBERT ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/42f82bdc3607ba0d886935f5d31a94624fb8e422a5f98c4fc18c0a1caa46e776 ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laino Soin des lèvres stick framboise 4 g ]]></title>
+<g:id>99deeb87-3534-413c-985e-ae22b310cef7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laino-soin des lèvres stick framboise 4 g?99deeb87-3534-413c-985e-ae22b310cef7 ]]></link>
+<g:price><![CDATA[ 249.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le soin des lèvres framboise de Laino</span><span> a été formulé à base d’ingrédients d’origine 97 % naturelle dans le but </span><span>d’hydrater</span><span> et de </span><span>nourrir</span><span> les </span><span>lèvres fragilisées et abîmées</span><span>.</span><br /><span>Ainsi, il répare les dommages cutanés et aide la peau à lutter contre tous les agents extérieurs qui pourraient l’agresser (vent, froid, pollution…) Son léger parfum à la framboise du bassin méditerranéen va perm ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3518646028335</g:gtin>
+<g:brand><![CDATA[ GILBERT ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5d01eaf117d40a7e53349f5352f80a2fc057f88e1532eca82b5955df230dd816 ]]></g:image_link>
+<g:product_type><![CDATA[ STICK LEVRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster - Brume corps SPF50 haute protection - 200ml ]]></title>
+<g:id>d09ed978-eb6c-4a1d-9645-73bf418cb0b0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-brume corps spf50 haute protection - 200ml?d09ed978-eb6c-4a1d-9645-73bf418cb0b0 ]]></link>
+<g:price><![CDATA[ 4890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Brume Corps SPF 50 Lancaster Sun Beauty est&nbsp;utilisé pour prévenir les signes du photovieillissement. Grâce à la technologie Full Light Technology, cette formule protège contre un spectre solaire 10 fois plus large.&nbsp;Le&nbsp;complexe Tan Activator assure un bronzage légendaire, nécessitant deux fois moins de temps d'exposition. Cette brume pour le corps ultra-légère, transparente et à séchage rapide est rapidement absorbée par la peau et procure un effet rafraîchissant instantané.< ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616306643093</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6377e72f602662c0c68d8167fa08342f02ab862201270532243b4be1d08909d2 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Crème Confort bronzage lumineux SPF50 50ml ]]></title>
+<g:id>c7c473b4-cece-45e9-b1d2-f84b100670af</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-crème confort bronzage lumineux spf50 50ml?c7c473b4-cece-45e9-b1d2-f84b100670af ]]></link>
+<g:price><![CDATA[ 4190.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Crème protetrice visage SPF50 en 50ml</span></p>
+<p>Notre Crème Visage Sun Beauty SPF50 comprend notre protection solaire la plus avancée. Ultra légère, non grasse et immédiatement invisible sur la peau, notre formule unique permet un bronzage sain et lumineux en peu de temps d'exposition.**</p>
+<p>Notre Crème Visage Sun Beauty SPF50 comprend notre protection solaire la plus avancée. En plus de cibler 100% du spectre solaire*, notre protection solaire hautement sensorielle, respectueuse ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616302022502</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b5d37d87b4e0ad77bd3fc99f57536f32916c27e8f8ee1ba06b22032b84ad210d ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Crème Visage Velours SPF30 50 ml ]]></title>
+<g:id>7058e8a3-eeba-4b66-a246-0795ea6e5734</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-crème visage velours spf30 50 ml?7058e8a3-eeba-4b66-a246-0795ea6e5734 ]]></link>
+<g:price><![CDATA[ 4190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Notre Crème Visage Sun Beauty SPF30 comprend notre protection solaire la plus avancée. En plus de cibler 100% du spectre solaire*, notre protection solaire hautement sensorielle, respectueuse de la peau &amp; des océans, aide dorénavant aussi à réparer la peau des dommages induits par la soleil. Ultra légère, non grasse et immédiatement invisible sur la peau, notre formule unique permet un bronzage sain et lumineux en 2 fois moins de temps d'exposition.**</p>
+<p>Notre crème pour le visage fon ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616302022526</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/895683255d853ef4a6288438b34c0a3ac136e61a1f5781160eef5343f2dea9e8 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Fluide Teinté Matifiant SPF50 30ml Sun Sensitive ]]></title>
+<g:id>36cea006-2f74-473c-bd8f-eeeaf32a9cdc</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-fluide teinté matifiant spf50 30ml sun sensitive?36cea006-2f74-473c-bd8f-eeeaf32a9cdc ]]></link>
+<g:price><![CDATA[ 4290.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616304472411</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2be5cb6dd7df3735878a6711f7888827263d1f27aba75c9a5b7d11a2c73e7302 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Fluide de Protection Solaire SPF30 30 ml ]]></title>
+<g:id>d52415bb-83bc-437e-9730-697a072a2df2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-fluide de protection solaire spf30 30 ml?d52415bb-83bc-437e-9730-697a072a2df2 ]]></link>
+<g:price><![CDATA[ 3790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lancaster Sun Beauty Fluide de Protection Solaire SPF30 30 ml est un fluide ultra-léger et au fini toucher sec, invisible à l'application. Il offre une sensation de peau nue pour un bronzage doré "effet bonne mine", uniforme et durable. Il protège, au-delà des UVB et UVA, contre la lumière visible et les infrarouges, avec une protection renforcée contre la lumière bleue.<br />Le Sun Repair System composé d'extraits de probiotique aide à réparer les dommages liés à l'exposition solaire et renf ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616302022519</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9b5b7611855be202473d2756bbd4827ed29e3fb30e57619cf5abbaf0c2e25a57 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Golden Tan Maximizer Baume Après-Soleil 200 ml ]]></title>
+<g:id>f409d7bd-5986-43fc-86b9-d72794b6666e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-golden tan maximizer baume après-soleil 200 ml?f409d7bd-5986-43fc-86b9-d72794b6666e ]]></link>
+<g:price><![CDATA[ 4490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lancaster Golden Tan Maximizer Baume Après-Soleil 200 ml est un soin corporel formulé pour prolonger le bronzage d'un mois, spécialement dédié aux peaux normales à sèches.<br />Ce baume ultra-nourrissant, enrichi en beurre de karité d'origine naturelle, revitalise votre peau intensément après l'exposition au soleil. Il réduit les risques de desquamation. Sa formule associe :</p>
+<ul><li>Le Complexe Activateur de Bronzage Lancaster, composé d'huile de Buriti d'origine naturelle, qui stimule le ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614227914179</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a25bd3151ccb8eeec8537c1a60800b243761d13332ef221c24e4aa84490bbe03 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Golden Tan Maximizer Lait Après-Soleil 125 ml ]]></title>
+<g:id>91268d12-677b-42ed-a915-7edb57c1dc24</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-golden tan maximizer lait après-soleil 125 ml?91268d12-677b-42ed-a915-7edb57c1dc24 ]]></link>
+<g:price><![CDATA[ 4150.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lancaster Golden Tan Maximizer Lait Après-Soleil 125 ml est un soin visage et corps formulé pour prolonger votre bronzage jusqu'à 1 mois et calmer instantanément la peau après l'exposition au soleil.</p>
+<p>Grâce à l'huile de Buriti d'origine naturelle, le Complexe Activateur de Bronzage stimule la production naturelle de mélanine pour un bronzage doré, durable et uniforme.<br />Il contient un complexe réparateur qui apaise immédiatement et réduit les risques de desquamation, pour une peau so ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614227913974</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0df5d167c1ebccb2fdbce3f2ce9ff139a19d1409f75409fa2483842ca8985cc6 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Golden Tan Maximizer Lait Après-Soleil 250 ml ]]></title>
+<g:id>1365dc29-8e01-434c-9620-eb8c36031824</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-golden tan maximizer lait après-soleil 250 ml?1365dc29-8e01-434c-9620-eb8c36031824 ]]></link>
+<g:price><![CDATA[ 5490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lancaster Golden Tan Maximizer Lait Après-Soleil 250 ml est un soin visage et corps formulé pour prolonger votre bronzage jusqu'à 1 mois et calmer instantanément la peau après l'exposition au soleil.</p>
+<p>Grâce à l'huile de Buriti d'origine naturelle, le Complexe Activateur de Bronzage stimule la production naturelle de mélanine pour un bronzage doré, durable et uniforme.<br />Il contient un complexe réparateur qui apaise immédiatement et réduit les risques de desquamation, pour une peau so ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614227914292</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7a1b579dfe523aa942116a9938fc5dd7b49f9f6db000ea079934c44c38ff00d6 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Golden Tan Maximizer Lait Après-Soleil 400 ml ]]></title>
+<g:id>636edf62-4d3d-4dec-8fc4-efb3a7d0451b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-golden tan maximizer lait après-soleil 400 ml?636edf62-4d3d-4dec-8fc4-efb3a7d0451b ]]></link>
+<g:price><![CDATA[ 6550.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lancaster Golden Tan Maximizer Lait Après-Soleil 400 ml est un soin visage et corps formulé pour prolonger votre bronzage jusqu'à 1 mois et calmer instantanément la peau après l'exposition au soleil.</p>
+<p>Grâce à l'huile de Buriti d'origine naturelle, le Complexe Activateur de Bronzage stimule la production naturelle de mélanine pour un bronzage doré, durable et uniforme.<br />Il contient un complexe réparateur qui apaise immédiatement et réduit les risques de desquamation, pour une peau so ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614227914131</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/22437bd58886a227a163e5fa6ebd1ee5d37180ab0bd18c10319391aac89e33fd ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Golden Tan Maximizer Serum Apres-Soleil 30ml ]]></title>
+<g:id>a3ab7718-8679-4680-9920-b1d8f123f218</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-golden tan maximizer serum apres-soleil 30ml?a3ab7718-8679-4680-9920-b1d8f123f218 ]]></link>
+<g:price><![CDATA[ 4890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Notre Sérum Après-Soleil Golden Tan Maximizer prolonge votre bronzage jusqu'à 1 mois et calme instantanément la peau après l’exposition au soleil. Grâce à l'Huile de Buriti d'origine naturelle, le Complexe Activateur de Bronzage Lancaster stimule la production naturelle de mélanine pour un bronzage doré, durable et uniforme. Sa puissante combinaison d’extrait de soja d’origine naturelle et d’acide hyaluronique aide votre peau à lutter contre les dommages liés au photo-vieillissement (rides et ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614227913615</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f586aa319d1b85c718b7eca18581ebbbd35236a218d2dc11c9f9e031e33086d7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Self Tan Face Drops Concentré autobronzant visage 15ml ]]></title>
+<g:id>7f3b7742-0ce5-48b2-9fac-b79295209c26</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-self tan face drops concentré autobronzant visage 15ml?7f3b7742-0ce5-48b2-9fac-b79295209c26 ]]></link>
+<g:price><![CDATA[ 3890.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="desc">
+<p>Le Concentré autobronzant visage Self Tan apporte un bronzage uniforme et naturel en seulement 1 heure et qui dure jusqu'à 1 semaine*. Optimisez votre bronzage naturel et obtenez un éclat doré uniforme et durable. Associées à votre crème de jour ou à notre Crème illuminatrice Sun Perfect SPF50, les gouttes combinent la puissance du soin de la peau à l'action bronzante, recréant sans effort un hâle ensoleillé sans exposition au soleil. Votre peau révèle son éclat et vous app ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616304177934</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/03641f08bc64ef3af6a173399b53f35c98a9e48a7d9cb5d80daa18af6a90c6a2 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Spray Lacté Enfants Spf 50 150ml ]]></title>
+<g:id>91f5476a-8e2d-4e19-a5b9-5902c1391a4f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-spray lacté enfants spf 50 150ml?91f5476a-8e2d-4e19-a5b9-5902c1391a4f ]]></link>
+<g:price><![CDATA[ 4480.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Protection solaire SPF50+ spécialement mise au point pour les enfants (visage &amp; corps)</p>
+<p>La Technologie Full Light offre une protection solaire étendue contre l'ensemble du spectre solaire (UVB + UVA + Lumière Visible + Lumière Infrarouge)</p>
+<p>Formule sans parfum, sans larmes et anti-sable</p>
+<p>Clean et ocean friendly</p>
+<p>Vaporisateur d'utilisation facile pouvant également être appliqué sur peau mouillée</p>
+<p>Spécialement conçue pour les enfants, cette nouvelle protection s ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616301295419</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fea03c544ad40f4990f258813073996e415a638f1f775b73f09270f5a70cd681 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Beauty Eau Solaire Effet Peau Nue SPF30 150ml ]]></title>
+<g:id>fadd3627-1d92-4edf-a2b1-e60d2455dbca</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun beauty eau solaire effet peau nue spf30 150ml?fadd3627-1d92-4edf-a2b1-e60d2455dbca ]]></link>
+<g:price><![CDATA[ 4490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Imaginez pouvoir être protégée du soleil tout en ayant la sensation de ne rien porter ! Lancaster, pionnier dans la recherche solaire, innove en vous offrant sa protection large spectre ciblant UVB, UVA, Lumière Visible et Infrarouges, dans une eau incroyablement légère, rafraichissante et embellisante. La formule, sans effet gras ou collant, peut s'appliquer sur peau mouillée.</p><p>Cette nouvelle formule hydrate votre peau intensément. Notre Complexe exclusif Activateur de Bronzage, composé ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616305924735</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5e4abb3846258a60f6545e9e5644c03445caa7c8b1e1e09f6b6054aa643af285 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Beauty Eau Solaire Effet Peau Nue SPF50 150ml ]]></title>
+<g:id>673d579a-d1b0-4966-8bc5-f60c9ef3a247</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun beauty eau solaire effet peau nue spf50 150ml?673d579a-d1b0-4966-8bc5-f60c9ef3a247 ]]></link>
+<g:price><![CDATA[ 4490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Imaginez pouvoir être protégée du soleil tout en ayant la sensation de ne rien porter ! Lancaster, pionnier dans la recherche solaire, innove en vous offrant sa protection large spectre ciblant UVB, UVA, Lumière Visible et Infrarouges, dans une eau incroyablement légère, rafraichissante et embellisante. La formule, sans effet gras ou collant, peut s'appliquer sur peau mouillée.</p><p>Cette nouvelle formule hydrate votre peau intensément. Notre Complexe exclusif Activateur de Bronzage, composé ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616305924780</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f800e0bb3bc83fd732156a62740cc684bfc063beb0faf2220ec126fd1161d7ea ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Beauty Eau de Protection Solaire SPF30 150 ml ]]></title>
+<g:id>e403cdd4-83ea-4f8c-8e08-e22fb7ae29e5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun beauty eau de protection solaire spf30 150 ml?e403cdd4-83ea-4f8c-8e08-e22fb7ae29e5 ]]></link>
+<g:price><![CDATA[ 4590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lancaster Sun Beauty Eau de Protection Solaire SPF30 150 ml est une haute protection solaire résistante à l'eau, dans une eau légère, embellissante et rafraîchissante, respectueuse de la peau et des océans.</p>
+<p>Cette eau bi-phase procure une sensation de peau nue pour un bronzage doré "effet bonne mine", uniforme et durable. Sa formule, sans effet collant, peut s'appliquer sur peau mouillée :</p>
+<ul><li>La version la plus aboutie de la Full Light Technology protège, au-delà des UVA et UVB ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616302022601</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e7d9b7858b04d9400403dbf1dd5cb3036e9165a99570ef769ba47c2d4bb096a0 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Beauty Huile Sèche Soyeuse SPF30 150 ml ]]></title>
+<g:id>5dd64efa-54dd-47ac-91ab-0877a3598ff0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun beauty huile sèche soyeuse spf30 150 ml?5dd64efa-54dd-47ac-91ab-0877a3598ff0 ]]></link>
+<g:price><![CDATA[ 4370.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lancaster Sun Beauty Huile Sèche Soyeuse SPF30 150 ml est une haute protection solaire résistante à l'eau, pour le visage et le corps, respectueuse de la peau et des océans.<br />Cette huile sublimatrice hautement sensorielle offre un fini satiné sec, pour un bronzage doré "effet bonne mine", encore plus rapide, uniforme et durable :</p>
+<ul><li>La version la plus aboutie de la Full Light Technology protège, au-delà des UVA et UVB, contre la lumière visible incluant la lumière bleue, et les i ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616302022618</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dfe4bcea19664a6162cf70f5d515c79fde97fe42b4ac34d9e9a3b49f0163123d ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Beauty Huile sèche soyeuse accélératrice de bronzage spray SPF30 150 ml ]]></title>
+<g:id>37302ca8-146a-4730-9e81-2e8b973c63ed</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun beauty huile sèche soyeuse accélératrice de bronzage spray spf30 150 ml?37302ca8-146a-4730-9e81-2e8b973c63ed ]]></link>
+<g:price><![CDATA[ 4390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Bénéficiez des avantages d'une huile sans l'effet gras grâce à notre huile sèche accélératrice de bronzage SPF30. En plus de cibler 100% du spectre solaire*, notre huile sublimatrice, respectueuse de la peau &amp; des océans, aide dorénavant à réparer la peau des dommages induits par le soleil. En laissant à votre peau un magnifique fini satiné et sec, elle offre un bronzage doré encore plus rapide, plus profond et impeccable en 2 fois moins de temps d'exposition.**</p><p>Notre huile corporel ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616305924834</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ce4be68cf09bf5f3e7676836975d05dfc004d1b47afea7c68cc7a83e5da154f6 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Beauty Huile sèche soyeuse accélératrice de bronzage spray SPF50 150 ml ]]></title>
+<g:id>8c222437-97d3-444a-aaac-b62da8d0b5c5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun beauty huile sèche soyeuse accélératrice de bronzage spray spf50 150 ml?8c222437-97d3-444a-aaac-b62da8d0b5c5 ]]></link>
+<g:price><![CDATA[ 4390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L'Huile Sèche pour le Corps Lancaster Sun Beauty SPF50 est votre alliée ultime contre le photo-vieillissement. La technologie Full Light TechnologyTM offre une protection 10 fois plus large du spectre solaire et notre complexe Tan Activator procure un bronzage doré légendaire en moitié moins de temps d'exposition au soleil. Cette huile sèche sensorielle fond instantanément sur la peau, séchant pour laisser un voile invisible, scintillant et sublimant.</p><p><br></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616305924889</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/95664683d03c46a0b1a97730b89b83a9835814fd1f86e37e4a2418cf2ef45ba1 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Beauty Sublime Tan Lait Corps SPF30 175 ml ]]></title>
+<g:id>fdd83798-7795-40f3-9c4f-a33f96b7f927</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun beauty sublime tan lait corps spf30 175 ml?fdd83798-7795-40f3-9c4f-a33f96b7f927 ]]></link>
+<g:price><![CDATA[ 4290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lancaster Sun Beauty Sublime Tan Lait Corps SPF30 175 ml est une protection solaire pour le corps, résistante à l'eau.</p>
+<p>Anti UVA/UVB, lumières visibles et infra-rouges, sa formule est respectueuse de la peau et des océans. Elle cible 100% du spectre solaire et  aide aussi à réparer la peau endommagée par le soleil.</p>
+<p>Ultra-légère, non grasse et immédiatement invisible sur la peau, cette formule unique permet d'obtenir un bronzage doré et radieux avec un temps d'exposition au soleil ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616302022540</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ff2021b55fa9a5f359f2a5d8e0ddc7f65300a5dfe04672dafa581c00d7f6c081 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Beauty Sublime Tan Lait Corps SPF30 250 ml ]]></title>
+<g:id>0e59447c-830e-41f1-b591-84f57f81880b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun beauty sublime tan lait corps spf30 250 ml?0e59447c-830e-41f1-b591-84f57f81880b ]]></link>
+<g:price><![CDATA[ 4990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lancaster Sun Beauty Sublime Tan Lait Corps SPF30 250 ml est une protection solaire pour le corps, résistante à l'eau.</p>
+<p>Anti UVA/UVB, lumières visibles et infra-rouges, sa formule est respectueuse de la peau et des océans. Elle cible 100% du spectre solaire et  aide aussi à réparer la peau endommagée par le soleil.</p>
+<p>Ultra-légère, non grasse et immédiatement invisible sur la peau, cette formule unique permet d'obtenir un bronzage doré et radieux avec un temps d'exposition au soleil ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616302022595</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/21b78e8d7a7624c74c58f28e39f6af5ceff5b6b01d5a2c4380adc88922ffa0e7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Beauty Sublime Tan Lait Corps SPF50 175 ml ]]></title>
+<g:id>dd84b237-d6ad-43c8-bd53-f6dd5abbb40b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun beauty sublime tan lait corps spf50 175 ml?dd84b237-d6ad-43c8-bd53-f6dd5abbb40b ]]></link>
+<g:price><![CDATA[ 4290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lancaster Sun Beauty Sublime Tan Lait Corps SPF50 175 ml est une haute protection solaire pour le corps, résistante à l'eau.</p>
+<p>Anti UVA/UVB, lumières visibles et infra-rouges, sa formule est respectueuse de la peau et des océans. Elle cible 100% du spectre solaire et  aide aussi à réparer la peau endommagée par le soleil.</p>
+<p>Ultra-légère, non grasse et immédiatement invisible sur la peau, cette formule unique permet d'obtenir un bronzage doré et radieux avec un temps d'exposition au  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616302022564</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1c0465d643c9377f82f24494e76e64e61c8e949e61fc3272ef8823496d7957d5 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Eau Solaire SPF50 150 ml ]]></title>
+<g:id>e70b0d0b-f2b3-4ecf-8ad2-4f8306de2e8d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun eau solaire spf50 150 ml?e70b0d0b-f2b3-4ecf-8ad2-4f8306de2e8d ]]></link>
+<g:price><![CDATA[ 4590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Notre Eau Solaire Protectrice SPF50 vous apporte une large protection solaire. Légère, rafraîchissante et embellissante procure un bronzage sain et lumineux en 2 fois moins de temps d'exposition** et donne à votre peau une sensation de peau nue.</p>
+<p>Et si vous pouviez être protégés du soleil sans rien sentir sur votre peau ? Notre Eau Solaire Protectrice SPF50 vous apporte une large protection solaire en ciblant 100% du spectre solaire* et aide dorénavant à réparer la peau des dommages ind ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616302022533</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cad98f2db990e8a36a3c3b0edd24d11a3ac6ed436084ee685de092890f0132a6 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Gel-Creme Teintee SPF30 50ml ]]></title>
+<g:id>fcff2e9e-13ec-41c7-8154-2e1f3ae33d63</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun gel-creme teintee spf30 50ml?fcff2e9e-13ec-41c7-8154-2e1f3ae33d63 ]]></link>
+<g:price><![CDATA[ 3690.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Rayonnez en toute circonstance ! Avec notre Infinite Bronze Visage Bronzé SPF15, uniformisez votre teint, illuminez votre hâle naturel ou ajoutez une touche d'éclat à votre visage en seulement quelques secondes. Notre Gel-Crème Hydratant légèrement teinté s'applique facilement et se fond de manière invisible. Ce soin pour la peau Lancaster protège des UVA et des UVB ainsi que des radicaux libres.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616304178016</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cb73af4a573a77c344ed6c9936c9974675fa56a9cc4d022f7a0ac573dc1faaad ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN TEINTE > SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Gelée Autobronzante Corps 125ml ]]></title>
+<g:id>4145b367-006e-4a70-a3ca-e76de7795235</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun gelée autobronzante corps 125ml?4145b367-006e-4a70-a3ca-e76de7795235 ]]></link>
+<g:price><![CDATA[ 3890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Gelée autobronzante corps Self Tan offre un bronzage uniforme et naturel en 1 heure et qui dure jusqu’à 1 semaine*.<br />Cette gelée corps 2-en-1 qui fond sur la peau est à la fois un autobronzant sublimateur et une crème hydratante. Vous pouvez progressivement ajuster votre bronzage naturel tout en hydratant intensément la peau, en estompant les imperfections visibles et en lissant le grain de peau. Facile à appliquer, sa formule offre un hâle estival naturel pour un éclat doré tout au lo ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616304177958</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0496b9e1a96ee0b0e56bffd44e135cf3e5abc2521edf3a504c41152164b394b7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Golden Tan Maximiser Huile 150ml ]]></title>
+<g:id>d83e1462-d786-4c17-ac7f-ebdb97520777</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun golden tan maximiser huile 150ml?d83e1462-d786-4c17-ac7f-ebdb97520777 ]]></link>
+<g:price><![CDATA[ 4690.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="panel">
+<div id="idTab1" class="rte">
+<p>Vous aimez votre bronzage doré Lancaster ? Notre Huile Après-Soleil Golden Tan Maximizer prolonge votre bronzage jusqu'à 1 mois et calme instantanément la peau après l’exposition au soleil. Grâce à l'Huile de Buriti d'origine naturelle, le Complexe Activateur de Bronzage Lancaster stimule la production naturelle de mélanine pour un bronzage doré, durable et uniforme. Cette Huile Après-Soleil sublimatrice contient un complexe réparateur qui apa ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3614227913851</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1c8a0ee3d9fc5b1db816e68b703eb408b2b1f4df4568f6d33fe3b095dc6e7d7b ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Huile sèche Soyeuse Activateur de Bronzage 150ml ]]></title>
+<g:id>05531931-f6ba-4e22-81e7-38d5635db1f6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun huile sèche soyeuse activateur de bronzage 150ml?05531931-f6ba-4e22-81e7-38d5635db1f6 ]]></link>
+<g:price><![CDATA[ 4370.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Une huile sans l'effet gras grâce à notre huile sèche accélératrice de bronzage SPF50. En laissant à votre peau un magnifique fini satiné et sec, elle offre un bronzage lumineux plus rapide, plus profond et impeccable en peu de temps d'exposition.</p>
+<p>Bénéficiez des avantages d'une huile sans l'effet gras grâce à notre huile sèche accélératrice de bronzage SPF50. En plus de cibler 100% du spectre solaire*, notre huile sublimatrice, respectueuse de la peau &amp; des océans, aide dorénavant  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616302022557</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/65f6b183ed99906658bc6e3654a4d272bd3a44b293e41fac775966d86a1e95f1 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun My Routine Spf30 ]]></title>
+<g:id>39c5a35e-d094-4ff7-8ce4-0ede3bcfe7d6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun my routine spf30?39c5a35e-d094-4ff7-8ce4-0ede3bcfe7d6 ]]></link>
+<g:price><![CDATA[ 4090.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Obtenez le légendaire bronzage doré Lancaster grâce à ce kit solaire 2 pièces indispensable !</span><br /><span>Lancaster Sun Beauty Huile Sèche Soyeuse SPF30.</span><br /><span>Notre plus haute protection solaire pour le corps dans une huile sublimatrice hautement sensorielle au fini sec et satiné, propre et respectueuse de l'océan, pour un bronzage doré encore plus rapide, impeccable et durable* :</span><br /><span>La technologie avancée Full Light offre une protection, au-delà des UV ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616305250148</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/69222a3926b129250b0e79a7968f393566f6fb9009fc80f557273fb25f2b89d3 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Perfect Crème Eclat Anti-Ride & Taches SPF 50 - 50ml ]]></title>
+<g:id>ee77bf98-d51b-48fa-8ceb-fc48895719b2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun perfect crème eclat anti-ride & taches spf 50 - 50ml?ee77bf98-d51b-48fa-8ceb-fc48895719b2 ]]></link>
+<g:price><![CDATA[ 6290.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Envie d'une </span><span>solution 2-en-1 </span><span>alliant </span><span>protection solaire</span><span> et </span><span>soin pour la peau</span><span> ? La </span><span>Crème Eclat Anti-rides &amp; Taches SPF50 Sun Perfect Lancaster</span><span> offre une </span><span>protection solaire complète</span><span>, grâce à la technologie exclusive Full Light. Dotée d'une</span><span> formule légère et hydratante</span><span>, elle aide également à prévenir et à réduire l'apparition de ride ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616303450168</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1ac0d1f749af1671f207de831976969f153d5435e5fae0613c50798ca11c7b01 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Perfect Crème Eclat Spf 30 50ml ]]></title>
+<g:id>926d5f62-cb0c-4e31-8cac-1293387fd5de</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun perfect crème eclat spf 30 50ml?926d5f62-cb0c-4e31-8cac-1293387fd5de ]]></link>
+<g:price><![CDATA[ 6450.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="panel">
+<div id="idTab1" class="rte">
+<p>Sun Perfect est la ligne de soins solaires Anti-Âge globale la plus avancée de Lancaster, un indispensable en matière de protection solaire et de soin de la peau, à intégrer dans votre routine beauté quotidienne. Sa technologie Full Light et sa technologie Anti-Âge offrent une protection à large spectre, tout en prévenant et en aidant à corriger les signes du vieillissement de votre peau.</p>
+<p></p>
+</div>
+</div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616303450151</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/94914ace6b446374bfe97778e9a4c71d75333eeac96cdbbabc99b859224ebbd4 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Sensit Spf50 Lait Corps 150ml ]]></title>
+<g:id>35f77d03-2598-4abc-bf38-5aaf636c7681</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun sensit spf50 lait corps 150ml?35f77d03-2598-4abc-bf38-5aaf636c7681 ]]></link>
+<g:price><![CDATA[ 4370.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Notre protection solaire la plus complète pour offrir un hâle lumineux et durable même aux peaux sensibles, tout en réduisant les rougeurs et la sensation d'inconfort, dans des formules hautement sensorielles, respectueuses de la peau et des océans.</p>
+<p>Et si même une peau sensible pouvait avoir un hâle doré délicat tout en bénéficiant de notre meilleure protection solaire et en étant préservée des rougeurs et de l’inconfort ?<br />La gamme Sun Sensitive de Lancaster combine notre protecti ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616301295389</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/44f91a655754234db9e6fe67367b18215d22f6598a07dc20978ab4934a6846f3 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Sensitive Luminous Tan Fluide Lacté Non-Gras SPF50 50 ml ]]></title>
+<g:id>4141176c-af2c-45e1-9b48-a74d20448195</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun sensitive luminous tan fluide lacté non-gras spf50 50 ml?4141176c-af2c-45e1-9b48-a74d20448195 ]]></link>
+<g:price><![CDATA[ 4290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lancaster Sun Sensitive Luminous Tan Fluide Lacté Non-Gras SPF50 50 ml est une haute protection solaire visage, résistante à l'eau, spécialement conçue pour les peaux sensibles.</p>
+<p>La technologie Full Light brevetée protège des rayons UVA/UVB/lumière visible/infrarouges, tandis que le complexe Sunsicalm d'origine naturelle apaise et préserve la peau sensible des dommages causés par le soleil.<br />Respectueuse de la peau et des océans, cette formule haute tolérance à la texture laiteuse l ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616301295396</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/05bf052a9e45a23863fe03e181d5ec27b14bfde2fef1b3b087b005d19afe9394 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Sport Brume Corps Invisible Rafraîchissante SPF50 200 ml ]]></title>
+<g:id>e0fd770a-c499-407e-b196-0439efe681d8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun sport brume corps invisible rafraîchissante spf50 200 ml?e0fd770a-c499-407e-b196-0439efe681d8 ]]></link>
+<g:price><![CDATA[ 4590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>ancaster Sun Sport Brume Corps Invisible Rafraîchissante SPF50 200 ml est une haute protection solaire pour le corps, résistante à la transpiration et à l'eau.</p>
+<p>Elle offre une protection à large spectre avec un effet rafraîchissant instantané. Respectueuse de la peau et des océans, elle cible 100% du spectre solaire et aide aussi à réparer la peau endommagée par le soleil.</p>
+<p>Très facile et rapide à appliquer, sa formule transparente et légère laisse la peau respirer même pendant le ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616302514519</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c115449b638df131092907b8a6a7c368a6e7402e6e0389a5196be5f4355d6eb6 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Sport Brume Invisible Rafraîchissante SPF30 200ml ]]></title>
+<g:id>975bbe1b-0dcc-4f7c-8583-a629d2d8ecb8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun sport brume invisible rafraîchissante spf30 200ml?975bbe1b-0dcc-4f7c-8583-a629d2d8ecb8 ]]></link>
+<g:price><![CDATA[ 4890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Envie de fraîcheur ? Lancaster s'adapte à votre rythme de vie intense avec la Brume Invisible Rafraîchissante Sun Sport Application Peau Mouillée SPF30, une protection solaire idéale pour les sports et les activités de plein air. Notre Brume rafraîchit, sèche rapidement et résiste à l'eau et à la transpiration : une véritable vague de fraîcheur lors de tous vos mouvements. Encore mieux !&nbsp; Elle contient la Technologie exclusive Full Light de Lancaster qui cible 100% des rayons solaires (U ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616306643048</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4892a1013bc6f67d631eca0aa606e4aa7fbf58075d2e46ae9c5f917183e22499 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Sport Brume Invisible Spf 30 200ml ]]></title>
+<g:id>caa1b5e8-dc00-41b1-8e3b-86cd16d2e4a4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun sport brume invisible spf 30 200ml?caa1b5e8-dc00-41b1-8e3b-86cd16d2e4a4 ]]></link>
+<g:price><![CDATA[ 4590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Découvrez la dernière innovation signée Lancaster avec les brumes pour le corps Sun Sport dotées d’une double action !</p>
+<p>La nouvelle technologie PROTECT AND REFRESH IN MOTION permet d’accroitre la résistance de la protection solaire au contact de l’eau ou de la transpiration grâce à un ensemble de polymères.</p>
+<p>Lors du contact avec l’eau/la transpiration, les polymères se réorganisent et homogénéisent la crème sur la surface de la peau. S’ajoute à cela une action rafraîchissante grâc ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616302514502</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3150cc6469af123350924226bb541980e2a3eb1cd8fcbf587222ff7760225d00 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster Sun Sport Gel Visage Spf 30 50ml ]]></title>
+<g:id>9343e013-f19c-4305-b6c6-5455c2b2db34</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-sun sport gel visage spf 30 50ml?9343e013-f19c-4305-b6c6-5455c2b2db34 ]]></link>
+<g:price><![CDATA[ 4150.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Notre Gel Visage Invisible SPF30 Sun Sport, résistant à l'eau et à la sueur, invisible et léger, il permet à votre peau de continuer à respirer, même pendant les activités sportives intenses.</p>
+<p>Bénéficiez d'une protection étendue avec notre Gel Visage Invisible SPF30 et Rafraîchissant SPF30 Sun Sport, résistant à l'eau et à la sueur. En plus de cibler 100 % du spectre solaire*, notre gel protecteur visage, respectueux de la peau et des océans, aide dorénavant à réparer la peau des dommag ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616302514496</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3991018d1bc3d76febe1de4aca12278197a0d60fdf1e9f83b87e4a4772df0e1d ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lancaster fluide solaire perfecteur 30 ml ]]></title>
+<g:id>6e3d71da-18cf-4ce3-9ee7-88c3a8726a88</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lancaster-fluide solaire perfecteur 30 ml?6e3d71da-18cf-4ce3-9ee7-88c3a8726a88 ]]></link>
+<g:price><![CDATA[ 6450.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Envie d'une solution 2-en-1 alliant protection solaire et soin pour la peau ? C'est ici ! Notre Fluide Perfecteur Anti-Rides &amp; Taches SPF50 Sun Perfect offre une protection solaire complète, grâce à la Technologie exclusive Full Light de Lancaster. Doté d'une formule légère et hydratante, il aide également à prévenir et à réduire l'apparition de rides et de taches brunes. Enfin, ce fluide teinté estompe les irrégularités et améliore instantanément l'apparence de votre peau, laissant ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616303450144</g:gtin>
+<g:brand><![CDATA[ LANCASTER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4318512de1e1c29857d01bcd25f611e7575ffc8447eb7953b7ff193becf599fa ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lansinoh 4 Coussinets d'Allaitement Lavables ]]></title>
+<g:id>9c11c933-d63f-460d-adb0-108dd1f9635d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lansinoh-4 coussinets d'allaitement lavables?9c11c933-d63f-460d-adb0-108dd1f9635d ]]></link>
+<g:price><![CDATA[ 699.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lansinoh 4 Coussinets d'Allaitement Lavables sont des coussinets d'allaitement lavables ultra-doux et ultra-absorbants.</p>
+<p>Les 4 coussinets se distinguent par leur capacité d'absorption supérieure. La performance est atteinte grâce à l'utilisation d'une technologie alliant 3 couches ultra performantes :</p>
+<ul><li>Un voile extérieur imperméable qui permet une protection fiable contre les fuites,</li>
+<li>Un noyau ultra-absorbant composé de fibres naturelles de bambou qui dirigent rapidem ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5060420231175</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/38fd3c0f03d49232e7541871908251a5803f673da1f54f850c1972543319e7ed ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lansinoh 8 Coussinets d'Allaitement Lavables Couleurs ]]></title>
+<g:id>51b696c9-c98d-4328-a4cd-82a27a522dbe</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lansinoh-8 coussinets d'allaitement lavables couleurs?51b696c9-c98d-4328-a4cd-82a27a522dbe ]]></link>
+<g:price><![CDATA[ 1290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lansinoh 8 Coussinets d'Allaitement Lavables Couleurs sont des coussinets d'allaitement lavables ultra-doux et ultra-absorbants.</p>
+<p>Les 4 coussinets noirs et les 4 coussinets roses pâles se distinguent par leur capacité d'absorption supérieure. La performance est atteinte grâce à l'utilisation d'une technologie alliant 3 couches ultra performantes :</p>
+<ul><li>Un voile extérieur imperméable qui permet une protection fiable contre les fuites,</li>
+<li>Un noyau ultra-absorbant composé de f ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5060420232189</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/afa9d3609fa82ac62916ed21918873a9ce760615f08c909a252c13038764b5ca ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lansinoh Sachet Conservation Lait Maternel 25 Sachets ]]></title>
+<g:id>293379d0-43ae-436c-98cb-1eacc1e67e1a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lansinoh-sachet conservation lait maternel 25 sachets?293379d0-43ae-436c-98cb-1eacc1e67e1a ]]></link>
+<g:price><![CDATA[ 890.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>LANSINOH</span><br /><span>Sachets pour le lait maternel</span><br /><span>Conçus spécialement pour le congélateur</span><br /><span>Préstérilisés</span><br /><span>Double Zip pour une fermeture solide</span><br /><span>Simple à remplir </span><br /><span>Sans BPA</span><br /><span>Sachet x25 </span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5060420231625</g:gtin>
+<g:brand><![CDATA[ ALMAFIL ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cf47503fee70b92e6e3a6bf69fc4c2dd73b84d940ffd90d9dde01f3126eb83c0 ]]></g:image_link>
+<g:product_type><![CDATA[ ACCESSOIRES MATERNITE ET ALLAITEMENT ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lansinoh crème Lanoline HPA 40 ml ]]></title>
+<g:id>e33cce3c-f30d-4d1f-b1d4-461e965d13dc</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lansinoh-crème lanoline hpa 40 ml?e33cce3c-f30d-4d1f-b1d4-461e965d13dc ]]></link>
+<g:price><![CDATA[ 1590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Composition 100% lanoline pure, il est cliniquement prouvé que cette crème pour allaitement apaise et protège les mamelons sensibles et la peau sensibilisée ou irritée.</span></p>
+<p><span>Utilisez notre crème Lanoline d’allaitement HPA® en toute confiance pour bénéficier d’une expérience d’allaitement agréable et réussie.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5060062996227</g:gtin>
+<g:brand><![CDATA[ ALMAFIL ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/07609a82fa6b74c46fc84460427558f499ae7d21c8fcbdc0cdd0da0337022ebc ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS MATERNITE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Larmécran Solution ophtalmique 10 ml ]]></title>
+<g:id>c2707f83-e49c-4d84-8e6d-941232ec4cce</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/larm-cran solution ophtalmique 10 ml?c2707f83-e49c-4d84-8e6d-941232ec4cce ]]></link>
+<g:price><![CDATA[ 890.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Larmécran<span>®</span> est un dispositif médical, dédié à l’hydratation et au soulagement des yeux secs ou fatigués, exposés aux écrans.</strong></p>
+<p>Larmécran<span>®</span> est aussi indiqué dans l’humidification et la lubrification des lentilles de contact.</p>
+<p>Ce sont des gouttes oculaires contenues dans le flacon ABAK<span>®</span> développé et breveté par Thea<span>®</span> qui permet de garder le produit ouvert pendant 3 mois <strong>sans aucun produit conservateur</stron ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3662042007354</g:gtin>
+<g:brand><![CDATA[ THEA ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dbbd94c7ea28c44fd14053e06515ce4e4eeb0c88fa5610190fccda45f69b6f10 ]]></g:image_link>
+<g:product_type><![CDATA[ CONTACTOLOGIE ET SOINS DES YEUX ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lashile Acide hyaluronique 60 gummies ]]></title>
+<g:id>14d3ffb1-e6c9-46e5-b73d-e3275d3ae694</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashile-acide hyaluronique 60 gummies?14d3ffb1-e6c9-46e5-b73d-e3275d3ae694 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><b>NOS GUMMIES ACIDE HYALURONIQUE :</b><span></span><br /><br /><span>• Favorisent l’éclat et l'élasticité de la peau et ainsi lissent les rides. </span><br /><br /><strong>GAMME “LES ESSENTIELS” DE LASHILÉ BEAUTY : POUR PRENDRE SOIN DE SOI ET SE SUPPLÉMENTER AU QUOTIDIEN.</strong><br /><span>Si nos principales gammes répondent avec efficacité à de nombreuses problématiques beauté/bien-être grâce à une formulation exclusive d’actifs (vitamines, oligo-éléments, plantes, probiotiques…) qui vont ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760302223589</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/414d5c1611711859a2308e5e6313534e19263b8ac2168f3c95199068da37152d ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lashile Beauty Good Hair Men 60 Gummies ]]></title>
+<g:id>6c31ecdd-2d8c-4dc4-936d-1ee2fe611fb1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashile-beauty good hair men 60 gummies?6c31ecdd-2d8c-4dc4-936d-1ee2fe611fb1 ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1"><span class="s1">L</span>es gummies <span>Lashile Beauty Good Hair Men</span> sont des gummies vitaminés spécialement conçus pour lutter contre la chute des cheveux des hommes.</p>
+<p class="p1"><span class="s2">Nos gummies ont été formulés avec un complexe de cheveux de vénus, maca, paba, zinc, vitamine B6, prêle, des nutriments essentiels pour prévenir et stopper la chute des cheveux, lutter contre le vieillissement capillaire, stimuler la croissance des cheveux, favoriser leur d ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760302220892</g:gtin>
+<g:brand><![CDATA[ LASHILÉ ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a79161c8f1f7a52965e1b92f02853f31a13366fab5a25519fc67600c2820d9b0 ]]></g:image_link>
+<g:product_type><![CDATA[ COMPLEMENTS ALIMENTAIRES > Dermocosmétique > CAPILLAIRES > SANTE > PHANERES CAPILLAIRES ONGLES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lashile Good Hair 3 Flacons de 60 Gummies+Brosse ]]></title>
+<g:id>204dfc94-dd8b-484a-8b12-8154a1976a30</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashile-good hair 3 flacons de 60 gummies+brosse?204dfc94-dd8b-484a-8b12-8154a1976a30 ]]></link>
+<g:price><![CDATA[ 5990.01 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce pack cadeau exclusif de 3 mois vous permet d'économiser 20% avec notre brosse en bambou Lashilé Beauty offerte ! (Dans la limite des stocks disponibles).<br /><br /><span>Des cheveux + beaux, + longs, + forts !</span><br />Les Good Hair sans sucres sont des gummies vitaminés spécialement conçus pour contribuer à la pousse des cheveux et à leur beauté.<br />Nos gummies sont vegans, sans colorants artificiels et fabriqués en France ????????<br />Ils contiennent des arômes naturels de fruits  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760302228850</g:gtin>
+<g:brand><![CDATA[ LASHILÉ ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ac1eb7c404aecde9daafcd2649c27ab40b0dbc0d0f87560b3897e5603e1f6ec7 ]]></g:image_link>
+<g:product_type><![CDATA[ COMPLEMENTS ALIMENTAIRES > Dermocosmétique > CAPILLAIRES > SANTE > PHANERES CAPILLAIRES ONGLES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lashile Good Slim boost minceur 60 gummies ]]></title>
+<g:id>2ea58f04-da2e-4395-940e-35f3cb6ddb6a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashile-good slim boost minceur 60 gummies?2ea58f04-da2e-4395-940e-35f3cb6ddb6a ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><b>Tout ce dont vous avez besoin pour booster la perte de poids et la minceur :</b><span></span><br /><br /><span>✓ Favorise la perte de poids en complément de mesures diététiques grâce à la chicorée,</span><br /><span>✓ Aide à rester mince grâce au sureau,</span><br /><span>✓ Aide au contrôle du poids et au maintien du poids de forme grâce au sureau,</span><br /><span>✓ Convient pour hommes et femmes.</span><br /><br /><b>FORMULE SANS SUCRES.</b></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760302222674</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/efdaae7f9b7a0644aff1f6ad66e42be9ee3fd5657e3a1123ef6423444e727a07 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lashile Good Sun Autobronzant + Trousse Vanity - 3x60 gummies ]]></title>
+<g:id>d64a9c73-55a0-4272-87d6-7336132851ea</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashile-good sun autobronzant + trousse vanity - 3x60 gummies?d64a9c73-55a0-4272-87d6-7336132851ea ]]></link>
+<g:price><![CDATA[ 5990.01 EUR ]]></g:price>
+<description><![CDATA[ <p><span> Le secret d'un teint rayonnant et sublimé</span><br /><br /><span>• Une formule cliniquement prouvée concentrée et équilibrée.</span><br /><br /><span>• Posologie : 2 gummies par jour à tout moment de la journée.</span><br /><br /><span>• Cure de 3 mois minimum recommandée.</span><br /><br /><span>• Délicieux goût Pêche</span><span> Le secret d'un teint rayonnant et sublimé</span><br /><br /><span>• Une formule cliniquement prouvée concentrée et équilibrée.</span><br /><br ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760302228928</g:gtin>
+<g:brand><![CDATA[ LASHILÉ ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d3bca19351ad9ec8fe701a824852d70f72f4523905b95ecc2e909e436a9a92c0 ]]></g:image_link>
+<g:product_type><![CDATA[ COMPLEMENTS ALIMENTAIRES > SOLAIRES > SANTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lashile Good burn boost minceur 60 gummies ]]></title>
+<g:id>707def98-3908-4d6a-8366-80cd9d4e090b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashile-good burn boost minceur 60 gummies?707def98-3908-4d6a-8366-80cd9d4e090b ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><b>Tout ce dont vous avez besoin pour vous aider à brûler les graisses afin de mincir :</b><span></span><br /><br /><span>✓ Favorise la combustion des graisses grâce au cola,</span><br /><span>✓ Contribue au contrôle du poids corporel à l’aide du cola,</span><br /><span>✓ Aide à soutenir un programme de perte de poids grâce au cola,</span><br /><span>✓ Convient pour hommes et femmes.</span><br /><br /><b>FORMULE SANS SUCRES AJOUTÉS.</b><span></span><br /><br /><span>NOTRE CONSEIL : Combinez n ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760302221837</g:gtin>
+<g:brand><![CDATA[ LASHILÉ ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8c9f0dde6a15e67a619ddc2b23162baf795b542163aad66e83aaa6e7d79ed938 ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lashile Good hair Women anti chute cheveux 60 gummies ]]></title>
+<g:id>8b6b2498-0128-4b3a-a40e-445d3e484ebd</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashile-good hair women anti chute cheveux 60 gummies?8b6b2498-0128-4b3a-a40e-445d3e484ebd ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Les Good Hair WOMEN sans sucres sont des gummies vitaminés spécialement conçus pour </span><b>lutter contre la chute des cheveux féminins.</b><span> Ils sont végans, sans colorants artificiels et fabriqués en France. Ils contiennent des arômes naturels pour un goût « Fruits rouges » que vous allez adorer !</span></p>
+<p><span><b>Tout ce dont les femmes ont besoin pour prévenir la chute des cheveux :</b><span></span><br /><br /><span>✓ Convient à la chute occasionnelle ou régulière des c ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760302225750</g:gtin>
+<g:brand><![CDATA[ LASHILÉ ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2a8f98563ae060cb166773dc894414f3f57f1c62d4aaf38c2541460a7062a243 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES > PHANERES CAPILLAIRES ONGLES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lashile Good hair vitamines boost 60 gummies ]]></title>
+<g:id>d21209b7-b822-4b95-8000-88cb33f7fbf1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashile-good hair vitamines boost 60 gummies?d21209b7-b822-4b95-8000-88cb33f7fbf1 ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><b>FORMULE SANS SUCRES</b><span></span><br /><br /><b>VICTOIRE DE LA BEAUTÉ 2020/2021 ET 2021/2022.</b><span>TESTÉ ET APPROUVÉ PAR UN JURY DE CONSOMMATEURS</span><br /><br /><b>DES CHEVEUX PLUS BEAUX, PLUS LONGS !</b><br /><span>Les Good Hair sans sucres sont des gummies vitaminés spécialement conçus pour </span><b>favoriser la beauté, la pousse et la fortification de vos cheveux.</b><span> Ils sont végans, sans colorants artificiels et fabriqués en France. Ils contiennent des arômes naturels ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760302225729</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8ea60c063ec201c9a649d183385a4107a5676c34cd110fdfaf30f8c55cc25a7b ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lashile beauty Good Sun 60 Gummies ]]></title>
+<g:id>90647470-1388-4837-9221-614128e8375e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashile-beauty good sun 60 gummies?90647470-1388-4837-9221-614128e8375e ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p class="p1"><span class="s1">Les GOOD SUN sont des gummies vitaminés spécialement conçus pour obtenir un teint hâlé toute l'année. </span><strong>Ils sont conçus pour booster votre  bronzage !</strong></p>
+<p class="p1"><span class="s1"></span>Ils sont végans, sans colorants artificiels et fabriqués en France. Nos gummies ont été formulés grâce à un complexe de phytopigments végétaux essentiels tels que le Bêta-Carotène, le Lycopène, la Lutéine ainsi que de la Vitamine E : des nutriments essen ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>7061116013820</g:gtin>
+<g:brand><![CDATA[ LASHILÉ ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3d303657dc0f2f5c5ab90e89b3fbe2fbe7ddfe3ee8806532ae34b4212d79ab8a ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lashilé Beauty Good Beauty Collagène Soutien 60 Gummies ]]></title>
+<g:id>050a5afb-661d-478f-92c2-68fa85cbf75d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashil-beauty good beauty collagène soutien 60 gummies?050a5afb-661d-478f-92c2-68fa85cbf75d ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lashilé Beauty Good Beauty Collagen Support 60 Gummies sont conçus pour favoriser la production de collagène.</p><p>Ce complément alimentaire renferme une formule élaborée pour apporter les nutriments essentiels à la santé de la peau.<br>Enrichies en biotine, en zinc et en vitamine B6, ces gummies offrent une solution pratique et savoureuse pour redonner de l'éclat à votre peau<br>Elles sont composées de :</p><ul><li><p>Vitamine C qui contribue à la formation normale de collagène.</p></li><li ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760302229109</g:gtin>
+<g:brand><![CDATA[ LASHILÉ ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/391c83e3d10ff30b62569575b4508edcd9e2905e700e1ea814204f69ac9e9338 ]]></g:image_link>
+<g:product_type><![CDATA[ COMPLEMENTS ALIMENTAIRES > BEAUTÉ ET MINCEUR > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lashilé Beauty Good Hair Women Anti-Chute Lot de 3 x 60 Gummies + Serviette Offerte ]]></title>
+<g:id>3c297122-e987-477e-912a-da8eacfacd28</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashil-beauty good hair women anti-chute lot de 3 x 60 gummies + serviette offerte?3c297122-e987-477e-912a-da8eacfacd28 ]]></link>
+<g:price><![CDATA[ 5990.01 EUR ]]></g:price>
+<description><![CDATA[ <p>Lashilé Beauty Good Hair Women Anti-Chute Lot de 3 x 60 Gummies + Serviette Offerte est un complément alimentaire conçu pour aider à prévenir la chute des cheveux.</p>
+<ul><li>Les cheveux de Vénus aident à prévenir la chute des cheveux,</li>
+<li>le zinc et la biotine (vitamine B8) contribuent au cheveux normaux,</li>
+<li>la myrtille active la microcirculation du cuir chevelu,</li>
+<li>le fer et la vitamine B12 jouent un rôle dans le processus de division cellulaire,</li>
+<li>la vitamine B6 co ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760302228843</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e11ce38c74e7919c2be7c87b72de5b426ee9f0b52f7212dfa12fe458773fef1b ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lashilé Beauty Good Night Nuit Sublime 60 Gummies ]]></title>
+<g:id>f1f82781-b2ec-4483-9b59-0f8a8053203d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashil-beauty good night nuit sublime 60 gummies?f1f82781-b2ec-4483-9b59-0f8a8053203d ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lashilé Beauty Good Night Nuit Sublime 60 Gummies est un complément alimentaire à base de mélatonine, L-théanine, L-tryptophane, valériane, passiflore, vitamines B6 et B9.</p>
+<ul><li>La mélatonine contribue à réduire le temps d'endormissement et aide à atténuer les effets du décalage horaire.</li>
+</ul><p>Les gummies sont faciles à prendre et à digérer.</p>
+<p>Goût myrtille.</p>
+<p>Sans gélatine.<br />Sans gluten, sans colorants artificiels.</p>
+<p>Vegan.</p>
+<p>Fabriqué en France.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760302225736</g:gtin>
+<g:brand><![CDATA[ LASHILÉ ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2cda8756f8fe8af1c636df49c100b23ce177ad7b9d2a7916cb5c6bb825b03d9b ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lashilé Beauty Good Skin Night - 60 gommes ]]></title>
+<g:id>afd2c140-987d-492c-9af8-f2599776a863</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashil-beauty good skin night - 60 gommes?afd2c140-987d-492c-9af8-f2599776a863 ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Good Skin Night&nbsp;de Lashilé Beauty</strong>, complément alimentaire&nbsp;à la&nbsp;double action pour soutenir votre sommeil tout en favorisant la régénération de la peau.</p><p>Une formule double action innovante conçue pour aider à régénérer votre peau durant votre sommeil :</p><ul><li><p>Soutient la qualité d'un sommeil naturel essentiel pour la régénération cutanée grâce au pavot de Californie,</p></li><li><p>Joue un rôle dans le processus de division cellulaire grâce à la vit ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760302229093</g:gtin>
+<g:brand><![CDATA[ LASHILÉ ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d42d118ecf0d379930e6bdf99443b9686755e39118c9a53ae07f00d6f8919c99 ]]></g:image_link>
+<g:product_type><![CDATA[ CONFISERIE > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lashilé Beauty Good Skin Vitamines Boost Peau Sublime 60 Gummies ]]></title>
+<g:id>7e20f372-8b6a-4e25-a285-45db23fef525</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashil-beauty good skin vitamines boost peau sublime 60 gummies?7e20f372-8b6a-4e25-a285-45db23fef525 ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lashilé Beauty Good Skin Vitamines Boost Peau Sublime 60 Gummies est un complément alimentaire formulé à base d'un complexe d'acide hyaluronique, de coenzyme Q10, de vitamine C et E.</p>
+<ul><li>L'acide hyaluronique est reconnu pour favoriser l'éclat et l'élasticité de la peau et ainsi lisser les rides pour la jeunesse de la peau.</li>
+<li>La vitamine C contribue à la formation normale de collagène pour assurer la fonction normale de la peau.</li>
+<li>Les vitamines C et E contribuent à protég ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760302225767</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/47ad6e4b0d32aa9cf57c148d9fb84213ffbbd6b2f4e5663fe0b540ba59c1f134 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lashilé Coffret Cheveux Sublimes ]]></title>
+<g:id>5be6167d-bfef-48a5-8771-ad991f192fda</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lashil-coffret cheveux sublimes?5be6167d-bfef-48a5-8771-ad991f192fda ]]></link>
+<g:price><![CDATA[ 3890.00 EUR ]]></g:price>
+<description><![CDATA[ <p><b><span>Routine CHEVEUX SUBLIMES ✨</span></b><br /><span>Revitalisez et sublimez votre chevelure de la racine jusqu'aux pointes, grâce à notre superbe </span><b>Coffret iconique CHEVEUX SUBLIMES</b><br /><span>Offrir un cadeau Lashilé Beauty c'est penser à (se) faire plaisir !</span><br /><br /><b>Nos Gummies sont vegans, sans colorants artificiels et fabriqués en France</b><br /><span>Ils sont sans sucres et contiennent des arômes naturels de fruits pour un goût que vous allez adorer !</spa ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760302228386</g:gtin>
+<g:brand><![CDATA[ LASHILÉ ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3f236d745fad418b7ad5a30a5cdd04f38f62a9c7b3fdead5f5d72bd21b0f4ce0 ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > Idées Cadeaux > PHANERES CAPILLAIRES ONGLES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laxeol cubes transit pruneau figue raisin boîte de 10 cubes ]]></title>
+<g:id>043d9883-7e13-494c-a175-57cace316ccf</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laxeol-cubes transit pruneau figue raisin boîte de 10 cubes?043d9883-7e13-494c-a175-57cace316ccf ]]></link>
+<g:price><![CDATA[ 510.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Laxeov Cubes vous apporte le plaisir d'utilisation et la gourmandise des fruits associés à une formule unique.</span><br /><br /><span>Ces cubes savoureux combinent des sources différentes de fibres alimentaires :</span><br /><span>- son de </span><span>blé</span><br /><span>- fibres de </span><span>pomme</span><br /><span>- fibres d'</span><span>avoine</span><br /><span>- </span><span>fructo-oligosaccharides</span><br /><br /><span>Actifs 100% d'origine naturelle, sans stimulants, sans ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401560205824</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/767526b851b7b85ff189b49ddaa15ee491bd814651e797b527ef42464758a5f5 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Laxeov cubes transit express pomme abricot 10 cubes ]]></title>
+<g:id>b5593b4c-63a2-4ecc-a116-65bdec64c463</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/laxeov-cubes transit express pomme abricot 10 cubes?b5593b4c-63a2-4ecc-a116-65bdec64c463 ]]></link>
+<g:price><![CDATA[ 510.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ces cubes vous apportent le plaisir d'utilisation et la gourmandise des fruits associés à une formule unique.<br />Ces cubes savoureux sont riches en fibres naturelles. </p>
+<div id="action" class="onglet_mineur">
+<p>Ils combinent des sources différentes de fibres : son de blé, fibres de pomme, fibres d'avoine, fructo-oligosaccharides.<br />Sans stimulant, sans conservateur.</p>
+</div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401560205831</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6bc7d8dba41047c4a9340558c19826910c05ff814b4cbd53c142d6772f106f9f ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Boost Chute & Croissance 60 gummies ]]></title>
+<g:id>e73ef36e-8f65-43ff-8c2d-d52a0efc7a88</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-boost chute & croissance 60 gummies?e73ef36e-8f65-43ff-8c2d-d52a0efc7a88 ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le complément alimentaire BOOST Gummies aide à lutter efficacement contre la chute de cheveux₁ progressive ou réactionnelle, grâce à une double action inédite qui freine la chute₁ et stimule la croissance².</p>
+<p><em><span>Aide à freine la chute₁ – Stimule la croissance₂ – Renforce les cheveux et les ongles₃</span></em></p>
+<p>Arôme naturel, délicieuse saveur de framboise-cassis. 2 gummies à prendre par jour.</p>
+<p><em><span>Vegan – Sans sucres - Sans colorant artificiel – Arômes naturels - ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000792</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/194e43229059d391f6ef17ec7537c4dfbafdcbc75c23116ac77d0b690c513600 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Boost Chute & croissance 90 gélules ]]></title>
+<g:id>a8bfa15d-fd74-4142-9048-24b75543b09e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-boost chute & croissance 90 gélules?a8bfa15d-fd74-4142-9048-24b75543b09e ]]></link>
+<g:price><![CDATA[ 5980.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le complément alimentaire BOOST Gélules aide à lutter efficacement contre la chute de cheveux progressive ou réactionnelle, grâce à une double action qui freine la chute</span><span>₁</span><span> et stimule la croissance</span><span>²</span><span>. </span><span> </span> </p>
+<p><span><i>Aide à freiner la chute</i></span><span>₁</span><span><i> – Stimule la croissance</i></span><span><i>₂</i></span><span><i> – Renforce les cheveux et les ongles</i></span><span><i>₃</i></span><span> </sp ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000808</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5a49e25dca07f99e227c86f5313ade3ed74039bbc36055e8a022fde915189c10 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Cica-Calm Gelée Dermo Apaisante 75ml ]]></title>
+<g:id>b5c9a4c5-8515-462c-9513-e7fed3b48600</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-cica-calm gelée dermo apaisante 75ml?b5c9a4c5-8515-462c-9513-e7fed3b48600 ]]></link>
+<g:price><![CDATA[ 3490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Enrichie en Centella asiatica réparatrice, cette gelée rafraîchissante calme instantanément les sensations de démangeaisons et combat durablement l’envie de grattage.</p>
+<p><span><em>Apaise instantanément – Hydrate en profondeur – Répare et renforce la barrière cutanée</em></span></p>
+<p>La gelée dermo-apaisante CICA-CALM restaure l’effet barrière du cuir chevelu afin de le rendre plus résistant face aux agressions extérieures. Sans rinçage, sa texture légère et rafraîchissante calme instant ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290001539</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b436ce923245230b342cda9fb2c91219016a964a44de4641bac736bbc9c99d1b ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Cica-calm Shampoing 250ml ]]></title>
+<g:id>0ad107cf-07a8-4a5d-8b82-4b423ba38352</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-cica-calm shampoing 250ml?0ad107cf-07a8-4a5d-8b82-4b423ba38352 ]]></link>
+<g:price><![CDATA[ 2090.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Enrichi en Centella asiatica réparatrice, ce shampooing apaisant calme instantanément les sensations de démangeaisons tout en réduisant les sensations d’inconfort. Jour après jour, les sensations de tiraillements et de picotements sont réduites. </p>
+<p><span>Nettoie en douceur – Réduit les sensations de démangeaisons – Apporte de la brillance</span></p>
+<p>Le shampooing dermo-apaisant CICA-CALM restaure l’équilibre du cuir chevelu et apaise durablement jusqu’au prochain shampooing. Sa textur ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290001508</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0d6e985fc1618be8aa89da9e57d387439340d89e7e8deaba10f1ff879d1b2373 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Clear Shampoing normalisant 250 ml ]]></title>
+<g:id>8e81d06f-0dd9-433d-a2c9-a6bddaed93aa</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-clear shampoing normalisant 250 ml?8e81d06f-0dd9-433d-a2c9-a6bddaed93aa ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Après 15 jours minimum d’utilisation du Shampooing Clear Traitant Intensif, ce shampooing anti-récidive élimine durablement les pellicules persistantes et prévient leur réapparition. Composée à <span>96% d’ingrédients d’origine naturelle</span>, sa formule à l’efficacité cliniquement prouvée agit de manière ciblée pour maintenir l’équilibre du microbiote du cuir chevelu et diminuer les sensations d’inconfort. Le produit aide à éviter la récidive des pellicules. Le shampooing élimine les impur ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000280</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b58381a8f75a1457a205e89a5058df9a6cde720f9d0ece0175055e018b4b02f6 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Clear Shampoing traitant intensif antipelliculaire 250 ml ]]></title>
+<g:id>4f1bf54a-a167-4bc8-8520-8403f1c266a2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-clear shampoing traitant intensif antipelliculaire 250 ml?4f1bf54a-a167-4bc8-8520-8403f1c266a2 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce shampooing traitant élimine immédiatement les pellicules et assainit le cuir chevelu grâce à une combinaison d’actifs performants. Composée à <span>95% d’ingrédients d’origine naturelle</span>, sa formule à l’efficacité cliniquement prouvée agit de manière ciblée pour rééquilibrer le microbiote du cuir chevelu, diminuer les sensations d’inconfort et réguler la sécrétion de sébum. Dès la 1ère application les pellicules sont éliminées et les irritations sont apaisées. Le shampooing élimine l ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000273</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/faefb5337ceb8d3f919f238ee179bf439a4cc926e7145c7678d16dbcb14420e7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Coffret Anti Chute Progressive 300ml ]]></title>
+<g:id>08c192a0-31b9-448d-a1cd-58a40fdf5c8c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-coffret anti chute progressive 300ml?08c192a0-31b9-448d-a1cd-58a40fdf5c8c ]]></link>
+<g:price><![CDATA[ 6590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>LAZARTIGUE<br />Coffret Anti Chute Progressive<br />Contient :<br />Sérum Thicker 50ml<br />+ Shampooing Fortify 250ml</p>
+<p>Composé du sérum anti-chute THICKER et du shampooing fortifiant FORTIFY, ce traitement botanique et vegan agit contre la chute de cheveux progressive.</p>
+<p>- Sérum antichute densifiant Thicker - 50ml : Grâce à un puissant concentré d’actifs d’origine naturelle, le sérum Thicker freine la chute progressive des cheveux. Sa formule vegan, à 97% d’ingrédients d’origine n ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000839</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e372fca6433a4556954869dcfa2aebc0b2193092badcf253efbe6f422cb8d1a1 ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > Idées Cadeaux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Colour Protect Masque Protection Eclat Couleur 250 ml ]]></title>
+<g:id>7493d760-0358-4d59-8de7-1e6a01af1486</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-colour protect masque protection eclat couleur 250 ml?7493d760-0358-4d59-8de7-1e6a01af1486 ]]></link>
+<g:price><![CDATA[ 4650.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue Colour Protect Masque Protection 250 ml est un soin enrichi en huile de camélia. Il nourrit la fibre des cheveux colorés et la laisse soyeuse. Son pH acide scelle les écailles et fixe la couleur. Protégée, retenue plus longtemps au coeur de la fibre, la couleur est éclatante et sublimée.</p>
+<p>92% des ingrédients sont d'origine naturelle.</p>
+<p>Sans sulfate. Sans silicone pour un toucher naturel.</p>
+<p>Végan.</p>
+<p>92% d'ingrédients d'origine naturelle.</p>
+<p>Fabriqué en Franc ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290111528</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fea750c566d3b231d4a59afdcb6b56abf475e97a86c730082c3fbf7799cc70d9 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Colour Protect Soin Protection Eclat Couleur 150 ml ]]></title>
+<g:id>080bc0c4-7a66-4dd2-b4d4-fc6d96093f22</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-colour protect soin protection eclat couleur 150 ml?080bc0c4-7a66-4dd2-b4d4-fc6d96093f22 ]]></link>
+<g:price><![CDATA[ 2890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce soin à l’huile de camélia hydrate les longueurs, fixe la couleur et ravive l’éclat des cheveux colorés. Sa formule nourrissante, à 95% d’origine naturelle, répare les cheveux fragilisés par les procédés de coloration tout en retenant les pigments au cœur de la fibre. La couleur est protégée, son intensité reste intacte et la chevelure révèle toute sa souplesse.</p>
+<p> </p>
+<p><span><em>Fixe et prolonge la couleur – Hydratation en profondeur – Brillance et douceur – Démêlage</em></span></p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290131526</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f5874ca9811e9873ba0880ae6fbd942fb4a5c4e91ad82628d849ac7c0bd309be ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Couleur absolue Noir intense 1.00 ]]></title>
+<g:id>295b0d65-6098-4590-b0d9-a26b430463a4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-couleur absolue noir intense 1.00?295b0d65-6098-4590-b0d9-a26b430463a4 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La Couleur Absolue est une coloration permanente sans ammoniaque aux extraits botaniques. Sa concentration en pigments professionnels permet une expression absolue de la couleur et de la brillance. Sa formule vegan est enrichie en lait de riz et en huile de reine des prés pour protéger et nourrir la fibre. Le résultat : une couleur naturelle et professionnelle qui couvre 100% des cheveux blancs.</span></p>
+<p><span>Ce kit contient :</span></p>
+<ul><li>1 sachet de Sérum Protecteur Pré-co ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290180920</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/16e4ef3914d68f7b1641563e121ec61fe924b155f112de198c6d48b3c90e288d ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Coulour Protect Shampoing protection eclat couleur 250 ml ]]></title>
+<g:id>9a48f7c8-9039-404d-825e-3348b3d5b304</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-coulour protect shampoing protection eclat couleur 250 ml?9a48f7c8-9039-404d-825e-3348b3d5b304 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="product product--template">
+<div class="container">
+<div class="product__content">
+<div class="product__main">
+<div class="product__section">
+<div class="product__section-content">
+<p>Ce shampooing vegan fixe la couleur et renforce l’éclat des cheveux colorés tout en les hydratant intensément. En capturant les pigments de la coloration au cœur de la fibre, il prévient le ternissement de la chevelure. Sa formule douce, à 94% d’origine naturelle, est enrichie en actifs hydratants botan ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290121725</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/409843dbd6cb6647944b9820d19c7497da817c34070498e8e7ac15f80ef21cce ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Curl Specialist Baume Soin Lavant 250 ml ]]></title>
+<g:id>9933ce3b-eae6-439d-908f-8dbdc29a8103</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-curl specialist baume soin lavant 250 ml?9933ce3b-eae6-439d-908f-8dbdc29a8103 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue Curl Specialist Baume Soin Lavant 250 ml est un baume lavant pour cheveux très bouclés, frisés ou crépus. Enrichi en huile de melon d'eau du désert, il nettoie en douceur et apaise le cuir chevelu.<br />Les cheveux sont doux, nourris et hydratés. Les boucles sont redéfinies.</p>
+<p>95% d'ingrédients d'origine naturelle.<br />Sans sulfate. Sans silicone.</p>
+<p>Vegan.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000570</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f4e89f7549569c385676478af98dcee127b68686b617a8a4e555cb9c2971e40b ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Curl Specialist Crème Disciplinante Protectrice 250 ml ]]></title>
+<g:id>902a4a14-c029-4288-97ad-7a580cfa0f72</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-curl specialist crème disciplinante protectrice 250 ml?902a4a14-c029-4288-97ad-7a580cfa0f72 ]]></link>
+<g:price><![CDATA[ 3490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue Curl Specialist Crème Disciplinante Protectrice 250 ml est une crème sans rinçage pour cheveux très bouclés, frisés et crépus. Enrichie en huile de melon d'eau du désert, elle nourrit, démêle et redéfinit instantanément les boucles. <br />Elle protège la fibre des méfaits de la chaleur et des UV. Le coiffage est facilité et les frisottis sont domptés.</p>
+<p>Sa texture fondante et légère hydrate la chevelure sans laisser de résidus ou d'effet cartonné.</p>
+<p>Sans sulfate. Sans sil ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000594</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ffb263c366cbdcd6fa7d59a900b33da22435eaa9b7385342837aaa035455afe8 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Curl Specialist Masque Hydratation Riche 250 ml ]]></title>
+<g:id>743585ed-d592-40cf-96ad-594232e4b977</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-curl specialist masque hydratation riche 250 ml?743585ed-d592-40cf-96ad-594232e4b977 ]]></link>
+<g:price><![CDATA[ 4650.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue Curl Specialist Masque Hydratation Riche 250 ml est un soin en huile de melon d'eau du désert qui nourrit et hydrate la fibre en profondeur. Sa texture ultra-fondante gaine et démêle instantanément les cheveux qui retrouvent douceur et brillance. Les boucles sont redéfinies et les frisottis maîtrisés.</p>
+<p>96% d'ingrédients d'origine naturelle.</p>
+<p>Vegan.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000587</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/930f1a61a3d418f361ce2e6947ce61384cf009306f64d10a92446ab6efde29da ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Curl Specialist Spray Réveil de Boucles 250 ml ]]></title>
+<g:id>464843ac-d76a-4aa2-89b6-425277ac68f4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-curl specialist spray réveil de boucles 250 ml?464843ac-d76a-4aa2-89b6-425277ac68f4 ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue Curl Specialist Spray Réveil de Boucles 250 ml est un soin pour cheveux très bouclés, frisés ou crépus. Ce spray enrichie en huile de melon d'eau du désert redéfinit instantanément les boucles entre les shampoings.<br />Sa texture non collante réhydrate immédiatement, dompte les frisottis et protège des UV.</p>
+<p>97% d'ingrédients d'origine naturelle.</p>
+<p>Vegan.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000600</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2a80fe19123ef8a54d52b45ee6857e8ac61f20788cb8ad7faa7dbf28ba0d6e80 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Exfoliate Gelée Pré-Shampooing 75 ml ]]></title>
+<g:id>2adfce0e-c71e-4c50-bbf1-35c5d6606ff0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-exfoliate gelée pré-shampooing 75 ml?2adfce0e-c71e-4c50-bbf1-35c5d6606ff0 ]]></link>
+<g:price><![CDATA[ 3390.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue Exfoliate Gelée Pré-Shampooing Exfoliante et Purifiante Cuir Chevelu est un soin aux acides de fruits et Jojoba pour tous les types de cheveux. Il offre une double action détox dans une gelée extra-fraîche : les perles de Jojoba désincrustent les dépôts et les acides de fruits assainissent. Le cuir chevelu est intensément purifié et retrouve un équilibre optimal.</p>
+<p>92% des ingrédients sont d'origine naturelle.</p>
+<p>Sans sulfate. Sans silicone pour un toucher naturel.</p>
+<p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290111825</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e35c08d244fb4316998c297aafc54a8c1f6bf19d65a1e5fe30ee0a50ee727986 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Extra Gentle Shampoing Extra doux 250 ml ]]></title>
+<g:id>b2f494d8-6d31-470a-89ff-0a5b5d04ae10</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-extra gentle shampoing extra doux 250 ml?b2f494d8-6d31-470a-89ff-0a5b5d04ae10 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="product__section-title"></div>
+<div class="product__section-content">
+<p>Enrichi au lait de riz, ce shampooing à usage fréquent préserve la douceur et la brillance des cheveux normaux.  Idéale pour toute la famille dès 3 ans, sa formule sans sulfate, à 93% d’origine naturelle, nettoie la fibre en douceur et prévient tout dérèglement du cuir chevelu (irritations, pellicules, excès de sébum). Parfaitement propre, nourrie et saine, la chevelure révèle toute sa souplesse et brillance.</p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290125020</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8d5ddd1bbf430d379cedb5b3aaf2d09b933896135b91edc467d6a3815dcb1e57 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Fortify Shampoing fortifiant anti-chute 250 ml ]]></title>
+<g:id>1fac7e61-4617-46fb-9b53-9ad27fd122fe</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-fortify shampoing fortifiant anti-chute 250 ml?1fac7e61-4617-46fb-9b53-9ad27fd122fe ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="i4c-draggable-container" style="width:0px;height:0px;">
+<div class="resolved"></div>
+</div>
+<div class="product product--template">
+<div class="container">
+<div class="product__content">
+<div class="product__main">
+<div class="product__section">
+<div class="product__section-content">
+<p>Ce shampooing aux actifs botaniques prévient et freine la chute de cheveux tout en accélérant leur croissance. Sa formule vegan, à 94% d’origine naturelle, sans silicone et sans sulfate fortifie la fibre ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290123026</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a46c398a6eae5aaef8c5c55f2178930c080f6570c6eac85bbc3cc85b7dfe40fc ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Huile des Rêves Huile Sèche Nourrissante 50 ml + Sérum d'Exception Thermo-Protecteur 10 ml Offert ]]></title>
+<g:id>c4e9cebf-8c17-4d64-b228-51dc2ce45a3b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-huile des rêves huile sèche nourrissante 50 ml + sérum d'exception thermo-protecteur 10 ml offert?c4e9cebf-8c17-4d64-b228-51dc2ce45a3b ]]></link>
+<g:price><![CDATA[ 3790.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290001225</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/077d00d851a1007889e31c5032885fee591065a569ae30d2a67b35c51bcc4d21 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Huile des rêves - huile sèche nourrissante 50 ml ]]></title>
+<g:id>d934d68b-cb6a-418a-a23d-9502fe6e18dd</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-huile des rêves - huile sèche nourrissante 50 ml?d934d68b-cb6a-418a-a23d-9502fe6e18dd ]]></link>
+<g:price><![CDATA[ 3790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Riche d'une alliance d'huiles naturelles ultra-nutritives, l'Huile des Rêves à 95% d'origine naturelle, vegan et sans silicone, nourrit et répare la fibre capillaire. Elle sublime la matière et donne une brillance intense à vos cheveux, sans fini gras.</p>
+<p><span>Réparation en profondeur – Brillance intense – Sans fini gras.</span></p>
+<p>Son parfum envoûtant est obtenu grâce à une composition inédite d’huiles essentielles naturelles et de fleurs fraîches : bergamote, jasmin d’eau, rose, sa ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290143222</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/592b9356b613a562d737b586905fc11e6f5c0c87d94f232f190556d7fab7033c ]]></g:image_link>
+<g:product_type><![CDATA[ HUILE VEGETALE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue La Couleur Absolue -  9.00 Blond Très Clair ]]></title>
+<g:id>de9af2b6-6aa1-486d-92c1-6231952cb885</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-la couleur absolue -  9.00 blond très clair?de9af2b6-6aa1-486d-92c1-6231952cb885 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue La Couleur Absolue - Coloration : 9.00 Blond Très Clair est une coloration permanente aux extraits botaniques et concentrée en pigments professionnels pour une expression absolue de la couleur et de la brillance.<br />Sa formule enrichie en lait de riz et huile de reine des prés est associée à un sérum pré-coloration et un masque exclusif pour une fibre protégée et intensément nourrie avant, pendant et après la coloration.</p>
+<p>Cette coloration couvre 100% des cheveux blancs tout ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290180128</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/40b7d1134b7e0f0d74f53806e208a48bbea98811deba359952de692db4f21ec5 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue La Couleur Absolue - 4.00 Châtain ]]></title>
+<g:id>2219f7ff-952a-4d98-aad7-f369e2da0d2a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-la couleur absolue - 4.00 châtain?2219f7ff-952a-4d98-aad7-f369e2da0d2a ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue La Couleur Absolue - Coloration : 4.00 Châtain est une coloration permanente aux extraits botaniques et concentrée en pigments professionnels pour une expression absolue de la couleur et de la brillance.<br />Sa formule enrichie en lait de riz et huile de reine des prés est associée à un sérum pré-coloration et un masque exclusif pour une fibre protégée et intensément nourrie avant, pendant et après la coloration.</p>
+<p>Cette coloration couvre 100% des cheveux blancs tout en respe ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290180821</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c994da70a478f57bb7c79324cd01e5ff976a98baf35a580f718d6e43b95d0260 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue La Couleur Absolue - 5.00 Châtain Clair ]]></title>
+<g:id>eb5e4728-db01-4851-88fb-0bd0f59a3787</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-la couleur absolue - 5.00 châtain clair?eb5e4728-db01-4851-88fb-0bd0f59a3787 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue La Couleur Absolue - Coloration : 5.00 Châtain Clair est une coloration permanente aux extraits botaniques et concentrée en pigments professionnels pour une expression absolue de la couleur et de la brillance.<br />Sa formule enrichie en lait de riz et huile de reine des prés est associée à un sérum pré-coloration et un masque exclusif pour une fibre protégée et intensément nourrie avant, pendant et après la coloration.</p>
+<p>Cette coloration couvre 100% des cheveux blancs tout en ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290180623</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d91b2f1387b4dac2973f1d9265955ab12d07b93a6877a8f3847808c574770065 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue La Couleur Absolue - 5.35 Chocolat ]]></title>
+<g:id>6ff32f62-9281-4fec-83b1-644417835805</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-la couleur absolue - 5.35 chocolat?6ff32f62-9281-4fec-83b1-644417835805 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue La Couleur Absolue - Coloration : 5.35 Chocolat est une coloration permanente aux extraits botaniques et concentrée en pigments professionnels pour une expression absolue de la couleur et de la brillance.<br />Sa formule enrichie en lait de riz et huile de reine des prés est associée à un sérum pré-coloration et un masque exclusif pour une fibre protégée et intensément nourrie avant, pendant et après la coloration.</p>
+<p>Cette coloration couvre 100% des cheveux blancs tout en resp ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290181125</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ca735ee176728d8067ea3313d046b07ddfc53d598e8fe5db24302db0f1d76e74 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue La Couleur Absolue - 6.00 Blond Foncé ]]></title>
+<g:id>09844138-3d98-4429-bf3d-75ca5e35d7df</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-la couleur absolue - 6.00 blond foncé?09844138-3d98-4429-bf3d-75ca5e35d7df ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue La Couleur Absolue - Coloration : 6.00 Blond Foncé est une coloration permanente aux extraits botaniques et concentrée en pigments professionnels pour une expression absolue de la couleur et de la brillance.<br />Sa formule enrichie en lait de riz et huile de reine des prés est associée à un sérum pré-coloration et un masque exclusif pour une fibre protégée et intensément nourrie avant, pendant et après la coloration.</p>
+<p>Cette coloration couvre 100% des cheveux blancs tout en r ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290180425</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b63c764ca89280da5f052d93ba71ec4764cdad8aaf1fef7934d6e2e0c7f3cc86 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue La Couleur Absolue - 7.00 Blond ]]></title>
+<g:id>edcbc053-dc27-41a1-b083-f34de8c68a34</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-la couleur absolue - 7.00 blond?edcbc053-dc27-41a1-b083-f34de8c68a34 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue La Couleur Absolue - Coloration : 7.00 Blond est une coloration permanente aux extraits botaniques et concentrée en pigments professionnels pour une expression absolue de la couleur et de la brillance.<br />Sa formule enrichie en lait de riz et huile de reine des prés est associée à un sérum pré-coloration et un masque exclusif pour une fibre protégée et intensément nourrie avant, pendant et après la coloration.</p>
+<p>Cette coloration couvre 100% des cheveux blancs tout en respect ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290180326</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2e0fb35dab6edafba08da8f8ebb1ba14e2bd14c473ab253c7ed16b075f8abdb2 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue La Couleur Absolue - 7.30 Blond Doré ]]></title>
+<g:id>3161aa7f-d4c8-4e93-87fc-917df51817f7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-la couleur absolue - 7.30 blond doré?3161aa7f-d4c8-4e93-87fc-917df51817f7 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue La Couleur Absolue - Coloration : 7.30 Blond Doré est une coloration permanente aux extraits botaniques et concentrée en pigments professionnels pour une expression absolue de la couleur et de la brillance.<br />Sa formule enrichie en lait de riz et huile de reine des prés est associée à un sérum pré-coloration et un masque exclusif pour une fibre protégée et intensément nourrie avant, pendant et après la coloration.</p>
+<p>Cette coloration couvre 100% des cheveux blancs tout en re ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290180722</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a6f512d5f449bdc753d067a05a780c4da5b743d095a34a51dc87777d4d398bff ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue La Couleur Absolue - 8.00 Blond Clair ]]></title>
+<g:id>ebd58647-6dc5-42c3-86a0-01565107034b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-la couleur absolue - 8.00 blond clair?ebd58647-6dc5-42c3-86a0-01565107034b ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue La Couleur Absolue - Coloration : 8.00 Blond Clair est une coloration permanente aux extraits botaniques et concentrée en pigments professionnels pour une expression absolue de la couleur et de la brillance.<br />Sa formule enrichie en lait de riz et huile de reine des prés est associée à un sérum pré-coloration et un masque exclusif pour une fibre protégée et intensément nourrie avant, pendant et après la coloration.</p>
+<p>Cette coloration couvre 100% des cheveux blancs tout en r ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290180227</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bb39cb05fa18c21e7c88ca9bffab5b5fb03203b1b79c1426d9fc580933f64f60 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue La Couleur Absolue -3.00 Châtain Foncé ]]></title>
+<g:id>f8d2b4cd-fef6-4a94-ab7a-7cbc66dd3610</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-la couleur absolue -3.00 châtain foncé?f8d2b4cd-fef6-4a94-ab7a-7cbc66dd3610 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue La Couleur Absolue - Coloration : 3.00 Châtain Foncé est une coloration permanente aux extraits botaniques et concentrée en pigments professionnels pour une expression absolue de la couleur et de la brillance.<br />Sa formule enrichie en lait de riz et huile de reine des prés est associée à un sérum pré-coloration et un masque exclusif pour une fibre protégée et intensément nourrie avant, pendant et après la coloration.</p>
+<p>Cette coloration couvre 100% des cheveux blancs tout en ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290181026</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a064b32d429b6a5e1bd49e6e3a78492dcec648528f3ef72746d018185cd39404 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue La Couleur Absolue -8.30 Blond Clair Doré ]]></title>
+<g:id>9d191659-eb1c-402a-8694-7d7839fdda83</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-la couleur absolue -8.30 blond clair doré?9d191659-eb1c-402a-8694-7d7839fdda83 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Couleur Absolue est une coloration permanente sans ammoniaque aux extraits botaniques. Sa concentration en pigments professionnels permet une expression absolue de la couleur et de la brillance. Sa formule vegan est enrichie en&nbsp; lait de riz et en huile de reine des prés pour protéger et nourrir la fibre.</p><p><strong>Le résultat : une couleur professionnelle qui couvre 100% des cheveux blancs.</strong></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290181224</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/424d50008a2fe79d8f43dcdb9befb30c7d4129ebb6edbea6d2c9515fa7872949 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue La Couleur Absolue 6.30 Blond Foncé Doré ]]></title>
+<g:id>29f2fe5a-bf82-4dbc-920c-498188eb087c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-la couleur absolue 6.30 blond foncé doré?29f2fe5a-bf82-4dbc-920c-498188eb087c ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue La Couleur Absolue - Coloration : 6.30 Blond Foncé Doré est une coloration permanente aux extraits botaniques et concentrée en pigments professionnels pour une expression absolue de la couleur et de la brillance.<br />Sa formule enrichie en lait de riz et huile de reine des prés est associée à un sérum pré-coloration et un masque exclusif pour une fibre protégée et intensément nourrie avant, pendant et après la coloration.</p>
+<p>Cette coloration couvre 100% des cheveux blancs tout ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290180524</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f392aa01ae611ea66cd71567f65233e9a26fc8b16d3969b7d0098b0c20d274f6 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Nourish 2en1 Baume lavant 150 ml ]]></title>
+<g:id>ebf6a13e-6970-4739-86e4-00840b269019</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-nourish 2en1 baume lavant 150 ml?ebf6a13e-6970-4739-86e4-00840b269019 ]]></link>
+<g:price><![CDATA[ 2890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>En un seul geste, ce baume 2-en-1 de 150ml nettoie délicatement les cheveux secs tout en les nourrissant intensément. Sa formule non-moussante, à 93% d’origine naturelle, respecte la fibre capillaire et l’hydrate en profondeur grâce à sa texture onctueuse à base de beurre de karité et de babassu.  Lavés tout en douceur, vos cheveux sont nourris, brillants et plus faciles à coiffer. Ils retrouvent une souplesse incomparable.</p>
+<p> </p>
+<p><span><em>Nettoie en douceur – Éclat – Toucher doux e ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290121220</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dc8507bd257e5ca4ce70286019aa0d6d00408c1117a9ebc1726482630db12a10 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Nourish Light Masque Nutrition Légère 250 ml ]]></title>
+<g:id>2cda0a7f-e552-48af-836d-7608c00c01fe</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-nourish light masque nutrition légère 250 ml?2cda0a7f-e552-48af-836d-7608c00c01fe ]]></link>
+<g:price><![CDATA[ 4650.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue Nourish Light Masque Nutrition Légère 250 ml est un masque capillaire enrichi en huile de soja pour sublimer vos cheveux en toute légèreté. Spécialement conçu pour répondre aux besoins des cheveux secs et fins, sa texture légère pénètre en profondeur, nourrissant chaque mèche sans les alourdir.</p>
+<p>Riche en actifs naturels et bienfaisants, il revitalise et renforce la fibre capillaire, renouvelle la brillance tout en préservant la légèreté caractéristique des cheveux fins.</p>
+< ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000884</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fe11d9864321a8f2b9127e8bacf86ca540bfb06bb0ce183f41b69f91e5818bb6 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Nourish Light Masque nutrition légère 250 ml ]]></title>
+<g:id>0c2c24c9-1a96-45f9-84f9-f55bd468596d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-nourish light masque nutrition légère 250 ml?0c2c24c9-1a96-45f9-84f9-f55bd468596d ]]></link>
+<g:price><![CDATA[ 4650.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce masque est conçu pour les cheveux secs et fins, recherchant une hydratation prolongée sans perte de volume. Concentrée en huile de soja biologique, sa formule à 92% d’origine naturelle enveloppe la fibre de sa puissance fortifiante et nutritive sans l’alourdir. Revitalisée, la chevelure est nourrie et soyeuse, tout en légèreté.</p>
+<p> <em>Hydrate intensément – Fortifie – Souplesse – Volume aérien et naturel</em></p>
+<p> </p>
+<p>Parfait équilibre entre onctuosité et légèreté, sa texture gé ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290111924</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1c21237c4b3cb46ee0511768cc393c126ccc2be04cd16becf6190ded7b4b6045 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Nourish Light Shampoing nutrition légère 250 ml ]]></title>
+<g:id>03600c47-84eb-472e-8a5a-510086dc85f5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-nourish light shampoing nutrition légère 250 ml?03600c47-84eb-472e-8a5a-510086dc85f5 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="product product--template">
+<div class="container">
+<div class="product__content">
+<div class="product__main">
+<div class="product__section">
+<div class="product__section-content">
+<p>Ce shampooing végan est spécialement conçu pour nourrir les cheveux normaux à secs sans les alourdir.  À 94% d’origine naturelle, sa formule à base d’huile de soja biologique délivre la juste dose d’hydratation pour fortifier durablement les cheveux sans entraîner une perte de volume, même lorsque ceux- ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290126829</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0705b19f607e1b3e4a04e549d9ed97b39bc3d8470f6f196a602916824541d431 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Nourish Masque haute nutrition 250 ml ]]></title>
+<g:id>e583dce7-08af-48bf-9f72-dd9bc15340f7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-nourish masque haute nutrition 250 ml?e583dce7-08af-48bf-9f72-dd9bc15340f7 ]]></link>
+<g:price><![CDATA[ 4650.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Riche en beurres de karité et de babassu, ce masque offre une cure de nutrition intense aux cheveux secs pour les réparer, assouplir et discipliner. Grâce au pouvoir nutritif et embellisseur du beurre de babassu et de l’huile de coco, sa formule végan, à 92% d’origine naturelle, assouplit et sublime les chevelures asséchées.</p>
+<p> <em>Hydratation intense – Toucher doux et soyeux – Éclat – Démêlage facilité</em></p>
+<p> </p>
+<p>Ultra fondante, sa texture riche enrobe le cheveu pour lui déliv ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290110729</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b61eaa43d784769209d8b7d4ab86744ff84d584c2d7ad28773e0104a4bb02ba8 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Nourish Shampoing haute nutrition beurre de Karité 250 ml ]]></title>
+<g:id>818c01db-09da-4357-ae48-469a5d7ae677</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-nourish shampoing haute nutrition beurre de karité 250 ml?818c01db-09da-4357-ae48-469a5d7ae677 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290120421</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0c5fef45ac2701571e3495c08357a68b29d2d49e696a133f97a586fafc3ba062 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Nourish Soin haute nutrition 150 ml ]]></title>
+<g:id>2dcb3eb6-39d7-4730-ad9c-4166a686aaab</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-nourish soin haute nutrition 150 ml?2dcb3eb6-39d7-4730-ad9c-4166a686aaab ]]></link>
+<g:price><![CDATA[ 2790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce soin quotidien de 150ml, riche en beurre de karité, nourrit intensément les cheveux les plus secs sans les alourdir. Jour après jour, sa formule vegan, à 94% d’origine naturelle, assouplit, adoucit et démêle la chevelure. Vos cheveux sont réparés, protégés et l’effet rêche disparaît. Les longueurs retrouvent leur éclat et une douceur irrésistible.   </p>
+<p> </p>
+<p><span><em>Hydratation intense – Brillance éclatante – Toucher doux et soyeux – Démêlage facilité</em></span></p>
+<p> </p>
+<p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290130727</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/59bb36cfcc6c44ffd056eb65e579d3313dd741f2c209a992c80af6cc12faeaa8 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Nourish-Light Soin nutrition légère 150 ml ]]></title>
+<g:id>a9fa0ffd-2ceb-4884-b9ba-3b9c224207da</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-nourish-light soin nutrition légère 150 ml?a9fa0ffd-2ceb-4884-b9ba-3b9c224207da ]]></link>
+<g:price><![CDATA[ 2890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Riche en huile de soja bio, ce soin hydratant redonne éclat et souplesse aux cheveux secs sans les alourdir. Sa formule vegan, à 95% d’origine naturelle, enveloppe le cheveu tout en légèreté pour l’assouplir, le gainer et faciliter son démêlage. La chevelure est plus soyeuse, douce au toucher. Son volume reste aérien tout au long de la journée.</p>
+<p> </p>
+<p><span><em>Hydrate sans alourdir – Éclat – Volume Naturel – Démêlage facilité</em></span></p>
+<p> </p>
+<p>Grâce à sa texture ultra-fond ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290131922</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e8cc8d6f467071d73fdd715d80fcaf368e13c9ea82d9e0fbef75f1322033b715 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Purify Pré shampoing purifiant 75 ml ]]></title>
+<g:id>0ce3e3de-42e9-4d6b-a670-74206a6a7d1b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-purify pré shampoing purifiant 75 ml?0ce3e3de-42e9-4d6b-a670-74206a6a7d1b ]]></link>
+<g:price><![CDATA[ 3390.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Ce soin à appliquer avant le shampooing purifie le cuir chevelu et régule durablement l'excès de sébum grâce aux vertus détoxifiantes de l'argile blanche. Composée à 95% d'ingrédients d'origine naturelle, sa formule aide vos cheveux à retrouver souplesse et légèreté.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290114536</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0a68bcc95c31cc6da436462754cb1790a1ac11351edb6c33fe39c32a86f68d4c ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Purify Shampoing purifiant 250 ml ]]></title>
+<g:id>b077d75e-211e-4c3d-8ce0-9929e18b78dd</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-purify shampoing purifiant 250 ml?b077d75e-211e-4c3d-8ce0-9929e18b78dd ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Ce shampooing aux propriétés purifiantes utilise le pouvoir absorbant de l'argile blanche pour lutter contre l'excès de sébum du cuir chevelu à tendance grasse. Composé à 95% d'ingrédients naturels, il purifie le cuir chevelu sans l'agresser. Vos cheveux sont légers et regraissent moins vite.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290124535</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/83bc9969ba574dc2743e6cb312e85ff8cab66823b9ffe3317d3684111f935213 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Rebalance Shampoing Equilibrant 250 ml ]]></title>
+<g:id>c2698e25-63e5-4153-8808-4b2b0d8cf67c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-rebalance shampoing equilibrant 250 ml?c2698e25-63e5-4153-8808-4b2b0d8cf67c ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue Rebalance Shampoing Equilibrant 250 ml est un soin enrichi au vinaigre de riz et à la spiruline indiqué pour les racines grasses et les pointes sèches. Il purifie le cuir chevelu tout en hydratant les longueurs et pointes sèches. La fibre est rééquilibrée, douce et brillante.</p>
+<p>94% des ingrédients sont d'origine naturelle.</p>
+<p>Sans sulfate pour un lavage en douceur. Sans silicone pour un toucher naturel.</p>
+<p>Végan.</p>
+<p>Fabriqué en France</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290122722</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/422f3bf605382cbcbbbdea019ebefc804bfafe7abb0ba27b8401dcdeca3f27fe ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Repair Shampoing réparation intense kératine végétale 250 ml ]]></title>
+<g:id>f4e9b639-9610-4968-99fa-5f8b35de2a46</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-repair shampoing réparation intense kératine végétale 250 ml?f4e9b639-9610-4968-99fa-5f8b35de2a46 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Riche en kératine végétale et acide hyaluronique, ce shampooing vegan de 250 ml répare les cheveux profondément abîmés. Sa formule à 91% d’origine naturelle, pénètre au cœur du cheveu et du cuir chevelu pour sceller les cuticules et reconstruire les fibres de kératine endommagées. Restructurés de l’intérieur, nettoyés en douceur, les cheveux sont protégés, plus forts, doux et soyeux.</p>
+<p><span><em>Réparation intense – Hydratation en profondeur – Brillance, souplesse et douceur</em></span>< ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290128120</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1d1c1d369bb1d28c94c6394640a183ae62ffbe55d9851fa14145c8ecf5de3622 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Repair Soin Réparation Intense 150 ml ]]></title>
+<g:id>3b3384c3-f183-48c3-9e0e-aa83da8024fb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-repair soin réparation intense 150 ml?3b3384c3-f183-48c3-9e0e-aa83da8024fb ]]></link>
+<g:price><![CDATA[ 2890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue Repair Soin Réparation Intense 150 ml est un soin pansement enrichi en kératine végétale. Il répare les dommages profonds des cheveux abîmés et sensibilisés, jusqu'aux pointes. Plus résistants, les cheveux sont doux et soyeux.</p>
+<p>92% des ingrédients sont d'origine naturelle.</p>
+<p>Sans sulfate. Sans silicone pour un toucher naturel.</p>
+<p>Végan.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290138020</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/741576fa7d74518a0efe8b8fb61a793d0cf755a04e716edcdca5dad71d7ea3d6 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Shampoing Fortifiant éco recharge 400 ml ]]></title>
+<g:id>1bad645c-9db0-484d-a1c0-a2751f03c4db</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-shampoing fortifiant éco recharge 400 ml?1bad645c-9db0-484d-a1c0-a2751f03c4db ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>En format recharge de 500ml, éco-conçu et économique, le shampooing Fortify prévient et freine la chute de cheveux tout en favorisant la croissance de cheveux existants... Sa formule vegan, à 94% d’ingrédients d’origine naturelle, sans silicone et sans sulfate fortifie la fibre et tonifie le cuir chevelu. Jour après jour, les cheveux sont plus résistants et la chevelure gagne en densité.</p>
+<p><span><em>Active la croissance des cheveux existants – Freine la chute – Fortifie  </em></span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000556</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/11ecfb7aa33a5653be6a820d304d3a2b032fb857af1d60f986a61767322d6255 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Shampoing Neutralize 250 ml ]]></title>
+<g:id>9e8b799e-0419-4e4f-b2ea-4b60d180d0bf</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-shampoing neutralize 250 ml?9e8b799e-0419-4e4f-b2ea-4b60d180d0bf ]]></link>
+<g:price><![CDATA[ 2090.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Enrichi d’un complexe botanique de fleurs déjaunissantes, le shampooing Neutralize élimine instantanément les reflets indésirables, nettoie en douceur et redonne de la brillance aux cheveux gris, blancs et blonds.</p>
+<p><span><em>Neutralise les reflets indésirables – hydrate – nettoie en douceur </em></span><span><em> </em></span></p>
+<p>Sa mousse onctueuse élimine instantanément les reflets indésirables, tout en prenant soin de la fibre.<br />Imaginé à Grasse, le parfum de la gamme Neutrali ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000617</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cde8aae08c65ca7163150df82d38f3a98aa7772ac89efd15d196e2cb3154b791 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Shampoing Solide Nourrissant 75 g ]]></title>
+<g:id>d4c7e0a0-0b76-4595-b517-45e68d4ea672</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-shampoing solide nourrissant 75 g?d4c7e0a0-0b76-4595-b517-45e68d4ea672 ]]></link>
+<g:price><![CDATA[ 1590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue Shampoing Solide Nourrissant 75 g est un shampoing qui nettoie en douceur, hydrate et nourrit tous les types de cheveux.</p>
+<p>Sa formule enrichie en dattier du désert est complétée par un trio d'actifs d'origine naturelle. Elle adoucit, assouplit et parfume les cheveux d'une fragrance abricotée gourmande.<br />Sublimés, brillants et soyeux, les cheveux sont de plus en plus doux au fil des shampoings.</p>
+<p>93% des ingrédients sont d'origine naturelle.<br />Sans sulfate, sans sil ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290125136</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c79232b1d001538205d3af94610d5ef573c48c99bff89b9609d4a4d54c12fccb ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Shampoing repair eco recharge 400 ml ]]></title>
+<g:id>13fe625a-421e-4276-b5b7-4956cb145a3e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-shampoing repair eco recharge 400 ml?13fe625a-421e-4276-b5b7-4956cb145a3e ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>En format recharge de 500ml, éco-conçu et économique, le shampooing Repair répare les cheveux abimés. Sa formule à 91% d’ingrédients d’origine naturelle, pénètre au cœur du cheveu et du cuir pour restructurer les fibres de kératine endommagées. Nettoyés en douceur, les cheveux sont réparés, plus forts, doux et soyeux.</p>
+<p><span><em>Réparation - Restructuration de la fibre - Souplesse</em></span></p>
+<p>Sa texture crème fondante enveloppe généreusement la chevelure et libère à l’application ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000563</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1097f82a6b7a3374c3f6aad2e7f6d9becfe5bce7016046316de70160e974dfa1 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Soin Après-Shampoing Repair 150ml ]]></title>
+<g:id>3114f4f8-891a-493c-9243-e2e124836b49</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-soin après-shampoing repair 150ml?3114f4f8-891a-493c-9243-e2e124836b49 ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Ce soin pansement riche en extraits botaniques de kératine et d'acide hyaluronique, répare les dommages profonds et régénère les cheveux abîmés et fragilisés.<br>Les cheveux abîmés et fragilisés sont ternes et fourchus, ils sont en manque de kératine, protéine naturelle du cheveu qui le protège des agressions extérieures et lui apporte brillance et élasticité.<br>Seul un traitement ciblé à base de kératine peut alors restaurer en profondeur la structure de la fibre et lui permettre de retrouv ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000877</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2dddde7f37ca1adc6c43af7dbb19c1fe952c374a2c68046147d86c156dbd194c ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Stronger Hair Serum 50 ml + Shampoing fortify 250 ml ]]></title>
+<g:id>641b62f4-1aac-415a-ab82-a477c2e95070</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-stronger hair serum 50 ml + shampoing fortify 250 ml?641b62f4-1aac-415a-ab82-a477c2e95070 ]]></link>
+<g:price><![CDATA[ 6590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Sérum : </span></p>
+<p><span>Le sérum Stronger est efficace dès 8 utilisations</span><span>₁</span><span>. La formule vegan de <span>ce sérum fortifiant pour cheveux,</span> à 97% d’ingrédients d’origine naturelle, est composée d’un complexe synergique ultra concentré qui <span>fortifie le cheveu</span> et <span>freine sa chute</span>. Les cheveux sont plus forts et plus denses ; la chute temporaire est freinée.</span><span> </span></p>
+<p><em> ₁Test d'usage sur 30 volontaires pendant 1 ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000822</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ad0b4fceb5a65f580fef11564cb4abf78434405fa2f4a0788ef53369e00f63c5 ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Sérum d'Exception 50 ml ]]></title>
+<g:id>d4fd0450-93c3-4ac4-9a54-ad7a4b73e3e4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-sérum d'exception 50 ml?d4fd0450-93c3-4ac4-9a54-ad7a4b73e3e4 ]]></link>
+<g:price><![CDATA[ 3190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue Sérum d'Exception 50 ml est un sérum thermoprotecteur adapté à tous types de cheveux.<br />Enrichi en extrait de graines de chia, qui protège la fibre capillaire de la chaleur jusqu'à 230°C/446°F, il protège et hydrate les longueurs, scelle les pointes fourchues et discipline les cheveux.</p>
+<p>Ultra-sensorielle, sa texture fondante et légère pénètre immédiatement dans la fibre, et parfume la chevelure d'un parfum envoûtant et délicat de fleur d'oranger.<br />Les cheveux sont hydr ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000297</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/da1d8318edf2992b571b429e1d5b0fb41ae1f2c429c5c8edc68b9c4f57fb3d36 ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Thicker Sérum anti-chute progressive 50ml ]]></title>
+<g:id>761cd9ec-ccc1-404a-9074-a497628918b9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-thicker sérum anti-chute progressive 50ml?761cd9ec-ccc1-404a-9074-a497628918b9 ]]></link>
+<g:price><![CDATA[ 6490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le </span><span>sérum anti-chute Thicker</span><span> </span><span>est enrichi en Capixyl</span><span>, un complexe breveté d'actifs uniques permettant d'augmenter la taille du follicule pileux et d'améliorer son cycle de pousse. Il lutte contre l'affinement des cheveux et inverse les conditions responsables de la chute de cheveux progressive. Ce sérum anti-chute vegan formulé à </span><span>97% d'origine naturelle</span><span> est l'alternative naturelle à la chute de cheveux à l'effic ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000679</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0bc1a245d5475e9c34edf9964beadb1aafceaff85a3c8baf0203a6201ea7bde1 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Volumize Shampoing Volume 250 ml ]]></title>
+<g:id>01385a50-83fe-4b0b-8b9b-7dca2e6b2e67</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-volumize shampoing volume 250 ml?01385a50-83fe-4b0b-8b9b-7dca2e6b2e67 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue Volumize Shampoing Volume 250 ml est un soin indiqué pour donner du volume aux cheveux fins et plats. Enrichi en protéines de riz, il donne corps et matière aux cheveux. Ils sont doux et brillants, le volume devient naturel amplifié et durable.</p>
+<p>94% des ingrédients sont d'origine naturelle.<br />Sans sulfate pour un lavage en douceur. Sans silicone pour un toucher naturel.</p>
+<p>Vegan.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000259</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0c3ad275d1977357609fa4f194b5a6d894e0e4f712d1f9277c0d55a00f51360b ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartigue Volumize Spray Coiffant Volume 100 ml ]]></title>
+<g:id>7b30a797-c904-4b51-9a38-383a7f9b44d6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartigue-volumize spray coiffant volume 100 ml?7b30a797-c904-4b51-9a38-383a7f9b44d6 ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290000266</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bb7b8300ae585d2976c7ab8340c53d245e99aa7975d3dfd1f94ffc5262f3a545 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lazartique  Eau Solaire Protectrice Anti-UV SPF50 + 150ml ]]></title>
+<g:id>a272b9f1-c46c-48f7-98e8-6e381e9c6466</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lazartique-eau solaire protectrice anti-uv spf50 + 150ml?a272b9f1-c46c-48f7-98e8-6e381e9c6466 ]]></link>
+<g:price><![CDATA[ 3290.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lazartigue Solar Protect Eau Protectrice Cheveux SPF50+ 150 ml est une eau conçue spécifiquement pour le cuir chevelu et les longueurs. Sa formule agit comme un bouclier contre les agressions extérieures telles que le soleil, le sable, le sel et le vent, offrant une protection complète pour les cheveux exposés au soleil.</p>
+<p>Grâce à sa texture biphasée légère, cette eau hydrate intensément les cheveux tout en formant une barrière protectrice contre le dessèchement et les coups de soleil su ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3372290001287</g:gtin>
+<g:brand><![CDATA[ LAZARTIGUE ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c2415308e5fb50f8e3bb2de5d710073839311f3100697a4ee11fb86bd6f2ca37 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Le Comptoir du Bain Savon De Marseille 1 Litre Coquelicot ]]></title>
+<g:id>d0d3ce6d-d5d6-4c9f-a7df-fb9eb73009c1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/le-comptoir du bain savon de marseille 1 litre coquelicot?d0d3ce6d-d5d6-4c9f-a7df-fb9eb73009c1 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="pb-center-column col-xs-12 col-sm-6 col-md-7">
+<div id="more_info_block" class="clear">
+<div id="more_info_sheets" class="sheets align_justify">
+<div class="rte">
+<p>Issu du savoir-faire authentique d'un maître savonnier et des compétences des parfumeurs de la marque, le savon de Marseille liquide Le Comptoir du Bain est un nettoyant doté d'une formule extra-douce adaptée à toutes les peaux. Il permet de débarrasser la peau des impuretés sans pour autant altérer sa barrière de protec ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616828844466</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c8ec01ef37e21fc38c3614cfca1961430f1c92c78de314a685788c86a0095308 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Le Comptoir du Bain Savon De Marseille 1 Litre Mandarine Sauge ]]></title>
+<g:id>ef699b53-05bd-4371-bdeb-5c7506cc6ca9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/le-comptoir du bain savon de marseille 1 litre mandarine sauge?ef699b53-05bd-4371-bdeb-5c7506cc6ca9 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="pb-center-column col-xs-12 col-sm-6 col-md-7">
+<div id="more_info_block" class="clear">
+<div id="more_info_sheets" class="sheets align_justify">
+<div class="rte">
+<p>Issu du savoir-faire authentique d'un maître savonnier et des compétences des parfumeurs de la marque, le savon de Marseille liquide Le Comptoir du Bain est un nettoyant doté d'une formule extra-douce adaptée à toutes les peaux. Il permet de débarrasser la peau des impuretés sans pour autant altérer sa barrière de protec ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616828844497</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/638e7339b7db004023ccf655a5118aea13c09f6573db1cda60da5f481d72e40e ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Le Comptoir du Bain Savon De Marseille 1 Litre Olive Lavande ]]></title>
+<g:id>d5b2b6c8-d1e8-4aa6-8bb2-da588c2534f2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/le-comptoir du bain savon de marseille 1 litre olive lavande?d5b2b6c8-d1e8-4aa6-8bb2-da588c2534f2 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="pb-center-column col-xs-12 col-sm-6 col-md-7">
+<div id="more_info_block" class="clear">
+<div id="more_info_sheets" class="sheets align_justify">
+<div class="rte">
+<p>Issu du savoir-faire authentique d'un maître savonnier et des compétences des parfumeurs de la marque, le savon de Marseille liquide Le Comptoir du Bain est un nettoyant doté d'une formule extra-douce adaptée à toutes les peaux. Il permet de débarrasser la peau des impuretés sans pour autant altérer sa barrière de protec ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616828844442</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3dd4d3311dd5884a42ca90e728f2df383fc5c2f234300c7bb72e540c76669c0d ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Le Comptoir du Bain Savon Traditionnel de Marseille Fleur d'Oranger 1l ]]></title>
+<g:id>0750db1c-bc2d-4207-a90a-3bd34ab43088</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/le-comptoir du bain savon traditionnel de marseille fleur d'oranger 1l?0750db1c-bc2d-4207-a90a-3bd34ab43088 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Comptoir du Bain Savon Traditionnel de Marseille Fleur d'Oranger 1 L est un savon liquide qui nettoie efficacement le corps et les mains tout en respectant la peau.<br>Sa formule enrichie en huile d'olive, actif protecteur, laisse la peau douce et souple après usage, et un délicat parfum de fleur d'oranger aux notes d'agrumes gourmands.</p><p>Convient aux peaux sensibles et à un usage répété tout au long de la journée.<br>Testé sous contrôle dermatologique.</p><p>Sans huile de palme.<br>97 ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616828844411</g:gtin>
+<g:brand><![CDATA[ Le Comptoir du Bain ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/670879cb5740a0d129fe6267ccd696ac85e191d44c4919618de5c2b6eaf1fce1 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Le Comptoir du Bain Savon de Marseille Aloe Vera 1litre ]]></title>
+<g:id>c2efec7c-1303-4b8b-9904-9d3aa626944e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/le-comptoir du bain savon de marseille aloe vera 1litre?c2efec7c-1303-4b8b-9904-9d3aa626944e ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <span>savon de Marseille liquide</span> proposé par la marque <span>Le Comptoir du Bain</span> est un <span>nettoyant corps et mains</span> qui convient à tous les types de peau, même sensibles. Proposé en diverses senteurs, il favorise la détente et l'évasion.</p>
+<p>Issu du savoir-faire authentique d'un maître savonnier et des compétences des parfumeurs de la marque, le <span>savon de Marseille liquide Le Comptoir du Bain</span> est un nettoyant doté d'une formule extra-douce adaptée à t ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616828844503</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dcc473dc33fd7a59ae23790e3c0299987d6cc1437884ef392f1c0945741c0744 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Le Comptoir du Bain Savon de Marseille Citron & Menthe 1 L ]]></title>
+<g:id>082b6756-bd7d-4007-aa5b-b191f25a016d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/le-comptoir du bain savon de marseille citron & menthe 1 l?082b6756-bd7d-4007-aa5b-b191f25a016d ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Comptoir du Bain Savon de Marseille Citron &amp; Menthe 1 L est un savon liquide qui nettoie efficacement le corps et les mains tout en respectant la peau.<br />Sa formule enrichie en huile d'olive, actif protecteur, laisse la peau douce et souple après usage, et un délicat parfum citron menthe aux notes aromatiques et vivifiantes, idéal pour éliminer efficacement les odeurs tenaces sur la peau.</p>
+<p>Convient aux peaux sensibles et à un usage répété tout au long de la journée.<br />Testé ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616828844435</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e53a56e8b8a8bab4cbbbc8bc6b4c91e5d0b52922cb5aa1508b8a4ebe99c33dec ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Le Comptoir du Bain Savon de Marseille Rose 1 L ]]></title>
+<g:id>3c7409d8-7bd8-471d-8cfe-28a3393213fe</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/le-comptoir du bain savon de marseille rose 1 l?3c7409d8-7bd8-471d-8cfe-28a3393213fe ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Comptoir du Bain Savon de Marseille Rose 1 L est un savon liquide qui nettoie efficacement le corps et les mains tout en respectant la peau.<br />Sa formule enrichie en huile d'olive, actif protecteur, laisse la peau douce et souple après usage, et un délicat parfum floral de rose.</p>
+<p>Convient aux peaux sensibles et à un usage répété tout au long de la journée.<br />Testé sous contrôle dermatologique.</p>
+<p>Sans huile de palme.<br />97% des ingrédients sont d'origine naturelle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616828844459</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/069ebca9d53432d20766a7ab2c3c4fa524ae5449e923d3f2f51aaca850a31252 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Le Comptoir du Bain Savon de Marseille Surgras 1litre ]]></title>
+<g:id>2e4e843c-6a7b-466e-a281-a7e3722dcee5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/le-comptoir du bain savon de marseille surgras 1litre?2e4e843c-6a7b-466e-a281-a7e3722dcee5 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <span>savon de Marseille liquide</span> proposé par la marque <span>Le Comptoir du Bain</span> est un <span>nettoyant corps et mains</span> qui convient à tous les types de peau, même sensibles. Proposé en diverses senteurs, il favorise la détente et l'évasion.</p>
+<p>Issu du savoir-faire authentique d'un maître savonnier et des compétences des parfumeurs de la marque, le <span>savon de Marseille liquide Le Comptoir du Bain</span> est un nettoyant doté d'une formule extra-douce adaptée à t ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616828844404</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9ef224dd0b695e3caa16847d813f1ffb4e0ca251fd5b18c9dbc62ba8d38be4f7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Le Comptoir du Bain Savon de Marseille Surgras Amande Douce 1L ]]></title>
+<g:id>6c440441-8012-4b87-b0b2-a69214481428</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/le-comptoir du bain savon de marseille surgras amande douce 1l?6c440441-8012-4b87-b0b2-a69214481428 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Comptoir du Bain Savon de Marseille Surgras Amande Douce 1L est un savon extra-doux parfumé à l'amande douce. Il nettoie efficacement le corps et les mains tout en respectant la peau.</p>
+<p>Sa formule enrichie en huile d'olive, actif hydratant et apaisant, laisse sur la peau un film protecteur et préserve toute sa douceur et son confort. Le parfum d'amande douce aux notes poudrées et réconfortantes laisse une peau délicatement parfumée.</p>
+<p>Sans huile de palme.<br />97% des ingrédients ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616828844534</g:gtin>
+<g:brand><![CDATA[ GILBERT ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4e0519d9359ef99987b1896adce8485730c3354abc0d18a1854a601b88dfff5c ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Le Comptoir du Bain Savon de Marseille Verveine 1 L ]]></title>
+<g:id>180edfa3-85b4-4163-a323-d84e822f5373</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/le-comptoir du bain savon de marseille verveine 1 l?180edfa3-85b4-4163-a323-d84e822f5373 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Comptoir du Bain Savon de Marseille Verveine 1 L est un savon liquide qui nettoie efficacement le corps et les mains tout en respectant la peau.<br>Sa formule enrichie en huile d'olive, actif protecteur, laisse la peau douce et souple après usage.</p><p>Parfum frais et énergisant.</p><p>Convient aux peaux sensibles et à un usage répété tout au long de la journée.</p><p>Testé sous contrôle dermatologique.</p><p>Sans huile de palme.<br>97% d'ingrédients d'origine naturelle.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616828844428</g:gtin>
+<g:brand><![CDATA[ Le Comptoir du Bain ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/54b1cb75dadef245753fc4256f3cbc43d96ea15a7fae5616bcc1e12bf3f23669 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Le Comptoir du Bain Savon de Marseille vanille Miel 1 Litre ]]></title>
+<g:id>1df50c0a-2782-4b4e-ad36-40f16aa482b7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/le-comptoir du bain savon de marseille vanille miel 1 litre?1df50c0a-2782-4b4e-ad36-40f16aa482b7 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <span>savon de Marseille liquide</span> proposé par la marque <span>Le Comptoir du Bain</span> est un <span>nettoyant corps et mains</span> qui convient à tous les types de peau, même sensibles. Proposé en diverses senteurs, il favorise la détente et l'évasion.</p>
+<p><span>Issu du savoir-faire authentique d'un maître savonnier et des compétences des parfumeurs de la marque, le </span><span>savon de Marseille liquide Le Comptoir du Bain</span><span> est un nettoyant doté d'une formule extr ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616828844480</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1982b2ff3b7e6a735b41c06b12b4f22dc1c277d8e2878bf829e19704f3c8b1e5 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Le comptoir du bain Huile de douche Monoï précieux 1L ]]></title>
+<g:id>3ed1f93f-d59c-4ee7-a26c-df79855827f5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/le-comptoir du bain huile de douche monoï précieux 1l?3ed1f93f-d59c-4ee7-a26c-df79855827f5 ]]></link>
+<g:price><![CDATA[ 699.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L'<span>huile de douche parfumée</span> de la marque<span> Le Comptoir du Bain</span> est un produit d'hygiène qui permet de <span>nettoyer en douceur</span> la peau du corps. Elle convient à toutes les peaux, même sensibles, et offre une grande sensorialité.</p>
+<p>Très respectueuse de tous les types de peau, cette <span>huile de douche</span> nettoie la peau sans altérer la barrière cutanée. Sa douceur est assurée par sa base lavante enrichie en glycérine, un actif reconnu pour ses propriét ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616828842769</g:gtin>
+<g:brand><![CDATA[ GILBERT ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b6cb1bea044e57b540c198c0fcca5f346e25888bf1bf5ddd596a1b82866b90c4 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Le comptoir du bain Huile de douche Muguet précieux 1L ]]></title>
+<g:id>08c9598b-1f83-4410-8409-b901cc8f5c32</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/le-comptoir du bain huile de douche muguet précieux 1l?08c9598b-1f83-4410-8409-b901cc8f5c32 ]]></link>
+<g:price><![CDATA[ 699.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L'<span>huile de douche parfumée</span> de la marque<span> Le Comptoir du Bain</span> est un produit d'hygiène qui permet de <span>nettoyer en douceur</span> la peau du corps. Elle convient à toutes les peaux, même sensibles, et offre une grande sensorialité.</p>
+<p>Très respectueuse de tous les types de peau, cette <span>huile de douche</span> nettoie la peau sans altérer la barrière cutanée. Sa douceur est assurée par sa base lavante enrichie en glycérine, un actif reconnu pour ses propriét ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3616828842783</g:gtin>
+<g:brand><![CDATA[ Le Comptoir du Bain ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b5bae7a38b7c327235c3e603aa368bdd6e5937fadbb323486154cdf33e5f5732 ]]></g:image_link>
+<g:product_type><![CDATA[ HYGIENE CORPORELLE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lehning Arnica crème bio 50 g ]]></title>
+<g:id>7cf283b2-037f-400e-a0b0-a1db205e3971</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lehning-arnica crème bio 50 g?7cf283b2-037f-400e-a0b0-a1db205e3971 ]]></link>
+<g:price><![CDATA[ 595.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Coups, bleus, bosses... Pour soulager les petits bobos du quotidien, le gel bio à l'arnica montana des Laboratoires Lehning convient à toute la famille, y compris aux enfants.</span></p>
+<p><span>Que ce soit en jouant, en tombant, en faisant du sport, un choc est vite arrivé. Pour vous ou votre enfant dès 1 an, appliquez une noisette de gel avant que le bleu n'apparaisse.</span></p>
+<p><span>L'arnica montana bio présent dans ce gel est récolté en montagne, de manière responsable, pour u ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3661744051368</g:gtin>
+<g:brand><![CDATA[ LEHNING ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2dd893b17d84618024f15cc6f8c19c328b389363f219bb1c1fc0973212260285 ]]></g:image_link>
+<g:product_type><![CDATA[ DOULEURS ARTICULAIRES ET MUSCULAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lehning Climaxol gel bio 125 ml ]]></title>
+<g:id>65ae5646-5af0-4ab8-838e-d990f78d294e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lehning-climaxol gel bio 125 ml?65ae5646-5af0-4ab8-838e-d990f78d294e ]]></link>
+<g:price><![CDATA[ 895.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>ClimaxolGel </span>bio <span>aide à soulager les sensations de pesanteur et les manifestations d’inconfort des jambes fatiguées, notamment en cas de station debout ou assise prolongée, en particulier pendant les périodes de forte chaleur ou de canicule.</span></p>
+<p><span>L'hamamélis et le marron d'Inde aux propriétés décongestionnantes aident à retrouver bien-être, confort et légèreté tout au long de la journée.</span></p>
+<p><span>Dès application, l'huile essentielle de menthe poivré ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3661744051351</g:gtin>
+<g:brand><![CDATA[ LEHNING ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a3adc8c18a87a59ada659807acb56c01a5078ec41a1e3bec5693b748eb4f7eb1 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN DES JAMBES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lehning Dentifrice Formule Blancheur Bio 80g ]]></title>
+<g:id>45678455-542c-4245-beee-2e1c41c94976</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lehning-dentifrice formule blancheur bio 80g?45678455-542c-4245-beee-2e1c41c94976 ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Plusieurs facteurs peuvent contribuer à l’apparition de taches sur les dents. En premier lieu le tabac mais également la consommation régulière de certains aliments comme le café, le thé, le vin rouge ou la betterave. Un bon brossage de dents est alors essentiel et le choix d’un dentifrice adapté s’avère particulièrement utile, afin de limiter l’apparition de taches et de préserver la blancheur des dents.</p>
+<p>Les Laboratoires Lehning ont élaboré un dentifrice bio qui associe mélisse et per ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3661744051412</g:gtin>
+<g:brand><![CDATA[ LEHNING ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/33378efd074fb0da040123020d5a1c77916705fd38c823451f44280192b8b85a ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lehning Dentifrice gencives sensibles Bio 80g ]]></title>
+<g:id>ef8126a8-d590-427d-a6d5-1422b04145a7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lehning-dentifrice gencives sensibles bio 80g?ef8126a8-d590-427d-a6d5-1422b04145a7 ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>en cas de saignement des gencives ou de douleurs lors du brossage, il est important de réagir au risque de voir la situation se dégrader ou évoluer en maladie parodontale. Un brossage des dents et un dentifrice adaptés peuvent vous aider à retrouver des gencives plus saines.</p>
+<p>Les Laboratoires Lehning ont élaboré un dentifrice bio pour les gencives sensibles, à base de propolis, thé vert et à l’huile essentielle de menthe poivrée.<br />La propolis et le thé vert apaisent les gencives et  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3661744051429</g:gtin>
+<g:brand><![CDATA[ LEHNING ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/587948b27b17dd91575fe0b2489ea5c23fb37c510f3d94d5a431e033c4c69d9d ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lehning Dentifrice sensibilité dentaire bio 80g ]]></title>
+<g:id>0714a40a-4b32-404e-8eb4-364fa27d6e81</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lehning-dentifrice sensibilité dentaire bio 80g?0714a40a-4b32-404e-8eb4-364fa27d6e81 ]]></link>
+<g:price><![CDATA[ 399.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La consommation d’aliments sucrés, acides, trop chauds ou trop froids, peut rendre les dents douloureuses.<br />En cas de sensibilité dentaire, mieux vaut commencer par se brosser plus délicatement les dents, avec une brosse à dents souple. Le choix du dentifrice est tout aussi important.</p>
+<p>Les Laboratoires Lehning ont élaboré une formule bio pour la sensibilité dentaire composée de gingembre et d'huile essentielle de menthe poivrée.</p>
+<p>Le gingembre apaise et protège efficacement les ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3661744051405</g:gtin>
+<g:brand><![CDATA[ LEHNING ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c901c2bc8ec1323f2950c1784c0924b17d88116bd5e5cfc76d2bb5f367365ce0 ]]></g:image_link>
+<g:product_type><![CDATA[ PARAPHARMACIE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lehning Depuratum 60 gélules ]]></title>
+<g:id>1d8c46fd-07d8-4a89-a342-901414be5694</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lehning-depuratum 60 gélules?1d8c46fd-07d8-4a89-a342-901414be5694 ]]></link>
+<g:price><![CDATA[ 690.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Après la période des fêtes ou à l'approche des beaux jours, le corps a besoin d'éliminer les excès, et le foie de se reposer. Pour vos cures de détox, découvrez Dépuratum et sa formule unique associant 7 plantes connues pour détoxifier, favoriser le confort digestif et permettre le drainage hépatobiliaire.</span></p>
+<p><span>Le genièvre, la rhubarbe sauvage, le thym et la bugrane épineuse facilitent le confort digestif.</span></p>
+<p><span>Le bouleau et le romarin facilitent le process ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3661744050774</g:gtin>
+<g:brand><![CDATA[ LEHNING ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ba85340f884758635164b800d41276b9673cfde3c8f268b8d7a4c9e7caea4812 ]]></g:image_link>
+<g:product_type><![CDATA[ DIGESTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lehning Echinacée N° 40 solution buvable 30 ml ]]></title>
+<g:id>e4192cd7-26e5-4d1a-981d-5d1be19d6854</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lehning-echinacée n° 40 solution buvable 30 ml?e4192cd7-26e5-4d1a-981d-5d1be19d6854 ]]></link>
+<g:price><![CDATA[ 690.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Echinacée N°40 des Laboratoires Lehning aide à soutenir les défenses naturelles et à maintenir une bonne santé des voies respiratoires (gorge, pharynx). Cette formule unique composée de 6 extraits de plantes est proposée sous forme de gouttes pour une meilleure conservation des principes actifs des plantes.</span></p>
+<p><span>L'échinacée et la matricaire contribuent à soutenir les défenses naturelles. Le thym, le bouillon blanc, le calendula et le coquelicot contribuent au maintien d'u ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3661744050927</g:gtin>
+<g:brand><![CDATA[ LEHNING ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/30e14be8662019cd2840e57f1b1a408988255c0fc69465f5f6926604594f77da ]]></g:image_link>
+<g:product_type><![CDATA[ FORME - VITALITÉ ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lehning Méno Nature 60 comprimés ]]></title>
+<g:id>8e1c9164-0ab6-41c0-b85d-5b10a66014d9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lehning-méno nature 60 comprimés?8e1c9164-0ab6-41c0-b85d-5b10a66014d9 ]]></link>
+<g:price><![CDATA[ 1920.01 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Méno Nature</span><span> du laboratoire </span><span>Lehning</span><span> est un </span><span>complément alimentaire</span><span> à base de </span><span>maca</span><span>, </span><span>bacopa</span><span>, </span><span>cimicifuga</span><span>, </span><span>OPC d'écorce de pin maritime</span><span>, </span><span>vitamines</span><span> et </span><span>zinc</span><span>.</span><br /><br /><span>Experts des plantes depuis 1935, les laboratoires </span><span>Lehning</span><span> vous propose ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3661744051269</g:gtin>
+<g:brand><![CDATA[ LEHNING ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8d7998fae69b8b530bf296cbc96ea6d68814eba9a5f35f9a3147a538d8360bc4 ]]></g:image_link>
+<g:product_type><![CDATA[ SANTÉ PREVENTION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lehning Pate suisse Détox 40 gommes ]]></title>
+<g:id>7077abdf-4abe-43fc-9148-4f66355beb50</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lehning-pate suisse détox 40 gommes?7077abdf-4abe-43fc-9148-4f66355beb50 ]]></link>
+<g:price><![CDATA[ 550.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Après les fêtes, à l'approche de l'été ou lors des changements de saison, le corps a besoin d'éliminer les excès. La pâte suisse détox a été formulée pour que cette contrainte devienne un plaisir.</span></p>
+<p><span>Le pissenlit contribue au fonctionnement normal des intestins.<br />Le bouleau favorise les processus de détoxification du corps.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3661744050965</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1ef18fb5fecb9da7b8eabf73dd134026331fbb7fa231c818fc0952fa73e6e1ab ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lehning Pate suisse gorge propolis et miel 40 gommes ]]></title>
+<g:id>cc8da021-a91e-4bfd-b943-cd4c3ed95269</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lehning-pate suisse gorge propolis et miel 40 gommes?cc8da021-a91e-4bfd-b943-cd4c3ed95269 ]]></link>
+<g:price><![CDATA[ 550.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La propolis, résine naturelle fabriquée par les abeilles, est utilisée pour protéger et assainir la ruche, elle est également reconnue pour aider à adoucir et apaiser la gorge.</p>
+<p>Facile à glisser dans une poche, cette boîte de 40 gommes sans sucre peut s'emporter partout.</p>
+<p>L’arôme miel apporte naturellement de la douceur.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401541212261</g:gtin>
+<g:brand><![CDATA[ LEHNING ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2659b765b1746b2c15144d148ae2d568047593e8629c4b748db917f11e84ba28 ]]></g:image_link>
+<g:product_type><![CDATA[ SANTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lehning Pate suisse respiration 40 gommes ]]></title>
+<g:id>c3cfb708-c049-4f36-9271-9c3bb188726e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lehning-pate suisse respiration 40 gommes?c3cfb708-c049-4f36-9271-9c3bb188726e ]]></link>
+<g:price><![CDATA[ 550.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Les huiles essentielles d’eucalyptus et de pin sont réputées pour leurs bienfaits sur les voies respiratoires.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3661744050866</g:gtin>
+<g:brand><![CDATA[ LEHNING ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fe7a8c08f6f763bc750577dd17dfd7be624e79bf195fc43b460c2486e044f4cb ]]></g:image_link>
+<g:product_type><![CDATA[ SANTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lehning Pate suisse vitamine C 40 gommes ]]></title>
+<g:id>72e9a2d8-b4db-4677-b6b6-5fbd94cefb05</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lehning-pate suisse vitamine c 40 gommes?72e9a2d8-b4db-4677-b6b6-5fbd94cefb05 ]]></link>
+<g:price><![CDATA[ 550.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Fatigue, coup de mou, on a parfois besoin de retrouver de l'énergie et du tonus. Cette pâte suisse a été formulée pour que la prise de vitamine C devienne un plaisir et non une contrainte grâce à son arôme naturel d'orange doux et agréable.</span></p>
+<p><span>Idéalement dosée pour convenir aussi bien à l'adulte qu'à l'enfant, chaque gomme contient 40mg de Vitamine C soit 50% des apports journaliers recommandés.</span></p>
+<p><span>La vitamine C contribue à réduire la fatigue.<br />L'ar ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3661744050040</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/aebf6c2583ce293e67347b7a3703e7c3a95a6e8731a9eff1ab2fa7b1424582a9 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lehning Pate suisse vitamine D3 40 gommes ]]></title>
+<g:id>afe09a7e-0db1-420e-9d3d-f6968b31483e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lehning-pate suisse vitamine d3 40 gommes?afe09a7e-0db1-420e-9d3d-f6968b31483e ]]></link>
+<g:price><![CDATA[ 550.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>En automne et en hiver, les journées sont courtes et le soleil n'est pas toujours au rendez-vous. Ce manque de luminosité entraîne souvent des carences en vitamine D. Cette pâte suisse a été formulée pour que la prise de vitamine D3 devienne un plaisir et non une contrainte grâce à son arôme naturel de citron, équilibré entre douceur et acidité.</span></p>
+<p><span>Idéalement dosée pour convenir aussi bien à l'adulte qu'à l'enfant, chaque gomme contient 10 micro grammes de Vitamine D3 s ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3661744050088</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/17922618e0e9e688ee15b63ce4b2b840dac082a99948f8ac989dafb15f12e424 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lehning Urtiflash Gel Bio Après Piqures 50g ]]></title>
+<g:id>0f045e97-4b2b-4e12-a096-4b173268ae1c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lehning-urtiflash gel bio après piqures 50g?0f045e97-4b2b-4e12-a096-4b173268ae1c ]]></link>
+<g:price><![CDATA[ 590.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>C</span><span>e <span>gel après-piqûres</span> <span>certifié bio</span> est idéal pour soulager les <span>démangeaisons</span> liées aux<span> chenilles processionnaires</span> mais aussi pour apaiser les <span>piqûres d’orties</span>, de <span>moustiques</span> et autres <span>insectes</span>. Urtiflash Gel vous aide également à atténuer les sensations de brûlure provoquées par les <span>piqûres de méduse</span>.<br /><br />Sa formule complète contribue à soulager et hydrater votre pe ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3661744051641</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c36b91e41e3eada8a45ca155584c93147abdbcee6cad9ac893aba888ef407ffc ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lehning dentifrice naturel 80 g ]]></title>
+<g:id>1d6104be-06ad-4e6e-ae50-37c81b3dc7f8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lehning-dentifrice naturel 80 g?1d6104be-06ad-4e6e-ae50-37c81b3dc7f8 ]]></link>
+<g:price><![CDATA[ 350.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le dentifrice naturel des laboratoires LEHNING, le soin d’hygiène buccal quotidien d’homéopathie pour toute la famille.<br />Le laboratoire LEHNING conçoit des produits cosmétiques, et des médicaments d’homéopathie et de phytothérapie pour le bien être de toute la famille.<br />Le dentifrice sous forme de pâte, composé de sels minéraux de schuessler et d’huiles essentielles de citron nettoie les dents tout en protégeant l’émal et les gencives. Il lutte contre les bactéries, blanchit les dents ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3401565560690</g:gtin>
+<g:brand><![CDATA[ LEHNING ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/1db6b4e9f5435af52f158b9482b0f908915baac79dfde3964c1079fcf3f05a54 ]]></g:image_link>
+<g:product_type><![CDATA[ DENTIFRICE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lens Plus Ocupure 360ml ]]></title>
+<g:id>735f68f2-dc07-4592-9b43-a30d3d2fbe32</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lens-plus ocupure 360ml?735f68f2-dc07-4592-9b43-a30d3d2fbe32 ]]></link>
+<g:price><![CDATA[ 890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Solution de rinçage pour toutes les lentilles de contact.</p>
+<p>Prévient le développement bactériologique dans le flacon en assurant un environnement stérile durant 2 mois après l'ouverture.</p>
+<p>Stérile. Sans conservateur.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>5050474101715</g:gtin>
+<g:brand><![CDATA[ GIFRER ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7d6d74be67a47a653971dc8c3929be8f3876b307c2d13472d1bce9ab12faa508 ]]></g:image_link>
+<g:product_type><![CDATA[ CONTACTOLOGIE ET SOINS DES YEUX ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lero Hépagrume  20 Comprimés ]]></title>
+<g:id>971f5168-5165-4632-8e70-dc0ec3b7cb85</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lero-hépagrume  20 comprimés?971f5168-5165-4632-8e70-dc0ec3b7cb85 ]]></link>
+<g:price><![CDATA[ 499.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Léro Hépagrume comprimés<br />vous aide à retrouver un bien-être digestif grâce à ses actifs :</p>
+<p>La choline qui contribue au maintien d’un fonctionnement normal du foie,<br />Bétaïne, inositol et arginine viennent compléter cette formule pour le bien-être digestif.</p>
+<p><br />Pour qui ? Pour toute personne présentant des ballonnements, flatulences, météorisme.<br />Pourquoi ? En cas de digestion difficile, satiété précoce.<br />Quand ? À l’occasion de repas riches.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3666560025111</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/71544cd03ee84b19cf0eddde0829f78aab4bf64609e857bb51692c65f3e87122 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lero Mig'Reflex 30ml ]]></title>
+<g:id>14469788-2f87-4231-8bcf-c67abd2c47b2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lero-mig'reflex 30ml?14469788-2f87-4231-8bcf-c67abd2c47b2 ]]></link>
+<g:price><![CDATA[ 990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Gardez la tête froide avec Léro Mig’reflex ! L’huile essentielle de menthe poivrée, le ginkgo biloba et le romarin agissent en synergie de la reine des prés, contenant des herbes aux propriétés relaxantes et apaisantes, dès les 1ers signes. Léro a fait le choix d’ingrédients 100% bio et naturels, pour apporter une sécurité d’utilisation au quotidien.</span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3666742025335</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/491501fcd67c513adf9afdc9acbde653507ed96e8aea6a903417fb7c4b228a18 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes 804 Minceur Soupe Silhouette Bio 180 g - Saveur : Choux Légumes ]]></title>
+<g:id>415c9b03-a0cd-4960-8448-fa17c3adb046</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes 804 minceur soupe silhouette bio 180 g - saveur : choux légumes?415c9b03-a0cd-4960-8448-fa17c3adb046 ]]></link>
+<g:price><![CDATA[ 840.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525722028431</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/93b353ecbb9bad48169e2572e896f0b14bd56d9f0dbaba9bb43f2edb0f8578f3 ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Collagène Beauté Végétal 25 Sachets ]]></title>
+<g:id>54274e24-f3c8-4112-99a5-1bec187bd126</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes collagène beauté végétal 25 sachets?54274e24-f3c8-4112-99a5-1bec187bd126 ]]></link>
+<g:price><![CDATA[ 2690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le Collagène Beauté 3 Chênes® est le premier collagène le plus proche du collagène humain de type 1, vegan et à l’efficacité scientifiquement prouvée !<br />Sa formule innovante est composée de l’ingrédient objectivé Vecollal®.</p>
+<p>Vecollal® est un ingrédient biomimétique* combinant des acides aminés issus de la fermentation, des plantes et de la vitamine C. L'ingrédient Vecollal® a fait l’objet de différentes études cliniques prouvant son efficacité, notamment sur la diminution des rides, ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525722056779</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3ac7120adea0e141d7331dd52b99eb8fba82b9db7bf149b93bd0131719e21604 ]]></g:image_link>
+<g:product_type><![CDATA[ BEAUTÉ ET MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 10A Blond Clair Cendré 135ml ]]></title>
+<g:id>87b69b5d-95a3-4a1a-a73c-df847e7ad15a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 10a blond clair cendré 135ml?87b69b5d-95a3-4a1a-a73c-df847e7ad15a ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539475</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/af24e6493efe09c27cf645292c21b4120cef33af03ea1adc5ded7637182192a9 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 10N Blond Platine 135ml ]]></title>
+<g:id>93d9a174-253a-4440-94ca-2e9c1b89ca9c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 10n blond platine 135ml?93d9a174-253a-4440-94ca-2e9c1b89ca9c ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539338</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cd80de4090f067a56c09fdbd3d59435bdaecac80f52871c2e987a8f19307d258 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 10R Rouge Flamboyant 135ml ]]></title>
+<g:id>56f22db3-8558-4762-b669-c00a250dcda0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 10r rouge flamboyant 135ml?56f22db3-8558-4762-b669-c00a250dcda0 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="i4c-draggable-container" style="width:0px;height:0px;">
+<div class="resolved"></div>
+</div>
+<p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p></p>
+<p>Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez un ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525720003911</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ee5f9a0f452d99c2a853e5c5c8f8fc0fb2f80546fc737ec13842073fdc4e3c9b ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 11A Blond Sable Cendré 135ml ]]></title>
+<g:id>d5f86aef-cafd-4de8-8d9c-655693938d3b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 11a blond sable cendré 135ml?d5f86aef-cafd-4de8-8d9c-655693938d3b ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525720003928</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0a9a1e787755077ed4e27169b8c6108b42cd8a22b05852f8c2024fb89c3a5573 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 11R Rouge Myrtille 135ml ]]></title>
+<g:id>26e4a237-7a71-4fb9-8536-ef9f1553154a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 11r rouge myrtille 135ml?26e4a237-7a71-4fb9-8536-ef9f1553154a ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p>Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p>Kit coloration<br />Nuances<br />Facebook Twitter Em ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525720003935</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/a8dbde3727e7d0cb0c5a1564011b2ddd2482fa3feef7aff4c0c15eef8a194d49 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 1N Noir Ebène 135ml ]]></title>
+<g:id>26b024ad-16fa-4c3a-949b-c79b14471f14</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 1n noir ebène 135ml?26b024ad-16fa-4c3a-949b-c79b14471f14 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p></p>
+<p>Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p>Kit coloration<br />Nuances<br />Facebook Tw ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539277</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b1b1c52d71e87feabddb16f377e04b39d778acb1ee7230ea1fa988ed6ee1f6df ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 3N Marron Châtain Foncé 135ml ]]></title>
+<g:id>ec7871b8-84b3-4f36-82e4-a813699eb291</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 3n marron châtain foncé 135ml?ec7871b8-84b3-4f36-82e4-a813699eb291 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="i4c-draggable-container" style="width:0px;height:0px;">
+<div class="resolved"></div>
+</div>
+<p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539284</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b08ad5414f8a539fe73b9eedef81fc05b756e9fb38df2588a83268bb3c4d2d8c ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 4A Châtain Clair Marron Glacé 135ml ]]></title>
+<g:id>1c4c1466-1144-40f6-8e44-2cf7d76ce6e5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 4a châtain clair marron glacé 135ml?1c4c1466-1144-40f6-8e44-2cf7d76ce6e5 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p></p>
+<p>Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p>Kit coloration<br />Nuances<br />Facebook Tw ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525722016797</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6965a3664dcb96dfcf9ad7549ea021887d8931ab041b716fee3c3fcca8b38b4b ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 4B Châtain Brownie 135ml ]]></title>
+<g:id>e9e15e3e-782b-476f-a483-0f8955066698</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 4b châtain brownie 135ml?e9e15e3e-782b-476f-a483-0f8955066698 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <div id="i4c-draggable-container" style="width:0px;height:0px;">
+<div class="resolved"></div>
+</div>
+<p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525722012508</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9f38229ee2f2a3a3cb2bac79d3710303523477e03e5f7e7819b714478a206e88 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 4G Châtain Doré 135ml ]]></title>
+<g:id>b4dcd8de-926f-4b88-bd8a-3ea4780a8f9f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 4g châtain doré 135ml?b4dcd8de-926f-4b88-bd8a-3ea4780a8f9f ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Coloration permanente aux extraits végétaux &amp; pigments purs</p>
+<p><span>KIT COLORATION : TEINTURE VÉGÉTALE + FIXATEUR + BAUME + GANTS + NOTICE</span></p>
+<p>COUVERTURE TOTALE DES CHEVEUX BLANCS<br />COULEUR ÉCLATANTE &amp; DURABLE, BRILLANCE &amp; DOUCEUR<br />SANS AMMONIAQUE, SANS RÉSORCINE, SANS PARABEN, SANS SILICONE</p>
+<p></p>
+<p class="sous-titre-tabs">CONTENU DE L'ÉTUI</p>
+<ul><li>1 flacon de 60 mL de teinture aux extraits végétaux</li>
+<li>1 flacon de 60 mL de fixateur de couleur ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525722022293</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6fc9346ecdecbb937c6d2d34ced8fa671b929c747f0fdf416dded299844f3ecd ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 4M Châtain Acajou 135ml ]]></title>
+<g:id>8d985fc4-0d07-43a1-8ff4-f2823bd53de3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 4m châtain acajou 135ml?8d985fc4-0d07-43a1-8ff4-f2823bd53de3 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539383</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/63de00c85754cc35e5d7f245c53e60a2a0e7ea9dca7f9f717ca9c5e8a22cc0b2 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 4N Châtain Naturel 135ml ]]></title>
+<g:id>ad3fbc5a-1c07-4a47-8e85-8d0e4957ea0a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 4n châtain naturel 135ml?ad3fbc5a-1c07-4a47-8e85-8d0e4957ea0a ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525720003904</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e26d5f9a126a23a215c5f36dd5b1cb0fd39a697f40db80008424c2a960d3689d ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 5B Marron Chocolat 135ml ]]></title>
+<g:id>78277abd-09e2-4d1d-88b0-cdb335e6e79c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 5b marron chocolat 135ml?78277abd-09e2-4d1d-88b0-cdb335e6e79c ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p></p>
+<p>Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p>Kit coloration<br />Nuances<br />Facebook Tw ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539505</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bbfccb6b6fc6224479a84b97b6182ccf8d2a23951129d5d1da92f41d1997d455 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 5G Châtain Clair Doré 135ml ]]></title>
+<g:id>0e5a0616-d260-4bcd-93fc-fef4750afb38</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 5g châtain clair doré 135ml?0e5a0616-d260-4bcd-93fc-fef4750afb38 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539413</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/ca8c801aef93d073ef05015b057dcfd4310ad9d796ec7f5704915f72d44d9665 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 5GM Châtain Clair Cappuccino 135ml ]]></title>
+<g:id>b9a0b81c-3c71-4dfe-855e-5a084fb4734f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 5gm châtain clair cappuccino 135ml?b9a0b81c-3c71-4dfe-855e-5a084fb4734f ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />UN RÉSULTAT PROFESSIONNEL !</p>
+<p></p>
+<p>Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525722016803</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/00032019de39df4ad73406e1e9c59550277534aebe84ca09b6b9b6e0db657890 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 5M Châtain Clair Acajou 135ml ]]></title>
+<g:id>62008b6d-97f3-4e11-978f-0aa2db5337ea</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 5m châtain clair acajou 135ml?62008b6d-97f3-4e11-978f-0aa2db5337ea ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539390</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dd227fef25adc26bf9d20fe6d93952cc63367d7d282847061a61d727ac807092 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 5N Marron Châtain Clair 135ml ]]></title>
+<g:id>265c87d3-04b0-4a87-9385-7fbf8e874585</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 5n marron châtain clair 135ml?265c87d3-04b0-4a87-9385-7fbf8e874585 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539291</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/68d51525479fd9ca809e6d0a945b3e09f61b3d8e7203124916d064e44959f5c5 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 6B Marron Cacao 135ml ]]></title>
+<g:id>65493f8a-04ee-45d9-935a-6dc5dc035ca2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 6b marron cacao 135ml?65493f8a-04ee-45d9-935a-6dc5dc035ca2 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p></p>
+<p>Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p>Kit coloration<br />Nuances<br />Facebook Tw ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539499</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8cb53d3bc8d9cc1c47da3332287ea538c8e590b52dfb93452d78290f358c1210 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 6G Blond Foncé Doré 135ml ]]></title>
+<g:id>59b7ac50-1597-4ec0-81a5-39a2368ce1e4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 6g blond foncé doré 135ml?59b7ac50-1597-4ec0-81a5-39a2368ce1e4 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539420</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b6a746cbc96cfef426625f0cff53258568a6e90c5eab1aa6fe850c4af4ebed2b ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 6GM Blond Foncé Cannelle 135ml ]]></title>
+<g:id>0ff1ffb0-44d7-4857-8662-479cd856b047</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 6gm blond foncé cannelle 135ml?0ff1ffb0-44d7-4857-8662-479cd856b047 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin<span>®</span> est LA coloration permanente qui prend soin de vos cheveux !</p>
+<p>Un résultat professionnel !</p>
+<ul><li>Une couleur permanente d'exception, intense et fiable</li>
+<li>Une couverture totale des cheveux blancs</li>
+<li>Un confort optimal du cuir chevelu</li>
+</ul><p>Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p></p>
+<div class= ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525722031998</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/92b90824360a2c672fbda32216718933003e8b8a5cf7ef17e9299e4490e042da ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 6N Blond Foncé 135ml ]]></title>
+<g:id>456a1bb2-8850-461d-896f-69091fc7249d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 6n blond foncé 135ml?456a1bb2-8850-461d-896f-69091fc7249d ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539345</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/44c951b44e523222983583cfba33e09ed460926e391d2fdecd78335dc892f0f4 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 7C Blond Terre Cuivre 135ml ]]></title>
+<g:id>4037b4c6-f8bd-47c8-ac50-09fd5688d4c2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 7c blond terre cuivre 135ml?4037b4c6-f8bd-47c8-ac50-09fd5688d4c2 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539482</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f7159c91adc87d7c3169b9c6b7b92e4363fe3f9795e4778b511594c9c2bde206 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 7G Blond Doré 135ml ]]></title>
+<g:id>795de9fe-8fbb-466a-8c22-d3000e44a260</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 7g blond doré 135ml?795de9fe-8fbb-466a-8c22-d3000e44a260 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539444</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9d5672776a7469238bb9365092aa3765c83745721e278aa5ae59b8771b90c683 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 7M Blond Acajou 135ml ]]></title>
+<g:id>eb047c52-2706-4480-97ae-9b8a9f694038</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 7m blond acajou 135ml?eb047c52-2706-4480-97ae-9b8a9f694038 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539406</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/eae91df7e622486cb1ef99efaf65579318a9288d7754c02a5973327131ce5f0a ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 7N Blond Noisette 135ml ]]></title>
+<g:id>ab46c7d7-054f-4087-a394-e65de4e063d2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 7n blond noisette 135ml?ab46c7d7-054f-4087-a394-e65de4e063d2 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539307</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0cf79db0ee989be7040ed3a41c2c95761272eda31af4710a17524cd2e2459560 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 8A Blond Cendré 135ml ]]></title>
+<g:id>e8eb27d1-e74a-45c7-907e-89c10539c433</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 8a blond cendré 135ml?e8eb27d1-e74a-45c7-907e-89c10539c433 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539352</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d665cbdee84d64c1bb32c130f71a8c00ae07ab4f795f7ab315fc4ca4e731f1ac ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 8C Blond Cuivré 135ml ]]></title>
+<g:id>d1f988f0-a3bf-4222-b895-ec50cd9ff293</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 8c blond cuivré 135ml?d1f988f0-a3bf-4222-b895-ec50cd9ff293 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539369</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f8bf87493a21f1db34c80dafcf7f4befc43f520223a7d2707054e19890f302ad ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 8G Blond Clair Doré 135ml ]]></title>
+<g:id>9a5f5dba-34e7-44a7-a12f-c53fdbab2870</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 8g blond clair doré 135ml?9a5f5dba-34e7-44a7-a12f-c53fdbab2870 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539451</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/cbbae21d6e4133b46e322bce5d13146a080a4a354f1f05cf27e73b942f92dba7 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 8N Blond Blé 135ml ]]></title>
+<g:id>01786a5e-1917-40d2-af1e-dcd21cbe9682</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 8n blond blé 135ml?01786a5e-1917-40d2-af1e-dcd21cbe9682 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539314</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5e411b062b2f0726f8a2252f1ad1bf6cfc0033a3ce2bfbe9715e96c6de62a81e ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 8V Blond Veneziano 135ml ]]></title>
+<g:id>56b084d0-a05b-4554-ba59-6ae47a79e28c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 8v blond veneziano 135ml?56b084d0-a05b-4554-ba59-6ae47a79e28c ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525722012515</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3a0116aa79f9453723f53d858bf9c7f5e412bca62c2c2482022f65b4080a68df ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 9B Blond Clair Nacré 135 ml ]]></title>
+<g:id>35f93cb8-b011-47b7-9941-2326aec468ff</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 9b blond clair nacré 135 ml?35f93cb8-b011-47b7-9941-2326aec468ff ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>3Chênes Color et Soin </span>est un kit de coloration permanente à domicile formulée à partir d'extraits végétaux. Très respectueuse du cheveu et du cuir chevelu, cette coloration s'applique facilement pour un résultat très naturel. </p>
+<p>Vous rêvez d'une coloration naturelle et durable tout en prenant soin de vos cheveux ? La Pharmacie des Drakkars vous propose alors le <span>kit de coloration permanente Color et Soin 3Chênes</span>. </p>
+<p>Les colorations permanentes Color et Soin  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525722037389</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b6e25e33f32475b8f11e31f8405aeafc8c543f28696d3ec8e0caa34a0da15acb ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 9N Blond Miel 135ml ]]></title>
+<g:id>4e893040-ceaf-447c-89a1-f0c760d173b8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 9n blond miel 135ml?4e893040-ceaf-447c-89a1-f0c760d173b8 ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p><br />Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p><br /><strong>Propriétés</strong><br />Color&a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539321</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/de00508ef1e5f88ad5da71390ebf1fc397e1138d9887c401f27032cba68be575 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les 3 Chênes Color & Soin 9R Rouge Feu 135ml ]]></title>
+<g:id>fad91026-8d79-43a7-934a-eb79310b09de</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-3 chênes color & soin 9r rouge feu 135ml?fad91026-8d79-43a7-934a-eb79310b09de ]]></link>
+<g:price><![CDATA[ 725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pionnier de la coloration aux extraits végétaux en pharmacie depuis plus de 20 ans, Color&amp;Soin® est LA coloration permanente qui prend soin de vos cheveux !<br />Un résultat professionnel !</p>
+<p></p>
+<p>Une couleur permanente d'exception, intense et fiable<br />Une couverture totale des cheveux blancs<br />Un confort optimal du cuir chevelu<br />Brillance, douceur et souplesse ! Vivez une expérience unique de la coloration à domicile !</p>
+<p>Kit coloration<br />Nuances<br />Facebook Tw ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3525727539468</g:gtin>
+<g:brand><![CDATA[ 3 CHÊNES ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/22e3686377b2c8f9f525dec4b653adfa2392d9cc74e5feae396e41ad82be5a75 ]]></g:image_link>
+<g:product_type><![CDATA[ COLORATION ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Schtroumpfs Shampooing Douche Bio Pomme 200ml ]]></title>
+<g:id>7d3398a8-2c61-4192-bdd9-852de1197b7e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-schtroumpfs shampooing douche bio pomme 200ml?7d3398a8-2c61-4192-bdd9-852de1197b7e ]]></link>
+<g:price><![CDATA[ 410.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="tab-content page-product-content">
+<div class="rte">
+<p><span>Grâce à l'extrait de Pomme Bio et à la glycérine hydratante*, ce shampooing douche nettoie en douceur, hydrate* et parfume la peau de notes fruitées et gourmandes. Pour petits et grands. A partir de 3 ans.</span></p>
+<p><span> </span></p>
+</div>
+</div> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3273818842613</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dbe0153e53e64b1fa57e9656adc3080dae2cea2f9af07a384c38dcd26e79769d ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Après Shampooing Cream Conditioner 250 ml ]]></title>
+<g:id>bd14201e-a8ef-4b13-9824-018591604807</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly après shampooing cream conditioner 250 ml?bd14201e-a8ef-4b13-9824-018591604807 ]]></link>
+<g:price><![CDATA[ 1650.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Les cheveux fins, qu'ils soient ondulés, bouclés, frisés ou crépus.</p><h3><strong>Les bénéfices</strong></h3><p>Apporte volume, protection et légèreté en améliorant la formation des boucles sans les alourdir.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0633710473576</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c1f05701f0efe1214ff01e04e86638aff51846f8fc35fca7af04f202c6a054c0 ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Après Shampooing Paradise 250ml ]]></title>
+<g:id>6e933f9e-9730-45d9-aed7-202ed4a1b5ff</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly après shampooing paradise 250ml?6e933f9e-9730-45d9-aed7-202ed4a1b5ff ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Les cheveux ondulés, bouclés, frisés et crépus difficiles à démêler.</p><h3><strong>Les bénéfices</strong></h3><p>Ce soin démêlant fortifie, adoucit et répare la fibre capillaire.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0642968328620</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d72a006083f3b0377e6f32e8c5d5ec721ee81fcff59846707a97e0e5db957c1e ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Cloud Fusion Mousse Capillaire 200ml ]]></title>
+<g:id>67488346-a766-4a98-b28c-7f3c6f93d820</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly cloud fusion mousse capillaire 200ml?67488346-a766-4a98-b28c-7f3c6f93d820 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>80% de nos Lolys ont des cheveux multi-texturés.*</p><p>Les cheveux multi-texturés, qui ont plusieurs textures.</p><h3><strong>Les bénéfices</strong></h3><p>Cette mousse capillaire aérienne apporte volume et fixation de la boucle, tout en protégeant vos cheveux des dommages causés par la chaleur.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760378510958</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3cefbea503e369af8a7a8ca640e42153b61ce95c240d8309f1266f0b8a077ef3 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Cocktail Curl Remedy 310 ml ]]></title>
+<g:id>7a9e9c74-a609-4dc2-a66c-74d72701b256</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly cocktail curl remedy 310 ml?7a9e9c74-a609-4dc2-a66c-74d72701b256 ]]></link>
+<g:price><![CDATA[ 3190.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Les cheveux colorés, abîmés ou fourchus.</p><h3><strong>Les bénéfices</strong></h3><p>Hydratant, il répare instantanément et scelle les fourches.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0642968328590</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/80f02544e8cca6cced041df52b132959282c45498767647ce287afecbc1368f0 ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Hyalu Fusion Masque 300ml ]]></title>
+<g:id>00b4ff32-cafd-412e-932f-113d3005af2d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly hyalu fusion masque 300ml?00b4ff32-cafd-412e-932f-113d3005af2d ]]></link>
+<g:price><![CDATA[ 2390.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>80% de nos Lolys ont des cheveux multi-texturés.*</p><p>Les cheveux multi-texturés, qui ont plusieurs textures.</p><h3><strong>Les bénéfices</strong></h3><p>Un masque-en-gelée à la texture glissante et fondante pour activer vos boucles et apporter toute l'hydratation nécessaire.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760378511047</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c3972666dc7f6bbb45c54ef348506e8ae83835982dc161e5e6fdc13d0427143f ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Kurl Potion 250ml ]]></title>
+<g:id>712fc73f-76f7-42b8-b195-52892de2a125</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly kurl potion 250ml?712fc73f-76f7-42b8-b195-52892de2a125 ]]></link>
+<g:price><![CDATA[ 2090.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Les cheveux fins, qu'ils soient ondulés, bouclés, frisés ou crépus</p><h3><strong>Les bénéfices</strong></h3><p>Nourrit, définit et restructure sans alourdir.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0633710473569</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/de6b69b560915797d7983f863b596776f9733b70a564b21979aef2527dcaf238 ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Magic Twist 250 ml ]]></title>
+<g:id>2d01733f-86d3-4030-af18-aa0d319c2717</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly magic twist 250 ml?2d01733f-86d3-4030-af18-aa0d319c2717 ]]></link>
+<g:price><![CDATA[ 1750.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Les cheveux frisés ou crépus.</p><h3><strong>Les bénéfices</strong></h3><p>Ultra nourrissant, elle est idéale pour protéger vos cheveux avant de les coiffer.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0635131118159</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/42042a7e7c7360f2d3e03c27f386a8553f11ded0a52a9e32ff461747997c8fec ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Masque Pink Power 300ml ]]></title>
+<g:id>910a6b5c-9305-42bb-940d-8b75e842a70a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly masque pink power 300ml?910a6b5c-9305-42bb-940d-8b75e842a70a ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Les cheveux texturés secs, abîmés et affaiblis.</p><h3><strong>Les bénéfices</strong></h3><p>Renforce, restructure et nourrit intensément les cheveux grâce à ses actifs inédits.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760378510545</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3cb0d4dcb0ae570c14af5055198eba67ac0a56095afedbfded67bade39717ccc ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Masque Repair Time 230ml ]]></title>
+<g:id>e7f6432b-fa4e-42a8-946c-fad8d5166444</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly masque repair time 230ml?e7f6432b-fa4e-42a8-946c-fad8d5166444 ]]></link>
+<g:price><![CDATA[ 1750.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Les cheveux ondulés, bouclés, frisés ou crépus.</p><h3><strong>Les bénéfices</strong></h3><p>Fortifiant, il va hydrater vos cheveux pour les rendre plus forts, brillants et plus faciles à coiffer.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0659436978799</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3d3a234fb19d927a541194d2d06cba7db1977b69cce01836f3bebdd720f791e4 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Masque Tropical Détox 250 ml ]]></title>
+<g:id>e4615821-8e1e-4a67-8dfb-563f4a88ddc4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly masque tropical détox 250 ml?e4615821-8e1e-4a67-8dfb-563f4a88ddc4 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Les cheveux ondulés, bouclés, frisés ou crépus.</p><h3><strong>Les bénéfices</strong></h3><p>Élimine les accumulations de dépôts et les impuretés et purifie naturellement le cuir chevelu.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0036336530638</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d2fa05eb3661decd23af2f8e2db3bb57fa0ecc5905e91c4f5e3a2bc4c1ad0952 ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Shampooing Care Fusion 250ml ]]></title>
+<g:id>f9faf3e5-308a-4bf1-91ec-745717afcae2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly shampooing care fusion 250ml?f9faf3e5-308a-4bf1-91ec-745717afcae2 ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>80% de nos Lolys ont des cheveux multi-texturés.*</p><p>Les cheveux multi-texturés, qui ont plusieurs textures.</p><h3><strong>Les bénéfices</strong></h3><p>Un co-wash moussant qui lave les cheveux et apporte du soin dès la première étape de la routine.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760378510897</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/eb95196981b05b93fa38de3254db768893dcb81582694616f36465c223326d09 ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Shampooing Enfant Bubble Dream 250 ml ]]></title>
+<g:id>ddcc1adb-e441-4818-baac-d957b6eca565</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly shampooing enfant bubble dream 250 ml?ddcc1adb-e441-4818-baac-d957b6eca565 ]]></link>
+<g:price><![CDATA[ 1450.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Les cheveux ondulés, bouclés, frisés ou crépus<br>des enfants</p><h3><strong>Quels bénéfices ?</strong></h3><p>Nettoie délicatement les cheveux des enfants en assouplissant et en définissant bien les boucles !</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3760378510019</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/25fc397ad5cba01c4dc622341e651e2fcdc3b3b450e84ddddfc8f9d800ffc853 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Shampooing Perfect Clean 250ml ]]></title>
+<g:id>47ab8944-47e0-4875-9470-bf8009d4a6e9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly shampooing perfect clean 250ml?47ab8944-47e0-4875-9470-bf8009d4a6e9 ]]></link>
+<g:price><![CDATA[ 1450.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Les cheveux bouclés, frisés ou crépus.</p><h3><strong>Les bénéfices</strong></h3><p>Nettoie en douceur les cheveux et débarrasse le cuir chevelu des impuretés.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0642968328743</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/5f5a83342d93d3bfd5ecfebcb0335e0aef332e273d424694969d377267f5b957 ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Shampooing Perfect Match 250 ml ]]></title>
+<g:id>155ee6d1-5fc8-4af7-96cd-4b851687162a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly shampooing perfect match 250 ml?155ee6d1-5fc8-4af7-96cd-4b851687162a ]]></link>
+<g:price><![CDATA[ 1490.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Tous les cheveux fins, qu'ils soient ondulés, bouclés, frisés ou crépus.</p><h3><strong>Les bénéfices</strong></h3><p>Nettoie vos cheveux en profondeur et légèreté ! À vous la chevelure hydratée et douce !</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0633710473552</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7c44947c8cb60a563580b0cd1ba7c7f093191128208208e3db72949843d91363 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Smoothie Ananas 250ml ]]></title>
+<g:id>c30cd6e1-f174-43ad-9663-405ad5868da2</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly smoothie ananas 250ml?c30cd6e1-f174-43ad-9663-405ad5868da2 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Les cheveux frisés ou crépus.</p><h3><strong>Les bénéfices</strong></h3><p>Un véritable lait capillaire qui apporte nutrition et hydratation !</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0642968328521</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c10c04131f02be3ab807fbd7918844a7931a6f17ba519bfeb128cf495f0e2b9a ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Smoothie Litchi-Mûre 250ml ]]></title>
+<g:id>86e2d1b5-b4ac-49cb-a062-f0638aae05d0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly smoothie litchi-mûre 250ml?86e2d1b5-b4ac-49cb-a062-f0638aae05d0 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Les cheveux ondulés, bouclés, frisés ou crépus.</p><h3><strong>Les bénéfices</strong></h3><p>Un véritable lait capillaire qui apporte nutrition et hydratation !</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0642968328545</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3d150eb12fb03ac09980066c880cc316c87a3dc0654b42f70e15c324644876ee ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Smoothie Vanille Ylang 250 ml ]]></title>
+<g:id>fd81791a-73ad-48d8-b312-61610afa8917</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly smoothie vanille ylang 250 ml?fd81791a-73ad-48d8-b312-61610afa8917 ]]></link>
+<g:price><![CDATA[ 1990.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Les cheveux ondulés, bouclés, frisés ou crépus.</p><h3><strong>Les bénéfices</strong></h3><p>Un véritable lait capillaire qui apporte nutrition et hydratation !</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0642968328569</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2df5a55291df651a97e813ae0d09fd5ccaf4b1762d19334d905ffbea7d5ac07c ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secret de Loly Sérum Croissance 250 ml ]]></title>
+<g:id>cfe8809d-d935-42cd-9b78-273fcab0a7e0</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secret de loly sérum croissance 250 ml?cfe8809d-d935-42cd-9b78-273fcab0a7e0 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Les cheveux ondulés, bouclés, frisés ou crépus.</p><h3><strong>Les bénéfices</strong></h3><p>Formulé pour stimuler la pousse et renforcer, ce sérum nourrit des racines jusqu'aux pointes.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0642968328507</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/336cbe312932c05d945a9589e64a59b062ed01558b79765ce8c1bfce42512679 ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secrets De Loly Kurl Fusion - Gel Crème  250ml ]]></title>
+<g:id>c4af7d6d-658f-4b6f-9c1f-726c17f69145</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secrets de loly kurl fusion - gel crème  250ml?c4af7d6d-658f-4b6f-9c1f-726c17f69145 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>80% de nos Lolys ont des cheveux multi-texturés.*</p><p>Les cheveux multi-texturés, qui ont plusieurs textures.</p><h3><strong>Les bénéfices</strong></h3><p>Hydrate, nourrit et sculpte les boucles avec un effet rebondi durant plusieurs jours.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>7863574548278</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8ed6001382d1f20a5bcdc1280b9c114ad5333e5ba26562c259982f370618bdfb ]]></g:image_link>
+<g:product_type><![CDATA[ CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secrets de Loly Boost Curl 250 mL  ]]></title>
+<g:id>e31b0af4-d988-4eb8-ad4e-9118d7ccd644</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secrets de loly boost curl 250 ml ?e31b0af4-d988-4eb8-ad4e-9118d7ccd644 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Formulée comme un <strong>véritable soin</strong>, cette gelée contient un complexe permettant de maintenir naturellement l’<strong>hydratation</strong> et ainsi <strong>empêcher l’évaporation de l’eau</strong>. Les boucles sont alors bien fixées, définies et revitalisées sans effet carton.</p><p>Formulée à <strong>99,2 % d’ingrédients d'origine naturelle</strong>, la gelée Boost Curl est un véritable <strong>complexe d’hydratation</strong> permettant de <strong>fixer les boucles sans un effe ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0642968328583</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/64397856756c71b8c9b843f2d7121f535992b5d29b8ed99fb9cdb0516066849a ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secrets de Loly Kit d'Embarquement Cheveux Crépus ]]></title>
+<g:id>77553991-1489-43f0-9b89-adf201bf895b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secrets de loly kit d'embarquement cheveux crépus?77553991-1489-43f0-9b89-adf201bf895b ]]></link>
+<g:price><![CDATA[ 3890.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Les bénéfices</strong></h3><p>Tous les bénéfices de votre routine cheveux crépus dans un format voyage ultra-pratique. Avec vous, partout.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>7863574635985</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/415e570f2a3dbc8025e5cbd5b329d537ef223f2354b54b010ec00df9aa43600d ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secrets de Loly Kit d'Embarquement Cheveux Ondulés ]]></title>
+<g:id>e9a6bdc7-51d9-417c-8081-22b80471114e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secrets de loly kit d'embarquement cheveux ondulés?e9a6bdc7-51d9-417c-8081-22b80471114e ]]></link>
+<g:price><![CDATA[ 3890.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Les bénéfices</strong></h3><p>Tous les bénéfices de votre routine cheveux ondulés, dans un format voyage ultra-pratique. Avec vous, partout.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>7863574597689</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bcff5f7cbdb6bf55531c71883d9bf9d6d5930557ea4058de016c475f55750527 ]]></g:image_link>
+<g:product_type><![CDATA[ SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secrets de Loly Kurl Nectar soin 250 ml  ]]></title>
+<g:id>38fb45eb-62d9-4d46-a2b7-b08aa0137be6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secrets de loly kurl nectar soin 250 ml ?38fb45eb-62d9-4d46-a2b7-b08aa0137be6 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <h3><strong>Pour qui ?</strong></h3><p>Les cheveux ondulés, bouclés, frisés ou crépus.</p><h3><strong>Les bénéfices</strong></h3><p>Hydrate, nourrit, répare, démêle et restructure.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0660042907875</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/30667bca7ee5465420c64082aa8c73d288a251f72ffe35cccb7290153d134b69 ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > CAPILLAIRES > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Les Secrets de Loly Sunshine Clean Shampooing Dermo- Apaisant 250ml ]]></title>
+<g:id>1438cf7a-64cd-4fb5-955a-b030ba252fc9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/les-secrets de loly sunshine clean shampooing dermo- apaisant 250ml?1438cf7a-64cd-4fb5-955a-b030ba252fc9 ]]></link>
+<g:price><![CDATA[ 1450.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong>Shampoing Sunshine Clean&nbsp;Les Secrets de Loly</strong>,&nbsp;particulièrement recommandé aux personnes sujettes aux démangeaisons, pellicules et cuirs chevelus sensibles.</p><p>Son efficacité entrainera une réduction de 55% des pellicules dès le 1er mois.</p><p>Formulé à 98,6 % d’origine naturelle, le shampoing traite les problèmes liés aux cuirs chevelus sensibles grâce à ses agents dermo-apaisants, purifiants qui rééquilibrent le pH.</p><ul><li><p>La base lavante à la coco combi ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>0660042907882</g:gtin>
+<g:brand><![CDATA[ LES SECRETS DE LOLY ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8897d01dad7578896fc9d116303bcde13442cd7a09ea35654083485bff039940 ]]></g:image_link>
+<g:product_type><![CDATA[ Dermocosmétique > SHAMPOOING ET SOINS CAPILLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Libérill Sirop Toux Mixte 120 ml ]]></title>
+<g:id>2396b6da-9155-4d57-a250-b7891b611b9c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lib-rill sirop toux mixte 120 ml?2396b6da-9155-4d57-a250-b7891b611b9c ]]></link>
+<g:price><![CDATA[ 690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Libérill Sirop Toux Mixte Soulage &amp; Apaise 120 ml est un dispositif médical conçu pour apaiser la toux sèche et grasse, ainsi que pour soulager les muqueuses irritées.</p><p>Sa formule douce, enrichie en ingrédients d'origine naturelle, offre un goût agréable qui convient aussi bien aux adultes qu'aux enfants dès l'âge de 1 an.</p><p>En formant une couche protectrice qui adhère à la muqueuse irritée, ce sirop agit mécaniquement pour apaiser, hydrater et combattre efficacement les irritati ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3577056028236</g:gtin>
+<g:brand><![CDATA[ PIERRE FABRE MEDICAMENT ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/0ae3bebfd83cb758e11f32ef25f96a4d14a7d096240c1093e41fd004526f8d48 ]]></g:image_link>
+<g:product_type><![CDATA[ Médicament > Nez, gorge, oreilles et yeux ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Licetec V-Comb Filtre de capture A1 & Supra 6 filtres ]]></title>
+<g:id>a5123652-2979-4ede-bea3-d9dade1cc6b8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/licetec-v-comb filtre de capture a1 & supra 6 filtres?a5123652-2979-4ede-bea3-d9dade1cc6b8 ]]></link>
+<g:price><![CDATA[ 1190.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Licetec V-Comb Filtre de Capture A1 et Supra 6 Filtres sont adaptés aux appareils A1 et Supra qui éliminent les poux et les lentes.</span><br /><span>Ces filtres renferment les poux et lentes enlevés par le peigne et sont scellés automatiquement pour une élimination hygiénique.</span></p>
+<p></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>9334604001394</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/207083c830a7044dc644d66b65ab127e4f4f7597e331869fac073473205d9afb ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Liceter V-Comb Supra Peigne électrique aspirateur anti-poux ]]></title>
+<g:id>86013d49-5869-4575-9683-7344cff0d20c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/liceter-v-comb supra peigne électrique aspirateur anti-poux?86013d49-5869-4575-9683-7344cff0d20c ]]></link>
+<g:price><![CDATA[ 3990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Licetec V-Comb Peigne Électrique Aspirateur Anti-Poux est un dispositif de traitement sûr, hygiénique et simple qui élimine les poux et lentes, détecte et prévient les infestations. Il combine un peignage doux et une aspiration électrique pour se débarrasser des poux et lentes.<br />Lors du peignage, ce dispositif les capture dans un filtre jetable, pour un résultat visible immédiatement.</p>
+<p>Contenu de la boîte :</p>
+<ul><li>1 peigne V-Comb Supra,</li>
+<li>1 câble de branchement USB,</li> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>9334604001400</g:gtin>
+<g:brand><![CDATA[ Licetec ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3507672fc78b164b2e492892518bac992c7498d4b272e989b5f5a8ffc20065f9 ]]></g:image_link>
+<g:product_type><![CDATA[ ANTI POUX ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Acide Salicylique Pur Le Peeling 100ml ]]></title>
+<g:id>115e61f4-7629-4319-8f3b-045aad970f99</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-acide salicylique pur le peeling 100ml?115e61f4-7629-4319-8f3b-045aad970f99 ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Lotion Peeling agit sur tous les types d’imperfections : boutons, points noirs, excès de sébum, pores dilatés et marques résiduelles. Elle assainit la peau, resserre les pores, élimine cellules mortes et lisse et affine le grain de peau. Au cœur de la formule, l’Acide Salicylique Pur, recommandé par les dermatologues et justement dosé, purifie la peau grâce à ses propriétés antiseptiques et favorise le renouvellement cellulaire grâce à ses propriétés kératolytiques.<br>Sa texture active of ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436926236</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/4a8513653de5b0ef9cd0959f1ff3aada2653d9a99ebdf685c5f38abb5ebcf1d1 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique > SOIN PEAU GRASSE A PROBLEME ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Acide Salicylique Pur Stop-Boutons 15ml ]]></title>
+<g:id>be4ce861-fe84-463b-bc65-fbc2cc513185</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-acide salicylique pur stop-boutons 15ml?be4ce861-fe84-463b-bc65-fbc2cc513185 ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>L’allié indispensable contre les boutons !<br><br>Le Concentré Stop-Boutons assèche et purifie les imperfections et limite les marques résiduelles dès la 1ère application. Au cœur de la formule, l’Acide Salicylique Pur, recommandé par les dermatologues et justement dosé, purifie la peau grâce à ses propriétés antiseptiques et favorise le renouvellement cellulaire grâce à ses propriétés kératolytiques. Sa texture active se compose de deux-phases distinctes pour préserver le plein potentiel des ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436926229</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bcb3cd77e808a22d7dc072f6ce189b3d27ca8a6a1fe4a5df95c945653750dd0d ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique > SOIN PEAU GRASSE A PROBLEME ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Arkeskin Crème de Jour 50ml ]]></title>
+<g:id>518dc6ec-f59c-4f8b-91c3-6382e2968962</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-arkeskin crème de jour 50ml?518dc6ec-f59c-4f8b-91c3-6382e2968962 ]]></link>
+<g:price><![CDATA[ 3490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Formulée à 97% d’ingrédients d’origine naturelle, La Crème Jour Ménopause corrige les signes visibles de la ménopause sur la peau : sécheresse, perte de densité et de fermeté. Inspirée des rythmes biologiques de la peau, La Crème Jour renforce la protection cutanée et nourrit durablement la peau. Spécifiquement développée pour les femmes qui traversent la ménopause, sa texture fond délicatement sur la peau pour lui apporter un confort immédiat. Jour après jour la peau retrouve densité, fermet ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436913496</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/59f8cc6c643cba4fbb9d8fe699d6aec72895092a8ecfab8ac02626d8c089c858 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Arkeskin Crème de Jour La Recharge 50ml ]]></title>
+<g:id>0ba9ba76-343e-4470-a896-9e37975d2226</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-arkeskin crème de jour la recharge 50ml?0ba9ba76-343e-4470-a896-9e37975d2226 ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Formulée à 97% d’ingrédients d’origine naturelle, La Crème Jour Ménopause corrige les signes visibles de la ménopause sur la peau : sécheresse, perte de densité et de fermeté. Inspirée des rythmes biologiques de la peau, La Crème Jour renforce la protection cutanée et nourrit durablement la peau. Spécifiquement développée pour les femmes qui traversent la ménopause, sa texture fond délicatement sur la peau pour lui apporter un confort immédiat. Jour après jour la peau retrouve densité, fermet ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436913472</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dbe3beff647b77a1aa9fcf21a9e59670530eb661e8b45e1578271b3bf5164ac7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Arkeskin Crème de Nuit 50 ml ]]></title>
+<g:id>b7cd6785-0483-4a26-a5d0-cb2e634ab95f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-arkeskin crème de nuit 50 ml?b7cd6785-0483-4a26-a5d0-cb2e634ab95f ]]></link>
+<g:price><![CDATA[ 3490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong></strong></p>
+<p>Formulée à 96% d’ingrédients d’origine naturelle, La Crème Nuit Ménopause corrige les signes visibles de la ménopause sur la peau : sécheresse, perte de densité et de fermeté. Inspirée des rythmes biologiques de la peau, La Crème Nuit active la régénération cellulaire et nourrit durablement la peau. Spécifiquement développée pour les femmes qui traversent la ménopause, sa texture onctueuse fond délicatement sur la peau pour lui apporter un confort immédiat. Jour après ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436913502</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6626a8f25045a5fac6f863c8923f02c0cc2145b463bb732bb6af77d5918b030b ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Arkeskin Crème de Nuit La Recharge 50 ml ]]></title>
+<g:id>5746fdcd-3975-4253-8b8c-bf597245123b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-arkeskin crème de nuit la recharge 50 ml?5746fdcd-3975-4253-8b8c-bf597245123b ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Formulée à 96% d’ingrédients d’origine naturelle, La Crème Nuit Ménopause corrige les signes visibles de la ménopause sur la peau : sécheresse, perte de densité et de fermeté. Inspirée des rythmes biologiques de la peau, La Crème Nuit active la régénération cellulaire et nourrit durablement la peau. Spécifiquement développée pour les femmes qui traversent la ménopause, sa texture onctueuse fond délicatement sur la peau pour lui apporter un confort immédiat. Jour après jour la peau retrouve de ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436913489</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3a7f34a2e9ff751b93d2e644a55a76f81a57f01a0cf187d353da2499b9547757 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Arkeskin Lait Corps 400ml ]]></title>
+<g:id>bf6156ec-af14-4707-98a1-5b8b78f8b6f6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-arkeskin lait corps 400ml?bf6156ec-af14-4707-98a1-5b8b78f8b6f6 ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Formulé à 93% d’ingrédients d’origine naturelle, Le Lait Corps Ménopause corrige les signes visibles de la ménopause sur la peau : sécheresse, perte de fermeté et de tonicité. Spécifiquement développé pour les femmes qui traversent la ménopause, sa texture fondante et nourrissante laisse une agréable sensation de fraîcheur immédiatement dès l’application. La peau retrouve fermeté et tonicité, elle est durablement nourrie et plus confortable.</p>
+<p><small>Testé sous contrôle gynécologique et  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436913519</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/15e5d5cf0146c3816e0830f5654e0534f38391985b83362e90adc957b301e64f ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Body Sculpt La Crème Morpho-Regalbante 200 ml ]]></title>
+<g:id>b0367cdc-3d66-43c1-82c5-d30887bf8923</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-body sculpt la crème morpho-regalbante 200 ml?b0367cdc-3d66-43c1-82c5-d30887bf8923 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lierac Body Sculpt La Crème Morpho-Regalbante 200 ml est un soin minceur enrichi en complexe Body-Sculpt à l'action restructurante, intégrant du silicium et de l'écorce d'acajou, stimulateurs de collagène. Cette crème :</p><ul><li><p>raffermit et tonifie les zones concernées par le manque de fermeté : cuisse, hanches, fesses, bras, ventre,</p></li><li><p>aide à regalber la silhouette,</p></li><li><p>lisse et apporte un effet tenseur à la peau.</p></li></ul><p>Convient à tous types de peaux.<b ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917456</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/945d7444036af633e5c3d070902bc3a69bd41c1c9b849cebc23d747823d722ab ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN CORPS MINCEUR ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Body-Nutri Gommage Ressourçant 200ml ]]></title>
+<g:id>31aea86e-a80e-43b8-aaaa-ab41e163bc96</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-body-nutri gommage ressourçant 200ml?31aea86e-a80e-43b8-aaaa-ab41e163bc96 ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Découvrez le <span>Gommage Resurfaçant Body-Nutri de Lierac</span>, un soin exfoliant qui sublime la peau en douceur.</p>
+<p>Enrichi en Beurre de Karité, poudre de coque d’Amande et Sucre roux, ce gommage offre une <span>exfoliation douce </span>mais efficace, laissant la peau parfaitement<span> lisse </span>et <span>plus douce</span> au toucher.</p>
+<p>Avec <span>95% </span>d'ingrédients d'origine naturelle, cette formule respectueuse de la peau est conçue autour de<span> trois ingrédients c ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436912086</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f0b090543a5116d3f550b41e25a3c8f8d47f5a35ef2db6f37c3d4815a14fe476 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Body-Nutri Le Lait Relipidant 400 ml ]]></title>
+<g:id>b2d72846-1963-4f02-9ea5-ba6f5103fdc4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-body-nutri le lait relipidant 400 ml?b2d72846-1963-4f02-9ea5-ba6f5103fdc4 ]]></link>
+<g:price><![CDATA[ 1590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lierac Body-Nutri Le Lait Relipidant 400 ml est un soin destiné aux peaux sujettes aux tiraillements. Il nourrit et relipide durablement la peau afin d'apaiser et calmer les sensations d'inconfort et de tiraillements.</p><p>Ce lait est enrichi en beurre de karité offrant une nutrition intense et laissant un voile hydratant et apaisant à la surface de la peau, pour un confort immédiat.<br>S'associent l'urée combinant propriété hydratante et fonction kératolytique et niacinamide contribuant à r ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436912123</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/d839b23222fe579fa23b0723d9160beb5284c8acf162351973af596e8a29bef1 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  > SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Body-Sculpt Concentré Cryoactif  150ml ]]></title>
+<g:id>81e71cff-d8b9-46dd-b687-fc766a5c1820</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-body-sculpt concentré cryoactif  150ml?81e71cff-d8b9-46dd-b687-fc766a5c1820 ]]></link>
+<g:price><![CDATA[ 2590.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le<span> Concentré Cryoactif Body Sculpt de Lierac </span>est un traitement inspiré de la cryothérapie qui réduit efficacement l'apparence de la <span>cellulite</span>, même incrustée, pour un effet anti-capiton intense.</p>
+<p>Sa formule innovante, composée du complexe Cellu-Sculpt, <span>lisse et tonifie la peau</span> durablement.</p>
+<p id="X78T2GA">Avec une<span> texture active à effet froid</span> immédiat, il facilite le massage sur les zones sujettes à la cellulite telles que les cuis ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917449</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bd13b2c5970dd557ea2b1ac0d5fb6e3955a3da8c7ddeb6cf31fc27a871d918e7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Body-Sculpt Gel Buste Fermeté 75ml ]]></title>
+<g:id>26e7f998-2dc5-43f1-836e-ae5aca9176b8</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-body-sculpt gel buste fermeté 75ml?26e7f998-2dc5-43f1-836e-ae5aca9176b8 ]]></link>
+<g:price><![CDATA[ 2260.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Découvrez le secret d'une peau plus ferme et d'un buste redessiné avec le <span>Gel Buste Fermeté Body Sculpt de Lierac</span>. </p>
+<p>Enrichi en complexe Bust-Sculpt, ce gel offre une <span>action raffermissante</span> pour corriger le relâchement cutané, raffermir les seins et redonner à votre buste une apparence lisse et tonique.</p>
+<p>Formulé avec <span>95% d'ingrédients d'origine naturelle</span>, ce gel convient à tous les types de peau, apportant une solution naturelle et efficace à  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917463</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e2b7ecd14ae8642a8d2526e936ec97136d1921407ace69686a7664140f497d47 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Coffret Hydragenist Le Soin Yeux Réhydratant 15ml + L'Eau Micellaire Démaquillante 50ml Offerte ]]></title>
+<g:id>a118e291-ca8e-4cc6-a46d-c523e974316e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-coffret hydragenist le soin yeux réhydratant 15ml + l'eau micellaire démaquillante 50ml offerte?a118e291-ca8e-4cc6-a46d-c523e974316e ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <ul>
+<li><span>Contenu du coffret :</span> Le Soin Yeux Réhydratant Hydragenist 15ml, L'Eau Micellaire Démaquillante 50ml Offerte, 2 Cotons Lavables Offerts.</li>
+<li><span>Pour qui :</span><span> Tous les types de peaux.</span></li>
+<li><span>Résultats beauté :</span><span> Le contour de l'oeil est hydraté.</span></li>
+<li><span>On aime :</span><span> La complémentarité de ce coffret !</span></li>
+</ul>
+<p> </p>
+<p>Formulé à 96% d’ingrédients d’origine naturelle, <span>Le Soin Yeux Réhydratant  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436921149</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/57ba42a66bc3572967e7f0679a0562393699876e9d8538507b294cea5f0d353d ]]></g:image_link>
+<g:product_type><![CDATA[ Idées Cadeaux > Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac DIOPTI - Crème Correction Rides 15ml ]]></title>
+<g:id>89395818-c446-4ba7-8c44-3f2a9ff49bda</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-diopti - crème correction rides 15ml?89395818-c446-4ba7-8c44-3f2a9ff49bda ]]></link>
+<g:price><![CDATA[ 1740.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436922092</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bf1effca10e567b9d6c8a965e5ca5543ca8f3d9f6740bd90952a49a6188605ba ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac DIOPTI - Fluide Correction Cernes 15ml ]]></title>
+<g:id>b2f8cd0a-42fb-4837-9985-ed93251c53b4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-diopti - fluide correction cernes 15ml?b2f8cd0a-42fb-4837-9985-ed93251c53b4 ]]></link>
+<g:price><![CDATA[ 1740.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <span>Fluide Correction Cernes Diopti de Lierac</span> est un soin expert du contour des yeux qui cible <span>tous les types de cernes </span>(bleus, bruns et creux).</p>
+<p>Sa formule innovante contient une <span>Vitamine C stabilisée</span> brevetée et de l'<span>extrait de Ruscus</span>, sélectionnés pour leur <span>efficacité antioxydante</span> et leur capacité à réduire l'apparence des cernes.</p>
+<p>Les résultats sont visibles immédiatement et durablement : l’apparence et la surface ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436922108</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/08b712ddd6eefaede9bf5b7c4a23a8dc28f9ce3065b584d6a3adf1163b0a23a3 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac DIOPTI - Gel Correction Poches  15ml ]]></title>
+<g:id>d7666642-514c-4763-b3b9-105f1573041f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-diopti - gel correction poches  15ml?d7666642-514c-4763-b3b9-105f1573041f ]]></link>
+<g:price><![CDATA[ 1740.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <span>Gel Correction Poches Diopti de Lierac </span>est un soin expert du contour des yeux qui cible <span>tous les types de poches</span> (rétention d'eau, de gras et de relâchement cutané).</p>
+<p>Sa formule innovante contient un<span> extrait de gingembre</span> breveté aux propriétés drainantes, associé à des <span>polymères tenseurs</span> pour une efficacité ciblée sur les poches.</p>
+<p>Les résultats sont visibles immédiatement et à long terme, réduisant <span>l'apparence et le volu ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436922115</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/90fb2f0dec9856ebbcac28950814f59c3d95d92b9011f0fe39e9f4318461534f ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Démaquillant Eau Micellaire 200ml ]]></title>
+<g:id>510ddb38-877c-481c-9ffa-122c49ff3e21</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-démaquillant eau micellaire 200ml?510ddb38-877c-481c-9ffa-122c49ff3e21 ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Composée à 96% d'ingrédients d'origine naturelle, l'Eau Micellaire nettoie et démaquille en douceur le visage et les yeux. Au coeur de sa formule, le Complexe Prébiotiques Marin préserve et renforce le microbiote cutané.</span><br /><br /><span>Sa texture fraîche et délicatement parfumée laisse la peau parfaitement nette, douce et lumineuse.</span><br /><br /><span>Convient à tous les types de peaux, même sensibles.</span><br /><br /><span>VEGAN*</span><br /><span>Testé sous contrôle de ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436908645</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9fd5f2a95103b7a4cac9b80d7492229ee9b2c7f89aee4bec04c0f9e6a773ff37 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Démaquillant Lotion Hydratante 200ml ]]></title>
+<g:id>57aa4a43-7d0e-4828-99ac-155c6215c803</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-démaquillant lotion hydratante 200ml?57aa4a43-7d0e-4828-99ac-155c6215c803 ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Composée à 98% d'ingrédients d'origine naturelle, La Lotion Hydratante élimine les impuretés et traces de maquillage résiduelles, tout en hydratant et lissant la peau. Au coeur de sa formule, le Complexe Prébiotiques Marin préserve et renforce le microbiote cutané. Enrichie en Acide Hyaluronique, pour son action lissante et repulpante.</span><br /><br /><span>Sa texture gélifiée fraîche et légère fond sur la peau pour l'envelopper d'hydratation. La peau est nette, repulpée et prête à re ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436908324</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/dc4938ac2d207a6605b1e0cf90c6434ea5cf25d5eb4561656d69cc67ef054cb2 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Démaquillant Masque Gommant 75ml ]]></title>
+<g:id>2d3ae9a4-9b3c-4b76-a550-b837e01466c9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-démaquillant masque gommant 75ml?2d3ae9a4-9b3c-4b76-a550-b837e01466c9 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436908676</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8c172fab282e59c1725729f0bb9825d1cc6d3dc5f79fd3e51ced9a56f3b1c2bc ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Démaquillant Mousse Nettoyante 150ml ]]></title>
+<g:id>3ea85b15-79e9-4b95-9bb9-b0ba6be70b62</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-démaquillant mousse nettoyante 150ml?3ea85b15-79e9-4b95-9bb9-b0ba6be70b62 ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Composée à 99% d'ingrédients d'origine naturelle, La Mousse Nettoyante purifie et apaise la peau en douceur. Au coeur de sa formule, le Complexe Prébiotiques Marin préserve et renforce le microbiote cutané.</span><br /><br /><span>Sa texture mousse généreuse et aérienne offre un véritable moment de plaisir à l'application et laisse la peau nette, douce et apaisée.</span><br /><br /><span>Convient à tous les types de peaux, même sensibles.</span><br /><br /><span>VEGAN*</span><br /><span ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436908348</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7508b8a04c476cbf057ef54645fea7dcd71c778c56edd43933bf23080620b4f1 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Démaquillant yeux 100 ml ]]></title>
+<g:id>97958d6e-b3b4-414d-b7c2-43b6c67a657d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-démaquillant yeux 100 ml?97958d6e-b3b4-414d-b7c2-43b6c67a657d ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Composée à 99% d'ingrédients d'origine naturelle, Le Démaquillant Yeux élimine efficacement le maquillage tenace, même waterproof, tout en prenant soin des cils. Au coeur de sa formule, le Complexe Prébiotiques Marin préserve et renforce le microbiote cutané. Enrichi en Pro-Vitamine B5, pour hydrater et prévenir la dégradation et la perte des cils.</span><br /><br /><span>Sa texture bi-phase allie l'efficacité démaquillante de l'huile à la fraîcheur de l'eau, sans laisser de film gras.  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436908638</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/840edb0d9dd929870eb2ba73810fa86c71a30bc8024be7207ab00371b14d9b3f ]]></g:image_link>
+<g:product_type><![CDATA[ PARFUM ET EAU DE TOILETTE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Homme Mousse de Rasage 150ml ]]></title>
+<g:id>12acbf98-9965-4178-ab69-abd6d5d9754f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-homme mousse de rasage 150ml?12acbf98-9965-4178-ab69-abd6d5d9754f ]]></link>
+<g:price><![CDATA[ 890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La mousse de rasage Lierac Homme est un vrai produit 3 en 1 pour les hommes :</p>
+<ul><li>Elle est <span>anti-irritations</span>.</li>
+<li>Elle <span>assouplit la peau du visage</span>.</li>
+<li>La mousse de rasage Lierac Homme <span>hydrate </span>également votre épiderme</li>
+</ul><p>En assouplissant les poils avant le passage de la lame, la <span>mousse de rasage Lierac Homme</span> facilite un rasage net et précis tout en vous prémunissant contre le feu du rasoir. Une étude a montré que 9 ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3508240014087</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f23393fbabfbc418b0aef61d2fb25e6fb8c3d9a42c5a50c506ff6a01e56a9e6c ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HOMME ET RASAGE ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Hydragenist Gel crème recharge 50ml ]]></title>
+<g:id>38e3e92e-6dc4-4016-a606-7f4880c3b13f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-hydragenist gel crème recharge 50ml?38e3e92e-6dc4-4016-a606-7f4880c3b13f ]]></link>
+<g:price><![CDATA[ 2190.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <span>Gel-Crème Réhydratant Éclat (format recharge) de Lierac</span> offre une<span> hydratation intense</span> et une légèreté pour les <span>peaux normales à mixtes.</span></p>
+<p>Formulé à 98% d’ingrédients d’origine naturelle, le Gel-Crème Réhydratant Éclat <span>désaltère</span> intensément sans alourdir les peaux normales à mixtes.</p>
+<p>Sa <span>texture ultra légère et rafraîchissante</span> gorge la peau en eau dès l’application pour un <span>teint frais et éclatant.</span></p>
+<p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436911881</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/788d75dd267d90017eaedce6512a2bb4e1a1905baa44007aac1ed7ccaa402acd ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Hydragenist La Crème Réhydratante Éclat 50 ml ]]></title>
+<g:id>16b36b2e-40c2-4091-9679-370ceec1bcaf</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-hydragenist la crème réhydratante Éclat 50 ml?16b36b2e-40c2-4091-9679-370ceec1bcaf ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lierac Hydragenist La Crème Réhydratante Éclat 50 ml est un soin réhydratant, réconfortant et illuminateur.</p>
+<ul><li>Le ferment réhydratant stimule durablement l'auto-hydratation de la peau en rechargeant ses réserves d'eau et en stimulant la circulation de l'eau dans les cellules.</li>
+<li>L'acide hyaluronique apporte confort et éclat à la peau. Il repulpe la peau et lisse les ridules de déshydratation.</li>
+</ul><p>Texture fine et onctueuse.</p>
+<p>Peaux normales à sèches, même sensibles ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436910938</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/7234c081ec04ff7fc85fe7687370c53c289b64608bdd68f55b8b90e889a5f7a7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Hydragenist Le Sérum Réhydratant 30 ml ]]></title>
+<g:id>cf12d2c3-dd9a-4a1f-8b69-47c92635dff4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-hydragenist le sérum réhydratant 30 ml?cf12d2c3-dd9a-4a1f-8b69-47c92635dff4 ]]></link>
+<g:price><![CDATA[ 3490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lierac Hydragenist Le Sérum Réhydratant 30 ml est un soin réhydratant, repulpant et illuminateur.</p>
+<ul><li>Le ferment réhydratant stimule durablement l'auto-hydratation de la peau en rechargeant ses réserves d'eau et en stimulant la circulation de l'eau dans les cellules.</li>
+<li>L'acide hyaluronique apporte confort et éclat à la peau. Il repulpe la peau et lisse les ridules de déshydratation.</li>
+<li>Le patch moléculaire limite l'évaporation de l'eau en formant un film protecteur et per ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436910952</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/95b2911c764d740afcd7a20c6828fe3adb46485043dace48eec7730aa589cea7 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Hydragenist Recharge 50ml ]]></title>
+<g:id>500eb899-2132-4b5e-ae4e-ff40f94f6aab</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-hydragenist recharge 50ml?500eb899-2132-4b5e-ae4e-ff40f94f6aab ]]></link>
+<g:price><![CDATA[ 2190.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Pour qui :</span> Les peaux normales à sèches.</li>
+<li><span>Résultats beauté :</span> La peau est durablement hydratée, belle et souple.</li>
+<li><span>Actifs :</span> Glycérine, Squalane, Beurre de Karité.</li>
+<li><span>On aime : </span>Sa texture fine, onctueuse et réconfortante.</li>
+</ul><p> </p>
+<p>La <span>Crème Réhydratante Éclat (format recharge) de Lierac</span> offre une<span> hydratation intense</span> et un <span>confort immédiat</span> pour les<span> peaux normales  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436911850</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/19e43d34d184bb443e00c6181fd9b987662d2334030c3ce962df3ee7531c2b18 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Hydragenist Soin Yeux Réhydratant 15ml ]]></title>
+<g:id>2a71023a-ebb5-40dc-a70e-5cd273d31c24</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-hydragenist soin yeux réhydratant 15ml?2a71023a-ebb5-40dc-a70e-5cd273d31c24 ]]></link>
+<g:price><![CDATA[ 2490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>LIERAC </span><br /><span>Soin yeux réhydratant </span><br /><span>Illumine le regard </span></p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436910969</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/370f7505b32e1e7f23e5d859280dd695d076c4d060b8f2507bd7a244cddd8b50 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Hydragenist gel Crème 50ml ]]></title>
+<g:id>8f82de41-51e4-44b6-845d-6d0a1794cc62</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-hydragenist gel crème 50ml?8f82de41-51e4-44b6-845d-6d0a1794cc62 ]]></link>
+<g:price><![CDATA[ 2990.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <span>Gel-Crème Réhydratant Éclat de Lierac</span> offre une <span>hydratation intense</span> tout en légèreté pour les <span>peaux normales à mixtes.</span></p>
+<p>Formulé à 98% d’ingrédients <span>d’origine naturelle</span>, le Gel-Crème Réhydratant Éclat <span>désaltère</span> intensément sans alourdir les peaux normales à mixtes.</p>
+<p>Sa <span>texture ultra légère et rafraîchissante</span> gorge la peau en eau dès l’application pour un <span>teint frais et éclatant.</span></p>
+<p>Ell ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436910945</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/788d75dd267d90017eaedce6512a2bb4e1a1905baa44007aac1ed7ccaa402acd ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac L'Eau Micellaire 400 ml ]]></title>
+<g:id>a334376e-9491-4b69-b9f5-2cef2c649c2a</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-l'eau micellaire 400 ml?a334376e-9491-4b69-b9f5-2cef2c649c2a ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lierac L'Eau Micellaire 400 ml est un soin qui démaquille, nettoie, hydrate et élimine en douceur le maquillage et les impuretés de toutes les peaux, même sensibles. Il convient pour le visage et pour les yeux.</p>
+<p>Au cœur de sa formule, le Complexe Prébiotiques Marin. Composé de 3 ingrédients actifs, il fournit les nutriments essentiels au maintien du microbiote cutané équilibré :</p>
+<ul><li>L'Eau de mer apporte une grande variété de minéraux et oligoéléments essentiels à la bonne divers ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436919627</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c639063090fd99f13b188940000134adfe2632caef15fa5f71dcacbe4470d7a6 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac La Mousse Nettoyante 50 ml ]]></title>
+<g:id>172a0743-9c92-4c8f-a7e5-c746f71d4833</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-la mousse nettoyante 50 ml?172a0743-9c92-4c8f-a7e5-c746f71d4833 ]]></link>
+<g:price><![CDATA[ 490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lierac La Mousse Nettoyante 50 ml est un soin qui nettoie, purifie, apaise tous les types de peaux, même sensibles.</p><p>Au cœur de sa formule, le Complexe Prébiotiques Marin. Composé de 3 ingrédients actifs, il fournit les nutriments essentiels au maintien du microbiote cutané équilibré :</p><ul><li><p>L'Eau de mer apporte une grande variété de minéraux et oligoéléments essentiels à la bonne diversité du microbiote.</p></li><li><p>Les algues vertes et brunes, sources de sucres et d'acides a ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436908270</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e52f6b545f040ac7da62cd6894b0718370b6a7b0082fcdad5dec09c0ddd23284 ]]></g:image_link>
+<g:product_type><![CDATA[ PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Lait Demaquillant 400ml ]]></title>
+<g:id>7ac442fa-28ef-4707-82eb-d72162206da5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-lait demaquillant 400ml?7ac442fa-28ef-4707-82eb-d72162206da5 ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><span>Pour qui :</span> Tous les types de peaux.</li>
+<li><span>Résultats beauté :</span> La peau est démaquillée, nettoyée et nourrie.</li>
+<li><span>Actifs :</span> Eau de Mer, Algues Vertes et Brunes, Sucre.</li>
+<li><span>On aime </span>: Sa texture veloutée légère et non grasse !</li>
+</ul><p> </p>
+<p>Composé à 97% d'ingrédients d'origine naturelle, <span>Le Lait Démaquillant de Lierac</span> nettoie et démaquille en douceur le visage et les yeux en apportant un confort immédiat à l ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436919610</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/c639063090fd99f13b188940000134adfe2632caef15fa5f71dcacbe4470d7a6 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Lait Démaquillant 200ml ]]></title>
+<g:id>05151c80-7408-4423-b13a-bb970b76fecf</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-lait démaquillant 200ml?05151c80-7408-4423-b13a-bb970b76fecf ]]></link>
+<g:price><![CDATA[ 1390.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Composée à 97% d'ingrédients d'origine naturelle, Le Lait Démaquillant nettoie et démaquille en douceur le visage et les yeux en apportant un confort immédiat à la peau. Au coeur de sa formule, le Complexe Prébiotiques Marin préserve le microbiote cutané.</span><br /><br /><span>Sa texture veloutée légère et non grasse enveloppe la peau d'un voile de douceur. Elle est parfaitement propre, confortable et nourrie.</span><br /><br /><span>Convient à tous les types de peaux.</span><br /><br ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436908317</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/14b6954afd9765232e6d2474378a428d57f93e5953cc8ef175664f39104375a5 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Lift Integral Crème Jour Raffermissante Recharge - 50 ml ]]></title>
+<g:id>1dd50cd7-03a6-4404-b0dc-f039b639983b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-lift integral crème jour raffermissante recharge - 50 ml?1dd50cd7-03a6-4404-b0dc-f039b639983b ]]></link>
+<g:price><![CDATA[ 3490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Lierac Lift Integral Crème Jour Raffermissante Recharge<br />Recharge pour soin visage Lierac<br />Crème de jour anti-âge</span></p>
+<p>La Crème Jour Lift Integral <span>renforce la structure de la peau </span>en agissant sur ses éléments essentiels (collagène, élastine, acide hyaluronique), mais aussi sur les glycoprotéines qui les connectent. La peau retrouve <span>fermeté</span>, <span>élasticité </span>et rebond, pour un effet lift intégral.<br />La texture <span>soyeuse et ultra-fo ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436908911</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/58555d532cb5cf8d96e9c1e0aa52b8f1985d10c3d9ab9db965c19c1407512f2e ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Lift Integral Crème de Jour Raffermissante 50ml ]]></title>
+<g:id>db4c9967-669e-4a4c-bbfe-d51a860357f7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-lift integral crème de jour raffermissante 50ml?db4c9967-669e-4a4c-bbfe-d51a860357f7 ]]></link>
+<g:price><![CDATA[ 4490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La Crème Jour Lift Integral renforce la structure de la peau en agissant sur ses éléments essentiels (collagène, élastine, acide hyaluronique), mais aussi sur les glycoprotéines qui les connectent. La peau retrouve fermeté, élasticité et rebond, pour un effet lift intégral.</span><br /><br /><span>La texture soyeuse et ultra-fondante de la Crème Jour Raffermissante hydrate intensément, tout en apportant confort et fraîcheur à la peau.</span><br /><br /><span>Formulée pour convenir à tou ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436908942</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/58555d532cb5cf8d96e9c1e0aa52b8f1985d10c3d9ab9db965c19c1407512f2e ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Lift Integral Crème de Nuit Recharge 50ml ]]></title>
+<g:id>2eebe611-f976-42d9-b9fb-7339af0a2366</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-lift integral crème de nuit recharge 50ml?2eebe611-f976-42d9-b9fb-7339af0a2366 ]]></link>
+<g:price><![CDATA[ 3490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La <span>Crème Nuit Lift Integral de Lierac</span> renforce la structure de la peau en agissant sur ses éléments essentiels (collagène, élastine, acide hyaluronique), mais aussi sur les glycoprotéines qui les connectent. La peau retrouve fermeté, élasticité et rebond, pour un effet lift intégral.</p>
+<p>La texture onctueuse et ultra-enveloppante de La Crème Nuit Régénérante nourrit intensément la peau sans fini gras.</p>
+<p>Formulée pour convenir à tous les types de peaux, même sensibles*.<br ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436909093</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/66b8ad231f35b55fe74c6b542fb3d3618a942e6a217dac7ba8a668564d8e17fc ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Lift Integral La Crème Cou et Décolleté 50 ml ]]></title>
+<g:id>45901728-b512-4404-8e8c-598d2c5bf8f3</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-lift integral la crème cou et décolleté 50 ml?45901728-b512-4404-8e8c-598d2c5bf8f3 ]]></link>
+<g:price><![CDATA[ 4490.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La Crème Cou &amp; Décolleté LIFT INTEGRAL offre une solution complète pour renforcer la structure de la peau au niveau du cou et du décolleté. Enrichie en collagène, élastine, acide hyaluronique et glycoprotéines, cette crème agit en profondeur pour redonner fermeté, élasticité et rebond à la peau. Grâce à ses biopolymères ultra-tenseurs, elle offre un effet lissant immédiat, pour un décolleté visiblement défroissé et un cou regalbé. Sa texture gel-crème à pénétration rapide hydrate intensém ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436925390</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/e60213841bcf6cfe1235e121cfd859175246132a5e461ee3071d2e1ec3fdf4c3 ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN HYDRATATION CORPS  ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Lift Integral le Sérum Tenseur 30ml ]]></title>
+<g:id>42f3c26b-8044-4a5b-9ac4-c614192faa0b</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-lift integral le sérum tenseur 30ml?42f3c26b-8044-4a5b-9ac4-c614192faa0b ]]></link>
+<g:price><![CDATA[ 4890.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le Serum Lift Integral renforce la structure de la peau en agissant sur ses éléments essentiels (collagène, élastine, acide hyaluronique), mais aussi sur les glycoprotéines qui les connectent. Il est enrichi en biopolymères ultra-tenseurs pour un effet gainant immédiat. La peau retrouve fermeté, élasticité et rebond, pour un effet lift intégral.</span><br /><br /><span>La texture lactée du Sérum Tenseur enveloppe la peau pour un véritable fini velours.</span><br /><br /><span>Formulée p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436909031</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2bf4dade09053a68aea40f8627151c9e59d612683b5d8d078ec5c25180c7c920 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Lift Intégral Crème Nuit Régnérante 50ml ]]></title>
+<g:id>9990a388-91d7-4da3-9255-45a0b7c9aedb</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-lift intégral crème nuit régnérante 50ml?9990a388-91d7-4da3-9255-45a0b7c9aedb ]]></link>
+<g:price><![CDATA[ 4490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>La Crème Nuit Lift Integral renforce la structure de la peau en agissant sur ses éléments essentiels (collagène, élastine, acide hyaluronique), mais aussi sur les glycoprotéines qui les connectent. La peau retrouve fermeté, élasticité et rebond, pour un effet lift intégral.</span><br /><br /><span>La texture onctueuse et ultra-enveloppante de La Crème Nuit Régénérante nourrit intensément la peau sans fini gras.</span><br /><br /><span>Formulée pour convenir à tous les types de peaux, mê ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436908973</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/66b8ad231f35b55fe74c6b542fb3d3618a942e6a217dac7ba8a668564d8e17fc ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Lift Intégral Soin Regard 15ml ]]></title>
+<g:id>bc37f44f-c301-4972-8e52-cd4a11df5eba</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-lift intégral soin regard 15ml?bc37f44f-c301-4972-8e52-cd4a11df5eba ]]></link>
+<g:price><![CDATA[ 3490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le Soin Regard Lift Integral renforce la structure de la peau en agissant sur ses éléments essentiels (collagène, élastine, acide hyaluronique), mais aussi sur les glycoprotéines qui les connectent. La peau retrouve fermeté, élasticité et rebond, pour un effet lift intégral.</span><br /><br /><span>La texture fine et fondante du Soin Lift Regard sublime et lisse le contour des yeux. Son embout en céramique apporte une sensation de fraicheur immédiate pour une efficacité optimale. Ce soi ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436909000</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3f24601db254d3fff1250902cf46f922dd51a4778288079a9eecd206abbebd89 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Lumilogie Double Concentré Jour & Nuit Correction Taches 30 ml ]]></title>
+<g:id>ab759f8b-1f1a-446f-882c-22a385e7f1c5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-lumilogie double concentré jour & nuit correction taches 30 ml?ab759f8b-1f1a-446f-882c-22a385e7f1c5 ]]></link>
+<g:price><![CDATA[ 3730.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lierac Lumilogie Double Concentré Jour &amp; Nuit Correction Taches 30 ml est un double concentré qui réduit l'hyperpigmentation, corrige les taches installées et réuniformise le teint.<br />C'est un traitement intensif jour et nuit qui cible 24h/24 les 3 types de taches : naissantes, visibles et incrustées.<br />Ce double concentré est composé de 2 formules inédites, l'une pour le jour et l'autre pour la nuit.</p>
+<ul><li>La formule jour ajoute une action préventive anti-oxydante dans un flu ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3508240004446</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/44ac5112c98f0fc3bb4516e44bbde921a26ac81bcc5fe59c8f0aa9903502da58 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Phytolastil Gel Prévention Vergetures 200ml ]]></title>
+<g:id>8622fa14-89fe-4df2-8046-1704af0236f6</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-phytolastil gel prévention vergetures 200ml?8622fa14-89fe-4df2-8046-1704af0236f6 ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <span>Gel Prévention Vergetures Phytolastil </span>de la marque <span>LIERAC </span>est enrichi d'un<span> Complexe ALP végétal </span>unique associant trois plantes aux <span>vertus phytothérapeutiques</span> reconnues.</p>
+<p>- L'<span>Alchémille</span>, bien dosée en tanins anti-oxydants et cicatrisants, a la faculté de<span> resserrer les tissus</span>.</p>
+<p>- Le <span>Lierre</span>, riche en flavanoïdes aux propriétés <span>anti-inflammatoires</span>, répare l’épiderme.</p>
+<p>- Le  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917616</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/56a48994f03a4d3dd6cb4852c6791160f869a17b44cab7c90d23a3bdc266bc9e ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Phytolastil Gel Prévention Vergetures 400ml ]]></title>
+<g:id>779c31ae-32d4-478f-a877-5e7895e4c1c5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-phytolastil gel prévention vergetures 400ml?779c31ae-32d4-478f-a877-5e7895e4c1c5 ]]></link>
+<g:price><![CDATA[ 2690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <span>Gel Prévention Vergetures Phytolastil</span> de la marque <span>LIERAC</span> est enrichi d'un <span>Complexe ALP végétal</span> unique associant trois plantes aux <span>vertus phytothérapeutiques</span> reconnues.</p>
+<p>- L'<span>Alchémille</span>, bien dosée en tanins anti-oxydants et<span> cicatrisants</span>, a la faculté de resserrer les tissus.</p>
+<p>- Le <span>Lierre</span>, riche en flavanoïdes aux propriétés <span>anti-inflammatoires</span>, répare l’épiderme.</p>
+<p>- Le  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917609</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/b0b9b4178bf076a97f64e49a3952e3fe253a64662ef32b68c51165efb7770dc2 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Phytolastil Huile de Massage 100ml ]]></title>
+<g:id>ed7ceaf3-e596-4aaf-b420-d5dbc10511ea</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-phytolastil huile de massage 100ml?ed7ceaf3-e596-4aaf-b420-d5dbc10511ea ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>L'Huile de massage Phytolastil</span> bénéficie d'une formule unique associant le <span>complexe Lastil</span>, composé de Bisabolol et de Silanol, à un trio d'<span>huiles végétales</span> d'avocat, d'amande douce et de noix de macadamia. </p>
+<p id="K6K7INJ">Cette combinaison<span> </span>améliore l'<span>élasticité </span>de la peau, la <span>nourrit</span> et <span>soulage</span> <span>les démangeaisons </span>pour prévenir l’apparition des <span>vergetures</span>.</p>
+<p>Formulée à ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917623</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6aa788ce7134a9be5459cf7eb9b029af0917fbf937861edcf90fa16a68394ad2 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Phytolastil Soluté Correction Vergetures 100ml ]]></title>
+<g:id>dcd505ad-041d-4c03-9abe-8c38a6e7d3a1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-phytolastil soluté correction vergetures 100ml?dcd505ad-041d-4c03-9abe-8c38a6e7d3a1 ]]></link>
+<g:price><![CDATA[ 1890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Le <span>Soluté Correction Vergetures Phytolastil </span>contient une formule exclusive qui contribue à la <span>prévention des vergetures</span> et favorise leur diminution.</p>
+<p>Grâce à un <span>complexe végétal</span> associant l’Alchémille, le Lierre et la Prêle, ce <span>concentré</span> formulé avec <span>98% </span>d'ingrédients d'origine naturelle apporte une amélioration dans 80% des cas, selon une étude clinique.</p>
+<p id="MWB878K">Les vergetures peuvent apparaître<span> durant l ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917630</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/bb857cfbf9d6e75b5de9756ea193162af1a7ad45d8f7b6dabe85c3b77da3dce5 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Premium La Crème Regard 20ml ]]></title>
+<g:id>a8a88eb6-013d-461d-ba1f-69b878d782c4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-premium la crème regard 20ml?a8a88eb6-013d-461d-ba1f-69b878d782c4 ]]></link>
+<g:price><![CDATA[ 4990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Véritable soin yeux anti-âge absolu, La Crème Regard corrige tous les signes de l’âge : rides, ridules, poches, manque d’élasticité et d’éclat, déshydratation.</span><br /><br /><span>Sa texture baume ultra-onctueuse comble instantanément les ridules du contour des yeux et atténue les poches et les cernes. Convient aux yeux sensibles. Sans parfum.</span></p>
+<p>Formulée à <span>95% d’ingrédients d’origine naturelle</span>, la Crème Regard corrige tous les signes de l’âge du contour des  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917913</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/eb3805197fb982bf6e40d3dae0a77c802f2aabaac13b0bef37c9f50e99510b2b ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Premium La Crème Soyeuse La Recharge 50ml ]]></title>
+<g:id>eb96a9a2-7459-4e41-82e9-ac0219468f71</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-premium la crème soyeuse la recharge 50ml?eb96a9a2-7459-4e41-82e9-ac0219468f71 ]]></link>
+<g:price><![CDATA[ 6490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><strong><span>Véritable soin visage anti-âge absolu, La Crème Soyeuse corrige tous les signes de l’âge : rides, ridules, taches, manque de fermeté, d’éclat, d’élasticité, et de densité, déshydratation.</span><br /><br /><span>Sa texture à la douceur inégalée laisse un subtil fini poudré sur la peau. Convient aux peaux normales à mixtes, mêmes sensibles.</span></strong></p>
+<p>Formulée à <span>95% d’ingrédients d’origine naturelle</span>, la Crème Soyeuse corrige tous les signes de l’âge et hy ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917883</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/fa4810f6cad7eee50ffcc1d91e5d512cd767a516505b02d7b1993b5ddc64ea50 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Premium La Crème Voluptueuse La Recharge 50ml ]]></title>
+<g:id>9087ca28-d2fe-4df6-85c8-5e0fdef8172e</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-premium la crème voluptueuse la recharge 50ml?9087ca28-d2fe-4df6-85c8-5e0fdef8172e ]]></link>
+<g:price><![CDATA[ 6490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Véritable soin visage anti-âge absolu, La Crème Voluptueuse corrige tous les signes de l’âge : rides, ridules, taches, manque de fermeté, d’éclat, d’élasticité, et de densité, déshydratation.</span><br /><br /><span>Sa texture crème onctueuse et ultraconfortable enveloppe la peau de douceur. Convient aux peaux normales à sèches, même sensibles.</span></p>
+<p>Formulée à <span>95% d’ingrédients d’origine naturelle</span>, la Crème Voluptueuse corrige tous les signes de l’âge et nourrit in ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917906</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6bdf35ea05134634aafbe1564ca13843755d8122477471b3f51c9703f9211b7d ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Premium Le Serum Absolu 30ml ]]></title>
+<g:id>26280ee0-f850-4d2a-aaf9-c3060496e3d9</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-premium le serum absolu 30ml?26280ee0-f850-4d2a-aaf9-c3060496e3d9 ]]></link>
+<g:price><![CDATA[ 8990.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Le Sérum Absolu, véritable soin visage anti-âge, corrige tous les signes de l’âge : rides, ridules, taches, manque de fermeté, d’éclat, d’élasticité et de densité, déshydratation.</span><br /><br /><span>Sa double texture allie la fraîcheur de l’eau et le confort de l’huile. Convient à toutes les peaux, mêmes sensibles.</span></p>
+<p>Le Sérum Absolu corrige tous les signes de l’âge, lisse le grain de peau et apporte de l’éclat. <span>Formulé à 96% d’ingrédients d’origine naturelle</span ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917920</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/29563ccfcb5e3a91db5c4fd6a864e965aabc012e6b375e7621e44927a7c20b5c ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Premium la Crème Soyeuse 50ml ]]></title>
+<g:id>9cc3b962-91aa-455a-80ff-108f7d9e3a1c</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-premium la crème soyeuse 50ml?9cc3b962-91aa-455a-80ff-108f7d9e3a1c ]]></link>
+<g:price><![CDATA[ 8490.00 EUR ]]></g:price>
+<description><![CDATA[ <p><span>Véritable soin visage anti-âge absolu, La Crème Soyeuse corrige tous les signes de l’âge : rides, ridules, taches, manque de fermeté, d’éclat, d’élasticité, et de densité, déshydratation.</span><br /><br /><span>Sa texture à la douceur inégalée laisse un subtil fini poudré sur la peau. Convient aux peaux normales à mixtes, mêmes sensibles.</span></p>
+<p>Formulée à <span>95% d’ingrédients d’origine naturelle</span>, la Crème Soyeuse corrige tous les signes de l’âge et hydrate instantaném ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917876</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/f04e65db1b81c6c992d31a4029662771c5eeac8e862024d4a631bcea48c2d0e6 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Premium la crème voluptueuse 50 ml ]]></title>
+<g:id>7b4031a3-d6c9-4f93-ae77-02dac10bebe7</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-premium la crème voluptueuse 50 ml?7b4031a3-d6c9-4f93-ae77-02dac10bebe7 ]]></link>
+<g:price><![CDATA[ 8490.00 EUR ]]></g:price>
+<description><![CDATA[ <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-4 max-w-full lg:max-w-[1270px] mx-auto mb-8">
+<div class="col-span-1 px-8 lg:col-span-5 text-rg-black">
+<div class="sticky top-3">
+<div class="mb-4">
+<p>Formulée à <span>95% d’ingrédients d’origine naturelle</span>, la Crème Voluptueuse corrige tous les signes de l’âge et nourrit intensément la peau. Au cœur de la formule, <span>la Technologie [F.G.N.]</span>, associée à <span>l’Acide Hyaluronique</span> et à <span>la Niacinamide</span>, agit s ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917890</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/19267dc0152dd46e5cfee86dd9afbf12a444bc7966a87644a08c2e15f80ca1ca ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Protocole Anti-Taches 30ml ]]></title>
+<g:id>7338e63b-e29a-446e-9013-7b35969a413f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-protocole anti-taches 30ml?7338e63b-e29a-446e-9013-7b35969a413f ]]></link>
+<g:price><![CDATA[ 3690.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><p><strong>Pour qui</strong> : Tous les types de peaux, même sensibles.</p></li><li><p><strong>Résultats beauté</strong> : Dès le 1er mois, les taches sont moins visibles et moins nombreuses.</p></li><li><p><strong>Actif phare</strong> : Niacinamide.</p></li><li><p><strong>On aime</strong> : Sa texture active légère au fini non gras et non-collant.</p></li></ul><p>&nbsp;</p><p><strong>La solution n°2 : action long-terme</strong></p><p><strong>Le Sérum Protocole Anti-Taches de Lierac</str ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436926298</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/955e32ea7e20b8946b6030bd1e1d80fe7e2543eb258a5a1b70253208603f5c07 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Protocoles Anti-Taches 2.7g ]]></title>
+<g:id>5ae02dff-3181-4cc6-9b1f-241b48285e8f</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-protocoles anti-taches 2.7g?5ae02dff-3181-4cc6-9b1f-241b48285e8f ]]></link>
+<g:price><![CDATA[ 1790.00 EUR ]]></g:price>
+<description><![CDATA[ <ul><li><p><strong>Pour qui :</strong> Tous les types de peaux, même sensibles.</p></li><li><p><strong>Résultats beauté</strong> : Protection et correction de tous les types de taches.</p></li><li><p><strong>Actif phare</strong> : Vitamine E.</p></li><li><p><strong>On aime</strong> : Sa texture active teintée.</p></li></ul><p>&nbsp;</p><p><strong>La solution n°1 : action immédiate</strong></p><p>Le<strong> Stick Teinté SPF50 Protocole Anti-Taches de Lierac </strong>offre une double action ciblée ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436926281</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8122b576e7e99a0d6bfd2507b03df6b953a2a63274dd50128201126c7ddd2af0 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Rosilogie Double Concentré Neutralisant Rougeurs Installées 30 ml ]]></title>
+<g:id>bad94754-9031-4ecd-8076-c56de81fa7f5</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-rosilogie double concentré neutralisant rougeurs installées 30 ml?bad94754-9031-4ecd-8076-c56de81fa7f5 ]]></link>
+<g:price><![CDATA[ 2890.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lierac Rosilogie Double Concentré Neutralisant Rougeurs Installées 30 ml est un soin qui calme l'hyperréactivité, corrige les rougeurs installées avec vaisseaux apparents, et renforce la barrière cutanée.</p>
+<p>Ce soin est composé d'une formule jour et d'une formule nuit :</p>
+<p>Spécifique jour : Action défensive bouclier.</p>
+<p>- Bouclier protecteur.</p>
+<p>- Bloque les agressions extérieures en empêchant l'incrustation des particules fines polluantes.</p>
+<p>- Pré et probiotiques.</p>
+<p ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3508240002992</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/53af64b6be56a2ed642678462532e09ee70e9d6b5e9d4d3c9b7b3c987a6f9b8b ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Sunissime Fluide AA solaire teinté SPF 50+ 40ML ]]></title>
+<g:id>c433a0ac-0fde-4948-912f-3dd4816dd1ae</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-sunissime fluide aa solaire teinté spf 50+ 40ml?c433a0ac-0fde-4948-912f-3dd4816dd1ae ]]></link>
+<g:price><![CDATA[ 2065.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La nouvelle gamme solaire Sunissime est l’alliée idéale avant, pendant et après l’exposition solaire. Sunissime protège efficacement la peau des méfaits du soleil grâce à son système de protection Large spectre (UVB+UVA + Lumière Bleue + Infrarouges) et magnifie le bronzage grâce à un extrait d’algue rouge. Ultra légères, non grasses, non collantes, sans traces, les formules Sunissime fusionnent avec la peau pour ne laisser qu’un envoutant parfum de vacances, et un hâle sublime.</p> ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436928780</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8179c7a5e1f41b0e07a5c07bd7423af604d243d8710dfeaeb777493812e4f9fe ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN TEINTE > SOINS VISAGE ET CORPS > SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Sunissime Fluide solaire teinté SPF 30 40ML ]]></title>
+<g:id>4d4ff940-412a-4509-899b-48de7b32bdea</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-sunissime fluide solaire teinté spf 30 40ml?4d4ff940-412a-4509-899b-48de7b32bdea ]]></link>
+<g:price><![CDATA[ 2065.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Pendant l'exposition, , le Fluide Solaire Teinté Visage SPF30 offre une<strong>&nbsp;haute protection</strong> grâce à son système filtrant Large Spectre associant des filtres organiques [UVB + UVA] à un complexe d'actifs anti-lumière bleue et infrarouges.<br><br>Il prévient ainsi les dommages cutanés et les signes du photo-vieillissement (rides, taches, relâchement) pour une <strong>action anti-âge globale</strong>.<br><br>Sa texture fluide perfectrice de teint offre une <strong>couvrance na ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436928773</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/423f88d67e52199a435ab111c46bc2d42ef3b0f101d6552fb4148209314099ad ]]></g:image_link>
+<g:product_type><![CDATA[ SOIN TEINTE > SOINS VISAGE ET CORPS > SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Sunissime L'Huile Soyeuse Solaire Corps SPF30 150 ml ]]></title>
+<g:id>14605544-1a48-4da5-b797-9ef74152c80d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-sunissime l'huile soyeuse solaire corps spf30 150 ml?14605544-1a48-4da5-b797-9ef74152c80d ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lierac Sunissime L'Huile Soyeuse Solaire Corps SPF30 150 ml est une huile qui offre une haute protection pour le corps grâce à son système filtrant Large Spectre [UVB + UVA + Lumière Bleue + Infrarouges] et prévient des signes du photo-vieillissement (rides, taches, relâchement) pour une action anti-âge globale.</p>
+<p>Cette huile hautement sensorielle au toucher sec offre un fini satiné, qui sublime et illumine le bronzage.<br />Emblématique, sa fragrance gorgée de soleil aux notes fraîches  ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917531</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2dfd0fdb62c26c224f078ab0656a020ce6f3ed4d8c4dd7c64c3c430c5aa91baf ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Sunissime La Crème Sublimatrice Après-Soleil Corps 200 ml ]]></title>
+<g:id>27c6b7d2-9419-4384-ac56-f4da1d07ad38</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-sunissime la crème sublimatrice après-soleil corps 200 ml?27c6b7d2-9419-4384-ac56-f4da1d07ad38 ]]></link>
+<g:price><![CDATA[ 1725.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lierac Sunissime La Crème Sublimatrice Après-Soleil Corps 200 ml est une crème pour le corps qui nourrit et apaise la peau après l'exposition au soleil. Enrichi en extrait d'hamamélis, elle aide à prévenir les signes photo-vieillissement tels les rides ou le relâchement cutané. Le bronzage est magnifié et prolongé grâce à un extrait d'algue rouge.</p>
+<p>Sa texture subtilement nacrée à l'effet frais enveloppe la peau d'un délicieux parfum de coco, jasmin blanc et vanille.</p>
+<p>Convient à to ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917562</g:gtin>
+<g:brand><![CDATA[  ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/9b3f2586aa5d8c406649f23c2124a950d2584c1a099b0d43742e49b565eb8450 ]]></g:image_link>
+<g:product_type><![CDATA[ Passerelle ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Sunissime La Gelée Fraîche Après-Soleil 200ml ]]></title>
+<g:id>b0f1618a-0003-4386-b9d2-a75c3627e78d</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-sunissime la gelée fraîche après-soleil 200ml?b0f1618a-0003-4386-b9d2-a75c3627e78d ]]></link>
+<g:price><![CDATA[ 1280.00 EUR ]]></g:price>
+<description><![CDATA[ <p>La<strong> Gelée Fraîche Après-Soleil SUNISSIME de Lierac&nbsp;</strong>hydrate et apaise la peau suite à une exposition au Soleil, tout en procurant une sensation de fraîcheur immédiate.</p><p>Enrichie en <strong>Extraits d'Algue Rouge</strong> et d'<strong>Hamamélis</strong>, cette gelée aide à<strong> lutter contre les signes du photo-vieillissement</strong>, tels que les rides et le relâchement cutané, tout en sublimant et prolongeant l'éclat du hâle.</p><p>Formulée avec <strong>95% d'ing ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436928797</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2e139e6e2af4e6f2596f2195796878bd79792c2b17953c3d7a2d4afac4fa3b72 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Sunissime Le Fluide Velouté Solaire Visage SPF30 40 ml ]]></title>
+<g:id>5708e701-89b8-4aec-99cd-b687619bf560</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-sunissime le fluide velouté solaire visage spf30 40 ml?5708e701-89b8-4aec-99cd-b687619bf560 ]]></link>
+<g:price><![CDATA[ 2065.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lierac Sunissime Le Fluide Velouté Solaire Visage SPF30 40 ml est un fluide qui offre une haute protection pour le visage et le décolleté grâce à son système filtrant Large Spectre [UVB + UVA + Lumière Bleue + Infrarouges] et prévient des signes du photo-vieillissement (rides, taches, relâchement) pour une action anti-âge globale.<br />Enrichie d'un extrait d'algue rouge, sa formule magnifie le bronzage et laisse un joli teint ensoleillé.</p>
+<p>Fine et fondante, la texture du fluide offre un ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917494</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/3cfa74daf79fcfa00264e818ff33339da13aa7d81fde4a27ce734bfed373b447 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Sunissime Le Lait Fondant Solaire Corps SPF30 150 ml ]]></title>
+<g:id>997c2f63-7fe4-4c7b-9397-62538b8263f1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-sunissime le lait fondant solaire corps spf30 150 ml?997c2f63-7fe4-4c7b-9397-62538b8263f1 ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lierac Sunissime Le Lait Fondant Solaire Corps SPF30 150 ml est un lait qui offre une haute protection solaire pour le corps grâce à son système filtrant Large Spectre [UVB + UVA + Lumière Bleue + Infrarouges] et prévient des signes du photo-vieillissement (rides, taches, relâchement) pour une action anti-âge globale.<br />Enrichie d'un extrait d'algue rouge, sa formule magnifie le bronzage et laisse un joli hâle lumineux et ensoleillé.</p>
+<p>Extra-fine, la texture du lait offre un fini invi ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917517</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/23e05b7787dbdaf8bea97b8e14e19f6953ab7f14e9c525d3ef3adba453ca1c1f ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique > PEAU ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Sunissime Le Lait Fondant Solaire Corps SPF50 150 ml ]]></title>
+<g:id>6b975a60-4a3d-47c1-b1c3-3e506b31edf1</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-sunissime le lait fondant solaire corps spf50 150 ml?6b975a60-4a3d-47c1-b1c3-3e506b31edf1 ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lierac Sunissime Le Lait Fondant Solaire Corps SPF50 150 ml est un lait qui offre une très haute protection solaire pour le corps grâce à son système filtrant Large Spectre [UVB + UVA + Lumière Bleue + Infrarouges] et prévient des signes du photo-vieillissement (rides, taches, relâchement) pour une action anti-âge globale. Enrichie d'un extrait d'algue rouge, sa formule magnifie le bronzage et laisse un joli hâle lumineux et ensoleillé.</p>
+<p>Extra-fine, la texture du lait offre un fini invi ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436917524</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/8eeef5191b8f002e7009719afd2ee25bbc0c85fc5a154cfdef445d63766cc62b ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Sunissime Le Serum Autobonzant 30ml ]]></title>
+<g:id>5a096c5f-3377-4f70-b9b1-3ed57c81e7ef</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-sunissime le serum autobonzant 30ml?5a096c5f-3377-4f70-b9b1-3ed57c81e7ef ]]></link>
+<g:price><![CDATA[ 2065.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lierac Sunissime Le Sérum Autobronzant Visage 30 ml offre une solution innovante pour sublimer la peau tout au long de l'année.</p><p>Enrichi en acide hyaluronique et en antioxydants, ce sérum autobronzant va bien au-delà de l'effet classique en procurant un hâle doré naturel et uniforme.</p><p>Sa formule assure une hydratation intense, tout en lissant la peau et en la protégeant du stress oxydatif, principal responsable des signes de l'âge.<br>De plus, sa texture fluide et légère sèche rapid ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436928766</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/2e8b15a0600b1484a42e4f596055d004a5b6818d04206d214fe903a0c7908eb9 ]]></g:image_link>
+<g:product_type><![CDATA[ SOINS VISAGE ET CORPS > SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+<item>
+<title><![CDATA[ Lierac Sunissime Le Soin Autobronzant 150 ml ]]></title>
+<g:id>60a22ad0-1a0e-4c1f-bb4f-21623d2b4ef4</g:id>
+<link><![CDATA[ https://pharmacieagnespraden.com/products/lierac-sunissime le soin autobronzant 150 ml?60a22ad0-1a0e-4c1f-bb4f-21623d2b4ef4 ]]></link>
+<g:price><![CDATA[ 1690.00 EUR ]]></g:price>
+<description><![CDATA[ <p>Lierac Sunissime Le Soin Autobronzant 150 ml est le partenaire idéal pour sublimer votre peau tout au long de l'année.</p><p>Grâce à sa formule enrichie en sucres végétaux, ce soin autobronzant offre un hâle doré naturel et uniforme.</p><p>Sa texture soyeuse et fondante assure une hydratation intense, un confort optimal et une peau sublimée.<br>En plus de son effet autobronzant, ce soin laisse un fini satiné velouté et parfume la peau d'une délicate essence d'eau de coco, de bergamote et de j ]]></description>
+<g:condition><![CDATA[ new ]]></g:condition>
+<g:gtin>3701436928759</g:gtin>
+<g:brand><![CDATA[ LIERAC ]]></g:brand>
+<g:image_link><![CDATA[ https://praden.s3.eu-west-3.amazonaws.com/public/products/6fc94e9bd7d3d71ce8714708226ed0cb3ac713dd897bd647eeac97c1bbd590d8 ]]></g:image_link>
+<g:product_type><![CDATA[ SOLAIRES > Dermocosmétique ]]></g:product_type>
+<g:availability><![CDATA[ in stock ]]></g:availability>
+<g:quantity>0</g:quantity>
+<g:shipping>
+<g:country>FR</g:country>
+<g:price>0</g:price>
+</g:shipping>
+<g:identifier_exists>TRUE</g:identifier_exists>
+<g:adult>FALSE</g:adult>
+</item>
+</channel>
+</rss>`;
+});
