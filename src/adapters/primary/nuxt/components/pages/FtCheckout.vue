@@ -69,13 +69,39 @@
           )
           p.text-red-500.text-sm.mt-1(v-if="zipError") {{ zipError }}
           p.text-red-500.text-sm.mt-1(v-if="countryError") {{ countryError }}
+      
+      // Section RGPD obligatoire
+      div.mt-6.pt-4.border-t.border-gray-200.px-3
+          h3.font-medium.text-gray-900.mb-3 Consentement et protection des données
 
-  div.mt-2.border-t.py-6.px-4(class="sm:px-6")
-      div.flex.items-center.gap-2.text-left.px-3
-          div(v-if='newsletter').flex-shrink-0.flex.items-center.justify-center.bg-main.border.border-2.border-main.h-5.w-5.rounded-md.text-white(@click='switchNewsletter')
-              icon.icon-xs(name="iconamoon:check-bold")
-          div(v-if='!newsletter').flex-shrink-0.bg-white.border.border-2.border-main.h-5.w-5.rounded-md(@click='switchNewsletter')
-          span.text-sm(@click='switchNewsletter') S'inscrire à la newsletter et recevoir toutes les offres
+          div.flex.items-center.gap-2.text-left.px-3
+            div(v-if='newsletter').flex-shrink-0.flex.items-center.justify-center.bg-main.border.border-2.border-main.h-5.w-5.rounded-md.text-white(@click='switchNewsletter')
+                icon.icon-xs(name="iconamoon:check-bold")
+            div(v-if='!newsletter').flex-shrink-0.bg-white.border.border-2.border-main.h-5.w-5.rounded-md(@click='switchNewsletter')
+            span.text-sm(@click='switchNewsletter') S'inscrire à la newsletter et recevoir toutes les offres
+          
+          div.mt-4
+          // Case à cocher obligatoire pour le traitement des données
+          div.flex.items-center.gap-2.text-left.px-3
+              div(v-if='dataProcessingConsent').flex-shrink-0.flex.items-center.justify-center.bg-main.border.border-2.border-main.h-5.w-5.rounded-md.text-white(@click='switchDataProcessingConsent')
+                  icon.icon-xs(name="iconamoon:check-bold")
+              div(v-if='!dataProcessingConsent').flex-shrink-0.bg-white.border.border-2.border-main.h-5.w-5.rounded-md.mt-1(@click='switchDataProcessingConsent')
+              span.text-sm(@click='switchDataProcessingConsent') 
+                  | J'accepte que mes données personnelles soient traitées pour la gestion de ma commande.
+                  span.text-red-500.ml-1 *
+          
+          // Texte d'information RGPD
+          div.text-xs.text-gray-600.leading-relaxed.mb-2
+              | Les informations recueillies font l'objet d'un traitement informatique qui nous est destiné. 
+              | Conformément à la loi « informatique et libertés » du 6 janvier 1978 modifiée en 2004, 
+              | vous bénéficiez d'un droit d'accès et de rectification aux informations qui vous concernent, 
+              | que vous pouvez exercer en 
+              a.text-main.underline(href="mailto:webpharmaciepraden@gmail.com?subject=Demande d'exercice de droits RGPD&body=Bonjour,%0A%0AJe souhaite exercer mes droits concernant mes données personnelles.%0A%0AMerci de me recontacter.%0A%0ACordialement") cliquant ici
+          
+          // Message d'erreur si consentement non donné
+          div.text-red-500.text-xs.mt-1(v-if="showConsentError") 
+              | Vous devez accepter le traitement de vos données pour continuer.
+
       div().mt-4
           ft-button.button-solid.w-full.text-xl(@click="validateUser" :disabled="!isFormValid") Choisir ma livraison
 </template>
@@ -197,6 +223,8 @@ const loadUserData = () => {
 };
 
 const newsletter = ref(false);
+const dataProcessingConsent = ref(false); // Nouveau: consentement obligatoire pour le traitement des données
+const showConsentError = ref(false); // Pour afficher l'erreur
 const zipError = ref<string | null>(null);
 const countryError = ref<string | null>(null);
 const isZipValid = ref(true);
@@ -210,6 +238,13 @@ const close = () => emit('close');
 
 const switchNewsletter = () => {
   newsletter.value = !newsletter.value;
+};
+
+const switchDataProcessingConsent = () => {
+  dataProcessingConsent.value = !dataProcessingConsent.value;
+  if (dataProcessingConsent.value) {
+    showConsentError.value = false; // Masquer l'erreur si l'utilisateur coche
+  }
 };
 
 // Fonctions pour la connexion et l'inscription utilisant Keycloak
@@ -313,6 +348,7 @@ const zipChanged = (value: string) => {
 // Vérification si le formulaire est valide
 const isFormValid = computed(() => {
   return (
+    dataProcessingConsent.value && // Consentement obligatoire
     userData.firstname &&
     userData.lastname &&
     userData.phone &&
@@ -328,6 +364,12 @@ const isFormValid = computed(() => {
 
 // Fonction de validation et envoi du formulaire
 const validateUser = () => {
+  // Vérifier le consentement avant de procéder
+  if (!dataProcessingConsent.value) {
+    showConsentError.value = true;
+    return;
+  }
+
   // Préparer l'objet utilisateur au format attendu par updateUser
   const userToUpdate = {
     uuid: userData.uuid,
@@ -343,7 +385,10 @@ const validateUser = () => {
       lastname: userData.address.lastname,
       zip: userData.address.zip,
       country: userData.address.country
-    }
+    },
+    // Optionnel : enregistrer les préférences de consentement
+    newsletterConsent: newsletter.value,
+    dataProcessingConsent: dataProcessingConsent.value,
   };
   
   console.log('[FtAccount] Mise à jour des informations utilisateur:', userToUpdate);
