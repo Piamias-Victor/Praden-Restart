@@ -19,8 +19,8 @@ let xml = `<?xml version="1.0" encoding="UTF-8"?>
 `;
 
 try {
-  // Lire le CSV
-  const csvContent = fs.readFileSync('products_data.csv', 'utf8');
+  // CHANGEMENT ICI : pointer vers data/products_data.csv
+  const csvContent = fs.readFileSync('data/products_data.csv', 'utf8');
   const records = parse(csvContent, {
     columns: true,
     skip_empty_lines: true,
