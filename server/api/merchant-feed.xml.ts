@@ -21,6 +21,7 @@ export default defineEventHandler(async (event) => {
 
     const sitemapProducts = await response.json();
     
+    
     // Récupérer les détails de chaque produit pour vérifier arePromotionsAllowed
     const productDetailsPromises = sitemapProducts.slice(0, 2000).map(async (product: any) => {
       try {
