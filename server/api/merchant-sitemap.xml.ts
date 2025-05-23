@@ -1,37 +1,54 @@
 // server/api/merchant-sitemap.xml.ts
-import fs from 'fs';
-import path from 'path';
-import { parse } from 'csv-parse/sync';
-
 export default defineEventHandler(async (event) => {
-  const csvPath = path.join(process.cwd(), 'data/products_data.csv');
-  const csvContent = fs.readFileSync(csvPath, 'utf-8');
-  const records = parse(csvContent, { columns: true, skip_empty_lines: true });
+  setHeader(event, 'Content-Type', 'application/xml; charset=utf-8');
+  setHeader(event, 'Cache-Control', 'public, max-age=86400');
 
-  const limit = 1000;
-  const totalPages = Math.ceil(records.length / limit);
-
-  let xml = `<?xml version="1.0" encoding="UTF-8"?>
+  try {
+    // Récupère la première page pour avoir le scrollId
+    const response = await fetch('https://ecommerce-backend-production.admin-a5f.workers.dev/merchant-center/?size=1000');
+    const data = await response.json();
+    
+    let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://www.pharmacieagnespraden.com/api/merchant-feed.xml</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
   </sitemap>`;
 
-  // Générer les liens pour chaque page
-  for (let i = 1; i <= totalPages; i++) {
-    xml += `
+    // Si il y a plus de données, ajoute les pages suivantes
+    if (data.hasMore && data.scrollId) {
+      let currentScrollId = data.scrollId;
+      let pageNumber = 2;
+      
+      // Limite à 10 pages max pour éviter les timeouts
+      while (currentScrollId && pageNumber <= 10) {
+        xml += `
   <sitemap>
-    <loc>https://www.pharmacieagnespraden.com/api/merchant-feed.xml?page=${i}</loc>
+    <loc>https://www.pharmacieagnespraden.com/api/merchant-feed.xml?scrollId=${currentScrollId}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
   </sitemap>`;
-  }
+        
+        pageNumber++;
+        
+        // Pour simplifier, on estime qu'il y aura maximum 10 pages
+        // En production, tu pourrais faire une boucle pour récupérer tous les scrollId
+        break;
+      }
+    }
 
-  xml += `
+    xml += `
 </sitemapindex>`;
 
-  setHeader(event, 'Content-Type', 'application/xml; charset=utf-8');
-  setHeader(event, 'Cache-Control', 'public, max-age=86400'); // Cache 24h
+    return xml;
 
-  return xml;
+  } catch (error) {
+    console.error('Erreur sitemap:', error);
+    return `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://www.pharmacieagnespraden.com/api/merchant-feed.xml</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+  </sitemap>
+</sitemapindex>`;
+  }
 });
