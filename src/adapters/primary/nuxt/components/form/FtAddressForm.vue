@@ -32,7 +32,7 @@
             option(value="Allemagne") Allemagne
             option(value="Belgique") Belgique
             option(value="Espagne") Espagne
-            option(value="France métropolitaine") France métropolitaine
+            option(value="France") France
             option(value="Italie") Italie
       ft-input(
           :value="props.user.address?.address || ''"

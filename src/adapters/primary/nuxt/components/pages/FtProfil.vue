@@ -77,6 +77,7 @@ import { ref, computed, onMounted, watch, nextTick, onBeforeUnmount } from 'vue'
 import { useNuxtApp } from '#app';
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
 import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 
 // Modaux
 const connexionOpened = ref(false);
@@ -221,7 +222,8 @@ const login = () => {
     let cartItems = {};
     
     try {
-      const cartVM = getCartVM();
+      const user = getUserVM();
+      const cartVM = getCartVM(user.address);
       if (cartVM && cartVM.items) {
         cartItems = cartVM.items;
       }
@@ -297,7 +299,8 @@ const login = () => {
 const register = () => {
   try {
     // Sauvegarder le panier actuel
-    const cartVM = getCartVM();
+    const user = getUserVM();
+const cartVM = getCartVM(user.address);
     if (cartVM && cartVM.items) {
       localStorage.setItem('cart', JSON.stringify(cartVM.items));
       console.log('[FtProfil] Panier sauvegardé avant inscription:', Object.keys(cartVM.items).length, 'articles');
@@ -331,7 +334,8 @@ const register = () => {
 const logout = () => {
   try {
     // Sauvegarder le panier actuel avant la déconnexion
-    const cartVM = getCartVM();
+    const user = getUserVM();
+      const cartVM = getCartVM(user.address);
     if (cartVM && cartVM.items) {
       localStorage.setItem('cart_before_logout', JSON.stringify(cartVM.items));
       console.log('[FtProfil] Panier sauvegardé avant déconnexion:', Object.keys(cartVM.items).length, 'articles');

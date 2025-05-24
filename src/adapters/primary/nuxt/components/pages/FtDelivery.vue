@@ -351,7 +351,8 @@
   });
   
   const cart = computed(() => {
-    const cartData = getCartVM();
+    const user = getUserVM();
+    const cartData = getCartVM(user.address);
     console.log("Contenu du panier:", cartData);
     return cartData;
   });

@@ -16,6 +16,7 @@ import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessu
 import { useProductGateway } from '../../../../../../gateways/productGateway';
 import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
 import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 const props = defineProps<{
   facetsVM: any;
   sortType: any;
@@ -37,7 +38,8 @@ const closeCart = () => {
 };
 
 const cart = computed(() => {
-  return getCartVM();
+  const user = getUserVM();
+    return getCartVM(user.address);
 });
 
 const emit = defineEmits<{

@@ -45,6 +45,7 @@
   import { useProductGateway } from '../../../../../../gateways/productGateway';
   import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
   import { removeAllFromCart } from '@core/usecases/remove-from-cart/RemoveAllFromCart';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
   
   const emit = defineEmits<{
     (e: 'close'): void;
@@ -68,7 +69,8 @@
   // Récupère le panier de manière sécurisée pour éviter les erreurs
   const cart = computed(() => {
     try {
-      return getCartVM();
+      const user = getUserVM();
+      return getCartVM(user.address);
     } catch (error) {
       console.error("Erreur lors de la récupération du panier:", error);
       // Retourner un objet par défaut en cas d'erreur

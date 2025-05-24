@@ -3,6 +3,7 @@ import { Address, Contact, OrderLine, getOrderLineUnitAmount } from '@core/entit
 import { EmailGateway, SendOrderConfirmationDTO } from '@core/usecases/orders/order-creation/emailGateway';
 import { priceFormatter } from '@utils/formater';
 import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 
 function generateLinesHtml(lines: any) {
   return `
@@ -170,7 +171,8 @@ export class RealEmailGateway implements EmailGateway {
   }
 
   private getTotals(orderLines: Array<OrderLine>, deliveryMethod: DeliveryMethod) {
-    const cart = getCartVM();
+    const user = getUserVM();
+    const cart = getCartVM(user.address);
 
     const subTotal = orderLines.reduce((acc, line) => {
       const amount = line.unitAmount;

@@ -17,6 +17,7 @@ import { getCartQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-
 import { TransitionRoot, TransitionChild, Dialog, DialogPanel } from '@headlessui/vue';
 import { useProductGateway } from '../../../../../../gateways/productGateway';
 import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 
 const emit = defineEmits<{
   (e: 'close'): void;
@@ -54,7 +55,8 @@ const close = () => {
 };
 
 const cart = computed(() => {
-  return getCartVM();
+  const user = getUserVM();
+  return getCartVM(user.address);
 });
 
 function closeModal() {

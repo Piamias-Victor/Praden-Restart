@@ -39,6 +39,7 @@ import { removeFirstNotification } from '@core/usecases/remove-notification/remo
 import { trackAddToCart } from '@utils/dataLayer';
 import { useProductStore } from '@store/productStore';
 import { ref, computed } from 'vue';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 
 defineProps({
   item: { type: Object, required: true },
@@ -50,7 +51,8 @@ const productGateway = useProductGateway();
 const productStore = useProductStore();
 
 const cart = computed(() => {
-  return getCartVM();
+  const user = getUserVM();
+  return getCartVM(user.address);
 });
 
 // Récupérer les données complètes du produit depuis le store

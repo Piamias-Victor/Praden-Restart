@@ -253,7 +253,8 @@ const login = async () => {
   
   try {
     // Sauvegarder le panier actuel
-    const cartVM = getCartVM();
+    const user = getUserVM();
+    const cartVM = getCartVM(user.address);
     if (cartVM && cartVM.items) {
       localStorage.setItem('cart', JSON.stringify(cartVM.items));
       console.log('[FtAccount] Panier sauvegardé avant connexion:', Object.keys(cartVM.items).length, 'articles');
@@ -280,7 +281,8 @@ const login = async () => {
 const register = () => {
   try {
     // Sauvegarder le panier actuel
-    const cartVM = getCartVM();
+    const user = getUserVM();
+    const cartVM = getCartVM(user.address);
     if (cartVM && cartVM.items) {
       localStorage.setItem('cart', JSON.stringify(cartVM.items));
       console.log('[FtAccount] Panier sauvegardé avant inscription:', Object.keys(cartVM.items).length, 'articles');

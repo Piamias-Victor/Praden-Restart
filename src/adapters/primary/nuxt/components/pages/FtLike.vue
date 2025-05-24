@@ -30,13 +30,15 @@ import { useProductGateway } from '../../../../../../gateways/productGateway';
 import { getCartVM } from '@adapters/primary/viewModels/get-cart/getCartVM';
 import { getLikeQuantityVM } from '@adapters/primary/viewModels/get-quantity-in-like/getQuantityInLikeVm';
 import { getLikeVM } from '@adapters/primary/viewModels/get-like/getLikeVM';
+import { getUserVM } from '@adapters/primary/viewModels/get-user/getUserVM';
 
 const router = useRouter();
 
 const likeQuantity = ref<LikeQuantityVM | null>(null);
 
 const cart = computed(() => {
-  return getCartVM();
+  const user = getUserVM();
+  return getCartVM(user.address);
 });
 
 const like = computed(() => {

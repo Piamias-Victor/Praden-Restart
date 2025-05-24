@@ -139,46 +139,81 @@ export const getProductsInCart = (): ProductsInCart => {
 };
 
 /**
- * Calcule le prix de livraison en fonction du poids et de la méthode de livraison.
+ * Calcule le prix de livraison en fonction du poids, de la méthode de livraison et du pays.
  * @param method - La méthode de livraison sélectionnée.
  * @param weight - Le poids total des articles.
+ * @param total - Le montant total des articles.
+ * @param medecine - Si le panier contient des médicaments.
+ * @param country - Le pays de livraison.
  * @returns Le prix de livraison applicable.
  */
-export const getDeliveryPrice = (method: DeliveryMethod, weight: number, total: number, medecine: boolean): number => {
+export const getDeliveryPrice = (method: DeliveryMethod, weight: number, total: number, medecine: boolean, country: string = 'France'): number => {
   try {
     // Vérifier que les paramètres nécessaires existent
     if (!method) {
+      console.log('❌ getDeliveryPrice: Aucune méthode de livraison fournie');
       return 0;
     }
     
+    console.log(`🚚 getDeliveryPrice: Méthode=${method.name}, Poids=${weight}g, Total=${total}€, Pays=${country}, Médicaments=${medecine}`);
+    
+    // Livraison gratuite pour Point Relais si conditions remplies
     if (method.uuid === '505209a2-7acb-4891-b933-e084d786d7ea' && total > 6900 && weight < 5000 && medecine === false) {
-      return 0; // Livraison gratuite
-    }
-
-    // Vérifier que priceRanges existe et est un tableau
-    if (!method.priceRanges || !Array.isArray(method.priceRanges)) {
+      console.log('✅ getDeliveryPrice: Livraison gratuite Point Relais');
       return 0;
     }
 
-    const applicableRange = method.priceRanges.find((range) => 
-      range && weight >= (range.minWeight || 0) && weight <= (range.maxWeight || Infinity)
-    );
+    // Nouveau système avec zones par pays
+    if (method.zones && Array.isArray(method.zones)) {
+      console.log(`🌍 getDeliveryPrice: Recherche zone pour ${country}`);
+      const zone = method.zones.find(z => z.country === country);
+      
+      if (zone && zone.priceRanges && Array.isArray(zone.priceRanges)) {
+        console.log(`📦 getDeliveryPrice: Zone trouvée, recherche tranche de poids pour ${weight}g`);
+        const applicableRange = zone.priceRanges.find((range) => 
+          range && weight >= (range.minWeight || 0) && weight <= (range.maxWeight || Infinity)
+        );
+        
+        if (applicableRange) {
+          console.log(`💰 getDeliveryPrice: Prix trouvé=${applicableRange.price}€ pour tranche ${applicableRange.minWeight}-${applicableRange.maxWeight}g`);
+          return applicableRange.price || 0;
+        } else {
+          console.log(`⚠️ getDeliveryPrice: Aucune tranche de poids trouvée pour ${weight}g`);
+        }
+      } else {
+        console.log(`⚠️ getDeliveryPrice: Zone non trouvée pour ${country}`);
+      }
+    }
 
-    // Si une tranche est trouvée, retourne son prix, sinon retourne 0 ou une valeur par défaut
-    return applicableRange ? (applicableRange.price || 0) : 0;
+    // Fallback sur l'ancien système pour la compatibilité (France seulement)
+    if (country === 'France' && method.priceRanges && Array.isArray(method.priceRanges)) {
+      console.log('🔄 getDeliveryPrice: Utilisation système fallback priceRanges');
+      const applicableRange = method.priceRanges.find((range) => 
+        range && weight >= (range.minWeight || 0) && weight <= (range.maxWeight || Infinity)
+      );
+
+      if (applicableRange) {
+        console.log(`💰 getDeliveryPrice: Prix fallback trouvé=${applicableRange.price}€`);
+        return applicableRange.price || 0;
+      }
+    }
+
+    console.log('❌ getDeliveryPrice: Aucun prix trouvé, retour 0');
+    return 0;
   } catch (error) {
-    console.error('Erreur dans getDeliveryPrice:', error);
+    console.error('❌ getDeliveryPrice: Erreur:', error);
     return 0;
   }
 };
-
 /**
  * Calcule le total incluant le prix de livraison.
  * @param total - Le total des articles.
  * @param totalWeight - Le poids total des articles.
+ * @param medecine - Si le panier contient des médicaments.
+ * @param country - Le pays de livraison.
  * @returns Le total incluant la livraison.
  */
-export const getTotalWithDelivery = (total: number, totalWeight: number, medecine: boolean): number => {
+export const getTotalWithDelivery = (total: number, totalWeight: number, medecine: boolean, country: string = 'France'): number => {
   try {
     const deliveryStore = useDeliveryStore();
     const selectedMethod = deliveryStore.selected;
@@ -189,8 +224,8 @@ export const getTotalWithDelivery = (total: number, totalWeight: number, medecin
       return total;
     }
 
-    // Calcule le prix de livraison basé sur le poids
-    const deliveryPrice = getDeliveryPrice(selectedMethod, totalWeight, total, medecine);
+    // Calcule le prix de livraison basé sur le poids et le pays
+    const deliveryPrice = getDeliveryPrice(selectedMethod, totalWeight, total, medecine, country);
 
     // Retourne le total incluant le prix de livraison
     return total + deliveryPrice;
@@ -259,11 +294,15 @@ export const createCartItemsVMFromCartItems = (items: HashTable<CartItem>): Hash
   }
 };
 
-export const getCartVM = (): CartVM => {
+export const getCartVM = (userAddress?: any): CartVM => {
   try {
     const formatter = priceFormatter('fr-FR', 'EUR');
     const deliveryStore = useDeliveryStore();
     const selectedMethod = deliveryStore.selected || null;
+    
+    // Obtenir le pays de livraison
+    const deliveryCountry = userAddress?.country || 'France';
+    console.log(`🗺️ getCartVM: Pays de livraison=${deliveryCountry}`);
     
     // Obtenir les produits du panier de manière sécurisée
     const { items, total, totalWithPromotion, totalWeight } = getProductsInCart();
@@ -275,19 +314,19 @@ export const getCartVM = (): CartVM => {
     const res: CartVM = {
       items: createCartItemsVMFromCartItems(items),
       totalPrice: formatter.format(total / 100),
-      totalPriceWithDelivery: formatter.format(getTotalWithDelivery(total, totalWeight, hasMedicine) / 100),
+      totalPriceWithDelivery: formatter.format(getTotalWithDelivery(total, totalWeight, hasMedicine, deliveryCountry) / 100),
       freeDelivery: formatter.format(getFreeDelivery(total) / 100),
       DeliveryPrice: selectedMethod 
-        ? formatter.format(getDeliveryPrice(selectedMethod, totalWeight, total, hasMedicine) / 100)
+        ? formatter.format(getDeliveryPrice(selectedMethod, totalWeight, total, hasMedicine, deliveryCountry) / 100)
         : formatter.format(0),
     };
     
     // Ajouter le prix avec promotion si différent du prix normal
     if (total !== totalWithPromotion) {
-      res.totalPriceWithPromotion = formatter.format(getTotalWithDelivery(totalWithPromotion, totalWeight, hasMedicine) / 100);
+      res.totalPriceWithPromotion = formatter.format(getTotalWithDelivery(totalWithPromotion, totalWeight, hasMedicine, deliveryCountry) / 100);
       
       if (selectedMethod) {
-        res.DeliveryPrice = formatter.format(getDeliveryPrice(selectedMethod, totalWeight, totalWithPromotion, hasMedicine) / 100);
+        res.DeliveryPrice = formatter.format(getDeliveryPrice(selectedMethod, totalWeight, totalWithPromotion, hasMedicine, deliveryCountry) / 100);
       }
       
       res.freeDelivery = formatter.format(getFreeDelivery(totalWithPromotion) / 100);
